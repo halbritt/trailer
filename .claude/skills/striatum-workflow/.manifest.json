@@ -1,0 +1,46 @@
+{
+  "schema_version": "striatum.skills.manifest.v1",
+  "striatum_version": "2.10.0",
+  "generated_at": "2026-06-03T12:44:40Z",
+  "profile": "claude_code",
+  "namespace": "striatum-",
+  "scope": "project",
+  "files": [
+    {
+      "path": ".claude/skills/striatum-claim-loop/SKILL.md",
+      "sha256": "e168dab6593bb4f41e80c9b2243837003025ebd32739ee89baac7327046a8be5",
+      "template": "claude_code/claim-loop.md.tmpl",
+      "template_sha256": "1b98839d0bb92c60e1fd3530930e7c00095defe57ab6a97459bb88f105c87912"
+    },
+    {
+      "path": ".claude/skills/striatum-mcp/SKILL.md",
+      "sha256": "293b07e4f60abedf015d141dd94adf223950b8fd37721f8340d267de7c6e5801",
+      "template": "claude_code/mcp.md.tmpl",
+      "template_sha256": "eda555aac424984f384ac211776370d83b2765ad886e0bf838fea13dd8649d1b"
+    },
+    {
+      "path": ".claude/skills/striatum-recover/SKILL.md",
+      "sha256": "e77ab731eca5fac3b489e76379c81795e2981e138a071438dcf3c597259f26ec",
+      "template": "claude_code/recover.md.tmpl",
+      "template_sha256": "7642224393a2bedba65682270fee0d0b5b0dd313900b663a1fa10ca6de217353"
+    },
+    {
+      "path": ".claude/skills/striatum-scaffold/SKILL.md",
+      "sha256": "5072f62d19e93dd27c81dfdad0949eea95c163d2c856106e611a00a7a5de8df8",
+      "template": "claude_code/scaffold.md.tmpl",
+      "template_sha256": "bfe565ab1d855f6ac60c3f2ce02b6c5ea836472f76b27e5ab124d902eef98169"
+    },
+    {
+      "path": ".claude/skills/striatum-supervise/SKILL.md",
+      "sha256": "31033ce648cded7bf6a5f4cb65a7b836983fbd5bf5a0f2b8c15e7f1396923f62",
+      "template": "claude_code/supervise.md.tmpl",
+      "template_sha256": "ea4b6122242b8d9226bceea5253c097f2cc342016d664421f26623bc1345919d"
+    },
+    {
+      "path": ".claude/skills/striatum-workflow/SKILL.md",
+      "sha256": "73e43aa5053f869f17d71e7a642c7aa3b62bc421c5b57b81c929387f2f734e1f",
+      "template": "claude_code/workflow.md.tmpl",
+      "template_sha256": "a829885d76e7a377a81c6f306478cf02c2b5efe6cfcddb10b8f8bbb1a409f107"
+    }
+  ]
+}
