@@ -1,4 +1,5 @@
 {
+  "allow_same_model_review_pairing": true,
   "branch": {
     "allow_dirty": false,
     "mode": "confirm",
@@ -9,17 +10,36 @@
     "lane_id": "claude_code",
     "role_id": "author"
   },
-  "cycles": [],
+  "cycles": [
+    {
+      "allow_same_lane": true,
+      "allow_same_model": true,
+      "from": "adjudicate",
+      "max_iterations": 1,
+      "on_verdict": "needs_revision",
+      "to": "cross_examiner_1"
+    }
+  ],
   "edges": [
     {
-      "from": "draft",
+      "from": "author_draft",
       "on": "completed",
-      "to": "review"
+      "to": "cross_examiner_1"
     },
     {
-      "from": "review",
+      "from": "cross_examiner_1",
       "on": "completed",
-      "to": "apply"
+      "to": "adjudicate"
+    },
+    {
+      "from": "adjudicate",
+      "on": "completed",
+      "to": "commit_proposal"
+    },
+    {
+      "from": "commit_proposal",
+      "on": "completed",
+      "to": "final_summary"
     }
   ],
   "jobs": [
@@ -27,23 +47,25 @@
       "expected_artifacts": [
         {
           "kind": "handoff",
-          "logical_name": "draft",
-          "path": "runs/juplaya-power-electrical/DRAFT.md",
+          "logical_name": "author_draft",
+          "path": "runs/juplaya-power-electrical/dialogue/author/DRAFT.md",
           "required": true
         }
       ],
-      "id": "draft",
+      "id": "author_draft",
+      "interrogable": true,
       "lane_id": "claude_code",
-      "objective": "Produce the starter artifact for this workflow.",
+      "objective": "Draft the finding or proposal for Resolve Power/electrical open questions for the Juplaya FT712S2-D build and stay live for cross-examination.",
+      "phase_id": "dialogue",
       "role_id": "author",
       "task_prompt": {
-        "path": "prompts/draft.md"
+        "path": "prompts/collaboration_author_draft.md"
       },
-      "title": "Draft starter artifact",
-      "type": "draft",
+      "title": "Draft finding for cross-examination",
+      "type": "build",
       "write_scope": {
         "allowed_paths": [
-          "runs/juplaya-power-electrical/"
+          "runs/juplaya-power-electrical/dialogue/author/"
         ],
         "forbidden_paths": [
           ".striatum/"
@@ -55,54 +77,116 @@
     {
       "expected_artifacts": [
         {
-          "kind": "finding",
-          "logical_name": "review",
-          "path": "runs/juplaya-power-electrical/review/REVIEW.md",
+          "kind": "handoff",
+          "logical_name": "cross_examiner_1",
+          "path": "runs/juplaya-power-electrical/dialogue/cross_examiner_1/CROSS_EXAM.md",
           "required": true
         }
       ],
-      "fresh_session_required": true,
-      "id": "review",
+      "id": "cross_examiner_1",
       "lane_id": "codex",
-      "objective": "Review the draft and record a finding.",
-      "role_id": "reviewer",
+      "objective": "Ask one falsifying interrogation question about Resolve Power/electrical open questions for the Juplaya FT712S2-D build and record the challenge/rebuttal reference.",
+      "phase_id": "dialogue",
+      "role_id": "cross_examiner",
       "task_prompt": {
-        "path": "prompts/review.md"
+        "path": "prompts/collaboration_cross_examiner.md"
       },
-      "title": "Review the draft",
-      "type": "review",
+      "title": "Cross-examiner 1",
+      "type": "build",
       "write_scope": {
         "allowed_paths": [
-          "runs/juplaya-power-electrical/review/"
+          "runs/juplaya-power-electrical/dialogue/cross_examiner_1/"
         ],
         "forbidden_paths": [
           ".striatum/"
         ],
-        "mode": "review_only_artifact",
-        "repo_write": false
+        "mode": "repo_write",
+        "repo_write": true
+      }
+    },
+    {
+      "expected_artifacts": [
+        {
+          "kind": "collaboration_ledger",
+          "logical_name": "collaboration_ledger_${cycle}",
+          "path": "runs/juplaya-power-electrical/dialogue/adjudicator/COLLABORATION_LEDGER_${cycle}.md",
+          "required": true
+        }
+      ],
+      "fresh_session_required": true,
+      "id": "adjudicate",
+      "lane_id": "claude_code",
+      "objective": "Read only the dialogue trajectory for Resolve Power/electrical open questions for the Juplaya FT712S2-D build and publish the collaboration ledger verdict (one of accept, accept_with_findings, needs_revision, reject \u2014 a clearing verdict is accept or accept_with_findings, never `clear`).",
+      "phase_id": "dialogue",
+      "role_id": "adjudicator",
+      "task_prompt": {
+        "path": "prompts/adjudicate_collaboration.md"
+      },
+      "title": "Adjudicate dialogue substance",
+      "type": "phase_synthesis",
+      "write_scope": {
+        "allowed_paths": [
+          "runs/juplaya-power-electrical/dialogue/adjudicator/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ],
+        "mode": "repo_write",
+        "repo_write": true
       }
     },
     {
       "expected_artifacts": [
         {
           "kind": "synthesis",
-          "logical_name": "summary",
-          "path": "runs/juplaya-power-electrical/SUMMARY.md",
+          "logical_name": "commit_proposal",
+          "path": "runs/juplaya-power-electrical/commit/proposal/PROPOSAL.md",
           "required": true
         }
       ],
-      "id": "apply",
+      "id": "commit_proposal",
       "lane_id": "claude_code",
-      "objective": "Apply the accepted review findings.",
-      "role_id": "author",
+      "objective": "Publish the finding only after the cross-examination ledger records a clearing verdict.",
+      "phase_id": "commit",
+      "role_id": "committer",
       "task_prompt": {
-        "path": "prompts/apply.md"
+        "path": "prompts/collaboration_commit.md"
       },
-      "title": "Apply the accepted review",
+      "title": "Publish cross-examined finding",
       "type": "synthesis",
       "write_scope": {
         "allowed_paths": [
-          "runs/juplaya-power-electrical/"
+          "runs/juplaya-power-electrical/commit/proposal/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ],
+        "mode": "repo_write",
+        "repo_write": true
+      }
+    },
+    {
+      "expected_artifacts": [
+        {
+          "kind": "synthesis",
+          "logical_name": "final_summary",
+          "path": "runs/juplaya-power-electrical/commit/final/FINAL_SUMMARY.md",
+          "required": true
+        }
+      ],
+      "id": "final_summary",
+      "lane_id": "claude_code",
+      "objective": "Summarize the cleared collaboration gate and downstream publication.",
+      "phase_id": "commit",
+      "role_id": "adjudicator",
+      "task_prompt": {
+        "path": "prompts/collaboration_final_summary.md"
+      },
+      "title": "Finalize collaboration run",
+      "type": "phase_synthesis",
+      "write_scope": {
+        "allowed_paths": [
+          "runs/juplaya-power-electrical/commit/final/"
         ],
         "forbidden_paths": [
           ".striatum/"
@@ -163,15 +247,35 @@
     "mode": "declared",
     "require_disjoint_write_scopes": true
   },
+  "phases": [
+    {
+      "description": "Preserved-context challenge and adjudication",
+      "id": "dialogue",
+      "name": "Dialogue",
+      "synthesis_job_id": "adjudicate"
+    },
+    {
+      "description": "Downstream work gated by the collaboration ledger",
+      "id": "commit",
+      "name": "Commit",
+      "synthesis_job_id": "final_summary"
+    }
+  ],
   "roles": {
+    "adjudicator": {
+      "definition_path": "roles/adjudicator.md"
+    },
     "author": {
       "definition_path": "roles/author.md"
     },
-    "reviewer": {
-      "definition_path": "roles/reviewer.md"
+    "committer": {
+      "definition_path": "roles/committer.md"
+    },
+    "cross_examiner": {
+      "definition_path": "roles/cross_examiner.md"
     }
   },
-  "schema_version": "striatum.workflow.v1",
+  "schema_version": "striatum.workflow.v1.1",
   "workflow_id": "juplaya-power-electrical",
   "workflow_version": "2026-06-03"
 }
