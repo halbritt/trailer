@@ -1,0 +1,147 @@
+{
+  "branch": {
+    "allow_dirty": false,
+    "mode": "confirm",
+    "suggested_name": "striatum/juplaya-systems"
+  },
+  "context_docs": [],
+  "coordinator": {
+    "lane_id": "local",
+    "role_id": "author"
+  },
+  "cycles": [],
+  "edges": [
+    {
+      "from": "draft",
+      "on": "completed",
+      "to": "review"
+    },
+    {
+      "from": "review",
+      "on": "completed",
+      "to": "apply"
+    }
+  ],
+  "jobs": [
+    {
+      "expected_artifacts": [
+        {
+          "kind": "handoff",
+          "logical_name": "draft",
+          "path": "runs/juplaya-systems/DRAFT.md",
+          "required": true
+        }
+      ],
+      "id": "draft",
+      "lane_id": "local",
+      "objective": "Produce the starter artifact for this workflow.",
+      "role_id": "author",
+      "task_prompt": {
+        "path": "prompts/draft.md"
+      },
+      "title": "Draft starter artifact",
+      "type": "draft",
+      "write_scope": {
+        "allowed_paths": [
+          "runs/juplaya-systems/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ],
+        "mode": "repo_write",
+        "repo_write": true
+      }
+    },
+    {
+      "expected_artifacts": [
+        {
+          "kind": "finding",
+          "logical_name": "review",
+          "path": "runs/juplaya-systems/review/REVIEW.md",
+          "required": true
+        }
+      ],
+      "fresh_session_required": true,
+      "id": "review",
+      "lane_id": "local",
+      "objective": "Review the draft and record a finding.",
+      "role_id": "reviewer",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "title": "Review the draft",
+      "type": "review",
+      "write_scope": {
+        "allowed_paths": [
+          "runs/juplaya-systems/review/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ],
+        "mode": "review_only_artifact",
+        "repo_write": false
+      }
+    },
+    {
+      "expected_artifacts": [
+        {
+          "kind": "synthesis",
+          "logical_name": "summary",
+          "path": "runs/juplaya-systems/SUMMARY.md",
+          "required": true
+        }
+      ],
+      "id": "apply",
+      "lane_id": "local",
+      "objective": "Apply the accepted review findings.",
+      "role_id": "author",
+      "task_prompt": {
+        "path": "prompts/apply.md"
+      },
+      "title": "Apply the accepted review",
+      "type": "synthesis",
+      "write_scope": {
+        "allowed_paths": [
+          "runs/juplaya-systems/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ],
+        "mode": "repo_write",
+        "repo_write": true
+      }
+    }
+  ],
+  "lanes": {
+    "local": {
+      "adapter": "process",
+      "capabilities": [
+        "write",
+        "review"
+      ],
+      "command": [
+        "sh",
+        "-c",
+        "cat \u003e/dev/null"
+      ],
+      "display_model": "Local Fixture"
+    }
+  },
+  "name": "juplaya-systems",
+  "parallelism": {
+    "max_active_jobs": 1,
+    "mode": "declared",
+    "require_disjoint_write_scopes": true
+  },
+  "roles": {
+    "author": {
+      "definition_path": "roles/author.md"
+    },
+    "reviewer": {
+      "definition_path": "roles/reviewer.md"
+    }
+  },
+  "schema_version": "striatum.workflow.v1",
+  "workflow_id": "juplaya-systems",
+  "workflow_version": "2026-06-03"
+}
