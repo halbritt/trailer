@@ -1,6 +1,6 @@
-# LiTime 48V (51.2V) 100Ah Bluetooth — Battery Specs
+# LiTime 48V (51.2V) 100Ah Smart ComFlex — Battery Specs
 
-The house pack in the power system. Pulled 2026-06-03 from the LiTime product page (`litime.com/products/48v-100ah-bluetooth-golf-cart-lithium-battery`). Model: 48V(51.2V) 100Ah Bluetooth Golf Cart & Lawn Mower battery, EV-grade LiFePO4 cells + LiTime T5.0 BMS.
+The house pack in the power system: the **LiTime 48V 100Ah Smart ComFlex** (corrected — not the Golf Cart variant). Pulled 2026-06-03 from `litime.com/products/litime-48v-100ah-smart-comflex-lithium-battery`. EV-grade LiFePO4 cells + LiTime T5.0 BMS. "ComFlex" is LiTime's modular flexible-busbar expansion system (eases the 16P paralleling); core electrical specs are identical to the Golf Cart variant, and the table below is the ComFlex page's own.
 
 | Spec | Value |
 |---|---|

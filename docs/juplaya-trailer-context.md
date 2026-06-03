@@ -17,8 +17,8 @@
 
 ### Power system (48V — current/up to date)
 - DIY 48V LiTime stack (F3800 is out):
-  - **LiTime 48V 5kW split-phase AIO** — inverter + charger + MPPT in one (battery separate).
-  - **LiTime 48V 100Ah LiFePO4** — 5.12 kWh, ~100 lb; mount low and centered ([specs](litime-48v-100ah-battery-specs.md)).
+  - **LiTime 48V 5kW split-phase AIO** — inverter + charger + MPPT in one (battery separate); **PV MPPT input window 120–450 V**.
+  - **LiTime 48V 100Ah Smart ComFlex** (LiFePO4) — 5.12 kWh, ~100 lb; mount low and centered ([specs](litime-48v-100ah-battery-specs.md)).
   - **LiTime 500A Bluetooth shunt**; **ANL 250A fuses**.
 - The **AIO lives in the nose, in a cabinet**; anything that needs plugging in plugs in there.
 
@@ -38,7 +38,7 @@
 Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + agy red-team). Full drafts, cross-exams, and the climate ledger/proposal are in `runs/<domain>/`. These are recommendations to ratify; genuinely-open items are under "Still open" below.
 
 ### Power / electrical
-1. **Solar** — **3 × LG455N2W-E6 in one 3S string** (≤ 3 panels), *contingent on the AIO PV-Voc-max ≥ ~165 V cold*; else fall back to 2S.
+1. **Solar** — **4 × LG455N2W-E6 in one 4S string** (~1820 W). The AIO PV MPPT window is **120–450 V**: that rules out 2S (~84 V, below the 120 V floor) and makes 3S marginal in desert heat (hot-day Vmp ~107 V dips under 120 V); 4S holds Vmp ~144 V hot and Voc ~215 V cold, both in-window. *Verify against the LG NeON 2 455 datasheet temp-coeffs + measured roof fit (2×2 ≈ 83" W × 149" L).*
 2. **Solar mounting** — aluminum rails on tilt/Z-brackets **bolted through into the 24"-OC steel roof bows**, butyl + Dicor sealed. **The side-of-top-rail cantilever idea was rejected** (peel/tip load at tow speed).
 3. **48V→12V converter** — ~25 A / 300 W isolated into a fused 12V block. *(May be deletable — see Still open.)*
 4. **12V loads** — a real 12V house rail (~10–15 A typ): running/marker/tail, dome/task, vent fan, sockets/USB-C, GPS, door switch, awning. The earlier "only strips + door + AC" assumption was **false**.
