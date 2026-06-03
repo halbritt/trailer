@@ -38,7 +38,7 @@
 Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + agy red-team). Full drafts, cross-exams, and the climate ledger/proposal are in `runs/<domain>/`. These are recommendations to ratify; genuinely-open items are under "Still open" below.
 
 ### Power / electrical
-1. **Solar** — **4 × LG455N2W-E6 in one 4S string** (~1820 W). The AIO PV MPPT window is **120–450 V**: that rules out 2S (~84 V, below the 120 V floor) and makes 3S marginal in desert heat (hot-day Vmp ~107 V dips under 120 V); 4S holds Vmp ~144 V hot and Voc ~215 V cold, both in-window. *Verify against the LG NeON 2 455 datasheet temp-coeffs + measured roof fit (2×2 ≈ 83" W × 149" L).*
+1. **Solar** — **roof fits 3 panels, not 4.** Each LG455N2W-E6 is ~79.7"×40.3" (~3,210 in²); the box roof (~144"×~80" ≈ 11,500 in²) can't hold 4 (~12,850 in²) — three fit landscape, stacked fore-aft (~121" of 144"). That caps the string at **3S** (3P ~42 V is useless vs the 120 V floor), which is **marginal against the AIO's 120–450 V MPPT window in heat** (Vmp ~125 V STC → ~107 V hot, under the 120 V floor). Resolution (see Still open): a **ventilated tilt mount + accept midday clipping**, or **add an external low-voltage MPPT** charging the 48 V battery directly (sidesteps the AIO's 120 V PV floor). Confirm with measured roof + LG datasheet.
 2. **Solar mounting** — aluminum rails on tilt/Z-brackets **bolted through into the 24"-OC steel roof bows**, butyl + Dicor sealed. **The side-of-top-rail cantilever idea was rejected** (peel/tip load at tow speed).
 3. **48V→12V converter** — ~25 A / 300 W isolated into a fused 12V block. *(May be deletable — see Still open.)*
 4. **12V loads** — a real 12V house rail (~10–15 A typ): running/marker/tail, dome/task, vent fan, sockets/USB-C, GPS, door switch, awning. The earlier "only strips + door + AC" assumption was **false**.
@@ -65,6 +65,7 @@ Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + a
 18. **Accessories order** — Proven 2516 coupler lock; 2× Abloy/Paclock puck locks **keyed-alike**; Trimax TCL65 boot; LandAirSea 54 (hardwired 12V); Blue Sea 5026 12-circuit fuse block; 2× 12V sockets; 1× USB-C PD panel; 2× dome + 1× task light.
 
 ### Still open / to coordinate
+- **Solar string vs the 120 V MPPT floor** — the roof caps the array at 3 panels (3S), whose hot-day Vmp (~107 V) dips below the AIO's 120 V PV floor. Resolve with a ventilated/tilt mount (+ accept midday clipping) or an **external low-voltage MPPT** to the 48 V battery (likely the cleanest fix).
 - **48V→12V converter vs the 24V bus** — both the power and systems red-teams noted the fridge + most 12V loads (12/24V auto-sensing) could run off the existing 24V lighting bus, **deleting the 48→12V converter**. Resolve #3 against this.
 - **Top-rail contention** — the awning (#11) and the solar mounts (#2) both want the aluminum top rail. Coordinate placement.
 - **Interior floor plan (#12)** — blocked on the steel-location + handlebar rework above; needs the tape-measure pass.
