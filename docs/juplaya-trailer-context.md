@@ -5,8 +5,8 @@
 
 ## The trailer (CURRENT — supersedes older notes)
 
-- **Wells Cargo FasTrac Deluxe FT712S2, 7×12, single axle**, white. Purchased at The Trailer Specialist in Acampo, CA. Full spec table (derived): [fastrac-specs.md](fastrac-specs.md).
-- **3,500 lb GVWR** (confirmed). Curb ~1,450–1,600 lb → **~1,900–2,050 lb usable payload** (estimated from the spec sheet; **confirm against the VIN sticker** — this is the binding constraint on the whole build).
+- **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built). Purchased at The Trailer Specialist in Acampo, CA. **VIN 7V0W11214TU444163**, serial 444163. Color per factory order is **Silverfrost** (context earlier said white — confirm). Specs: [fastrac-specs.md](fastrac-specs.md); factory build sheet: [work order](wells-cargo-ft712s2-d-work-order.md).
+- **3,500 lb GVWR** (confirmed, factory work order). Usable payload = 3,500 − actual curb — **will be weighed** (the binding constraint; no need to lean on estimates).
 - **~16'0" overall length** (FT712S2 spec: 13'4" body + ~2'8" V-nose/tongue). The earlier "~18 ft" build-up was an overestimate.
 - **Interior: 6'9" (81") wide × 13'1" (157") long × 6'6" tall** — actual usable; "7×12" is nominal (~3" narrower, ~13" longer than the old 84"×144" assumption).
 - **Tow vehicle: F-150.**
