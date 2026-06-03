@@ -5,13 +5,13 @@
 
 ## The trailer (CURRENT — supersedes older notes)
 
-- **Wells Cargo FasTrac, 7×12, single axle**, white. Purchased at Campway's.
-- **~3,500 lb GVW**, ~1,450 lb empty → **~2,050 lb usable payload** (the binding constraint on the whole build).
-- **~18 ft ball-to-bumper** with the standard V-nose (build-up: 144" box + 48" tube tongue + ~18–24" V-nose + ~4–6" rear; Wells Cargo doesn't publish a single overall-length figure). Drop ~18" if it's the flat/slope nose.
-- **Interior: 84" wide × 144" long.**
+- **Wells Cargo FasTrac Deluxe FT712S2, 7×12, single axle**, white. Purchased at The Trailer Specialist in Acampo, CA. Full spec table (derived): [fastrac-specs.md](fastrac-specs.md).
+- **3,500 lb GVWR** (confirmed). Curb ~1,450–1,600 lb → **~1,900–2,050 lb usable payload** (estimated from the spec sheet; **confirm against the VIN sticker** — this is the binding constraint on the whole build).
+- **~16'0" overall length** (FT712S2 spec: 13'4" body + ~2'8" V-nose/tongue). The earlier "~18 ft" build-up was an overestimate.
+- **Interior: 6'9" (81") wide × 13'1" (157") long × 6'6" tall** — actual usable; "7×12" is nominal (~3" narrower, ~13" longer than the old 84"×144" assumption).
 - **Tow vehicle: F-150.**
 
-> **Correction flag:** older context had this as a *6×10* and at one point as a *7×12 tandem*. Both are wrong. It is a **7×12 single axle**. The earlier E-track/layout planning was sized against the 6×10 (72"×120") and **needs re-cutting for the 84"×144" interior** — see Open Items.
+> **Correction flag:** older context had this as a *6×10*, a *7×12 tandem*, and briefly an *FT714*. All wrong. It is the **FT712S2 — 7×12 single axle, Deluxe**. The earlier E-track/layout planning was sized against the 6×10 (72"×120") and **needs re-cutting for the actual 81"×157" interior** (not the nominal 84"×144") — see Open Items.
 
 ---
 
@@ -107,9 +107,9 @@ Settled in concept; **dimensions need re-cutting for the 84" width.**
 
 ## Open items for the next pass
 
-1. **Re-cut parts list + layout for the 84" × 144" interior** (everything above was conceived against the old 6×10).
+1. **Re-cut parts list + layout for the actual 81" × 157" interior** (everything above was conceived against the old 6×10; nominal "7×12" is 84"×144"). See [fastrac-specs.md](fastrac-specs.md).
 2. Lock floor-track row spacing: needs the two **front-tire centerlines** + final **side-by-side vs. single-file** orientation.
-3. Confirm shoring-beam adjustment range against the 84" interior width.
+3. Confirm shoring-beam adjustment range against the actual 81" interior width.
 4. Confirm V-nose vs. slope-nose on the actual unit (swings overall length by ~1.5 ft).
 5. Tape-measure the real unit before committing any tight garage/parking dimension.
 

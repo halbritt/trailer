@@ -31,4 +31,4 @@ expected to honor the budget; older rows may be grandfathered.
 
 | ID | Status | Decision | Context | Consequence | Revisit |
 | --- | --- | --- | --- | --- | --- |
-| D001 | proposed | TODO — replace with the project's first decision | TODO | TODO | TODO |
+| D001 | accepted | Trailer is the Wells Cargo FasTrac Deluxe **FT712S2** — 7×12 single axle, 3,500 lb GVWR, electric drum brakes, RV-style side door. | Model was mis-recorded across older notes (6×10, 7×12 tandem, FT714); the payload budget and all cut dimensions hang off the real model. | Actual interior is 81"×157" (not the nominal 84"×144"), overall ~16'0"; payload ≈1,900–2,050 lb (estimated). Specs derived in [fastrac-specs.md](fastrac-specs.md); re-cut E-track to actual dims. | VIN-sticker curb/GVWR contradicts the estimate, or a different unit is bought. |
