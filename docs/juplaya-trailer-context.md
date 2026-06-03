@@ -5,7 +5,7 @@
 
 ## The trailer (CURRENT — supersedes older notes)
 
-- **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built). Purchased at The Trailer Specialist in Acampo, CA. **VIN 7V0W11214TU444163**, serial 444163. Color per factory order is **Silverfrost** (context earlier said white — confirm). Specs: [fastrac-specs.md](fastrac-specs.md); factory build sheet: [work order](wells-cargo-ft712s2-d-work-order.md).
+- **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built), **Silverfrost** exterior. Purchased at The Trailer Specialist in Acampo, CA. **VIN 7V0W11214TU444163**, serial 444163. Side door: **32"×72" personnel door, RH hinge** ("RV-style"). Specs: [fastrac-specs.md](fastrac-specs.md); factory build sheet: [work order](wells-cargo-ft712s2-d-work-order.md).
 - **3,500 lb GVWR** (confirmed, factory work order). Usable payload = 3,500 − actual curb — **will be weighed** (the binding constraint; no need to lean on estimates).
 - **~16'0" overall length** (FT712S2 spec: 13'4" body + ~2'8" V-nose/tongue). The earlier "~18 ft" build-up was an overestimate.
 - **Interior: 6'9" (81") wide × 13'1" (157") long × 6'6" tall** — actual usable; "7×12" is nominal (~3" narrower, ~13" longer than the old 84"×144" assumption).

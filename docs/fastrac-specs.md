@@ -26,7 +26,7 @@ The trailer for this build is the **FT712S2** (7×12 single axle, Deluxe "-D" tr
 | CURB WEIGHT (APPROXIMATE) | ≈1,450 lbs. | 900 lbs. | 1,220 lbs. | 1,285 lbs. | 2,260 lbs. | 2,420 lbs. |
 | GVWR | 3,500 lbs. | 2,990 lbs. | 2,990 lbs. | 2,990 lbs. | 7,000 lbs. | 7,000 lbs. |
 | PAYLOAD CAPACITY (APPROXIMATE) | ≈2,050 lbs. | 2,090 lbs. | 1,770 lbs. | 1,705 lbs. | 4,740 lbs. | 4,580 lbs. |
-| SIDE DOOR | RV-style door | OPT | 32" Bar Lock | 32" Bar Lock | 32" Bar Lock | 32" Bar Lock |
+| SIDE DOOR | 32"×72" PT, RH | OPT | 32" Bar Lock | 32" Bar Lock | 32" Bar Lock | 32" Bar Lock |
 | REAR DOOR TYPE | Ramp | Single Swing | Ramp | Ramp | Ramp | Ramp |
 | REAR DOOR OPENING (W x H) | 78" x 72" | 54" x 60" | 66" x 72" | 66" x 72" | 78" x 72" | 78" x 72" |
 | 12v MALE CONNECTION | 7-Way | 4-Way | 4-Way | 4-Way | 7-Way | 7-Way |
@@ -34,7 +34,7 @@ The trailer for this build is the **FT712S2** (7×12 single axle, Deluxe "-D" tr
 
 ## Derivation notes (FT712S2)
 
-**Operator-confirmed:** single axle, GVWR 3,500, Electric Drum brakes, RV-style side door.
+**Operator-confirmed / work order:** single axle, GVWR 3,500, electric-brake axle, 32"×72" PT side door (RH). See [work order](wells-cargo-ft712s2-d-work-order.md).
 
 **Length-driven (from the 12-ft column, FT612S2):** body 13'4", interior length 13'1", overall length 16'0" (overall = body + 2'8", constant across the line).
 
