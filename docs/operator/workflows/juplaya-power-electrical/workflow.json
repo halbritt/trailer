@@ -6,7 +6,7 @@
   },
   "context_docs": [],
   "coordinator": {
-    "lane_id": "local",
+    "lane_id": "claude_code",
     "role_id": "author"
   },
   "cycles": [],
@@ -33,7 +33,7 @@
         }
       ],
       "id": "draft",
-      "lane_id": "local",
+      "lane_id": "claude_code",
       "objective": "Produce the starter artifact for this workflow.",
       "role_id": "author",
       "task_prompt": {
@@ -63,7 +63,7 @@
       ],
       "fresh_session_required": true,
       "id": "review",
-      "lane_id": "local",
+      "lane_id": "codex",
       "objective": "Review the draft and record a finding.",
       "role_id": "reviewer",
       "task_prompt": {
@@ -92,7 +92,7 @@
         }
       ],
       "id": "apply",
-      "lane_id": "local",
+      "lane_id": "claude_code",
       "objective": "Apply the accepted review findings.",
       "role_id": "author",
       "task_prompt": {
@@ -113,18 +113,48 @@
     }
   ],
   "lanes": {
-    "local": {
+    "claude_code": {
       "adapter": "process",
+      "display_model": "Claude Opus 4.8",
+      "command": [
+        "claude",
+        "--model",
+        "claude-opus-4-8",
+        "--permission-mode",
+        "bypassPermissions"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
       "capabilities": [
         "write",
-        "review"
-      ],
+        "review",
+        "synthesis",
+        "interrogate"
+      ]
+    },
+    "codex": {
+      "adapter": "process",
+      "display_model": "Codex GPT-5.5 xhigh",
       "command": [
-        "sh",
+        "codex",
+        "exec",
+        "--model",
+        "gpt-5.5",
         "-c",
-        "cat \u003e/dev/null"
+        "model_reasoning_effort=\"xhigh\"",
+        "-"
       ],
-      "display_model": "Local Fixture"
+      "supervision": {
+        "transport": "pipe",
+        "stdin_delivery": "one_shot_eof"
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis",
+        "interrogate"
+      ]
     }
   },
   "name": "juplaya-power-electrical",
