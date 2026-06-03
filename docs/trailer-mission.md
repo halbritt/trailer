@@ -18,7 +18,7 @@ The shell is fixed: insulated, ventilated (HRV), heated (diesel), CO-monitored, 
 Haul two bikes (WR250R + CRF450RL) to a remote ride, unload, convert interior to sleeping deck, live out of it.
 - E-track: floor rows + chocks for the bikes; wall rows for the bed/shelf deck.
 - Power: sips — lights, fans, charging. Battery alone is plenty.
-- First proof: **Juplaya** (late June 2026).
+- First proof: **Juplaya** (~July 4 2026).
 
 ### 2. Mobile metal fab
 Carry fab kit to a worksite; weld/fabricate on location.
@@ -41,7 +41,7 @@ Tow behind the F-150 to remote trailheads; basecamp for multi-day wheeling.
 ## What stays constant across all profiles
 - **E-track grid** (floor + walls) — the mount-anything backbone.
 - **Off-grid livability stack** — LiFePO4 power, HRV, diesel heat, insulation, CO detector.
-- **F-150 tow**, single-axle 7×12 shell, ~18 ft ball-to-bumper.
+- **F-150 tow**, single-axle 7×12 shell, ~16'0" ball-to-bumper.
 - **Reconfigurability** — interior breaks down and re-fits per mission; nothing welded-in.
 
 *See `juplaya-trailer-context.md` for the full build spec, payload budget, and open items.*
