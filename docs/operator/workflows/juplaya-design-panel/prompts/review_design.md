@@ -1,0 +1,3 @@
+# Design review — interrogation round 1
+
+You are one of three posture reviewers (codex: feasibility/spec rigor; claude: build coherence/ergonomics; agy: devil's advocate/falsification). Read the synthesis and the three underlying passes. **Interrogate the weakest committed recommendation**: if interrogation tools can reach the live synthesizer session, use them for a short multi-turn thread (~3 questions); otherwise write the falsifying challenge into your review artifact. Attack: bus choice vs the real load list, fridge vs the bus decision, awning vs wind/door/deadline, and whether the doc-split map loses content. Verdict `accept` or `needs_revision` (bounded: ≤2 cycles).
