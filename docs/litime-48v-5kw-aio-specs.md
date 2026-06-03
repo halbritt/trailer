@@ -1,5 +1,7 @@
 # LiTime 48V 5kW Solar Inverter Charger (AIO) — Key Specs
 
+> **NOTE:** the build is switching to the **LiTime 48V 3500W AIO (PV 60–145 V)** — this 5 kW sheet is kept for reference.
+
 Distilled from the [manual](litime-48v-5kw-inverter-charger-manual.md) (owner-converted from the scanned PDF). The AIO in the power system — lives in the nose cabinet.
 
 | Spec | Value |

@@ -17,7 +17,7 @@
 
 ### Power system (48V — current/up to date)
 - DIY 48V LiTime stack (F3800 is out):
-  - **LiTime 48V 5kW split-phase AIO** — inverter + charger + MPPT in one (battery separate); **PV 120–450 V rec. / ≤5500 W / ≤22 A**; **no-load draw ≤80 W (≤55 W ECO)** — use ECO / switch off when idle; IP20 + 131 °F ceiling → ventilate the nose cabinet; ~31 lb ([specs](litime-48v-5kw-aio-specs.md) · [manual](litime-48v-5kw-inverter-charger-manual.md)).
+  - **AIO: switching to the LiTime 48V 3500W — PV window 60–145 V** — solves the solar-floor problem (Recommendations #1); 3.5 kW covers the trailer's AC loads and its ~76 A max battery draw restores headroom under the pack's 100 A. *Verify its full sheet (max PV power/current, idle draw, charge current).* The 5 kW unit's docs are kept for reference ([specs](litime-48v-5kw-aio-specs.md) · [manual](litime-48v-5kw-inverter-charger-manual.md)); same rules apply: ECO/off when idle, ventilate the nose cabinet.
   - **LiTime 48V 100Ah Smart ComFlex** (LiFePO4) — 5.12 kWh, ~100 lb; mount low and centered ([specs](litime-48v-100ah-battery-specs.md)).
   - **LiTime 500A Bluetooth shunt**; **ANL 250A fuses**.
 - The **AIO lives in the nose, in a cabinet**; anything that needs plugging in plugs in there.
@@ -38,7 +38,7 @@
 Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + agy red-team). Full drafts, cross-exams, and the climate ledger/proposal are in `runs/<domain>/`. These are recommendations to ratify; genuinely-open items are under "Still open" below.
 
 ### Power / electrical
-1. **Solar** — **datasheet check (LG455N2W-E6): roof fits 2–3 panels, not 4.** Real panel is **83.07"×41.02", 48.5 lb** ([datasheet](lg455n2w-e6-datasheet.md)); on the ~144"×~80" box roof a landscape row spans nearly the full width (≈84"), so 3 is a tight full-width mount and 4 is impossible (4×3,408 in² ≫ the ~11,500 in² roof). The AIO 120 V PV floor is the bind — and it's **Vmpp, not Voc** (3S Voc 149.7 V looks fine but is open-circuit): the datasheet's own **NMOT row puts Vmpp at 39.60 V/panel → 3S = 118.8 V, already under the floor at 20 °C ambient**, sagging to ~108 V in desert heat; 2S (84 V) far below; 4S (would clear) won't fit. **Resolution: add an external low-voltage MPPT** to the 48 V battery — panels parallel into a 100 V-class unit, or series into a 250 V unit — which removes the 120 V-floor constraint so 2–3 × 455 W charge fine. AIO-only fallback: 3×455 in 3S, ventilated mount, accept hot-midday clipping. Note **~145 lb of panels high on the roof** (CG + tongue). Confirm against the measured roof.
+1. **Solar — RESOLVED by the 3500W-AIO swap: 2 × LG455N2W-E6 in 2S (910 W).** The 3500W AIO's PV window is **60–145 V** and 2S sits mid-window in every condition: Vmpp 84.2 V STC / 79.2 V NMOT / ~71 V desert-hot (≫ the 60 V floor); Voc 99.8 V STC, ≤ ~117 V even at −40 °C (< 145 V). The 5 kW unit's 120 V floor was unmeetable by any roof-fitting string (datasheet NMOT row: 3S = 118.8 V at 20 °C ambient). **A 3rd panel is not usable on this unit** (3S Voc 149.7 V > 145 V) — and 2 panels fit the roof easily (~97 lb vs 145). No external MPPT. Mounting unchanged: rails through the steel roof bows ([datasheet](lg455n2w-e6-datasheet.md)). *Expansion if 910 W runs thin: a 3rd panel on its own small MPPT.*
 2. **Solar mounting** — aluminum rails on tilt/Z-brackets **bolted through into the 24"-OC steel roof bows**, butyl + Dicor sealed. **The side-of-top-rail cantilever idea was rejected** (peel/tip load at tow speed).
 3. **48V→12V converter** — ~25 A / 300 W isolated into a fused 12V block. *(May be deletable — see Still open.)*
 4. **12V loads** — a real 12V house rail (~10–15 A typ): running/marker/tail, dome/task, vent fan, sockets/USB-C, GPS, door switch, awning. The earlier "only strips + door + AC" assumption was **false**.
@@ -65,7 +65,7 @@ Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + a
 18. **Accessories order** — Proven 2516 coupler lock; 2× Abloy/Paclock puck locks **keyed-alike**; Trimax TCL65 boot; LandAirSea 54 (hardwired 12V); Blue Sea 5026 12-circuit fuse block; 2× 12V sockets; 1× USB-C PD panel; 2× dome + 1× task light.
 
 ### Still open / to coordinate
-- **Solar string vs the 120 V MPPT floor** — datasheet-confirmed: the 83×41" LG455 fits only 2–3 on the roof, and 3S Vmpp sags to ~108 V hot, below the AIO's 120 V floor (2S far below; 4S won't fit). **Recommended fix: an external low-voltage MPPT** to the 48 V battery (decouples from the floor); AIO-only fallback is 3S + ventilated mount + accept clipping.
+- **Solar / MPPT floor — RESOLVED:** swap to the **3500W AIO (PV 60–145 V)** + **2 × LG455 in 2S** (see #1). Remaining: verify the 3500W unit's full sheet (max PV power/current, idle draw, charge current) and sanity-check ~4 kWh/day of harvest against the Velit duty cycle (expansion: 3rd panel on its own MPPT).
 - **48V→12V converter vs the 24V bus** — both the power and systems red-teams noted the fridge + most 12V loads (12/24V auto-sensing) could run off the existing 24V lighting bus, **deleting the 48→12V converter**. Resolve #3 against this.
 - **Top-rail contention** — the awning (#11) and the solar mounts (#2) both want the aluminum top rail. Coordinate placement.
 - **Interior floor plan (#12)** — blocked on the steel-location + handlebar rework above; needs the tape-measure pass.

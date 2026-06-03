@@ -36,7 +36,7 @@ The house pack in the power system: the **LiTime 48V 100Ah Smart ComFlex** (corr
 
 ## Build-relevant notes
 
-- **Discharge headroom is tight against the 5 kW AIO.** 100 A continuous × 51.2 V = **5120 W continuous — exactly the AIO's max output**. The pack only does 200 A for 2 min and 600 A for 1 s. So running the Velit AC (48 VDC) plus other loads near full inverter output sits at the pack's continuous limit, with no margin on a single pack. Stagger high-draw loads, or this is the argument for a second pack in parallel.
+- **Discharge headroom is tight against the 5 kW AIO.** 100 A continuous × 51.2 V = **5120 W continuous — exactly the AIO's max output**. The pack only does 200 A for 2 min and 600 A for 1 s. So running the Velit AC (48 VDC) plus other loads near full inverter output sits at the pack's continuous limit, with no margin on a single pack. Stagger high-draw loads, or this is the argument for a second pack in parallel. *(Update: the planned swap to the 3500W AIO drops max inverter draw to ~76 A — headroom restored.)*
 - **Parallel only (1S).** Capacity scales by paralleling (≤16P with comms, ≤4P without); you cannot series these. Not a problem for the current 48 V design.
 - **Charging is comfortable.** 100 A max / 20 A recommended, CC/CV at 57.6 V. Solar (~1365 W ÷ 51.2 V ≈ 27 A) and AIO charging are well inside limits.
 - **No self-heating + charge cutoff below 0 °C.** Fine for July Juplaya (hot). But for the mission doc's cold-weather profiles, the pack **won't accept charge below freezing** (recovers ≥ 5 °C) — a real limit if this rig ever winters.
