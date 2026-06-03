@@ -33,36 +33,42 @@
 
 ---
 
-## Open questions (striatum workflow inputs)
+## Recommendations (from the cross-examined workflow runs)
 
-Each is unresolved. **Do not solve here** — these are for the workflow to resolve.
+Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + agy red-team). Full drafts, cross-exams, and the climate ledger/proposal are in `runs/<domain>/`. These are recommendations to ratify; genuinely-open items are under "Still open" below.
 
 ### Power / electrical
-1. **Solar count & string** — 2–4 × **LG455N2W-E6** (455 W), permanent roof mount; maybe **3 if a 3s string** fits the AIO's MPPT window. Decide count + series/parallel.
-2. **Solar mounting** — roof is **flat aluminum**; preference to mount **off the side of the aluminum top rail**. **UNDECIDED — needs a mount design.**
-3. **48V→12V converter** — needed at all? If so, size it to the 12V loads.
-4. **12V load list** — define what actually runs on 12V. Known intent: door switch, maybe awning/misc. (Strip lights are 24V; AC is 48V.) Other than strip lights, a door switch, and the AC, no other wiring is currently foreseen — validate that.
-5. **Lighting** — 24V LED strips (**Yuji**) in **Klus** extrusions/diffusers; maybe 12V for the awning + misc.
-6. **Wiring diagram** — produce once voltages/loads settle (48V AC + charging, 24V lighting, maybe 12V). **Don't solve yet.** (Conduit/ENT runs are an option to revisit here, not a decided spec.)
-7. **Truck charging** — run a **high-current line from the F-150** to charge the 48V pack while towing; spec + wire a **12V→48VDC charger**.
+1. **Solar** — **3 × LG455N2W-E6 in one 3S string** (≤ 3 panels), *contingent on the AIO PV-Voc-max ≥ ~165 V cold*; else fall back to 2S.
+2. **Solar mounting** — aluminum rails on tilt/Z-brackets **bolted through into the 24"-OC steel roof bows**, butyl + Dicor sealed. **The side-of-top-rail cantilever idea was rejected** (peel/tip load at tow speed).
+3. **48V→12V converter** — ~25 A / 300 W isolated into a fused 12V block. *(May be deletable — see Still open.)*
+4. **12V loads** — a real 12V house rail (~10–15 A typ): running/marker/tail, dome/task, vent fan, sockets/USB-C, GPS, door switch, awning. The earlier "only strips + door + AC" assumption was **false**.
+5. **Lighting** — Yuji 24V strips on a dedicated **48V→24V DC-DC (~250 W)** + fused 24V bus, Klus extrusions/diffusers, zoned/dimmed; exterior/awning on 12V.
+6. **Wiring** — three-rail bus (48V AC+charging / 24V lighting / 12V accessories), single-point ground at the shunt, per-converter fusing on the 48V bus, ENT + pull strings; gauges deferred to measured runs.
+7. **Truck charging** — **defer the charger for Juplaya** (1365 W solar recharges 5.12 kWh in < 4 h) but **pre-wire 4 AWG + an Anderson tongue connector now**. Charger when added: ~480–600 W 12→48V DC-DC, ignition-gated.
 
-### Climate / envelope
-8. **Windows** — up for discussion (whether, how many, type). Prior idea: 2 frameless tinted awning windows — **not decided**.
-9. **HRV** — maybe, later (was AccuraSEE MINI).
-10. **Diesel heater** — maybe, later. (Pair a CO detector if it happens.)
-11. **Awning** — **in scope for Juplaya (July 4)**; must be selected.
+### Climate / envelope  *(run completed; verdict: accept-with-findings)*
+8. **Windows** — **one** framed curbside awning window sized to the **measured** clear opening (≤ ~26" RO), spanning two 16"-OC bays with a load-transfer sub-frame; fallback = no glass + a powered roof-vent fan. (agy falsified "two ~22" windows" — bays leave ~15" clear.)
+9. **HRV** — defer the core; **rough-in the paired 4" wall penetrations + power string now**.
+10. **Diesel heater** — **no heater for July**; rough-in through-floor exhaust/fuel penetrations + a hardwired-12V CO-detector string now, defer the unit to cold-weather profiles. (agy killed "install now": mild July nights vs under-floor-exhaust fire over dry scrub + nose-heavy fuel.)
+11. **Awning** — **~12 ft manual lateral-arm RV awning, curbside, through-bolted to the aluminum top rail** (never the skin), desert tie-downs. The July deliverable.
 
 ### Interior / layout
-12. **E-track layout** — convertible bikes-out → sleeping deck; full layout open. Sub-decisions: floor-track orientation (**side-by-side vs single-file** for the two bikes), row spacing (needs front-tire centerlines), mounting method (**flush-recessed vs surface**, bolting **through to the steel crossmembers** vs plywood only), chocks/soft-loops/straps. Source: US Cargo Control.
-13. **Horizontal track heights** — two horizontal tracks: reason out **bed height + optimal shelf height in the 6'9" interior**; survey comparable builds. Constraints: sit-up clearance over the bed; bikes-out, so nothing must clear under the bed; wall track must be backed (point loads + tipping moment on a high shelf).
-14. **Bed shoring beams** — **aluminum shoring beams** vs **E-track inserts that accept 2×4 lumber**. Decide.
-15. **Wall finish + build-up** — leaning **FRP** (Home Depot textured panel); could be talked into luan; **no paint**; maybe a **1/4" XPS sheet** as a thermal break. Need the wall build-up spec + trim options.
-16. **Personnel-door stairs** — need stairs for the 32"×72" side door.
+12. **E-track floor** — bikes **side-by-side, both nose-forward**, flush-recessed, bolted through to steel; reuse the 4 factory D-rings. **⚠ NEEDS REWORK (agy):** the planned ~24" centerline spacing causes ~9" **handlebar interference** (32–34" bars need ~33" clear), and the **2"×4" main rails run at the perimeter, not ±12" off centerline** — centerline rows miss the steel, and a 1/2" recess leaves only ~1/4" ply between crossmembers. Re-derive spacing/position against the *actual* steel locations + measured bar width.
+13. **Track heights** — **bed row ~34", shelf row ~60"**, both backed onto the 16"-OC vertical posts.
+14. **Bed shoring** — **E-track sockets that accept 2×4 lumber** (not fixed aluminum) — reconfigurable, cheap/replaceable.
+15. **Walls** — keep the factory liner; **FRP textured panel over it, no paint**; 1/4" XPS thermal break **only behind the bed zone**; FRP trim; backing in before finish.
+16. **Door stairs** — a **folding/telescoping aluminum RV step that stows on the E-track grid** (not welded, not door-hung).
+- **E-track footage** likely **short — ~73 ft needed vs ~60 on hand**; order more.
 
 ### Systems / gear
-17. **Fridge** — explore: a **DC-compressor unit** (48 / 24 / 12 VDC) vs a small **Midea** running off the inverter (which adds idle inverter load).
-18. **Accessories ordering list** — produce it. Candidates from prior research: GPS **LandAirSea 54** (hardwired 12V), security (**Proven 2516** coupler lock, **Paclock/Abloy** puck locks keyed-alike, **Trimax TCL65** boot), Blue Sea fuse block, 12V sockets / USB-C PD, dome/task lights.
+17. **Fridge** — a **12 VDC compressor fridge/freezer, ~50–55 L** (Dometic CFX3 55IM / ICECO VL60 ProD) — explicitly **not** a Midea on the inverter (avoids ~25–50 W of 24/7 inverter idle tax). *(BD35 units are 12/24V auto-sensing — see Still open.)*
+18. **Accessories order** — Proven 2516 coupler lock; 2× Abloy/Paclock puck locks **keyed-alike**; Trimax TCL65 boot; LandAirSea 54 (hardwired 12V); Blue Sea 5026 12-circuit fuse block; 2× 12V sockets; 1× USB-C PD panel; 2× dome + 1× task light.
 
+### Still open / to coordinate
+- **48V→12V converter vs the 24V bus** — both the power and systems red-teams noted the fridge + most 12V loads (12/24V auto-sensing) could run off the existing 24V lighting bus, **deleting the 48→12V converter**. Resolve #3 against this.
+- **Top-rail contention** — the awning (#11) and the solar mounts (#2) both want the aluminum top rail. Coordinate placement.
+- **Interior floor plan (#12)** — blocked on the steel-location + handlebar rework above; needs the tape-measure pass.
+- **Measurements** — window RO, front-tire centerlines, and the to-be-weighed curb/payload still gate the above (the mm-measurement pass).
 ---
 
 ## Weight
