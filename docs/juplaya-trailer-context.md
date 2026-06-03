@@ -1,117 +1,72 @@
-# Juplaya Trailer Build — Full Context Dump
-*Consolidated for handoff to a fresh thread. Deadline: late June 2026.*
+# Juplaya Trailer Build — Context & Open Questions
+*Consolidated for handoff. Target: ready for Juplaya (~July 4, 2026).*
+
+> This doc was reframed from an auto-generated draft that over-stated what was decided. Treat everything under **Open questions** as unresolved — they are the inputs for a striatum workflow. Only **Settled** items are firm. Do not infer decisions that aren't written here.
 
 ---
 
-## The trailer (CURRENT — supersedes older notes)
+## Settled
 
-- **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built), **Silverfrost** exterior. Purchased at The Trailer Specialist in Acampo, CA. **VIN 7V0W11214TU444163**, serial 444163. Side door: **32"×72" personnel door, RH hinge** ("RV-style"). Specs: [fastrac-specs.md](fastrac-specs.md); factory build sheet: [work order](wells-cargo-ft712s2-d-work-order.md).
-- **3,500 lb GVWR** (confirmed, factory work order). Usable payload = 3,500 − actual curb — **will be weighed** (the binding constraint; no need to lean on estimates).
-- **~16'0" overall length** (FT712S2 spec: 13'4" body + ~2'8" V-nose/tongue). The earlier "~18 ft" build-up was an overestimate.
-- **Interior: 6'9" (81") wide × 13'1" (157") long × 6'6" tall** — actual usable; "7×12" is nominal (~3" narrower, ~13" longer than the old 84"×144" assumption).
-- **Tow vehicle: F-150.**
+### Trailer
+- **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built), **Silverfrost** exterior. Bought at The Trailer Specialist, Acampo CA. **VIN 7V0W11214TU444163**, serial 444163.
+- **Interior 6'9" (81") W × 13'1" (157") L × 6'6" tall**; overall ~16'0". Rear **5,000 lb ramp door**; side **32"×72" personnel door, RH** ("RV-style"). **2"×4" tube main rails**; 4× factory 5,000 lb D-rings; 3/4" PlexCore floor.
+- Full specs: [fastrac-specs.md](fastrac-specs.md) · factory build sheet: [work order](wells-cargo-ft712s2-d-work-order.md).
 
-> **Correction flag:** older context had this as a *6×10*, a *7×12 tandem*, and briefly an *FT714*. All wrong. It is the **FT712S2 — 7×12 single axle, Deluxe**. The earlier E-track/layout planning was sized against the 6×10 (72"×120") and **needs re-cutting for the actual 81"×157" interior** (not the nominal 84"×144") — see Open Items.
+### Tow vehicle
+- **2021 Ford F-150 EcoBoost, Max Tow package.** Has **Pro Trailer Backup Assist** (relevant to maneuvering/parking). Ordered: **integrated trailer backup camera + TPMS** (both integrate with the truck).
 
----
+### Power system (48V — current/up to date)
+- DIY 48V LiTime stack (F3800 is out):
+  - **LiTime 48V 5kW split-phase AIO** — inverter + charger + MPPT in one (battery separate).
+  - **LiTime 48V 100Ah LiFePO4** — 5.12 kWh, ~100 lb; mount low and centered.
+  - **LiTime 500A Bluetooth shunt**; **ANL 250A fuses**.
+- The **AIO lives in the nose, in a cabinet**; anything that needs plugging in plugs in there.
 
-## Power system (CURRENT — F3800 is OUT)
+### Envelope & cooling
+- **Closed-cell spray foam** insulation — given.
+- **Elastomeric roof coating** — given.
+- **Velit Mini 2000R AC — ordered (48 VDC unit).** (No longer deferred.)
 
-48V DIY LiTime stack. The **Anker SOLIX F3800 is removed** from the build (also avoids settlement entanglement; the component stack is clean to buy now).
-
-- **LiTime 48V 5kW Split-Phase All-In-One inverter/charger** (~$860) — the AIO; inverter + charger + MPPT in one unit (battery is separate).
-- **LiTime 48V 100Ah LiFePO4 battery** (~$1,220) — **5.12 kWh**, ~100 lb. Hard-mount low and centered.
-- **LiTime 500A smart Bluetooth shunt** (~$106).
-- **LiTime ANL 250A fuses, 3-pack** (~$20).
-
-Net vs the F3800: lighter (~100 lb vs ~132 lb), permanent install, and keeps further under GVW.
-
----
-
-## Confirmed build decisions
-
-- **Insulation:** closed-cell R-6.7 HFO spray foam (bro deal).
-- **Conduit:** ENT (Smurf tube) runs throughout, with pull strings (pull a spare string per run).
-- **Windows:** two frameless tinted awning windows.
-- **Roof:** white elastomeric roof coating.
-- **Ventilation:** AccuraSEE MINI HRV.
-- **Heat:** diesel heater.
-- **Safety:** standalone CO detector.
-- **EV charger wiring run:** 116 ft → buy 150 ft of wire (116 × 1.10, rounded up to spool size).
-
-### Deferred to phase two (and, on a 3,500 GVW single axle, effectively deferred indefinitely)
-- Velit 2000R Mini AC.
-- Trailer awnings.
+### Use case & on-hand
+- Hauls two bikes — **WR250R + CRF450RL, ~590 lb** combined — convertible "bikes-out → sleeping deck."
+- **~(6) 10 ft black powder-coated E-track sections** — believed ordered (confirm).
 
 ---
 
-## Interior layout (E-track convertible: bikes-out → sleeping deck)
+## Open questions (striatum workflow inputs)
 
-Settled in concept; **dimensions need re-cutting for the 84" width.**
+Each is unresolved. **Do not solve here** — these are for the workflow to resolve.
 
-**Two bikes:** WR250R + CRF450RL, ~590 lb combined.
+### Power / electrical
+1. **Solar count & string** — 2–4 × **LG455N2W-E6** (455 W), permanent roof mount; maybe **3 if a 3s string** fits the AIO's MPPT window. Decide count + series/parallel.
+2. **Solar mounting** — roof is **flat aluminum**; preference to mount **off the side of the aluminum top rail**. **UNDECIDED — needs a mount design.**
+3. **48V→12V converter** — needed at all? If so, size it to the 12V loads.
+4. **12V load list** — define what actually runs on 12V. Known intent: door switch, maybe awning/misc. (Strip lights are 24V; AC is 48V.) Other than strip lights, a door switch, and the AC, no other wiring is currently foreseen — validate that.
+5. **Lighting** — 24V LED strips (**Yuji**) in **Klus** extrusions/diffusers; maybe 12V for the awning + misc.
+6. **Wiring diagram** — produce once voltages/loads settle (48V AC + charging, 24V lighting, maybe 12V). **Don't solve yet.** (Conduit/ENT runs are an option to revisit here, not a decided spec.)
+7. **Truck charging** — run a **high-current line from the F-150** to charge the 48V pack while towing; spec + wire a **12V→48VDC charger**.
 
-**Floor E-track**
-- Two rows running full length front-to-back, one per wheel path.
-- **Flush-recessed** using the track-saw guide (channel walls) + router (clean the floor flat). E-track ~2.5" wide, ~⅛–3/16" thick.
-- **Bolt through into the steel crossmembers, not just plywood** — carriage bolts + backing plates. Locate crossmembers before routing so no fastener orphans over a gap.
-- One E-track wheel chock per bike + soft loops + ratchet straps.
-- At 84" interior, **side-by-side is now viable** (WR/CRF ~32–34" at bars; stagger fore/aft to interleave bars). Final row spacing TBD on front-tire centerlines + chosen orientation.
+### Climate / envelope
+8. **Windows** — up for discussion (whether, how many, type). Prior idea: 2 frameless tinted awning windows — **not decided**.
+9. **HRV** — maybe, later (was AccuraSEE MINI).
+10. **Diesel heater** — maybe, later. (Pair a CO detector if it happens.)
+11. **Awning** — **in scope for Juplaya (July 4)**; must be selected.
 
-**Wall E-track (horizontal) — two-tier**
-- **Bed deck at ~20"** — low enough to sit up under 70–78" interior height; bikes do *not* fit under it (bikes-out convertible).
-- **Shelf at ~48–60"** — dead space above a seated head; light/bulky storage only.
-- Optional third low row at ~12–14" for dedicated bike tie-down below the bed line.
-- **Aluminum** shoring beams as joists at each level (not steel — lifted in/out constantly); ½" ply deck panels on top.
-- Back all wall track with wall structure or a ply/aluminum backer — deck point loads are real, and the high shelf adds a tipping/pull moment.
+### Interior / layout
+12. **E-track layout** — convertible bikes-out → sleeping deck; full layout open. Sub-decisions: floor-track orientation (**side-by-side vs single-file** for the two bikes), row spacing (needs front-tire centerlines), mounting method (**flush-recessed vs surface**, bolting **through to the steel crossmembers** vs plywood only), chocks/soft-loops/straps. Source: US Cargo Control.
+13. **Horizontal track heights** — two horizontal tracks: reason out **bed height + optimal shelf height in the 6'9" interior**; survey comparable builds. Constraints: sit-up clearance over the bed; bikes-out, so nothing must clear under the bed; wall track must be backed (point loads + tipping moment on a high shelf).
+14. **Bed shoring beams** — **aluminum shoring beams** vs **E-track inserts that accept 2×4 lumber**. Decide.
+15. **Wall finish + build-up** — leaning **FRP** (Home Depot textured panel); could be talked into luan; **no paint**; maybe a **1/4" XPS sheet** as a thermal break. Need the wall build-up spec + trim options.
+16. **Personnel-door stairs** — need stairs for the 32"×72" side door.
 
-**Vendor:** US Cargo Control for E-track, aluminum shoring beams, fittings, chocks.
-
----
-
-## Payload budget (against ~2,050 lb)
-
-| Item | Est. lb |
-|---|---|
-| WR250R + CRF450RL | ~590 |
-| E-track system (floor + wall + beams + chocks + fittings) | ~200 |
-| Ply deck panels (bed + shelf) | ~120 |
-| Spray foam, HRV, diesel heater, wiring, conduit | ~120 |
-| LiFePO4 battery + AIO | ~140 |
-| **Subtotal** | **~1,170** |
-| **Remaining for fuel/water/gear/food/recovery** | **~880** |
-
-- 4× 5-gal jerry of fuel ≈ 130 lb.
-- **Set bike fore/aft for ~10–12% tongue weight** — single axle is unforgiving of nose-heavy loads.
+### Systems / gear
+17. **Fridge** — explore: a **DC-compressor unit** (48 / 24 / 12 VDC) vs a small **Midea** running off the inverter (which adds idle inverter load).
+18. **Accessories ordering list** — produce it. Candidates from prior research: GPS **LandAirSea 54** (hardwired 12V), security (**Proven 2516** coupler lock, **Paclock/Abloy** puck locks keyed-alike, **Trimax TCL65** boot), Blue Sea fuse block, 12V sockets / USB-C PD, dome/task lights.
 
 ---
 
-## Accessories (ordering doc already generated separately)
-
-**Security**
-- Coupler lock: **Proven Industries 2516** (grinder-resistant).
-- Cargo-door puck locks: **Paclock or Abloy**, **keyed alike**.
-- Long-term parking: **Trimax TCL65** wheel/boot lock (Juplaya unattended).
-- Hitch pin lock if running a receiver.
-
-**GPS tracker**
-- **LandAirSea 54** — magnetic/waterproof, **hardwire to 12V**, hide in wall cavity. *Primary.*
-- AirTag in a sealed cavity — secondary only (useless for real-time at Juplaya).
-
-**Electrical (downstream of the AIO, via the ENT runs)**
-- Blue Sea Systems fuse block (6 or 12 circuit).
-- 12V LED dome/puck lights (switched), LED strip on a dimmer, white task light.
-- 12V sockets + USB-C PD outlets at bed level.
-
----
-
-## Open items for the next pass
-
-1. **Re-cut parts list + layout for the actual 81" × 157" interior** (everything above was conceived against the old 6×10; nominal "7×12" is 84"×144"). See [fastrac-specs.md](fastrac-specs.md).
-2. Lock floor-track row spacing: needs the two **front-tire centerlines** + final **side-by-side vs. single-file** orientation.
-3. Confirm shoring-beam adjustment range against the actual 81" interior width.
-4. Confirm V-nose vs. slope-nose on the actual unit (swings overall length by ~1.5 ft).
-5. Tape-measure the real unit before committing any tight garage/parking dimension.
+## Weight
+- **GVWR 3,500 lb** (confirmed). Real payload = 3,500 − actual curb; **will be weighed**, not estimated. Single axle is nose-sensitive — aim ~**10–12% tongue weight** when positioning the bikes.
 
 ---
 
