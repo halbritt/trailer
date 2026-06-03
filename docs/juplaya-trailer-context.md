@@ -17,7 +17,7 @@
 
 ### Power system (48V — current/up to date)
 - DIY 48V LiTime stack (F3800 is out):
-  - **LiTime 48V 5kW split-phase AIO** — inverter + charger + MPPT in one (battery separate); **PV MPPT input window 120–450 V**.
+  - **LiTime 48V 5kW split-phase AIO** — inverter + charger + MPPT in one (battery separate); **PV 120–450 V rec. / ≤5500 W / ≤22 A**; **no-load draw ≤80 W (≤55 W ECO)** — use ECO / switch off when idle; IP20 + 131 °F ceiling → ventilate the nose cabinet; ~31 lb ([specs](litime-48v-5kw-aio-specs.md) · [manual](litime-48v-5kw-inverter-charger-manual.md)).
   - **LiTime 48V 100Ah Smart ComFlex** (LiFePO4) — 5.12 kWh, ~100 lb; mount low and centered ([specs](litime-48v-100ah-battery-specs.md)).
   - **LiTime 500A Bluetooth shunt**; **ANL 250A fuses**.
 - The **AIO lives in the nose, in a cabinet**; anything that needs plugging in plugs in there.
