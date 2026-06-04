@@ -41,7 +41,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | backed on tube posts |
 | **Window band** | sill ~**36"**, top ~58" | above the bed track (~27"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
-| Roof: two panel rows (landscape) | 83.07" across × **82" of length** | spans the width; radius corners shrink the flat field (verify) |
+| Roof: two panel rows (landscape) | 83.07" across × **82" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet, not side clamps); leaves ~63" of rectangle + nose |
 | Awning case bottom | ≥ **~78.5"** (above roofline) | riser-mounted |
 | Deployed fabric @ 32" out, 10° pitch | ~**72.9"** | vs the 72" door — ~0.9" paper margin |
 | Fridge bay | starts at the door's aft edge, 37.9" long × 20.9" deep | curbside; band under 18.6" + lid |
@@ -58,12 +58,12 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
 | 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | | |
 | 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the AIO/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | | |
-| 4 | **Roof rectangle (box section): usable flat width** — straightedge across the roof, mark where it lifts off the side curve (both sides), measure between marks; repeat at rear / mid / taper-start stations and **record the minimum** | 1830–1980 mm? (72–78") | | |
-| 5 | **Roof rectangle: length** — rear roof edge → V-nose taper start | ~3660 mm (144") | | |
+| 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
+| 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
 | 6 | Roof-bow stations (from front wall) | 610 mm OC | | |
 | 7 | Wall-post stations + **clear bay width** at the two window stations (rear, both walls) | ~368 mm (14.5") clear | | |
-| 8 | **Door-trim height** above the 72" cutout | ~38 mm (1.5")? | | |
+| 8 | **Door drip rail → top edge of trailer** (replaces trim-height estimate) | ~114 mm (4.5")? | **130 mm (5-1/8")** — F45s case is 5.35" → wall-mount confirmed dead by 0.225" | 2026-06-04 |
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
 | 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | | |
 | 11 | Bike bar widths (WR250R / CRF450RL) + front-tire centerline spacing for stagger | 813–864 mm bars | | |
@@ -71,7 +71,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | per spec sheet | | |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
-| 16 | Top-plate / rail section at the curb edge (riser landing) | TBD | | |
+| 16 | **Perimeter aluminum rail: extrusion profile/section** (standoffs must engage it; riser landing) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 
