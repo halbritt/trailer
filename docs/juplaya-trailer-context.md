@@ -25,7 +25,7 @@
 ### Solar (resolved)
 - **Roof: 2 × LG455N2W-E6 in 2S (910 W)** — mid-window at all temps (Vmpp 84/79/~71 V; Voc ≤ ~117 V cold). **Never 3S** (cold Voc 157–163 V > 145 V max); a 3rd panel would need its own MPPT. ([datasheet](lg455n2w-e6-datasheet.md))
 - **Camped: ground 2S pair parallels in → 2S2P (1820 W)** — ~21.7 A Impp, in-spec vs 50 A/4400 W. Hardware: MC4 Y-branch/mini-combiner, per-string protection ≤20 A, PV disconnect, weatherproof inlet, 10 AWG extension. Guy/anchor the ground pair (playa wind).
-- **Mounting:** rails on tilt/Z-brackets through the 24"-OC steel roof bows, butyl + Dicor. **⚠ Roof-fit gate:** the 84" width includes radius corners — usable flat field may be ~72–78"; two panels span 82–83". The **measured roof drawing** (panels + rails + bows + awning risers + door swing) is pass/fail before ordering racking.
+- **Mounting:** rails on tilt/Z-brackets through the 24"-OC steel roof bows, butyl + Dicor. **⚠ Roof-fit gate:** the 84" width includes radius corners — usable flat field may be ~72–78"; two panels span 82–83". The **measured roof drawing** (panels + rails + bows + awning risers + **the Velit 2000R rooftop AC + its roof opening** + door swing) is pass/fail before ordering racking — the AC competes for roof length with the two panel rows (~82" of ~144") and has never been placed.
 
 ### 24 V house bus — D006
 - **One Victron Orion-Tr 48/24-16A isolated** (nose cabinet, **remote on/off to a cabin toggle**). **48→12 V converter deleted; no 12 V house rail.**
@@ -47,8 +47,10 @@
 ### Settled
 - **Closed-cell spray foam**; **elastomeric roof coating**; **Velit Mini 2000R AC (48 VDC) — ordered** (own fused 48 V branch).
 
-### Windows
-- **Candidate: RecPro 12"×22" frameless** (portrait). A ~12"-wide cutout **fits inside one 16"-OC bay (~14.5" clear)** — no post cut, no load-transfer sub-frame; retires the earlier single-large-window plan (agy had falsified wide windows against the bay spacing). Quantity 1–2, placement TBD. **Gates:** measure actual clear bay width + the window's cutout/RO spec; verify the frameless clamp-ring range against the wall build-up (liner + FRP).
+### Windows — placement decided
+- **2 × RecPro 12"×22" frameless (portrait), directly opposite each other in the REAR (bed) zone — roadside + curbside, same bay station, sills ~36".** The 12" cutout fits inside one 16"-OC bay (~14.5" clear) — no post cut, no sub-frame. The 36–58" window band sits **between the bed track (34") and shelf track (60")**; cross-breeze over the bed; roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward); curbside-rear clears the 18.6" fridge and the roofline-mounted awning case.
+- **Door: RecPro-class 20"×15" window in the 32"×72" personnel door** — forward-zone light, see-out at the entry, third vent point for front-to-back flow.
+- **Gates before cutting:** clear bay width at both chosen stations + RecPro cutout/RO spec; frameless clamp-ring range vs the wall build-up (liner + FRP); door-window RO vs the door's internal frame; keep the curbside bay clear of awning-riser backing-plate spans.
 
 ### HRV / diesel heater (deferred, rough-in now)
 - HRV: rough-in paired 4" wall penetrations + power string. Heater: **no heater for July**; rough-in floor exhaust/fuel + CO-detector string; future unit is a **24 V model** (and reopens D006 sizing).
@@ -87,12 +89,12 @@
 ### Order list
 - **Long-lead now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · Blue Sea 7443 · riser-bracket + backing steel (owner fab) · E-track top-up.
 - **Accessories:** Proven 2516 coupler lock · 2× Abloy/Paclock pucks **keyed-alike** · Trimax TCL65 · LandAirSea 54 (hardwired, 24 V block) · Blue Sea 5026 · Scanstrut SC-USB-F3 · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
-- **Candidates:** RecPro 12×22 frameless window(s).
+- **Windows order:** 2× RecPro 12×22 frameless + 1× 20×15 door window (placement decided — see Climate/Windows).
 
 ---
 
 ## Open gates at a glance
-Measured roof drawing (panels + risers + radius corners) · awning door-trim + deployed-fabric checks · riser load-path outputs · fridge-bay ventilation + lid hinge · floor-plan rework (steel locations + bar width) · window bay-width/RO check · E-track recount · **curb-weight weigh-in**.
+Measured roof drawing (panels + risers + Velit rooftop AC + radius corners) · awning door-trim + deployed-fabric checks · riser load-path outputs · fridge-bay ventilation + lid hinge · floor-plan rework (steel locations + bar width) · window bay-width/RO check · E-track recount · **curb-weight weigh-in**.
 
 ## Weight
 - **GVWR 3,500 lb** (confirmed). Payload = 3,500 − actual curb; **will be weighed**. Single axle is nose-sensitive — ~**10–12% tongue weight** when loading.
