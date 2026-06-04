@@ -48,8 +48,8 @@
 - **Closed-cell spray foam**; **elastomeric roof coating**; **Velit Mini 2000R AC (48 VDC) — ordered** (own fused 48 V branch).
 
 ### Windows — placement decided
-- **2 × RecPro 12"×22" frameless (portrait), directly opposite each other in the REAR (bed) zone — roadside + curbside, same bay station, sills ~36".** The 12" cutout fits inside one 16"-OC bay (~14.5" clear) — no post cut, no sub-frame. The 36–58" window band sits **between the bed track (34") and shelf track (60")**; cross-breeze over the bed; roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward); curbside-rear clears the 18.6" fridge and the roofline-mounted awning case.
-- **Door: RecPro 20"×15" frameless window in the 32"×72" personnel door** — forward-zone light, see-out at the entry, third vent point for front-to-back flow.
+- **2 × RecPro 12"×22" frameless (RP-FRMWIN-1222-TRM, portrait), directly opposite each other in the REAR (bed) zone — roadside + curbside, same bay station, sills ~36".** The 12" cutout fits inside one 16"-OC bay (~14.5" clear) — no post cut, no sub-frame. The 36–58" window band sits **between the bed track (34") and shelf track (60")**; cross-breeze over the bed; roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward); curbside-rear clears the 18.6" fridge and the roofline-mounted awning case.
+- **Door: RecPro 20"×15" frameless (RP-FRMWIN-2015-TRM) in the 32"×72" personnel door** — forward-zone light, see-out at the entry, third vent point for front-to-back flow.
 - **Gates before cutting:** clear bay width at both chosen stations + RecPro cutout/RO spec; frameless clamp-ring range vs the wall build-up (liner + FRP); door-window RO vs the door's internal frame; keep the curbside bay clear of awning-riser backing-plate spans.
 
 ### HRV / diesel heater (deferred, rough-in now)
@@ -89,7 +89,7 @@
 ### Order list
 - **Long-lead now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · Blue Sea 7443 · riser-bracket + backing steel (owner fab) · E-track top-up.
 - **Accessories:** Proven 2516 coupler lock · 2× Abloy/Paclock pucks **keyed-alike** · Trimax TCL65 · LandAirSea 54 (hardwired, 24 V block) · Blue Sea 5026 · Scanstrut SC-USB-F3 · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
-- **Windows order:** RecPro frameless, all three — 2× 12×22 (walls) + 1× 20×15 (door). Placement decided — see Climate/Windows.
+- **Windows order:** RecPro frameless — 2× **RP-FRMWIN-1222-TRM** (12×22, walls) + 1× **RP-FRMWIN-2015-TRM** (20×15, door). Placement decided — see Climate/Windows.
 
 ---
 
