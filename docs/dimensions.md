@@ -8,7 +8,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 |---|---|---|
 | Body (box) | 160" L × 84" W (13'4" × 7'0") | FasTrac table |
 | Overall | ~192" L (16'0") × 102" W (8'6") × ~97" H (8'1") | derived |
-| Interior | **81" W × 157" L × 78" H** | FasTrac table (6'9" × 13'1" × 6'6") |
+| Interior | **81" W × 157" L × 78" H** — rectangle + nose trapezoid; the 157" includes the tapering nose (see measurement rows 3/3a) | FasTrac table |
 | Platform height | 18" | FasTrac table |
 | Rear ramp opening | 78" W × 72" H (5,000 lb, 8' H max w/ ext.) | table + work order |
 | Side personnel door | **32" W × 72" H**, RH hinge | work order |
@@ -54,7 +54,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 |---|---|---|---|---|
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
-| 3 | Interior W × L × H | 2057 × 3988 × 1981 mm | | |
+| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | | |
+| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the AIO/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | | |
 | 4 | **Roof rectangle (box section): usable flat width** — straightedge across the roof, mark where it lifts off the side curve (both sides), measure between marks; repeat at rear / mid / taper-start stations and **record the minimum** | 1830–1980 mm? (72–78") | | |
 | 5 | **Roof rectangle: length** — rear roof edge → V-nose taper start | ~3660 mm (144") | | |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
@@ -72,5 +73,5 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 
-> **Roof plan = rectangle (box) + trapezoid (nose).** The two panel rows need only the rectangle (~82" of its length); the nose trapezoid is free for the drawing to assign (AC clearance, riser stations, walk space).
+> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The E-track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the AIO-cabinet zone. The two panel rows need only the rectangle (~82" of its length); the nose trapezoid is free for the drawing to assign (AC clearance, riser stations, walk space).
 > When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor E-track layout (10, 11), and the payload ledger (18).
