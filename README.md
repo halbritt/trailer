@@ -1,0 +1,42 @@
+# Trailer
+
+Build repo for a **Wells Cargo / ACG FasTrac Deluxe FT712S2-D** (7×12 single-axle, VIN 7V0W11214TU444163) being fitted out as a reconfigurable off-grid platform — moto basecamp first. **Target: ready for Juplaya, ~July 4 2026.**
+
+> The E-track grid is the operating system; the interior is software. — [trailer-mission.md](docs/trailer-mission.md)
+
+## Start here
+
+| Doc | What it is |
+|---|---|
+| **[Build sheet](docs/juplaya-trailer-context.md)** | **Source of truth** — settled facts, every decision, every binding gate, order lists |
+| [Dimension sheet](docs/dimensions.md) | All known dimensions + the mm measurement-pass fill-in table |
+| [Decision log](docs/DECISION_LOG.md) | D001–D008 with context/consequences/revisit conditions |
+| [Mission](docs/trailer-mission.md) | North star: mission profiles + what stays constant |
+
+## Layout
+
+```
+docs/
+├── juplaya-trailer-context.md   # the build sheet (source of truth)
+├── dimensions.md                # dimension sheet + measurement pass
+├── DECISION_LOG.md              # D001–D008
+├── trailer-mission.md           # north star
+├── reference/                   # distilled spec sheets + factory/purchase records
+│   ├── fastrac-specs.md             # manufacturer line specs + derived FT712S2 column
+│   ├── wells-cargo-…-work-order.md  # factory build sheet (VIN, options)
+│   ├── litime-48v-3500w-aio-specs.md / …5kw…  # inverter/charger key specs
+│   ├── litime-48v-100ah-battery-specs.md
+│   ├── dometic-cfx3-95dz-specs.md
+│   ├── lg455n2w-e6-datasheet.md
+│   └── albritton-buyers-order-600485.pdf
+├── manuals/                     # manufacturer literature (PDFs + full conversions)
+├── operator/workflows/          # striatum workflow definitions (decision runs)
+├── SPEC / PRD / DDD / UBIQUITOUS_LANGUAGE / rfcs/   # DDD scaffold
+runs/                            # frozen artifacts from the decision runs
+```
+
+## How decisions get made
+
+Open questions are run through **striatum** multi-model workflows (claude / codex / gemini panels with cross-examination and revision cycles); accepted outcomes land as `DECISION_LOG` rows (`proposed` until the owner ratifies) plus **binding gates** in the build sheet. Raw drafts, reviews, and verdicts are preserved under `runs/`.
+
+**Current state:** power architecture, solar, 24 V bus, fridge, awning, and windows are decided (D001–D008 + window SKUs); everything physical now waits on the **[measurement pass](docs/dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec)** (roof drawing, window cuts, riser fabrication, floor layout, weigh-in).
