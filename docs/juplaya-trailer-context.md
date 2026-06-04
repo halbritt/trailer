@@ -8,7 +8,7 @@
 ## Trailer (settled)
 - **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built), **Silverfrost** exterior. The Trailer Specialist, Acampo CA. **VIN 7V0W11214TU444163**, serial 444163.
 - **Interior 81" W × 157" L × 78" H**; overall ~16'0". Rear **5,000 lb ramp door**; side **32"×72" personnel door, RH**. **2"×4" tube main rails**; 76½" steel tube posts 16" OC; 4× factory 5,000 lb D-rings; ¾" PlexCore floor.
-- Specs: [fastrac-specs.md](fastrac-specs.md) · [factory work order](wells-cargo-ft712s2-d-work-order.md) · **[dimension sheet](dimensions.md)** (incl. the mm measurement-pass table) · vision: [trailer-mission.md](trailer-mission.md).
+- Specs: [reference/fastrac-specs.md](reference/fastrac-specs.md) · [factory work order](reference/wells-cargo-ft712s2-d-work-order.md) · **[dimension sheet](dimensions.md)** (incl. the mm measurement-pass table) · vision: [trailer-mission.md](trailer-mission.md).
 
 ## Tow vehicle (settled)
 - **2021 Ford F-150 EcoBoost, Max Tow.** Pro Trailer Backup Assist; integrated trailer backup camera + TPMS ordered.
@@ -18,12 +18,12 @@
 ## Power / electrical
 
 ### 48 V stack (settled)
-- **AIO: LiTime 48V 3500W** (5 kW returned) — PV 60–145 V op / 60–115 V rec / 4400 W / 50 A; no-load <50 W (<30 W ECO); AC 3500 W, surge 6000 W/5 s; ~75 A max battery draw. **Commissioning: cap total charge ≤100 A.** ECO/off when idle. ([specs](litime-48v-3500w-aio-specs.md) · [manual](litime-48v-3500w-inverter-charger-manual.md))
-- **Battery: LiTime 48V 100Ah Smart ComFlex** — 5.12 kWh, ~97 lb, 100 A continuous; mount low/centered. ([specs](litime-48v-100ah-battery-specs.md))
+- **AIO: LiTime 48V 3500W** (5 kW returned) — PV 60–145 V op / 60–115 V rec / 4400 W / 50 A; no-load <50 W (<30 W ECO); AC 3500 W, surge 6000 W/5 s; ~75 A max battery draw. **Commissioning: cap total charge ≤100 A.** ECO/off when idle. ([specs](reference/litime-48v-3500w-aio-specs.md) · [manual](manuals/litime-48v-3500w-inverter-charger-manual.md))
+- **Battery: LiTime 48V 100Ah Smart ComFlex** — 5.12 kWh, ~97 lb, 100 A continuous; mount low/centered. ([specs](reference/litime-48v-100ah-battery-specs.md))
 - **LiTime 500A Bluetooth shunt; ANL 250A fuses.** AIO + electronics live in the **nose cabinet — ventilate it** (131 °F ceiling + converter waste heat).
 
 ### Solar (resolved)
-- **Roof: 2 × LG455N2W-E6 in 2S (910 W)** — mid-window at all temps (Vmpp 84/79/~71 V; Voc ≤ ~117 V cold). **Never 3S** (cold Voc 157–163 V > 145 V max); a 3rd panel would need its own MPPT. ([datasheet](lg455n2w-e6-datasheet.md))
+- **Roof: 2 × LG455N2W-E6 in 2S (910 W)** — mid-window at all temps (Vmpp 84/79/~71 V; Voc ≤ ~117 V cold). **Never 3S** (cold Voc 157–163 V > 145 V max); a 3rd panel would need its own MPPT. ([datasheet](reference/lg455n2w-e6-datasheet.md))
 - **Camped: ground 2S pair parallels in → 2S2P (1820 W)** — ~21.7 A Impp, in-spec vs 50 A/4400 W. Hardware: MC4 Y-branch/mini-combiner, per-string protection ≤20 A, PV disconnect, weatherproof inlet, 10 AWG extension. Guy/anchor the ground pair (playa wind).
 - **Mounting:** rails on tilt/Z-brackets through the 24"-OC steel roof bows, butyl + Dicor. **⚠ Roof-fit gate:** the 84" width includes radius corners — usable flat field may be ~72–78"; two panels span 82–83". The **measured roof drawing** (panels + rails + bows + awning risers + **the Velit 2000R rooftop AC + its roof opening** + door swing) is pass/fail before ordering racking — the AC competes for roof length with the two panel rows (~82" of ~144") and has never been placed.
 
@@ -84,7 +84,7 @@
 ## Systems / gear
 
 ### Fridge — D008
-- **Dometic CFX3 95DZ (purchased)** — 95 L dual-zone, 12/24 VDC, 24 V @ 4.6 A, 66.4 lb ([specs](dometic-cfx3-95dz-specs.md)). Native **24 V** off the 5026; bay + thermal gate above.
+- **Dometic CFX3 95DZ (purchased)** — 95 L dual-zone, 12/24 VDC, 24 V @ 4.6 A, 66.4 lb ([specs](reference/dometic-cfx3-95dz-specs.md)). Native **24 V** off the 5026; bay + thermal gate above.
 
 ### Order list
 - **Long-lead now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · Blue Sea 7443 · riser-bracket + backing steel (owner fab) · E-track top-up.

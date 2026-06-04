@@ -1,4 +1,4 @@
-<!-- LG NeON H (N2W, 440-455W, E6) datasheet — converted from lg455n2w-e6-datasheet.pdf via marker. Build panel is the LG455N2W-E6 (455W) column. Figure/logo images from the source were not kept. -->
+<!-- LG NeON H (N2W, 440-455W, E6) datasheet — converted from ../manuals/lg455n2w-e6-datasheet.pdf via marker. Build panel is the LG455N2W-E6 (455W) column. Figure/logo images from the source were not kept. -->
 
 > **Build panel: LG455N2W-E6 (455 W).** Load-bearing figures: **2110×1042×40 mm (83.07"×41.02"), 22 kg (48.5 lb)**; **Vmpp 42.1 V, Voc 49.9 V (±5%), Impp 10.83 A, Isc 11.39 A**; temp-coeffs **Pmax −0.33, Voc −0.26 %/°C**; max series fuse 20 A; max system voltage 1000 V (IEC). **String note: the NMOT row (Vmpp 39.60 V) puts 3S at 118.8 V — under the LiTime AIO's 120 V PV floor at nominal 20 °C-ambient conditions; use Vmpp (not Voc) against the floor.** See [AIO specs](litime-48v-5kw-aio-specs.md).
 

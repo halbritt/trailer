@@ -2,7 +2,7 @@
      (scanned manual; converted by the owner via marker). Covers: safety,
      product overview, accessories, table of contents, SPECIFICATIONS, and
      identification of parts. Image files referenced below are not included.
-     Distilled spec sheet: litime-48v-5kw-aio-specs.md -->
+     Distilled spec sheet: ../reference/litime-48v-5kw-aio-specs.md -->
 
 **5000W**
 

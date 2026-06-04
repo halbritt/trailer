@@ -1,6 +1,6 @@
 # Dometic CFX3 95DZ — Key Specs
 
-**Purchased** (D005). Distilled from the [manual](dometic-cfx3-95dz-manual.pdf) (Dometic 9600025322, CFX3-family manual; 95DZ column, EN technical data pp. 38–42).
+**Purchased** (D005). Distilled from the [manual](../manuals/dometic-cfx3-95dz-manual.pdf) (Dometic 9600025322, CFX3-family manual; 95DZ column, EN technical data pp. 38–42).
 
 | Spec | Value |
 |---|---|

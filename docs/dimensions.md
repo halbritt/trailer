@@ -1,6 +1,6 @@
 # Dimension Sheet — Juplaya Trailer Build
 
-All known dimensions in one place. **Spec/derived values first; the fill-in table at the bottom is the mm measurement pass** — measured values are the source of truth once entered and supersede everything above. Cross-refs: [build sheet](juplaya-trailer-context.md) · [fastrac-specs](fastrac-specs.md) · [work order](wells-cargo-ft712s2-d-work-order.md).
+All known dimensions in one place. **Spec/derived values first; the fill-in table at the bottom is the mm measurement pass** — measured values are the source of truth once entered and supersede everything above. Cross-refs: [build sheet](juplaya-trailer-context.md) · [fastrac-specs](reference/fastrac-specs.md) · [work order](reference/wells-cargo-ft712s2-d-work-order.md).
 
 ## Trailer — FT712S2-D (spec / derived)
 

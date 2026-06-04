@@ -1,6 +1,6 @@
 # LiTime 48V 3500W Solar Inverter Charger (AIO) — Key Specs
 
-**The build's AIO** (replaced the returned 5 kW unit). Distilled from the [manual](litime-48v-3500w-inverter-charger-manual.md) (owner-converted). Lives in the nose cabinet.
+**The build's AIO** (replaced the returned 5 kW unit). Distilled from the [manual](../manuals/litime-48v-3500w-inverter-charger-manual.md) (owner-converted). Lives in the nose cabinet.
 
 | Spec | Value |
 |---|---|
