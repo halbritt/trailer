@@ -50,7 +50,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
-> **Interior capture: incoming via a magicplan scan** (owner) — will populate rows 3/3a, 7 (post stations), 10 (floor steel may still need the tape/magnet), 14, 17, and the door geometry. The roof still needs the manual straightedge pass (rows 4–6).
+> **Magicplan scan: landed 2026-06-04 and REJECTED as a measurement source** ([sketch](reference/magicplan-interior-sketch.pdf)). Hard fail: its 85¾" interior width exceeds the 84⅞" tape-measured **exterior** rail-to-rail (spec interior 81"); nose flanks asymmetric by 4" (43½" vs 47½"); door 29¼" vs the work order's 32". Only the long axis is credible (156¾" vs spec 157"). **Rows 3/3a, 7, 14, 17 still need the tape**; use the sketch for shape/door-position ballpark (~97½" rear wall → door aft edge) only.
 > **Rail profile (row 16): incoming via a 3D scan** (owner) — capture the section **end-on** where the rail terminates/miters (rear corner / ramp opening); caliper the channel-lip wall thickness once to anchor the mesh. Export → `docs/reference/`. **Stations: the rail's existing bolts mark the uprights, but they sit at the extrusion's center** — a single centered bolt can't react the standoff moment, so **each standoff takes ≥2 fasteners into its upright** (vertical couple, new penetrations, before-FRP). Record bolt size + post tube wall thickness.
 
 | # | Measurement | Expected | Measured | Date |
