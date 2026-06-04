@@ -74,7 +74,7 @@
 - **Curbside, immediately aft of the personnel door**, E-track strapped. 37.9"×20.9"×18.6" + **lid-swing clearance (verify hinge orientation)**. **Thermal gate:** ventilated/shaded, away from the nose-cabinet heat plume (110 °F ceiling; dual-zone setpoint cap >86 °F).
 
 ### Wall tracks, bed, walls, stairs
-- **Bed row ~34", shelf row ~60"**, backed onto the 16"-OC tube posts. **Bed shoring: E-track sockets taking 2×4 lumber.**
+- **Bed row ~27" (revised from 34" — owner challenge upheld), shelf row ~60"**, backed onto the 16"-OC tube posts. At 34" the sleeping surface (~38.5") left only ~1–3" of seated headroom for a 6'+ adult; at 27" (surface ~31") it's ~46". Bikes-out means nothing needs the taller under-deck. **Gate: mock a 31" surface and sit-test before drilling.** **Bed shoring: E-track sockets taking 2×4 lumber.**
 - **Walls: FRP textured panel over the factory liner, no paint**; ¼" XPS behind the bed zone only; FRP trim; backing in before finish.
 - **Stairs: folding/telescoping aluminum RV step stowed on the E-track grid.**
 - **Panel transport slot:** the ground-pair LG455s (83" > 81" interior width) ride **lengthwise** in a padded E-track wall slot.

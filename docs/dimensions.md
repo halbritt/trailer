@@ -38,8 +38,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 | Item | Value | Notes |
 |---|---|---|
-| Wall E-track rows | bed **34"** · shelf **60"** | backed on tube posts |
-| **Window band** | sill ~**36"**, top ~58" | between the 34"/60" tracks; rear bay station, both walls |
+| Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | backed on tube posts |
+| **Window band** | sill ~**36"**, top ~58" | above the bed track (~27"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
 | Roof: two panel rows (landscape) | 83.07" across × **82" of length** | spans the width; radius corners shrink the flat field (verify) |
 | Awning case bottom | ≥ **~78.5"** (above roofline) | riser-mounted |
