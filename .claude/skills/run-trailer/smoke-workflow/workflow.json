@@ -1,0 +1,92 @@
+{
+  "schema_version": "striatum.workflow.v1",
+  "workflow_id": "skill-smoke",
+  "workflow_version": "2026-06-04",
+  "name": "skill-smoke",
+  "branch": {
+    "allow_dirty": true,
+    "mode": "confirm",
+    "suggested_name": "striatum/skill-smoke"
+  },
+  "coordinator": {
+    "role_id": "author",
+    "lane_id": "claude_code"
+  },
+  "lanes": {
+    "claude_code": {
+      "adapter": "process",
+      "display_model": "Claude Opus 4.8",
+      "command": [
+        "claude",
+        "--model",
+        "claude-opus-4-8",
+        "--permission-mode",
+        "bypassPermissions"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "supervision": {
+        "transport": "pty_helper",
+        "compatible": true,
+        "require_tmux": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    }
+  },
+  "roles": {
+    "author": {
+      "definition_path": "roles/author.md"
+    }
+  },
+  "parallelism": {
+    "mode": "declared",
+    "max_active_jobs": 3,
+    "require_disjoint_write_scopes": true
+  },
+  "jobs": [
+    {
+      "id": "smoke_note",
+      "type": "draft",
+      "title": "Smoke note",
+      "role_id": "author",
+      "lane_id": "claude_code",
+      "fresh_session_required": false,
+      "objective": "Write a one-line smoke artifact proving the claim loop works.",
+      "task_prompt": {
+        "path": "prompts/smoke.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/skill-smoke/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "smoke_note",
+          "kind": "handoff",
+          "path": "runs/skill-smoke/smoke_note.md",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "edges": [],
+  "context_docs": [
+    {
+      "path": "README.md",
+      "required": false
+    }
+  ],
+  "cycles": []
+}
