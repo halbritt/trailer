@@ -8,7 +8,7 @@
 ## Trailer (settled)
 - **FasTrac Deluxe FT712S2-D, 7×12, single axle** (ACG-built), **Silverfrost** exterior. The Trailer Specialist, Acampo CA. **VIN 7V0W11214TU444163**, serial 444163.
 - **Interior 81" W × 157" L × 78" H**; overall ~16'0". Rear **5,000 lb ramp door**; side **32"×72" personnel door, RH**. **2"×4" tube main rails**; 76½" steel tube posts 16" OC; 4× factory 5,000 lb D-rings; ¾" PlexCore floor.
-- Specs: [fastrac-specs.md](fastrac-specs.md) · [factory work order](wells-cargo-ft712s2-d-work-order.md) · vision: [trailer-mission.md](trailer-mission.md).
+- Specs: [fastrac-specs.md](fastrac-specs.md) · [factory work order](wells-cargo-ft712s2-d-work-order.md) · **[dimension sheet](dimensions.md)** (incl. the mm measurement-pass table) · vision: [trailer-mission.md](trailer-mission.md).
 
 ## Tow vehicle (settled)
 - **2021 Ford F-150 EcoBoost, Max Tow.** Pro Trailer Backup Assist; integrated trailer backup camera + TPMS ordered.
