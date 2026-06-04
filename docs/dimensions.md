@@ -51,6 +51,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
 > **Interior capture: incoming via a magicplan scan** (owner) — will populate rows 3/3a, 7 (post stations), 10 (floor steel may still need the tape/magnet), 14, 17, and the door geometry. The roof still needs the manual straightedge pass (rows 4–6).
+> **Rail profile (row 16): incoming via a 3D scan** (owner) — capture the section **end-on** where the rail terminates/miters (rear corner / ramp opening); caliper the channel-lip wall thickness once to anchor the mesh. Export → `docs/reference/`. A sweep of the curbside span also yields riser stations vs post locations (row 9 / awning gate c).
 
 | # | Measurement | Expected | Measured | Date |
 |---|---|---|---|---|
