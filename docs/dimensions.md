@@ -55,8 +55,9 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
 | 3 | Interior W × L × H | 2057 × 3988 × 1981 mm | | |
-| 4 | **Flat roof field width** (between radius corners) | 1830–1980 mm? (72–78") | | |
-| 5 | Usable flat roof length | ~3660 mm (144") | | |
+| 4 | **Roof rectangle (box section): usable flat width** — straightedge across the roof, mark where it lifts off the side curve (both sides), measure between marks; repeat at rear / mid / taper-start stations and **record the minimum** | 1830–1980 mm? (72–78") | | |
+| 5 | **Roof rectangle: length** — rear roof edge → V-nose taper start | ~3660 mm (144") | | |
+| 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
 | 6 | Roof-bow stations (from front wall) | 610 mm OC | | |
 | 7 | Wall-post stations + **clear bay width** at the two window stations (rear, both walls) | ~368 mm (14.5") clear | | |
 | 8 | **Door-trim height** above the 72" cutout | ~38 mm (1.5")? | | |
@@ -71,4 +72,5 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 
+> **Roof plan = rectangle (box) + trapezoid (nose).** The two panel rows need only the rectangle (~82" of its length); the nose trapezoid is free for the drawing to assign (AC clearance, riser stations, walk space).
 > When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor E-track layout (10, 11), and the payload ledger (18).
