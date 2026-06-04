@@ -31,7 +31,6 @@ docs/
 │   └── albritton-buyers-order-600485.pdf
 ├── manuals/                     # manufacturer literature (PDFs + full conversions)
 ├── operator/workflows/          # striatum workflow definitions (decision runs)
-├── SPEC / PRD / DDD / UBIQUITOUS_LANGUAGE / rfcs/   # DDD scaffold
 runs/                            # frozen artifacts from the decision runs
 ```
 

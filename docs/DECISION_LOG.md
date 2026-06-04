@@ -7,8 +7,8 @@
 
 Each row is a decision the project has made. The four columns
 hold *receipts*: a one- or two-sentence prose cell each. Detail
-belongs in the linked RFC and any associated build handoff,
-not in the row itself.
+belongs in the linked build-sheet section, spec sheet, or run
+artifact — not in the row itself.
 
 The cell budget exists so the log stays a navigable receipt and
 does not grow back into duplicated SPEC content. Newer rows are
@@ -21,11 +21,11 @@ expected to honor the budget; older rows may be grandfathered.
    - **Decision** — what we decided. Imperative, present tense.
    - **Context** — why we needed to decide. The tension we
      were resolving.
-   - **Consequence** — what changes as a result. Cite the RFC
-     and any code/test entry points.
+   - **Consequence** — what changes as a result. Cite the
+     build-sheet section or run artifact.
    - **Revisit** — the conditions that would justify reopening
      this decision.
-3. Cite the RFC and (when applicable) a build handoff or PR.
+3. Cite the source (run artifact, spec sheet, or measurement).
 
 ## Decisions
 
