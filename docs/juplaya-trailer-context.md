@@ -61,7 +61,7 @@ Resolved 2026-06-03 by four striatum `cross_examination` runs (claude author + a
 - **E-track footage** likely **short — ~73 ft needed vs ~60 on hand**; order more.
 
 ### Systems / gear
-17. **Fridge** — a **12 VDC compressor fridge/freezer, ~50–55 L** (Dometic CFX3 55IM / ICECO VL60 ProD) — explicitly **not** a Midea on the inverter (avoids ~25–50 W of 24/7 inverter idle tax). *(BD35 units are 12/24V auto-sensing — see Still open.)*
+17. **Fridge — PURCHASED: Dometic CFX3 95DZ** (95 L dual-zone, 12/24 VDC auto-sensing, ~37×20×21", ~60 lb). The DC-compressor-not-Midea call held; owner sized up by purchase. Remaining = integration (design-panel run): bus assignment (native 24 V on the lean), interior location/mounting, daily energy budget vs solar.
 18. **Accessories order** — Proven 2516 coupler lock; 2× Abloy/Paclock puck locks **keyed-alike**; Trimax TCL65 boot; LandAirSea 54 (hardwired 12V); Blue Sea 5026 12-circuit fuse block; 2× 12V sockets; 1× USB-C PD panel; 2× dome + 1× task light.
 
 ### Still open / to coordinate
