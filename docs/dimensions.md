@@ -51,7 +51,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
 > **Interior capture: incoming via a magicplan scan** (owner) — will populate rows 3/3a, 7 (post stations), 10 (floor steel may still need the tape/magnet), 14, 17, and the door geometry. The roof still needs the manual straightedge pass (rows 4–6).
-> **Rail profile (row 16): incoming via a 3D scan** (owner) — capture the section **end-on** where the rail terminates/miters (rear corner / ramp opening); caliper the channel-lip wall thickness once to anchor the mesh. Export → `docs/reference/`. A sweep of the curbside span also yields riser stations vs post locations (row 9 / awning gate c).
+> **Rail profile (row 16): incoming via a 3D scan** (owner) — capture the section **end-on** where the rail terminates/miters (rear corner / ramp opening); caliper the channel-lip wall thickness once to anchor the mesh. Export → `docs/reference/`. **Stations: the rail's existing bolts mark the uprights, but they sit at the extrusion's center** — a single centered bolt can't react the standoff moment, so **each standoff takes ≥2 fasteners into its upright** (vertical couple, new penetrations, before-FRP). Record bolt size + post tube wall thickness.
 
 | # | Measurement | Expected | Measured | Date |
 |---|---|---|---|---|
@@ -72,7 +72,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | per spec sheet | | |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
-| 16 | **Perimeter aluminum rail: extrusion profile/section** (standoffs must engage it; riser landing) | TBD | | |
+| 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 

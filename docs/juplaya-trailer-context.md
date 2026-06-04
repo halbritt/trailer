@@ -25,7 +25,7 @@
 ### Solar (resolved)
 - **Roof: 2 × LG455N2W-E6 in 2S (910 W)** — mid-window at all temps (Vmpp 84/79/~71 V; Voc ≤ ~117 V cold). **Never 3S** (cold Voc 157–163 V > 145 V max); a 3rd panel would need its own MPPT. ([datasheet](reference/lg455n2w-e6-datasheet.md))
 - **Camped: ground 2S pair parallels in → 2S2P (1820 W)** — ~21.7 A Impp, in-spec vs 50 A/4400 W. Hardware: MC4 Y-branch/mini-combiner, per-string protection ≤20 A, PV disconnect, weatherproof inlet, 10 AWG extension. Guy/anchor the ground pair (playa wind).
-- **Mounting:** rails on tilt/Z-brackets through the 24"-OC steel roof bows, butyl + Dicor. **⚠ Roof-fit gate:** the 84" width includes radius corners — usable flat field may be ~72–78"; two panels span 82–83". The **measured roof drawing** (panels + rails + bows + awning risers + **the Velit 2000R rooftop AC + its roof opening** + door swing) is pass/fail before ordering racking — the AC competes for roof length with the two panel rows (~82" of ~144") and has never been placed.
+- **Mounting:** rails on tilt/Z-brackets through the 24"-OC steel roof bows, butyl + Dicor. **Roof fit — MEASURED ✓ (2026-06-04):** width **84-7/8" rail-edge to rail-edge, minimal crown — the landscape pair fits** (~0.9"/side margin → under-panel feet/rails, not side clamps); rectangle length **145.5"** → the two rows take 82", leaving **~63" + the nose**. Remaining for the **roof drawing**: bow stations, the **Velit 2000R AC + its roof opening** (still unplaced), awning standoff stations, panel feet layout.
 
 ### 24 V house bus — D006
 - **One Victron Orion-Tr 48/24-16A isolated** (nose cabinet, **remote on/off to a cabin toggle**). **48→12 V converter deleted; no 12 V house rail.**
@@ -48,7 +48,7 @@
 - **Closed-cell spray foam**; **elastomeric roof coating**; **Velit Mini 2000R AC (48 VDC) — ordered** (own fused 48 V branch).
 
 ### Windows — placement decided
-- **2 × RecPro 12"×22" frameless (RP-FRMWIN-1222-TRM, portrait), directly opposite each other in the REAR (bed) zone — roadside + curbside, same bay station, sills ~36".** The 12" cutout fits inside one 16"-OC bay (~14.5" clear) — no post cut, no sub-frame. The 36–58" window band sits **between the bed track (34") and shelf track (60")**; cross-breeze over the bed; roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward); curbside-rear clears the 18.6" fridge and the roofline-mounted awning case.
+- **2 × RecPro 12"×22" frameless (RP-FRMWIN-1222-TRM, portrait), directly opposite each other in the REAR (bed) zone — roadside + curbside, same bay station, sills ~36".** The 12" cutout fits inside one 16"-OC bay (~14.5" clear) — no post cut, no sub-frame. The 36–58" window band sits **between the bed track (~27") and shelf track (60")**; cross-breeze over the bed; roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward); curbside-rear clears the 18.6" fridge and the roofline-mounted awning case.
 - **Door: RecPro 20"×15" frameless (RP-FRMWIN-2015-TRM) in the 32"×72" personnel door** — forward-zone light, see-out at the entry, third vent point for front-to-back flow.
 - **Gates before cutting:** clear bay width at both chosen stations + RecPro cutout/RO spec; frameless clamp-ring range vs the wall build-up (liner + FRP); door-window RO vs the door's internal frame; keep the curbside bay clear of awning-riser backing-plate spans.
 
@@ -56,9 +56,10 @@
 - HRV: rough-in paired 4" wall penetrations + power string. Heater: **no heater for July**; rough-in floor exhaust/fuel + CO-detector string; future unit is a **24 V model** (and reopens D006 sizing).
 
 ### Awning — D007
-- **Fiamma F45s 350** (06280B01R; 11'6" case, ~55 lb) on **owner-fabricated steel riser brackets** at the curbside roof edge, **case at/above the roofline (~78.5")** — wall-mount dead (5.35" case vs ~4.5" clear over the door; fabric fouls the swing), flat-roof mount dead (panels own the roof width).
-- **Load path:** risers land on/into the steel tube posts with interior backing plates; design for deployed wind + tie-down + travel vibration. **Required outputs before fab: bracket count/spacing, fastener size/grade, backing-plate span, documented load case.**
-- **Gates:** door-trim height; top-plate/tube-post landing; the shared measured roof drawing; **deployed-fabric vs open-door at actual pitch** (paper margin ~0.9"). **Fallback:** freestanding shade (Moonshade-class).
+- **Fiamma F45s 350** (06280B01R; 11'6" case, ~55 lb) on **owner-fabricated standoffs at the perimeter aluminum top rail**, **case at/above the roofline (~78.5")** — wall-mount dead **by tape (2026-06-04)**: 5-1/8" measured drip-rail-top → trailer-top-edge vs the 5.35" case (0.225" short; fabric would also foul the swing). Flat-roof mount dead (panels own the roof width).
+- **Stations & load path:** the rail's existing bolts mark the uprights — **but they sit at the center of the extrusion**, and a single centered bolt can't react the standoff's prying moment. **Each standoff base runs down the wall face and takes ≥2 fasteners into its steel tube upright** (vertical couple — maximize the spread), picking up the rail bolt as a bonus, not the load path. Fasten into the tube by drill-and-tap or through-bolt **while the interior is open — before FRP**; butyl-seal every skin penetration. Design for deployed wind + tie-down + travel vibration.
+- **Required outputs before fab:** standoff count/stations along the 138" case (F45s wants 3–4 brackets → pick uprights that bracket the span + mid-span); fastener size/grade + **post tube wall thickness** (tap vs through-bolt); couple-arm spacing; documented load case.
+- **Gates:** rail-section 3D scan (dimension row 16); the shared measured roof drawing; **deployed-fabric vs open-door at actual pitch** (paper margin ~0.9"). **Fallback:** freestanding shade (Moonshade-class).
 - **Discipline:** Tie Down S (98655-133) + 3/8"×12" lags / deadman bags; legs to ground; **wound in before sleep, departure, or gusts >20 mph.**
 
 ---
