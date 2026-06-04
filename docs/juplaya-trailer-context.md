@@ -76,7 +76,7 @@
 
 ### Wall tracks, bed, walls, stairs
 - **Bed row ~27" (revised from 34" — owner challenge upheld), shelf row ~60"**, backed onto the 16"-OC tube posts. At 34" the sleeping surface (~38.5") left only ~1–3" of seated headroom for a 6'+ adult; at 27" (surface ~31") it's ~46". Bikes-out means nothing needs the taller under-deck. **Gate: mock a 31" surface and sit-test before drilling.** **Bed shoring: E-track sockets taking 2×4 lumber.**
-- **Walls: FRP textured panel over the factory liner, no paint**; ¼" XPS behind the bed zone only; FRP trim; backing in before finish.
+- **Walls — D009 (proposed): pull the factory OSB during the foam job and re-skin in 3/8" birch ply, FRP textured panel over the birch, no paint.** 3/8 matches the factory thickness — wall sandwich geometry (window clamp range, door reveals) unchanged; birch holds fasteners and FRP adhesive far better than OSB; walls are already open for the spray foam, so the swap is nearly free labor. **Skip 1/4"** (flex between the 16"-OC posts, thins the window clamp sandwich); the on-hand **1/2" sheet goes to interior fixtures** (fridge-bay partition, shelving), not walls. ¼" XPS behind the bed zone only; backing in before finish. **Gates: verify factory OSB is actually 3/8" (dimension row 19); D009 must be ratified before the window RO cuts (row 12 feeds the clamp-range check); FRP trim system still open (see design freeze).**
 - **Stairs: folding/telescoping aluminum RV step stowed on the E-track grid.**
 - **Panel transport slot:** the ground-pair LG455s (83" > 81" interior width) ride **lengthwise** in a padded E-track wall slot.
 
@@ -94,8 +94,24 @@
 
 ---
 
-## Open gates at a glance
-Measured roof drawing (panels + risers + Velit rooftop AC + radius corners) · awning door-trim + deployed-fabric checks · riser load-path outputs · fridge-bay ventilation + lid hinge · floor-plan rework (steel locations + bar width) · window bay-width/RO check · E-track recount · **curb-weight weigh-in**.
+## Design freeze — definition of done
+
+**The design is DONE when every row below is checked.** Then the build phase starts: order everything, foam, walls, cuts, fab. Each row names what closes it.
+
+| # | Item | Closes when | Status |
+|---|---|---|---|
+| 1 | **D006–D008 ratified** (24 V bus · awning standoffs · fridge integration) | owner ratifies in the DECISION_LOG | ☐ |
+| 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled OSB | owner ratifies + factory OSB thickness verified (row 19) | ☐ |
+| 3 | **Track heights final** — bed ~27", shelf 60" | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band | ☐ |
+| 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
+| 5 | **Roof drawing** — panel feet, Velit station + opening, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
+| 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
+| 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
+| 8 | **Flooring material** | committed choice (lean: rubber coin roll — fuel/oil-proof, hose-out, relieved over the recessed E-track) | ☐ |
+| 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive on birch) | ☐ |
+| 10 | **Order list frozen** — every SKU + E-track footage recount | rows 1–9 closed | ☐ |
+
+Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
 ## Weight
 - **GVWR 3,500 lb** (confirmed). Payload = 3,500 − actual curb; **will be weighed**. Single axle is nose-sensitive — ~**10–12% tongue weight** when loading.

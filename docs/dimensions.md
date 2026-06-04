@@ -68,13 +68,14 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
 | 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | | |
 | 11 | Bike bar widths (WR250R / CRF450RL) + front-tire centerline spacing for stagger | 813–864 mm bars | | |
-| 12 | Wall build-up thickness (liner + FRP) at window stations | TBD | | |
+| 12 | Wall build-up thickness at window stations — **birch (D009) + FRP** sandwich vs the RecPro frameless clamp range | TBD | | |
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | per spec sheet | | |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
+| 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
 
 > **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The E-track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the AIO-cabinet zone. The two panel rows need only the rectangle (~82" of its length); the nose trapezoid is free for the drawing to assign (AC clearance, riser stations, walk space).
 > When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor E-track layout (10, 11), and the payload ledger (18).
