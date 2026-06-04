@@ -50,6 +50,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
+> **Interior capture: incoming via a magicplan scan** (owner) — will populate rows 3/3a, 7 (post stations), 10 (floor steel may still need the tape/magnet), 14, 17, and the door geometry. The roof still needs the manual straightedge pass (rows 4–6).
+
 | # | Measurement | Expected | Measured | Date |
 |---|---|---|---|---|
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
