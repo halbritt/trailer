@@ -24,26 +24,26 @@
   <text x="55" y="70" class="label">Juplaya power architecture</text>
   <text x="55" y="94" class="small">Critical trailer loads stay DC. Small 120 VAC loads stay on the portable C1000 island.</text>
 
-  <rect x="70" y="145" width="210" height="78" class="box source"/>
-  <text x="92" y="176" class="label">Roof PV</text>
-  <text x="92" y="199" class="small">3 x LG455 in 3S</text>
-
-  <rect x="365" y="145" width="230" height="78" class="box"/>
-  <text x="388" y="176" class="label">SmartSolar 250/60-Tr</text>
-  <text x="388" y="199" class="small">roof MPPT, 250 V class</text>
+  <rect x="70" y="105" width="210" height="78" class="box source"/>
+  <text x="92" y="136" class="label">LG ground pair</text>
+  <text x="92" y="159" class="small">optional 2S, 910 W</text>
 
   <rect x="680" y="135" width="255" height="98" class="box battery"/>
   <text x="704" y="171" class="label">LiTime ComFlex</text>
   <text x="704" y="194" class="small">48 V 100 Ah, 5.12 kWh</text>
   <text x="704" y="215" class="tiny">shunt + main OCP at battery</text>
 
-  <rect x="70" y="285" width="210" height="78" class="box source"/>
-  <text x="92" y="316" class="label">LG ground pair</text>
-  <text x="92" y="339" class="small">optional 2S, 910 W</text>
+  <rect x="365" y="105" width="230" height="78" class="box"/>
+  <text x="388" y="136" class="label">SmartSolar 150/35</text>
+  <text x="388" y="159" class="small">ordered ground MPPT</text>
 
-  <rect x="365" y="285" width="230" height="78" class="box"/>
-  <text x="388" y="316" class="label">SmartSolar 150/35</text>
-  <text x="388" y="339" class="small">ordered ground MPPT</text>
+  <rect x="70" y="245" width="210" height="78" class="box source"/>
+  <text x="92" y="276" class="label">Roof PV</text>
+  <text x="92" y="299" class="small">3 x LG455 in 3S</text>
+
+  <rect x="365" y="245" width="230" height="78" class="box"/>
+  <text x="388" y="276" class="label">SmartSolar 250/60-Tr</text>
+  <text x="388" y="299" class="small">roof MPPT, 250 V class</text>
 
   <rect x="680" y="285" width="255" height="78" class="box load"/>
   <text x="704" y="316" class="label">Velit 2000R</text>
@@ -83,11 +83,13 @@
   <text x="986" y="194" class="small">MultiPlus-II</text>
   <text x="986" y="214" class="tiny">optional later</text>
 
-  <path class="line" d="M 280 184 L 365 184"/>
-  <path class="line" d="M 595 184 L 680 184"/>
-  <path class="line" d="M 280 324 L 365 324"/>
-  <path class="line" d="M 595 324 L 680 215"/>
-  <path class="bus" d="M 680 184 L 640 184 L 640 459"/>
+  <text x="612" y="128" class="tiny">48 V bus</text>
+  <path class="bus" d="M 640 144 L 640 459"/>
+  <path class="line" d="M 280 144 L 365 144"/>
+  <path class="line" d="M 595 144 L 640 144"/>
+  <path class="bus" d="M 640 184 L 680 184"/>
+  <path class="line" d="M 280 284 L 365 284"/>
+  <path class="line" d="M 595 284 L 640 284"/>
   <path class="line" d="M 640 324 L 680 324"/>
   <path class="line" d="M 640 459 L 680 459"/>
   <path class="bus" d="M 935 459 L 950 459 L 950 508 M 950 459 L 950 352"/>
@@ -96,7 +98,7 @@
   <path class="line" d="M 950 456 L 965 456"/>
   <path class="line" d="M 950 508 L 965 508"/>
   <path class="line" d="M 280 539 L 365 539"/>
-  <path class="soft" d="M 680 459 C 635 459, 660 540, 595 539"/>
+  <path class="soft" d="M 760 498 C 760 540, 655 539, 595 539"/>
   <path class="soft" d="M 935 184 L 965 184"/>
 
   <text x="612" y="516" class="tiny">optional manual 24 V top-up to C1000</text>
