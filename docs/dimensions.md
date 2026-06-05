@@ -93,7 +93,7 @@ Owner field sketch titled **"structure layout"** — the **interior floor footpr
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
-| 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
+| 19 | **Factory wall board: thickness** — material **confirmed PlexCore** (a moisture-*resistant* "special OSB", Wells Cargo/Haulmark), now the **reused FRP substrate** (D009), not a birch buy; thickness still to tape | ~9.5 mm (3/8") | material = PlexCore (owner, product sheet) | 2026-06-05 |
 
 > **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The E-track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the AIO-cabinet zone. The two panel rows need only the rectangle (~82" of its length); the nose trapezoid is free for the drawing to assign (AC clearance, riser stations, walk space).
 > When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor E-track layout (10, 11), and the payload ledger (18).
