@@ -13,6 +13,8 @@ Read:
 
 The owner likes Durabak for durability and low weight, but cost is substantial. Your assigned posture is in the job objective. Argue from that posture and try to break the current recommendation.
 
+Marine-deck coatings are in scope. Explicitly evaluate **TotalBoat TotalTread**, **Interlux Interdeck**, **Tuff Coat**, and at least one comparable marine non-skid coating class such as KiwiGrip or Pettit EZ-Decks. Do not assume "marine" means cargo-ramp durability; test the thin-film deck-paint argument against bikes/chocks/E-track use, and separately test whether Tuff Coat's higher-build rubberized coating is a real Durabak substitute or just similar money with more install dependency.
+
 Score each viable candidate on:
 
 - total material cost for floor+cove+ramp
