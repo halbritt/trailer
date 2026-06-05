@@ -32,7 +32,7 @@
 
 ### 24 V house bus — D006
 - **One Victron Orion-Tr 48/24-16A isolated** (nose cabinet, **remote on/off to a cabin toggle**). **48→12 V converter deleted; no 12 V house rail.**
-- **Conditions:** 16 A is sized for current loads (~12–15 A realistic worst case). A future 24 V diesel heater (~8–10 A glow) **reopens converter sizing**. Cabinet venting must cover converter waste heat.
+- **Conditions:** 16 A is sized for current loads (~12–15 A realistic worst case). The named winter heater (**LF Bros N4 24 V** — glow draw unpublished, est. ~4–11 A for 2–3 min) **reopens converter sizing** if measured glow stacks past 16 A with fridge + lights; cheap out is glow-window load-shedding. Cabinet venting must cover converter waste heat.
 - **48 V-side protection:** Blue Sea 7443 20 A UL-489 (80 V-class) ahead of the converter — **no 32 V automotive fuse gear on the 48 V side**. Required outputs: feed-conductor ampacity, converter output OCP, breaker interrupt-rating sanity, dedicated fuse/breaker on the Velit 48 V branch.
   - **`[web-val]`:** UL-489 / 80 VDC / 10 kA AIC confirmed (clears ABYC's 5 kA-per-100 Ah by 2×). Two follow-ups: **make the battery-terminal main OCP explicit** (Class-T at the battery per standard LiFePO4 practice, *or* document the close-mounted 7443 as the main OCP); **verify the exact Blue Sea SKU** — "7443" in these docs vs the 20 A / 80 V UL-489 part that surfaced as 7463 (7465 = 30 A). Each 24→12 V POL buck also needs its own DC-rated input OCP (not 32 V automotive) on the ~29 V rail.
 - **24 V block: Blue Sea 5026.** Rail map: fridge 10 A/14 AWG · Yuji strip zones 5 A (Klus, dimmed) · Scanstrut SC-USB-F3 PD 7.5 A (24 V in → 60 W profiles) · LandAirSea GPS 3 A · door switch (dry contact) · stray 12 V-only fixtures via POL 24→12 bucks.
@@ -59,7 +59,8 @@
 - **`[web-val]` — clamp ring is a single 1.5" spec, not a range.** RecPro publishes the trim ring only as "for 1-1/2" wall thickness" (no min/max). The built-up wall is ~1"–1.4", so **it won't clamp tight as specified → fur the opening up to 1.5"** (that step is currently missing from the wall sandwich). **Cutouts confirmed:** 1222-TRM → **11-5/8" × 21-5/8"**; 2015-TRM → **19-5/8" × 14-5/8"** (dim rows 13). The 20×15 cut in the ~20-ga steel door **removes a structural panel → add perimeter re-framing.** Isolate galvanic contact (aluminum frame/screws vs steel skin) with butyl + stainless/nylon.
 
 ### HRV / diesel heater (deferred, rough-in now)
-- HRV: rough-in paired 4" wall penetrations + power string. Heater: **no heater for July**; rough-in floor exhaust/fuel + CO-detector string; future unit is a **24 V model** (and reopens D006 sizing).
+- HRV: rough-in paired 4" wall penetrations + power string.
+- **Heater identified: LF Bros N4, 24 V variant** ([specs](reference/lf-bros-n4-specs.md)) — 5 kW all-in-one pedestal, **integrated 3.5 L tank**, 17"×13"×14.8", 15.9 lb, −40 °F rated. **No heater aboard for July** (D003). The all-in-one form **deletes the fuel rough-in**; what remains: **floor exhaust port/gland** (size to the measured exhaust OD), an E-track-strapped parking spot, a 24 V outlet at the station, CO detector. **Glow draw unpublished — bench-measure before winter**; it still reopens D006 sizing if it stacks past 16 A (glow-window load-shedding is the cheap out).
 
 ### Awning — D007
 - **Fiamma F45s 350** (06280B01R; 11'6" case, ~55 lb) on **owner-fabricated standoffs at the perimeter aluminum top rail**, **case at/above the roofline (~78.5")** — wall-mount dead **by tape (2026-06-04)**: 5-1/8" measured drip-rail-top → trailer-top-edge vs the 5.35" case (0.225" short; fabric would also foul the swing). Flat-roof mount dead (panels own the roof width).
