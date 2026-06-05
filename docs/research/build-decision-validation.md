@@ -1,6 +1,6 @@
 # Build-Decision Web-Validation — 2026-06-05
 
-**Method.** Each of the 7 falsifiable build decisions was run through a bounded web-research pass — a researcher draft followed by an *independent adversarial skeptic* that tried to refute the load-bearing claims — then synthesized. The skeptic changed **4 of 7** verdicts.
+**Method.** Each of the original 7 falsifiable build decisions was run through a bounded web-research pass — a researcher draft followed by an *independent adversarial skeptic* that tried to refute the load-bearing claims — then synthesized. The skeptic changed **4 of 7** verdicts. D010 flooring was added later as a flat web-validation addendum.
 
 **Scope & limits.** Sources are public web (manufacturer pages, standards summaries, owner forums). This validates *reasoning* and catches *spec/code conflicts*; it does **not** replace the physical measurement gates (rail 3D scan, clamp-stack mock-up, sit-test, weigh-in). D001 (which trailer) and D005 (which fridge was purchased) are facts, not engineering choices, and were not validated.
 
@@ -15,6 +15,7 @@
 | **D007** Awning standoff | 🟡 mostly-corroborated | **yes** |
 | **D008** Fridge bay | 🔴 **mixed** | **yes** |
 | **D009** Birch substrate | 🟡 mostly-corroborated | **yes** |
+| **D010** Flooring bed-liner coating | 🟡 mostly-corroborated | addendum |
 | **Windows** RecPro frameless | 🔴 **mixed** | **yes** |
 | **Roof** foam + elastomeric | 🟡 mostly-corroborated | no |
 
@@ -29,6 +30,7 @@ These are the findings that should feed back into the build sheet / decision log
 5. **D006 — make the main OCP explicit + fix a part number.** UL-489 / 80 VDC / 10 kA AIC checks out. But standard LiFePO4 practice puts a **Class-T fuse at the battery terminal** as the main OCP — document whether that exists or the close-mounted breaker *is* the main OCP. **Verify the exact Blue Sea SKU**: docs say "7443," but the validated 20 A / 80 V UL-489 part pages came up as 7463 (and 7465 = 30 A) — reconcile the actual part number.
 6. **D002 — the binding cold limit is the AIO, not PV voltage.** 2S Voc has huge margin (~113 V cold vs 145 V). The real floor is the **AIO's −10 °C operating temp** → keep it in the conditioned nose cabinet. Owners also report this LiTime unit **nuisance-faults on PV overvoltage below its rated 145 V** with 49 V-class panels → the existing "never 3S" rule is correct; treat 2S headroom as real, not unlimited. *Minor:* LG's page lists Voc 49.9 V, coeff **−0.26 %/°C**, Vmpp 42.1 V — reconcile against the −0.24 %/°C / 41.7 V figures in the reference sheet.
 7. **Roof — spec a cold-rated coating.** Building science *endorses* the foam-inside/coating-outside steel sandwich **provided the steel is dry at closure**. The load-bearing open item: standard **acrylic elastomerics go brittle and "zipper" off in deep cold** — specify a **silicone or cold-rated** coating, verify steel dry/clean at closure, and check whether foaming under the steel roof voids any panel warranty.
+8. **D010 flooring — bed-liner direction holds, but tighten the claim.** Flexible polyurethane bed-liner coating is a better fit than loose rubber coin roll. However, "fuel-proof" is too broad: Raptor's TDS says petrol is splash-resistant, not immersion-proof. → Build-sheet wording is **fuel/oil spill-resistant, clean promptly**, with mandatory PlexCore adhesion and fuel-drip patches before full coating.
 
 ---
 
@@ -110,6 +112,20 @@ These are the findings that should feed back into the build sheet / decision log
 - ⚠️ Contradicts (precedent was misread): The mychemicalfreehouse cargo-trailer build cited *for* birch is actually a **moisture-failure cautionary tale** — "MAJOR condensation formed behind the walls," conversion "failed miserably." It supports the rot risk, not the substrate choice; no clean reference of a *successful* OSB→birch-under-FRP build was found (https://www.mychemicalfreehouse.net/2019/06/cargo-trailer-conversion.html).
 - ⚠️ Watch: 3/8" is near a **floor, not a generous margin** — code structural-sheathing minimum at 16" OC is 7/16". Defensible here only because the panel is non-structural (FRP-faced finish over steel posts) and the bonded FRP adds composite stiffness; adequacy depends on the lamination, not 3/8" alone (https://up.codes/s/wall-sheathing).
 - ❓ Open: Strongly favor **exterior/marine-glue birch over interior-glue ply** as cheap insurance; seal all FRP seams/edges and the window clamp sandwich so liquid water never enters the cavity. Confirm the actual FRP brand (Crane vs Marlite vs Glasbord) approves Baltic birch and which adhesive grade it warranties — the C-551 sheet's "do not use on other wood-based products" note means the chosen brand's spec governs, not a generic "porous plywood" assumption. Confirm 3/8" birch preserves the window clamp-stack fit vs the 3/8" OSB it replaces (added FRP thickness accounted for).
+
+---
+
+## D010 — Durabak-18 flexible polyurethane bed-liner floor, coved before FRP
+**Verdict:** mostly-corroborated — the bed-liner coating direction is stronger than rubber coin roll for this moto trailer, but the fuel claim must be phrased as spill resistance rather than proof against immersion.
+
+- ✅ Holds: Durabak describes the product class as a **flexible, one-part, non-slip polyurethane coating** (https://www.durabakstore.com/pages/product-data).
+- ✅ Holds: Durabak's textured outdoor/marine product is described as water-resistant, flexible, UV/chemical resistant, anti-slip, and roll/brush friendly; published coverage is about **60 ft² per gallon** for a standard two-coat textured application (https://www.durabakcompany.com/products/durabak-marine-liner-outdoor-textured).
+- ✅ Holds: Durabak's own wood-prep guidance makes the right gate explicit: if wood dust remains after sanding, the coating bonds to dust instead of wood fibers and can release; they call out the importance of a patch test on sanded wood (https://www.durabakstore.com/pages/general-surface-preparation-application).
+- ✅ Holds: Raptor validates the broader flexible-polyurethane liner class: the TDS lists wood as a substrate, says stable wood can be coated directly after prep, and supports brush/roller application as well as spray (https://www.raptorliner.com/uploads/6/9/6/5/6965393/u-pol_raptor_liner_black_technical_data.pdf).
+- ✅ Holds: The old SBR coin-roll lean is materially weaker for moto use: SBR has poor oil/fuel resistance and is not recommended around petroleum-based oils, fuels, or solvents (https://www.thomasnet.com/articles/plastics-rubber/all-about-sbr-rubber/).
+- ⚠️ Corrected claim: Raptor's chemical table says diesel and hydraulic oil have no effect, but **petrol/gasoline is only splash-resistant**. Do not document the floor as "fuel-proof"; document it as spill-resistant and clean gasoline promptly (https://www.raptorliner.com/uploads/6/9/6/5/6965393/u-pol_raptor_liner_black_technical_data.pdf).
+- ⚠️ Watch: Any bed-liner-on-wood system lives or dies on prep. The build should sand, vacuum, remove dust exactly per the coating instructions, run a PlexCore adhesion patch, and run a small gasoline/diesel drip patch before coating the full floor.
+- ❓ Fallback: If Durabak fails the actual-floor patch, use a Raptor-class flexible polyurethane with proper wood prep. If coating fails entirely, the only acceptable roll fallback is fully glued G-Floor PVC trailer flooring; G-Floor's trailer line is waterproof and marketed as resisting oil, grease, gas, corrosives, chemicals, and contaminants, but loose-lay would reintroduce the dust/water trap (https://bltllc.com/gfloor-universal-flooring/trailer-flooring/).
 
 ---
 

@@ -5,9 +5,9 @@
 This is the **source of truth** for the build. How to read it:
 
 - **Settled** items are firm — bought, measured, or otherwise beyond debate.
-- **Decisions** are DECISION_LOG rows (D001–D009), `proposed` until the owner ratifies them. Each major one was produced by a cross-examined striatum multi-model panel (claude/codex/gemini drafting, reviewing, and revising each other); the raw drafts, reviews, and verdicts are frozen under `runs/`. Don't infer decisions that aren't written here or in a D-row.
+- **Decisions** are DECISION_LOG rows (D001–D010), `proposed` until the owner ratifies them. Each major one was produced by a cross-examined striatum multi-model panel (claude/codex/gemini drafting, reviewing, and revising each other); the raw drafts, reviews, and verdicts are frozen under `runs/`. Don't infer decisions that aren't written here or in a D-row.
 - **Gates** are pass/fail checks that must pass **before drilling, fabricating, or ordering** the thing they guard. Most close from the [measurement pass](dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec); measured values supersede spec everywhere.
-- **`[web-val]`** marks findings from the 2026-06-05 web fact-check of all 7 falsifiable decisions ([full report](research/build-decision-validation.md)). It flipped 4/7 to caution; the material deltas are folded into the gates below.
+- **`[web-val]`** marks findings from the 2026-06-05 web fact-check of the original 7 falsifiable decisions plus the D010 flooring addendum ([full report](research/build-decision-validation.md)). It flipped 4/7 original decisions to caution; the material deltas are folded into the gates below.
 
 The north star is [trailer-mission.md](trailer-mission.md): **the E-track grid is the operating system; the interior is software.** (E-track: slotted steel tie-down track — fittings click in anywhere, no tools.) Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
 
@@ -126,6 +126,12 @@ The envelope strategy: **closed-cell spray foam inside the steel skin, elastomer
 - **Closed-cell spray foam** in the wall and ceiling cavities; **elastomeric roof coating** outside; **Velit Mini 2000R rooftop AC (48 VDC) — ordered**, fed by its own fused 48 V branch.
 - **Roof sandwich `[web-val]`:** building science *endorses* foam-inside + coating-outside on steel, **on one condition: the steel is dry, clean, and rust-free at closure** — foam over damp steel seals the corrosion in where it can never be seen. Execution requirements: air-seal the foam at every bow, fastener, and penetration; **spec a cold-rated/silicone coating** (standard summer-cure acrylics go brittle in deep cold and "zipper" off); run a **48-hr adhesion patch** on the actual galvanized/aluminized skin before committing to a product; confirm foaming under the roof doesn't void the solar-panel warranty; put periodic exterior blister inspections on the maintenance calendar (a blister is the only visible symptom of hidden steel corrosion).
 
+### Roof coating — picked
+
+**Henry 887 Tropi-Cool White 100% Silicone Roof Coating** (HE887HS018, Home Depot) is the coating. Use the matching **Henry 884 Tropi-Cool 100% Silicone Roof Sealant** at roof penetrations, fastener heads, curbs, transitions, and other leak paths that will be top-coated. Henry lists 887 for metal roofs and RV/trailer/mobile-home roofs, with 35–120 °F application range, silicone chemistry, and permanent ponding-water resistance. The Home Depot product Q&A from Henry lists service temperature as **−40 to 180 °F**, which clears the winter-cold caution that killed generic acrylic elastomerics.
+
+**Quantity:** the label rate is about 1.5 gal / 100 ft² for 22 mil dry film. The trailer roof field plus nose/curbs/penetrations makes a 0.90 gal can too tight; buy **one 4.75 gal pail** unless the measured roof drawing proves a smaller can-and-a-half job. This is compatible with the existing roof gate: **clean/dry/rust-free steel, silicone-compatible penetration sealant, then a 48-hr adhesion patch on the actual skin before the full coat.**
+
 ### Windows — placement decided
 
 Three RecPro frameless units. Placement logic: the pair gives **cross-breeze directly over the bed**; the door window adds forward light and a third vent point for front-to-back flow when the AC is off.
@@ -192,6 +198,16 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 - **Aisle reality:** the nominal ~30" walking aisle shrinks to **~20" effective at bar height** — fridge access and egress are planned around that, not the floor-level number.
 - **E-track footage: ~73 ft needed vs ~60 on hand — order more.** (~Six 10-ft black sections believed ordered; confirm before the freeze.)
 
+### Flooring — D010 (proposed)
+
+**Committed recommendation: Durabak-18 Outdoor Textured, light grey** — a flexible polyurethane bed-liner coating rolled/brushed onto the ¾" PlexCore floor and **coved 3–4" up the lower walls before the FRP lands**. FRP laps over the cured cove, turning the floor into a hose-out tray; raise the tongue jack to sluice dust and wash water toward the rear ramp. The remembered "DuraLok" name is not the spec.
+
+Why this replaces the old rubber-coin lean: common coin roll is usually SBR (styrene-butadiene rubber), and SBR is a poor fit for moto fuel/oil spills. A bonded polyurethane liner avoids the under-sheet playa-dust/water trap, keeps the floor seamless, and stays much lighter than a thick loose rubber mat. Do not use a rigid garage epoxy; the single-axle trailer floor will move.
+
+**Web-validation correction:** say **fuel/oil spill-resistant, clean promptly**, not "fuel-proof." Durabak's product data supports a flexible, one-part, non-slip polyurethane coating; Durabak's wood-prep guidance warns that sanded wood dust causes delamination and calls for a patch test; Raptor's 2K polyurethane data validates the class on stable wood and shows diesel/hydraulic-oil resistance, but gasoline/petrol is listed as splash-resistant rather than immersion-proof. The build therefore requires a PlexCore adhesion patch and a small gasoline/diesel drip patch before coating the whole floor.
+
+**Install sequence:** finish the floor E-track layout first, then recess and bolt the floor E-track through to steel. Mask the E-track slots, fastener heads, D-ring pockets, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
+
 ### Bed & wall tracks
 
 - **Bed row at ~27", shelf row at ~60"**, both lag-backed into the 16"-OC tube posts.
@@ -236,6 +252,7 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 ### Order list
 
 - **Long-lead, order now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
+- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · Durabak-18 Outdoor Textured light grey (estimate: 2 gal for interior floor+cove, 3 gal if the ramp is coated too; final quantity from the floor/ramp scope).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
@@ -246,7 +263,7 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
 
 1. **Measure & scan** — finish the [measurement pass](dimensions.md): interior tape (rows 3/3a, 7, 14, 17), roof stations (5a, 6), rail 3D scan + post wall thickness (16), floor steel + bar widths (10, 11), OSB thickness (19).
-2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; place all orders (long-lead first).
+2. **Freeze** — close the 10 design-freeze items; ratify D006–D010; place all orders (long-lead first).
 3. **Strip the interior** — factory OSB off (it's the template stock for the birch cuts); document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
@@ -255,10 +272,10 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
    - Rough-ins: HRV 4" pair, heater 3" duct ports, wire chases, 4 AWG tongue pre-wire.
    - Roof: Velit opening cut + curb, panel rail feet through the bows, all penetrations sealed.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
-6. **Roof coating** — cold-rated/silicone product, after the 48-hr adhesion patch passes.
-7. **Walls closed** — 3/8" exterior-glue birch, FRP laminated over, seams/edges sealed, trim on.
+6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
+7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
-9. **Tracks & floor** — wall E-track rows on the posts; floor E-track recessed per the reworked plan; flooring material down.
+9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor E-track masks pulled and slots/hardware inspected.
 10. **Nose cabinet** — battery, AIO, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), lights/USB/GPS, awning case onto the standoffs, tie-down anchors.
 12. **Weigh & commission** — scale (curb + tongue, row 18); charge-current cap ≤100 A; PV strings verified; shakedown camp before Juplaya.
@@ -278,9 +295,9 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 5 | **Roof drawing** — panel feet, Velit station + opening, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
-| 8 | **Flooring material** | committed choice (lean: rubber coin roll — fuel/oil-proof, hose-out, relieved over the recessed E-track) | ☐ |
+| 8 | **Flooring material** | D010 ratified: Durabak-18 Outdoor Textured light grey, coved 3–4" up the walls; PlexCore adhesion + fuel-drip patch required before coating | ☐ |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. the 7463-vs-7443 breaker check) + E-track footage recount | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. the 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
