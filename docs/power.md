@@ -45,7 +45,7 @@ Roof PV (3 x LG455 in 3S)
         +-- 48 V branch: Velit 2000R rooftop AC, own fused branch
         +-- Victron Orion-Tr 48/24-16A isolated -> Blue Sea 5026 24 V block
                                                         +-- fridge, 24 V native
-                                                        +-- LED zones, USB-C PD, GPS
+                                                        +-- interior/exterior LED zones, USB-C PD, GPS
                                                         +-- winter heater outlet
         +-- Victron Orion-Tr IP43 48/12-20A isolated -> fused 12 V cabinet receptacles
 
@@ -123,7 +123,7 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 | Branch | Approx current | Fuse | Wire | Notes |
 |---|---:|---:|---|---|
 | Fridge, Dometic CFX3 95DZ | ~4.6 A running | 10 A | 14 AWG | 24 V native; verify less than 3 percent round-trip voltage drop |
-| LED lighting zones | ~2-3 A typical interior use | 5 A per zone | TBD | 24 V Yuji strips in aluminum channel |
+| LED lighting zones | ~2-5 A typical total use | 5 A per zone | TBD | 24 V interior strips plus exterior zones below |
 | Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 7.5 A | TBD | 24 V in to USB-C PD |
 | LandAirSea 54 GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security |
 | Door switch | signal only | TBD | TBD | dry contact |
@@ -131,6 +131,22 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 | Optional C1000 top-up | up to 10 A, about 240 W | TBD | TBD | manual/fused branch only; disable before it starves critical 24 V loads |
 
 Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can push the bus toward 18-19 A worst case, so winter use requires glow-window load shedding or a second Orion after bench measurement.
+
+## Lighting And Switches
+
+Switching plan: **put the lighting switches on the power cabinet**, not beside the entry door, for the Juplaya build. This keeps wiring shorter and serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
+
+Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. Avoid 12 V-only exterior lights unless the 12 V converter plan is deliberately reopened; the current 12 V rail is local cabinet receptacles only. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
+
+| Zone | Approx current @ 24 V | Fuse | Wire | Notes |
+|---|---:|---:|---|---|
+| Interior main/task | ~2-3 A typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch/dimmer |
+| Curbside awning/porch | <=2 A target | 5 A | 16-18 AWG | warm white 2700-3000 K or amber/white; diffuse/downward, not a glare bar |
+| Rear ramp/work | <=3 A target | 5 A | 16 AWG | separate switch; upper rear/down-aimed loading light, not tied to reverse/tow wiring |
+| Step/courtesy | <0.5 A | 3 A or shared 5 A branch | 18 AWG | low amber at personnel door/step; can share the awning switch for Juplaya |
+| Spare exterior/service | TBD | 5 A | 16-18 AWG | capped spare pair if the wall path is open |
+
+Part-selection class: exterior fixtures should be IP67-ish, hardwired, low-profile, vibration tolerant, and serviceable from the interior if possible. Favor warm/amber camp light over cool-white flood except for the rear ramp work circuit. Blue Sea Contura-style switches are acceptable on the cabinet because the 12/24 V versions are rated for 24 V DC; still fuse each branch at the Blue Sea 5026 for conductor and fixture ampacity.
 
 ## Auxiliary 12 V Cabinet Receptacles
 
@@ -217,5 +233,6 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 - Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.
+- Exterior lighting fixture SKUs, switch labels, branch wire gauges, and penetration/seal details.
 - Optional C1000 24 V top-up branch test.
 - Real shakedown energy use before leaving the generator home.

@@ -194,6 +194,12 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 **`[web-val]`:** the electrical sizing is sound and conservative — 10 A fuse ≈ 2× the 4.6 A draw; the VMSO3 compressor (Dometic's variable-speed unit) soft-starts (no meaningful inrush); 14 AWG is well-protected. Two checks remain: verify the 14 AWG round-trip **voltage drop stays <3 %** so the fridge never sees its low-voltage cutoff, and check the unit's build date against the **Nov 2019–Jun 2020 recall window**. The real risk on this fridge is the bay thermal gate (Interior section), not the wiring.
 
+### Lighting
+
+- **Switches live on the power cabinet for Juplaya.** Skip the entry-door light switch for now; it adds wall/door-area wiring and is easy to revisit later if use proves it matters. If convenient while walls are open, leave a labeled pull string or spare low-current pair toward the side-door bay.
+- **Exterior lighting zones:** curbside awning/porch light, rear ramp/work light, and low amber step/courtesy light. Run them from the **24 V house bus** using 24 V-native or 10-30 V DC IP67-ish fixtures, fused per branch, and switched at the cabinet. Keep all house exterior lighting isolated from the OEM trailer lights and 7-way tow plug.
+- **Light quality:** warm white/amber for camp and step use; cool-white flood only for the rear ramp/work circuit. Aim exterior lights down so camp mode is usable without blinding the site.
+
 ### Security & tracking
 
 - **Proven 2516 coupler lock** + **2× Abloy/Paclock pucks, keyed alike** + **Trimax TCL65** wheel lock — layered, because Juplaya.
@@ -203,7 +209,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 - **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · **power-cabinet interior transfer grilles/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/L-track wear lanes).
-- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets).
+- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior 24 V / 10-30 V IP67-ish lighting: curbside awning/porch, rear ramp/work, low amber step/courtesy, plus cabinet switches/dimmer**.
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
 ---
@@ -227,7 +233,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor L-track masks pulled and slots/hardware inspected.
 10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr 48/24, Orion-Tr 48/12, 5026, fused 12 V receptacles; rail wiring out to branches; cabinet-to-cabin ventilation with low filtered intake, high fan-assisted exhaust, 24 V fan, and temperature switch. Avoid exterior penetrations for now; if shakedown heat becomes a real issue, reopen the exterior-vent fallback. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
-11. **Systems** — fridge bay (50 mm clearance + through-flow), lights/USB/GPS, awning case onto the standoffs, tie-down anchors.
+11. **Systems** — fridge bay (50 mm clearance + through-flow), cabinet-switched interior/exterior lights, USB/GPS, awning case onto the standoffs, tie-down anchors.
 12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path; verify the C1000 + PS400 covers small AC loads; if a 24 V C1000 top-up branch is added, test that it does not brown out or overload the Orion/fridge bus; shakedown camp before Juplaya.
 
 ---
@@ -247,7 +253,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 4 gal ordered for June 12–15 delivery; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, power-cabinet interior vent/fan/thermostat parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, power-cabinet interior vent/fan/thermostat parts, exterior lighting + cabinet switch parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
