@@ -8,6 +8,8 @@ Use **floor L-track** for the motorcycle floor system. Keep **wall E-track** for
 
 Starting floor geometry: **two lengthwise L-track rows, about 26 in on center**, with final placement re-derived after the bike/chock/steel measurement pass.
 
+Order status: **two 8 ft flanged L-track sections are on the way** (2026-06-05). **Bolt It On 360 L-track wheel chocks are ordered** (2026-06-05). Remaining buys/checks are the exact stud/quick-release hardware, backing/fasteners, and final row stationing.
+
 Why:
 
 - L-track is lower-profile and better under a camp floor/sleeping-deck use case.
@@ -20,7 +22,7 @@ Why:
 | Candidate | Signal | Notes |
 |---|---|---|
 | [MotoProHQ EZ Chock for L-track](https://motoprohq.com/products/floor-chock-for-l-track) | strongest general fit | Clips in/out of L-track, compatible with recessed or surface-mounted track, tire width listed as 2.5-6 in, includes L-track clip assembly and tie-down rings. |
-| [Bolt It On 360 L-track wheel chock](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | most adjustable | Rotates 360 degrees, attaches to L-track/airline track, intended for dirt bikes, dual sports, sport bikes, bicycles, and e-bikes. Requires studs or quick-release kit. |
+| [Bolt It On 360 L-track wheel chock](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | **ordered** | Rotates 360 degrees, attaches to L-track/airline track, intended for dirt bikes, dual sports, sport bikes, bicycles, and e-bikes. Requires studs or quick-release kit. |
 | [Bolt It On 45-degree L-track chock](https://boltiton.com/products/45-deg-l-track-or-uni-strut-dirt-wheel-chock) | cheapest/simple angled locator | Attaches to L-track or 1-5/8 in Unistrut. Intended for staggered bike layouts along a side wall. L-track studs may be extra. |
 
 ## Install Implications
@@ -32,9 +34,8 @@ Why:
 - Add a third Durabak coat in ramp, chock, and L-track wear lanes.
 - Keep the four factory 5,000 lb D-rings as backup tie points.
 
-Open before buying:
+Still open:
 
-- Exact L-track profile: standard airline/L-track or recessed flange style.
-- Chock SKU and hardware kit.
+- Confirm the ordered chock hardware kit: studs vs quick-release.
 - Row length and stationing against the measured steel grid.
-- Whether the selected chock wants one rail, two rails, or a short cross-plate.
+- Confirm whether the selected chock works cleanly on one rail, two rails, or a short cross-plate in this trailer.

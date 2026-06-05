@@ -137,10 +137,10 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 
 ### Bikes & floor L-track
 
-- **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in L-track-compatible staggered chocks (12–18" stagger so the bars interleave). Starting floor geometry: **two lengthwise floor L-track rows, about 26" on center**, flush/recessed and bolted through to steel/backing; the 4 factory D-rings get reused as backup tie points.
-- **⚠ Floor plan rework gate:** the original ~24" E-track centerline spacing **failed** — cross-exam found ~9" of handlebar interference, and the 2"×4" main rails run at the **perimeter** (not under the centerline), while a deep recess leaves limited ply between crossmembers. The final L-track row positions must be re-derived against **measured** steel locations (row 10), actual bar widths/front-tire centerlines (row 11), and the selected L-track chock hardware. Evidence/options: [L-track floor chock options](research/l-track-floor-chock-options-2026-06-05.md).
+- **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in **ordered Bolt It On 360 L-track wheel chocks** (12–18" stagger so the bars interleave). Starting floor geometry: **two lengthwise floor L-track rows, about 26" on center**, flush/recessed and bolted through to steel/backing; the 4 factory D-rings get reused as backup tie points.
+- **⚠ Floor plan rework gate:** the original ~24" E-track centerline spacing **failed** — cross-exam found ~9" of handlebar interference, and the 2"×4" main rails run at the **perimeter** (not under the centerline), while a deep recess leaves limited ply between crossmembers. The final L-track row positions must be re-derived against **measured** steel locations (row 10), actual bar widths/front-tire centerlines (row 11), and the ordered chock hardware/studs. Evidence/options: [L-track floor chock options](research/l-track-floor-chock-options-2026-06-05.md).
 - **Aisle reality:** the nominal ~30" walking aisle shrinks to **~20" effective at bar height** — fridge access and egress are planned around that, not the floor-level number.
-- **Track footage:** floor L-track is now a new buy; the ~50–60 ft of E-track on hand should be treated as wall-track stock first, not floor stock.
+- **Track/chock order status:** floor L-track = **2 × 8 ft flanged L-track sections ordered / on the way (2026-06-05)**; **Bolt It On 360 L-track wheel chocks ordered (2026-06-05)**. The ~50–60 ft of E-track on hand should be treated as wall-track stock first, not floor stock.
 
 ### Flooring — D010 (accepted)
 
@@ -201,7 +201,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · floor L-track + L-track motorcycle chocks.
+- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/L-track wear lanes).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
@@ -244,10 +244,10 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
 | 5 | **Roof drawing** — three panel rows/feet, Velit nose station + opening/shadow line, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
-| 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); L-track chock SKU selected | ☐ |
+| 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 4 gal ordered for June 12–15 delivery; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, floor L-track + chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
