@@ -140,7 +140,7 @@ Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. The current selec
 
 Active exterior layout: **2 curbside floods, 2 roadside floods, 1 flood on each V-nose face, 1 rear flood, plus separate awning lighting**. Count is seven flood fixtures plus the awning light circuit.
 
-Panel verdict: use **Super Bright LEDs `VAL2-NW9`** for the seven flood/scene positions unless the owner deliberately wants warmer output everywhere. It is the same 9" black 1450 lm / 18 W / 90 deg / IP67 / 12-28 VDC fixture class as `VAL2-WW9`, but 4000 K is more useful for work/security floods than 3000 K. `VAL2-WW9` remains the warm-white alternate. For the awning, use a separate warm 24 V dimmable strip such as **Super Bright LEDs `RA-IP68-80CRI-5m`, 3000 K** under the case/rail rather than another glare flood.
+Panel verdict: **7 x Super Bright LEDs `VAL2-NW9` flood/scene fixtures are ordered**. It is the same 9" black 1450 lm / 18 W / 90 deg / IP67 / 12-28 VDC fixture class as `VAL2-WW9`, but 4000 K is more useful for work/security floods than 3000 K. `VAL2-WW9` remains the warm-white alternate if replacement stock is ever needed. For the awning, use a separate warm 24 V dimmable strip such as **Super Bright LEDs `RA-IP68-80CRI-5m`, 3000 K** under the case/rail rather than another glare flood.
 
 | Zone | Fixture count | Approx current | Fuse | Wire | Notes |
 |---|---:|---:|---|---|
@@ -246,6 +246,6 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 - Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.
-- Exterior lighting order counts, switch labels, final branch wire gauges, and penetration/seal details.
+- Exterior lighting switch labels, final branch wire gauges, and penetration/seal details.
 - Optional C1000 24 V top-up branch test.
 - Real shakedown energy use before leaving the generator home.

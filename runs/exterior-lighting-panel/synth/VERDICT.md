@@ -16,7 +16,7 @@ This was an out-of-band product panel using three reviewers:
 
 ## Final recommendation
 
-Use **7 x Super Bright LEDs `VAL2-NW9`** for the flood/scene positions:
+Use **7 x Super Bright LEDs `VAL2-NW9`** for the flood/scene positions. **Order status: ordered by owner on 2026-06-05.**
 
 - 2 curbside floods
 - 2 roadside floods
@@ -70,4 +70,4 @@ Hard voltage gate: the flood fixtures are **12-28 VDC**. Set and verify the Orio
 
 ## One-line verdict
 
-**Buy seven `VAL2-NW9` floods plus one warm 24 V dimmable awning strip.** Keep `VAL2-WW9` as the warm-flood alternate, Optronics `UCL41CB` as the trailer-native fallback, and TecNiq `P06` as the rugged premium fallback. No 12 V exterior lighting bus is needed for this selection.
+**Seven `VAL2-NW9` floods are ordered; add one warm 24 V dimmable awning strip.** Keep `VAL2-WW9` as the warm-flood alternate, Optronics `UCL41CB` as the trailer-native fallback, and TecNiq `P06` as the rugged premium fallback. No 12 V exterior lighting bus is needed for this selection.
