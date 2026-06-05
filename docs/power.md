@@ -93,16 +93,18 @@ The battery, shunt, MPPTs, Orion, distribution, and protection live in the nose 
 
 One Victron Orion-Tr 48/24-16A isolated converter feeds a Blue Sea 5026 fuse block. Wire the Orion remote on/off to a cabin toggle so the house bus can be killed without opening the cabinet.
 
-| Branch | Fuse | Wire | Notes |
-|---|---:|---|---|
-| Fridge, Dometic CFX3 95DZ | 10 A | 14 AWG | 24 V native, 4.6 A rated draw; verify less than 3 percent round-trip voltage drop |
-| LED lighting zones | 5 A per zone | TBD | 24 V Yuji strips in aluminum channel |
-| Scanstrut SC-USB-F3 | 7.5 A | TBD | 24 V in to USB-C PD |
-| LandAirSea 54 GPS | 3 A | TBD | hardwired always-on security |
-| Door switch | TBD | TBD | dry contact |
-| Winter heater outlet | 15 A | 12 AWG | exterior reachable; N4 glow may exceed current July converter margin |
-| 12 V-only strays | per device | TBD | point-of-load 24-to-12 buck, with DC-rated input OCP |
-| Optional C1000 top-up | TBD | TBD | manual/fused branch only; about 240 W max at 24 V |
+Approximate current is for planning and load-shedding. Fuses still size to the protected wire/device branch, not to these rough draw numbers.
+
+| Branch | Approx current | Fuse | Wire | Notes |
+|---|---:|---:|---|---|
+| Fridge, Dometic CFX3 95DZ | ~4.6 A running | 10 A | 14 AWG | 24 V native; verify less than 3 percent round-trip voltage drop |
+| LED lighting zones | ~2-3 A typical interior use | 5 A per zone | TBD | 24 V Yuji strips in aluminum channel |
+| Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 7.5 A | TBD | 24 V in to USB-C PD |
+| LandAirSea 54 GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security |
+| Door switch | signal only | TBD | TBD | dry contact |
+| Winter heater outlet | ~1-2 A run; glow up to ~11 A | 15 A | 12 AWG | exterior reachable; N4 glow may exceed current July converter margin |
+| 12 V-only strays | per device | per device | TBD | point-of-load 24-to-12 buck, with DC-rated input OCP |
+| Optional C1000 top-up | up to 10 A, about 240 W | TBD | TBD | manual/fused branch only; disable before it starves critical 24 V loads |
 
 Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can push the bus toward 18-19 A worst case, so winter use requires glow-window load shedding or a second Orion after bench measurement.
 
