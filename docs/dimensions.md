@@ -29,8 +29,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Solar panel — LG455N2W-E6 (×2 roof + ×2 ground) | **83.07" × 41.02" × 1.57"** (2110 × 1042 × 40 mm) | 48.5 lb ea |
 | Fridge — Dometic CFX3 95DZ | **37.9" × 20.9" × 18.6"** (962 × 530 × 472 mm) incl. handles, + lid swing | 66.4 lb |
 | Awning — Fiamma F45s 350 | case **138" (11'6")** L × 5.35" H × 3.35" proj · canopy 130" · extension 98" | 55.1 lb |
-| Window ×2 — RecPro RP-FRMWIN-1222-TRM | 12" × 22" (portrait) — RO/cutout per RecPro spec (TBD) | — |
-| Window ×1 (door) — RecPro RP-FRMWIN-2015-TRM | 20" × 15" — RO/cutout TBD | — |
+| Window ×2 — RecPro RP-FRMWIN-1222-TRM | 12" × 22"; **cutout 11-5/8" × 21-5/8"**, overall 14×24×2.5, **ring for 1.5" wall** (RecPro, web-val) | — |
+| Window ×1 (door) — RecPro RP-FRMWIN-2015-TRM | 20" × 15"; **cutout 19-5/8" × 14-5/8"**, overall 22×17×2.5, **ring for 1.5" wall** (RecPro, web-val) | — |
 | Bikes — WR250R + CRF450RL | ~86" L ea · bars **32–34"** | ~590 lb pair |
 | Velit 2000R rooftop AC | footprint + roof opening **TBD — must enter the roof drawing** | TBD |
 
@@ -68,8 +68,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
 | 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | | |
 | 11 | Bike bar widths (WR250R / CRF450RL) + front-tire centerline spacing for stagger | 813–864 mm bars | | |
-| 12 | Wall build-up thickness at window stations — **birch (D009) + FRP** sandwich vs the RecPro frameless clamp range | TBD | | |
-| 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | per spec sheet | | |
+| 12 | Wall build-up thickness at window stations — **birch (D009) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
+| 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | **1222 = 11-5/8"×21-5/8"; 2015 = 19-5/8"×14-5/8"** | confirmed (RecPro, web-val) | 2026-06-05 |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
