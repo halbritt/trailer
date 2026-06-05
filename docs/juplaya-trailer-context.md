@@ -19,7 +19,7 @@ The north star is [trailer-mission.md](trailer-mission.md): **the E-track grid i
 
 | Fact | Value | Why it matters to the build |
 |---|---|---|
-| Interior | **81" W × 157" L × 78" H** (157" includes the tapering nose) | every layout number derives from this; the nose trapezoid is the electronics zone |
+| Interior | **81" W × 157" L × 78" H** (157" includes the tapering nose) — **tape-confirmed 2026-06-05: 81" W (to 81-3/32") × 156" L × 78" H**, see [interior footprint](#interior-footprint--measured-owner-tape-2026-06-05) | every layout number derives from this; the nose trapezoid is the electronics zone |
 | Overall | ~16'0" L × 8'6" W × ~8'1" H | parking, clearance, panel reach for cleaning |
 | Rear ramp | 78" × 72" opening, 5,000 lb rated | bike loading; 8' clearance with extension |
 | Side door | **32" × 72" personnel door, RH hinge** | gets a window; defines the fridge bay's forward edge; the awning deploys over it |
@@ -311,14 +311,15 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
-## Structure layout drawing (new — owner sketch, 2026-06-05)
+## Interior footprint — measured (owner tape, 2026-06-05)
 
-An owner field sketch titled **"structure layout"** landed 2026-06-05: a width-wise cross-section / front elevation of a peaked structure. Redrawn (not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg); the full dimension transcription is in the [dimension sheet](dimensions.md#structure-layout-owner-drawing--2026-06-05).
+The owner tape-measured the **interior floor footprint** and sketched it ("structure layout"). Redrawn (plan view, not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg); full numbers in the [dimension sheet](dimensions.md#interior-footprint--measured-2026-06-05-owner-tape). **This is the tape pass that closes measurement rows 3/3a** and supersedes the rejected magicplan scan.
 
-- **Keyed to the trailer footprint:** base width **81"** and **Interior Height 78"** match the trailer interior spec exactly.
-- **Rises above the shell:** left wall **141"**, ridge **156"**, right wall **98"**, roof slopes **42"** / **43"**, a **13"** segment at the right eave, and a **30°** angle with a swing arc. These heights exceed the trailer's ~97" exterior, so this is a structure *over* the 81"-wide footprint, not the trailer's own shell.
+- **Confirms spec:** **81" W** (varies 81" to 81-3/32" along the length) × **156" L** (rear → nose tip; spec was 157") × **78" H**.
+- **V-nose, plan view:** straight side walls **141"** (rear → taper start), then a symmetric V-nose **~15" deep** to a **13" flat tip**; nose walls **~43" each** (the eyeballed 42"/43" pair resolved equal — they compute to ~43" from the reliable 81"/156"/13" numbers).
+- **Personnel door:** curbside wall, ~**98"** forward of the rear wall, swing shown (the 30° arc is the door swing).
 
-> **⚠ Open — not yet a settled fact or gate.** What this structure is (raised/pop-up roof, annex, or freestanding shade/shelter) and how it reconciles with the build is unconfirmed, and the hand sketch is **not to scale** (the slope/angle/height numbers aren't mutually consistent as drawn). Recorded here verbatim; **owner to confirm purpose and re-measure** before it drives any decision, order, or design-freeze item. This is distinct from the design-freeze "roof drawing" (item 5), which is the panel/AC layout on the existing 84⅞" × 145.5" roof field.
+> Treat **81"** as the design width (the ~3/32" variation is within tolerance — watch the tight side for the 83" panel-transport slot and any full-width module). The nose-wall length and door station are derived/eyeballed — re-confirm on the next tape pass. This footprint is distinct from the design-freeze **roof drawing** (item 5), which lays panels/AC on the 84⅞" × 145.5" *exterior* roof field.
 
 ## Weight
 

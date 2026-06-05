@@ -11,7 +11,6 @@
   <!-- graph-paper background -->
   <rect x="0" y="0" width="760" height="820" fill="#ffffff"/>
   <g stroke="#dfe6ee" stroke-width="1">
-    <!-- vertical grid -->
     <g>
       <line x1="20"  y1="0" x2="20"  y2="820"/><line x1="40"  y1="0" x2="40"  y2="820"/>
       <line x1="60"  y1="0" x2="60"  y2="820"/><line x1="80"  y1="0" x2="80"  y2="820"/>
@@ -33,7 +32,6 @@
       <line x1="700" y1="0" x2="700" y2="820"/><line x1="720" y1="0" x2="720" y2="820"/>
       <line x1="740" y1="0" x2="740" y2="820"/>
     </g>
-    <!-- horizontal grid -->
     <g>
       <line x1="0" y1="20"  x2="760" y2="20"/><line x1="0" y1="40"  x2="760" y2="40"/>
       <line x1="0" y1="60"  x2="760" y2="60"/><line x1="0" y1="80"  x2="760" y2="80"/>
@@ -58,53 +56,72 @@
     </g>
   </g>
 
-  <!-- ===================== STRUCTURE OUTLINE ===================== -->
-  <!-- BL(175,660) TL(175,250) Peak(300,175) RS(455,285) 13"-seg -> RE(470,330) BR(470,660) -->
-  <polygon points="175,660 175,250 300,175 455,285 470,330 470,660"
-           fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
+  <!-- ===================== INTERIOR FOOTPRINT (plan view, symmetric V-nose) =====================
+       Rear wall (bottom) 81" · straight side walls 141" · V-nose 15" deep to a 13" flat tip ·
+       nose walls resolved to 43" each (were ~42/43 eyeballed) · overall 156" rear->tip -->
+  <polygon points="175,660 175,222 302,175 343,175 470,222 470,660"
+           fill="#fbfbfb" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/>
 
-  <!-- door-swing / 30-degree arc on the right (per sketch) -->
-  <path d="M 470 330 A 150 150 0 0 1 600 405" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="2,3"/>
-  <line x1="470" y1="330" x2="600" y2="405" stroke="#555" stroke-width="1.2" stroke-dasharray="2,3"/>
+  <!-- centerline (long axis) -->
+  <line x1="322" y1="175" x2="322" y2="660" stroke="#bbb" stroke-width="1" stroke-dasharray="3,4"/>
 
-  <!-- ===================== ROOF-SLOPE LABELS ===================== -->
-  <text x="215" y="205" font-size="22" fill="#1a1a1a">42"</text>
-  <text x="370" y="215" font-size="22" fill="#1a1a1a">43"</text>
-  <text x="486" y="305" font-size="20" fill="#1a1a1a">13"</text>
-  <text x="455" y="372" font-size="20" fill="#1a1a1a">30&#176;</text>
+  <!-- ===================== DOOR + SWING (curbside / right wall) ===================== -->
+  <!-- opening on the right wall; door swings outward -->
+  <line x1="470" y1="355" x2="470" y2="454" stroke="#fbfbfb" stroke-width="5"/>
+  <line x1="470" y1="355" x2="470" y2="454" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="2,3"/>
+  <!-- leaf at ~30deg open + swing arc -->
+  <line x1="470" y1="454" x2="519" y2="540" stroke="#555" stroke-width="1.6"/>
+  <path d="M 470 553 A 99 99 0 0 0 556 504" fill="none" stroke="#555" stroke-width="1.2" stroke-dasharray="2,3"/>
+  <text x="486" y="500" font-size="16" fill="#1a1a1a">30&#176;</text>
+  <text x="500" y="560" font-size="14" fill="#555" font-style="italic">door swing</text>
 
-  <!-- ===================== 141" left-wall vertical dim ===================== -->
-  <line x1="120" y1="250" x2="120" y2="660" stroke="#222" stroke-width="1.2"
+  <!-- ===================== ROOF/NOSE-WALL LABELS (resolved equal) ===================== -->
+  <text x="205" y="192" font-size="22" fill="#1a1a1a">43"</text>
+  <text x="392" y="192" font-size="22" fill="#1a1a1a">43"</text>
+
+  <!-- 13" nose-tip flat width -->
+  <line x1="302" y1="150" x2="343" y2="150" stroke="#222" stroke-width="1.2"
         marker-start="url(#arrowStart)" marker-end="url(#arrow)"/>
-  <line x1="120" y1="250" x2="175" y2="250" stroke="#888" stroke-width="0.8"/>
+  <line x1="302" y1="175" x2="302" y2="150" stroke="#888" stroke-width="0.8"/>
+  <line x1="343" y1="175" x2="343" y2="150" stroke="#888" stroke-width="0.8"/>
+  <text x="350" y="146" font-size="18" fill="#1a1a1a">13"</text>
+
+  <!-- ===================== 141" left straight-wall length ===================== -->
+  <line x1="120" y1="222" x2="120" y2="660" stroke="#222" stroke-width="1.2"
+        marker-start="url(#arrowStart)" marker-end="url(#arrow)"/>
+  <line x1="120" y1="222" x2="175" y2="222" stroke="#888" stroke-width="0.8"/>
   <line x1="120" y1="660" x2="175" y2="660" stroke="#888" stroke-width="0.8"/>
-  <text x="78" y="460" font-size="22" fill="#1a1a1a">141"</text>
+  <text x="78" y="448" font-size="22" fill="#1a1a1a">141"</text>
 
-  <!-- ===================== 156" peak-height dashed centerline ===================== -->
-  <line x1="300" y1="175" x2="300" y2="660" stroke="#444" stroke-width="1.2" stroke-dasharray="6,5"
-        marker-end="url(#arrow)"/>
-  <text x="312" y="455" font-size="22" fill="#1a1a1a">156"</text>
-
-  <!-- ===================== 98" right-wall vertical dim ===================== -->
-  <line x1="415" y1="330" x2="415" y2="660" stroke="#222" stroke-width="1.2"
+  <!-- ===================== 156" overall length (rear -> nose tip) ===================== -->
+  <line x1="270" y1="175" x2="270" y2="660" stroke="#444" stroke-width="1.2" stroke-dasharray="6,5"
         marker-start="url(#arrowStart)" marker-end="url(#arrow)"/>
-  <line x1="415" y1="330" x2="470" y2="330" stroke="#888" stroke-width="0.8"/>
-  <line x1="415" y1="660" x2="470" y2="660" stroke="#888" stroke-width="0.8"/>
-  <text x="424" y="505" font-size="22" fill="#1a1a1a">98"</text>
+  <line x1="270" y1="175" x2="322" y2="175" stroke="#888" stroke-width="0.8"/>
+  <text x="225" y="448" font-size="22" fill="#1a1a1a">156"</text>
+
+  <!-- ===================== 98" curbside door station (rear -> door) ===================== -->
+  <line x1="520" y1="355" x2="520" y2="660" stroke="#222" stroke-width="1.2"
+        marker-start="url(#arrowStart)" marker-end="url(#arrow)"/>
+  <line x1="470" y1="355" x2="520" y2="355" stroke="#888" stroke-width="0.8"/>
+  <line x1="470" y1="660" x2="520" y2="660" stroke="#888" stroke-width="0.8"/>
+  <text x="528" y="515" font-size="22" fill="#1a1a1a">98"</text>
 
   <!-- ===================== Interior Height 78" annotation ===================== -->
-  <text x="520" y="470" font-size="22" fill="#1a1a1a">Interior Height</text>
-  <text x="560" y="498" font-size="22" fill="#1a1a1a">78"</text>
+  <text x="560" y="250" font-size="20" fill="#1a1a1a">Interior Height</text>
+  <text x="600" y="276" font-size="20" fill="#1a1a1a">78"</text>
 
-  <!-- ===================== 81" base width dim ===================== -->
+  <!-- ===================== 81" rear interior width ===================== -->
   <line x1="175" y1="705" x2="470" y2="705" stroke="#222" stroke-width="1.2"
         marker-start="url(#arrowStart)" marker-end="url(#arrow)"/>
   <line x1="175" y1="660" x2="175" y2="705" stroke="#888" stroke-width="0.8"/>
   <line x1="470" y1="660" x2="470" y2="705" stroke="#888" stroke-width="0.8"/>
   <text x="305" y="728" font-size="22" fill="#1a1a1a">81"</text>
 
-  <!-- not-to-scale note -->
-  <text x="40" y="40" font-size="14" fill="#a33">NOT TO SCALE — redrawn from owner field sketch (2026-06-05)</text>
+  <!-- framing / orientation notes -->
+  <text x="40" y="36" font-size="14" fill="#a33">INTERIOR FOOTPRINT — plan view (looking down), as measured 2026-06-05</text>
+  <text x="40" y="54" font-size="12" fill="#a33">redrawn from owner field sketch · NOT TO SCALE · nose walls resolved to 43" (symmetric)</text>
+  <text x="250" y="135" font-size="13" fill="#0a6" font-style="italic">V-nose (front) &#8593;</text>
+  <text x="250" y="688" font-size="13" fill="#0a6" font-style="italic">rear wall &#8595;</text>
 
   <!-- ===================== TITLE BLOCK ===================== -->
   <g>
@@ -113,8 +130,8 @@
     <line x1="470" y1="788" x2="760" y2="788" stroke="#1a1a1a" stroke-width="0.8"/>
     <line x1="600" y1="788" x2="600" y2="820" stroke="#1a1a1a" stroke-width="0.8"/>
     <text x="476" y="754" font-size="11" fill="#333">DRAWING NO:</text>
-    <text x="476" y="780" font-size="13" fill="#111">TITLE:  structure layout</text>
-    <text x="476" y="804" font-size="11" fill="#333">DATE:</text>
+    <text x="476" y="780" font-size="13" fill="#111">TITLE:  structure layout (interior footprint)</text>
+    <text x="476" y="804" font-size="11" fill="#333">DATE: 2026-06-05</text>
     <text x="606" y="804" font-size="11" fill="#333">UNITS: INCHES</text>
   </g>
 </svg>

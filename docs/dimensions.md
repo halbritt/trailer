@@ -49,35 +49,34 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Panel transport | 83" panels vs **81" interior width** → lengthwise only | padded E-track wall slot |
 | E-track footage | ~**73 ft needed** vs ~60 on hand | order more |
 
-## Structure layout (owner drawing — 2026-06-05)
+## Interior footprint — MEASURED 2026-06-05 (owner tape)
 
-Owner field sketch titled **"structure layout"** — a width-wise cross-section / front elevation. Redrawn (not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg) with every label transcribed verbatim; the original was a hand drawing on graph paper. The **81" base** and **78" interior height** match the trailer interior spec exactly, so the drawing is keyed to the trailer footprint; the taller peaked profile (to 156") rises above it.
+Owner field sketch titled **"structure layout"** — the **interior floor footprint (plan view, looking down)** of the V-nose trailer, tape-measured. Redrawn (not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg). **This is the tape pass that rows 3/3a below were waiting for**, and it supersedes the rejected magicplan scan. It **confirms the spec interior**: 81" wide × 156" long (rear → nose tip; spec 157") × 78" high.
 
-| Label on drawing | Value | Where it sits |
+| Footprint feature | Measured | Notes |
 |---|---|---|
-| Base width | **81"** | bottom span — matches the 81" interior width |
-| Left wall height | **141"** | tall side (roadside?), vertical |
-| Peak height | **156"** | floor → ridge, dashed centerline |
-| Right wall height | **98"** | short side, vertical |
-| Left roof slope | **42"** | left-wall top → peak |
-| Right roof slope | **43"** | peak → right eave |
-| Short top-right segment | **13"** | between the 43" slope and the right-wall top |
-| Angle | **30°** | at the right eave, with a swing arc (door swing or roof-pitch angle — **owner to confirm**) |
-| Interior Height | **78"** | annotation — matches the trailer's 78" interior height |
+| Rear interior width | **81"** (varies **81" to 81-3/32"**) | rear wall span; ≈3/32" variation along the length — = spec 81" |
+| Overall interior length (rear → nose tip) | **156"** | long axis / centerline; ≈ spec 157" |
+| Interior height | **78"** | ceiling; = spec 78" |
+| Straight side-wall length (rear → nose taper start) | **141"** | both walls; the rectangular section |
+| V-nose depth (taper start → tip) | **~15"** | = 156 − 141; centerline |
+| V-nose walls | **43" each** | resolved equal/symmetric (owner: the ~42"/43" pair was eyeballed — converge equally) |
+| V-nose flat tip width | **13"** | the truncated nose tip (fills row 5a's "flat tip width") |
+| Personnel door | curbside (right) wall, **swing shown 30°**, **~98" station** from the rear | the 30° arc is the door swing, not an angle dim |
 
-> **Open question (do not bake into the source of truth yet):** what this structure is and how it reconciles with the trailer. The 141"/156"/98" heights exceed the trailer's ~97" exterior, so this is **not** the trailer's own shell — it reads as a peaked structure over the 81"-wide footprint (raised/pop-up roof, annex, or freestanding shade/shelter). Confirm purpose before this drives any gate. Sketch is **not to scale** (the 42"/43" slopes and 30°/156"/141" are not mutually consistent as drawn — treat each number as an independent field note until measured).
+> **Geometry closes:** 141" straight + ~15" nose = 156" overall, and a symmetric nose to a 13" tip across an 81" body computes to ~43" walls — matching the eyeballed 42"/43". Treat 43"/15" as derived-from-the-reliable-numbers (81, 156, 13); re-confirm the nose-wall length and door station on the next tape pass. The ~3/32" width variation is within build tolerance — use **81"** as the design width and watch the tight side for the panel-transport slot and any full-width module.
 
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
-> **Magicplan scan: landed 2026-06-04 and REJECTED as a measurement source** ([sketch](reference/magicplan-interior-sketch.pdf)). Hard fail: its 85¾" interior width exceeds the 84⅞" tape-measured **exterior** rail-to-rail (spec interior 81"); nose flanks asymmetric by 4" (43½" vs 47½"); door 29¼" vs the work order's 32". Only the long axis is credible (156¾" vs spec 157"). **Rows 3/3a, 7, 14, 17 still need the tape**; use the sketch for shape/door-position ballpark (~97½" rear wall → door aft edge) only.
+> **Magicplan scan: landed 2026-06-04 and REJECTED as a measurement source** ([sketch](reference/magicplan-interior-sketch.pdf)). Hard fail: its 85¾" interior width exceeds the 84⅞" tape-measured **exterior** rail-to-rail (spec interior 81"); nose flanks asymmetric by 4" (43½" vs 47½"); door 29¼" vs the work order's 32". Only the long axis is credible (156¾" vs spec 157"). **Rows 3/3a now closed by the owner tape footprint (2026-06-05); rows 7, 14, 17 still need the tape**; use the sketch for shape/door-position ballpark (~97½" rear wall → door aft edge) only — note the footprint's ~98" door station corroborates that ~97½".
 > **Rail profile (row 16): incoming via a 3D scan** (owner) — capture the section **end-on** where the rail terminates/miters (rear corner / ramp opening); caliper the channel-lip wall thickness once to anchor the mesh. Export → `docs/reference/`. **Stations: the rail's existing bolts mark the uprights, but they sit at the extrusion's center** — a single centered bolt can't react the standoff moment, so **each standoff takes ≥2 fasteners into its upright** (vertical couple, new penetrations, before-FRP). Record bolt size + post tube wall thickness.
 
 | # | Measurement | Expected | Measured | Date |
 |---|---|---|---|---|
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
-| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | | |
-| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the AIO/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | | |
+| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | **81" W** (varies 81 to 81-3/32") × **141" L** (rear → nose taper start) × **78" H** — confirms spec; see [Interior footprint](#interior-footprint--measured-2026-06-05-owner-tape) | 2026-06-05 |
+| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the AIO/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | taper start at **141"**; nose **~15"** deep (centerline) → **156"** overall; flat tip **13"**; nose walls **~43"** symmetric | 2026-06-05 |
 | 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
