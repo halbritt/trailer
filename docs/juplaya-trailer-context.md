@@ -42,7 +42,7 @@ Detailed power design, diagrams, component tables, and commissioning rules now l
 
 Current Juplaya power verdict:
 
-- **DC trailer core:** roof 3× LG455 in 3S → Victron SmartSolar 250/60-Tr → LiTime 48V 100Ah ComFlex. Velit 2000R runs from a fused 48 V branch. Fridge/lights/USB/GPS run from the 24 V bus through one Victron Orion-Tr 48/24-16A.
+- **DC trailer core:** roof 3× LG455 in 3S → Victron SmartSolar 250/60-Tr → LiTime 48V 100Ah ComFlex. Velit 2000R runs from a fused 48 V branch. Fridge/lights/USB/GPS run from the 24 V bus through one Victron Orion-Tr 48/24-16A. A Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
 - **Optional trailer-battery margin:** deployable 2× LG455 in 2S → ordered Victron SmartSolar 150/35. Never combine roof 3S and ground 2S on one tracker.
 - **Small 120 VAC:** Anker SOLIX C1000 + PS400 is the Juplaya AC island. Optional C1000 top-up from the trailer is only a fused/manual 24 V branch, about 240 W max, and must not starve the Orion/fridge bus.
 - **Deferred:** Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/shore-charger/transfer choice, not a Juplaya blocker.
@@ -54,6 +54,7 @@ Must-not-miss gates:
 - Battery side first on MPPTs, then PV.
 - Make battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
 - Verify the Blue Sea 20 A / 80 V UL-489 SKU (`7443` vs `7463`) before ordering/install.
+- Fuse both Orion inputs with DC-rated 48 V gear; label the 12 V cabinet receptacles auxiliary only and keep them isolated from tow-vehicle/OEM trailer wiring.
 - Configure LiFePO4 charge settings and cap combined trailer charge current ≤100 A.
 
 Energy budget: trailer DC loads are about **3.5–4.0 kWh/day** in July; roof-only 3S harvest is about **6.0 kWh/day before soiling/shading**. The LG ground pair adds recovery margin; the C1000/PS400 carries only small AC loads.
@@ -200,9 +201,9 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
+- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
-- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
+- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
 ---
@@ -225,7 +226,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor E-track masks pulled and slots/hardware inspected.
-10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
+10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr 48/24, Orion-Tr 48/12, 5026, fused 12 V receptacles; rail wiring out to branches; cabinet venting. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), lights/USB/GPS, awning case onto the standoffs, tie-down anchors.
 12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path; verify the C1000 + PS400 covers small AC loads; if a 24 V C1000 top-up branch is added, test that it does not brown out or overload the Orion/fridge bus; shakedown camp before Juplaya.
 

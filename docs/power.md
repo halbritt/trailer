@@ -2,7 +2,7 @@
 
 This is the detailed power source of truth for the Juplaya trailer build. The build sheet keeps only the abbreviated view; this document carries the wiring architecture, solar topology, component decisions, commissioning rules, and energy budget.
 
-Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md).
+Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
 
 ## Diagrams
 
@@ -17,12 +17,13 @@ For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads s
 - Roof solar charges the 48 V trailer battery through a Victron SmartSolar 250/60-Tr.
 - The Velit 2000R runs directly from the 48 V battery on its own fused branch.
 - One Victron Orion-Tr 48/24-16A feeds the 24 V house bus for fridge, lights, USB, GPS, and winter heater rough-in.
+- One Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
 - Small 120 VAC loads run from the standalone Anker SOLIX C1000 + PS400 panel.
 - The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice, not a Juplaya blocker.
 
 ## Architecture
 
-One high-voltage battery bus, one conversion step down, no permanent 12 V rail:
+One high-voltage battery bus, one primary conversion step to 24 V house loads, and one local auxiliary 12 V converter for cabinet receptacles:
 
 ```text
 Optional deployable LG ground PV (2S)
@@ -46,6 +47,7 @@ Roof PV (3 x LG455 in 3S)
                                                         +-- fridge, 24 V native
                                                         +-- LED zones, USB-C PD, GPS
                                                         +-- winter heater outlet
+        +-- Victron Orion-Tr IP43 48/12-20A isolated -> fused 12 V cabinet receptacles
 
 Anker SOLIX C1000 + PS400 400 W panel -> standalone 120 VAC loads
 
@@ -53,7 +55,7 @@ Phase 2 optional:
 LiTime 48 V battery -> Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
 ```
 
-Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, and the Scanstrut USB-C takes 24 V input. A permanent 12 V rail adds a converter family for little benefit; rare 12 V-only devices get point-of-load 24-to-12 buck converters.
+Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, and the Scanstrut USB-C takes 24 V input. The 12 V converter is scoped narrowly: a switched, fused accessory outlet bank in the power cabinet for occasional 12 V devices, not a distributed house rail.
 
 ## Solar Topology
 
@@ -90,8 +92,9 @@ Voltage checks:
 | SmartSolar 150/35 | ground MPPT | optional LG ground 2S only; connector variant pending |
 | Velit 2000R | 48 V DC load | own fused branch |
 | Orion-Tr 48/24-16A | house converter | isolated, remote on/off to cabin toggle |
+| Orion-Tr IP43 48/12-20A | auxiliary 12 V converter | isolated, 240 W / 20 A, remote off; feeds only cabinet receptacles |
 
-The battery, shunt, MPPTs, Orion, distribution, and protection live in the nose cabinet. Ventilate the cabinet; the SmartSolar and Orion add waste heat, and the fridge bay must stay away from this plume.
+The battery, shunt, MPPTs, Orion converters, distribution, and protection live in the nose cabinet. Ventilate the cabinet; the SmartSolar and Orions add waste heat, and the fridge bay must stay away from this plume.
 
 ## 24 V House Bus
 
@@ -107,10 +110,20 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 | LandAirSea 54 GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security |
 | Door switch | signal only | TBD | TBD | dry contact |
 | Winter heater outlet | ~1-2 A run; glow up to ~11 A | 15 A | 12 AWG | exterior reachable; N4 glow may exceed current July converter margin |
-| 12 V-only strays | per device | per device | TBD | point-of-load 24-to-12 buck, with DC-rated input OCP |
 | Optional C1000 top-up | up to 10 A, about 240 W | TBD | TBD | manual/fused branch only; disable before it starves critical 24 V loads |
 
 Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can push the bus toward 18-19 A worst case, so winter use requires glow-window load shedding or a second Orion after bench measurement.
+
+## Auxiliary 12 V Cabinet Receptacles
+
+The added Victron Orion-Tr IP43 48/12-20A isolated converter feeds a small set of cigarette-lighter receptacles in the power cabinet. This is for occasional 12 V loads and adapters, not for the fridge, lighting, USB-C PD, GPS, tow-vehicle wiring, or OEM trailer lights.
+
+| Item | Limit | Protection | Notes |
+|---|---:|---|---|
+| Orion-Tr IP43 48/12-20A | 20 A / 240 W at 12 V | DC-rated 48 V input OCP; output OCP sized to conductor/receptacle | 32-70 V input, 12.2 V nominal output, remote off when unused |
+| Cigarette-lighter receptacles | per receptacle rating, total below 20 A | fuse each receptacle branch | install in power cabinet; label auxiliary 12 V only |
+
+The converter's no-load input current is under 80 mA, roughly under 4 W on the 48 V bus. That is small, but still worth switching off by remote when the receptacles are not in use. IP43 protection only applies with the screw terminals facing down.
 
 ## C1000 AC Island
 
@@ -133,6 +146,7 @@ Optional 24 V trailer top-up:
 - A fused/manual 24 V bus feed into the C1000 XT-60 input is acceptable as a discretionary auxiliary charge path.
 - The C1000 accepts 11-32 V at 10 A, so call this about 240 W maximum.
 - Enable it only when the trailer battery is healthy and the Orion has spare capacity.
+- Keep this top-up on the 24 V bus if used; the 12 V cabinet receptacles would cut the charge rate roughly in half and burn an extra conversion stage.
 - Do not direct-feed the C1000 from the 48 V battery unless a dedicated current-limited DC-DC charger is designed later.
 
 ## Phase 2 MultiPlus
@@ -159,6 +173,8 @@ Before energizing:
 - Fuse/breaker each MPPT battery-side output for controller current and conductor ampacity.
 - Make the battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
 - Verify the Blue Sea UL-489 breaker SKU: docs have used 7443, web validation surfaced 7463 for the 20 A / 80 V part.
+- Fuse/breaker both Orion converter inputs with DC-rated 48 V gear, fuse their outputs for conductor ampacity, and orient the 48/12 Orion screw terminals down if relying on IP43.
+- Label the 12 V cabinet receptacles as auxiliary only; do not backfeed tow-vehicle 12 V, OEM trailer lighting, the 24 V bus, or C1000 charging through them.
 - Configure LiFePO4 charge profiles: absorption 57.6 V, float about 55.2 V, equalization off, temperature compensation off.
 - Cap combined trailer charge current at or below 100 A.
 - Test the optional C1000 24 V top-up branch under fridge/lighting load before relying on it.
@@ -180,5 +196,6 @@ Roof-only 3S solar makes roughly 6.0 kWh/day before soiling/shading, enough for 
 - Battery-terminal main OCP selection.
 - Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.
+- 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.
 - Optional C1000 24 V top-up branch test.
 - Real shakedown energy use before leaving the generator home.
