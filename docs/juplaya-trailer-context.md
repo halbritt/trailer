@@ -40,36 +40,40 @@ References: [fastrac-specs.md](reference/fastrac-specs.md) (manufacturer line ta
 
 ### Architecture — why it looks like this
 
-One high-voltage battery bus, one conversion step down, no legacy 12 V plumbing:
+One high-voltage battery bus, one conversion step down, no legacy 12 V plumbing, and a separate portable 120 VAC island for Juplaya:
 
 ```
 Roof PV (3 x LG455 in 3S)
         │
    Victron SmartSolar MPPT 250/60-Tr
         │
-   LiTime 48V 100Ah ComFlex (5.12 kWh)  ←→  Victron MultiPlus-II 48/3000/35-50 120V
-        │ 500A shunt, main OCP               (house inverter/charger verdict)
-        │                                             │
-        │                                             └── 120 VAC out (2400 W @25°C / 2200 W @40°C; 5500 W peak)
+   LiTime 48V 100Ah ComFlex (5.12 kWh)
+        │ 500A shunt, main OCP
         ├── optional deployable 2S ground pair → dedicated 150 V-class MPPT, if used
         ├── 48 V branch: Velit 2000R rooftop AC (48 V native, own fused branch)
         └── Victron Orion-Tr 48/24-16A (isolated) ── Blue Sea 5026 24 V block
                                                         ├ fridge (24 V native)
                                                         ├ LED zones, USB-C PD, GPS
                                                         └ winter heater outlet (exterior)
+
+Anker SOLIX C1000 + Anker PS400 400 W panel ── standalone 120 VAC island for small loads
+
+Phase 2 optional: Victron MultiPlus-II 48/3000/35-50 120V on the 48 V bus for built-in inverter/shore charging/transfer.
 ```
 
-**Why 48 V:** the two biggest loads — the Velit air conditioner and the inverter — are 48 V-native, and at 48 V the cables stay small. **Why a single 24 V house bus and no 12 V rail:** every chosen house load is 24 V-capable (fridge auto-senses 12/24, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V in), so a second 48→12 converter would add a conversion stage, a quiescent draw, and a parts family for nothing. The rare 12 V-only stray gets a point-of-load (POL) 24→12 buck — a small DC-DC converter at the device, not a second house rail. The panel ruled this unanimously (D006).
+**Why 48 V:** the biggest trailer load — the Velit air conditioner — is 48 V-native, and at 48 V the cables stay small. **Why a single 24 V house bus and no 12 V rail:** every chosen house load is 24 V-capable (fridge auto-senses 12/24, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V in), so a second 48→12 converter would add a conversion stage, a quiescent draw, and a parts family for nothing. The rare 12 V-only stray gets a point-of-load (POL) 24→12 buck — a small DC-DC converter at the device, not a second house rail. The panel ruled this unanimously (D006).
 
-**Why this house-charger verdict:** the original LiTime 5 kW unit was ordered by mistake and should be returned; the LiTime 3500 W was never owned, only a candidate. Once roof solar moves to a dedicated SmartSolar 250/60-Tr and the deployable ground pair is optional margin, the house charger should be chosen on inverter/charger quality, idle draw, monitoring/programming, support, and fit with one 48 V 100 Ah ComFlex pack. The verdict is the **Victron MultiPlus-II 48/3000/35-50 120V**. Trade accepted: it costs and weighs more than the LiTime 3500 W and its sustained 120 VAC output is lower, so treat ~2200 W at hot-cabinet temperatures as the real continuous AC envelope. The Velit stays on 48 V DC and does not count against inverter output. LiTime 3500 remains the budget fallback, not the primary recommendation. See the corrected [3-panel AIO verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md).
+**Why the built-in house charger is now optional for Juplaya:** the original LiTime 5 kW unit was ordered by mistake and should be returned; the LiTime 3500 W was never owned, only a candidate. The owner already has an **Anker SOLIX C1000** plus its **PS400 400 W solar panel**, which is enough to cover small 120 VAC loads as a separate portable subsystem and leave the generator home if sustained AC cooking/heating/tool use is not part of Juplaya. The trailer's critical loads are DC: the Velit runs from 48 V, and the fridge/lights/USB/GPS run from the 24 V bus. The **Victron MultiPlus-II 48/3000/35-50 120V** remains the Phase 2 integrated inverter/charger recommendation if built-in 120 VAC distribution, shore/generator charging, or automatic transfer become required. See the corrected [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md).
 
-### 48 V stack (house charger proposed — D002)
+### 48 V stack and AC island (D002)
 
-- **House charger verdict — Victron MultiPlus-II 48/3000/35-50 120V** ([specs](reference/victron-multiplus-ii-48-3000-120v-specs.md)) — **proposed replacement purchase after returning the mistaken LiTime 5 kW.** This is not an AIO and has no PV input. AC output is 3000 VA / 2400 W at 25°C, 2200 W at 40°C, 1700 W at 65°C; peak 5500 W. AC charger is 35 A, transfer switch is 50 A, zero-load draw is 11 W normal / 7 W AES / 2 W Search, and weight is ~64 lb. **Commissioning: cap combined charge current ≤100 A** across the MultiPlus, SmartSolar, optional ground MPPT, and any future charger (the ComFlex's continuous limit). Treat high-draw AC loads with discipline because the Victron is cleaner but not a 3500 W continuous inverter.
+- **Juplaya 120 VAC island — Anker SOLIX C1000 + Anker SOLIX PS400 400 W panel** ([specs](reference/anker-solix-c1000-ps400-specs.md)) — already available. C1000: 1056 Wh LiFePO4, 1800 W pure-sine AC output, 2400 W surge, solar/car input 11–32 V at 10 A or 32–60 V at 12.5 A (600 W max), 28.44 lb. PS400: 400 W, 57.6 V Voc, 48 V operating, 8.33 A, 35.3 lb, MC4 output with XT-60 adapter. Use this for laptops, chargers, camera/tool battery chargers, Starlink-class loads, and brief small-appliance use. Keep it shaded/ventilated; do not use it for sustained electric cooking/heating.
+  - **Optional trailer-to-C1000 top-up:** a fused/manual 24 V bus feed into the C1000 XT-60 input is acceptable as a ~240 W max auxiliary charge path. It must be switched/fused, treated as a discretionary load, and disabled when fridge/lights/USB need the 16 A Orion-Tr capacity. Do not direct-feed from the 48 V battery bus unless a dedicated current-limited DC-DC charger is designed later.
+- **Phase 2 built-in inverter/charger — Victron MultiPlus-II 48/3000/35-50 120V** ([specs](reference/victron-multiplus-ii-48-3000-120v-specs.md)) — deferred, not a Juplaya blocker. It is the right later choice if the trailer needs built-in 120 VAC distribution, shore/generator charging, or transfer switching. If installed later, cap combined charge current ≤100 A across the MultiPlus, SmartSolar, optional ground MPPT, and any future charger.
 - **Roof MPPT: Victron SmartSolar MPPT 250/60-Tr** ([specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md)) — dedicated to the roof 3S string. 250 V-class PV ceiling gives cold-Voc margin; start/track threshold is compatible with hot 3S Vmpp. Requires its own DC-rated roof PV disconnect and battery-side output fuse/breaker.
 - **Battery: LiTime 48V 100Ah Smart ComFlex** ([specs](reference/litime-48v-100ah-battery-specs.md)) — 5.12 kWh, ~97 lb, 100 A continuous, Bluetooth BMS. Mount **low and centered** (single-axle tongue-weight sensitivity).
 - **Instrumentation & protection:** LiTime 500A Bluetooth shunt (single-point ground lives here), ANL 250 A fuses (bolt-down high-current fuse format) on the main run.
-- **Location:** MultiPlus + battery + SmartSolar + converter + distribution all live in the **nose cabinet** (the interior nose trapezoid). **Ventilate the cabinet** — the MultiPlus is fan-assisted and the SmartSolar/Orion-Tr add waste heat; this same plume is why the fridge bay must stay away from the nose.
+- **Location:** battery + SmartSolar + converter + distribution all live in the **nose cabinet** (the interior nose trapezoid). **Ventilate the cabinet** — the SmartSolar/Orion-Tr add waste heat; this same plume is why the fridge bay must stay away from the nose. The C1000 is portable camp gear, not a hardwired nose-cabinet component.
 
 ### Solar (roof 3S resolved; house charger D002 proposed)
 
@@ -78,7 +82,9 @@ Roof PV (3 x LG455 in 3S)
 - **Roof: 3 panels in series — "3S", 1365 W — into the Victron SmartSolar 250/60-Tr only.** STC Vmpp 126.3 V; NMOT Vmpp ~118.8 V; hot-roof Vmpp roughly ~105–115 V; cold Voc signal ~163–171 V with tolerance/cold correction. This is invalid on any 145/150 V-class AIO input but comfortably inside a 250 V-class MPPT.
 - **NEVER 3S into an AIO PV input with a 145/150 V ceiling.** Three panels in series exceed that class in cold conditions, and owner reports already make the LiTime rail look touchy. Physically segregate and label PV paths: roof 3S terminates only at its own disconnect → SmartSolar; any exterior deployable inlet lands only on its own ground MPPT path or on the LiTime fallback if D002 is reopened.
 - **Do not chase 3S with a 120 V-min high-voltage AIO.** The LiTime 5 kW / EG4 class wakes on a 120 V MPPT floor while LG455 3S sits at or below that floor under NMOT/hot-roof conditions. The corrected panel run classifies that as a reliability problem, not acceptable clipping.
-- **Optional camped ground: 2 panels in series — "2S", 910 W — gets its own small 150 V-class MPPT if used, or gets skipped.** Hardware if used: weatherproof exterior inlet dedicated to the ground MPPT path, DC-rated disconnect, 10 AWG extension run, and guy/anchor hardware. **Never combine roof 3S and ground 2S on one tracker.** The ground pair is useful margin, not a house-charger requirement.
+- **Optional camped LG ground pair: 2 panels in series — "2S", 910 W — gets its own small 150 V-class MPPT if used, or gets skipped.** Hardware if used: weatherproof exterior inlet dedicated to the ground MPPT path, DC-rated disconnect, 10 AWG extension run, and guy/anchor hardware. **Never combine roof 3S and ground 2S on one tracker.** The ground pair is useful trailer-battery margin, not a house-charger requirement.
+- **Dedicated C1000 solar: Anker PS400 400 W panel feeds the C1000 only.** Do not series it with anything, do not parallel it with the LG panels, and do not land it on the trailer SmartSolar. Its 57.6 V Voc is intentionally close to the C1000's 60 V input ceiling; use it as the Anker-matched single-panel input.
+- **Optional C1000 top-up from trailer 24 V:** if added, this is a manual fused branch from the 24 V block to the C1000 XT-60 input, limited by the C1000's 11–32 V / 10 A input band (~240 W). Use it only to move surplus roof-solar energy into the C1000 after the trailer battery is healthy; it is not a reason to upsize the July 24 V bus unless testing shows it is needed often.
 - **Mounting:** three landscape rows on rails/tilt/Z-brackets, fastened **through the 24"-OC steel roof bows** (never skin-only), bedded in butyl tape (non-hardening sealant) with Dicor — self-leveling lap sealant — over the fastener heads. If the SmartSolar path slips, leave roof PV uncommissioned temporarily rather than pulling the house-charger choice back toward an AIO.
 - **Roof fit — MEASURED ✓ (2026-06-04) + corrected premise:** width **84-7/8" rail-edge to rail-edge with minimal crown — landscape rows fit** with ~0.9" per side to spare. That margin means **under-panel feet/rails, not side clamps.** Rectangle length **145.5"**: three panel rows take ~123", leaving ~22" of measured rectangle plus the nose; the corrected premise places the **Velit 2000R AC in the nose section**. The **roof drawing** (design-freeze item 5) still has to lock bow stations, Velit opening + shadow line, awning standoff stations, and exact panel-foot layout.
 
@@ -112,11 +118,11 @@ Charging from the F-150 while driving is a later phase, but the copper goes in w
 | Load | kWh/day |
 |---|---|
 | Fridge (CFX3 95DZ, desert duty) | 1.0–1.3 |
-| House inverter idle (MultiPlus-II normal/AES/Search discipline) | ~0.05–0.26 |
+| 24 V bus / controls overhead | ~0.1–0.3 |
 | Velit AC at realistic duty | ~2.4 |
-| **Total** | **≈ 3.5–4.0** |
+| **Trailer DC total** | **≈ 3.5–4.0** |
 
-Roof-only 3S solar makes ~6.0 kWh/day before soiling/shading, which clears the nominal July load with better idle margin than the LiTime AIO path. The deployable 2S ground pair is optional margin: it can add ~4.0 kWh/day when camped for AC-heavy days, playa dust, Velit shadow, or recovery after a deficit day, but it should not drive the house-charger choice. High-draw AC discipline still stands because the MultiPlus-II's hot sustained output is ~2200 W. (Lighting/USB are noise against these three.)
+Roof-only 3S solar makes ~6.0 kWh/day before soiling/shading, which clears the nominal July DC load. The deployable 2S LG ground pair is optional trailer-battery margin: it can add ~4.0 kWh/day when camped for AC-heavy days, playa dust, Velit shadow, or recovery after a deficit day. The C1000 is a separate 120 VAC island: its 1056 Wh pack plus PS400 panel should cover small AC loads and keep the generator home, but it is not sized for sustained electric cooking/heating. (Lighting/USB are noise against these three.)
 
 ---
 
@@ -260,7 +266,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-- **Long-lead, order now:** return LiTime 5 kW; **buy Victron MultiPlus-II 48/3000/35-50 120V** (house charger verdict) · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · optional small 150 V-class MPPT for the deployable 2S ground pair if used · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
+- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · optional small 150 V-class MPPT for the deployable 2S LG ground pair if used · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
@@ -285,9 +291,9 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor E-track masks pulled and slots/hardware inspected.
-10. **Nose cabinet** — battery, MultiPlus, SmartSolar, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting.
+10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), lights/USB/GPS, awning case onto the standoffs, tie-down anchors.
-12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional ground 2S lands only on its own MPPT path; shakedown camp before Juplaya.
+12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path; verify the C1000 + PS400 covers small AC loads; if a 24 V C1000 top-up branch is added, test that it does not brown out or overload the Orion/fridge bus; shakedown camp before Juplaya.
 
 ---
 
@@ -306,7 +312,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 4 gal ordered for June 12–15 delivery; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. MultiPlus-II 48/3000/35-50 120V, SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, optional ground MPPT if used, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, optional LG ground MPPT if used, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount. MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
