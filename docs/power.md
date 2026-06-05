@@ -55,7 +55,7 @@ Phase 2 optional:
 LiTime 48 V battery -> Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
 ```
 
-Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, and the Scanstrut USB-C takes 24 V input. The 12 V converter is scoped narrowly: a switched, fused accessory outlet bank in the power cabinet for occasional 12 V devices, not a distributed house rail.
+Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V input, and the selected exterior lights are 12-28 VDC wide-input fixtures. The 12 V converter is scoped narrowly: a switched, fused accessory outlet bank in the power cabinet for occasional 12 V devices, not a distributed house rail.
 
 ## Solar Topology
 
@@ -136,24 +136,30 @@ Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can pu
 
 Switching plan: **put the lighting switches on the power cabinet**, not beside the entry door, for the Juplaya build. This keeps wiring shorter and serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
 
-Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. Avoid 12 V-only exterior lights unless the 12 V converter plan is deliberately reopened; the current 12 V rail is local cabinet receptacles only. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
+Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. The current selected fixture class is 12-28 VDC, so the lights run directly from the 24 V house bus. Do not build a 12 V exterior-lighting sub-bus for this plan, and do not run lighting through cigarette-lighter receptacles. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
 
 Active exterior layout: **2 curbside floods, 2 roadside floods, 1 flood on each V-nose face, 1 rear flood, plus separate awning lighting**. Count is seven flood fixtures plus the awning light circuit.
 
-| Zone | Fixture count | Approx current @ 24 V | Fuse | Wire | Notes |
+Panel verdict: use **Super Bright LEDs `VAL2-NW9`** for the seven flood/scene positions unless the owner deliberately wants warmer output everywhere. It is the same 9" black 1450 lm / 18 W / 90 deg / IP67 / 12-28 VDC fixture class as `VAL2-WW9`, but 4000 K is more useful for work/security floods than 3000 K. `VAL2-WW9` remains the warm-white alternate. For the awning, use a separate warm 24 V dimmable strip such as **Super Bright LEDs `RA-IP68-80CRI-5m`, 3000 K** under the case/rail rather than another glare flood.
+
+| Zone | Fixture count | Approx current | Fuse | Wire | Notes |
 |---|---:|---:|---|---|
-| Interior main/task | TBD | ~2-3 A typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch/dimmer |
-| Awning/camp light | 1 strip/bar or multiple small fixtures | <=2 A target | 5 A | 16-18 AWG | warm white 2700-3000 K or amber/white; diffuse/downward, not a glare bar |
-| Curbside floods | 2 | <=2 A target | 5 A | 16 AWG | down/out aimed for camp/work; one switch labeled CURB FLOOD |
-| Roadside floods | 2 | <=2 A target | 5 A | 16 AWG | down/out aimed for roadside work; one switch labeled ROAD FLOOD |
-| Nose floods | 2 | <=2 A target | 5 A | 16 AWG | one fixture on each V-nose face; one switch labeled NOSE FLOOD unless separate control becomes useful |
-| Rear flood | 1 | <=2 A target | 5 A | 16 AWG | upper rear/down-aimed loading light, not tied to reverse/tow wiring |
+| Interior main/task | TBD | ~2-3 A @ 24 V typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch/dimmer |
+| Awning/camp light | 1 x 5 m strip max | 64 W max / ~2.7 A @ 24 V before dimming | 5 A | 16-18 AWG | `RA-IP68-80CRI-5m` 3000 K or equivalent; dimmable, diffuse/downward, not a glare bar |
+| Curbside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for camp/work; one switch labeled CURB FLOOD |
+| Roadside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for roadside work; one switch labeled ROAD FLOOD |
+| Nose floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | one fixture on each V-nose face; one switch labeled NOSE FLOOD unless separate control becomes useful |
+| Rear flood | 1 x `VAL2-NW9` | 18 W / ~0.75 A @ 24 V | 5 A | 16 AWG | upper rear/down-aimed loading light, not tied to reverse/tow wiring |
 | Optional step/courtesy | 1-2 small amber fixtures | <0.5 A | 3 A or shared 5 A branch | 18 AWG | optional low amber at personnel door/step; can share awning switch |
 | Spare exterior/service | TBD | TBD | 5 A | 16-18 AWG | capped spare pair if the wall path is open |
 
-Part-selection class: exterior fixtures should be IP67-ish, hardwired, low-profile, vibration tolerant, and serviceable from the interior if possible. For the seven floods, target compact **<=18-24 W each** fixtures, not oversized light bars; that keeps all exterior lighting within the 16 A Orion's realistic margin. Favor warm/amber camp light for the awning circuit, and reserve cool/neutral white for the flood circuits. Blue Sea Contura-style switches are acceptable on the cabinet because the 12/24 V versions are rated for 24 V DC; still fuse each branch at the Blue Sea 5026 for conductor and fixture ampacity.
+Seven `VAL2-NW9` floods total **126 W / ~5.25 A @ 24 V**. Full awning strip adds **64 W / ~2.7 A @ 24 V** before dimming. That is fine as short-duration lighting, but do not combine all exterior lights with full USB-C load, optional C1000 top-up, and winter heater glow.
 
-Load-shed rule: do not run every flood, full USB-C load, optional C1000 top-up, and winter heater glow at the same time on the 16 A 24 V converter. For Juplaya, all floods are short-duration work/security loads; normal camp mode should be awning/interior lighting only.
+Voltage guardrail: because the selected flood fixtures are rated **12-28 VDC**, set and verify the Orion 48/24 output stays below 28 V under all charge/load states. Target normal 24 V output, not a 28+ V "24 V battery charge" profile.
+
+Similar-spec panel considered `VAL2-WW9`, `VAL2-NW9`, the 13"/17"/22" Super Bright LEDs area lights, Optronics `UCL41CB`, TecNiq `P06`, Buyers `1492135`, Abrams Cobalt XS, Handxen 9" 20 W, STEDI/NAPA Mini LED Flood, Hella SM2000, Grote Trilliant, Scandvik E-500, ECCO EW2411, Primelux PX0415, and Home Depot low-voltage deck options. Verdict: `VAL2-NW9` wins the flood positions on 24 V compatibility, output, warm-enough work light, low profile, IP67 rating, and cost. Optronics `UCL41CB` is the best trailer-native fallback; TecNiq `P06` is the rugged premium fallback; Buyers/Abrams are budget fallbacks only if cool or unspecified CCT is acceptable. Oversized 13"/17"/22" fixtures waste too much power for seven positions. See [exterior-lighting panel verdict](../runs/exterior-lighting-panel/synth/VERDICT.md).
+
+Load-shed rule: do not run every flood, full awning strip, full USB-C load, optional C1000 top-up, and winter heater glow at the same time on the 16 A 24 V converter. For Juplaya, all floods are short-duration work/security loads; normal camp mode should be awning/interior lighting only.
 
 ## Auxiliary 12 V Cabinet Receptacles
 
@@ -240,6 +246,6 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 - Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.
-- Exterior lighting fixture SKUs, switch labels, branch wire gauges, and penetration/seal details.
+- Exterior lighting order counts, switch labels, final branch wire gauges, and penetration/seal details.
 - Optional C1000 24 V top-up branch test.
 - Real shakedown energy use before leaving the generator home.
