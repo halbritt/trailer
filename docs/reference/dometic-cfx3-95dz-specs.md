@@ -18,7 +18,7 @@
 ## Build notes
 
 - **24 V native** (4.6 A rated ≈ 110 W while compressing) — lands on the 24 V house bus with zero conversion; reinforces the 24 V lean and the delete-the-48→12 question.
-- **Energy budget:** at desert duty cycles (~30–50%), roughly **0.8–1.3 kWh/day** — comfortably inside roof-only solar (~3.5–4 kWh/day), trivial when the ground pair is deployed.
+- **Energy budget:** at desert duty cycles (~30–50%), roughly **0.8–1.3 kWh/day** — comfortably inside roof 3S solar (~6 kWh/day before soiling/shading), with the ground pair optional.
 - **Ambient ceiling 110 °F:** the fridge's location must stay ventilated/shaded — interior heat management (awning shade, venting) is part of keeping it in spec at Juplaya. Above 86 °F ambient the dual-zone constrains setpoints (see table).
 - **Placement:** 37.9" × 20.9" footprint, 18.6" tall **plus lid-swing clearance** — a chest lid can't open under a fixed 34" bed deck; needs open top access or a slide. Feeds the interior-layout plan (#12/#13).
 - 66.4 lb empty (+ contents) in the payload ledger.

@@ -21,8 +21,8 @@ Roof-solar controller for the revised D002 3-panel architecture. Source: Victron
 
 ## Build-relevant notes
 
-- **Roof 3S fit:** three LG455 panels are 149.7 V Voc at STC before cold correction and about 163-171 V cold signal, so they need this 250 V-class PV input. They must never be plugged into the LiTime AIO's 145 V PV input.
+- **Roof 3S fit:** three LG455 panels are 149.7 V Voc at STC before cold correction and about 163-171 V cold signal, so they need this 250 V-class PV input. They must never be plugged into any 145/150 V-class AIO PV input.
 - **Hot-roof margin:** LG455 3S hot Vmpp can fall near ~105-115 V; this remains well above a 48 V battery + 5 V SmartSolar start threshold, unlike 120 V-min AIOs.
 - **Overpaneling:** 3 x 455 W = 1365 W, far below the 3440 W nominal PV power rating at 48 V.
-- **Charge coordination:** the 60 A controller can exceed the current needed for a 1365 W string. Program a conservative current limit so the SmartSolar plus LiTime AIO/AC charging stays at or below the ComFlex battery's 100 A continuous charge limit.
+- **Charge coordination:** the 60 A controller can exceed the current needed for a 1365 W string. Program a conservative current limit so the SmartSolar plus MultiPlus AC charging plus any optional ground MPPT stays at or below the ComFlex battery's 100 A continuous charge limit.
 - **Protection:** use a DC-rated roof PV disconnect/breaker above worst-case cold 3S Voc, and fuse/breaker the battery-side output for controller current and conductor ampacity.

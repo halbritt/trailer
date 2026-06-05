@@ -1,6 +1,8 @@
 # AIO Inverter/Charger Evidence Brief — 2026-06-05
 
-Purpose: source pack for an adversarial review of D002 before buying the replacement inverter/charger. The owner accidentally ordered the LiTime 48 V 5 kW AIO and plans to return it; current D002 says buy the LiTime 48 V 3500 W AIO. The new challenge is whether a different inverter/charger or MPPT architecture is better now that three roof panels may physically fit with the Velit rooftop AC.
+Purpose: source pack for an adversarial review of D002 before buying the replacement inverter/charger. The owner accidentally ordered the LiTime 48 V 5 kW AIO and plans to return it; at the time of this brief, D002 said buy the LiTime 48 V 3500 W AIO. The new challenge was whether a different inverter/charger or MPPT architecture was better now that three roof panels could physically fit with the Velit rooftop AC.
+
+**Supersession note:** the corrected verdict now favors **Victron MultiPlus-II 48/3000/35-50 120V + SmartSolar MPPT 250/60-Tr**. This brief remains as evidence for what was considered, not the active recommendation.
 
 ## Trailer Constraints
 
@@ -10,9 +12,9 @@ Purpose: source pack for an adversarial review of D002 before buying the replace
   - Velit 2000R Mini rooftop AC is 48 V native, about 5-14 A at 48 V, rated ~670 W, exterior unit about 26.4" x 26" x 6.5", ~61 lb.
   - Fridge is DC compressor and runs 12/24 V native.
   - AC inverter is for tools, induction, microwave-style loads, and occasional 120 VAC use, not for the rooftop AC.
-- Current house architecture: 48 V battery and AIO in the nose cabinet; 24 V house bus via Victron Orion-Tr 48/24-16A; no standing 12 V bus.
+- House architecture under review: 48 V battery and inverter/charger in the nose cabinet; 24 V house bus via Victron Orion-Tr 48/24-16A; no standing 12 V bus.
 - Roof measured field: width 84-7/8" rail-edge to rail-edge, rectangle length 145.5" plus nose. LG panels fit landscape across the roof width; each landscape row consumes about 41.02" of roof length.
-- Existing D002: roof 2 x LG455 in 2S (910 W) plus deployable ground 2S pair, joining as 2S2P (1820 W) when camped.
+- Pre-review D002: roof 2 x LG455 in 2S (910 W) plus deployable ground 2S pair, joining as 2S2P (1820 W) when camped.
 
 ## Panel Math
 
@@ -42,7 +44,7 @@ Roof implication:
 
 | Option | Current price signal | PV input | AC output / idle | What it buys | Main risk |
 |---|---:|---|---|---|---|
-| Keep D002: LiTime 48 V 3500 W AIO | $629.99 from LiTime on 2026-06-05 | 60-145 V operating, 60-115 V recommended, 4400 W, 50 A; MPPT charge 0-80 A | 3500 W, 6000 W surge 5 s; normal idle <50 W, ECO <30 W; ~23.15 lb | Cheapest simple one-box fit for 2S roof + 2S ground pair; same vendor as battery; 3.5 kW output fits a single 100 A battery better than 5 kW. | No 3S; reported PV-overvoltage nuisance-faults make never-3S hard. Roof-only remains 910 W unless a separate MPPT/roof plan changes. |
+| Pre-review D002: LiTime 48 V 3500 W AIO | $629.99 from LiTime on 2026-06-05 | 60-145 V operating, 60-115 V recommended, 4400 W, 50 A; MPPT charge 0-80 A | 3500 W, 6000 W surge 5 s; normal idle <50 W, ECO <30 W; ~23.15 lb | Cheapest simple one-box fit for 2S roof + 2S ground pair; same vendor as battery; 3.5 kW output fits a single 100 A battery better than 5 kW. | No 3S; reported PV-overvoltage nuisance-faults make never-3S hard. Roof-only remains 910 W unless a separate MPPT/roof plan changes. |
 | Keep/repurchase LiTime 48 V 5 kW AIO | $859.99 from LiTime; visible delivery window on 2026-06-05 | 120-500 V operating, 120-450 V recommended, 5500 W | 5000 W; normal idle <=80 W, ECO <=55 W; ~30.86 lb | High-voltage MPPT and bigger inverter; can accept 3S by voltage max. | 3S Vmpp is below/near the 120 V floor in hot/NMOT conditions; bigger idle tax; sustained 5 kW output exceeds the single-pack comfort zone; already ordered by mistake and slated for return. |
 | EG4 3000EHV-48 AIO | $699.99 Signature Solar signal; EG4 page says 120-450 VDC PV, 1 MPPT, 21.6 lb | 120-450 VDC, 5000 W PV, 80 A charge class | 3000 W / 120 VAC | High-voltage AIO with better known solar-DIY ecosystem than LiTime. | Same 120 V MPPT-floor problem for 3S LG455; lower inverter output than LiTime 3500; not same battery-vendor integration. |
 | Victron MultiPlus-II 48/3000 + SmartSolar MPPT 250/60 | Higher cost; multiple boxes | SmartSolar 250/60: 250 V max, starts above battery voltage + about 5 V, 3440 W nominal PV at 48 V, 60 A | MultiPlus-II 48/3000: 2400 W continuous at 25 C, 2200 W at 40 C, peak 5500 W, zero-load 11 W | Best engineering ecosystem; real 3S compatibility with LG455 and low idle; modular serviceability. | Not an AIO; lower continuous inverter output; more wiring/protection parts; higher cost and integration time. |

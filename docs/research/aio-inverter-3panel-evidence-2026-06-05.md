@@ -2,6 +2,8 @@
 
 Purpose: corrected source pack for rerunning the D002 inverter/charger adversarial review. The previous run incorrectly let roof geometry kill the 3-panel case. Corrected premise: **the Velit 2000R can fit in the trailer nose section, and three LG455 roof panels will fit on the roof.** Reviewers must not reject 3S on physical-fit grounds.
 
+**Supersession note:** the corrected verdict now favors **Victron MultiPlus-II 48/3000/35-50 120V + SmartSolar MPPT 250/60-Tr**. This brief remains as evidence for the rerun inputs and options considered.
+
 ## Corrected Premise
 
 - The roof can carry **3 x LG455N2W-E6** panels in landscape orientation.

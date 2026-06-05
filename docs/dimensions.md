@@ -24,9 +24,9 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 | Component | Dimensions | Weight |
 |---|---|---|
-| AIO — LiTime 48V 3500W | 16.77" × 13.23" × 4.88" (426 × 336 × 124 mm) | 23.2 lb (10.5 kg) |
+| House inverter/charger — Victron MultiPlus-II 48/3000/35-50 120V | 22.5" × 10.9" × 5.8" (572 × 277 × 147 mm) | 64 lb (29 kg) |
 | Battery — ComFlex 48V 100Ah | 19.88" × 12.32" × 9.25" | 97.4 lb |
-| Solar panel — LG455N2W-E6 (×2 roof + ×2 ground) | **83.07" × 41.02" × 1.57"** (2110 × 1042 × 40 mm) | 48.5 lb ea |
+| Solar panel — LG455N2W-E6 (×3 roof + ×2 optional ground) | **83.07" × 41.02" × 1.57"** (2110 × 1042 × 40 mm) | 48.5 lb ea |
 | Fridge — Dometic CFX3 95DZ | **37.9" × 20.9" × 18.6"** (962 × 530 × 472 mm) incl. handles, + lid swing | 66.4 lb |
 | Awning — Fiamma F45s 350 | case **138" (11'6")** L × 5.35" H × 3.35" proj · canopy 130" · extension 98" | 55.1 lb |
 | Window ×2 — RecPro RP-FRMWIN-1222-TRM | 12" × 22"; **cutout 11-5/8" × 21-5/8"**, overall 14×24×2.5, **ring for 1.5" wall** (RecPro, web-val) | — |
@@ -42,7 +42,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | backed on tube posts |
 | **Window band** | sill ~**36"**, top ~58" | above the bed track (~27"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
-| Roof: two panel rows (landscape) | 83.07" across × **82" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet, not side clamps); leaves ~63" of rectangle + nose |
+| Roof: three panel rows (landscape) | 83.07" across × **123" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet, not side clamps); leaves ~22" of measured rectangle + nose for Velit/standoff layout |
 | Awning case bottom | ≥ **~78.5"** (above roofline) | riser-mounted |
 | Deployed fabric @ 32" out, 10° pitch | ~**72.9"** | vs the 72" door — ~0.9" paper margin |
 | Fridge bay | starts at the door's aft edge, 37.9" long × 20.9" deep | curbside; band under 18.6" + lid |
@@ -59,7 +59,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
 | 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | | |
-| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the AIO/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | | |
+| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the power/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | | |
 | 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
@@ -78,5 +78,5 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 | 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
 
-> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The E-track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the AIO-cabinet zone. The two panel rows need only the rectangle (~82" of its length); the nose trapezoid is free for the drawing to assign (AC clearance, riser stations, walk space).
+> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The E-track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
 > When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor E-track layout (10, 11), and the payload ledger (18).

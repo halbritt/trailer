@@ -47,11 +47,11 @@ Roof PV (3 x LG455 in 3S)
         │
    Victron SmartSolar MPPT 250/60-Tr
         │
-   LiTime 48V 100Ah ComFlex (5.12 kWh)  ←→  LiTime 48V 3500W AIO
-        │ 500A shunt, main OCP               (proposed house charger + optional ground MPPT)
+   LiTime 48V 100Ah ComFlex (5.12 kWh)  ←→  Victron MultiPlus-II 48/3000/35-50 120V
+        │ 500A shunt, main OCP               (house inverter/charger verdict)
         │                                             │
-        │                                             ├── optional deployable 2S ground pair
-        │                                             └── 120 VAC out (3500 W / 6000 W surge)
+        │                                             └── 120 VAC out (2400 W @25°C / 2200 W @40°C; 5500 W peak)
+        ├── optional deployable 2S ground pair → dedicated 150 V-class MPPT, if used
         ├── 48 V branch: Velit 2000R rooftop AC (48 V native, own fused branch)
         └── Victron Orion-Tr 48/24-16A (isolated) ── Blue Sea 5026 24 V block
                                                         ├ fridge (24 V native)
@@ -61,26 +61,25 @@ Roof PV (3 x LG455 in 3S)
 
 **Why 48 V:** the two biggest loads — the Velit air conditioner and the inverter — are 48 V-native, and at 48 V the cables stay small. **Why a single 24 V house bus and no 12 V rail:** every chosen house load is 24 V-capable (fridge auto-senses 12/24, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V in), so a second 48→12 converter would add a conversion stage, a quiescent draw, and a parts family for nothing. The rare 12 V-only stray gets a point-of-load (POL) 24→12 buck — a small DC-DC converter at the device, not a second house rail. The panel ruled this unanimously (D006).
 
-**Why this house-charger candidate:** the original LiTime 5 kW unit was ordered by mistake and should be returned. Its 120 V MPPT floor is not a reason to keep it: LG455 3S is already ~118.8 V at NMOT and drops lower on a hot playa roof. The **LiTime 3500 W** is the current recommended replacement to buy because its inverter/charger sizing fits one 48 V 100 Ah ComFlex pack; the corrected 3-panel run revised the **solar** topology instead of upsizing the house charger. Roof 3S goes through a separate 250 V-class MPPT. The AIO's own PV input can handle the optional deployable 2S ground pair, but ground-panel support is not the reason to choose the house charger. See the corrected [3-panel AIO verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md).
+**Why this house-charger verdict:** the original LiTime 5 kW unit was ordered by mistake and should be returned; the LiTime 3500 W was never owned, only a candidate. Once roof solar moves to a dedicated SmartSolar 250/60-Tr and the deployable ground pair is optional margin, the house charger should be chosen on inverter/charger quality, idle draw, monitoring/programming, support, and fit with one 48 V 100 Ah ComFlex pack. The verdict is the **Victron MultiPlus-II 48/3000/35-50 120V**. Trade accepted: it costs and weighs more than the LiTime 3500 W and its sustained 120 VAC output is lower, so treat ~2200 W at hot-cabinet temperatures as the real continuous AC envelope. The Velit stays on 48 V DC and does not count against inverter output. LiTime 3500 remains the budget fallback, not the primary recommendation. See the corrected [3-panel AIO verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md).
 
 ### 48 V stack (house charger proposed — D002)
 
-- **House charger candidate — LiTime 48V 3500W AIO** ([specs](reference/litime-48v-3500w-aio-specs.md) · [manual](manuals/litime-48v-3500w-inverter-charger-manual.md)) — **not owned yet; this is the proposed replacement purchase after returning the 5 kW.** PV 60–145 V operating / 60–115 V recommended, 4400 W / 50 A max; AC out 3500 W continuous, 6000 W / 5 s surge; no-load draw <50 W (<30 W in ECO); ~75 A max battery draw. Its PV input is **not** the roof input anymore; it is available for optional deployable 2S ground. **Commissioning: cap combined charge current ≤100 A** across the AIO, AC charger, SmartSolar, and any future charger (the ComFlex's continuous limit). ECO/off discipline when idle — the idle draw is a real line in the energy budget.
-  - **Cold floor `[web-val]`: the AIO is rated to −10 °C, and that — not PV Voc — is the binding cold limit.** It lives in the conditioned nose cabinet, which keeps winter operation on the table.
+- **House charger verdict — Victron MultiPlus-II 48/3000/35-50 120V** ([specs](reference/victron-multiplus-ii-48-3000-120v-specs.md)) — **proposed replacement purchase after returning the mistaken LiTime 5 kW.** This is not an AIO and has no PV input. AC output is 3000 VA / 2400 W at 25°C, 2200 W at 40°C, 1700 W at 65°C; peak 5500 W. AC charger is 35 A, transfer switch is 50 A, zero-load draw is 11 W normal / 7 W AES / 2 W Search, and weight is ~64 lb. **Commissioning: cap combined charge current ≤100 A** across the MultiPlus, SmartSolar, optional ground MPPT, and any future charger (the ComFlex's continuous limit). Treat high-draw AC loads with discipline because the Victron is cleaner but not a 3500 W continuous inverter.
 - **Roof MPPT: Victron SmartSolar MPPT 250/60-Tr** ([specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md)) — dedicated to the roof 3S string. 250 V-class PV ceiling gives cold-Voc margin; start/track threshold is compatible with hot 3S Vmpp. Requires its own DC-rated roof PV disconnect and battery-side output fuse/breaker.
 - **Battery: LiTime 48V 100Ah Smart ComFlex** ([specs](reference/litime-48v-100ah-battery-specs.md)) — 5.12 kWh, ~97 lb, 100 A continuous, Bluetooth BMS. Mount **low and centered** (single-axle tongue-weight sensitivity).
 - **Instrumentation & protection:** LiTime 500A Bluetooth shunt (single-point ground lives here), ANL 250 A fuses (bolt-down high-current fuse format) on the main run.
-- **Location:** AIO + battery + SmartSolar + converter + distribution all live in the **nose cabinet** (the interior nose trapezoid). **Ventilate the cabinet** — the AIO's ceiling is 131 °F and the SmartSolar/Orion-Tr add waste heat; this same plume is why the fridge bay must stay away from the nose.
+- **Location:** MultiPlus + battery + SmartSolar + converter + distribution all live in the **nose cabinet** (the interior nose trapezoid). **Ventilate the cabinet** — the MultiPlus is fan-assisted and the SmartSolar/Orion-Tr add waste heat; this same plume is why the fridge bay must stay away from the nose.
 
 ### Solar (roof 3S resolved; house charger D002 proposed)
 
 **Panels: 5 × LG455N2W-E6 on hand** (455 W, 83.07" × 41.02" × 1.57", 48.5 lb; Vmpp 42.1 V — voltage at max power; Voc 49.9 V ±5% — open-circuit voltage, the cold-morning worst case; [datasheet](reference/lg455n2w-e6-datasheet.md)). **Three live on the roof permanently. Two can travel inside and deploy on the ground when the extra margin is worth the setup.**
 
-- **Roof: 3 panels in series — "3S", 1365 W — into the Victron SmartSolar 250/60-Tr only.** STC Vmpp 126.3 V; NMOT Vmpp ~118.8 V; hot-roof Vmpp roughly ~105–115 V; cold Voc signal ~163–171 V with tolerance/cold correction. This is invalid on the LiTime AIO but comfortably inside a 250 V-class MPPT.
-- **NEVER 3S into the LiTime 3500 W AIO.** Three panels in series exceed the AIO's 145 V PV max in cold conditions, and owner reports already make that rail look touchy. Physically segregate and label the two PV paths: roof 3S terminates only at its own disconnect → SmartSolar; the exterior deployable inlet wires only to the AIO.
+- **Roof: 3 panels in series — "3S", 1365 W — into the Victron SmartSolar 250/60-Tr only.** STC Vmpp 126.3 V; NMOT Vmpp ~118.8 V; hot-roof Vmpp roughly ~105–115 V; cold Voc signal ~163–171 V with tolerance/cold correction. This is invalid on any 145/150 V-class AIO input but comfortably inside a 250 V-class MPPT.
+- **NEVER 3S into an AIO PV input with a 145/150 V ceiling.** Three panels in series exceed that class in cold conditions, and owner reports already make the LiTime rail look touchy. Physically segregate and label PV paths: roof 3S terminates only at its own disconnect → SmartSolar; any exterior deployable inlet lands only on its own ground MPPT path or on the LiTime fallback if D002 is reopened.
 - **Do not chase 3S with a 120 V-min high-voltage AIO.** The LiTime 5 kW / EG4 class wakes on a 120 V MPPT floor while LG455 3S sits at or below that floor under NMOT/hot-roof conditions. The corrected panel run classifies that as a reliability problem, not acceptable clipping.
-- **Optional camped ground: 2 panels in series — "2S", 910 W — can feed the proposed LiTime AIO's MPPT.** If the house-charger choice changes to a non-solar inverter/charger, either skip ground solar or give the ground pair its own small MPPT. Hardware if used: weatherproof exterior inlet dedicated to the ground MPPT path, DC-rated disconnect, 10 AWG extension run, and guy/anchor hardware. **Never combine roof 3S and ground 2S on one tracker.**
-- **Mounting:** three landscape rows on rails/tilt/Z-brackets, fastened **through the 24"-OC steel roof bows** (never skin-only), bedded in butyl tape (non-hardening sealant) with Dicor — self-leveling lap sealant — over the fastener heads. If the SmartSolar path slips, fall back by wiring two mounted roof panels as 2S into the AIO and parking the third panel until the controller is installed.
+- **Optional camped ground: 2 panels in series — "2S", 910 W — gets its own small 150 V-class MPPT if used, or gets skipped.** Hardware if used: weatherproof exterior inlet dedicated to the ground MPPT path, DC-rated disconnect, 10 AWG extension run, and guy/anchor hardware. **Never combine roof 3S and ground 2S on one tracker.** The ground pair is useful margin, not a house-charger requirement.
+- **Mounting:** three landscape rows on rails/tilt/Z-brackets, fastened **through the 24"-OC steel roof bows** (never skin-only), bedded in butyl tape (non-hardening sealant) with Dicor — self-leveling lap sealant — over the fastener heads. If the SmartSolar path slips, leave roof PV uncommissioned temporarily rather than pulling the house-charger choice back toward an AIO.
 - **Roof fit — MEASURED ✓ (2026-06-04) + corrected premise:** width **84-7/8" rail-edge to rail-edge with minimal crown — landscape rows fit** with ~0.9" per side to spare. That margin means **under-panel feet/rails, not side clamps.** Rectangle length **145.5"**: three panel rows take ~123", leaving ~22" of measured rectangle plus the nose; the corrected premise places the **Velit 2000R AC in the nose section**. The **roof drawing** (design-freeze item 5) still has to lock bow stations, Velit opening + shadow line, awning standoff stations, and exact panel-foot layout.
 
 ### 24 V house bus — D006
@@ -113,11 +112,11 @@ Charging from the F-150 while driving is a later phase, but the copper goes in w
 | Load | kWh/day |
 |---|---|
 | Fridge (CFX3 95DZ, desert duty) | 1.0–1.3 |
-| AIO idle, ECO discipline | ~0.7 |
+| House inverter idle (MultiPlus-II normal/AES/Search discipline) | ~0.05–0.26 |
 | Velit AC at realistic duty | ~2.4 |
-| **Total** | **≈ 4.1–4.45** |
+| **Total** | **≈ 3.5–4.0** |
 
-Roof-only 3S solar makes ~6.0 kWh/day before soiling/shading, which clears the nominal July load. The deployable 2S ground pair is optional margin: it can add ~4.0 kWh/day when camped for AC-heavy days, playa dust, Velit shadow, or recovery after a deficit day, but it should not drive the house-charger choice. ECO/off discipline still stands. (Lighting/USB are noise against these three.)
+Roof-only 3S solar makes ~6.0 kWh/day before soiling/shading, which clears the nominal July load with better idle margin than the LiTime AIO path. The deployable 2S ground pair is optional margin: it can add ~4.0 kWh/day when camped for AC-heavy days, playa dust, Velit shadow, or recovery after a deficit day, but it should not drive the house-charger choice. High-draw AC discipline still stands because the MultiPlus-II's hot sustained output is ~2200 W. (Lighting/USB are noise against these three.)
 
 ---
 
@@ -261,7 +260,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-- **Long-lead, order now:** return LiTime 5 kW; **house charger pending owner choice** (current recommendation: buy LiTime 48V 3500W AIO) · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
+- **Long-lead, order now:** return LiTime 5 kW; **buy Victron MultiPlus-II 48/3000/35-50 120V** (house charger verdict) · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · optional small 150 V-class MPPT for the deployable 2S ground pair if used · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
@@ -286,7 +285,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor E-track masks pulled and slots/hardware inspected.
-10. **Nose cabinet** — battery, AIO, SmartSolar, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting.
+10. **Nose cabinet** — battery, MultiPlus, SmartSolar, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), lights/USB/GPS, awning case onto the standoffs, tie-down anchors.
 12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional ground 2S lands only on its own MPPT path; shakedown camp before Juplaya.
 
@@ -307,7 +306,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 4 gal ordered for June 12–15 delivery; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. the SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. MultiPlus-II 48/3000/35-50 120V, SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, optional ground MPPT if used, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 

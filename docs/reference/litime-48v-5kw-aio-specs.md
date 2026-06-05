@@ -1,8 +1,8 @@
 # LiTime 48V 5kW Solar Inverter Charger (AIO) — Key Specs
 
-> **NOTE:** the **5 kW unit is being returned**; the build uses the **LiTime 48V 3500W AIO (PV 60–145 V)**. This sheet is kept for reference.
+> **NOTE:** the **5 kW unit is being returned**; current D002 uses a **Victron MultiPlus-II 48/3000/35-50 120V + Victron SmartSolar 250/60-Tr** path. The LiTime 3500 W AIO remains only the budget fallback. This sheet is kept for reference.
 
-Distilled from the [manual](../manuals/litime-48v-5kw-inverter-charger-manual.md) (owner-converted from the scanned PDF). The AIO in the power system — lives in the nose cabinet.
+Distilled from the [manual](../manuals/litime-48v-5kw-inverter-charger-manual.md) (owner-converted from the scanned PDF). This mistaken AIO order would have lived in the nose cabinet.
 
 | Spec | Value |
 |---|---|

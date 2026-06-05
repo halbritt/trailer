@@ -36,9 +36,9 @@ The house pack in the power system: the **LiTime 48V 100Ah Smart ComFlex** (corr
 
 ## Build-relevant notes
 
-- **Discharge headroom is tight against the 5 kW AIO.** 100 A continuous × 51.2 V = **5120 W continuous — exactly the AIO's max output**. The pack only does 200 A for 2 min and 600 A for 1 s. So running the Velit AC (48 VDC) plus other loads near full inverter output sits at the pack's continuous limit, with no margin on a single pack. Stagger high-draw loads, or this is the argument for a second pack in parallel. *(Update: the planned swap to the 3500W AIO drops max inverter draw to ~76 A — headroom restored.)*
+- **Discharge headroom is tight against the 5 kW AIO.** 100 A continuous × 51.2 V = **5120 W continuous — exactly the AIO's max output**. The pack only does 200 A for 2 min and 600 A for 1 s. So running the Velit AC (48 VDC) plus other loads near full inverter output sits at the pack's continuous limit, with no margin on a single pack. Stagger high-draw loads, or this is the argument for a second pack in parallel. *(Current D002 update: the Victron MultiPlus-II 48/3000 sustained draw is materially lower than the 5 kW AIO and fits one pack more comfortably; the LiTime 3500 W remains the budget fallback.)*
 - **Parallel only (1S).** Capacity scales by paralleling (≤16P with comms, ≤4P without); you cannot series these. Not a problem for the current 48 V design.
-- **Charging is comfortable.** 100 A max / 20 A recommended, CC/CV at 57.6 V. Solar (~1365 W ÷ 51.2 V ≈ 27 A) and AIO charging are well inside limits.
+- **Charging is comfortable but still capped.** 100 A max / 20 A recommended, CC/CV at 57.6 V. Roof SmartSolar (~1365 W ÷ 51.2 V ≈ 27 A), MultiPlus AC charging (35 A), and any optional ground MPPT must be configured so combined charge stays ≤100 A.
 - **No self-heating + charge cutoff below 0 °C.** Fine for July Juplaya (hot). But for the mission doc's cold-weather profiles, the pack **won't accept charge below freezing** (recovers ≥ 5 °C) — a real limit if this rig ever winters.
 - **Weight 97.44 lbs** confirms the context doc's "~100 lb; mount low and centered" — and it's a meaningful chunk of the single-axle payload + a tongue-weight placement decision.
-- **Does NOT resolve the D002 3S-vs-2S solar question** — that hinges on the *AIO inverter's* PV Voc-max (in the image-based inverter manual), not this battery.
+- **Does NOT set PV topology** — roof 3S is resolved by the SmartSolar 250/60-Tr; the battery only sets charge/discharge current limits.
