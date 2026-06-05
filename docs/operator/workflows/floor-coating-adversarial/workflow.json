@@ -1,0 +1,257 @@
+{
+  "schema_version": "striatum.workflow.v1",
+  "workflow_id": "floor-coating-adversarial",
+  "workflow_version": "2026-06-05",
+  "name": "floor-coating-adversarial",
+  "branch": {
+    "allow_dirty": false,
+    "mode": "confirm",
+    "suggested_name": "striatum/floor-coating-adversarial"
+  },
+  "coordinator": {
+    "role_id": "synthesizer",
+    "lane_id": "claude_code"
+  },
+  "allow_same_model_review_pairing": true,
+  "lanes": {
+    "claude_code": {
+      "adapter": "process",
+      "display_model": "Claude Opus 4.8",
+      "command": [
+        "claude",
+        "--model",
+        "claude-opus-4-8",
+        "--permission-mode",
+        "bypassPermissions"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "supervision": {
+        "transport": "pty_helper",
+        "compatible": true,
+        "require_tmux": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    },
+    "codex": {
+      "adapter": "process",
+      "display_model": "Codex GPT-5",
+      "command": [
+        "codex",
+        "--yolo"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "supervision": {
+        "transport": "pty_helper",
+        "compatible": true,
+        "require_tmux": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    },
+    "agy": {
+      "adapter": "process",
+      "display_model": "Gemini 3.5 Flash High",
+      "command": [
+        "agy",
+        "--dangerously-skip-permissions"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    }
+  },
+  "roles": {
+    "reviewer": {
+      "definition_path": "roles/reviewer.md"
+    },
+    "synthesizer": {
+      "definition_path": "roles/synthesizer.md"
+    }
+  },
+  "context_docs": [
+    {
+      "path": "README.md",
+      "required": false
+    },
+    {
+      "path": "docs/juplaya-trailer-context.md",
+      "required": true
+    },
+    {
+      "path": "docs/research/floor-coating-evidence-2026-06-05.md",
+      "required": true
+    }
+  ],
+  "parallelism": {
+    "mode": "declared",
+    "max_active_jobs": 3,
+    "require_disjoint_write_scopes": true
+  },
+  "jobs": [
+    {
+      "id": "review_durability",
+      "type": "draft",
+      "title": "Durability-first review",
+      "role_id": "reviewer",
+      "lane_id": "claude_code",
+      "parallel_group": "review",
+      "fresh_session_required": true,
+      "objective": "Defend or replace Durabak from a durability/weight/mission-fit posture. You may accept high cost only if it buys real trailer value.",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/floor-coating-adversarial/review_durability/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "durability_review",
+          "kind": "handoff",
+          "path": "runs/floor-coating-adversarial/review_durability/DURABILITY.md",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "review_budget",
+      "type": "draft",
+      "title": "Budget adversary review",
+      "role_id": "reviewer",
+      "lane_id": "codex",
+      "parallel_group": "review",
+      "fresh_session_required": true,
+      "objective": "Attack Durabak on cost. Find the cheapest acceptable system that still survives moto fuel/oil, playa dust, hose-out cleanup, and cove requirements.",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/floor-coating-adversarial/review_budget/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "budget_review",
+          "kind": "handoff",
+          "path": "runs/floor-coating-adversarial/review_budget/BUDGET.md",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "review_install",
+      "type": "draft",
+      "title": "Install-risk review",
+      "role_id": "reviewer",
+      "lane_id": "agy",
+      "parallel_group": "review",
+      "fresh_session_required": true,
+      "objective": "Attack every coating on execution risk: PlexCore prep, cove detailing, masking E-track, cure timing, ramp transition, repairability, and deadline risk.",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/floor-coating-adversarial/review_install/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "install_review",
+          "kind": "handoff",
+          "path": "runs/floor-coating-adversarial/review_install/INSTALL.md",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "synth",
+      "type": "synthesis",
+      "title": "Synthesize floor coating verdict",
+      "role_id": "synthesizer",
+      "lane_id": "claude_code",
+      "fresh_session_required": true,
+      "objective": "Reconcile the three adversarial reviews into one final verdict for D010.",
+      "task_prompt": {
+        "path": "prompts/synth.md"
+      },
+      "inputs": [
+        "durability_review",
+        "budget_review",
+        "install_review"
+      ],
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/floor-coating-adversarial/synth/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "floor_coating_verdict",
+          "kind": "synthesis",
+          "path": "runs/floor-coating-adversarial/synth/VERDICT.md",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "review_durability",
+      "on": "completed",
+      "to": "synth"
+    },
+    {
+      "from": "review_budget",
+      "on": "completed",
+      "to": "synth"
+    },
+    {
+      "from": "review_install",
+      "on": "completed",
+      "to": "synth"
+    }
+  ],
+  "cycles": []
+}
