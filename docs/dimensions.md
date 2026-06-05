@@ -33,7 +33,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Window ×1 (door) — RecPro RP-FRMWIN-2015-TRM | 20" × 15"; **cutout 19-5/8" × 14-5/8"**, overall 22×17×2.5, **ring for 1.5" wall** (RecPro, web-val) | — |
 | Bikes — WR250R + CRF450RL | ~86" L ea · bars **32–34"** | ~590 lb pair |
 | Velit 2000R rooftop AC | footprint + roof opening **TBD — must enter the roof drawing** | TBD |
-| Heater (winter) — LF Bros N4 24V | **17" × 13" × 14.8"** (432 × 330 × 376 mm) pedestal, integrated 3.5 L tank — floor spot + exhaust gland | 15.9 lb |
+| Heater (winter) — LF Bros N4 24V | **17" × 13" × 14.8"** (432 × 330 × 376 mm) pedestal, integrated 3.5 L tank — **operates outside; 2 × 3" duct ports** (capped) + exterior 24 V feed | 15.9 lb |
 
 ## Derived bands & clearances (from the accepted design)
 

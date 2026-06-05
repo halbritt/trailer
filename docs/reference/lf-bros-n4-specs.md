@@ -17,6 +17,7 @@ Source: [lf-bros.com product page](https://www.lf-bros.com/product/lf-bro-n4-12v
 **Not published by LF Bros (measure on the bench before winter):** glow-plug startup draw (typical 5 kW units ~90–260 W → **~4–11 A @ 24 V** for 2–3 min), running draw (~1–2 A), exhaust pipe diameter for the floor gland.
 
 ## Build implications
-- **All-in-one kills the fuel rough-in** — no fixed fuel line/tank penetration. Remaining rough-in: **floor exhaust port/gland** (size to the measured exhaust OD), an **E-track-strapped parking spot** (~17×13" footprint), a **24 V outlet** at the station, **CO detector**.
-- **D006 condition stands:** glow draw on top of fridge + lights can exceed the Orion-Tr 16 A — bench-measure; if over, glow-window load-shedding or the parallel-converter path.
+- **Operates OUTSIDE the space** (owner decision, 2026-06-05) — combustion, tank, and exhaust never enter the envelope. Fuel rough-in **and** exhaust gland both deleted.
+- Rough-in: **2 × 3" duct ports** (supply + return, capped until winter; low, clear of bed zone and fridge bay), a **24 V feed reachable at the exterior station** (rail map: 15 A / 12 AWG branch), **CO detector** on the supply side as cheap insurance. Inside E-track spot = transport/storage only.
+- **In the converter power calc now:** fridge 4.6 A + lights ~2–3 A + glow up to ~11 A ≈ 18–19 A worst case vs the Orion-Tr 16 A → winter needs glow-window load-shedding or a parallel second Orion; bench-measured glow decides.
 - Winter item — not aboard for July (D003).
