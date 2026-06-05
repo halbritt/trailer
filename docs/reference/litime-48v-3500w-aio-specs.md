@@ -1,6 +1,6 @@
 # LiTime 48V 3500W Solar Inverter Charger (AIO) — Key Specs
 
-**The build's AIO** (replaced the returned 5 kW unit). Distilled from the [manual](../manuals/litime-48v-3500w-inverter-charger-manual.md) (owner-converted). Lives in the nose cabinet. After the corrected 3-panel decision, its PV input is the optional deployable 2S/fallback input; the roof 3S string uses a separate Victron SmartSolar 250/60-Tr.
+**Proposed replacement AIO / house charger** (the ordered 5 kW unit would be returned; this 3.5 kW unit is not yet owned). Distilled from the [manual](../manuals/litime-48v-3500w-inverter-charger-manual.md) (owner-converted). It would live in the nose cabinet. After the corrected 3-panel decision, its PV input is the optional deployable 2S/fallback input; the roof 3S string uses a separate Victron SmartSolar 250/60-Tr.
 
 | Spec | Value |
 |---|---|
