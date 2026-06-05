@@ -311,6 +311,15 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
+## Structure layout drawing (new — owner sketch, 2026-06-05)
+
+An owner field sketch titled **"structure layout"** landed 2026-06-05: a width-wise cross-section / front elevation of a peaked structure. Redrawn (not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg); the full dimension transcription is in the [dimension sheet](dimensions.md#structure-layout-owner-drawing--2026-06-05).
+
+- **Keyed to the trailer footprint:** base width **81"** and **Interior Height 78"** match the trailer interior spec exactly.
+- **Rises above the shell:** left wall **141"**, ridge **156"**, right wall **98"**, roof slopes **42"** / **43"**, a **13"** segment at the right eave, and a **30°** angle with a swing arc. These heights exceed the trailer's ~97" exterior, so this is a structure *over* the 81"-wide footprint, not the trailer's own shell.
+
+> **⚠ Open — not yet a settled fact or gate.** What this structure is (raised/pop-up roof, annex, or freestanding shade/shelter) and how it reconciles with the build is unconfirmed, and the hand sketch is **not to scale** (the slope/angle/height numbers aren't mutually consistent as drawn). Recorded here verbatim; **owner to confirm purpose and re-measure** before it drives any decision, order, or design-freeze item. This is distinct from the design-freeze "roof drawing" (item 5), which is the panel/AC layout on the existing 84⅞" × 145.5" roof field.
+
 ## Weight
 
 **GVWR 3,500 lb** (gross vehicle weight rating — confirmed). Payload = 3,500 − actual curb; **the trailer will be weighed** rather than estimated — no paper weight budget. Single axle is nose-sensitive: load to ~**10–12 % tongue weight**, battery low and centered, bikes' mass forward of the axle.

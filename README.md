@@ -29,6 +29,7 @@ docs/
 │   ├── litime-48v-100ah-battery-specs.md
 │   ├── dometic-cfx3-95dz-specs.md
 │   ├── lg455n2w-e6-datasheet.md
+│   ├── structure-layout.svg          # owner "structure layout" sketch, redrawn (2026-06-05)
 │   └── albritton-buyers-order-600485.pdf
 ├── research/                    # web-validation of the decisions (cited fact-check)
 ├── manuals/                     # manufacturer literature (PDFs + full conversions)

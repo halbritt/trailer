@@ -49,6 +49,24 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Panel transport | 83" panels vs **81" interior width** → lengthwise only | padded E-track wall slot |
 | E-track footage | ~**73 ft needed** vs ~60 on hand | order more |
 
+## Structure layout (owner drawing — 2026-06-05)
+
+Owner field sketch titled **"structure layout"** — a width-wise cross-section / front elevation. Redrawn (not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg) with every label transcribed verbatim; the original was a hand drawing on graph paper. The **81" base** and **78" interior height** match the trailer interior spec exactly, so the drawing is keyed to the trailer footprint; the taller peaked profile (to 156") rises above it.
+
+| Label on drawing | Value | Where it sits |
+|---|---|---|
+| Base width | **81"** | bottom span — matches the 81" interior width |
+| Left wall height | **141"** | tall side (roadside?), vertical |
+| Peak height | **156"** | floor → ridge, dashed centerline |
+| Right wall height | **98"** | short side, vertical |
+| Left roof slope | **42"** | left-wall top → peak |
+| Right roof slope | **43"** | peak → right eave |
+| Short top-right segment | **13"** | between the 43" slope and the right-wall top |
+| Angle | **30°** | at the right eave, with a swing arc (door swing or roof-pitch angle — **owner to confirm**) |
+| Interior Height | **78"** | annotation — matches the trailer's 78" interior height |
+
+> **Open question (do not bake into the source of truth yet):** what this structure is and how it reconciles with the trailer. The 141"/156"/98" heights exceed the trailer's ~97" exterior, so this is **not** the trailer's own shell — it reads as a peaked structure over the 81"-wide footprint (raised/pop-up roof, annex, or freestanding shade/shelter). Confirm purpose before this drives any gate. Sketch is **not to scale** (the 42"/43" slopes and 30°/156"/141" are not mutually consistent as drawn — treat each number as an independent field note until measured).
+
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
 > **Magicplan scan: landed 2026-06-04 and REJECTED as a measurement source** ([sketch](reference/magicplan-interior-sketch.pdf)). Hard fail: its 85¾" interior width exceeds the 84⅞" tape-measured **exterior** rail-to-rail (spec interior 81"); nose flanks asymmetric by 4" (43½" vs 47½"); door 29¼" vs the work order's 32". Only the long axis is credible (156¾" vs spec 157"). **Rows 3/3a, 7, 14, 17 still need the tape**; use the sketch for shape/door-position ballpark (~97½" rear wall → door aft edge) only.
