@@ -15,7 +15,7 @@ Purpose: source pack for the 3-way adversarial review of D010 flooring. The owne
 | Option | Current price signal | Coverage signal | Quantity for this scope | Cost signal | Evidence |
 |---|---:|---:|---:|---:|---|
 | Durabak-18 Outdoor Textured, light grey | $179.95/gal | ~60 ft²/gal, standard 2 coats | 3 gal | ~$540 | Durabak product pages list 60 ft²/gal, outdoor/UV use, flexible/water-resistant/chemical-resistant polyurethane, and $179.95/gal on current listings. |
-| U-POL Raptor 4L kit | $219.95/kit | ~125 ft² per 4L kit | 1 kit is tight; kit + 1L touch-up or 2 kits | ~$289–440 | Autobody Toolmart lists 4L kits at $219.95 and ~125 ft² coverage; Raptor TDS supports wood with prep and validates 2K polyurethane class. |
+| U-POL Raptor 4L kit | $154.99/kit AutoZone signal for UP5155; $219.95/kit prior specialty-retailer signal | ~125 ft² per 4L kit | 1 kit is tight; 2 kits is safer for floor+cove+ramp plus wear lanes | ~$310–440 before tint/consumables | AutoZone lists a 4-bottle 2K kit with 125 ft² coverage, wood compatibility, and roll/spray use. Color gate: acceptable only as the 2K tintable system in light gray. Raptor Color Light Gray is UP4855; tintable Raptor uses one 45 ml pouch per bottle or up to 10% solvent-based automotive color. Do not treat black, 1K aerosol, or 1-part roll-on Raptor as acceptable substitutes for the main floor. |
 | Herculiner 1 gal kit | $89.99/gal at Home Depot | one 6 ft bed / ~55–60 ft² practical | 3 gal | ~$270 | Home Depot lists HCL1B8 at $89.99; Herculiner/retail pages describe polyurethane/rubber formula, wood use, and gasoline/oil/solvent resistance. |
 | Rust-Oleum truck bed coating | $127.98 / 2 gal case at Home Depot | 70–80 ft²/gal at 2 coats on Tractor Supply; 140–160 ft²/gal wet/application rate in some TDS pages | 2 gal likely enough | ~$128 | Cheap and Home Depot-accessible, but Grainger identifies the 342669 product as water-based styrenated acrylic, not the same urethane liner class. |
 | TotalBoat TotalTread marine non-skid | $129.99/gal at Home Depot / TotalBoat | TotalBoat comparison says 250–300 ft²/gal; application data says 350–400 ft²/gal at 3 mil WFT; 2 coats recommended | 1 gal likely enough; 2 gal if aggressive/repair margin | ~$130–260 | One-part polyurethane marine deck paint, UV-stable, light gray available, fast dry, Home Depot-accessible. Thin 1–2 mil dry film per coat; not a high-build bed liner. |
@@ -42,6 +42,10 @@ Purpose: source pack for the 3-way adversarial review of D010 flooring. The owne
 - Durabak Truck Bed Outdoor Textured product: https://www.durabakcompany.com/collections/bed-liner/products/durabak-bed-liner-outdoor-textured
 - Durabak prep guidance: https://www.durabakstore.com/pages/general-surface-preparation-application
 - U-POL Raptor 4L kit retail page: https://www.autobodytoolmart.com/product/upol-4-liter-raptor-bed-liner-kits
+- U-POL Raptor 4L kit AutoZone page: https://www.autozone.com/p/raptor-bed-coating-kit-up5155/977720
+- Raptor tinting FAQ: https://raptorcoatings.com/faq-items/how-do-you-tint-raptor/
+- Raptor tintable TDS/process guide: https://images.oreillyauto.com/parts/img/documents/upl/up0821-tds.pdf
+- Raptor color chart: https://images.oreillyauto.com/parts/img/documents/upl/upol_raptorcolorchart.pdf
 - Raptor black TDS/process guide: https://images.medcotool.com/images/Product_Media/TechData/UPL/UPL-UP0820V_TDS.pdf
 - Herculiner Home Depot HCL1B8: https://www.homedepot.com/p/Herculiner-1-gal-Solid-Flat-Matte-Black-Truck-Bed-Liner-Kit-HCL1B8/327813191
 - Herculiner kit page: https://herculiner.com/bed-liner-kit
