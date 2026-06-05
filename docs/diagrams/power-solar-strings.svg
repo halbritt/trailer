@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img" aria-labelledby="title desc">
+  <title id="title">Solar string routing</title>
+  <desc id="desc">Diagram showing roof three-panel series string, optional LG two-panel ground string, and Anker PS400 routed to separate controllers.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .panel { fill: #ecfeff; stroke: #0891b2; stroke-width: 2; rx: 6; }
+      .ctrl { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 8; }
+      .battery { fill: #f0fdf4; stroke: #16a34a; stroke-width: 2; rx: 8; }
+      .warning { fill: #fff7ed; stroke: #ea580c; stroke-width: 2; rx: 8; }
+      .line { fill: none; stroke: #334155; stroke-width: 2.5; marker-end: url(#arrow); }
+      .no { fill: none; stroke: #dc2626; stroke-width: 3; stroke-dasharray: 8 6; }
+      .label { font: 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #0f172a; font-weight: 650; }
+      .small { font: 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #334155; }
+      .tiny { font: 12px system-ui, -apple-system, Segoe UI, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect x="35" y="35" width="1110" height="490" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="14"/>
+  <text x="55" y="70" class="label">Solar routing rules</text>
+  <text x="55" y="94" class="small">Three independent PV paths. Do not mix strings across controllers.</text>
+
+  <rect x="75" y="135" width="120" height="58" class="panel"/>
+  <text x="103" y="168" class="label">LG455</text>
+  <rect x="215" y="135" width="120" height="58" class="panel"/>
+  <text x="243" y="168" class="label">LG455</text>
+  <rect x="355" y="135" width="120" height="58" class="panel"/>
+  <text x="383" y="168" class="label">LG455</text>
+  <text x="75" y="215" class="small">Roof 3S: 1365 W, cold Voc about 163-171 V</text>
+
+  <rect x="590" y="130" width="230" height="70" class="ctrl"/>
+  <text x="615" y="162" class="label">SmartSolar 250/60-Tr</text>
+  <text x="615" y="184" class="small">only roof 3S lands here</text>
+
+  <rect x="910" y="245" width="180" height="80" class="battery"/>
+  <text x="940" y="278" class="label">48 V battery</text>
+  <text x="940" y="301" class="small">LiTime ComFlex</text>
+
+  <path class="line" d="M 195 164 L 215 164"/>
+  <path class="line" d="M 335 164 L 355 164"/>
+  <path class="line" d="M 475 164 L 590 164"/>
+  <path class="line" d="M 820 164 C 890 164, 885 265, 910 275"/>
+
+  <rect x="75" y="295" width="120" height="58" class="panel"/>
+  <text x="103" y="328" class="label">LG455</text>
+  <rect x="215" y="295" width="120" height="58" class="panel"/>
+  <text x="243" y="328" class="label">LG455</text>
+  <text x="75" y="375" class="small">Optional ground 2S: 910 W, cold Voc about 109-114 V</text>
+
+  <rect x="590" y="290" width="230" height="70" class="ctrl"/>
+  <text x="615" y="322" class="label">SmartSolar 150/35</text>
+  <text x="615" y="344" class="small">ordered ground MPPT</text>
+
+  <path class="line" d="M 195 324 L 215 324"/>
+  <path class="line" d="M 335 324 L 590 324"/>
+  <path class="line" d="M 820 324 C 858 324, 870 304, 910 294"/>
+
+  <rect x="75" y="435" width="260" height="58" class="panel"/>
+  <text x="103" y="468" class="label">Anker PS400 400 W</text>
+  <text x="75" y="512" class="tiny">Use as single panel only. Do not combine with LG strings.</text>
+
+  <rect x="590" y="430" width="230" height="70" class="ctrl"/>
+  <text x="615" y="462" class="label">Anker SOLIX C1000</text>
+  <text x="615" y="484" class="small">portable AC island</text>
+  <path class="line" d="M 335 464 L 590 464"/>
+
+  <rect x="910" y="405" width="180" height="95" class="warning"/>
+  <text x="936" y="435" class="label">Never mix</text>
+  <text x="936" y="458" class="small">roof 3S, ground 2S,</text>
+  <text x="936" y="478" class="small">or Anker PS400</text>
+  <path class="no" d="M 910 405 L 1090 500"/>
+  <path class="no" d="M 1090 405 L 910 500"/>
+</svg>
