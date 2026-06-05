@@ -86,7 +86,7 @@ Owner field sketch titled **"structure layout"** — the **interior floor footpr
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
 | 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | | |
 | 11 | Bike bar widths (WR250R / CRF450RL) + front-tire centerline spacing for stagger | 813–864 mm bars | | |
-| 12 | Wall build-up thickness at window stations — **birch (D009) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
+| 12 | Wall build-up thickness at window stations — **substrate (D009: reused PlexCore) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | **1222 = 11-5/8"×21-5/8"; 2015 = 19-5/8"×14-5/8"** | confirmed (RecPro, web-val) | 2026-06-05 |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
