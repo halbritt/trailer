@@ -32,7 +32,7 @@ Purpose: source pack for the 3-way adversarial review of D010 flooring. The owne
 2. **Raptor economics:** Is one 4L kit + one 1L bottle a defensible lower-cost substitute, or does the tight coverage and mixing/spray workflow make it false economy?
 3. **Herculiner bargain:** Is 3 gal Herculiner good enough for a trailer floor at half the Durabak price, or do black-only color/texture/UV/finish concerns make it a bad fit?
 4. **Rust-Oleum floor:** Is the very low cost worth considering, or is water-based styrenated acrylic disqualified for moto/playa floor duty?
-5. **Thin marine-deck coatings:** Does TotalBoat TotalTread, Pettit EZ-Decks, Interlux Interdeck, or KiwiGrip give enough non-skid, UV stability, cleanability, and cost reduction, or does thin-film wear/gouge resistance disqualify it for chocks, bikes, E-track fittings, and a cargo ramp?
+5. **Thin marine-deck coatings:** Does TotalBoat TotalTread, Pettit EZ-Decks, Interlux Interdeck, or KiwiGrip give enough non-skid, UV stability, cleanability, and cost reduction, or does thin-film wear/gouge resistance disqualify it for chocks, bikes, L-track fittings, and a cargo ramp?
 6. **Tuff Coat middle ground:** Does a high-build rubberized marine coating solve the thin-film problem at acceptable cost, or does primer/quantity/roller dependency push it into Durabak money without the same moto/truck-bed fit?
 7. **G-Floor fallback:** Is the glued PVC roll actually a better cost/value answer despite higher material cost, or does it lose on seams/cove/weight/trapped edges?
 

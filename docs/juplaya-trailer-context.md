@@ -9,7 +9,7 @@ This is the **source of truth** for the build. How to read it:
 - **Gates** are pass/fail checks that must pass **before drilling, fabricating, or ordering** the thing they guard. Most close from the [measurement pass](dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec); measured values supersede spec everywhere.
 - **`[web-val]`** marks findings from the 2026-06-05 web fact-check of the original 7 falsifiable decisions plus the D010 flooring addendum ([full report](research/build-decision-validation.md)). It flipped 4/7 original decisions to caution; the material deltas are folded into the gates below.
 
-The north star is [trailer-mission.md](trailer-mission.md): **the E-track grid is the operating system; the interior is software.** (E-track: slotted steel tie-down track — fittings click in anywhere, no tools.) Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
+The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
 
 ---
 
@@ -23,8 +23,8 @@ The north star is [trailer-mission.md](trailer-mission.md): **the E-track grid i
 | Overall | ~16'0" L × 8'6" W × ~8'1" H | parking, clearance, panel reach for cleaning |
 | Rear ramp | 78" × 72" opening, 5,000 lb rated | bike loading; 8' clearance with extension |
 | Side door | **32" × 72" personnel door, RH hinge** | gets a window; defines the fridge bay's forward edge; the awning deploys over it |
-| Structure | **2"×4" steel tube perimeter main rails · crossmembers 16" OC (on-center) · roof bows (tube) 24" OC · 76½" steel tube wall posts 16" OC** | the posts are the anchor grid: E-track rows, window bays (~14.5" clear), and awning standoffs all land on them |
-| Floor | ¾" PlexCore (the factory's composite-ply floor sheathing) over the steel | flush E-track recesses are limited by what's between crossmembers |
+| Structure | **2"×4" steel tube perimeter main rails · crossmembers 16" OC (on-center) · roof bows (tube) 24" OC · 76½" steel tube wall posts 16" OC** | the posts are the anchor grid: wall E-track rows, window bays (~14.5" clear), and awning standoffs all land on them |
+| Floor | ¾" PlexCore (the factory's composite-ply floor sheathing) over the steel | floor L-track recesses are limited by what's between crossmembers |
 | Anchors | 4× factory 5,000 lb D-rings | reused in the bike tie-down plan |
 | Axle | 3,500 lb GVWR (gross vehicle weight rating), electric drum brakes | payload = 3,500 − curb (will be weighed); single axle is nose-sensitive |
 
@@ -133,14 +133,14 @@ HRV = heat-recovery ventilator: fresh-air exchange without dumping the heat. Rou
 
 ## Interior / layout
 
-Two configurations share one floor: **moto mode** (both bikes in, gear on the walls) and **camp mode** (bikes out, bed deck on the wall tracks). Everything below is a module on the E-track grid.
+Two configurations share one floor: **moto mode** (both bikes in, gear on the walls) and **camp mode** (bikes out, bed deck on the wall tracks). Everything below is a module on the track grid.
 
-### Bikes & floor E-track
+### Bikes & floor L-track
 
-- **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in staggered chocks (12–18" stagger so the bars interleave). Flush-recessed floor E-track bolted through to steel; the 4 factory D-rings get reused as backup tie points.
-- **⚠ Floor plan rework gate:** the original ~24" centerline spacing **fails** — cross-exam found ~9" of handlebar interference, and the 2"×4" main rails run at the **perimeter** (not under the centerline), while a ½"-recessed track leaves only ~¼" of ply between crossmembers. The row positions must be re-derived against **measured** steel locations (row 10) + actual bar widths (row 11).
+- **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in L-track-compatible staggered chocks (12–18" stagger so the bars interleave). Starting floor geometry: **two lengthwise floor L-track rows, about 26" on center**, flush/recessed and bolted through to steel/backing; the 4 factory D-rings get reused as backup tie points.
+- **⚠ Floor plan rework gate:** the original ~24" E-track centerline spacing **failed** — cross-exam found ~9" of handlebar interference, and the 2"×4" main rails run at the **perimeter** (not under the centerline), while a deep recess leaves limited ply between crossmembers. The final L-track row positions must be re-derived against **measured** steel locations (row 10), actual bar widths/front-tire centerlines (row 11), and the selected L-track chock hardware. Evidence/options: [L-track floor chock options](research/l-track-floor-chock-options-2026-06-05.md).
 - **Aisle reality:** the nominal ~30" walking aisle shrinks to **~20" effective at bar height** — fridge access and egress are planned around that, not the floor-level number.
-- **E-track footage: ~73 ft needed vs ~60 on hand — order more.** (~Six 10-ft black sections believed ordered; confirm before the freeze.)
+- **Track footage:** floor L-track is now a new buy; the ~50–60 ft of E-track on hand should be treated as wall-track stock first, not floor stock.
 
 ### Flooring — D010 (accepted)
 
@@ -154,9 +154,9 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 **Raptor schedule override closed:** owner checked local availability and shippers on 2026-06-05; the acceptable 2K tintable light-gray Raptor path has no local availability or reliable ETA, so it provides no schedule benefit over Durabak and keeps all of the 2K downsides. Raptor remains only a patch-failure fallback. If reopened, acceptable color is Raptor Color **Light Gray** (UP4855) or a matched solvent-based urethane/acrylic automotive toner in the same light-gray range, mixed per Raptor's tint guidance. White is technically acceptable but too glare/stain-prone to prefer; Basalt Gray, black, and the AutoZone-visible black 2K kit are not acceptable as the main floor color. Do not substitute the 1K aerosol or 1-part roll-on Raptor products for the 2K fallback.
 
-**Quantity:** buy **4 gallons**: 3 gal for the base floor+cove+ramp coat plan, plus 1 reserve gallon committed to a third coat in the wear lanes (rear ramp deck and chock/E-track contact lanes). The interior floor is bounded by 81" × 157" (~88 ft²), the 3–4" wall cove adds ~12–14 ft², and the 78" × 72" ramp adds ~39 ft². Durabak textured coverage is ~50–60 ft²/gal for a standard two-coat application, so 3 gal is adequate but tight once the ramp and tie-down lanes get extra film; confirm final quantity against the patch-test coverage rate before order freeze.
+**Quantity:** buy **4 gallons**: 3 gal for the base floor+cove+ramp coat plan, plus 1 reserve gallon committed to a third coat in the wear lanes (rear ramp deck and chock/L-track contact lanes). The interior floor is bounded by 81" × 157" (~88 ft²), the 3–4" wall cove adds ~12–14 ft², and the 78" × 72" ramp adds ~39 ft². Durabak textured coverage is ~50–60 ft²/gal for a standard two-coat application, so 3 gal is adequate but tight once the ramp and tie-down lanes get extra film; confirm final quantity against the patch-test coverage rate before order freeze.
 
-**Install sequence:** finish the floor E-track layout first, then recess and bolt the floor E-track through to steel. Mask the E-track slots, fastener heads, D-ring pockets, ramp hinge/transition hardware, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove plus ramp, add the third wear-lane coat, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
+**Install sequence:** finish the floor L-track/chock layout first, then recess and bolt the floor L-track through to steel/backing. Mask the L-track slots, fastener heads, D-ring pockets, ramp hinge/transition hardware, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove plus ramp, add the third wear-lane coat, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
 
 ### Bed & wall tracks
 
@@ -181,7 +181,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Stairs & panel transport
 
-- **Entry: folding/telescoping aluminum RV step**, stowed on the E-track grid (no permanent step).
+- **Entry: folding/telescoping aluminum RV step**, stowed on the track grid (no permanent step).
 - **Panel transport slot:** the ground-pair LG455s are 83" long vs the **81" interior width** — they ride **lengthwise** in a padded E-track wall slot. (One more reason the interior-width tape measurement matters: row 3.)
 
 ---
@@ -201,8 +201,8 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
-- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
+- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · floor L-track + L-track motorcycle chocks.
+- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/L-track wear lanes).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
@@ -218,14 +218,14 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
-   - E-track backing at the 27"/60" rows.
+   - Wall E-track backing at the 27"/60" rows.
    - Rough-ins: HRV 4" pair, heater 3" duct ports, wire chases, 4 AWG tongue pre-wire.
    - Roof: Velit opening cut + curb, panel rail feet through the bows, all penetrations sealed.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
 6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
-7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
+7. **Floor liner + walls closed** — floor L-track recessed/bolted through to steel/backing first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
-9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor E-track masks pulled and slots/hardware inspected.
+9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor L-track masks pulled and slots/hardware inspected.
 10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr 48/24, Orion-Tr 48/12, 5026, fused 12 V receptacles; rail wiring out to branches; cabinet venting. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), lights/USB/GPS, awning case onto the standoffs, tie-down anchors.
 12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path; verify the C1000 + PS400 covers small AC loads; if a 24 V C1000 top-up branch is added, test that it does not brown out or overload the Orion/fridge bus; shakedown camp before Juplaya.
@@ -244,10 +244,10 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
 | 5 | **Roof drawing** — three panel rows/feet, Velit nose station + opening/shadow line, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
-| 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
+| 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); L-track chock SKU selected | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 4 gal ordered for June 12–15 delivery; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount. MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, floor L-track + chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 

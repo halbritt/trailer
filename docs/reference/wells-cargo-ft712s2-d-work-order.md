@@ -93,8 +93,8 @@ Rendered from the manufacturer build sheet (Google Drive: `Wells-Cargo-FT712S2-D
 | 1 | EA | LED red lens rear clearance light ID bar |
 
 ## Build-relevant notes
-- **2"×4" main rails confirmed** — `fastrac-specs.md` had this as a low-confidence derivation; the factory order verifies it. E-track floor bolts land in 2"×4" steel.
+- **2"×4" main rails confirmed** — `fastrac-specs.md` had this as a low-confidence derivation; the factory order verifies it. Floor L-track/chock bolts must be laid out against the actual steel grid rather than assumed off-center rails.
 - **Single 3.5K electric-brake axle** (= the "electric drum brakes" in the build plan).
-- **4× factory 5,000 lb welded D-rings + 3/4" PlexCore floor** — tie-down anchors already on the unit, in addition to the planned E-track.
+- **4× factory 5,000 lb welded D-rings + 3/4" PlexCore floor** — tie-down anchors already on the unit, in addition to the planned floor L-track / wall E-track grid.
 - **Color: Silverfrost** (silver/grey ACP exterior).
 - **Side door: 32"×72" personnel door, RH hinge** — what the build notes call the "RV-style" door.

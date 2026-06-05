@@ -4,8 +4,8 @@ Draft the recommendations and **stay live for cross-examination** — publicatio
 
 Resolve each open question with **one committed recommendation** (not an option list), a one-line rationale, and the spec/constraint it depends on. Flag anything needing a physical measurement or a purchase.
 
-Use case: convertible bikes-out -> sleeping deck (WR250R + CRF450RL, ~590 lb). Interior 81\" W x 157\" L x 6'6\" tall. ~(6) 10 ft black powder-coated E-track sections believed on hand. 2\"x4\" steel main rails; 4x factory 5,000 lb floor D-rings; 3/4\" PlexCore floor.
-1. **E-track layout** — floor-row orientation (side-by-side vs single-file), spacing (front-tire centerlines), mounting (flush-recessed vs surface; bolt through to crossmembers vs plywood).
+Use case: convertible bikes-out -> sleeping deck (WR250R + CRF450RL, ~590 lb). Interior 81\" W x 157\" L x 6'6\" tall. ~(6) 10 ft black powder-coated E-track sections believed on hand for walls; floor has shifted to L-track. 2\"x4\" steel main rails; 4x factory 5,000 lb floor D-rings; 3/4\" PlexCore floor.
+1. **Floor L-track layout** — lengthwise rows starting around 26\" on center, spacing/front-tire centerlines, selected L-track chocks, mounting (flush-recessed vs surface; bolt through to steel/backing vs plywood).
 2. **Horizontal track heights** — two tracks: bed height + optimal shelf height in 6'6\"; survey comparable builds (sit-up clearance over the bed; bikes-out; back the wall track for point loads + tip moment).
 3. **Bed shoring beams** — aluminum shoring beams vs E-track inserts that accept 2x4 lumber.
 4. **Wall finish + build-up** — leaning FRP (Home Depot textured panel); could be talked into luan; NO paint; maybe 1/4\" XPS thermal break; trim.

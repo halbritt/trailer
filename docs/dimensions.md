@@ -47,7 +47,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Deployed fabric @ 32" out, 10° pitch | ~**72.9"** | vs the 72" door — ~0.9" paper margin |
 | Fridge bay | starts at the door's aft edge, 37.9" long × 20.9" deep | curbside; band under 18.6" + lid |
 | Panel transport | 83" panels vs **81" interior width** → lengthwise only | padded E-track wall slot |
-| E-track footage | ~**73 ft needed** vs ~60 on hand | order more |
+| Floor L-track rows | lengthwise, starting point **~26" on center** | final row stationing after bike/chock/steel pass |
+| Wall E-track footage | ~**47 ft estimated** after moving the floor to L-track | ~50–60 ft on hand should cover walls; recount after wall-row cut plan |
 
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
@@ -78,5 +79,5 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 | 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
 
-> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The E-track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
-> When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor E-track layout (10, 11), and the payload ledger (18).
+> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
+> When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor L-track layout (10, 11), and the payload ledger (18).
