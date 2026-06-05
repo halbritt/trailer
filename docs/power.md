@@ -96,6 +96,22 @@ Voltage checks:
 
 The battery, shunt, MPPTs, Orion converters, distribution, and protection live in the nose cabinet. Ventilate the cabinet; the SmartSolar and Orions add waste heat, and the fridge bay must stay away from this plume.
 
+## Power Cabinet Ventilation
+
+Preferred through-wall fitting: **[RecPro RP-2414 Exterior Wall Vent for Enclosed Trailers with 3" Hole](https://recpro.com/exterior-wall-vent-for-enclosed-trailers-with-3-hole/)**, color to match the trailer exterior. It is a low-profile 2-piece enclosed-trailer side vent over a 3" sidewall hole, with a UV-resistant polypropylene exterior cowl, interior round grille, weep path, and front-driver-side / rear-curb-side ram-air orientation guidance.
+
+Use the trailer-specific RecPro vent before adapting residential dryer or soffit vents. It is shaped for enclosed-trailer sidewalls, smaller than a 4" residential termination, and easier to place between posts. Hardware and sealant are not included.
+
+Recommended cabinet airflow:
+
+- **Low intake:** filtered interior transfer vent in the lower cabinet face, pulling relatively clean cabin air instead of playa dust directly from outside.
+- **High exhaust:** one RecPro RP-2414 near the upper cabinet sidewall. Put the fan inside the cabinet exhausting through this fitting.
+- **Fan:** 24 V, 120 mm, dust-resistant fan on the 24 V house bus; fuse at 1 A. A Noctua NF-F12 industrialPPC-24V-2000 SP IP67 PWM-class fan is enough airflow and survives dust better than a bare PC fan.
+- **Control:** normally-open enclosure thermostat closing on temperature rise, set around 95 F on / 85 F off. Add a manual override if convenient.
+- **Test:** with roof solar charging and both Orions enabled, verify cabinet air stays below 40 C / 104 F near the SmartSolars and Orions. Victron MPPTs are full-rated to 40 C and derate above that.
+
+If the cabinet is sealed from the cabin, use two RecPro vents: low intake plus high exhaust, with the exterior cowls oriented per RecPro's side guidance. If exterior intake is used, add a removable dust filter inside the low vent and treat it as a service item.
+
 ## 24 V House Bus
 
 One Victron Orion-Tr 48/24-16A isolated converter feeds a Blue Sea 5026 fuse block. Wire the Orion remote on/off to a cabin toggle so the house bus can be killed without opening the cabinet.
