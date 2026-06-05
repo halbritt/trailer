@@ -239,6 +239,14 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 - ¼" XPS (rigid extruded-polystyrene foam board) goes behind the bed zone only (back insulation against the cold wall). All backing plates go in **before** finish.
 - **Gates:** verify the factory OSB is actually 3/8" (row 19) · D009 ratified **before any window RO is cut** (the row-12 clamp check depends on the final sandwich) · FRP trim system selected (design-freeze item 9).
 
+### Ceiling substrate (OPEN — owner question 2026-06-05)
+
+Distinct from the walls: the ceiling carries **none of the 3/8" wall drivers** — no E-track loads, no window clamp sandwich, no wipe-down wear surface — so it should **not** default to the wall's 3/8". The drivers here are different: **finished headroom** (78" is to the bow underside; every layer eats into it), **weight up high** (single-axle CoG), **sag across the 24"-OC bows** (wider than the 16"-OC wall posts), and **condensation** (the ceiling is the #1 surface for it).
+
+- **Leaning recommendation (proposed, not ratified): go thinner than the walls — 1/4" birch**, *if* sag is controlled (bond the panel to the cured foam face for composite action, or add 1–2 intermediate furring runs to halve the 24" span). 1/4" unsupported over 24" OC will oil-can; supported it's solid.
+- **Moisture is the gating caveat:** the ceiling is where warm moist air condenses first, and the build already flagged FRP-over-birch + foam = **no drying path** as a real failure mode (D009 `[web-val]`). Overhead that risk is worse. So either (a) **don't trap the ceiling birch** — leave a vapor-open warm-side finish and seal the foam side, or (b) **skip the organic core overhead entirely** and use a single moisture-stable panel (thin FRP/PVC composite, or aluminum) with nothing to rot. Option (b) is the moisture-safest and lightest "something else."
+- **Decide before foam** (sequence step 5) — the mounting method (direct-to-bow vs furring vs foam-bond) changes what gets installed when, and the finished height feeds the bed sit-test (track-heights item 3). **Candidate for a D-row / striatum panel** if you want it ratified into the source of truth.
+
 ### Stairs & panel transport
 
 - **Entry: folding/telescoping aluminum RV step**, stowed on the E-track grid (no permanent step).
@@ -316,6 +324,7 @@ Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge 
 The owner tape-measured the **interior floor footprint** and sketched it ("structure layout"). Redrawn (plan view, not to scale) at [reference/structure-layout.svg](reference/structure-layout.svg); full numbers in the [dimension sheet](dimensions.md#interior-footprint--measured-2026-06-05-owner-tape). **This is the tape pass that closes measurement rows 3/3a** and supersedes the rejected magicplan scan.
 
 - **Confirms spec:** **81" W** (varies 81" to 81-3/32" along the length) × **156" L** (rear → nose tip; spec was 157") × **78" H**.
+- **Headroom caveat:** the **78" is to the underside of the steel roof bows**, not the finished ceiling. **Finished headroom = 78" − ceiling build-up** (ceiling panel + any furring/wire-or-AC drop). This tightens the bed sit-test (track-heights item 3) and any standing-height claim — carry the *finished* number, not 78".
 - **V-nose, plan view:** straight side walls **141"** (rear → taper start), then a symmetric V-nose **~15" deep** to a **13" flat tip**; nose walls **~43" each** (the eyeballed 42"/43" pair resolved equal — they compute to ~43" from the reliable 81"/156"/13" numbers).
 - **Personnel door:** curbside wall, ~**98"** forward of the rear wall, swing shown (the 30° arc is the door swing).
 

@@ -57,7 +57,7 @@ Owner field sketch titled **"structure layout"** — the **interior floor footpr
 |---|---|---|
 | Rear interior width | **81"** (varies **81" to 81-3/32"**) | rear wall span; ≈3/32" variation along the length — = spec 81" |
 | Overall interior length (rear → nose tip) | **156"** | long axis / centerline; ≈ spec 157" |
-| Interior height | **78"** | ceiling; = spec 78" |
+| Interior height | **78"** (to bow underside) | measured to the **bottom of the steel roof bows**, not the finished ceiling; = spec 78". **Finished headroom = 78" − ceiling build-up** (panel + any furring/drop) |
 | Straight side-wall length (rear → nose taper start) | **141"** | both walls; the rectangular section |
 | V-nose depth (taper start → tip) | **~15"** | = 156 − 141; centerline |
 | V-nose walls | **43" each** | resolved equal/symmetric (owner: the ~42"/43" pair was eyeballed — converge equally) |
@@ -75,7 +75,7 @@ Owner field sketch titled **"structure layout"** — the **interior floor footpr
 |---|---|---|---|---|
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
-| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | **81" W** (varies 81 to 81-3/32") × **141" L** (rear → nose taper start) × **78" H** — confirms spec; see [Interior footprint](#interior-footprint--measured-2026-06-05-owner-tape) | 2026-06-05 |
+| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | **81" W** (varies 81 to 81-3/32") × **141" L** (rear → nose taper start) × **78" H** (to bow underside — finished ceiling lower) — confirms spec; see [Interior footprint](#interior-footprint--measured-2026-06-05-owner-tape) | 2026-06-05 |
 | 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the AIO/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | taper start at **141"**; nose **~15"** deep (centerline) → **156"** overall; flat tip **13"**; nose walls **~43"** symmetric | 2026-06-05 |
 | 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
