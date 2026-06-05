@@ -197,8 +197,8 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 ### Lighting
 
 - **Switches live on the power cabinet for Juplaya.** Skip the entry-door light switch for now; it adds wall/door-area wiring and is easy to revisit later if use proves it matters. If convenient while walls are open, leave a labeled pull string or spare low-current pair toward the side-door bay.
-- **Exterior lighting zones:** curbside awning/porch light, rear ramp/work light, and low amber step/courtesy light. Run them from the **24 V house bus** using 24 V-native or 10-30 V DC IP67-ish fixtures, fused per branch, and switched at the cabinet. Keep all house exterior lighting isolated from the OEM trailer lights and 7-way tow plug.
-- **Light quality:** warm white/amber for camp and step use; cool-white flood only for the rear ramp/work circuit. Aim exterior lights down so camp mode is usable without blinding the site.
+- **Exterior lighting layout:** **2 curbside floods, 2 roadside floods, 1 flood on each V-nose face, 1 rear flood, plus separate awning lighting**. Optional low amber step/courtesy can share the awning circuit if added. Run them from the **24 V house bus** using 24 V-native or 10-30 V DC IP67-ish fixtures, fused per branch, and switched at the cabinet. Keep all house exterior lighting isolated from the OEM trailer lights and 7-way tow plug.
+- **Light quality/current:** awning/camp light should be warm white/amber and diffuse/downward; floods can be neutral/cool work lights but should aim down/out, not at neighbors. Pick compact <=18-24 W floods so all exterior lighting remains a short-duration load the 16 A 24 V converter can tolerate.
 
 ### Security & tracking
 
@@ -209,7 +209,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 - **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · **power-cabinet interior transfer grilles/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/L-track wear lanes).
-- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior 24 V / 10-30 V IP67-ish lighting: curbside awning/porch, rear ramp/work, low amber step/courtesy, plus cabinet switches/dimmer**.
+- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior 24 V / 10-30 V IP67-ish lighting: 2 curbside floods, 2 roadside floods, 2 V-nose floods, rear flood, awning/camp lighting, optional step/courtesy, plus cabinet switches/dimmer**.
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
 ---

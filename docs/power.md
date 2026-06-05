@@ -123,7 +123,7 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 | Branch | Approx current | Fuse | Wire | Notes |
 |---|---:|---:|---|---|
 | Fridge, Dometic CFX3 95DZ | ~4.6 A running | 10 A | 14 AWG | 24 V native; verify less than 3 percent round-trip voltage drop |
-| LED lighting zones | ~2-5 A typical total use | 5 A per zone | TBD | 24 V interior strips plus exterior zones below |
+| LED lighting zones | ~4-10 A exterior depending on fixtures; ~2-3 A interior typical | 5 A per zone | TBD | 24 V interior strips plus exterior zones below |
 | Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 7.5 A | TBD | 24 V in to USB-C PD |
 | LandAirSea 54 GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security |
 | Door switch | signal only | TBD | TBD | dry contact |
@@ -138,15 +138,22 @@ Switching plan: **put the lighting switches on the power cabinet**, not beside t
 
 Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. Avoid 12 V-only exterior lights unless the 12 V converter plan is deliberately reopened; the current 12 V rail is local cabinet receptacles only. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
 
-| Zone | Approx current @ 24 V | Fuse | Wire | Notes |
-|---|---:|---:|---|---|
-| Interior main/task | ~2-3 A typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch/dimmer |
-| Curbside awning/porch | <=2 A target | 5 A | 16-18 AWG | warm white 2700-3000 K or amber/white; diffuse/downward, not a glare bar |
-| Rear ramp/work | <=3 A target | 5 A | 16 AWG | separate switch; upper rear/down-aimed loading light, not tied to reverse/tow wiring |
-| Step/courtesy | <0.5 A | 3 A or shared 5 A branch | 18 AWG | low amber at personnel door/step; can share the awning switch for Juplaya |
-| Spare exterior/service | TBD | 5 A | 16-18 AWG | capped spare pair if the wall path is open |
+Active exterior layout: **2 curbside floods, 2 roadside floods, 1 flood on each V-nose face, 1 rear flood, plus separate awning lighting**. Count is seven flood fixtures plus the awning light circuit.
 
-Part-selection class: exterior fixtures should be IP67-ish, hardwired, low-profile, vibration tolerant, and serviceable from the interior if possible. Favor warm/amber camp light over cool-white flood except for the rear ramp work circuit. Blue Sea Contura-style switches are acceptable on the cabinet because the 12/24 V versions are rated for 24 V DC; still fuse each branch at the Blue Sea 5026 for conductor and fixture ampacity.
+| Zone | Fixture count | Approx current @ 24 V | Fuse | Wire | Notes |
+|---|---:|---:|---|---|
+| Interior main/task | TBD | ~2-3 A typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch/dimmer |
+| Awning/camp light | 1 strip/bar or multiple small fixtures | <=2 A target | 5 A | 16-18 AWG | warm white 2700-3000 K or amber/white; diffuse/downward, not a glare bar |
+| Curbside floods | 2 | <=2 A target | 5 A | 16 AWG | down/out aimed for camp/work; one switch labeled CURB FLOOD |
+| Roadside floods | 2 | <=2 A target | 5 A | 16 AWG | down/out aimed for roadside work; one switch labeled ROAD FLOOD |
+| Nose floods | 2 | <=2 A target | 5 A | 16 AWG | one fixture on each V-nose face; one switch labeled NOSE FLOOD unless separate control becomes useful |
+| Rear flood | 1 | <=2 A target | 5 A | 16 AWG | upper rear/down-aimed loading light, not tied to reverse/tow wiring |
+| Optional step/courtesy | 1-2 small amber fixtures | <0.5 A | 3 A or shared 5 A branch | 18 AWG | optional low amber at personnel door/step; can share awning switch |
+| Spare exterior/service | TBD | TBD | 5 A | 16-18 AWG | capped spare pair if the wall path is open |
+
+Part-selection class: exterior fixtures should be IP67-ish, hardwired, low-profile, vibration tolerant, and serviceable from the interior if possible. For the seven floods, target compact **<=18-24 W each** fixtures, not oversized light bars; that keeps all exterior lighting within the 16 A Orion's realistic margin. Favor warm/amber camp light for the awning circuit, and reserve cool/neutral white for the flood circuits. Blue Sea Contura-style switches are acceptable on the cabinet because the 12/24 V versions are rated for 24 V DC; still fuse each branch at the Blue Sea 5026 for conductor and fixture ampacity.
+
+Load-shed rule: do not run every flood, full USB-C load, optional C1000 top-up, and winter heater glow at the same time on the 16 A 24 V converter. For Juplaya, all floods are short-duration work/security loads; normal camp mode should be awning/interior lighting only.
 
 ## Auxiliary 12 V Cabinet Receptacles
 
