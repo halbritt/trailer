@@ -1,0 +1,257 @@
+{
+  "schema_version": "striatum.workflow.v1",
+  "workflow_id": "aio-adversarial-3panel",
+  "workflow_version": "2026-06-05",
+  "name": "aio-adversarial-3panel",
+  "branch": {
+    "allow_dirty": false,
+    "mode": "confirm",
+    "suggested_name": "striatum/aio-adversarial-3panel"
+  },
+  "coordinator": {
+    "role_id": "synthesizer",
+    "lane_id": "claude_code"
+  },
+  "allow_same_model_review_pairing": true,
+  "lanes": {
+    "claude_code": {
+      "adapter": "process",
+      "display_model": "Claude Opus 4.8",
+      "command": [
+        "claude",
+        "--model",
+        "claude-opus-4-8",
+        "--permission-mode",
+        "bypassPermissions"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "supervision": {
+        "transport": "pty_helper",
+        "compatible": true,
+        "require_tmux": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    },
+    "codex": {
+      "adapter": "process",
+      "display_model": "Codex GPT-5",
+      "command": [
+        "codex",
+        "--yolo"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "supervision": {
+        "transport": "pty_helper",
+        "compatible": true,
+        "require_tmux": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    },
+    "agy": {
+      "adapter": "process",
+      "display_model": "Gemini 3.5 Flash High",
+      "command": [
+        "agy",
+        "--dangerously-skip-permissions"
+      ],
+      "adapter_capabilities": {
+        "agent_loop": true
+      },
+      "capabilities": [
+        "write",
+        "review",
+        "synthesis"
+      ],
+      "worktree_isolation": "per_job"
+    }
+  },
+  "roles": {
+    "reviewer": {
+      "definition_path": "roles/reviewer.md"
+    },
+    "synthesizer": {
+      "definition_path": "roles/synthesizer.md"
+    }
+  },
+  "context_docs": [
+    {
+      "path": "README.md",
+      "required": false
+    },
+    {
+      "path": "docs/juplaya-trailer-context.md",
+      "required": true
+    },
+    {
+      "path": "docs/research/aio-inverter-3panel-evidence-2026-06-05.md",
+      "required": true
+    }
+  ],
+  "parallelism": {
+    "mode": "declared",
+    "max_active_jobs": 3,
+    "require_disjoint_write_scopes": true
+  },
+  "jobs": [
+    {
+      "id": "review_solar",
+      "type": "draft",
+      "title": "Corrected solar and 3S review",
+      "role_id": "reviewer",
+      "lane_id": "claude_code",
+      "parallel_group": "review",
+      "fresh_session_required": true,
+      "objective": "Attack D002 from the corrected solar angle: three roof panels fit, so decide whether roof 3S should change the inverter/charger purchase. Do not reject 3S on geometry.",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/aio-adversarial-3panel/review_solar/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "solar_review",
+          "kind": "handoff",
+          "path": "runs/aio-adversarial-3panel/review_solar/SOLAR.md",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "review_integration",
+      "type": "draft",
+      "title": "Corrected electrical integration and reliability review",
+      "role_id": "reviewer",
+      "lane_id": "codex",
+      "parallel_group": "review",
+      "fresh_session_required": true,
+      "objective": "Attack D002 from system integration, reliability, safety, battery compatibility, idle draw, nose-cabinet heat, and ground-panel compatibility under the corrected three-roof-panel premise.",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/aio-adversarial-3panel/review_integration/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "integration_review",
+          "kind": "handoff",
+          "path": "runs/aio-adversarial-3panel/review_integration/INTEGRATION.md",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "review_budget",
+      "type": "draft",
+      "title": "Corrected budget and schedule review",
+      "role_id": "reviewer",
+      "lane_id": "agy",
+      "parallel_group": "review",
+      "fresh_session_required": true,
+      "objective": "Attack D002 from purchase timing, return friction, total cost, support, and Juplaya deadline risk under the corrected three-roof-panel premise. Find the cheapest acceptable way to make three roof panels productive.",
+      "task_prompt": {
+        "path": "prompts/review.md"
+      },
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/aio-adversarial-3panel/review_budget/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "budget_review",
+          "kind": "handoff",
+          "path": "runs/aio-adversarial-3panel/review_budget/BUDGET.md",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "synth",
+      "type": "synthesis",
+      "title": "Synthesize corrected 3-panel AIO purchase verdict",
+      "role_id": "synthesizer",
+      "lane_id": "claude_code",
+      "fresh_session_required": true,
+      "objective": "Reconcile the three corrected adversarial reviews into one final inverter/charger purchase verdict for D002 now that three roof panels fit.",
+      "task_prompt": {
+        "path": "prompts/synth.md"
+      },
+      "inputs": [
+        "solar_review",
+        "integration_review",
+        "budget_review"
+      ],
+      "write_scope": {
+        "mode": "repo_write",
+        "repo_write": true,
+        "allowed_paths": [
+          "runs/aio-adversarial-3panel/synth/"
+        ],
+        "forbidden_paths": [
+          ".striatum/"
+        ]
+      },
+      "expected_artifacts": [
+        {
+          "logical_name": "aio_3panel_purchase_verdict",
+          "kind": "synthesis",
+          "path": "runs/aio-adversarial-3panel/synth/VERDICT.md",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "review_solar",
+      "on": "completed",
+      "to": "synth"
+    },
+    {
+      "from": "review_integration",
+      "on": "completed",
+      "to": "synth"
+    },
+    {
+      "from": "review_budget",
+      "on": "completed",
+      "to": "synth"
+    }
+  ],
+  "cycles": []
+}
