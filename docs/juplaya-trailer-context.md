@@ -200,13 +200,15 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 
 ### Flooring — D010 (proposed)
 
-**Committed recommendation: Durabak-18 Outdoor Textured, light grey** — a flexible polyurethane bed-liner coating rolled/brushed onto the ¾" PlexCore floor and **coved 3–4" up the lower walls before the FRP lands**. FRP laps over the cured cove, turning the floor into a hose-out tray; raise the tongue jack to sluice dust and wash water toward the rear ramp. The remembered "DuraLok" name is not the spec.
+**Committed recommendation: Durabak-18 Outdoor Textured, light grey** — a flexible polyurethane bed-liner coating rolled/brushed onto the ¾" PlexCore floor, the rear ramp deck, and **coved 3–4" up the lower walls before the FRP lands**. FRP laps over the cured cove, turning the floor into a hose-out tray; raise the tongue jack to sluice dust and wash water toward the rear ramp. The remembered "DuraLok" name is not the spec.
 
 Why this replaces the old rubber-coin lean: common coin roll is usually SBR (styrene-butadiene rubber), and SBR is a poor fit for moto fuel/oil spills. A bonded polyurethane liner avoids the under-sheet playa-dust/water trap, keeps the floor seamless, and stays much lighter than a thick loose rubber mat. Do not use a rigid garage epoxy; the single-axle trailer floor will move.
 
 **Web-validation correction:** say **fuel/oil spill-resistant, clean promptly**, not "fuel-proof." Durabak's product data supports a flexible, one-part, non-slip polyurethane coating; Durabak's wood-prep guidance warns that sanded wood dust causes delamination and calls for a patch test; Raptor's 2K polyurethane data validates the class on stable wood and shows diesel/hydraulic-oil resistance, but gasoline/petrol is listed as splash-resistant rather than immersion-proof. The build therefore requires a PlexCore adhesion patch and a small gasoline/diesel drip patch before coating the whole floor.
 
-**Install sequence:** finish the floor E-track layout first, then recess and bolt the floor E-track through to steel. Mask the E-track slots, fastener heads, D-ring pockets, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
+**Quantity:** buy **3 gallons**. The interior floor is bounded by 81" × 157" (~88 ft²), the 3–4" wall cove adds ~12–14 ft², and the 78" × 72" ramp adds ~39 ft². Durabak textured coverage is ~50–60 ft²/gal for a standard two-coat application, so 3 gal covers the floor+cove+ramp scope with patch-test and roller-loss margin.
+
+**Install sequence:** finish the floor E-track layout first, then recess and bolt the floor E-track through to steel. Mask the E-track slots, fastener heads, D-ring pockets, ramp hinge/transition hardware, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove plus ramp, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
 
 ### Bed & wall tracks
 
@@ -252,7 +254,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 ### Order list
 
 - **Long-lead, order now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
-- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · Durabak-18 Outdoor Textured light grey (estimate: 2 gal for interior floor+cove, 3 gal if the ramp is coated too; final quantity from the floor/ramp scope).
+- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 3 gal** (floor+cove+ramp).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
@@ -273,7 +275,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
    - Roof: Velit opening cut + curb, panel rail feet through the bows, all penetrations sealed.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
 6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
-7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
+7. **Floor liner + walls closed** — floor E-track recessed/bolted through to steel first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor E-track masks pulled and slots/hardware inspected.
 10. **Nose cabinet** — battery, AIO, shunt, breaker, Orion-Tr, 5026; rail wiring out to branches; cabinet venting.
@@ -295,7 +297,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 5 | **Roof drawing** — panel feet, Velit station + opening, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
-| 8 | **Flooring material** | D010 ratified: Durabak-18 Outdoor Textured light grey, coved 3–4" up the walls; PlexCore adhesion + fuel-drip patch required before coating | ☐ |
+| 8 | **Flooring material** | D010 ratified: Durabak-18 Outdoor Textured light grey, 3 gal for floor+cove+ramp; PlexCore adhesion + fuel-drip patch required before coating | ☐ |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
 | 10 | **Order list frozen** — every SKU (incl. the 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount | rows 1–9 closed | ☐ |
 
