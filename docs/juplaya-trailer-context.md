@@ -145,7 +145,7 @@ Three RecPro frameless units. Placement logic: the pair gives **cross-breeze dir
 | 12"×22" ×2 (portrait) | RP-FRMWIN-1222-TRM | **11-5/8" × 21-5/8"** | rear (bed) zone, **directly opposite each other**, roadside + curbside (roadside = driver side; curbside = passenger/awning side), same bay station, sills ~36" |
 | 20"×15" ×1 | RP-FRMWIN-2015-TRM | **19-5/8" × 14-5/8"** | in the 32"×72" personnel door |
 
-Why these spots survive every other system: the 12" cutout fits **inside one 16"-OC post bay (~14.5" clear) — no post gets cut, no sub-frame needed.** The 36–58" window band sits between the bed track (~27") and the shelf track (60"). Roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward). Curbside-rear clears the 18.6"-tall fridge and the roofline-mounted awning case above.
+Why these spots survive every other system: the 12" cutout fits **inside one 16"-OC post bay (~14.5" clear) — no post gets cut, no sub-frame needed.** The 36–58" window band sits between the seat/bed track (now ~14") and the shelf track (60") — well above an ~18" sofa/bed surface for a good seated sightline. Roadside-rear is behind the bikes' handlebar sweep (bars live in the front half, nose-forward). Curbside-rear clears the 18.6"-tall fridge and the roofline-mounted awning case above.
 
 **Gates before cutting:**
 - Clear bay width at both chosen stations (dimension row 7) against the confirmed cutouts (row 13 ✓).
@@ -220,8 +220,9 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Bed & wall tracks
 
-- **Bed row at ~27", shelf row at ~60"**, both lag-backed into the 16"-OC tube posts.
-- **Why 27" (revised from 34", owner challenge upheld):** at 34" the sleeping surface (~38.5" with platform + pad) left **1–3" of seated headroom** under the 78" ceiling for a 6'+ adult; at 27" (surface ~31") it's ~46" — you can actually sit up in bed. Bikes are out in camp mode, so nothing needs the taller under-deck clearance. **Gate: mock a 31" surface and sit-test before drilling** (design-freeze item 3).
+- **Seat/bed row at ~14", shelf row at ~60"**, both lag-backed into the 16"-OC tube posts.
+- **Height — dual duty (revised 2026-06-05: daytime sofa/bench AND bed → lead with the *seat*).** A feet-on-floor seat wants a **~17–19" finished surface**; the old ~31" surface (27" row) is barstool height — you can't sit on it with feet down. **Target ~18" surface = ~14" seat/bed row + deck + ~5" dual-purpose foam** (mattress by night, seat cushion by day). This **also beats 31" on sit-up-in-bed headroom** — ~58–60" above the surface vs ~46" (lower = more clearance), so dropping it improves *both* jobs. The old "34"→27" for headroom" reasoning is superseded. Backrest = cushions against the wall (~18"→32"), under the 36" window sill. Trade-offs: under-deck storage drops to ~10–12" clear (bikes are out in camp mode, so nothing needs the height) and it's a low bed to rise from (~20" if storage/egress wins over seat-optimal).
+- **Gate (dual sit-test, design-freeze item 3): mock a ~18" surface and pass BOTH (a) sit on the edge, feet flat — seat comfort, and (b) sit up in bed — headroom, before drilling.**
 - **Bed shoring:** E-track sockets taking plain 2×4 lumber — legs under the deck when slept on, gone in moto mode.
 
 ### Fridge bay
@@ -313,7 +314,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 |---|---|---|---|
 | 1 | **D006–D008 ratified** (24 V bus · awning standoffs · fridge integration) | owner ratifies in the DECISION_LOG | ☐ |
 | 2 | **D009 wall/ceiling substrate** — reuse factory PlexCore + laminated FRP (BC-pine fallback) | owner ratifies + PlexCore thickness verified + FRP patch-test passes (row 19) | ☐ |
-| 3 | **Track heights final** — bed ~27", shelf 60" | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band | ☐ |
+| 3 | **Track heights final** — seat/bed ~14" (~18" surface, dual duty), shelf 60" | **dual** mock at ~18": sit-on-edge feet-flat (seat) + sit-up-in-bed (headroom) both pass; shelf checked against the 36–58" window band | ☐ |
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs substrate+FRP build-up (row 12) + door frame (row 14) | ☐ |
 | 5 | **Roof drawing** — three panel rows/feet, Velit nose station + opening/shadow line, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
