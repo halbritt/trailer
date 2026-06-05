@@ -25,9 +25,19 @@ For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads s
 One high-voltage battery bus, one conversion step down, no permanent 12 V rail:
 
 ```text
+Optional deployable LG ground PV (2S)
+        |
+   Victron SmartSolar MPPT 150/35
+        |
+        +-- 48 V bus
+
 Roof PV (3 x LG455 in 3S)
         |
    Victron SmartSolar MPPT 250/60-Tr
+        |
+        +-- 48 V bus
+
+48 V bus
         |
    LiTime 48V 100Ah ComFlex (5.12 kWh)
         | 500A shunt, main OCP
@@ -36,12 +46,6 @@ Roof PV (3 x LG455 in 3S)
                                                         +-- fridge, 24 V native
                                                         +-- LED zones, USB-C PD, GPS
                                                         +-- winter heater outlet
-
-Optional deployable LG ground PV (2S)
-        |
-   Victron SmartSolar MPPT 150/35
-        |
-   LiTime 48V 100Ah ComFlex
 
 Anker SOLIX C1000 + PS400 400 W panel -> standalone 120 VAC loads
 
@@ -57,8 +61,8 @@ Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay 
 
 | Source | String | Power | Controller | Status |
 |---|---:|---:|---|---|
-| Roof LG panels | 3S | 1365 W | Victron SmartSolar MPPT 250/60-Tr | primary |
 | Deployable LG ground pair | 2S | 910 W | Victron SmartSolar MPPT 150/35 | ordered, optional use |
+| Roof LG panels | 3S | 1365 W | Victron SmartSolar MPPT 250/60-Tr | primary |
 | Anker PS400 | 1 panel | 400 W | Anker SOLIX C1000 input | separate AC island |
 
 Rules:
