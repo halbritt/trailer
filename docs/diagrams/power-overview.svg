@@ -11,6 +11,7 @@
       .battery { fill: #f0fdf4; stroke: #16a34a; }
       .load { fill: #fff7ed; stroke: #ea580c; }
       .phase { fill: #f8fafc; stroke: #64748b; stroke-dasharray: 8 6; }
+      .bus { fill: none; stroke: #334155; stroke-width: 2.5; }
       .line { fill: none; stroke: #334155; stroke-width: 2.5; marker-end: url(#arrow); }
       .soft { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 6 6; marker-end: url(#arrow); }
       .label { font: 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #0f172a; font-weight: 650; }
@@ -74,11 +75,12 @@
   <path class="line" d="M 595 184 L 680 184"/>
   <path class="line" d="M 280 324 L 365 324"/>
   <path class="line" d="M 595 324 L 680 215"/>
-  <path class="line" d="M 807 233 L 807 285"/>
-  <path class="line" d="M 807 363 L 807 420"/>
+  <path class="bus" d="M 680 184 L 640 184 L 640 459"/>
+  <path class="line" d="M 640 324 L 680 324"/>
+  <path class="line" d="M 640 459 L 680 459"/>
   <path class="line" d="M 935 459 L 975 459"/>
   <path class="line" d="M 280 539 L 365 539"/>
-  <path class="soft" d="M 595 539 C 660 540, 635 459, 680 459"/>
+  <path class="soft" d="M 680 459 C 635 459, 660 540, 595 539"/>
   <path class="soft" d="M 935 184 L 965 184"/>
 
   <text x="612" y="516" class="tiny">optional manual 24 V top-up to C1000</text>
