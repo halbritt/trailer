@@ -198,9 +198,9 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 - **Aisle reality:** the nominal ~30" walking aisle shrinks to **~20" effective at bar height** — fridge access and egress are planned around that, not the floor-level number.
 - **E-track footage: ~73 ft needed vs ~60 on hand — order more.** (~Six 10-ft black sections believed ordered; confirm before the freeze.)
 
-### Flooring — D010 (proposed)
+### Flooring — D010 (accepted)
 
-**Committed recommendation: Durabak-18 Outdoor Textured, light grey** — a flexible polyurethane bed-liner coating rolled/brushed onto the ¾" PlexCore floor, the rear ramp deck, and **coved 3–4" up the lower walls before the FRP lands**. FRP laps over the cured cove, turning the floor into a hose-out tray; raise the tongue jack to sluice dust and wash water toward the rear ramp. The remembered "DuraLok" name is not the spec.
+**Committed recommendation: Durabak-18 Outdoor Textured, light grey — ORDERED 2026-06-05, delivery window June 12–15, 2026.** It is a flexible polyurethane bed-liner coating rolled/brushed onto the ¾" PlexCore floor, the rear ramp deck, and **coved 3–4" up the lower walls before the FRP lands**. FRP laps over the cured cove, turning the floor into a hose-out tray; raise the tongue jack to sluice dust and wash water toward the rear ramp. The remembered "DuraLok" name is not the spec.
 
 Why this replaces the old rubber-coin lean: common coin roll is usually SBR (styrene-butadiene rubber), and SBR is a poor fit for moto fuel/oil spills. A bonded polyurethane liner avoids the under-sheet playa-dust/water trap, keeps the floor seamless, and stays much lighter than a thick loose rubber mat. Do not use a rigid garage epoxy; the single-axle trailer floor will move.
 
@@ -208,7 +208,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 **Adversarial review:** [floor-coating verdict](../runs/floor-coating-adversarial/synth/VERDICT.md) considered Durabak, Raptor, Herculiner, Rust-Oleum, TotalBoat TotalTread, KiwiGrip, Pettit EZ-Decks, Interlux Interdeck, Tuff Coat, G-Floor, and Monstaliner. It keeps Durabak as the default because light grey, one-part DIY control, cove execution, and truck-bed-duty polyurethane fit beat the cheaper alternatives for this trailer; Raptor remains the tested fallback.
 
-**Raptor schedule override / color gate:** Raptor can replace Durabak only if schedule pressure makes the two-week lead-time gain decisive **and** the product is the 2K tintable Raptor system in **light gray**. Acceptable color is Raptor Color **Light Gray** (UP4855) or a matched solvent-based urethane/acrylic automotive toner in the same light-gray range, mixed per Raptor's tint guidance. White is technically acceptable but too glare/stain-prone to prefer; Basalt Gray, black, and the AutoZone-visible black 2K kit are not acceptable as the main floor color. Do not substitute the 1K aerosol or 1-part roll-on Raptor products for the 2K fallback.
+**Raptor schedule override closed:** owner checked local availability and shippers on 2026-06-05; the acceptable 2K tintable light-gray Raptor path has no local availability or reliable ETA, so it provides no schedule benefit over Durabak and keeps all of the 2K downsides. Raptor remains only a patch-failure fallback. If reopened, acceptable color is Raptor Color **Light Gray** (UP4855) or a matched solvent-based urethane/acrylic automotive toner in the same light-gray range, mixed per Raptor's tint guidance. White is technically acceptable but too glare/stain-prone to prefer; Basalt Gray, black, and the AutoZone-visible black 2K kit are not acceptable as the main floor color. Do not substitute the 1K aerosol or 1-part roll-on Raptor products for the 2K fallback.
 
 **Quantity:** buy **4 gallons**: 3 gal for the base floor+cove+ramp coat plan, plus 1 reserve gallon committed to a third coat in the wear lanes (rear ramp deck and chock/E-track contact lanes). The interior floor is bounded by 81" × 157" (~88 ft²), the 3–4" wall cove adds ~12–14 ft², and the 78" × 72" ramp adds ~39 ft². Durabak textured coverage is ~50–60 ft²/gal for a standard two-coat application, so 3 gal is adequate but tight once the ramp and tie-down lanes get extra film; confirm final quantity against the patch-test coverage rate before order freeze.
 
@@ -258,7 +258,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 ### Order list
 
 - **Long-lead, order now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
-- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
+- **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
@@ -269,7 +269,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
 
 1. **Measure & scan** — finish the [measurement pass](dimensions.md): interior tape (rows 3/3a, 7, 14, 17), roof stations (5a, 6), rail 3D scan + post wall thickness (16), floor steel + bar widths (10, 11), OSB thickness (19).
-2. **Freeze** — close the 10 design-freeze items; ratify D006–D010; place all orders (long-lead first).
+2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; D010 is accepted; place remaining orders (long-lead first).
 3. **Strip the interior** — factory OSB off (it's the template stock for the birch cuts); document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
@@ -301,7 +301,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 5 | **Roof drawing** — panel feet, Velit station + opening, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, E-track rows | floor steel + bar widths + bay depth measured (rows 10, 11, 17) | ☐ |
-| 8 | **Flooring material** | D010 ratified: Durabak-18 Outdoor Textured light grey, 4 gal (3 gal base + 1 reserve for ramp/chock/E-track wear lanes); PlexCore adhesion + fuel-drip patch required before coating | ☐ |
+| 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 4 gal ordered for June 12–15 delivery; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
 | 10 | **Order list frozen** — every SKU (incl. the 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity) + E-track footage recount | rows 1–9 closed | ☐ |
 
