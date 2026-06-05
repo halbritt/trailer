@@ -174,7 +174,7 @@ HRV = heat-recovery ventilator: fresh-air exchange without dumping the heat. Rou
 
 ### Awning — D007
 
-**Fiamma F45s 350** (06280B01R): 138" (11'6") case, 5.35" tall, ~55 lb, 130" canopy. The July deliverable for shade.
+**Fiamma F45s 350** (**06290B01R — Titanium case / Royal Grey fabric, manual**): 138" (11'6") case, 5.35" tall, ~55 lb, 130" canopy. The July deliverable for shade.
 
 **How the mount was arrived at** (both stock options are dead, by measurement):
 1. **Wall-mount: dead by tape (2026-06-04).** Measured clearance from drip-rail top to the trailer's top edge is **5-1/8"** — the case is 5.35" tall. Short by 0.225". Deployed fabric would also foul the door swing.
@@ -273,7 +273,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-- **Long-lead, order now:** Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
+- **Long-lead, order now:** Fiamma F45s 350 (**06290B01R Titanium**) + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · standoff + backing steel stock (owner fab) · E-track top-up.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 4 gal — ORDERED, delivery June 12–15, 2026** (3 gal base floor+cove+ramp + 1 reserve for ramp/chock/E-track wear lanes).
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) · 14 AWG runs + fuse assortment + 2–3 POL 24→12 bucks · dome/task lights (24 V or POL).
 - **Wall/ceiling finish (FRP, DIY laminate over 3/8" ply):** Glasliner 0.090" white FRP 4×8 (Home Depot, MFTF12IXA480009600) — **~3 sheets for the ceiling + wall count from the freeze** · Titebond GREENchoice Fast Grab FRP adhesive (4059, 3.5-gal pail) · HD PVC FRP trim — division bar `9290NL`, inside corner `9350NL`, outside corner `99400NL`, end cap `9460XA` + color-matched silicone · **substrate = reuse the factory PlexCore** (special moisture-resistant OSB; scuff + patch-test the FRP bond) — **3/8" BC sanded pine (HD Plytanium 721715) only as fallback** for sheets damaged on removal; optional true-marine only at the cove/window cutouts (lumberyard).
