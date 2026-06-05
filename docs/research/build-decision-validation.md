@@ -38,26 +38,26 @@ These are the findings that should feed back into the build sheet / decision log
 
 ## Bottom line
 
-- **Clean / green-light:** **D002** (solar string sizing) and **D006** (24V house bus + Orion-Tr + UL-489 breaker) both survived adversarial re-derivation as *corroborated / mostly-corroborated*. The electrical architecture is sound and code-aligned.
+- **Clean / green-light:** **D006** (24V house bus + Orion-Tr + UL-489 breaker) survived adversarial re-derivation as *mostly-corroborated*. **D002's original 2S/2S2P solar topology was later superseded by the corrected 3-panel AIO run**; the LiTime AIO limits below still apply to its own PV input only.
 - **Real safety/fit problem — thermal:** **D008** (Dometic CFX3 95DZ) was **downgraded to mixed**. The "enclosed curbside bay" directly violates Dometic's own manual, which requires a **50 mm (~2 in) gap on all four sides** and says **"Do not place the cooling device in closed compartments."** Electrical sizing is fine; the bay is non-compliant until forced ventilation makes it genuinely ventilated.
 - **Real safety problem — operating envelope:** **D007** (Fiamma F45s awning). Mount design is correct, but the **>20 mph retract rule is ~2x too permissive** for the as-built wall-only (no legs, no tie-down) configuration — consensus for that case is **~10 mph**. Also the limiting failure is the awning's own arms/extrusions bending, *not* fastener pull-out, so "more fasteners = safer" only holds up to a point.
 - **Carry a real caution — moisture:** **D009** (birch + FRP) and **Roof** (foam + elastomeric) are both *mostly-corroborated* but hinge on a trapped-moisture sandwich with no drying path. Both are sound **only if the cavity starts and stays dry**; spec exterior/marine-glue birch and a cold-rated roof coating.
 - **Needs vendor/measurement check — fit:** **Windows** stays **mixed**. Cutout sizes are correct, but the trim ring targets a single **1.5" wall** and the build wall is ~1"–1.4". This is a *fixable* furring/shim step (build the wall up to the ring), not a dead end — but as literally specified it won't clamp tight, and the steel-door cut needs re-framing.
-- **One hardware-specific watch:** the LiTime AIO (D002) reportedly nuisance-faults on PV overvoltage *below* its advertised 145V max with 49V-class panels like these LGs — 2S at ~113V cold is clear of it, but **never add a 3rd panel in series**.
+- **One hardware-specific watch:** the LiTime AIO (D002) reportedly nuisance-faults on PV overvoltage *below* its advertised 145V max with 49V-class panels like these LGs — 2S at ~113V cold is clear of it, but **never add a 3rd panel in series to the AIO input**.
 
 ---
 
 ## D002 — Solar string sizing: 2× LG455N2W-E6 in 2S → LiTime 48V 3500W AIO
-**Verdict:** corroborated — 2S-roof / 2S2P-ground is electrically correct and safe; 3S correctly rejected; single-MPPT routing is fine for this unit class.
+**Verdict:** superseded for the roof design by the corrected [3-panel AIO verdict](../../runs/aio-adversarial-3panel/synth/VERDICT.md). This section remains valid as a check on the **LiTime AIO PV input**: 2S is safe there; 3S is not.
 
 - ✅ Holds: LG's official spec page confirms Voc 49.9V, Vmpp 42.1V, Isc 11.39A, Impp 10.83A, Voc temp coeff −0.26%/°C, max series fuse 20A (https://www.lg.com/us/business/neon-h/lg-lg455n2w-e6).
 - ✅ Holds: Re-derived 2S cold Voc is only ~108.9V at −10°C and ~112.8V at −25°C against the 145V ceiling; break-even needs per-panel Voc 72.5V (~−149°C), physically unreachable (https://www.lg.com/us/business/neon-h/lg-lg455n2w-e6).
 - ✅ Holds: 3S is non-viable — 3 × 49.9V = 149.7V exceeds 145V at STC before any cold correction, ~169V at −25°C (https://www.lg.com/us/business/neon-h/lg-lg455n2w-e6).
-- ✅ Holds: 2S2P = 1820W and ~21.7A sit far inside LiTime's 4400W / 50A PV limits (60–145V window, single 80A MPPT) (https://www.amazon.com/3500W-Solar-Inverter-Charger-Controller/dp/B0DCNMYVD5).
-- ⚠️ Watch: Owners report this LiTime AIO does **not** reliably honor its advertised 145V PV max and faults on solar overvoltage, explicitly citing "bigger panels are often 49V open circuit" — the exact LG class. 2S (~113V cold) has margin, but treat headroom as real, not "unlimited," and **never add a 3rd series panel** (https://www.amazon.com/3500W-Solar-Inverter-Charger-Controller/dp/B0DCNMYVD5).
+- ✅ Holds: a 2S deployable pair sits far inside LiTime's 4400W / 50A PV limits (60–145V window, single 80A MPPT) (https://www.amazon.com/3500W-Solar-Inverter-Charger-Controller/dp/B0DCNMYVD5). A 2S2P four-panel fallback is also electrically in-window if the roof 3S/SmartSolar path slips.
+- ⚠️ Watch: Owners report this LiTime AIO does **not** reliably honor its advertised 145V PV max and faults on solar overvoltage, explicitly citing "bigger panels are often 49V open circuit" — the exact LG class. 2S (~113V cold) has margin, but treat headroom as real, not "unlimited," and **never add a 3rd series panel to the AIO** (https://www.amazon.com/3500W-Solar-Inverter-Charger-Controller/dp/B0DCNMYVD5).
 - ⚠️ Watch: 2S is effectively *required*, not optional — a single panel's 42.1V Vmpp is below the AIO's 60V PV floor; 2S Vmpp (~84V STC, ~73V hot) stays in-window (https://www.lg.com/us/business/neon-h/lg-lg455n2w-e6).
 - ❓ Open: The AIO's rated operating-temp floor is **−10°C**, not the −25°C used in the string stress test — keep the unit in a conditioned compartment or accept it should not charge below −10°C. This, not PV voltage, is the binding cold limit.
-- ❓ Open: Set the two ground-deployed 2S strings to the **same orientation/tilt** (one MPSP tracks one combined point; mismatch costs ~2%+). With exactly 2 strings, per-string fuses aren't required (string Isc ~11.4A < 20A max series fuse), but adding any further parallel string makes 20A per-string fusing mandatory.
+- ❓ Open: If a 2S2P fallback is ever used on the AIO, set the two 2S strings to the **same orientation/tilt** (one MPPT tracks one combined point; mismatch costs ~2%+). With exactly 2 strings, per-string fuses are still a design check against the module max series fuse and controller input hardware; adding any further parallel string makes 20A per-string fusing mandatory.
 
 ---
 
