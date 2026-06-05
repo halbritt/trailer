@@ -40,7 +40,7 @@ Buy/return now:
 2. Buy a Victron SmartSolar MPPT 250/60-Tr.
 3. Buy DC-rated roof PV disconnect/breaker hardware rated above worst-case cold 3S Voc, plus SmartSolar battery-side output protection and conductors.
 4. Buy/allocate the Orion-Tr 48/24, distribution, and trailer DC protection parts.
-5. Optional: buy a small 150 V-class MPPT for the deployable 2S LG ground pair if extra trailer-battery margin remains worth it.
+5. Use the ordered Victron SmartSolar MPPT 150/35 for the deployable 2S LG ground pair if extra trailer-battery margin remains worth it.
 6. Defer the Victron MultiPlus-II 48/3000/35-50 120V to Phase 2.
 
 ## 3S Ruling
@@ -61,7 +61,7 @@ The reliable 3S-positive answer is roof 3S on a 250 V-class Victron controller. 
 | LiTime 3500 W AIO only | Fallback only | Simple 2S/2S2P box, but wastes the confirmed third roof panel unless the roof SmartSolar is added. |
 | Keep LiTime 5 kW AIO | Reject | 120 V MPPT floor is weak with hot LG455 3S, idle heat is worse, 2S ground is stranded, and 5 kW output exceeds a single ComFlex pack's comfortable continuous limit. |
 | EG4 / 120 V-min HV AIO class | Reject | Better ecosystem than LiTime does not fix the 120 V floor or the 2S ground incompatibility. |
-| Victron EasySolar-II GX | Reject | Integrated 250 V MPPT package is not a clean US 120 VAC trailer replacement. |
+| Victron EasySolar-II GX | Reject | It was considered. It integrates the right 250 V-class MPPT idea, but the EasySolar-II GX line is a 230 VAC / 50 Hz product, not a clean US 120 VAC trailer replacement; it also solves a built-in inverter/charger problem now deferred for Juplaya. |
 | 145/150 V AIO class | Reject | LG455 3S has no cold-Voc margin. |
 
 ## Reasoning Matrix
@@ -76,7 +76,7 @@ The reliable 3S-positive answer is roof 3S on a 250 V-class Victron controller. 
 | Battery fit | One 48 V 100 Ah ComFlex pack is comfortable for the DC trailer loads and a later ~3 kVA inverter, but not for sustained 5 kW AC output. |
 | Idle | Deferring a built-in inverter removes idle draw entirely. C1000 is powered only when small AC is needed. |
 | Cost/schedule | Skipping MultiPlus for Juplaya saves money, cabinet time, wiring, AC distribution work, and commissioning risk. |
-| Ground compatibility | Roof 3S and LG ground 2S must not share one tracker. Under the Juplaya path, the ground pair either gets its own MPPT or is skipped. The Anker PS400 feeds only the C1000. |
+| Ground compatibility | Roof 3S and LG ground 2S must not share one tracker. Under the Juplaya path, the ordered SmartSolar 150/35 handles the LG ground pair if used. The Anker PS400 feeds only the C1000. |
 
 ## Required D002 / Build-Sheet Change
 
@@ -88,7 +88,7 @@ Replace D002's house-charger and solar wording:
 - Keep "roof 3 x LG455 in 3S through Victron SmartSolar MPPT 250/60-Tr."
 - Change "never 3S" to **"never 3S into any 145/150 V-class AIO input"**.
 - State the five-LG-panel inventory: 3 roof panels primary, 2 deployable ground panels optional.
-- State that optional LG ground 2S needs a separate small MPPT if used for the trailer battery.
+- State that optional LG ground 2S uses the ordered SmartSolar 150/35 if used for the trailer battery.
 - State that the Anker PS400 feeds the C1000 only and must not be mixed with LG strings.
 - Allow an optional fused/manual 24 V bus top-up branch into the C1000 XT-60 input, capped by the C1000 11-32 V / 10 A band; do not make it automatic until bus capacity is tested.
 - Keep MultiPlus-II 48/3000/35-50 120V as the Phase 2 built-in inverter/charger pick.
