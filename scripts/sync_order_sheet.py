@@ -18,6 +18,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "docs" / "order-sheet.csv"
 MD_PATH = ROOT / "docs" / "order-sheet.md"
+OVERRIDES_PATH = ROOT / "docs" / "order-sheet-overrides.csv"
 
 SHEET_URL = (
     "https://docs.google.com/spreadsheets/d/"
@@ -136,6 +137,66 @@ def read_rows(text: str) -> list[dict[str, str]]:
     return rows
 
 
+def normalize_row(raw: dict[str, str]) -> dict[str, str]:
+    row = {header: (raw.get(header) or "").strip() for header in HEADERS}
+    row["type"] = row["type"].upper()
+    row["bucket"] = row["bucket"].strip()
+    row["status"] = row["status"].upper()
+    row["unit_price"] = money_cell(row["unit_price"])
+    row["extended_price"] = money_cell(row["extended_price"])
+    return row
+
+
+def apply_local_overrides(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]], int]:
+    if not OVERRIDES_PATH.exists():
+        return rows, 0
+
+    applied = 0
+    with OVERRIDES_PATH.open(newline="") as file:
+        reader = csv.DictReader(file)
+        if reader.fieldnames is None:
+            return rows, 0
+        missing = [header for header in ["action", "match_item", *HEADERS] if header not in reader.fieldnames]
+        if missing:
+            raise SystemExit(f"{OVERRIDES_PATH} is missing expected columns: {', '.join(missing)}")
+
+        for line_no, raw in enumerate(reader, start=2):
+            action = (raw.get("action") or "").strip().lower()
+            if not action:
+                continue
+            override = normalize_row(raw)
+
+            if action in {"replace", "update"}:
+                match_item = (raw.get("match_item") or "").strip()
+                if not match_item:
+                    raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: replace requires match_item")
+                matches = [index for index, row in enumerate(rows) if row["item"] == match_item]
+                if not matches:
+                    raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: no row matches item {match_item!r}")
+                if len(matches) > 1:
+                    raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: multiple rows match item {match_item!r}")
+                index = matches[0]
+                for field in HEADERS:
+                    value = (raw.get(field) or "").strip()
+                    if value:
+                        rows[index][field] = "" if value == "__blank__" else override[field]
+                applied += 1
+                continue
+
+            if action == "append":
+                if not override["item"]:
+                    raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: append requires item")
+                if any(row["item"] == override["item"] for row in rows):
+                    continue
+                rows.append(override)
+                applied += 1
+                continue
+
+            raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: unknown action {action!r}")
+
+    return rows, applied
+
+
 def write_csv(rows: list[dict[str, str]]) -> None:
     with CSV_PATH.open("w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=HEADERS, lineterminator="\n")
@@ -222,9 +283,9 @@ def render_markdown(rows: list[dict[str, str]], source_url: str) -> str:
     out: list[str] = [
         "# Juplaya Trailer Order Sheet",
         "",
-        f"Generated: {date.today().isoformat()} from the [public Google Sheet]({SHEET_EDIT_URL}).",
+        f"Generated: {date.today().isoformat()} from the [public Google Sheet]({SHEET_EDIT_URL}) plus [local overrides](order-sheet-overrides.csv).",
         "",
-        "This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](" + source_url + "). Local CSV: [order-sheet.csv](order-sheet.csv).",
+        "This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](" + source_url + "). Local CSV: [order-sheet.csv](order-sheet.csv). Local correction layer: [order-sheet-overrides.csv](order-sheet-overrides.csv).",
         "",
         "Rules for the numbers:",
         "",
@@ -424,7 +485,7 @@ def render_markdown(rows: list[dict[str, str]], source_url: str) -> str:
             "python3 scripts/sync_order_sheet.py",
             "```",
             "",
-            "The script downloads the sheet, rewrites [order-sheet.csv](order-sheet.csv), regenerates this Markdown file, and prints the counted totals.",
+            "The script downloads the sheet, applies [order-sheet-overrides.csv](order-sheet-overrides.csv), rewrites [order-sheet.csv](order-sheet.csv), regenerates this Markdown file, and prints the counted totals.",
         ]
     )
 
@@ -439,6 +500,7 @@ def main() -> None:
 
     text = CSV_PATH.read_text() if args.local else fetch_csv(args.url)
     rows = read_rows(text)
+    rows, override_count = apply_local_overrides(rows)
     write_csv(rows)
     MD_PATH.write_text(render_markdown(rows, args.url))
 
@@ -446,6 +508,7 @@ def main() -> None:
     remaining = bucket_total(rows, "Remaining")
     deferred = bucket_total(rows, "Deferred")
     print(f"Synced {len(rows)} rows")
+    print(f"Applied overrides: {override_count}")
     print(f"Committed: {money_display(committed)}")
     print(f"Remaining: {money_display(remaining)}")
     print(f"Deferred: {money_display(deferred)}")

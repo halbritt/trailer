@@ -1,8 +1,8 @@
 # Juplaya Trailer Order Sheet
 
-Generated: 2026-06-06 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing).
+Generated: 2026-06-06 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
 
-This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/export?format=csv). Local CSV: [order-sheet.csv](order-sheet.csv).
+This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/export?format=csv). Local CSV: [order-sheet.csv](order-sheet.csv). Local correction layer: [order-sheet-overrides.csv](order-sheet-overrides.csv).
 
 Rules for the numbers:
 
@@ -29,23 +29,23 @@ Rules for the numbers:
 
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
-| Priced committed / ordered / purchased fit-out | $4,773.00 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,722.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,495.84 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Priced committed / ordered / purchased fit-out | $4,213.28 | Calculated from `LINE` rows where `bucket = Committed`. |
+| Remaining Juplaya buy list | $10,797.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,011.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $2,900.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $18,395.84 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $17,911.12 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
 | Category | Remaining Total |
 | --- | --- |
 | Power / solar / cabinet | $2,608.60 |
-| Climate / envelope / awning | $4,274.67 |
-| Interior / floor / walls | $2,120.00 |
+| Climate / envelope / awning | $4,194.67 |
+| Interior / floor / walls | $2,275.00 |
 | Lighting / switches / security | $1,219.57 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,722.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,495.84` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,797.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,011.12` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -72,9 +72,9 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 
 | Status | System | Qty | Item | Unit | Ext | Basis / Source | Notes |
 | --- | --- | ---: | --- | ---: | ---: | --- | --- |
-| PURCHASED | Fridge | 1 | Dometic CFX3 95DZ | $875.00 | $1,249.99 | [Current retail placeholder](https://www.dometic.com/en-us/outdoor/coolers/electric-coolers/dometic-cfx3-95dz-225775?v=9600024622) | Receipt needed; current retail placeholder only. |
-| ORDERED | Cooling | 1 | Velit 2000R 48 V rooftop AC | $1,679.00 | $1,829.00 | [Public product page](https://velitcamping.com/products/velit-2000r-rooftop-air-conditioner-12v-24v?variant=43751785201901) | Runs direct from fused 48 V branch. |
-| ORDERED | Roof solar | 1 | Victron SmartSolar MPPT 250/60-Tr | $400.47 | $435.20 | [Wholesale Marine price signal](https://www.wholesalemarine.com/victron-smartsolar-mppt-250-60-tr-solar-charge-controller/) | Primary roof 3S controller. Receipt needed if actual differs. |
+| PURCHASED | Fridge | 1 | Dometic CFX3 95DZ | $875.00 | $875.00 | eBay order price | eBay score. Actual counted cost is 875. |
+| ORDERED | Cooling | 1 | Velit 2000R 48 V rooftop AC | $1,679.00 | $1,679.00 | [Actual ordered price](https://velitcamping.com/products/velit-2000r-rooftop-air-conditioner-12v-24v?variant=43751785201901) | Actual ordered price. |
+| ORDERED | Roof solar | 1 | Victron SmartSolar MPPT 250/60-Tr | $400.47 | $400.47 | [Actual ordered price](https://www.wholesalemarine.com/victron-smartsolar-mppt-250-60-tr-solar-charge-controller/) | Actual ordered price. |
 | ORDERED | Ground solar | 1 | Victron SmartSolar MPPT 150/35 | $150.00 | $150.00 | User order price | Used unit free shipping; TR/MC4 connector variant pending but either is acceptable. |
 | ORDERED | 12 V auxiliary | 1 | Victron Orion-Tr IP43 48/12-20A isolated converter | $113.90 | $113.90 | [NAZ Solar price signal](https://www.solar-electric.com/victron-energy-orion-tr-48-12-20a-dc-dc-converter.html) | Receipt needed; feeds cabinet-only fused 12 V receptacles. |
 | ORDERED | Floor coating | 3 | Durabak-18 Outdoor Textured light grey | $155.00 | $465.00 | [Durabak product page and conservative prior evidence](https://www.durabakcompany.com/products/durabak-marine-liner-outdoor-textured) | Ordered for June 12-15 delivery. Current page may be lower; keep high-side until receipt is entered. |
@@ -82,7 +82,7 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Floor track | 2 | 8 ft flanged L-track sections | $80.00 | $160.00 | [US Cargo Control price signal](https://www.uscargocontrol.com/products/96-flanged-airline-style-track-aluminum) | Receipt needed; user has two sections on the way. |
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
 
-Committed / purchased subtotal: **$4,773.00**.
+Committed / purchased subtotal: **$4,213.28**.
 
 ## Remaining Juplaya Buys
 
@@ -122,10 +122,10 @@ Power / solar / cabinet remaining subtotal: **$2,608.60**.
 | BUY NOW | 1 | Fiamma Tie Down S black kit 98655-133 | $45.00 | $45.00 | Allowance | Source with the awning if possible. |
 | FAB/SOURCE | 1 lot | Awning standoff steel backing fasteners sealant | $250.00 | $250.00 | Allowance | Wait for rail scan/post wall thickness before cutting final parts. |
 | BUY NOW | 1 lot | 3/8 in x 12 in lags/deadman bag materials | $75.00 | $75.00 | Allowance | Playa anchoring for awning legs/tie-down. |
-| BUY AFTER GATE | 2 | HRV 4 in rough-in ports/caps + pull string | $80.00 | $80.00 | Allowance | Unit deferred; penetrations cheap while open. |
+| BUY AFTER GATE | 2 | HRV 4 in rough-in ports/caps + pull string | $0.00 | $0.00 | Zeroed until parts are selected | Cost intentionally held at zero for now. |
 | BUY AFTER GATE | 1 set | Heater 3 in duct rough-in + 24 V feed + CO detector | $120.00 | $120.00 | Allowance | LF Bros N4 itself deferred. |
 
-Climate / envelope / awning remaining subtotal: **$4,274.67**.
+Climate / envelope / awning remaining subtotal: **$4,194.67**.
 
 ### Interior / floor / walls
 
@@ -140,8 +140,9 @@ Climate / envelope / awning remaining subtotal: **$4,274.67**.
 | BUY AFTER GATE | 1 lot | Fridge bay partition ventilation pieces straps | $200.00 | $200.00 | Allowance | Must keep Dometic 50 mm clearance and forced through-flow. |
 | BUY NOW | 1 | Folding/telescoping RV entry step | $125.00 | $125.00 | Allowance | Stows on track grid. |
 | BUY AFTER GATE | 1 lot | Panel transport slot padding/straps/fittings | $75.00 | $75.00 | Allowance | For the two optional LG ground panels. |
+| BUY AFTER GATE | 1 | Durabak-18 Outdoor Textured light grey conditional 4th gallon | $155.00 | $155.00 | [Conditional allowance](https://www.durabakcompany.com/products/durabak-marine-liner-outdoor-textured) | Order only if the 3 gal coverage or patch test says ramp cove or wear lanes need it. |
 
-Interior / floor / walls remaining subtotal: **$2,120.00**.
+Interior / floor / walls remaining subtotal: **$2,275.00**.
 
 ### Lighting / switches / security
 
@@ -166,7 +167,7 @@ Lighting / switches / security remaining subtotal: **$1,219.57**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,722.84**.
+Remaining Juplaya subtotal: **$10,797.84**.
 
 ## Deferred / Not Juplaya
 
@@ -181,15 +182,6 @@ Remaining Juplaya subtotal: **$10,722.84**.
 
 Deferred subtotal: **$2,900.00**.
 
-## Sync Warnings
-
-`extended_price` is still counted for these rows. Fix the Google Sheet only if the difference is not intentional tax/shipping/placeholder handling.
-
-- Dometic CFX3 95DZ: qty x unit = $875.00, extended_price = $1,249.99
-- Velit 2000R 48 V rooftop AC: qty x unit = $1,679.00, extended_price = $1,829.00
-- Victron SmartSolar MPPT 250/60-Tr: qty x unit = $400.47, extended_price = $435.20
-- HRV 4 in rough-in ports/caps + pull string: qty x unit = $160.00, extended_price = $80.00
-
 ## Sync Procedure
 
 Edit the public Google Sheet, then run:
@@ -198,4 +190,4 @@ Edit the public Google Sheet, then run:
 python3 scripts/sync_order_sheet.py
 ```
 
-The script downloads the sheet, rewrites [order-sheet.csv](order-sheet.csv), regenerates this Markdown file, and prints the counted totals.
+The script downloads the sheet, applies [order-sheet-overrides.csv](order-sheet-overrides.csv), rewrites [order-sheet.csv](order-sheet.csv), regenerates this Markdown file, and prints the counted totals.
