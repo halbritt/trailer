@@ -136,6 +136,21 @@ Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can pu
 
 Switching plan: **put the lighting switches on the power cabinet**, not beside the entry door, for the Juplaya build. This keeps wiring shorter and serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
 
+Switch hardware: use a **Blue Sea 8260 6-position Contura mounting panel** with **Blue Sea 8282 Contura III SPST OFF-ON black switches**. The 8282 is rated 15 A at 24 V DC, so it has ample margin for these fused lighting branches. The 8260 panel accepts 0.06" to 0.38" mounting thickness; if the power-cabinet face is 1/2" ply, mount the switches in a thin ABS/aluminum inset plate or back-rabbet the cutout. Wire each switch downstream of its Blue Sea 5026 branch fuse.
+
+Recommended switch labels:
+
+| Position | Label | Function |
+|---:|---|---|
+| 1 | INTERIOR | main/task lighting switch or dimmer enable |
+| 2 | CURB FLOOD | two curbside `VAL2-NW9` fixtures |
+| 3 | ROAD FLOOD | two roadside `VAL2-NW9` fixtures |
+| 4 | NOSE FLOOD | both V-nose `VAL2-NW9` fixtures |
+| 5 | REAR FLOOD | rear `VAL2-NW9` loading/work light |
+| 6 | AWNING | hard enable for the awning dimmer/strip |
+
+Use custom printed labels for those names; the Blue Sea 8214 label set is useful for generic DC labels but may not include the exact flood-zone names. For the awning strip dimmer, default to the low-cost **Super Bright LEDs `LDK-8A` 12-24 VDC / 8 A PWM dimmer** mounted inside or on the cabinet after the AWNING switch; it has enough margin for the 64 W / ~2.7 A strip. The premium marine alternative is **Blue Sea 7509 Deckhand Dimmer, 24 V DC / 12 A**, which is sealed and panel-integrated but much more expensive.
+
 Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. The current selected fixture class is 12-28 VDC, so the lights run directly from the 24 V house bus. Do not build a 12 V exterior-lighting sub-bus for this plan, and do not run lighting through cigarette-lighter receptacles. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
 
 Active exterior layout: **2 curbside floods, 2 roadside floods, 1 flood on each V-nose face, 1 rear flood, plus separate awning lighting**. Count is seven flood fixtures plus the awning light circuit.
@@ -246,6 +261,6 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 - Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.
-- Exterior lighting switch labels, final branch wire gauges, and penetration/seal details.
+- Exterior lighting final branch wire gauges and penetration/seal details.
 - Optional C1000 24 V top-up branch test.
 - Real shakedown energy use before leaving the generator home.
