@@ -30,10 +30,10 @@ Rules for the numbers:
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
 | Priced committed / ordered / purchased fit-out | $4,213.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,797.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,011.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Remaining Juplaya buy list | $10,802.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,016.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $2,900.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $17,911.12 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $17,916.12 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
@@ -42,10 +42,10 @@ Remaining Juplaya buy list by category:
 | Power / solar / cabinet | $2,608.60 |
 | Climate / envelope / awning | $4,194.67 |
 | Interior / floor / walls | $2,275.00 |
-| Lighting / switches / security | $1,219.57 |
+| Lighting / switches / security | $1,224.57 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,797.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,011.12` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,802.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,016.12` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -155,9 +155,9 @@ Interior / floor / walls remaining subtotal: **$2,275.00**.
 | BUY NOW | 1 | Super Bright LEDs LDK-8A PWM dimmer | $7.95 | $7.95 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/ldk-8a-12-24-volt-dc-single-color-led-dimmer-single-color-led-dimmer) | After the AWNING switch. |
 | BUY NOW | 1 set | Custom switch labels / label stock | $25.00 | $25.00 | Allowance | Blue Sea generic labels may not cover these names. |
 | BUY NOW | 1 lot | Lighting branch wire glands sealant heat shrink | $140.00 | $140.00 | Allowance | Exterior branch wiring and penetrations. |
-| BUY NOW | 1 set | Security locks: Proven 2516 2 puck locks Trimax TCL65 | $584.95 | $584.95 | [Proven + Trimax price signals and puck-lock allowance](https://www.provenlocks.com/collections/2-5-16-tailer-coupler-locks/products/model-2516) | Proven 245 and Trimax 99.95 are price signals; puck pair allowance is 240 until exact keyed-alike product is selected. |
+| BUY NOW | 1 set | Security locks: Proven 2178 2 puck locks Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax price signals and puck-lock allowance](https://www.provenlocks.com/products/model-2178) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Proven 2178 allowance 250, Trimax TCL65 allowance 99.95, puck pair allowance 240 until exact keyed-alike product is selected. |
 
-Lighting / switches / security remaining subtotal: **$1,219.57**.
+Lighting / switches / security remaining subtotal: **$1,224.57**.
 
 ### General consumables contingency
 
@@ -167,7 +167,7 @@ Lighting / switches / security remaining subtotal: **$1,219.57**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,797.84**.
+Remaining Juplaya subtotal: **$10,802.84**.
 
 ## Deferred / Not Juplaya
 

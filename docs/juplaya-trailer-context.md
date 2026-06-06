@@ -211,7 +211,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Security & tracking
 
-- **Proven 2516 coupler lock** + **2× Abloy/Paclock pucks, keyed alike** + **Trimax TCL65** wheel lock — layered, because Juplaya.
+- **Proven 2178 coupler lock** for the documented 2" coupler + **2× Abloy/Paclock pucks, keyed alike** + **Trimax TCL65** wheel lock — layered, because Juplaya. Do not order the Proven 2516 unless the trailer is upgraded to a 2-5/16" coupler.
 - **LandAirSea 54 GPS**, hardwired to the 24 V block (3 A branch), always-on.
 
 ### Order list
