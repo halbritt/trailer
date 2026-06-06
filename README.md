@@ -9,7 +9,7 @@ Build repo for a **Wells Cargo / ACG FasTrac Deluxe FT712S2-D** (7×12 single-ax
 | Doc | What it is |
 |---|---|
 | **[Build sheet](docs/juplaya-trailer-context.md)** | **Source of truth** — settled facts, every decision, every binding gate, order lists |
-| [Order sheet](docs/order-sheet.md) / [CSV](docs/order-sheet.csv) | Purchase status, remaining buys, price signals, and fit-out budget math |
+| [Order sheet](docs/order-sheet.md) / [CSV](docs/order-sheet.csv) | Purchase status, remaining buys, price signals, and fit-out budget math, synced from Google Sheets |
 | [Dimension sheet](docs/dimensions.md) | All known dimensions + the mm measurement-pass fill-in table |
 | [Decision log](docs/DECISION_LOG.md) | D001–D010 with context/consequences/revisit conditions |
 | [Validation report](docs/research/build-decision-validation.md) | Web fact-check of the original 7 falsifiable decisions plus D010 flooring addendum |
