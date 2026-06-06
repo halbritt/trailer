@@ -64,7 +64,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
-| 6 | Roof-bow stations (from front wall) + solar rail-foot tie-in stations | 610 mm OC; rail feet land at bow crossings, not arbitrary roof skin | | |
+| 6 | Roof-bow stations (from front wall) + solar through-rail tie-in stations | 610 mm OC; through-rail fasteners land at bow crossings, not arbitrary roof skin | | |
 | 7 | Wall-post stations + **clear bay width** at the two window stations (rear, both walls) | ~368 mm (14.5") clear | | |
 | 8 | **Door drip rail → top edge of trailer** (replaces trim-height estimate) | ~114 mm (4.5")? | **130 mm (5-1/8")** — F45s case is 5.35" → wall-mount confirmed dead by 0.225" | 2026-06-04 |
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |

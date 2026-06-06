@@ -79,9 +79,9 @@ Rules:
 
 Physical mount sources: [solar mounting build sheet](solar_mounting.md) and [solar panel mounting/backing research](research/solar-panel-mounting-backing-2026-06-06.md).
 
-Mechanical verdict: the existing panel brackets attach the modules to a rail system; they do not define the trailer load path. Use two fore-aft structural rails spanning the roof array field, tied to multiple roof bows with discrete sealed feet/backing. Add a third rail only if dry-fit stiffness or bracket geometry requires it. Do not fasten the roof modules to roof skin alone.
+Mechanical verdict: the existing panel brackets attach the modules to a rail system; they do not define the trailer load path. Use two fore-aft NXT rails spanning the roof array field, drilled through at bow crossings and tied to multiple roof bows with backing/crush control. Use 1/4 in aluminum spacer pads only where needed for low-profile drainage/crown control. Add a third rail only if dry-fit stiffness or bracket geometry requires it. Do not fasten the roof modules to roof skin alone.
 
-Install the rail feet/backing, PV gland, and Velit curb before foam and before Henry 887 roof coating. Hose-test every penetration before the ceiling closes. Keep roof 3S wiring clipped to the rails, with service loops and labels so it cannot be confused with the optional ground 2S input.
+Install the drilled rail/backing, PV gland, and Velit curb before foam and before Henry 887 roof coating. Hose-test every penetration before the ceiling closes. Keep roof 3S wiring clipped to the rails, with service loops and labels so it cannot be confused with the optional ground 2S input.
 
 Voltage checks:
 

@@ -73,9 +73,9 @@ The envelope strategy: **closed-cell spray foam inside the steel skin, elastomer
 
 ### Roof solar mounting — rail/backing structure
 
-The solar-panel brackets do **not** need to land on roof bows. The backing structure does. Use two fore-aft structural rails spanning the three panel rows, with discrete sealed feet tied into multiple 24" OC roof bows; the existing panel brackets bolt to those rails. Add a third rail only if the dry-fit proves the bracket pattern or rail stiffness needs it. Do not use roof-skin-only screws as the load path for the panels.
+The solar-panel brackets do **not** need to land on roof bows. The rail fasteners do. Use two fore-aft NXT rails spanning the three panel rows, drilled through at bow crossings and tied into multiple 24" OC roof bows with backing/crush control; the existing panel brackets/clamps bolt to those rails. Use 1/4" aluminum spacer pads at bow stations only if needed for low-profile drainage/crown control; EPDM/neoprene is acceptable as an isolation layer or high-durometer spacer only with crush sleeves/hard stops. Add a third rail only if the dry-fit proves the bracket pattern or rail stiffness needs it. Do not use roof-skin-only screws as the load path for the panels.
 
-Order of operations: measured roof drawing -> rail centerlines and bow tie-ins -> dry-fit panels/Velit/awning standoffs -> drill and seal rail feet/gland/curb -> hose test -> foam -> Henry 887 roof coating. Build sheet: [solar_mounting.md](solar_mounting.md). Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
+Order of operations: measured roof drawing -> rail centerlines and bow tie-ins -> dry-fit panels/Velit/awning standoffs -> drill and seal rails/gland/curb -> hose test -> foam -> Henry 887 roof coating. Build sheet: [solar_mounting.md](solar_mounting.md). Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
 
 ### Roof coating — picked
 
@@ -259,7 +259,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled OSB | owner ratifies + factory OSB thickness verified (row 19) | ☐ |
 | 3 | **Track heights final** — bed ~27", shelf 60" | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band | ☐ |
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
-| 5 | **Roof drawing** — three panel rows, fore-aft rail/backing structure + bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; rail-foot fastener/backing detail selected | ☐ |
+| 5 | **Roof drawing** — three panel rows, fore-aft NXT rail/backing structure + through-rail bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; through-rail fastener/backing/spacer detail selected | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 3 gal ordered for June 12–15 delivery; 4th gal conditional after patch/first-pass coverage; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
