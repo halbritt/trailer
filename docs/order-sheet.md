@@ -2,7 +2,7 @@
 
 Generated: 2026-06-06.
 
-This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math.
+This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet version: [order-sheet.csv](order-sheet.csv).
 
 Rules for the numbers:
 
