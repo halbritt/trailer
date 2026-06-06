@@ -202,7 +202,7 @@ The Anker SOLIX C1000 + PS400 panel is portable camp gear, not trailer AC distri
 Use it for:
 
 - laptops, phones, radios, camera/tool battery chargers
-- Starlink-class loads, if needed
+- Starlink Mini-class loads, if needed
 - brief small-appliance hits
 
 Do not use it for:
@@ -218,6 +218,16 @@ Optional 24 V trailer top-up:
 - Enable it only when the trailer battery is healthy and the Orion has spare capacity.
 - Keep this top-up on the 24 V bus if used; the 12 V cabinet receptacles would cut the charge rate roughly in half and burn an extra conversion stage.
 - Do not direct-feed the C1000 from the 48 V battery unless a dedicated current-limited DC-DC charger is designed later.
+
+### Starlink Mini Option
+
+Treat Starlink Mini as optional portable comms gear, not a core trailer load. Current [Starlink Mini specs](https://www.starlink.com/public-files/specification_sheet_mini.pdf) list **25-40 W average**, **12-48 V / 60 W max input**, and a **100 W, 20 V / 5 A minimum** requirement when using the Starlink USB-C-to-barrel accessory. That is about **1.0-1.7 A average at 24 V** or **2.5 A max at 24 V** before converter/cable losses. Continuous 24-hour use is **0.6-1.0 kWh/day** before losses; budget **0.7-1.1 kWh/day** in the real trailer.
+
+Preferred Juplaya path:
+
+- Keep it portable and run it from the C1000/PS400 first, so internet does not become a house-battery design dependency.
+- A DC option is acceptable later: Starlink's [Mini Car Adapter](https://www.starlink.com/public-files/accessories_guide_mini.pdf) is intended for standard 12-24 V auxiliary outlets, so it can use a fused 12 V cabinet receptacle if cable length and voltage drop behave.
+- Do not permanently mount it or count on always-on internet until a shakedown proves the roof solar/house battery still has surplus after AC and fridge duty.
 
 ## Phase 2 MultiPlus
 

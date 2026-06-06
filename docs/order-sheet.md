@@ -30,10 +30,10 @@ Rules for the numbers:
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
 | Priced committed / ordered / purchased fit-out | $4,213.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,802.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,016.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
-| Deferred Phase 2 / winter list | $2,900.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $17,916.12 | Current total plus deferred, with the same exclusions. |
+| Remaining Juplaya buy list | $10,902.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,116.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
+| Full visible project list including deferred | $18,265.12 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
@@ -42,10 +42,10 @@ Remaining Juplaya buy list by category:
 | Power / solar / cabinet | $2,608.60 |
 | Climate / envelope / awning | $4,194.67 |
 | Interior / floor / walls | $2,275.00 |
-| Lighting / switches / security | $1,224.57 |
+| Lighting / switches / security | $1,324.57 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,802.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,016.12` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,902.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,116.12` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -156,8 +156,9 @@ Interior / floor / walls remaining subtotal: **$2,275.00**.
 | BUY NOW | 1 set | Custom switch labels / label stock | $25.00 | $25.00 | Allowance | Blue Sea generic labels may not cover these names. |
 | BUY NOW | 1 lot | Lighting branch wire glands sealant heat shrink | $140.00 | $140.00 | Allowance | Exterior branch wiring and penetrations. |
 | BUY NOW | 1 set | Security locks: Proven 2178 2 puck locks Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax price signals and puck-lock allowance](https://www.provenlocks.com/products/model-2178) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Proven 2178 allowance 250, Trimax TCL65 allowance 99.95, puck pair allowance 240 until exact keyed-alike product is selected. |
+| BUY NOW | 1 set | Personnel-door puck hasp/backing hardware | $100.00 | $100.00 | [Allowance](https://paclock.com/product/ucs_7a_770/) | Bolt-on PACLOCK PL770 / UCS-7A/770-class hasp or Proven corner hasp, backing plates, and 3/8 in hardware for the personnel door. Use keyed-alike puck strategy from the security lock set; external puck is unattended/travel/storage only, not an occupied-mode latch. |
 
-Lighting / switches / security remaining subtotal: **$1,224.57**.
+Lighting / switches / security remaining subtotal: **$1,324.57**.
 
 ### General consumables contingency
 
@@ -167,7 +168,7 @@ Lighting / switches / security remaining subtotal: **$1,224.57**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,802.84**.
+Remaining Juplaya subtotal: **$10,902.84**.
 
 ## Deferred / Not Juplaya
 
@@ -179,8 +180,9 @@ Remaining Juplaya subtotal: **$10,802.84**.
 | DEFERRED | Ventilation | 1 | Future HRV unit | $350.00 | $350.00 | Rough-in only for Juplaya. |
 | DEFERRED | Power cabinet | 1 | Exterior vent retrofit | $100.00 | $100.00 | Only if cabin-side ventilation fails shakedown. |
 | DEFERRED | Truck charging | 1 lot | 12 V truck to 48 V trailer charging hardware | $550.00 | $550.00 | Pre-wire now active charging later. |
+| DEFERRED | Comms | 1 | Starlink Mini kit | $249.00 | $249.00 | Optional portable comms only; not counted as a Juplaya core power dependency. Service plan is recurring and not included in the fit-out subtotal. |
 
-Deferred subtotal: **$2,900.00**.
+Deferred subtotal: **$3,149.00**.
 
 ## Sync Procedure
 
