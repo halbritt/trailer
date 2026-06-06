@@ -39,8 +39,8 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 | Item | Value | Notes |
 |---|---|---|
-| Wall E-track rows | seat/bed **~14"** (~18" surface — dual-duty sofa+bed; revised from 27"; dual sit-test gate) · shelf **60"** | backed on tube posts |
-| **Window band** | sill ~**36"**, top ~58" | above the seat/bed track (~14"), below the shelf track (60"); rear bay station, both walls |
+| Wall E-track rows | seat/bed **~16"** (~20" surface — dual-duty sofa+bed; revised from 27"; dual sit-test gate) · shelf **60"** | backed on tube posts |
+| **Window band** | sill ~**36"**, top ~58" | above the seat/bed track (~16"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
 | Roof: two panel rows (landscape) | 83.07" across × **82" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet, not side clamps); leaves ~63" of rectangle + nose |
 | Awning case bottom | ≥ **~78.5"** (above roofline) | riser-mounted |
