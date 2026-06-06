@@ -77,7 +77,7 @@ Rules:
 
 ## Roof Solar Mounting
 
-Physical mount source: [solar panel mounting/backing research](research/solar-panel-mounting-backing-2026-06-06.md).
+Physical mount sources: [solar mounting build sheet](solar_mounting.md) and [solar panel mounting/backing research](research/solar-panel-mounting-backing-2026-06-06.md).
 
 Mechanical verdict: the existing panel brackets attach the modules to a rail system; they do not define the trailer load path. Use two fore-aft structural rails spanning the roof array field, tied to multiple roof bows with discrete sealed feet/backing. Add a third rail only if dry-fit stiffness or bracket geometry requires it. Do not fasten the roof modules to roof skin alone.
 

@@ -50,7 +50,7 @@ Current Juplaya power verdict:
 Must-not-miss gates:
 
 - Roof 3S lands only on the SmartSolar 250/60-Tr; never into a 145/150 V-class AIO or MPPT.
-- Roof panel brackets do not need to align with bows; **the roof rail/backing structure does**. Use fore-aft rails tied to multiple roof bows, then mount the panels/brackets to those rails. Do not fasten panel brackets only to roof skin. See [solar mounting research](research/solar-panel-mounting-backing-2026-06-06.md).
+- Roof panel brackets do not need to align with bows; **the roof rail/backing structure does**. Use fore-aft rails tied to multiple roof bows, then mount the panels/brackets to those rails. Do not fasten panel brackets only to roof skin. See [solar mounting build sheet](solar_mounting.md) and [solar mounting research](research/solar-panel-mounting-backing-2026-06-06.md).
 - PS400 feeds the C1000 only; do not mix it with LG strings.
 - Battery side first on MPPTs, then PV.
 - Make battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
@@ -75,7 +75,7 @@ The envelope strategy: **closed-cell spray foam inside the steel skin, elastomer
 
 The solar-panel brackets do **not** need to land on roof bows. The backing structure does. Use two fore-aft structural rails spanning the three panel rows, with discrete sealed feet tied into multiple 24" OC roof bows; the existing panel brackets bolt to those rails. Add a third rail only if the dry-fit proves the bracket pattern or rail stiffness needs it. Do not use roof-skin-only screws as the load path for the panels.
 
-Order of operations: measured roof drawing -> rail centerlines and bow tie-ins -> dry-fit panels/Velit/awning standoffs -> drill and seal rail feet/gland/curb -> hose test -> foam -> Henry 887 roof coating. Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
+Order of operations: measured roof drawing -> rail centerlines and bow tie-ins -> dry-fit panels/Velit/awning standoffs -> drill and seal rail feet/gland/curb -> hose test -> foam -> Henry 887 roof coating. Build sheet: [solar_mounting.md](solar_mounting.md). Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
 
 ### Roof coating — picked
 
