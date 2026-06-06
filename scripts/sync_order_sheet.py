@@ -171,6 +171,8 @@ def apply_local_overrides(rows: list[dict[str, str]]) -> tuple[list[dict[str, st
                 if not match_item:
                     raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: replace requires match_item")
                 matches = [index for index, row in enumerate(rows) if row["item"] == match_item]
+                if not matches and override["item"] and override["item"] != match_item:
+                    matches = [index for index, row in enumerate(rows) if row["item"] == override["item"]]
                 if not matches:
                     raise SystemExit(f"{OVERRIDES_PATH}:{line_no}: no row matches item {match_item!r}")
                 if len(matches) > 1:

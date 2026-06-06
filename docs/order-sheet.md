@@ -97,7 +97,7 @@ Committed / purchased subtotal: **$4,213.28**.
 | BUY NOW | 1 lot | DC-rated protection for MPPTs Velit branch Orion inputs/outputs | $275.00 | $275.00 | Allowance | Fuse/breaker values wait on measured wire runs. |
 | BUY NOW | 1 lot | Roof 250 V PV disconnect + ground 150 V PV disconnect/OCP | $180.00 | $180.00 | Allowance | Roof 3S needs 250 V-class hardware. |
 | BUY NOW | 1 lot | Power wiring lugs heat shrink busbars labels loom | $450.00 | $450.00 | Allowance | Covers cabinet wiring and branch terminations not final gauge-certification. |
-| BUY AFTER GATE | 1 lot | Roof solar mounting rails/feet/fasteners | $500.00 | $500.00 | Allowance | Wait for roof drawing and bow stations. |
+| BUY AFTER GATE | 1 lot | Roof solar fore-aft rails, bow backing, feet, and fasteners | $500.00 | $500.00 | Allowance | Two fore-aft structural rails plus possible third rail, discrete bow feet, backing plates/crush sleeves, isolation material, fasteners, clips, gland, and sealant consumables. |
 | FAB/SOURCE | 1 | Power cabinet structure mounting board service panels | $250.00 | $250.00 | Allowance | Does not include battery/electronics above. |
 | BUY NOW | 1 set | Cabinet ventilation: 24 V fan thermostat transfer grilles/filter | $125.00 | $125.00 | Allowance | Cabin-side intake/exhaust plan no through-wall vent for now. |
 | BUY NOW | 1 set | Fused cigarette-lighter receptacles for cabinet 12 V | $40.00 | $40.00 | Allowance | Auxiliary only not a distributed 12 V rail. |

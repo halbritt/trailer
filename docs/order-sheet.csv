@@ -24,7 +24,7 @@ LINE,Remaining,Power / solar / cabinet,BUY NOW,Power,1,Battery-terminal Class-T 
 LINE,Remaining,Power / solar / cabinet,BUY NOW,Power,1 lot,DC-rated protection for MPPTs Velit branch Orion inputs/outputs,275.00,275.00,Allowance,,Fuse/breaker values wait on measured wire runs.
 LINE,Remaining,Power / solar / cabinet,BUY NOW,Solar,1 lot,Roof 250 V PV disconnect + ground 150 V PV disconnect/OCP,180.00,180.00,Allowance,,Roof 3S needs 250 V-class hardware.
 LINE,Remaining,Power / solar / cabinet,BUY NOW,Power,1 lot,Power wiring lugs heat shrink busbars labels loom,450.00,450.00,Allowance,,Covers cabinet wiring and branch terminations not final gauge-certification.
-LINE,Remaining,Power / solar / cabinet,BUY AFTER GATE,Solar,1 lot,Roof solar mounting rails/feet/fasteners,500.00,500.00,Allowance,,Wait for roof drawing and bow stations.
+LINE,Remaining,Power / solar / cabinet,BUY AFTER GATE,Solar,1 lot,"Roof solar fore-aft rails, bow backing, feet, and fasteners",500.00,500.00,Allowance,,"Two fore-aft structural rails plus possible third rail, discrete bow feet, backing plates/crush sleeves, isolation material, fasteners, clips, gland, and sealant consumables."
 LINE,Remaining,Power / solar / cabinet,FAB/SOURCE,Power cabinet,1,Power cabinet structure mounting board service panels,250.00,250.00,Allowance,,Does not include battery/electronics above.
 LINE,Remaining,Power / solar / cabinet,BUY NOW,Power cabinet,1 set,Cabinet ventilation: 24 V fan thermostat transfer grilles/filter,125.00,125.00,Allowance,,Cabin-side intake/exhaust plan no through-wall vent for now.
 LINE,Remaining,Power / solar / cabinet,BUY NOW,12 V auxiliary,1 set,Fused cigarette-lighter receptacles for cabinet 12 V,40.00,40.00,Allowance,,Auxiliary only not a distributed 12 V rail.

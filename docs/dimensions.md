@@ -42,7 +42,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | backed on tube posts |
 | **Window band** | sill ~**36"**, top ~58" | above the bed track (~27"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
-| Roof: three panel rows (landscape) | 83.07" across × **123" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet, not side clamps); leaves ~22" of measured rectangle + nose for Velit/standoff layout |
+| Roof: three panel rows (landscape) | 83.07" across × **123" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet/fore-aft rails, not side clamps); leaves ~22" of measured rectangle + nose for Velit/standoff layout |
 | Awning case bottom | ≥ **~78.5"** (above roofline) | riser-mounted |
 | Deployed fabric @ 32" out, 10° pitch | ~**72.9"** | vs the 72" door — ~0.9" paper margin |
 | Fridge bay | starts at the door's aft edge, 37.9" long × 20.9" deep | curbside; band under 18.6" + lid |
@@ -64,7 +64,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
-| 6 | Roof-bow stations (from front wall) | 610 mm OC | | |
+| 6 | Roof-bow stations (from front wall) + solar rail-foot tie-in stations | 610 mm OC; rail feet land at bow crossings, not arbitrary roof skin | | |
 | 7 | Wall-post stations + **clear bay width** at the two window stations (rear, both walls) | ~368 mm (14.5") clear | | |
 | 8 | **Door drip rail → top edge of trailer** (replaces trim-height estimate) | ~114 mm (4.5")? | **130 mm (5-1/8")** — F45s case is 5.35" → wall-mount confirmed dead by 0.225" | 2026-06-04 |
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
@@ -80,4 +80,4 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
 
 > **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
-> When a row is filled, propagate: the roof drawing (4–6, 15), window cuts (7, 12–14), riser fabrication (8, 9, 16), floor L-track layout (10, 11), and the payload ledger (18).
+> When a row is filled, propagate: the roof drawing (4–6, 15), solar rail/backing detail, window cuts (7, 12–14), riser fabrication (8, 9, 16), floor L-track layout (10, 11), and the payload ledger (18).

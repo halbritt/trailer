@@ -75,6 +75,14 @@ Rules:
 - The PS400 feeds the C1000 only. Do not series or parallel it with LG panels.
 - Physically label and segregate roof PV, LG ground PV, and Anker PV connectors so mis-plugging is not plausible.
 
+## Roof Solar Mounting
+
+Physical mount source: [solar panel mounting/backing research](research/solar-panel-mounting-backing-2026-06-06.md).
+
+Mechanical verdict: the existing panel brackets attach the modules to a rail system; they do not define the trailer load path. Use two fore-aft structural rails spanning the roof array field, tied to multiple roof bows with discrete sealed feet/backing. Add a third rail only if dry-fit stiffness or bracket geometry requires it. Do not fasten the roof modules to roof skin alone.
+
+Install the rail feet/backing, PV gland, and Velit curb before foam and before Henry 887 roof coating. Hose-test every penetration before the ceiling closes. Keep roof 3S wiring clipped to the rails, with service loops and labels so it cannot be confused with the optional ground 2S input.
+
 Voltage checks:
 
 - LG455 Voc is 49.9 V. Roof 3S is 149.7 V at STC and roughly 163-171 V cold signal, so it needs a 250 V-class controller.
@@ -256,7 +264,7 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 
 ## Open Gates
 
-- Roof drawing: panel feet into roof bows, Velit opening/shadow line, and awning standoff stations.
+- Roof drawing: fore-aft solar rails tied into roof bows, panel bracket landings on those rails, Velit opening/shadow line, PV gland, and awning standoff stations.
 - Battery-terminal main OCP selection.
 - Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.

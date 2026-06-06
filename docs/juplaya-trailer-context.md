@@ -50,6 +50,7 @@ Current Juplaya power verdict:
 Must-not-miss gates:
 
 - Roof 3S lands only on the SmartSolar 250/60-Tr; never into a 145/150 V-class AIO or MPPT.
+- Roof panel brackets do not need to align with bows; **the roof rail/backing structure does**. Use fore-aft rails tied to multiple roof bows, then mount the panels/brackets to those rails. Do not fasten panel brackets only to roof skin. See [solar mounting research](research/solar-panel-mounting-backing-2026-06-06.md).
 - PS400 feeds the C1000 only; do not mix it with LG strings.
 - Battery side first on MPPTs, then PV.
 - Make battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
@@ -69,6 +70,12 @@ The envelope strategy: **closed-cell spray foam inside the steel skin, elastomer
 
 - **Closed-cell spray foam** in the wall and ceiling cavities; **elastomeric roof coating** outside; **Velit Mini 2000R rooftop AC (48 VDC) — ordered**, fed by its own fused 48 V branch.
 - **Roof sandwich `[web-val]`:** building science *endorses* foam-inside + coating-outside on steel, **on one condition: the steel is dry, clean, and rust-free at closure** — foam over damp steel seals the corrosion in where it can never be seen. Execution requirements: air-seal the foam at every bow, fastener, and penetration; **spec a cold-rated/silicone coating** (standard summer-cure acrylics go brittle in deep cold and "zipper" off); run a **48-hr adhesion patch** on the actual galvanized/aluminized skin before committing to a product; confirm foaming under the roof doesn't void the solar-panel warranty; put periodic exterior blister inspections on the maintenance calendar (a blister is the only visible symptom of hidden steel corrosion).
+
+### Roof solar mounting — rail/backing structure
+
+The solar-panel brackets do **not** need to land on roof bows. The backing structure does. Use two fore-aft structural rails spanning the three panel rows, with discrete sealed feet tied into multiple 24" OC roof bows; the existing panel brackets bolt to those rails. Add a third rail only if the dry-fit proves the bracket pattern or rail stiffness needs it. Do not use roof-skin-only screws as the load path for the panels.
+
+Order of operations: measured roof drawing -> rail centerlines and bow tie-ins -> dry-fit panels/Velit/awning standoffs -> drill and seal rail feet/gland/curb -> hose test -> foam -> Henry 887 roof coating. Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
 
 ### Roof coating — picked
 
@@ -230,7 +237,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
    - Wall E-track backing at the 27"/60" rows.
    - Rough-ins: HRV 4" pair, heater 3" duct ports, wire chases, 4 AWG tongue pre-wire.
-   - Roof: Velit opening cut + curb, panel rail feet through the bows, all penetrations sealed.
+   - Roof: solar rail/backing structure first (fore-aft rails tied to multiple bows; brackets/panels attach to rails, not skin), then Velit opening + curb, PV gland, all penetrations sealed and hose-tested.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
 6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
 7. **Floor liner + walls closed** — floor L-track recessed/bolted through to steel/backing first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
@@ -252,12 +259,12 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled OSB | owner ratifies + factory OSB thickness verified (row 19) | ☐ |
 | 3 | **Track heights final** — bed ~27", shelf 60" | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band | ☐ |
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
-| 5 | **Roof drawing** — three panel rows/feet, Velit nose station + opening/shadow line, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn | ☐ |
+| 5 | **Roof drawing** — three panel rows, fore-aft rail/backing structure + bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; rail-foot fastener/backing detail selected | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ☐ |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 3 gal ordered for June 12–15 delivery; 4th gal conditional after patch/first-pass coverage; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, power-cabinet interior vent/fan/thermostat parts, exterior lighting + cabinet switch parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, roof solar rail/backing hardware, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, power-cabinet interior vent/fan/thermostat parts, exterior lighting + cabinet switch parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
