@@ -29,23 +29,23 @@ Rules for the numbers:
 
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
-| Priced committed / ordered / purchased fit-out | $4,233.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,892.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,126.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Priced committed / ordered / purchased fit-out | $4,333.28 | Calculated from `LINE` rows where `bucket = Committed`. |
+| Remaining Juplaya buy list | $10,792.94 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,126.22 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $18,275.12 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $18,275.22 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
 | Category | Remaining Total |
 | --- | --- |
-| Power / solar / cabinet | $2,653.60 |
+| Power / solar / cabinet | $2,553.70 |
 | Climate / envelope / awning | $4,194.67 |
 | Interior / floor / walls | $2,275.00 |
 | Lighting / switches / security | $1,269.57 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,892.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,126.12` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,792.94` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,126.22` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -81,9 +81,10 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Exterior lights | 7 | Super Bright LEDs VAL2-NW9 floods | $29.99 | $209.93 | [Super Bright LEDs price signal](https://www.superbrightleds.com/vehicle-lights/off-road-lights/9-rv-trailer-led-light-porch-and-utility-light-1450-lumen-12v) | Seven 4000 K flood/scene fixtures. |
 | ORDERED | Floor track | 2 | 8 ft flanged L-track sections | $80.00 | $160.00 | [US Cargo Control price signal](https://www.uscargocontrol.com/products/96-flanged-airline-style-track-aluminum) | Receipt needed; user has two sections on the way. |
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
+| ORDERED | GPS | 1 each | LandAirSea Overdrive Permanent GPS Tracker with hardwire cable | $100.00 | $100.00 | [Actual ordered price](https://landairsea.com/products/landairsea-overdrive) | Ordered for 100.00; expected arrival June 12, 2026. Primary hidden Oakland-storage tracker, hardwired to the 24 V block on a 3 A branch. Subscription required. |
 | ORDERED | Security | 1 | Nu-Set 8-1/4 in high-security trailer-door puck hasp | $20.00 | $20.00 | [Actual ordered price](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | User ordered Nu-Set RV high-security hasp for puck lock for 20.00. Source says hardware is not included. |
 
-Committed / purchased subtotal: **$4,233.28**.
+Committed / purchased subtotal: **$4,333.28**.
 
 ## Remaining Juplaya Buys
 
@@ -103,10 +104,9 @@ Committed / purchased subtotal: **$4,233.28**.
 | BUY NOW | 1 set | Cabinet ventilation: 24 V fan thermostat transfer grilles/filter | $125.00 | $125.00 | Allowance | Cabin-side intake/exhaust plan no through-wall vent for now. |
 | BUY NOW | 1 set | Fused cigarette-lighter receptacles for cabinet 12 V | $40.00 | $40.00 | Allowance | Auxiliary only not a distributed 12 V rail. |
 | BUY NOW | 1 | Scanstrut SC-USB-F3 Flip Pro Max dual USB-C | $50.99 | $50.99 | [Defender price signal](https://defender.com/en_us/scanstrut-flip-pro-max-dual-usb-c-charge-socket-sc-usb-f3) | 24 V input unlocks full USB-C output. |
-| BUY NOW | 1 each | LandAirSea Overdrive GPS + hardwire cable | $99.90 | $99.90 | [Tracker + hardwire price signal](https://landairsea.com/products/landairsea-overdrive) | Preferred for Oakland storage if delivery timing allows: larger 4240 mAh backup battery, commercial/rugged tracker, stronger GNSS/cellular antennas. LandAirSea 54 + USB-C hardwire remains the acceptable immediate fallback at about 54.90. Both require a subscription. |
 | BUY NOW | 1 lot | 4 AWG tongue pre-wire + Anderson connector for future truck charging | $200.00 | $200.00 | Allowance | Pull while walls are open; active charging hardware deferred. |
 
-Power / solar / cabinet remaining subtotal: **$2,653.60**.
+Power / solar / cabinet remaining subtotal: **$2,553.70**.
 
 ### Climate / envelope / awning
 
@@ -169,7 +169,7 @@ Lighting / switches / security remaining subtotal: **$1,269.57**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,892.84**.
+Remaining Juplaya subtotal: **$10,792.94**.
 
 ## Deferred / Not Juplaya
 

@@ -133,7 +133,7 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 | Fridge, Dometic CFX3 95DZ | ~4.6 A running | 10 A | 14 AWG | 24 V native; verify less than 3 percent round-trip voltage drop |
 | LED lighting zones | ~4-10 A exterior depending on fixtures; ~2-3 A interior typical | 5 A per zone | TBD | 24 V interior strips plus exterior zones below |
 | Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 7.5 A | TBD | 24 V in to USB-C PD |
-| LandAirSea Overdrive GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security; 54 + USB-C hardwire acceptable fallback |
+| LandAirSea Overdrive Permanent GPS | <0.1 A typical | 3 A | TBD | ordered; hardwired always-on security |
 | Door switch | signal only | TBD | TBD | dry contact |
 | Winter heater outlet | ~1-2 A run; glow up to ~11 A | 15 A | 12 AWG | exterior reachable; N4 glow may exceed current July converter margin |
 | Optional C1000 top-up | up to 10 A, about 240 W | TBD | TBD | manual/fused branch only; disable before it starves critical 24 V loads |
