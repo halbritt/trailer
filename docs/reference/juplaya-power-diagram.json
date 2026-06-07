@@ -1,0 +1,3408 @@
+{
+  "nodes": [
+    {
+      "id": "jt-bg-solar",
+      "type": "rect",
+      "x": 70,
+      "y": 90,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 1270,
+        "height": 850,
+        "zIndex": -1,
+        "fillColor": "#EAFBFF",
+        "locked": true
+      }
+    },
+    {
+      "id": "jt-label-solar",
+      "type": "text",
+      "x": 110,
+      "y": 105,
+      "ports": [],
+      "data": {
+        "label": "Trailer PV Sources",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 420,
+        "height": 110,
+        "fontSize": 34,
+        "fontColor": "#000000",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-bg-battery",
+      "type": "rect",
+      "x": 1430,
+      "y": 90,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 850,
+        "height": 1040,
+        "zIndex": -1,
+        "fillColor": "#EEFDF2",
+        "locked": true
+      }
+    },
+    {
+      "id": "jt-label-battery",
+      "type": "text",
+      "x": 1470,
+      "y": 105,
+      "ports": [],
+      "data": {
+        "label": "48 V Battery / DC Cabinet",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 420,
+        "height": 110,
+        "fontSize": 34,
+        "fontColor": "#000000",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-bg-loads",
+      "type": "rect",
+      "x": 2370,
+      "y": 90,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 880,
+        "height": 1040,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "jt-label-loads",
+      "type": "text",
+      "x": 2420,
+      "y": 105,
+      "ports": [],
+      "data": {
+        "label": "24 V / 12 V Loads",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 420,
+        "height": 110,
+        "fontSize": 34,
+        "fontColor": "#000000",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-bg-island",
+      "type": "rect",
+      "x": 70,
+      "y": 1210,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 1600,
+        "height": 420,
+        "zIndex": -1,
+        "fillColor": "#F8FAFC",
+        "locked": true
+      }
+    },
+    {
+      "id": "jt-label-island",
+      "type": "text",
+      "x": 110,
+      "y": 1225,
+      "ports": [],
+      "data": {
+        "label": "Standalone C1000 Island",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 420,
+        "height": 110,
+        "fontSize": 34,
+        "fontColor": "#000000",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-bg-notes",
+      "type": "rect",
+      "x": 1790,
+      "y": 1210,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 1460,
+        "height": 420,
+        "zIndex": -1,
+        "fillColor": "#F8FAFC",
+        "locked": true
+      }
+    },
+    {
+      "id": "jt-label-notes",
+      "type": "text",
+      "x": 1830,
+      "y": 1225,
+      "ports": [],
+      "data": {
+        "label": "Guardrails",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 420,
+        "height": 110,
+        "fontSize": 34,
+        "fontColor": "#000000",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-roof-panel-1",
+      "type": "solarPanel",
+      "x": 120,
+      "y": 250,
+      "ports": [
+        {
+          "id": "jt-roof-panel-1-pv-plus",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-roof-panel-1-pv-minus",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Roof LG455 #1",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 455,
+        "voc": 49.9,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "jt-roof-panel-1-rated-power",
+            "name": "Rated Power",
+            "value": "455 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-1-voc",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "49.9 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-1-impp",
+            "name": "MPP Current",
+            "value": "10.83 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-1-isc",
+            "name": "Short-circuit Current",
+            "value": "11.39 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 15,
+        "metadataFontSize": 13
+      }
+    },
+    {
+      "id": "jt-roof-panel-2",
+      "type": "solarPanel",
+      "x": 340,
+      "y": 250,
+      "ports": [
+        {
+          "id": "jt-roof-panel-2-pv-plus",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-roof-panel-2-pv-minus",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Roof LG455 #2",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 455,
+        "voc": 49.9,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "jt-roof-panel-2-rated-power",
+            "name": "Rated Power",
+            "value": "455 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-2-voc",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "49.9 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-2-impp",
+            "name": "MPP Current",
+            "value": "10.83 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-2-isc",
+            "name": "Short-circuit Current",
+            "value": "11.39 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 15,
+        "metadataFontSize": 13
+      }
+    },
+    {
+      "id": "jt-roof-panel-3",
+      "type": "solarPanel",
+      "x": 560,
+      "y": 250,
+      "ports": [
+        {
+          "id": "jt-roof-panel-3-pv-plus",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-roof-panel-3-pv-minus",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Roof LG455 #3",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 455,
+        "voc": 49.9,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "jt-roof-panel-3-rated-power",
+            "name": "Rated Power",
+            "value": "455 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-3-voc",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "49.9 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-3-impp",
+            "name": "MPP Current",
+            "value": "10.83 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-panel-3-isc",
+            "name": "Short-circuit Current",
+            "value": "11.39 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 15,
+        "metadataFontSize": 13
+      }
+    },
+    {
+      "id": "jt-roof-pv-breaker",
+      "type": "mcb-double",
+      "x": 815,
+      "y": 320,
+      "ports": [
+        {
+          "id": "jt-roof-pv-breaker-pv-plus-in",
+          "side": "top",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-roof-pv-breaker-pv-minus-in",
+          "side": "top",
+          "kind": "PV-",
+          "index": 1
+        },
+        {
+          "id": "jt-roof-pv-breaker-pv-plus-out",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-roof-pv-breaker-pv-minus-out",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Roof PV disconnect\n20 A / 250 V class",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-mcb-double",
+        "poles": "Double",
+        "rated-current": 20,
+        "trip-curve": "B",
+        "rated-voltage": 250,
+        "width": 70,
+        "height": 105,
+        "properties": [
+          {
+            "id": "jt-roof-pv-breaker-poles",
+            "name": "Poles",
+            "value": "Double",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-pv-breaker-rated-current",
+            "name": "Rated Current",
+            "value": "20 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-roof-pv-breaker-rated-voltage",
+            "name": "Rated Voltage",
+            "value": "250 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-mppt-250-60",
+      "type": "solar",
+      "x": 1060,
+      "y": 250,
+      "ports": [
+        {
+          "id": "jt-mppt-250-60-dc-minus-a",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "jt-mppt-250-60-dc-plus-a",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 3
+        },
+        {
+          "id": "jt-mppt-250-60-dc-minus-b",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 4
+        },
+        {
+          "id": "jt-mppt-250-60-dc-plus-b",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 5
+        },
+        {
+          "id": "jt-mppt-250-60-pv-plus",
+          "side": "top",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-mppt-250-60-pv-minus",
+          "side": "top",
+          "kind": "PV-",
+          "index": 1
+        },
+        {
+          "id": "jt-mppt-250-60-ground",
+          "side": "left",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Victron SmartSolar\n250/60-Tr",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "mppt-controller",
+        "ampRating": 60,
+        "maxInputVoltage": 250,
+        "outputVoltage": 48,
+        "width": 360,
+        "height": 244,
+        "properties": [
+          {
+            "id": "jt-mppt-250-60-system-voltage",
+            "name": "System Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-mppt-250-60-rated-charge-current",
+            "name": "Rated Charge Current",
+            "value": "60 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-mppt-250-60-max-pv-voc",
+            "name": "Max PV Open-circuit Voltage (Voc)",
+            "value": "250 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21,
+        "metadataFontSize": 18
+      }
+    },
+    {
+      "id": "jt-ground-panel-1",
+      "type": "solarPanel",
+      "x": 120,
+      "y": 680,
+      "ports": [
+        {
+          "id": "jt-ground-panel-1-pv-plus",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-ground-panel-1-pv-minus",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Ground LG455 #1",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 455,
+        "voc": 49.9,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "jt-ground-panel-1-rated-power",
+            "name": "Rated Power",
+            "value": "455 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-panel-1-voc",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "49.9 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-panel-1-impp",
+            "name": "MPP Current",
+            "value": "10.83 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-panel-1-isc",
+            "name": "Short-circuit Current",
+            "value": "11.39 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 15,
+        "metadataFontSize": 13
+      }
+    },
+    {
+      "id": "jt-ground-panel-2",
+      "type": "solarPanel",
+      "x": 340,
+      "y": 680,
+      "ports": [
+        {
+          "id": "jt-ground-panel-2-pv-plus",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-ground-panel-2-pv-minus",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Ground LG455 #2",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 455,
+        "voc": 49.9,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "jt-ground-panel-2-rated-power",
+            "name": "Rated Power",
+            "value": "455 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-panel-2-voc",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "49.9 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-panel-2-impp",
+            "name": "MPP Current",
+            "value": "10.83 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-panel-2-isc",
+            "name": "Short-circuit Current",
+            "value": "11.39 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 15,
+        "metadataFontSize": 13
+      }
+    },
+    {
+      "id": "jt-ground-pv-breaker",
+      "type": "mcb-double",
+      "x": 815,
+      "y": 730,
+      "ports": [
+        {
+          "id": "jt-ground-pv-breaker-pv-plus-in",
+          "side": "top",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-ground-pv-breaker-pv-minus-in",
+          "side": "top",
+          "kind": "PV-",
+          "index": 1
+        },
+        {
+          "id": "jt-ground-pv-breaker-pv-plus-out",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-ground-pv-breaker-pv-minus-out",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Ground PV disconnect\n20 A / 150 V class",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-mcb-double",
+        "poles": "Double",
+        "rated-current": 20,
+        "trip-curve": "B",
+        "rated-voltage": 150,
+        "width": 70,
+        "height": 105,
+        "properties": [
+          {
+            "id": "jt-ground-pv-breaker-poles",
+            "name": "Poles",
+            "value": "Double",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-pv-breaker-rated-current",
+            "name": "Rated Current",
+            "value": "20 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ground-pv-breaker-rated-voltage",
+            "name": "Rated Voltage",
+            "value": "150 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-mppt-150-35",
+      "type": "solar",
+      "x": 1060,
+      "y": 660,
+      "ports": [
+        {
+          "id": "jt-mppt-150-35-dc-minus-a",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "jt-mppt-150-35-dc-plus-a",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 3
+        },
+        {
+          "id": "jt-mppt-150-35-dc-minus-b",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 4
+        },
+        {
+          "id": "jt-mppt-150-35-dc-plus-b",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 5
+        },
+        {
+          "id": "jt-mppt-150-35-pv-plus",
+          "side": "top",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-mppt-150-35-pv-minus",
+          "side": "top",
+          "kind": "PV-",
+          "index": 1
+        },
+        {
+          "id": "jt-mppt-150-35-ground",
+          "side": "left",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Victron SmartSolar\n150/35",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "mppt-controller",
+        "ampRating": 35,
+        "maxInputVoltage": 150,
+        "outputVoltage": 48,
+        "width": 360,
+        "height": 244,
+        "properties": [
+          {
+            "id": "jt-mppt-150-35-system-voltage",
+            "name": "System Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-mppt-150-35-rated-charge-current",
+            "name": "Rated Charge Current",
+            "value": "35 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-mppt-150-35-max-pv-voc",
+            "name": "Max PV Open-circuit Voltage (Voc)",
+            "value": "150 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21,
+        "metadataFontSize": 18
+      }
+    },
+    {
+      "id": "jt-pos-bus",
+      "type": "busbar",
+      "x": 1700,
+      "y": 400,
+      "ports": [
+        {
+          "id": "jt-pos-bus-top-0",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-pos-bus-top-1",
+          "side": "top",
+          "kind": "DC+",
+          "index": 1
+        },
+        {
+          "id": "jt-pos-bus-top-2",
+          "side": "top",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-pos-bus-top-3",
+          "side": "top",
+          "kind": "DC+",
+          "index": 3
+        },
+        {
+          "id": "jt-pos-bus-top-4",
+          "side": "top",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "jt-pos-bus-top-5",
+          "side": "top",
+          "kind": "DC+",
+          "index": 5
+        },
+        {
+          "id": "jt-pos-bus-bottom-0",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-pos-bus-bottom-1",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 1
+        },
+        {
+          "id": "jt-pos-bus-bottom-2",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-pos-bus-bottom-3",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 3
+        },
+        {
+          "id": "jt-pos-bus-bottom-4",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "jt-pos-bus-bottom-5",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 5
+        }
+      ],
+      "data": {
+        "label": "48 V Positive Busbar",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "positive-busbar",
+        "rated-current": 300,
+        "width": 430,
+        "height": 120,
+        "properties": [
+          {
+            "id": "jt-pos-bus-rated-current",
+            "name": "Rated Current",
+            "value": "300 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "jt-neg-bus",
+      "type": "busbar",
+      "x": 1700,
+      "y": 650,
+      "ports": [
+        {
+          "id": "jt-neg-bus-top-0",
+          "side": "top",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "jt-neg-bus-top-1",
+          "side": "top",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-neg-bus-top-2",
+          "side": "top",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "jt-neg-bus-top-3",
+          "side": "top",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-neg-bus-top-4",
+          "side": "top",
+          "kind": "DC-",
+          "index": 4
+        },
+        {
+          "id": "jt-neg-bus-top-5",
+          "side": "top",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "jt-neg-bus-bottom-0",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "jt-neg-bus-bottom-1",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-neg-bus-bottom-2",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "jt-neg-bus-bottom-3",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-neg-bus-bottom-4",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 4
+        },
+        {
+          "id": "jt-neg-bus-bottom-5",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "jt-neg-bus-ground",
+          "side": "left",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "48 V Negative Busbar",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "negative-busbar",
+        "rated-current": 300,
+        "width": 430,
+        "height": 120,
+        "properties": [
+          {
+            "id": "jt-neg-bus-rated-current",
+            "name": "Rated Current",
+            "value": "300 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "jt-battery",
+      "type": "battery",
+      "x": 1700,
+      "y": 1000,
+      "ports": [
+        {
+          "id": "jt-battery-dc-minus",
+          "side": "top",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "jt-battery-dc-plus",
+          "side": "top",
+          "kind": "DC+",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "LiTime 48 V 100 Ah ComFlex",
+        "brand": "generic",
+        "category": "batteries",
+        "componentId": "lithium-battery",
+        "system-voltage": 48,
+        "capacity": 100,
+        "chemistry": "LiFePO4",
+        "integrated-bms": "Yes",
+        "seriesAllowed": false,
+        "width": 390,
+        "height": 240,
+        "properties": [
+          {
+            "id": "jt-battery-system-voltage",
+            "name": "System Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-battery-capacity",
+            "name": "Capacity",
+            "value": "100 Ah / 5.12 kWh",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-battery-chemistry",
+            "name": "Chemistry",
+            "value": "LiFePO4",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-battery-continuous-current",
+            "name": "Continuous Current",
+            "value": "100 A charge/discharge",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18,
+        "metadataFontSize": 15
+      }
+    },
+    {
+      "id": "jt-main-fuse",
+      "type": "fuse",
+      "x": 1910,
+      "y": 860,
+      "ports": [
+        {
+          "id": "jt-main-fuse-dc-plus-in",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-main-fuse-dc-plus-out",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Main Class-T\nOCP TBD",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "class-t-fuse",
+        "rated-current": 125,
+        "width": 120,
+        "height": 30,
+        "properties": [
+          {
+            "id": "jt-main-fuse-rated-current",
+            "name": "Rated Current",
+            "value": "125 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "rotation": 90
+      }
+    },
+    {
+      "id": "jt-shunt",
+      "type": "component",
+      "x": 1490,
+      "y": 865,
+      "ports": [
+        {
+          "id": "jt-shunt-dc-minus-in",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-shunt-dc-minus-out",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-shunt-sig",
+          "side": "top",
+          "kind": "SIG",
+          "index": 0
+        },
+        {
+          "id": "jt-shunt-dc-plus-sense",
+          "side": "top",
+          "kind": "DC+",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "500 A Shunt",
+        "brand": "generic",
+        "category": "monitoring",
+        "componentId": "shunt",
+        "width": 210,
+        "height": 65,
+        "ampRating": 500,
+        "rotation": 90,
+        "properties": [
+          {
+            "id": "jt-shunt-shunt-rating",
+            "name": "Shunt Rating",
+            "value": "500 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-shunt-system-voltage",
+            "name": "System Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-dc-ground",
+      "type": "groundPoint",
+      "x": 1430,
+      "y": 650,
+      "ports": [
+        {
+          "id": "jt-dc-ground-chassis-top",
+          "side": "top",
+          "kind": "CHASSIS",
+          "index": 0
+        },
+        {
+          "id": "jt-dc-ground-chassis-right-a",
+          "side": "right",
+          "kind": "CHASSIS",
+          "index": 0
+        },
+        {
+          "id": "jt-dc-ground-chassis-right-b",
+          "side": "right",
+          "kind": "CHASSIS",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "DC Ground Point",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "chassis-ground-point",
+        "groundType": "DC",
+        "width": 130,
+        "height": 130,
+        "labelFontSizePx": 20
+      }
+    },
+    {
+      "id": "jt-velit-breaker",
+      "type": "mcb",
+      "x": 2170,
+      "y": 330,
+      "ports": [
+        {
+          "id": "jt-velit-breaker-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-velit-breaker-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Velit branch\nOCP TBD",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "rated-current": 20,
+        "rated-voltage": 80,
+        "poles": "Single",
+        "width": 90,
+        "height": 80,
+        "properties": [
+          {
+            "id": "jt-velit-breaker-rated-current",
+            "name": "Rated Current",
+            "value": "20 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-velit-breaker-rated-voltage",
+            "name": "Rated Voltage",
+            "value": "80 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-velit-breaker-poles",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-velit",
+      "type": "custom",
+      "x": 2520,
+      "y": 310,
+      "ports": [
+        {
+          "id": "jt-velit-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-velit-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Velit 2000R\n48 V rooftop AC",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 320,
+        "height": 160,
+        "properties": [
+          {
+            "id": "jt-velit-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "48 V",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-velit-rated-current",
+            "name": "Rated Current",
+            "value": "5-14 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-velit-rated-power",
+            "name": "Rated Power",
+            "value": "~670 W",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-orion24-input-breaker",
+      "type": "mcb",
+      "x": 2170,
+      "y": 560,
+      "ports": [
+        {
+          "id": "jt-orion24-input-breaker-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-orion24-input-breaker-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "48/24 input\n20 A breaker",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "rated-current": 20,
+        "rated-voltage": 80,
+        "poles": "Single",
+        "width": 90,
+        "height": 80,
+        "properties": [
+          {
+            "id": "jt-orion24-input-breaker-rated-current",
+            "name": "Rated Current",
+            "value": "20 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion24-input-breaker-rated-voltage",
+            "name": "Rated Voltage",
+            "value": "80 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion24-input-breaker-poles",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-orion-48-24",
+      "type": "dcdc",
+      "x": 2520,
+      "y": 500,
+      "ports": [
+        {
+          "id": "jt-orion-48-24-out-plus",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-orion-48-24-out-minus",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-orion-48-24-ground",
+          "side": "right",
+          "kind": "GND",
+          "index": 0
+        },
+        {
+          "id": "jt-orion-48-24-in-plus",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-orion-48-24-in-minus",
+          "side": "top",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Victron Orion-Tr\n48/24-16A isolated",
+        "brand": "generic",
+        "category": "dcdc-chargers",
+        "componentId": "smart-charger-dcdc",
+        "ampRating": 16,
+        "inputVoltage": 48,
+        "outputVoltage": 24,
+        "isIsolated": true,
+        "hasDPlus": false,
+        "width": 360,
+        "height": 176,
+        "properties": [
+          {
+            "id": "jt-orion-48-24-input-voltage",
+            "name": "Input Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-24-output-voltage",
+            "name": "Output Voltage",
+            "value": "24 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-24-rated-current",
+            "name": "Rated Output Current",
+            "value": "16 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-24-rated-power",
+            "name": "Rated Output Power",
+            "value": "384 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-24-isolation",
+            "name": "Isolation",
+            "value": "Isolated",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 20,
+        "metadataFontSize": 16
+      }
+    },
+    {
+      "id": "jt-blue-sea-5026",
+      "type": "fusebox",
+      "x": 2960,
+      "y": 510,
+      "ports": [
+        {
+          "id": "jt-blue-sea-5026-input-plus",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-blue-sea-5026-input-minus",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "jt-blue-sea-5026-left-plus-0",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-blue-sea-5026-left-minus-0",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-blue-sea-5026-left-plus-1",
+          "side": "left",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-blue-sea-5026-left-minus-1",
+          "side": "left",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-blue-sea-5026-left-plus-2",
+          "side": "left",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "jt-blue-sea-5026-left-minus-2",
+          "side": "left",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "jt-blue-sea-5026-left-plus-3",
+          "side": "left",
+          "kind": "DC+",
+          "index": 6
+        },
+        {
+          "id": "jt-blue-sea-5026-left-minus-3",
+          "side": "left",
+          "kind": "DC-",
+          "index": 7
+        },
+        {
+          "id": "jt-blue-sea-5026-left-plus-4",
+          "side": "left",
+          "kind": "DC+",
+          "index": 8
+        },
+        {
+          "id": "jt-blue-sea-5026-left-minus-4",
+          "side": "left",
+          "kind": "DC-",
+          "index": 9
+        },
+        {
+          "id": "jt-blue-sea-5026-left-plus-5",
+          "side": "left",
+          "kind": "DC+",
+          "index": 10
+        },
+        {
+          "id": "jt-blue-sea-5026-left-minus-5",
+          "side": "left",
+          "kind": "DC-",
+          "index": 11
+        },
+        {
+          "id": "jt-blue-sea-5026-right-plus-0",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-blue-sea-5026-right-minus-0",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-blue-sea-5026-right-plus-1",
+          "side": "right",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-blue-sea-5026-right-minus-1",
+          "side": "right",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-blue-sea-5026-right-plus-2",
+          "side": "right",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "jt-blue-sea-5026-right-minus-2",
+          "side": "right",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "jt-blue-sea-5026-right-plus-3",
+          "side": "right",
+          "kind": "DC+",
+          "index": 6
+        },
+        {
+          "id": "jt-blue-sea-5026-right-minus-3",
+          "side": "right",
+          "kind": "DC-",
+          "index": 7
+        },
+        {
+          "id": "jt-blue-sea-5026-right-plus-4",
+          "side": "right",
+          "kind": "DC+",
+          "index": 8
+        },
+        {
+          "id": "jt-blue-sea-5026-right-minus-4",
+          "side": "right",
+          "kind": "DC-",
+          "index": 9
+        },
+        {
+          "id": "jt-blue-sea-5026-right-plus-5",
+          "side": "right",
+          "kind": "DC+",
+          "index": 10
+        },
+        {
+          "id": "jt-blue-sea-5026-right-minus-5",
+          "side": "right",
+          "kind": "DC-",
+          "index": 11
+        }
+      ],
+      "data": {
+        "label": "Blue Sea 5026\n24 V fuse block",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-fuse-box",
+        "bladeCount": 12,
+        "bladeRatings": [],
+        "width": 165,
+        "height": 280,
+        "fuses": [],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-orion12-input-breaker",
+      "type": "mcb",
+      "x": 2170,
+      "y": 835,
+      "ports": [
+        {
+          "id": "jt-orion12-input-breaker-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-orion12-input-breaker-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "48/12 input\nOCP TBD",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "rated-current": 10,
+        "rated-voltage": 80,
+        "poles": "Single",
+        "width": 90,
+        "height": 80,
+        "properties": [
+          {
+            "id": "jt-orion12-input-breaker-rated-current",
+            "name": "Rated Current",
+            "value": "10 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion12-input-breaker-rated-voltage",
+            "name": "Rated Voltage",
+            "value": "80 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion12-input-breaker-poles",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-orion-48-12",
+      "type": "dcdc",
+      "x": 2520,
+      "y": 795,
+      "ports": [
+        {
+          "id": "jt-orion-48-12-out-plus",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-orion-48-12-out-minus",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-orion-48-12-ground",
+          "side": "right",
+          "kind": "GND",
+          "index": 0
+        },
+        {
+          "id": "jt-orion-48-12-in-plus",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-orion-48-12-in-minus",
+          "side": "top",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Victron Orion-Tr IP43\n48/12-20A isolated",
+        "brand": "generic",
+        "category": "dcdc-chargers",
+        "componentId": "smart-charger-dcdc",
+        "ampRating": 20,
+        "inputVoltage": 48,
+        "outputVoltage": 12,
+        "isIsolated": true,
+        "hasDPlus": false,
+        "width": 360,
+        "height": 176,
+        "properties": [
+          {
+            "id": "jt-orion-48-12-input-voltage",
+            "name": "Input Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-12-output-voltage",
+            "name": "Output Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-12-rated-current",
+            "name": "Rated Output Current",
+            "value": "20 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-12-rated-power",
+            "name": "Rated Output Power",
+            "value": "240 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion-48-12-isolation",
+            "name": "Isolation",
+            "value": "Isolated",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 20,
+        "metadataFontSize": 16
+      }
+    },
+    {
+      "id": "jt-12v-receptacles",
+      "type": "custom",
+      "x": 2960,
+      "y": 850,
+      "ports": [
+        {
+          "id": "jt-12v-receptacles-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-12v-receptacles-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "12 V cabinet\nreceptacles only",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 300,
+        "height": 150,
+        "properties": [
+          {
+            "id": "jt-12v-receptacles-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "12.2 V",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-12v-receptacles-rated-current",
+            "name": "Rated Current",
+            "value": "20 A max",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-12v-receptacles-rated-power",
+            "name": "Rated Power",
+            "value": "240 W",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-fridge",
+      "type": "custom",
+      "x": 3330,
+      "y": 330,
+      "ports": [
+        {
+          "id": "jt-fridge-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-fridge-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Dometic CFX3 95DZ\nfridge",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 320,
+        "height": 145,
+        "properties": [
+          {
+            "id": "jt-fridge-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "24 V",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-fridge-rated-current",
+            "name": "Rated Current",
+            "value": "4.6 A run",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-fridge-rated-power",
+            "name": "Rated Power",
+            "value": "1.0-1.3 kWh/day",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-lighting",
+      "type": "custom",
+      "x": 3330,
+      "y": 515,
+      "ports": [
+        {
+          "id": "jt-lighting-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-lighting-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Interior / exterior\nlighting zones",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 360,
+        "height": 170,
+        "properties": [
+          {
+            "id": "jt-lighting-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "24 V",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-lighting-rated-current",
+            "name": "Rated Current",
+            "value": "2-3 A int.; 5.25 A floods; 2.7 A awning",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-lighting-rated-power",
+            "name": "Rated Power",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-usb-gps-smartscan",
+      "type": "custom",
+      "x": 3330,
+      "y": 720,
+      "ports": [
+        {
+          "id": "jt-usb-gps-smartscan-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-usb-gps-smartscan-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "USB-C PD / GPS /\nSmartScan",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 360,
+        "height": 170,
+        "properties": [
+          {
+            "id": "jt-usb-gps-smartscan-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "24 V",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-usb-gps-smartscan-rated-current",
+            "name": "Rated Current",
+            "value": "USB up to 5 A; GPS <0.1 A; SmartScan TBD",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-usb-gps-smartscan-rated-power",
+            "name": "Rated Power",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-heater-topup",
+      "type": "custom",
+      "x": 3330,
+      "y": 930,
+      "ports": [
+        {
+          "id": "jt-heater-topup-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-heater-topup-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Heater rough-in /\noptional C1000 top-up",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 380,
+        "height": 170,
+        "properties": [
+          {
+            "id": "jt-heater-topup-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "24 V",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-heater-topup-rated-current",
+            "name": "Rated Current",
+            "value": "heater glow up to 11 A; top-up 10 A max",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-heater-topup-rated-power",
+            "name": "Rated Power",
+            "value": "shed first",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-ps400",
+      "type": "solarPanel",
+      "x": 140,
+      "y": 1390,
+      "ports": [
+        {
+          "id": "jt-ps400-pv-plus",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "jt-ps400-pv-minus",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Anker PS400",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 400,
+        "voc": 49.9,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "jt-ps400-rated-power",
+            "name": "Rated Power",
+            "value": "400 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ps400-voc",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "49.9 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ps400-impp",
+            "name": "MPP Current",
+            "value": "10.83 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-ps400-isc",
+            "name": "Short-circuit Current",
+            "value": "11.39 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 15,
+        "metadataFontSize": 13
+      }
+    },
+    {
+      "id": "jt-c1000",
+      "type": "custom",
+      "x": 550,
+      "y": 1360,
+      "ports": [
+        {
+          "id": "jt-c1000-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-c1000-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-c1000-pv-plus",
+          "side": "left",
+          "kind": "PV+",
+          "index": 2
+        },
+        {
+          "id": "jt-c1000-pv-minus",
+          "side": "left",
+          "kind": "PV-",
+          "index": 3
+        },
+        {
+          "id": "jt-c1000-ac-l",
+          "side": "right",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "jt-c1000-ac-n",
+          "side": "right",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "jt-c1000-ac-pe",
+          "side": "right",
+          "kind": "PE",
+          "index": 2
+        }
+      ],
+      "data": {
+        "label": "Anker SOLIX C1000\nportable power station",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 420,
+        "height": 220,
+        "properties": [
+          {
+            "id": "jt-c1000-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "11-60 V input",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-c1000-rated-current",
+            "name": "Rated Current",
+            "value": "12.5 A high-range / 10 A low-range",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-c1000-rated-power",
+            "name": "Rated Power",
+            "value": "1800 W AC",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-small-ac-loads",
+      "type": "custom",
+      "x": 1110,
+      "y": 1370,
+      "ports": [
+        {
+          "id": "jt-small-ac-loads-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-small-ac-loads-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-small-ac-loads-ac-l",
+          "side": "left",
+          "kind": "L",
+          "index": 2
+        },
+        {
+          "id": "jt-small-ac-loads-ac-n",
+          "side": "left",
+          "kind": "N",
+          "index": 3
+        },
+        {
+          "id": "jt-small-ac-loads-ac-pe",
+          "side": "left",
+          "kind": "PE",
+          "index": 4
+        }
+      ],
+      "data": {
+        "label": "Small AC / Starlink Mini\nlaptops, radios, chargers",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 420,
+        "height": 190,
+        "properties": [
+          {
+            "id": "jt-small-ac-loads-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "120 VAC island",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-small-ac-loads-rated-current",
+            "name": "Rated Current",
+            "value": "Starlink 25-40 W avg if used",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-small-ac-loads-rated-power",
+            "name": "Rated Power",
+            "value": "0.7-1.1 kWh/day if 24/7",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-note-guardrails",
+      "type": "text",
+      "x": 1840,
+      "y": 1310,
+      "ports": [],
+      "data": {
+        "label": "PV guardrail: roof 3S, ground 2S, and PS400 are separate sources. Never combine them on one tracker.\n24 V load guardrail: C1000 top-up, full USB-C, all-flood mode, and heater glow are managed loads.",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 420,
+        "height": 110,
+        "fontSize": 26,
+        "fontColor": "#000000",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-roof-pv-current",
+      "type": "text",
+      "x": 650,
+      "y": 505,
+      "ports": [],
+      "data": {
+        "label": "10.83 A MPP\n11.39 A Isc",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-ground-pv-current",
+      "type": "text",
+      "x": 650,
+      "y": 935,
+      "ports": [],
+      "data": {
+        "label": "10.83 A MPP\n11.39 A Isc",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-mppt250-current",
+      "type": "text",
+      "x": 1380,
+      "y": 455,
+      "ports": [],
+      "data": {
+        "label": "24-28 A expected\n60 A limit",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-mppt150-current",
+      "type": "text",
+      "x": 1380,
+      "y": 760,
+      "ports": [],
+      "data": {
+        "label": "16-19 A expected\n35 A limit",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-pack-current",
+      "type": "text",
+      "x": 1830,
+      "y": 795,
+      "ports": [],
+      "data": {
+        "label": "<=100 A pack",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-velit-current",
+      "type": "text",
+      "x": 2360,
+      "y": 270,
+      "ports": [],
+      "data": {
+        "label": "5-14 A @ 48 V",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-orion24-input-current",
+      "type": "text",
+      "x": 2360,
+      "y": 515,
+      "ports": [],
+      "data": {
+        "label": "~9.2 A in",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-orion24-output-current",
+      "type": "text",
+      "x": 2840,
+      "y": 615,
+      "ports": [],
+      "data": {
+        "label": "16 A max @ 24 V",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-orion12-input-current",
+      "type": "text",
+      "x": 2360,
+      "y": 790,
+      "ports": [],
+      "data": {
+        "label": "~5.8 A in",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-orion12-output-current",
+      "type": "text",
+      "x": 2830,
+      "y": 905,
+      "ports": [],
+      "data": {
+        "label": "20 A @ 12 V",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-c1000-topup-current",
+      "type": "text",
+      "x": 1490,
+      "y": 1265,
+      "ports": [],
+      "data": {
+        "label": "10 A max @ 24 V",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    },
+    {
+      "id": "jt-label-ps400-current",
+      "type": "text",
+      "x": 400,
+      "y": 1435,
+      "ports": [],
+      "data": {
+        "label": "8.33 A operating",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 250,
+        "height": 70,
+        "fontSize": 22,
+        "fontColor": "#475569",
+        "textAlign": "center"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "id": "jt-wire-roof-p1-minus-p2-plus",
+      "sourceNodeId": "jt-roof-panel-1",
+      "sourcePortId": "jt-roof-panel-1-pv-minus",
+      "targetNodeId": "jt-roof-panel-2",
+      "targetPortId": "jt-roof-panel-2-pv-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-roof-p1-minus-p2-plus-mid-1",
+          "x": 260,
+          "y": 560
+        },
+        {
+          "id": "jt-wire-roof-p1-minus-p2-plus-mid-2",
+          "x": 400,
+          "y": 560
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-roof-p2-minus-p3-plus",
+      "sourceNodeId": "jt-roof-panel-2",
+      "sourcePortId": "jt-roof-panel-2-pv-minus",
+      "targetNodeId": "jt-roof-panel-3",
+      "targetPortId": "jt-roof-panel-3-pv-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-roof-p2-minus-p3-plus-mid-1",
+          "x": 480,
+          "y": 560
+        },
+        {
+          "id": "jt-wire-roof-p2-minus-p3-plus-mid-2",
+          "x": 620,
+          "y": 560
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-roof-string-plus-breaker",
+      "sourceNodeId": "jt-roof-panel-1",
+      "sourcePortId": "jt-roof-panel-1-pv-plus",
+      "targetNodeId": "jt-roof-pv-breaker",
+      "targetPortId": "jt-roof-pv-breaker-pv-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-roof-string-plus-breaker-mid-1",
+          "x": 210,
+          "y": 610
+        },
+        {
+          "id": "jt-wire-roof-string-plus-breaker-mid-2",
+          "x": 850,
+          "y": 610
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-roof-string-minus-breaker",
+      "sourceNodeId": "jt-roof-panel-3",
+      "sourcePortId": "jt-roof-panel-3-pv-minus",
+      "targetNodeId": "jt-roof-pv-breaker",
+      "targetPortId": "jt-roof-pv-breaker-pv-minus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-roof-string-minus-breaker-mid-1",
+          "x": 650,
+          "y": 600
+        },
+        {
+          "id": "jt-wire-roof-string-minus-breaker-mid-2",
+          "x": 890,
+          "y": 600
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-roof-breaker-mppt-plus",
+      "sourceNodeId": "jt-roof-pv-breaker",
+      "sourcePortId": "jt-roof-pv-breaker-pv-plus-out",
+      "targetNodeId": "jt-mppt-250-60",
+      "targetPortId": "jt-mppt-250-60-pv-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-roof-breaker-mppt-plus-mid-1",
+          "x": 900,
+          "y": 470
+        },
+        {
+          "id": "jt-wire-roof-breaker-mppt-plus-mid-2",
+          "x": 1110,
+          "y": 470
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-roof-breaker-mppt-minus",
+      "sourceNodeId": "jt-roof-pv-breaker",
+      "sourcePortId": "jt-roof-pv-breaker-pv-minus-out",
+      "targetNodeId": "jt-mppt-250-60",
+      "targetPortId": "jt-mppt-250-60-pv-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-roof-breaker-mppt-minus-mid-1",
+          "x": 930,
+          "y": 490
+        },
+        {
+          "id": "jt-wire-roof-breaker-mppt-minus-mid-2",
+          "x": 1140,
+          "y": 490
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ground-p1-minus-p2-plus",
+      "sourceNodeId": "jt-ground-panel-1",
+      "sourcePortId": "jt-ground-panel-1-pv-minus",
+      "targetNodeId": "jt-ground-panel-2",
+      "targetPortId": "jt-ground-panel-2-pv-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-ground-p1-minus-p2-plus-mid-1",
+          "x": 260,
+          "y": 990
+        },
+        {
+          "id": "jt-wire-ground-p1-minus-p2-plus-mid-2",
+          "x": 400,
+          "y": 990
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ground-plus-breaker",
+      "sourceNodeId": "jt-ground-panel-1",
+      "sourcePortId": "jt-ground-panel-1-pv-plus",
+      "targetNodeId": "jt-ground-pv-breaker",
+      "targetPortId": "jt-ground-pv-breaker-pv-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-ground-plus-breaker-mid-1",
+          "x": 210,
+          "y": 1040
+        },
+        {
+          "id": "jt-wire-ground-plus-breaker-mid-2",
+          "x": 850,
+          "y": 1040
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ground-minus-breaker",
+      "sourceNodeId": "jt-ground-panel-2",
+      "sourcePortId": "jt-ground-panel-2-pv-minus",
+      "targetNodeId": "jt-ground-pv-breaker",
+      "targetPortId": "jt-ground-pv-breaker-pv-minus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-ground-minus-breaker-mid-1",
+          "x": 430,
+          "y": 1020
+        },
+        {
+          "id": "jt-wire-ground-minus-breaker-mid-2",
+          "x": 890,
+          "y": 1020
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ground-breaker-mppt-plus",
+      "sourceNodeId": "jt-ground-pv-breaker",
+      "sourcePortId": "jt-ground-pv-breaker-pv-plus-out",
+      "targetNodeId": "jt-mppt-150-35",
+      "targetPortId": "jt-mppt-150-35-pv-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-ground-breaker-mppt-plus-mid-1",
+          "x": 900,
+          "y": 880
+        },
+        {
+          "id": "jt-wire-ground-breaker-mppt-plus-mid-2",
+          "x": 1110,
+          "y": 880
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ground-breaker-mppt-minus",
+      "sourceNodeId": "jt-ground-pv-breaker",
+      "sourcePortId": "jt-ground-pv-breaker-pv-minus-out",
+      "targetNodeId": "jt-mppt-150-35",
+      "targetPortId": "jt-mppt-150-35-pv-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-ground-breaker-mppt-minus-mid-1",
+          "x": 930,
+          "y": 900
+        },
+        {
+          "id": "jt-wire-ground-breaker-mppt-minus-mid-2",
+          "x": 1140,
+          "y": 900
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-mppt250-pos-bus",
+      "sourceNodeId": "jt-mppt-250-60",
+      "sourcePortId": "jt-mppt-250-60-dc-plus-a",
+      "targetNodeId": "jt-pos-bus",
+      "targetPortId": "jt-pos-bus-top-0",
+      "midpoints": [
+        {
+          "id": "jt-wire-mppt250-pos-bus-mid-1",
+          "x": 1350,
+          "y": 500
+        },
+        {
+          "id": "jt-wire-mppt250-pos-bus-mid-2",
+          "x": 1700,
+          "y": 500
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-mppt250-neg-bus",
+      "sourceNodeId": "jt-mppt-250-60",
+      "sourcePortId": "jt-mppt-250-60-dc-minus-a",
+      "targetNodeId": "jt-neg-bus",
+      "targetPortId": "jt-neg-bus-top-0",
+      "midpoints": [
+        {
+          "id": "jt-wire-mppt250-neg-bus-mid-1",
+          "x": 1320,
+          "y": 620
+        },
+        {
+          "id": "jt-wire-mppt250-neg-bus-mid-2",
+          "x": 1700,
+          "y": 620
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-mppt150-pos-bus",
+      "sourceNodeId": "jt-mppt-150-35",
+      "sourcePortId": "jt-mppt-150-35-dc-plus-a",
+      "targetNodeId": "jt-pos-bus",
+      "targetPortId": "jt-pos-bus-top-1",
+      "midpoints": [
+        {
+          "id": "jt-wire-mppt150-pos-bus-mid-1",
+          "x": 1370,
+          "y": 720
+        },
+        {
+          "id": "jt-wire-mppt150-pos-bus-mid-2",
+          "x": 1620,
+          "y": 520
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-mppt150-neg-bus",
+      "sourceNodeId": "jt-mppt-150-35",
+      "sourcePortId": "jt-mppt-150-35-dc-minus-a",
+      "targetNodeId": "jt-neg-bus",
+      "targetPortId": "jt-neg-bus-top-1",
+      "midpoints": [
+        {
+          "id": "jt-wire-mppt150-neg-bus-mid-1",
+          "x": 1340,
+          "y": 810
+        },
+        {
+          "id": "jt-wire-mppt150-neg-bus-mid-2",
+          "x": 1620,
+          "y": 680
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-battery-plus-main-fuse",
+      "sourceNodeId": "jt-battery",
+      "sourcePortId": "jt-battery-dc-plus",
+      "targetNodeId": "jt-main-fuse",
+      "targetPortId": "jt-main-fuse-dc-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-battery-plus-main-fuse-mid-1",
+          "x": 1900,
+          "y": 980
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 35,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-main-fuse-pos-bus",
+      "sourceNodeId": "jt-main-fuse",
+      "sourcePortId": "jt-main-fuse-dc-plus-out",
+      "targetNodeId": "jt-pos-bus",
+      "targetPortId": "jt-pos-bus-bottom-0",
+      "midpoints": [
+        {
+          "id": "jt-wire-main-fuse-pos-bus-mid-1",
+          "x": 1900,
+          "y": 710
+        },
+        {
+          "id": "jt-wire-main-fuse-pos-bus-mid-2",
+          "x": 1780,
+          "y": 560
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 35,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-battery-minus-shunt",
+      "sourceNodeId": "jt-battery",
+      "sourcePortId": "jt-battery-dc-minus",
+      "targetNodeId": "jt-shunt",
+      "targetPortId": "jt-shunt-dc-minus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-battery-minus-shunt-mid-1",
+          "x": 1560,
+          "y": 980
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 35,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-shunt-neg-bus",
+      "sourceNodeId": "jt-shunt",
+      "sourcePortId": "jt-shunt-dc-minus-out",
+      "targetNodeId": "jt-neg-bus",
+      "targetPortId": "jt-neg-bus-bottom-0",
+      "midpoints": [
+        {
+          "id": "jt-wire-shunt-neg-bus-mid-1",
+          "x": 1560,
+          "y": 760
+        },
+        {
+          "id": "jt-wire-shunt-neg-bus-mid-2",
+          "x": 1720,
+          "y": 760
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 35,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-neg-bus-ground",
+      "sourceNodeId": "jt-neg-bus",
+      "sourcePortId": "jt-neg-bus-ground",
+      "targetNodeId": "jt-dc-ground",
+      "targetPortId": "jt-dc-ground-chassis-right-a",
+      "midpoints": [
+        {
+          "id": "jt-wire-neg-bus-ground-mid-1",
+          "x": 1560,
+          "y": 650
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-pos-bus-velit-breaker",
+      "sourceNodeId": "jt-pos-bus",
+      "sourcePortId": "jt-pos-bus-top-2",
+      "targetNodeId": "jt-velit-breaker",
+      "targetPortId": "jt-velit-breaker-dc-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-pos-bus-velit-breaker-mid-1",
+          "x": 2100,
+          "y": 410
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-velit-breaker-load-plus",
+      "sourceNodeId": "jt-velit-breaker",
+      "sourcePortId": "jt-velit-breaker-dc-plus-out",
+      "targetNodeId": "jt-velit",
+      "targetPortId": "jt-velit-dc-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-velit-breaker-load-plus-mid-1",
+          "x": 2380,
+          "y": 350
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-neg-bus-velit",
+      "sourceNodeId": "jt-neg-bus",
+      "sourcePortId": "jt-neg-bus-top-2",
+      "targetNodeId": "jt-velit",
+      "targetPortId": "jt-velit-dc-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-neg-bus-velit-mid-1",
+          "x": 2100,
+          "y": 665
+        },
+        {
+          "id": "jt-wire-neg-bus-velit-mid-2",
+          "x": 2380,
+          "y": 430
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-pos-bus-orion24-breaker",
+      "sourceNodeId": "jt-pos-bus",
+      "sourcePortId": "jt-pos-bus-top-3",
+      "targetNodeId": "jt-orion24-input-breaker",
+      "targetPortId": "jt-orion24-input-breaker-dc-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-pos-bus-orion24-breaker-mid-1",
+          "x": 2100,
+          "y": 555
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion24-breaker-input-plus",
+      "sourceNodeId": "jt-orion24-input-breaker",
+      "sourcePortId": "jt-orion24-input-breaker-dc-plus-out",
+      "targetNodeId": "jt-orion-48-24",
+      "targetPortId": "jt-orion-48-24-in-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion24-breaker-input-plus-mid-1",
+          "x": 2370,
+          "y": 555
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-neg-bus-orion24-input",
+      "sourceNodeId": "jt-neg-bus",
+      "sourcePortId": "jt-neg-bus-top-3",
+      "targetNodeId": "jt-orion-48-24",
+      "targetPortId": "jt-orion-48-24-in-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-neg-bus-orion24-input-mid-1",
+          "x": 2250,
+          "y": 675
+        },
+        {
+          "id": "jt-wire-neg-bus-orion24-input-mid-2",
+          "x": 2550,
+          "y": 610
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion24-output-plus-fusebox",
+      "sourceNodeId": "jt-orion-48-24",
+      "sourcePortId": "jt-orion-48-24-out-plus",
+      "targetNodeId": "jt-blue-sea-5026",
+      "targetPortId": "jt-blue-sea-5026-input-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion24-output-plus-fusebox-mid-1",
+          "x": 2770,
+          "y": 650
+        },
+        {
+          "id": "jt-wire-orion24-output-plus-fusebox-mid-2",
+          "x": 3020,
+          "y": 650
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion24-output-minus-fusebox",
+      "sourceNodeId": "jt-orion-48-24",
+      "sourcePortId": "jt-orion-48-24-out-minus",
+      "targetNodeId": "jt-blue-sea-5026",
+      "targetPortId": "jt-blue-sea-5026-input-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion24-output-minus-fusebox-mid-1",
+          "x": 2770,
+          "y": 720
+        },
+        {
+          "id": "jt-wire-orion24-output-minus-fusebox-mid-2",
+          "x": 3020,
+          "y": 720
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-pos-bus-orion12-breaker",
+      "sourceNodeId": "jt-pos-bus",
+      "sourcePortId": "jt-pos-bus-bottom-1",
+      "targetNodeId": "jt-orion12-input-breaker",
+      "targetPortId": "jt-orion12-input-breaker-dc-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-pos-bus-orion12-breaker-mid-1",
+          "x": 2070,
+          "y": 830
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion12-breaker-input-plus",
+      "sourceNodeId": "jt-orion12-input-breaker",
+      "sourcePortId": "jt-orion12-input-breaker-dc-plus-out",
+      "targetNodeId": "jt-orion-48-12",
+      "targetPortId": "jt-orion-48-12-in-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion12-breaker-input-plus-mid-1",
+          "x": 2360,
+          "y": 830
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-neg-bus-orion12-input",
+      "sourceNodeId": "jt-neg-bus",
+      "sourcePortId": "jt-neg-bus-bottom-1",
+      "targetNodeId": "jt-orion-48-12",
+      "targetPortId": "jt-orion-48-12-in-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-neg-bus-orion12-input-mid-1",
+          "x": 2240,
+          "y": 780
+        },
+        {
+          "id": "jt-wire-neg-bus-orion12-input-mid-2",
+          "x": 2540,
+          "y": 900
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion12-output-plus-receptacles",
+      "sourceNodeId": "jt-orion-48-12",
+      "sourcePortId": "jt-orion-48-12-out-plus",
+      "targetNodeId": "jt-12v-receptacles",
+      "targetPortId": "jt-12v-receptacles-dc-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion12-output-plus-receptacles-mid-1",
+          "x": 2790,
+          "y": 940
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion12-output-minus-receptacles",
+      "sourceNodeId": "jt-orion-48-12",
+      "sourcePortId": "jt-orion-48-12-out-minus",
+      "targetNodeId": "jt-12v-receptacles",
+      "targetPortId": "jt-12v-receptacles-dc-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion12-output-minus-receptacles-mid-1",
+          "x": 2790,
+          "y": 990
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-fridge-plus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-plus-0",
+      "targetNodeId": "jt-fridge",
+      "targetPortId": "jt-fridge-dc-plus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-fridge-minus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-minus-0",
+      "targetNodeId": "jt-fridge",
+      "targetPortId": "jt-fridge-dc-minus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-lighting-plus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-plus-1",
+      "targetNodeId": "jt-lighting",
+      "targetPortId": "jt-lighting-dc-plus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-lighting-minus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-minus-1",
+      "targetNodeId": "jt-lighting",
+      "targetPortId": "jt-lighting-dc-minus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-usb-gps-smartscan-plus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-plus-2",
+      "targetNodeId": "jt-usb-gps-smartscan",
+      "targetPortId": "jt-usb-gps-smartscan-dc-plus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-usb-gps-smartscan-minus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-minus-2",
+      "targetNodeId": "jt-usb-gps-smartscan",
+      "targetPortId": "jt-usb-gps-smartscan-dc-minus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-heater-topup-plus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-plus-3",
+      "targetNodeId": "jt-heater-topup",
+      "targetPortId": "jt-heater-topup-dc-plus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-fusebox-jt-heater-topup-minus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-right-minus-3",
+      "targetNodeId": "jt-heater-topup",
+      "targetPortId": "jt-heater-topup-dc-minus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ps400-c1000-plus",
+      "sourceNodeId": "jt-ps400",
+      "sourcePortId": "jt-ps400-pv-plus",
+      "targetNodeId": "jt-c1000",
+      "targetPortId": "jt-c1000-pv-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-ps400-c1000-plus-mid-1",
+          "x": 390,
+          "y": 1500
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-ps400-c1000-minus",
+      "sourceNodeId": "jt-ps400",
+      "sourcePortId": "jt-ps400-pv-minus",
+      "targetNodeId": "jt-c1000",
+      "targetPortId": "jt-c1000-pv-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-ps400-c1000-minus-mid-1",
+          "x": 390,
+          "y": 1535
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-c1000-ac-l",
+      "sourceNodeId": "jt-c1000",
+      "sourcePortId": "jt-c1000-ac-l",
+      "targetNodeId": "jt-small-ac-loads",
+      "targetPortId": "jt-small-ac-loads-ac-l",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-c1000-ac-n",
+      "sourceNodeId": "jt-c1000",
+      "sourcePortId": "jt-c1000-ac-n",
+      "targetNodeId": "jt-small-ac-loads",
+      "targetPortId": "jt-small-ac-loads-ac-n",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-c1000-ac-pe",
+      "sourceNodeId": "jt-c1000",
+      "sourcePortId": "jt-c1000-ac-pe",
+      "targetNodeId": "jt-small-ac-loads",
+      "targetPortId": "jt-small-ac-loads-ac-pe",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-c1000-topup-plus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-left-plus-0",
+      "targetNodeId": "jt-c1000",
+      "targetPortId": "jt-c1000-dc-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-c1000-topup-plus-mid-1",
+          "x": 2840,
+          "y": 1260
+        },
+        {
+          "id": "jt-wire-c1000-topup-plus-mid-2",
+          "x": 760,
+          "y": 1260
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-c1000-topup-minus",
+      "sourceNodeId": "jt-blue-sea-5026",
+      "sourcePortId": "jt-blue-sea-5026-left-minus-0",
+      "targetNodeId": "jt-c1000",
+      "targetPortId": "jt-c1000-dc-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-c1000-topup-minus-mid-1",
+          "x": 2820,
+          "y": 1290
+        },
+        {
+          "id": "jt-wire-c1000-topup-minus-mid-2",
+          "x": 740,
+          "y": 1290
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    }
+  ],
+  "version": 1,
+  "projectName": "Juplaya Trailer Power System"
+}
