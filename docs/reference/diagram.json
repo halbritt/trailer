@@ -1,0 +1,3041 @@
+{
+  "nodes": [
+    {
+      "id": "1767732638285-bzaqa7gva",
+      "type": "rect",
+      "x": 1415,
+      "y": 545,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 650,
+        "height": 1165,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767525060148-nm0ijre7a",
+      "type": "component",
+      "x": 2290,
+      "y": 2420,
+      "ports": [
+        {
+          "id": "1767525060148-mqtqail0r",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1767525060148-c7h6wxfj4",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1767525060148-q84orsrx5",
+          "side": "top",
+          "kind": "SIG",
+          "index": 0
+        },
+        {
+          "id": "1768229113463-3n3y09npc",
+          "side": "top",
+          "kind": "DC+",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Shunt",
+        "brand": "generic",
+        "category": "monitoring",
+        "componentId": "shunt",
+        "width": 195,
+        "height": 60,
+        "ampRating": 500,
+        "rotation": 90,
+        "properties": [
+          {
+            "id": "shunt-rating-1767729050055-1dk2j",
+            "name": "Shunt Rating",
+            "value": "500 A",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "system-voltage-1767729050055-n0mgb",
+            "name": "System Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767525317965-le6s6q1pf",
+      "type": "dcdc",
+      "x": 1550,
+      "y": 1225,
+      "ports": [
+        {
+          "id": "1767525317965-vg7inhcw9",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "1767525317965-rusarf1u3",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "1767525317965-q1ipbobwj",
+          "side": "right",
+          "kind": "GND",
+          "index": 0
+        },
+        {
+          "id": "1767525334932-57vs88zmu",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767525335394-gyhi26tdx",
+          "side": "top",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Smart Charger (DC-DC)",
+        "brand": "generic",
+        "category": "dcdc-chargers",
+        "componentId": "smart-charger-dcdc",
+        "ampRating": 40,
+        "inputVoltage": 12,
+        "outputVoltage": 12,
+        "isIsolated": false,
+        "hasDPlus": false,
+        "width": 360,
+        "height": 176,
+        "properties": [
+          {
+            "id": "input-voltage-1767525317981-teim1",
+            "name": "Input Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "output-voltage-1767525317981-1fv4v",
+            "name": "Output Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767525317981-gvquh",
+            "name": "Rated Output Current",
+            "value": "50 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "ignition-input-1767525317981-ywr5x",
+            "name": "Ignition Input",
+            "value": "No",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "isolation-1767525317981-5ip3d",
+            "name": "Isolation",
+            "value": "Non-isolated",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "flipVertical": false,
+        "flipHorizontal": true,
+        "labelFontSizePx": 21,
+        "metadataFontSize": 18
+      }
+    },
+    {
+      "id": "1767525811415-zbl44wxzf",
+      "type": "solar",
+      "x": 2300,
+      "y": 1160,
+      "ports": [
+        {
+          "id": "1767525811415-0xx5ak18i",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "1767525811415-drsvyq7kx",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 3
+        },
+        {
+          "id": "1767525811415-oo1n1d0fs",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 4
+        },
+        {
+          "id": "1767525811415-pc4kz7qw4",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 5
+        },
+        {
+          "id": "1767525822268-0kjndfmbb",
+          "side": "top",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "1767525822672-ycusvcssr",
+          "side": "top",
+          "kind": "PV-",
+          "index": 1
+        },
+        {
+          "id": "1767785221609-6kzbtb0wf",
+          "side": "left",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "MPPT",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "mppt-controller",
+        "ampRating": 30,
+        "maxInputVoltage": 100,
+        "outputVoltage": 12,
+        "width": 360,
+        "height": 244,
+        "properties": [
+          {
+            "id": "system-voltage-1767525811434-kxbw0",
+            "name": "System Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-charge-current-1767525811434-vbo8w",
+            "name": "Rated Charge Current",
+            "value": "40 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "max-pv-voc-1767525811434-flbfi",
+            "name": "Max PV Open-circuit Voltage (Voc)",
+            "value": "100 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21,
+        "metadataFontSize": 18
+      }
+    },
+    {
+      "id": "1767727811101-y3xq47tu9",
+      "type": "component",
+      "x": 1585,
+      "y": 790,
+      "ports": [
+        {
+          "id": "1767727811101-b7bd5ieny",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767727811101-pbzfwrqfh",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Alternator",
+        "brand": "generic",
+        "category": "vehicle-sources",
+        "componentId": "alternator",
+        "output-voltage": 12,
+        "rated-current": 160,
+        "width": 300,
+        "height": 180,
+        "properties": [
+          {
+            "id": "output-voltage-1767727811111-mn4na",
+            "name": "Output Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767727811111-c19ai",
+            "name": "Rated Output Current",
+            "value": "160 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "rotation": 90,
+        "labelFontSizePx": 13
+      }
+    },
+    {
+      "id": "1767727831363-tnlzjxw7j",
+      "type": "fuse",
+      "x": 1695,
+      "y": 1485,
+      "ports": [
+        {
+          "id": "1767727831363-sr8bqu0qe",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767727831363-vur6jjuot",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "MEGA Fuse",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "mega-fuse",
+        "rated-current": 100,
+        "width": 105,
+        "height": 25,
+        "properties": [
+          {
+            "id": "rated-current-1767727831370-v6g5i",
+            "name": "Rated Current",
+            "value": "60 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "rotation": 90
+      }
+    },
+    {
+      "id": "1767727875968-p1xsbic3b",
+      "type": "fuse",
+      "x": 1705,
+      "y": 1125,
+      "ports": [
+        {
+          "id": "1767727875968-u697dyiem",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767727875968-rihewtqfa",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "MEGA Fuse",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "mega-fuse",
+        "rated-current": 100,
+        "width": 95,
+        "height": 20,
+        "properties": [
+          {
+            "id": "rated-current-1767727875976-3czp4",
+            "name": "Rated Current",
+            "value": "60 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "rotation": 90
+      }
+    },
+    {
+      "id": "1767727899379-qdu4tk4vi",
+      "type": "solarPanel",
+      "x": 2295,
+      "y": 735,
+      "ports": [
+        {
+          "id": "1767727911371-cnwh32dbq",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "1767727911629-fxbj09zq7",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Monocrystalline Solar Panel",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 200,
+        "voc": 24,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "rated-power-1767727899390-0eabw",
+            "name": "Rated Power",
+            "value": "200 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "voc-1767727899390-jlu7s",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "24.0 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 16,
+        "metadataFontSize": 14
+      }
+    },
+    {
+      "id": "1767727928622-alupw711e",
+      "type": "solarPanel",
+      "x": 2490,
+      "y": 735,
+      "ports": [
+        {
+          "id": "1767727928622-cr3qml2k1",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "1767727928622-pjxa520i8",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Monocrystalline Solar Panel",
+        "brand": "generic",
+        "category": "solar",
+        "componentId": "monocrystalline-panel",
+        "rated-power": 200,
+        "voc": 24,
+        "seriesAllowed": true,
+        "width": 175,
+        "height": 250,
+        "properties": [
+          {
+            "id": "rated-power-1767727899390-0eabw",
+            "name": "Rated Power",
+            "value": "200 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "voc-1767727899390-jlu7s",
+            "name": "Open-circuit Voltage (Voc)",
+            "value": "24.0 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 16,
+        "metadataFontSize": 14
+      }
+    },
+    {
+      "id": "1767727996290-qen2nxvg7",
+      "type": "consumer-unit",
+      "x": 3050,
+      "y": 1030,
+      "ports": [
+        {
+          "id": "1767728007222-q3bmzci1o",
+          "side": "top",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1767728007488-tvjxy7h1o",
+          "side": "top",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1767728007864-vunsma8fr",
+          "side": "top",
+          "kind": "PE",
+          "index": 2
+        },
+        {
+          "id": "1767728010439-yvwxrnj77",
+          "side": "bottom",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1767728010625-0dc3wvawd",
+          "side": "bottom",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1767728010964-wh7aofs1s",
+          "side": "bottom",
+          "kind": "PE",
+          "index": 2
+        },
+        {
+          "id": "1767785120701-2ccp6di2e",
+          "side": "right",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Consumer Unit",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "consumer-unit",
+        "main-switch": 63,
+        "rcd": 30,
+        "width": 240,
+        "height": 140,
+        "properties": [
+          {
+            "id": "main-switch-1767727996305-ixokw",
+            "name": "Main Switch",
+            "value": "63 A",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rcd-1767727996305-imr6l",
+            "name": "RCD",
+            "value": "30 mA",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767728071622-efxvb0m6c",
+      "type": "component",
+      "x": 3050,
+      "y": 695,
+      "ports": [
+        {
+          "id": "1767728075942-rnjbvt8vk",
+          "side": "bottom",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1767728076317-ng9b7onmz",
+          "side": "bottom",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1767728076600-vx66h6mgc",
+          "side": "bottom",
+          "kind": "PE",
+          "index": 2
+        }
+      ],
+      "data": {
+        "label": "Shore Power Inlet",
+        "brand": "generic",
+        "category": "vehicle-sources",
+        "componentId": "shore-power-inlet",
+        "nominal-voltage": 230,
+        "rated-current": 16,
+        "width": 240,
+        "height": 280,
+        "properties": [
+          {
+            "id": "nominal-voltage-1767728071635-fc8f6",
+            "name": "Nominal Voltage",
+            "value": "230 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767728071635-srcly",
+            "name": "Rated Current",
+            "value": "16 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 16
+      }
+    },
+    {
+      "id": "1767728666492-eyrlr76ad",
+      "type": "busbar",
+      "x": 2495,
+      "y": 1890,
+      "ports": [
+        {
+          "id": "1767728666492-y0v8jcoim",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767728666492-1n0zghs8i",
+          "side": "top",
+          "kind": "DC+",
+          "index": 1
+        },
+        {
+          "id": "1767728666492-k5bzj4k3v",
+          "side": "top",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "1767728666492-alwu0hzvx",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767728666492-tpb296a83",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 1
+        },
+        {
+          "id": "1767728666492-nf9h9ra9p",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 2
+        }
+      ],
+      "data": {
+        "label": "Positive Busbar",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "positive-busbar",
+        "rated-current": 300,
+        "width": 423,
+        "height": 120,
+        "properties": [
+          {
+            "id": "rated-current-1767728666505-f9zbg",
+            "name": "Rated Current",
+            "value": "300 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "1767728821019-zdgoy73ps",
+      "type": "busbar",
+      "x": 2020,
+      "y": 1890,
+      "ports": [
+        {
+          "id": "1767728821019-csvl1957n",
+          "side": "top",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "1767728821019-hu86dh2sg",
+          "side": "top",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1767728821019-cg5d64fxu",
+          "side": "top",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "1767728821019-5a3av5mpj",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "1767728821019-tfojaug3d",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1767728821019-debwkjelr",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 2
+        },
+        {
+          "id": "1767785237909-7idr5qhe2",
+          "side": "left",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Negative Busbar",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "negative-busbar",
+        "rated-current": 300,
+        "width": 423,
+        "height": 120,
+        "properties": [
+          {
+            "id": "rated-current-1767728821033-bxbeb",
+            "name": "Rated Current",
+            "value": "300 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "1767729028440-wiymot7dn",
+      "type": "fuse",
+      "x": 2685,
+      "y": 2785,
+      "ports": [
+        {
+          "id": "1767729028440-g0zmzoemg",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767729028440-uuinpc1ys",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Class T Fuse",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "class-t-fuse",
+        "rated-current": 80,
+        "width": 40,
+        "height": 75,
+        "properties": [
+          {
+            "id": "rated-current-1767729028453-ecr8t",
+            "name": "Rated Current",
+            "value": "275 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "rotation": 0
+      }
+    },
+    {
+      "id": "1767729069663-z2twp02e2",
+      "type": "monitor",
+      "x": 2475,
+      "y": 2370,
+      "ports": [
+        {
+          "id": "1767802326806-uepieej0t",
+          "side": "left",
+          "kind": "SIG",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Battery Monitor Display",
+        "brand": "generic",
+        "category": "monitoring",
+        "componentId": "battery-monitor-display",
+        "width": 143,
+        "height": 143
+      }
+    },
+    {
+      "id": "1767729131209-jkd8tsh3n",
+      "type": "battery",
+      "x": 2305,
+      "y": 2880,
+      "ports": [
+        {
+          "id": "1767802208806-a3kp6upan",
+          "side": "top",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "1767802209519-ak9oi40x1",
+          "side": "top",
+          "kind": "DC+",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Lithium Battery",
+        "brand": "generic",
+        "category": "batteries",
+        "componentId": "lithium-battery",
+        "system-voltage": 12,
+        "capacity": 100,
+        "chemistry": "LiFePO4",
+        "integrated-bms": "Yes",
+        "seriesAllowed": true,
+        "width": 360,
+        "height": 240,
+        "properties": [
+          {
+            "id": "system-voltage-1767729131221-y9uou",
+            "name": "System Voltage",
+            "value": "12 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "capacity-1767729131221-gkjzm",
+            "name": "Capacity",
+            "value": "200 Ah",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "chemistry-1767729131221-xf1zm",
+            "name": "Chemistry",
+            "value": "LiFePO₄",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "integrated-bms-1767729131221-4quh9",
+            "name": "Integrated BMS",
+            "value": "Yes",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21,
+        "metadataFontSize": 18
+      }
+    },
+    {
+      "id": "1767730107970-d33p86ec3",
+      "type": "consumer-unit",
+      "x": 3490,
+      "y": 2275,
+      "ports": [
+        {
+          "id": "1767730107970-v818eim73",
+          "side": "bottom",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1767730107970-gpx94te29",
+          "side": "bottom",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1767730107970-5ot92wq9w",
+          "side": "bottom",
+          "kind": "PE",
+          "index": 2
+        },
+        {
+          "id": "1767730145803-4g5gfkk4n",
+          "side": "left",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1767730146929-qcmpujld9",
+          "side": "left",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1767730147325-g0tzxufrn",
+          "side": "left",
+          "kind": "PE",
+          "index": 2
+        },
+        {
+          "id": "1767785085413-1gyiddddz",
+          "side": "top",
+          "kind": "GND",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Consumer Unit",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "consumer-unit",
+        "main-switch": 63,
+        "rcd": 30,
+        "width": 240,
+        "height": 140,
+        "properties": [
+          {
+            "id": "main-switch-1767727996305-ixokw",
+            "name": "Main Switch",
+            "value": "63 A",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rcd-1767727996305-imr6l",
+            "name": "RCD",
+            "value": "30 mA",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767730220604-pv3xomxnx",
+      "type": "isolator",
+      "x": 2670,
+      "y": 2680,
+      "ports": [
+        {
+          "id": "1767730234320-jp455a3rc",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767730234940-f252jwf9z",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "DC Isolator Switch",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-isolator",
+        "poles": "Double",
+        "rated-current": 300,
+        "width": 70,
+        "height": 70,
+        "properties": [
+          {
+            "id": "poles-1767730220618-197xl",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767730220618-kuwiu",
+            "name": "Rated Current",
+            "value": "300 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767730256654-y2m4zoi1p",
+      "type": "isolator",
+      "x": 2745,
+      "y": 2205,
+      "ports": [
+        {
+          "id": "1767730347827-0tkuxvmwr",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767730400372-tcrumpzi7",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "DC Isolator Switch",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-isolator",
+        "poles": "Double",
+        "rated-current": 300,
+        "width": 70,
+        "height": 70,
+        "properties": [
+          {
+            "id": "poles-1767730220618-197xl",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767730220618-kuwiu",
+            "name": "Rated Current",
+            "value": "300 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "rotation": 360
+      }
+    },
+    {
+      "id": "1767730303597-291dsyhbr",
+      "type": "fuse",
+      "x": 2850,
+      "y": 2225,
+      "ports": [
+        {
+          "id": "1767730303597-aabx45jxw",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767730303597-w55kodwbt",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "MEGA Fuse",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "mega-fuse",
+        "rated-current": 100,
+        "width": 110,
+        "height": 25,
+        "properties": [
+          {
+            "id": "rated-current-1767730303606-7m072",
+            "name": "Rated Current",
+            "value": "210 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767730451178-825iq7dz2",
+      "type": "outlet",
+      "x": 3530,
+      "y": 2470,
+      "ports": [
+        {
+          "id": "1767730463576-ijd1vaqeu",
+          "side": "top",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1767730463809-4102oyv5e",
+          "side": "top",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1767730464022-1map4prwp",
+          "side": "top",
+          "kind": "PE",
+          "index": 2
+        }
+      ],
+      "data": {
+        "label": "Plug Socket",
+        "brand": "generic",
+        "category": "ac-components",
+        "componentId": "plug-socket",
+        "rated-power": 2000,
+        "rated-voltage": 230,
+        "rated-current": 10,
+        "outletCount": 1,
+        "width": 160,
+        "height": 160,
+        "properties": [
+          {
+            "id": "rated-power-1767730451188-pgnol",
+            "name": "Rated Power",
+            "value": "2000 W",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-voltage-1767730451188-h8ffw",
+            "name": "Rated Voltage",
+            "value": "230 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767730451188-68ont",
+            "name": "Rated Current",
+            "value": "10 A",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767731063892-fjubhlowz",
+      "type": "fusebox",
+      "x": 1765,
+      "y": 2295,
+      "ports": [
+        {
+          "id": "1767731063892-1bhvpdmva",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767731063892-2fub5r9t2",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "1767731063892-qn0pyey6l",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767731063892-pkmsc2yeg",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1767731063892-m6geubd91",
+          "side": "left",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "1767731063892-y1tylr7lb",
+          "side": "left",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "1767731063892-bkhc14er5",
+          "side": "left",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "1767731063892-06f43yhsv",
+          "side": "left",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "1767731063892-td8kp4pu4",
+          "side": "left",
+          "kind": "DC+",
+          "index": 6
+        },
+        {
+          "id": "1767731063892-0u4nt1x75",
+          "side": "left",
+          "kind": "DC-",
+          "index": 7
+        },
+        {
+          "id": "1767731063892-d9bqfh1nn",
+          "side": "left",
+          "kind": "DC+",
+          "index": 8
+        },
+        {
+          "id": "1767731063892-kn7n4qxux",
+          "side": "left",
+          "kind": "DC-",
+          "index": 9
+        },
+        {
+          "id": "1767731063892-sky51rjvx",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767731063892-5rnetec70",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1767731063892-e6mdnvq4j",
+          "side": "right",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "1767731063892-ly6p8z3f8",
+          "side": "right",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "1767731063892-j7dypiz77",
+          "side": "right",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "1767731063892-fuyt2rlzq",
+          "side": "right",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "1767731063892-hllx9o0fv",
+          "side": "right",
+          "kind": "DC+",
+          "index": 6
+        },
+        {
+          "id": "1767731063892-vuaqkaspk",
+          "side": "right",
+          "kind": "DC-",
+          "index": 7
+        },
+        {
+          "id": "1767731063892-elcrpx7hc",
+          "side": "right",
+          "kind": "DC+",
+          "index": 8
+        },
+        {
+          "id": "1767731063892-slnz5j3c9",
+          "side": "right",
+          "kind": "DC-",
+          "index": 9
+        }
+      ],
+      "data": {
+        "label": "DC Fuse Box",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-fuse-box",
+        "bladeCount": 10,
+        "bladeRatings": [],
+        "width": 150,
+        "height": 237,
+        "fuses": [],
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "1767731074762-3rdciqg3j",
+      "type": "mcb",
+      "x": 2025,
+      "y": 2195,
+      "ports": [
+        {
+          "id": "1767731074762-yht1nazje",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767731074762-u4us82hdh",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "DC Inline Breaker",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "rated-current": 20,
+        "rated-voltage": 48,
+        "poles": "Single",
+        "width": 69,
+        "height": 100,
+        "properties": [
+          {
+            "id": "rated-current-1767731074770-aoezm",
+            "name": "Rated Current",
+            "value": "40 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "rated-voltage-1767731074770-95k04",
+            "name": "Rated Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "poles-1767731074770-pl9r7",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "rotation": 90
+      }
+    },
+    {
+      "id": "1767731316608-7ei30qkkq",
+      "type": "custom",
+      "x": 1255,
+      "y": 2290,
+      "ports": [
+        {
+          "id": "1767731316608-aw9jjjy3g",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767731316608-6av2oztjz",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "DC Loads",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 300,
+        "height": 240,
+        "properties": [
+          {
+            "id": "operating-voltage-1767731316622-63lj8",
+            "name": "Operating Voltage",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767731316622-gkiyn",
+            "name": "Rated Current",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-power-1767731316622-bfdzy",
+            "name": "Rated Power",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "1767731484187-zfbnc90nc",
+      "type": "mcb",
+      "x": 2435,
+      "y": 1440,
+      "ports": [
+        {
+          "id": "1767731484187-5ebp78kfd",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1767731484187-1to5ur5sp",
+          "side": "bottom",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "DC Inline Breaker",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "rated-current": 20,
+        "rated-voltage": 48,
+        "poles": "Single",
+        "width": 69,
+        "height": 100,
+        "properties": [
+          {
+            "id": "rated-current-1767731484195-xxmd3",
+            "name": "Rated Current",
+            "value": "50 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "rated-voltage-1767731484195-zadv5",
+            "name": "Rated Voltage",
+            "value": "48 V",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "poles-1767731484195-6zaxk",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767731591394-q56r75emo",
+      "type": "mcb-double",
+      "x": 2445,
+      "y": 1035,
+      "ports": [
+        {
+          "id": "1767731591393-o7sgfpxss",
+          "side": "top",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "1767731591393-33mpxeksy",
+          "side": "top",
+          "kind": "PV-",
+          "index": 1
+        },
+        {
+          "id": "1767731591393-caihmbmyk",
+          "side": "bottom",
+          "kind": "PV+",
+          "index": 0
+        },
+        {
+          "id": "1767731591393-v7xq7qnb9",
+          "side": "bottom",
+          "kind": "PV-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "MCB - DC",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-mcb-double",
+        "poles": "Double",
+        "rated-current": 20,
+        "trip-curve": "B",
+        "rated-voltage": 230,
+        "width": 70,
+        "height": 105,
+        "properties": [
+          {
+            "id": "poles-1767731591408-hhalh",
+            "name": "Poles",
+            "value": "Double",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "rated-current-1767731591408-0i4rg",
+            "name": "Rated Current",
+            "value": "32 A",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "trip-curve-1767731591408-sld66",
+            "name": "Trip Curve",
+            "value": "B",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "rated-voltage-1767731591408-i9ltp",
+            "name": "Rated Voltage",
+            "value": "230 V",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "1767732721697-whn0lq6gd",
+      "type": "rect",
+      "x": 2875,
+      "y": 535,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 585,
+        "height": 1170,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767732739245-knxuuvt9j",
+      "type": "text",
+      "x": 2985,
+      "y": 565,
+      "ports": [],
+      "data": {
+        "label": "Shore\nPower",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767732840059-ykdy33ikn",
+      "type": "text",
+      "x": 1560,
+      "y": 580,
+      "ports": [],
+      "data": {
+        "label": "Alternator Charging",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767732908057-pdqmhkb7q",
+      "type": "rect",
+      "x": 2155,
+      "y": 540,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 650,
+        "height": 1165,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767732927310-ydit2aicd",
+      "type": "text",
+      "x": 2300,
+      "y": 565,
+      "ports": [],
+      "data": {
+        "label": "Solar\nSystem",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767733001920-wgs2tpfo0",
+      "type": "rect",
+      "x": 2700,
+      "y": 2180,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 1090,
+        "height": 500,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767733038368-2swxbgcej",
+      "type": "text",
+      "x": 2760,
+      "y": 2545,
+      "ports": [],
+      "data": {
+        "label": "AC\nSystem",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000",
+        "textAlign": "left"
+      }
+    },
+    {
+      "id": "1767733079201-e3kyv09np",
+      "type": "rect",
+      "x": 1140,
+      "y": 2180,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 1090,
+        "height": 500,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767733120744-stzfzwje4",
+      "type": "text",
+      "x": 1820,
+      "y": 2540,
+      "ports": [],
+      "data": {
+        "label": "DC\nSystem",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000",
+        "textAlign": "right"
+      }
+    },
+    {
+      "id": "1767733360789-1aud37v76",
+      "type": "rect",
+      "x": 2110,
+      "y": 2725,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 755,
+        "height": 505,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767733456299-b894k0o28",
+      "type": "text",
+      "x": 2305,
+      "y": 3130,
+      "ports": [],
+      "data": {
+        "label": "Battery",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767782414547-0mgrgeng4",
+      "type": "rect",
+      "x": 1955,
+      "y": 1735,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 1035,
+        "height": 415,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767782430547-22x08seev",
+      "type": "text",
+      "x": 2285,
+      "y": 1775,
+      "ports": [],
+      "data": {
+        "label": "Distribution",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 48,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767785018898-owttbce6a",
+      "type": "groundPoint",
+      "x": 3545,
+      "y": 1890,
+      "ports": [
+        {
+          "id": "1767785018898-j0gwkrz2f",
+          "side": "left",
+          "kind": "CHASSIS",
+          "index": 0
+        },
+        {
+          "id": "1767785033847-qfuypndkx",
+          "side": "top",
+          "kind": "CHASSIS",
+          "index": 0
+        },
+        {
+          "id": "1767785035351-g3fva8shn",
+          "side": "bottom",
+          "kind": "CHASSIS",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "AC Ground Point",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "chassis-ground-point",
+        "groundType": "DC",
+        "width": 125,
+        "height": 125,
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "1767785204723-k9u2adsvn",
+      "type": "groundPoint",
+      "x": 1260,
+      "y": 1870,
+      "ports": [
+        {
+          "id": "1767785204723-p86pprt5m",
+          "side": "top",
+          "kind": "CHASSIS",
+          "index": 0
+        },
+        {
+          "id": "1767785212930-orh6d4caf",
+          "side": "right",
+          "kind": "CHASSIS",
+          "index": 0
+        },
+        {
+          "id": "1767785265496-2079wgsqg",
+          "side": "right",
+          "kind": "CHASSIS",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "DC Ground Point",
+        "brand": "generic",
+        "category": "busbars",
+        "componentId": "chassis-ground-point",
+        "groundType": "DC",
+        "width": 130,
+        "height": 130,
+        "labelFontSizePx": 21
+      }
+    },
+    {
+      "id": "1767786736070-zzazmefvh",
+      "type": "rect",
+      "x": 3495,
+      "y": 1800,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 220,
+        "height": 245,
+        "zIndex": -1,
+        "fillColor": "#f5fff8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767786767141-82oluy0xy",
+      "type": "text",
+      "x": 3430,
+      "y": 1810,
+      "ports": [],
+      "data": {
+        "label": "Chassis",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 36,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767786835114-l63tkqe9n",
+      "type": "rect",
+      "x": 1215,
+      "y": 1795,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 220,
+        "height": 245,
+        "zIndex": -1,
+        "fillColor": "#f5fff8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767786835114-dqq0euotr",
+      "type": "text",
+      "x": 1150,
+      "y": 1810,
+      "ports": [],
+      "data": {
+        "label": "Chassis",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 140,
+        "fontSize": 36,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1767801953744-s5odfp9kz",
+      "type": "rect",
+      "x": 2260,
+      "y": 2180,
+      "ports": [],
+      "data": {
+        "label": "",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "rect",
+        "width": 415,
+        "height": 495,
+        "zIndex": -1,
+        "fillColor": "#FFF6E8",
+        "locked": true
+      }
+    },
+    {
+      "id": "1767802140604-2dexi3ve9",
+      "type": "text",
+      "x": 2290,
+      "y": 2570,
+      "ports": [],
+      "data": {
+        "label": "Monitoring",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "text",
+        "width": 355,
+        "height": 80,
+        "fontSize": 48,
+        "fontColor": "#000000"
+      }
+    },
+    {
+      "id": "1768231117962-cw4i4xgoa",
+      "type": "inverter",
+      "x": 3040,
+      "y": 2250,
+      "ports": [
+        {
+          "id": "1768231117962-2vxkpezb7",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "1768231117962-e7i9bdp8p",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "1768231117962-jqcyjv0m5",
+          "side": "top",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1768231117962-zc1o77xn6",
+          "side": "top",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1768231117962-dszm2vk82",
+          "side": "top",
+          "kind": "PE",
+          "index": 2
+        },
+        {
+          "id": "1768231117962-0w3s94dih",
+          "side": "right",
+          "kind": "L",
+          "index": 0
+        },
+        {
+          "id": "1768231117962-oz2t6auud",
+          "side": "right",
+          "kind": "N",
+          "index": 1
+        },
+        {
+          "id": "1768231117962-ihyeabrdm",
+          "side": "right",
+          "kind": "PE",
+          "index": 2
+        },
+        {
+          "id": "1768231199535-yohk4zdse",
+          "side": "top",
+          "kind": "GND",
+          "index": 3
+        }
+      ],
+      "data": {
+        "label": "Inverter / Charger",
+        "brand": "generic",
+        "category": "inverters",
+        "componentId": "inverter-charger",
+        "inverter-power": 1000,
+        "charger-current": 16,
+        "width": 280,
+        "height": 320,
+        "properties": [
+          {
+            "id": "inverter-power-1768231118003-3wro6",
+            "name": "Inverter Power",
+            "value": "2000 W",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "charger-current-1768231118003-401vu",
+            "name": "Charger Current",
+            "value": "30 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ]
+      }
+    }
+  ],
+  "wires": [
+    {
+      "id": "1767727886388-1pwzfqzua",
+      "sourceNodeId": "1767727875968-p1xsbic3b",
+      "sourcePortId": "1767727875968-u697dyiem",
+      "targetNodeId": "1767727811101-y3xq47tu9",
+      "targetPortId": "1767727811101-b7bd5ieny",
+      "midpoints": [
+        {
+          "id": "1767731825155-0ig7r25t3",
+          "x": 1745,
+          "y": 1065
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767727887706-54fug1wj1",
+      "sourceNodeId": "1767727875968-p1xsbic3b",
+      "sourcePortId": "1767727875968-rihewtqfa",
+      "targetNodeId": "1767525317965-le6s6q1pf",
+      "targetPortId": "1767525334932-57vs88zmu",
+      "midpoints": [
+        {
+          "id": "1767731825156-x6hi0jwds",
+          "x": 1745,
+          "y": 1210
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767727932294-158291jzc",
+      "sourceNodeId": "1767727928622-alupw711e",
+      "sourcePortId": "1767727928622-cr3qml2k1",
+      "targetNodeId": "1767727899379-qdu4tk4vi",
+      "targetPortId": "1767727911629-fxbj09zq7",
+      "midpoints": [
+        {
+          "id": "1767731476477-i8x2bqxm2",
+          "x": 2565,
+          "y": 1005
+        },
+        {
+          "id": "1767731476477-ejyt5zehn",
+          "x": 2395,
+          "y": 1005
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767728086286-ocqhqchu7",
+      "sourceNodeId": "1767728071622-efxvb0m6c",
+      "sourcePortId": "1767728075942-rnjbvt8vk",
+      "targetNodeId": "1767727996290-qen2nxvg7",
+      "targetPortId": "1767728007222-q3bmzci1o",
+      "midpoints": [
+        {
+          "id": "1767732477616-2mdomn1s3",
+          "x": 3145,
+          "y": 1005
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767728088425-2rqtkuvuw",
+      "sourceNodeId": "1767728071622-efxvb0m6c",
+      "sourcePortId": "1767728076317-ng9b7onmz",
+      "targetNodeId": "1767727996290-qen2nxvg7",
+      "targetPortId": "1767728007488-tvjxy7h1o",
+      "midpoints": [
+        {
+          "id": "1767732477616-w41h09zvh",
+          "x": 3170,
+          "y": 1005
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767728090318-zrg7sf59r",
+      "sourceNodeId": "1767728071622-efxvb0m6c",
+      "sourcePortId": "1767728076600-vx66h6mgc",
+      "targetNodeId": "1767727996290-qen2nxvg7",
+      "targetPortId": "1767728007864-vunsma8fr",
+      "midpoints": [
+        {
+          "id": "1767732477616-qnngjkdkc",
+          "x": 3195,
+          "y": 1005
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767728683076-1v1nscldj",
+      "sourceNodeId": "1767728666492-eyrlr76ad",
+      "sourcePortId": "1767728666492-y0v8jcoim",
+      "targetNodeId": "1767727831363-tnlzjxw7j",
+      "targetPortId": "1767727831363-vur6jjuot",
+      "midpoints": [
+        {
+          "id": "1767732000477-eypolavzc",
+          "x": 2680,
+          "y": 1575
+        },
+        {
+          "id": "1767732000477-65mvywd10",
+          "x": 1745,
+          "y": 1575
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767728833084-wufxny8oq",
+      "sourceNodeId": "1767728821019-zdgoy73ps",
+      "sourcePortId": "1767728821019-tfojaug3d",
+      "targetNodeId": "1767525060148-nm0ijre7a",
+      "targetPortId": "1767525060148-mqtqail0r",
+      "midpoints": [
+        {
+          "id": "1767802183423-vjm7vn8r7",
+          "x": 2230,
+          "y": 2320
+        },
+        {
+          "id": "1767802493534-wj9elpujl",
+          "x": 2220,
+          "y": 2320
+        },
+        {
+          "id": "1767802493534-27j4oi41e",
+          "x": 2390,
+          "y": 2325
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 95,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767728837484-gzgr97dhf",
+      "sourceNodeId": "1767728821019-zdgoy73ps",
+      "sourcePortId": "1767728821019-csvl1957n",
+      "targetNodeId": "1767525317965-le6s6q1pf",
+      "targetPortId": "1767525317965-rusarf1u3",
+      "midpoints": [
+        {
+          "id": "1767733331519-sxiiuj0pe",
+          "x": 2205,
+          "y": 1590
+        },
+        {
+          "id": "1767733491106-f80bzxsn6",
+          "x": 1735,
+          "y": 1590
+        },
+        {
+          "id": "1767733491106-eosm60tl9",
+          "x": 1720,
+          "y": 1430
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767730246677-cafan52ll",
+      "sourceNodeId": "1767730220604-pv3xomxnx",
+      "sourcePortId": "1767730234320-jp455a3rc",
+      "targetNodeId": "1767728666492-eyrlr76ad",
+      "targetPortId": "1767728666492-tpb296a83",
+      "midpoints": [
+        {
+          "id": "1767802429473-k9gxc9hgq",
+          "x": 2705,
+          "y": 2720
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 95,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767730354811-lrx9h6qqc",
+      "sourceNodeId": "1767730256654-y2m4zoi1p",
+      "sourcePortId": "1767730347827-0tkuxvmwr",
+      "targetNodeId": "1767728666492-eyrlr76ad",
+      "targetPortId": "1767728666492-nf9h9ra9p",
+      "midpoints": [
+        {
+          "id": "1767802270550-ysqujgpqm",
+          "x": 2730,
+          "y": 2240
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 70,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767730407010-tlgu37rku",
+      "sourceNodeId": "1767730256654-y2m4zoi1p",
+      "sourcePortId": "1767730400372-tcrumpzi7",
+      "targetNodeId": "1767730303597-291dsyhbr",
+      "targetPortId": "1767730303597-aabx45jxw",
+      "midpoints": [
+        {
+          "id": "1767802268569-bimukt6dm",
+          "x": 2845,
+          "y": 2240
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 70,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767730474629-0g2qpq6tk",
+      "sourceNodeId": "1767730451178-825iq7dz2",
+      "sourcePortId": "1767730463576-ijd1vaqeu",
+      "targetNodeId": "1767730107970-d33p86ec3",
+      "targetPortId": "1767730107970-v818eim73",
+      "midpoints": [
+        {
+          "id": "1767782666455-lfe4dwvpg",
+          "x": 3585,
+          "y": 2440
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767730475893-drmmghorp",
+      "sourceNodeId": "1767730451178-825iq7dz2",
+      "sourcePortId": "1767730463809-4102oyv5e",
+      "targetNodeId": "1767730107970-d33p86ec3",
+      "targetPortId": "1767730107970-gpx94te29",
+      "midpoints": [
+        {
+          "id": "1767782666455-7rhporr1l",
+          "x": 3610,
+          "y": 2440
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767730477638-xtlz9bvsv",
+      "sourceNodeId": "1767730451178-825iq7dz2",
+      "sourcePortId": "1767730464022-1map4prwp",
+      "targetNodeId": "1767730107970-d33p86ec3",
+      "targetPortId": "1767730107970-5ot92wq9w",
+      "midpoints": [
+        {
+          "id": "1767782666455-mb74wompy",
+          "x": 3635,
+          "y": 2440
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731114479-khjfynbq3",
+      "sourceNodeId": "1767731074762-3rdciqg3j",
+      "sourcePortId": "1767731074762-yht1nazje",
+      "targetNodeId": "1767728666492-eyrlr76ad",
+      "targetPortId": "1767728666492-alwu0hzvx",
+      "midpoints": [
+        {
+          "id": "1767782697458-6mw701567",
+          "x": 2140,
+          "y": 2245
+        },
+        {
+          "id": "1767782275320-drf2g4trr",
+          "x": 2680,
+          "y": 2100
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731117901-lc9f3akk3",
+      "sourceNodeId": "1767731074762-3rdciqg3j",
+      "sourcePortId": "1767731074762-u4us82hdh",
+      "targetNodeId": "1767731063892-fjubhlowz",
+      "targetPortId": "1767731063892-1bhvpdmva",
+      "midpoints": [
+        {
+          "id": "1767782666456-61pmpaq70",
+          "x": 1980,
+          "y": 2245
+        },
+        {
+          "id": "1767782339207-mbzai9zl1",
+          "x": 1840,
+          "y": 2100
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731141438-serxut3eh",
+      "sourceNodeId": "1767731063892-fjubhlowz",
+      "sourcePortId": "1767731063892-2fub5r9t2",
+      "targetNodeId": "1767728821019-zdgoy73ps",
+      "targetPortId": "1767728821019-5a3av5mpj",
+      "midpoints": [
+        {
+          "id": "1767782411216-n5djem5kx",
+          "x": 1840,
+          "y": 2580
+        },
+        {
+          "id": "1767802126986-9czy9c6yr",
+          "x": 1970,
+          "y": 2580
+        },
+        {
+          "id": "1767802126986-lv9isxxsy",
+          "x": 1970,
+          "y": 2300
+        },
+        {
+          "id": "1767802128160-pe95odl26",
+          "x": 2205,
+          "y": 2300
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731348066-t9qev39g1",
+      "sourceNodeId": "1767731316608-7ei30qkkq",
+      "sourcePortId": "1767731316608-aw9jjjy3g",
+      "targetNodeId": "1767731063892-fjubhlowz",
+      "targetPortId": "1767731063892-bkhc14er5",
+      "midpoints": [
+        {
+          "id": "1767782666456-7vv7gass1",
+          "x": 1585,
+          "y": 2400
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 0.75,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731349752-looka9tqm",
+      "sourceNodeId": "1767731316608-7ei30qkkq",
+      "sourcePortId": "1767731316608-6av2oztjz",
+      "targetNodeId": "1767731063892-fjubhlowz",
+      "targetPortId": "1767731063892-06f43yhsv",
+      "midpoints": [
+        {
+          "id": "1767782666456-386mfkae4",
+          "x": 1585,
+          "y": 2425
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 0.75,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731501425-7bm1bu2sm",
+      "sourceNodeId": "1767731484187-zfbnc90nc",
+      "sourcePortId": "1767731484187-5ebp78kfd",
+      "targetNodeId": "1767525811415-zbl44wxzf",
+      "targetPortId": "1767525811415-drsvyq7kx",
+      "midpoints": [
+        {
+          "id": "1767731657433-2hvfv06ul",
+          "x": 2470,
+          "y": 1410
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731504335-e1fu3g7f9",
+      "sourceNodeId": "1767731484187-zfbnc90nc",
+      "sourcePortId": "1767731484187-1to5ur5sp",
+      "targetNodeId": "1767728666492-eyrlr76ad",
+      "targetPortId": "1767728666492-1n0zghs8i",
+      "midpoints": [
+        {
+          "id": "1767731649335-m66kn432b",
+          "x": 2470,
+          "y": 1555
+        },
+        {
+          "id": "1767784459405-pdyjxbire",
+          "x": 2715,
+          "y": 1555
+        },
+        {
+          "id": "1767784459405-8g5s9vhit",
+          "x": 2705,
+          "y": 1860
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731509475-vep3aw2oc",
+      "sourceNodeId": "1767525811415-zbl44wxzf",
+      "sourcePortId": "1767525811415-0xx5ak18i",
+      "targetNodeId": "1767728821019-zdgoy73ps",
+      "targetPortId": "1767728821019-hu86dh2sg",
+      "midpoints": [
+        {
+          "id": "1767731660846-dczpxsp3j",
+          "x": 2445,
+          "y": 1425
+        },
+        {
+          "id": "1767731660177-4b1gtd8y0",
+          "x": 2230,
+          "y": 1425
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731691601-kmsddwgfs",
+      "sourceNodeId": "1767731591394-q56r75emo",
+      "sourcePortId": "1767731591393-caihmbmyk",
+      "targetNodeId": "1767525811415-zbl44wxzf",
+      "targetPortId": "1767525822268-0kjndfmbb",
+      "midpoints": [
+        {
+          "id": "1767731708182-a48if4dx4",
+          "x": 2470,
+          "y": 1170
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731693376-dmb8u7b9m",
+      "sourceNodeId": "1767731591394-q56r75emo",
+      "sourcePortId": "1767731591393-caihmbmyk",
+      "targetNodeId": "1767525811415-zbl44wxzf",
+      "targetPortId": "1767525822268-0kjndfmbb",
+      "midpoints": [
+        {
+          "id": "1767731708182-a1hfufgek",
+          "x": 2470,
+          "y": 1170
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731694776-3i15lvvjr",
+      "sourceNodeId": "1767731591394-q56r75emo",
+      "sourcePortId": "1767731591393-v7xq7qnb9",
+      "targetNodeId": "1767525811415-zbl44wxzf",
+      "targetPortId": "1767525822672-ycusvcssr",
+      "midpoints": [
+        {
+          "id": "1767731708182-tmo05346c",
+          "x": 2495,
+          "y": 1170
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731696746-eskj340ep",
+      "sourceNodeId": "1767731591394-q56r75emo",
+      "sourcePortId": "1767731591393-33mpxeksy",
+      "targetNodeId": "1767727928622-alupw711e",
+      "targetPortId": "1767727928622-pjxa520i8",
+      "midpoints": [
+        {
+          "id": "1767731739594-3ar3hzm9e",
+          "x": 2495,
+          "y": 1020
+        },
+        {
+          "id": "1767731739577-p6anc8rqv",
+          "x": 2590,
+          "y": 1020
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731698655-8kxs4ha1z",
+      "sourceNodeId": "1767731591394-q56r75emo",
+      "sourcePortId": "1767731591393-o7sgfpxss",
+      "targetNodeId": "1767727899379-qdu4tk4vi",
+      "targetPortId": "1767727911371-cnwh32dbq",
+      "midpoints": [
+        {
+          "id": "1767731737472-enrfbhb3e",
+          "x": 2470,
+          "y": 1020
+        },
+        {
+          "id": "1767731737327-spmjri1xa",
+          "x": 2370,
+          "y": 1020
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767731996046-a1z2h983q",
+      "sourceNodeId": "1767727831363-tnlzjxw7j",
+      "sourcePortId": "1767727831363-sr8bqu0qe",
+      "targetNodeId": "1767525317965-le6s6q1pf",
+      "targetPortId": "1767525317965-vg7inhcw9",
+      "midpoints": [
+        {
+          "id": "1767732006383-kvf69owtj",
+          "x": 1745,
+          "y": 1415
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767785091048-nimq41oco",
+      "sourceNodeId": "1767730107970-d33p86ec3",
+      "sourcePortId": "1767785085413-1gyiddddz",
+      "targetNodeId": "1767785018898-owttbce6a",
+      "targetPortId": "1767785035351-g3fva8shn",
+      "midpoints": [
+        {
+          "id": "1767785186362-ij1xgyvsi",
+          "x": 3610,
+          "y": 2245
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767785124970-dxdh3ybbx",
+      "sourceNodeId": "1767727996290-qen2nxvg7",
+      "sourcePortId": "1767785120701-2ccp6di2e",
+      "targetNodeId": "1767785018898-owttbce6a",
+      "targetPortId": "1767785033847-qfuypndkx",
+      "midpoints": [
+        {
+          "id": "1767785189626-3tdv7rinc",
+          "x": 3610,
+          "y": 1100
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767785280394-ygd1xiiwi",
+      "sourceNodeId": "1767785204723-k9u2adsvn",
+      "sourcePortId": "1767785265496-2079wgsqg",
+      "targetNodeId": "1767728821019-zdgoy73ps",
+      "targetPortId": "1767785237909-7idr5qhe2",
+      "midpoints": [
+        {
+          "id": "1767787008147-gy2hsqobo",
+          "x": 1420,
+          "y": 1950
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 95,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767785284447-tro1nootz",
+      "sourceNodeId": "1767785204723-k9u2adsvn",
+      "sourcePortId": "1767785212930-orh6d4caf",
+      "targetNodeId": "1767525811415-zbl44wxzf",
+      "targetPortId": "1767785221609-6kzbtb0wf",
+      "midpoints": [
+        {
+          "id": "1767785316683-7e0gjytwc",
+          "x": 1930,
+          "y": 1925
+        },
+        {
+          "id": "1767785316683-4a03v1f9t",
+          "x": 1930,
+          "y": 1720
+        },
+        {
+          "id": "1767785318999-0gpf686c3",
+          "x": 2120,
+          "y": 1720
+        },
+        {
+          "id": "1767785296213-zcj8j12t0",
+          "x": 2120,
+          "y": 1280
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 6,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767785288290-nj33at0xh",
+      "sourceNodeId": "1767525317965-le6s6q1pf",
+      "sourcePortId": "1767525317965-q1ipbobwj",
+      "targetNodeId": "1767785204723-k9u2adsvn",
+      "targetPortId": "1767785204723-p86pprt5m",
+      "midpoints": [
+        {
+          "id": "1767787012028-hj51q5gu0",
+          "x": 1325,
+          "y": 1315
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767802220631-6y546gumy",
+      "sourceNodeId": "1767729131209-jkd8tsh3n",
+      "sourcePortId": "1767802208806-a3kp6upan",
+      "targetNodeId": "1767525060148-nm0ijre7a",
+      "targetPortId": "1767525060148-c7h6wxfj4",
+      "midpoints": [
+        {
+          "id": "1767802489336-ssvaxz16q",
+          "x": 2475,
+          "y": 2850
+        },
+        {
+          "id": "1767802489336-6lkayneun",
+          "x": 2390,
+          "y": 2850
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 95,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767802387419-kmr1fyoki",
+      "sourceNodeId": "1767729131209-jkd8tsh3n",
+      "sourcePortId": "1767802209519-ak9oi40x1",
+      "targetNodeId": "1767729028440-wiymot7dn",
+      "targetPortId": "1767729028440-g0zmzoemg",
+      "midpoints": [],
+      "routingMode": "auto",
+      "wireSize": 95,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1767802389509-ons2wzb8r",
+      "sourceNodeId": "1767729028440-wiymot7dn",
+      "sourcePortId": "1767729028440-uuinpc1ys",
+      "targetNodeId": "1767730220604-pv3xomxnx",
+      "targetPortId": "1767730234940-f252jwf9z",
+      "midpoints": [],
+      "routingMode": "auto",
+      "wireSize": 95,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768229106333-usffj6lpg",
+      "sourceNodeId": "1767525060148-nm0ijre7a",
+      "sourcePortId": "1767525060148-q84orsrx5",
+      "targetNodeId": "1767729069663-z2twp02e2",
+      "targetPortId": "1767802326806-uepieej0t",
+      "midpoints": [
+        {
+          "id": "1768231311065-ue2mmhqvr",
+          "x": 2450,
+          "y": 2440
+        }
+      ],
+      "routingMode": "auto"
+    },
+    {
+      "id": "1768229118133-6izkfbthy",
+      "sourceNodeId": "1767729131209-jkd8tsh3n",
+      "sourcePortId": "1767802209519-ak9oi40x1",
+      "targetNodeId": "1767525060148-nm0ijre7a",
+      "targetPortId": "1768229113463-3n3y09npc",
+      "midpoints": [
+        {
+          "id": "1768229121407-xt2o3ay8u",
+          "x": 2500,
+          "y": 2825
+        },
+        {
+          "id": "1768229121324-549hsjmkx",
+          "x": 2445,
+          "y": 2825
+        },
+        {
+          "id": "1768229118134-tb9xvk8pu",
+          "x": 2445,
+          "y": 2465
+        }
+      ],
+      "routingMode": "manual"
+    },
+    {
+      "id": "1768229129613-rqg7pmths",
+      "sourceNodeId": "1767525317965-le6s6q1pf",
+      "sourcePortId": "1767525335394-gyhi26tdx",
+      "targetNodeId": "1767727811101-y3xq47tu9",
+      "targetPortId": "1767727811101-pbzfwrqfh",
+      "midpoints": [
+        {
+          "id": "1768229129613-6we8ouiuj",
+          "x": 1720,
+          "y": 1225
+        },
+        {
+          "id": "1768229129613-zrczdo3f0",
+          "x": 1720,
+          "y": 1030
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231205114-3f6i25uc3",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231199535-yohk4zdse",
+      "targetNodeId": "1767785018898-owttbce6a",
+      "targetPortId": "1767785018898-j0gwkrz2f",
+      "midpoints": [
+        {
+          "id": "1768231208632-9qdhvrxlq",
+          "x": 3220,
+          "y": 1955
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 70,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231226119-h7xiws9ud",
+      "sourceNodeId": "1767727996290-qen2nxvg7",
+      "sourcePortId": "1767728010964-wh7aofs1s",
+      "targetNodeId": "1768231117962-cw4i4xgoa",
+      "targetPortId": "1768231117962-dszm2vk82",
+      "midpoints": [
+        {
+          "id": "1768231266109-73xs0gxvs",
+          "x": 3195,
+          "y": 1200
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231229481-atw0vpf4b",
+      "sourceNodeId": "1767727996290-qen2nxvg7",
+      "sourcePortId": "1767728010625-0dc3wvawd",
+      "targetNodeId": "1768231117962-cw4i4xgoa",
+      "targetPortId": "1768231117962-zc1o77xn6",
+      "midpoints": [
+        {
+          "id": "1768231266109-wh5e9s3z7",
+          "x": 3170,
+          "y": 1200
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231234332-y6fgnhjsc",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231117962-jqcyjv0m5",
+      "targetNodeId": "1767727996290-qen2nxvg7",
+      "targetPortId": "1767728010439-yvwxrnj77",
+      "midpoints": [
+        {
+          "id": "1768231266109-t3qkvtk8n",
+          "x": 3145,
+          "y": 2220
+        },
+        {
+          "id": "1768231263206-zifaeghx5",
+          "x": 3110,
+          "y": 2220
+        },
+        {
+          "id": "1768231263206-s14lk1wp0",
+          "x": 3145,
+          "y": 1200
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231237660-l09jokbzy",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231117962-2vxkpezb7",
+      "targetNodeId": "1767730303597-291dsyhbr",
+      "targetPortId": "1767730303597-w55kodwbt",
+      "midpoints": [
+        {
+          "id": "1768231266110-dpauj2trm",
+          "x": 3000,
+          "y": 2400
+        },
+        {
+          "id": "1768231266110-swa6os7fa",
+          "x": 3000,
+          "y": 2240
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 70,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231240764-iu05m7ndn",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231117962-e7i9bdp8p",
+      "targetNodeId": "1767728821019-zdgoy73ps",
+      "targetPortId": "1767728821019-debwkjelr",
+      "midpoints": [
+        {
+          "id": "1768231244582-hnaevnyvq",
+          "x": 2935,
+          "y": 2425
+        },
+        {
+          "id": "1768231240764-uvksk9ym9",
+          "x": 2935,
+          "y": 2285
+        },
+        {
+          "id": "1768231244635-h1s72xo58",
+          "x": 2255,
+          "y": 2285
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 70,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231253462-yrkja1pb7",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231117962-0w3s94dih",
+      "targetNodeId": "1767730107970-d33p86ec3",
+      "targetPortId": "1767730145803-4g5gfkk4n",
+      "midpoints": [
+        {
+          "id": "1768231266110-w02dvbq22",
+          "x": 3390,
+          "y": 2385
+        },
+        {
+          "id": "1768231266110-9ug2ziyrv",
+          "x": 3390,
+          "y": 2320
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231254991-kvmjowjb7",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231117962-oz2t6auud",
+      "targetNodeId": "1767730107970-d33p86ec3",
+      "targetPortId": "1767730146929-qcmpujld9",
+      "midpoints": [
+        {
+          "id": "1768231266110-piqx686um",
+          "x": 3405,
+          "y": 2410
+        },
+        {
+          "id": "1768231266110-qmox0b468",
+          "x": 3405,
+          "y": 2345
+        }
+      ],
+      "routingMode": "auto",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "1768231256773-23jngjkgf",
+      "sourceNodeId": "1768231117962-cw4i4xgoa",
+      "sourcePortId": "1768231117962-ihyeabrdm",
+      "targetNodeId": "1767730107970-d33p86ec3",
+      "targetPortId": "1767730147325-g0tzxufrn",
+      "midpoints": [
+        {
+          "id": "1768231266110-8w7dw9jvb",
+          "x": 3420,
+          "y": 2435
+        },
+        {
+          "id": "1768231266110-1nd4a5pxd",
+          "x": 3420,
+          "y": 2370
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    }
+  ],
+  "version": 1,
+  "projectName": "The Civilised Van (generic)"
+}
