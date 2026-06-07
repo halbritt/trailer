@@ -9,7 +9,7 @@ This is the **source of truth** for the build. How to read it:
 - **Gates** are pass/fail checks that must pass **before drilling, fabricating, or ordering** the thing they guard. Most close from the [measurement pass](dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec); measured values supersede spec everywhere.
 - **`[web-val]`** marks findings from the 2026-06-05 web fact-check of the original 7 falsifiable decisions plus the D010 flooring addendum ([full report](research/build-decision-validation.md)). It flipped 4/7 original decisions to caution; the material deltas are folded into the gates below.
 
-The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Per D011, wall E-track mounts directly to the 1" thin-wall steel tube uprights with steel rivnuts, and the birch/FRP finish trims up to the track. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
+The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Per D011, wall E-track mounts directly to the 1" thin-wall steel tube uprights with steel 1/4-20 rivnuts, and the birch/FRP finish trims up to the track. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
 
 ---
 
@@ -167,7 +167,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Bed & wall tracks — D011
 
-- **Bed row at ~27", shelf row at ~60"**, both mounted directly to the 16"-OC, 1" thin-wall steel tube posts with steel rivnuts. Do not depend on birch or FRP as the track structure.
+- **Bed row at ~27", shelf row at ~60"**, both mounted directly to the 16"-OC, 1" thin-wall steel tube posts with steel 1/4-20 rivnuts. Do not depend on birch or FRP as the track structure.
 - **Why 27" (revised from 34", owner challenge upheld):** at 34" the sleeping surface (~38.5" with platform + pad) left **1–3" of seated headroom** under the 78" ceiling for a 6'+ adult; at 27" (surface ~31") it's ~46" — you can actually sit up in bed. Bikes are out in camp mode, so nothing needs the taller under-deck clearance. **Gate: mock a 31" surface and sit-test before drilling** (design-freeze item 3).
 - **Track finish detail:** install the rivnuts into the posts before foam/FRP; trim birch and FRP up to the E-track so the rail sits flush or slightly proud. Keep fastener heads visible and serviceable, and leave enough clearance at the FRP edge for fittings to rock into the E-track slots.
 - **Use envelope:** wall E-track handles bed shoring, shelves, gear modules, anti-tip straps, and panel transport. It is not the primary motorcycle restraint system.
@@ -240,7 +240,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
-   - Wall E-track rivnuts into the 1" tube posts at the 27"/60" rows; use the track as the finish datum and keep fasteners inspectable.
+   - Wall E-track steel 1/4-20 rivnuts into the 1" tube posts at the 27"/60" rows; use the track as the finish datum and keep fasteners inspectable.
    - Rough-ins: HRV 4" pair, heater 3" duct ports, wire chases, 4 AWG tongue pre-wire.
    - Roof: solar rail/backing structure first (fore-aft rails tied to multiple bows; brackets/panels attach to rails, not skin), then Velit opening + curb, PV gland, all penetrations sealed and hose-tested.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
@@ -262,7 +262,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 |---|---|---|---|
 | 1 | **D006–D008 ratified** (24 V bus · awning standoffs · fridge integration) | owner ratifies in the DECISION_LOG | ☐ |
 | 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled OSB | owner ratifies + factory OSB thickness verified (row 19) | ☐ |
-| 3 | **Track heights final** — bed ~27", shelf 60"; D011 wall-track mounting detail accepted | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band; rivnut-mounted E-track/FRP-edge fit confirmed on an offcut or first row | ☐ |
+| 3 | **Track heights final** — bed ~27", shelf 60"; D011 wall-track mounting detail accepted | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band; 1/4-20 rivnut-mounted E-track/FRP-edge fit confirmed on an offcut or first row | ☐ |
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
 | 5 | **Roof drawing** — three panel rows, fore-aft NXT rail/backing structure + through-rail bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; through-rail fastener/backing/spacer detail selected | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
