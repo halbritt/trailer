@@ -144,20 +144,22 @@ Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can pu
 
 Switching plan: **put the lighting switches on the power cabinet**, not beside the entry door, for the Juplaya build. This keeps wiring shorter and serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
 
-Switch hardware: use a **Blue Sea 8260 6-position Contura mounting panel** with **Blue Sea 8282 Contura III SPST OFF-ON black switches**. The 8282 is rated 15 A at 24 V DC, so it has ample margin for these fused lighting branches. The 8260 panel accepts 0.06" to 0.38" mounting thickness; if the power-cabinet face is 1/2" ply, mount the switches in a thin ABS/aluminum inset plate or back-rabbet the cutout. Wire each switch downstream of its Blue Sea 5026 branch fuse.
+Switch hardware: use a **Blue Sea 8260 6-position Contura mounting panel** with **Blue Sea 8282 Contura III SPST OFF-ON black switches**. The 8282 is rated 15 A at 24 V DC, so it has ample margin for these fused lighting branches. The 8260 panel accepts 0.06" to 0.38" mounting thickness; if the power-cabinet face is 1/2" ply, mount the switches in a thin ABS/aluminum inset plate or back-rabbet the cutout. Wire each switch downstream of its Blue Sea 5026 branch fuse as a hard enable, then put a 24 V PWM dimmer downstream of the switch for brightness control.
 
 Recommended switch labels:
 
 | Position | Label | Function |
 |---:|---|---|
-| 1 | INTERIOR | main/task lighting switch or dimmer enable |
-| 2 | CURB FLOOD | two curbside `VAL2-NW9` fixtures |
-| 3 | ROAD FLOOD | two roadside `VAL2-NW9` fixtures |
-| 4 | NOSE FLOOD | both V-nose `VAL2-NW9` fixtures |
-| 5 | REAR FLOOD | rear `VAL2-NW9` loading/work light |
+| 1 | INTERIOR | hard enable for interior dimmer/main-task lighting |
+| 2 | CURB FLOOD | hard enable for dimmer/two curbside `VAL2-NW9` fixtures |
+| 3 | ROAD FLOOD | hard enable for dimmer/two roadside `VAL2-NW9` fixtures |
+| 4 | NOSE FLOOD | hard enable for dimmer/both V-nose `VAL2-NW9` fixtures |
+| 5 | REAR FLOOD | hard enable for dimmer/rear `VAL2-NW9` loading-work light |
 | 6 | AWNING | hard enable for the awning dimmer/strip |
 
-Use custom printed labels for those names; the Blue Sea 8214 label set is useful for generic DC labels but may not include the exact flood-zone names. For the awning strip dimmer, default to the low-cost **Super Bright LEDs `LDK-8A` 12-24 VDC / 8 A PWM dimmer** mounted inside or on the cabinet after the AWNING switch; it has enough margin for the 64 W / ~2.7 A strip. The premium marine alternative is **Blue Sea 7509 Deckhand Dimmer, 24 V DC / 12 A**, which is sealed and panel-integrated but much more expensive.
+Use custom printed labels for those names; the Blue Sea 8214 label set is useful for generic DC labels but may not include the exact flood-zone names. Default dimmer is the low-cost **Super Bright LEDs `LDK-8A` 12-24 VDC / 8 A PWM dimmer**, one after each lighting switch: INTERIOR, CURB FLOOD, ROAD FLOOD, NOSE FLOOD, REAR FLOOD, and AWNING. It has enough current margin for each planned branch. The premium marine alternative is **Blue Sea 7509 Deckhand Dimmer, 24 V DC / 12 A**, which is sealed and panel-integrated but much more expensive.
+
+Bench-test the ordered `VAL2-NW9` flood/scene fixture with the selected PWM dimmer before final exterior mounting. The product specs confirm 12-28 VDC input, 18 W, and 1.5 A current draw, but do not explicitly claim dimmer compatibility. If the fixture flickers, buzzes, shuts down, or runs hot on PWM, keep the cabinet switch and either run that side switch-only or change to a dimmable exterior fixture.
 
 Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. The current selected fixture class is 12-28 VDC, so the lights run directly from the 24 V house bus. Do not build a 12 V exterior-lighting sub-bus for this plan, and do not run lighting through cigarette-lighter receptacles. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
 
@@ -167,12 +169,12 @@ Panel verdict: **7 x Super Bright LEDs `VAL2-NW9` flood/scene fixtures are order
 
 | Zone | Fixture count | Approx current | Fuse | Wire | Notes |
 |---|---:|---:|---|---|
-| Interior main/task | TBD | ~2-3 A @ 24 V typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch/dimmer |
-| Awning/camp light | 1 x 5 m strip max | 64 W max / ~2.7 A @ 24 V before dimming | 5 A | 16-18 AWG | `RA-IP68-80CRI-5m` 3000 K or equivalent; dimmable, diffuse/downward, not a glare bar |
-| Curbside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for camp/work; one switch labeled CURB FLOOD |
-| Roadside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for roadside work; one switch labeled ROAD FLOOD |
-| Nose floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | one fixture on each V-nose face; one switch labeled NOSE FLOOD unless separate control becomes useful |
-| Rear flood | 1 x `VAL2-NW9` | 18 W / ~0.75 A @ 24 V | 5 A | 16 AWG | upper rear/down-aimed loading light, not tied to reverse/tow wiring |
+| Interior main/task | TBD | ~2-3 A @ 24 V typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch plus dimmer |
+| Awning/camp light | 1 x 5 m strip max | 64 W max / ~2.7 A @ 24 V before dimming | 5 A | 16-18 AWG | `RA-IP68-80CRI-5m` 3000 K or equivalent; cabinet switch plus dimmer; diffuse/downward, not a glare bar |
+| Curbside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for camp/work; cabinet switch plus dimmer, pending PWM bench test |
+| Roadside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for roadside work; cabinet switch plus dimmer, pending PWM bench test |
+| Nose floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | one fixture on each V-nose face; cabinet switch plus dimmer, pending PWM bench test |
+| Rear flood | 1 x `VAL2-NW9` | 18 W / ~0.75 A @ 24 V | 5 A | 16 AWG | upper rear/down-aimed loading light; cabinet switch plus dimmer, pending PWM bench test; not tied to reverse/tow wiring |
 | Optional step/courtesy | 1-2 small amber fixtures | <0.5 A | 3 A or shared 5 A branch | 18 AWG | optional low amber at personnel door/step; can share awning switch |
 | Spare exterior/service | TBD | TBD | 5 A | 16-18 AWG | capped spare pair if the wall path is open |
 

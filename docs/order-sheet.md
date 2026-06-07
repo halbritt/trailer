@@ -30,10 +30,10 @@ Rules for the numbers:
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
 | Priced committed / ordered / purchased fit-out | $4,333.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,792.94 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,126.22 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Remaining Juplaya buy list | $10,832.69 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,165.97 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $18,275.22 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $18,314.97 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
@@ -42,10 +42,10 @@ Remaining Juplaya buy list by category:
 | Power / solar / cabinet | $2,553.70 |
 | Climate / envelope / awning | $4,194.67 |
 | Interior / floor / walls | $2,275.00 |
-| Lighting / switches / security | $1,269.57 |
+| Lighting / switches / security | $1,309.32 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,792.94` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,126.22` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,832.69` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,165.97` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -149,17 +149,17 @@ Interior / floor / walls remaining subtotal: **$2,275.00**.
 
 | Status | Qty | Item | Unit | Ext | Basis / Source | Notes |
 | --- | ---: | --- | ---: | ---: | --- | --- |
-| BUY NOW | 1 lot | Interior task/main lighting strips channels local dimmers | $250.00 | $250.00 | Allowance | 24 V preferred; final strip SKU still open. |
+| BUY NOW | 1 lot | Interior task/main lighting strips channels | $250.00 | $250.00 | Allowance | 24 V preferred; final strip SKU still open. Branch dimmer counted separately. |
 | BUY NOW | 1 | Super Bright LEDs RA-IP68-80CRI-5m 3000 K 24 V awning strip | $109.99 | $109.99 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/waterproof-led-strips/5m-white-led-strip-light-radiant-series-led-tape-light-24v-ip68-waterproof) | Separate warm camp light not another flood. |
 | BUY NOW | 1 | Blue Sea 8260 6-position Contura mounting panel | $17.68 | $17.68 | [Fisheries Supply price signal](https://www.fisheriessupply.com/blue-sea-systems-contura-switch-mounting-panels/8260) | Mount in thin inset plate or rabbet thick cabinet face. |
 | BUY NOW | 6 | Blue Sea 8282 SPST OFF-ON Contura switches | $14.00 | $84.00 | [Vanlife Outfitters price signal](https://www.vanlifeoutfitters.com/products/blue-sea-8282-contura-switch-spst-off-on-black) | INTERIOR CURB FLOOD ROAD FLOOD NOSE FLOOD REAR FLOOD AWNING. |
-| BUY NOW | 1 | Super Bright LEDs LDK-8A PWM dimmer | $7.95 | $7.95 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/ldk-8a-12-24-volt-dc-single-color-led-dimmer-single-color-led-dimmer) | After the AWNING switch. |
+| BUY NOW | 6 | Super Bright LEDs LDK-8A PWM dimmers | $7.95 | $47.70 | [Super Bright LEDs price signal](https://www.superbrightleds.com/ldk-8a-12-24-volt-dc-single-color-led-dimmer-ldk-8a) | One after each lighting switch: INTERIOR, CURB FLOOD, ROAD FLOOD, NOSE FLOOD, REAR FLOOD, AWNING. Bench-test VAL2-NW9 PWM compatibility before final exterior mounting. |
 | BUY NOW | 1 set | Custom switch labels / label stock | $25.00 | $25.00 | Allowance | Blue Sea generic labels may not cover these names. |
 | BUY NOW | 1 lot | Lighting branch wire glands sealant heat shrink | $140.00 | $140.00 | Allowance | Exterior branch wiring and penetrations. |
 | BUY NOW | 1 set | Security locks: Proven 2178, 2 keyed-alike PACLOCK UCS-7A pucks, Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax + PACLOCK high-side allowance](https://paclock.com/product/7-series/) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Buy two PACLOCK 7-Series flat-back puck locks in the same UCS keyed-alike/U-PICK code: one rear ramp, one Nu-Set personnel-door hasp. Match the truck's existing PACLOCK U-PICK code only if those truck locks are UCS; PRO/SR/RD families do not automatically share codes. Prefer stainless bodies if the storage spot is exposed to Bay Area wet/salt; aluminum UCS-7A is acceptable if budget wins. Verify the ramp latch is puck-compatible; if not, add a puck hasp or use a PACLOCK keyed-alike UCS padlock as the fallback. |
 | BUY NOW | 1 set | Personnel-door hasp backing/install hardware | $45.00 | $45.00 | [Allowance](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | Nu-Set hasp needs six 3/8 in carriage bolts/washers/nuts plus backing plates and sealant. Tie into the door frame/jamb, not thin door skin alone. External puck remains unattended/travel/storage only, not an occupied-mode latch. |
 
-Lighting / switches / security remaining subtotal: **$1,269.57**.
+Lighting / switches / security remaining subtotal: **$1,309.32**.
 
 ### General consumables contingency
 
@@ -169,7 +169,7 @@ Lighting / switches / security remaining subtotal: **$1,269.57**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,792.94**.
+Remaining Juplaya subtotal: **$10,832.69**.
 
 ## Deferred / Not Juplaya
 
