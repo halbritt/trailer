@@ -219,15 +219,22 @@ Optional 24 V trailer top-up:
 - Keep this top-up on the 24 V bus if used; the 12 V cabinet receptacles would cut the charge rate roughly in half and burn an extra conversion stage.
 - Do not direct-feed the C1000 from the 48 V battery unless a dedicated current-limited DC-DC charger is designed later.
 
-### Starlink Mini Option
+### Starlink Mini Storage / Camp Option
 
-Treat Starlink Mini as optional portable comms gear, not a core trailer load. Current [Starlink Mini specs](https://www.starlink.com/public-files/specification_sheet_mini.pdf) list **25-40 W average**, **12-48 V / 60 W max input**, and a **100 W, 20 V / 5 A minimum** requirement when using the Starlink USB-C-to-barrel accessory. That is about **1.0-1.7 A average at 24 V** or **2.5 A max at 24 V** before converter/cable losses. Continuous 24-hour use is **0.6-1.0 kWh/day** before losses; budget **0.7-1.1 kWh/day** in the real trailer.
+Treat Starlink Mini as optional storage/camp comms, not the primary tracker. Current [Starlink Mini specs](https://www.starlink.com/public-files/specification_sheet_mini.pdf) list **25-40 W average**, **12-48 V / 60 W max input**, and a **100 W, 20 V / 5 A minimum** requirement when using the Starlink USB-C-to-barrel accessory. That is about **1.0-1.7 A average at 24 V** or **2.5 A max at 24 V** before converter/cable losses. Continuous 24-hour use is **0.6-1.0 kWh/day** before losses; budget **0.7-1.1 kWh/day** in the real trailer.
 
 Preferred Juplaya path:
 
 - Keep it portable and run it from the C1000/PS400 first, so internet does not become a house-battery design dependency.
 - A DC option is acceptable later: Starlink's [Mini Car Adapter](https://www.starlink.com/public-files/accessories_guide_mini.pdf) is intended for standard 12-24 V auxiliary outlets, so it can use a fused 12 V cabinet receptacle if cable length and voltage drop behave.
 - Do not permanently mount it or count on always-on internet until a shakedown proves the roof solar/house battery still has surplus after AC and fridge duty.
+
+Oakland storage use:
+
+- LandAirSea/cellular remains the primary always-on "where is the trailer?" path because it is low power and hidden.
+- Starlink Mini is the secondary high-bandwidth contact path for camera/telemetry/remote check-ins, but only if the storage spot has open sky. It will not work reliably inside a metal trailer or under covered storage.
+- If left on 24/7, the 48 V 100 Ah house battery class is only a several-day buffer without solar. For storage, either leave roof solar live with a conservative low-voltage cutoff, or power Starlink on a schedule rather than treating it as an always-on background load.
+- A roof-mounted Mini needs a theft-resistant, serviceable mount and cable gland; a visible dish is itself a target in storage.
 
 ## Phase 2 MultiPlus
 

@@ -44,7 +44,7 @@ Current Juplaya power verdict:
 
 - **DC trailer core:** roof 3× LG455 in 3S → Victron SmartSolar 250/60-Tr → LiTime 48V 100Ah ComFlex. Velit 2000R runs from a fused 48 V branch. Fridge/lights/USB/GPS run from the 24 V bus through one Victron Orion-Tr 48/24-16A. A Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
 - **Optional trailer-battery margin:** deployable 2× LG455 in 2S → ordered Victron SmartSolar 150/35. Never combine roof 3S and ground 2S on one tracker.
-- **Small 120 VAC / portable comms:** Anker SOLIX C1000 + PS400 is the Juplaya AC island. Optional C1000 top-up from the trailer is only a fused/manual 24 V branch, about 240 W max, and must not starve the Orion/fridge bus. Starlink Mini is optional portable comms gear, not a core trailer load; run it from the C1000 first or from a fused 12 V cabinet receptacle with Starlink's 12-24 V car adapter after shakedown.
+- **Small 120 VAC / storage comms:** Anker SOLIX C1000 + PS400 is the Juplaya AC island. Optional C1000 top-up from the trailer is only a fused/manual 24 V branch, about 240 W max, and must not starve the Orion/fridge bus. Starlink Mini is optional storage/camp comms, not the primary tracker; run it from the C1000 first or from a fused 12 V cabinet receptacle with Starlink's 12-24 V car adapter after shakedown.
 - **Deferred:** Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/shore-charger/transfer choice, not a Juplaya blocker.
 
 Must-not-miss gates:
@@ -58,7 +58,7 @@ Must-not-miss gates:
 - Fuse both Orion inputs with DC-rated 48 V gear; label the 12 V cabinet receptacles auxiliary only and keep them isolated from tow-vehicle/OEM trailer wiring.
 - Configure LiFePO4 charge settings and cap combined trailer charge current ≤100 A.
 
-Energy budget: trailer DC loads are about **3.5–4.0 kWh/day** in July; roof-only 3S harvest is about **6.0 kWh/day before soiling/shading**. The LG ground pair adds recovery margin; the C1000/PS400 carries only small AC loads. A Starlink Mini left on continuously adds about **0.7–1.1 kWh/day** real-world, so it is acceptable as an optional managed load but not free.
+Energy budget: trailer DC loads are about **3.5–4.0 kWh/day** in July; roof-only 3S harvest is about **6.0 kWh/day before soiling/shading**. The LG ground pair adds recovery margin; the C1000/PS400 carries only small AC loads. A Starlink Mini left on continuously adds about **0.7–1.1 kWh/day** real-world, so it is acceptable as an optional managed storage/camp link but not free.
 
 ---
 
@@ -213,7 +213,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 - **Proven 2178 coupler lock** for the documented 2" coupler + **2× Abloy/Paclock pucks, keyed alike** + **Trimax TCL65** wheel lock — layered, because Juplaya. Do not order the Proven 2516 unless the trailer is upgraded to a 2-5/16" coupler.
 - **Personnel door:** the factory latch/deadbolt is not enough as the security layer. Add a bolt-on **PACLOCK PL770 / UCS-7A/770-class puck hasp** or Proven corner hasp with backing plates, tied into the door frame/jamb structure rather than thin door skin alone. External puck hasp is for unattended/travel/storage only; never use it as the occupied/sleeping latch because it cannot be opened from inside. Occupied mode needs an inside-operable latch/deadbolt.
-- **LandAirSea 54 GPS**, hardwired to the 24 V block (3 A branch), always-on.
+- **LandAirSea 54 GPS**, hardwired to the 24 V block (3 A branch), always-on. For Oakland storage, this remains the primary hidden keepalive/tracking layer; Starlink Mini is a secondary high-bandwidth path only if the storage spot has open sky and the power schedule works.
 
 ### Order list
 
@@ -221,7 +221,7 @@ Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. The 
 
 - **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for power-cabinet 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · **power-cabinet interior transfer grilles/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 3 gal — ORDERED, delivery June 12–15, 2026; 4th gal conditional** after patch/first-pass coverage for ramp/chock/L-track wear lanes.
-- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) including personnel-door puck hasp/backing · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · optional Starlink Mini treated as portable/deferred comms · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior lighting: 7 × Super Bright LEDs `VAL2-NW9` floods — ORDERED, 1 × warm 24 V awning strip such as `RA-IP68-80CRI-5m`, optional amber step/courtesy, Blue Sea 8260 switch panel + 6 × Blue Sea 8282 switches, custom labels, and `LDK-8A` awning dimmer**.
+- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea 54 · locks (above) including personnel-door puck hasp/backing · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the power cabinet · optional Starlink Mini treated as storage/camp comms · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior lighting: 7 × Super Bright LEDs `VAL2-NW9` floods — ORDERED, 1 × warm 24 V awning strip such as `RA-IP68-80CRI-5m`, optional amber step/courtesy, Blue Sea 8260 switch panel + 6 × Blue Sea 8282 switches, custom labels, and `LDK-8A` awning dimmer**.
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
 ---

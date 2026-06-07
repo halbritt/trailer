@@ -1,6 +1,6 @@
 # Juplaya Trailer Order Sheet
 
-Generated: 2026-06-06 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
+Generated: 2026-06-07 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
 
 This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/export?format=csv). Local CSV: [order-sheet.csv](order-sheet.csv). Local correction layer: [order-sheet-overrides.csv](order-sheet-overrides.csv).
 
@@ -180,7 +180,7 @@ Remaining Juplaya subtotal: **$10,902.84**.
 | DEFERRED | Ventilation | 1 | Future HRV unit | $350.00 | $350.00 | Rough-in only for Juplaya. |
 | DEFERRED | Power cabinet | 1 | Exterior vent retrofit | $100.00 | $100.00 | Only if cabin-side ventilation fails shakedown. |
 | DEFERRED | Truck charging | 1 lot | 12 V truck to 48 V trailer charging hardware | $550.00 | $550.00 | Pre-wire now active charging later. |
-| DEFERRED | Comms | 1 | Starlink Mini kit | $249.00 | $249.00 | Optional portable comms only; not counted as a Juplaya core power dependency. Service plan is recurring and not included in the fit-out subtotal. |
+| DEFERRED | Comms | 1 | Starlink Mini kit | $249.00 | $249.00 | Optional Oakland-storage and camp comms path; secondary to hidden cellular GPS. Requires open sky, theft-resistant mount if left outside, and a power schedule or live solar. Service plan is recurring and not included in the fit-out subtotal. |
 
 Deferred subtotal: **$3,149.00**.
 
