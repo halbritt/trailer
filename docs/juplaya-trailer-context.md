@@ -5,11 +5,11 @@
 This is the **source of truth** for the build. How to read it:
 
 - **Settled** items are firm — bought, measured, or otherwise beyond debate.
-- **Decisions** are DECISION_LOG rows (D001–D010), `proposed` until the owner ratifies them. Each major one was produced by a cross-examined striatum multi-model panel (claude/codex/gemini drafting, reviewing, and revising each other); the raw drafts, reviews, and verdicts are frozen under `runs/`. Don't infer decisions that aren't written here or in a D-row.
+- **Decisions** are DECISION_LOG rows (D001–D011), `proposed` until the owner ratifies them. Each major one was produced by a cross-examined striatum multi-model panel (claude/codex/gemini drafting, reviewing, and revising each other); the raw drafts, reviews, and verdicts are frozen under `runs/`. Don't infer decisions that aren't written here or in a D-row.
 - **Gates** are pass/fail checks that must pass **before drilling, fabricating, or ordering** the thing they guard. Most close from the [measurement pass](dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec); measured values supersede spec everywhere.
 - **`[web-val]`** marks findings from the 2026-06-05 web fact-check of the original 7 falsifiable decisions plus the D010 flooring addendum ([full report](research/build-decision-validation.md)). It flipped 4/7 original decisions to caution; the material deltas are folded into the gates below.
 
-The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
+The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Per D011, wall E-track mounts directly to the 1" thin-wall steel tube uprights with steel rivnuts, and the birch/FRP finish trims up to the track. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
 
 ---
 
@@ -144,7 +144,7 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 
 ### Bikes & floor L-track
 
-- **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in **ordered Bolt It On 360 L-track wheel chocks** (12–18" stagger so the bars interleave). Starting floor geometry: **two lengthwise floor L-track rows, about 26" on center**, flush/recessed and bolted through to steel/backing; the 4 factory D-rings get reused as backup tie points.
+- **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in **ordered Bolt It On 360 L-track wheel chocks** (12–18" stagger so the bars interleave). Starting floor geometry: **two lengthwise floor L-track rows, about 26" on center**, flush/recessed and bolted through to steel/backing; the 4 factory D-rings get reused as backup tie points. Primary motorcycle crash restraint stays on the floor L-track and factory 5,000 lb D-rings tied to the steel frame/crossmembers, not on the wall E-track.
 - **⚠ Floor plan rework gate:** the original ~24" E-track centerline spacing **failed** — cross-exam found ~9" of handlebar interference, and the 2"×4" main rails run at the **perimeter** (not under the centerline), while a deep recess leaves limited ply between crossmembers. The final L-track row positions must be re-derived against **measured** steel locations (row 10), actual bar widths/front-tire centerlines (row 11), and the ordered chock hardware/studs. Evidence/options: [L-track floor chock options](research/l-track-floor-chock-options-2026-06-05.md).
 - **Aisle reality:** the nominal ~30" walking aisle shrinks to **~20" effective at bar height** — fridge access and egress are planned around that, not the floor-level number.
 - **Track/chock order status:** floor L-track = **2 × 8 ft flanged L-track sections ordered / on the way (2026-06-05)**; **Bolt It On 360 L-track wheel chocks ordered (2026-06-05)**. The ~50–60 ft of E-track on hand should be treated as wall-track stock first, not floor stock.
@@ -165,11 +165,14 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 **Install sequence:** finish the floor L-track/chock layout first, then recess and bolt the floor L-track through to steel/backing. Mask the L-track slots, fastener heads, D-ring pockets, ramp hinge/transition hardware, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove plus ramp, add the third wear-lane coat, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
 
-### Bed & wall tracks
+### Bed & wall tracks — D011
 
-- **Bed row at ~27", shelf row at ~60"**, both lag-backed into the 16"-OC tube posts.
+- **Bed row at ~27", shelf row at ~60"**, both mounted directly to the 16"-OC, 1" thin-wall steel tube posts with steel rivnuts. Do not depend on birch or FRP as the track structure.
 - **Why 27" (revised from 34", owner challenge upheld):** at 34" the sleeping surface (~38.5" with platform + pad) left **1–3" of seated headroom** under the 78" ceiling for a 6'+ adult; at 27" (surface ~31") it's ~46" — you can actually sit up in bed. Bikes are out in camp mode, so nothing needs the taller under-deck clearance. **Gate: mock a 31" surface and sit-test before drilling** (design-freeze item 3).
+- **Track finish detail:** install the rivnuts into the posts before foam/FRP; trim birch and FRP up to the E-track so the rail sits flush or slightly proud. Keep fastener heads visible and serviceable, and leave enough clearance at the FRP edge for fittings to rock into the E-track slots.
+- **Use envelope:** wall E-track handles bed shoring, shelves, gear modules, anti-tip straps, and panel transport. It is not the primary motorcycle restraint system.
 - **Bed shoring:** E-track sockets taking plain 2×4 lumber — legs under the deck when slept on, gone in moto mode.
+- **Escalation path:** if a wall row shows movement after service testing, weld tabs or backing strips to the uprights and keep the E-track bolted to those welded features so the rail remains replaceable.
 
 ### Fridge bay
 
@@ -232,19 +235,19 @@ Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. The 
 The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
 
 1. **Measure & scan** — finish the [measurement pass](dimensions.md): interior tape (rows 3/3a, 7, 14, 17), roof stations (5a, 6), rail 3D scan + post wall thickness (16), floor steel + bar widths (10, 11), OSB thickness (19).
-2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; D010 is accepted; place remaining orders (long-lead first).
+2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; D010 and D011 are accepted; place remaining orders (long-lead first).
 3. **Strip the interior** — factory OSB off (it's the template stock for the birch cuts); document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
-   - Wall E-track backing at the 27"/60" rows.
+   - Wall E-track rivnuts into the 1" tube posts at the 27"/60" rows; use the track as the finish datum and keep fasteners inspectable.
    - Rough-ins: HRV 4" pair, heater 3" duct ports, wire chases, 4 AWG tongue pre-wire.
    - Roof: solar rail/backing structure first (fore-aft rails tied to multiple bows; brackets/panels attach to rails, not skin), then Velit opening + curb, PV gland, all penetrations sealed and hose-tested.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
 6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
-7. **Floor liner + walls closed** — floor L-track recessed/bolted through to steel/backing first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, trim on.
+7. **Floor liner + walls closed** — floor L-track recessed/bolted through to steel/backing first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, and trimmed to the wall E-track edges.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
-9. **Tracks & remaining floor hardware** — wall E-track rows on the posts; floor L-track masks pulled and slots/hardware inspected.
+9. **Tracks & remaining floor hardware** — wall E-track rows bolted to the rivnuts in the posts; floor L-track masks pulled and slots/hardware inspected.
 10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr 48/24, Orion-Tr 48/12, 5026, fused 12 V receptacles; rail wiring out to branches; cabinet-to-cabin ventilation with low filtered intake, high fan-assisted exhaust, 24 V fan, and temperature switch. Avoid exterior penetrations for now; if shakedown heat becomes a real issue, reopen the exterior-vent fallback. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), cabinet-switched interior/exterior lights, USB/GPS, awning case onto the standoffs, tie-down anchors.
 12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path; verify the C1000 + PS400 covers small AC loads; if a 24 V C1000 top-up branch is added, test that it does not brown out or overload the Orion/fridge bus; shakedown camp before Juplaya.
@@ -259,7 +262,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 |---|---|---|---|
 | 1 | **D006–D008 ratified** (24 V bus · awning standoffs · fridge integration) | owner ratifies in the DECISION_LOG | ☐ |
 | 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled OSB | owner ratifies + factory OSB thickness verified (row 19) | ☐ |
-| 3 | **Track heights final** — bed ~27", shelf 60" | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band | ☐ |
+| 3 | **Track heights final** — bed ~27", shelf 60"; D011 wall-track mounting detail accepted | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band; rivnut-mounted E-track/FRP-edge fit confirmed on an offcut or first row | ☐ |
 | 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
 | 5 | **Roof drawing** — three panel rows, fore-aft NXT rail/backing structure + through-rail bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; through-rail fastener/backing/spacer detail selected | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
