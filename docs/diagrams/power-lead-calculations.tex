@@ -1,0 +1,103 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,landscape,margin=0.45in]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{slate}{HTML}{334155}
+\definecolor{muted}{HTML}{64748B}
+\definecolor{lightrow}{HTML}{F8FAFC}
+
+\hypersetup{colorlinks=true, linkcolor=slate, urlcolor=slate}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\emergencystretch=3em
+
+\begin{document}
+
+{\LARGE\bfseries Juplaya Trailer Power Lead Calculations}
+
+{\small Planning worksheet for the TikZ power overview. This is not a final wiring schematic or code sign-off. Fuse class, interrupt rating, insulation type, conduit/bundle derating, crimp hardware, strain relief, and exact route lengths still need the measured install drawing.}
+
+\section*{Inputs and Hot-Day Assumptions}
+
+\begin{tabular}{@{}p{0.24\linewidth}p{0.70\linewidth}@{}}
+\toprule
+Item & Value used \\
+\midrule
+Primary sources & Project source files listed below the assumptions table; numeric values come from the current power design and local component spec notes. \\
+Peak environment & Hot summer design ambient: 46 C / 115 F. Voltage-drop calculations use 75 C conductor resistance, so the assumed conductor rise for the drop calculation is \(\Delta T = 29\) C above ambient. \\
+Copper temperature correction & \(R_T = R_{20}[1 + 0.00393(T-20)]\), with \(T=75\) C. \\
+Voltage drop & \(V_{drop}=2LI R_T/1000\), where \(L\) is one-way length in ft and \(R_T\) is ohms per 1000 ft at 75 C. \\
+PV module current & LG455N2W-E6: \(I_{mpp}=10.83\) A and \(I_{sc}=11.39\) A. Series strings keep the same current. \\
+Charge-current convention & PV-string labels show string current. MPPT-to-battery labels show approximate 48 V charge current and controller output limit. \\
+Wire-size convention & ``Minimum / plan'' means the smallest conductor selected for this planning model after ampacity and voltage-drop screening. It is not permission to ignore OCP, terminal temperature, bundling, conduit fill, or manufacturer instructions. \\
+\bottomrule
+\end{tabular}
+
+{\footnotesize Source files: \texttt{docs/power.md}; LG455, Victron SmartSolar, Anker C1000/PS400, LiTime ComFlex, Dometic CFX3, and Orion reference notes under \texttt{docs/reference/}; Velit current range from \texttt{docs/research/aio-inverter-3panel-evidence-2026-06-05.md}.}
+
+\section*{Peak Current Notes}
+
+\begin{itemize}
+\item Roof PV: \(3 \times 455\) W = 1365 W. Approximate 48 V charge current is 1365 W / 48 V = 28.4 A; at 57.6 V absorption it is 23.7 A. The SmartSolar 250/60-Tr output limit is 60 A.
+\item Optional LG ground PV: \(2 \times 455\) W = 910 W. Approximate 48 V charge current is 19.0 A at 48 V and 15.8 A at 57.6 V. The SmartSolar 150/35 output limit is 35 A.
+\item Velit 2000R: source notes carry about 5--14 A at 48 V, rated about 670 W. Use 14 A for branch voltage-drop sizing until the final manual/fuse value is confirmed.
+\item 24 V bus: the Orion-Tr 48/24-16A is the hard rail limit. Fridge + normal lighting + USB fits; all floods, full awning, USB-C full load, optional C1000 top-up, and heater glow do not fit simultaneously.
+\item Phase 2 MultiPlus is deferred. If AC charging is added later, combined trailer charging must still be capped at or below the 100 A ComFlex charge limit.
+\end{itemize}
+
+\section*{Lead Sizing Worksheet}
+
+{\scriptsize
+\begin{longtable}{@{}L{0.18\linewidth}L{0.12\linewidth}L{0.07\linewidth}L{0.08\linewidth}L{0.12\linewidth}L{0.10\linewidth}L{0.11\linewidth}L{0.13\linewidth}@{}}
+\toprule
+Lead & Current basis & Circuit V & Assumed one-way length & Required ampacity basis & Minimum / plan conductor & Worst-case drop at 75 C & Notes \\
+\midrule
+\endfirsthead
+\toprule
+Lead & Current basis & Circuit V & Assumed one-way length & Required ampacity basis & Minimum / plan conductor & Worst-case drop at 75 C & Notes \\
+\midrule
+\endhead
+Roof 3S PV string to SmartSolar 250/60-Tr & 10.83 A MPP; 11.39 A Isc & 126.3 Vmp & 20 ft & PV conductor and OCP at or above 20 A module series-fuse class & 10 AWG / 2.59 mm & 0.53 V / 0.4\% & 3S raises voltage; current stays one-panel current. \\
+Optional LG ground 2S string to SmartSolar 150/35 & 10.83 A MPP; 11.39 A Isc & 84.2 Vmp & 50 ft & PV conductor and OCP at or above 20 A module series-fuse class & 10 AWG / 2.59 mm & 1.32 V / 1.6\% & Portable length assumption; measure actual deployable lead. \\
+SmartSolar 250/60-Tr to 48 V bus & 24--28 A expected; 60 A controller limit & 57.6 V charge & 4 ft & 60 A controller output & 6 AWG / 4.12 mm & 0.23 V / 0.4\% & Size OCP to controller and conductor, not average harvest. \\
+SmartSolar 150/35 to 48 V bus & 16--19 A expected; 35 A controller limit & 57.6 V charge & 4 ft & 35 A controller output & 8 AWG / 3.26 mm & 0.21 V / 0.4\% & Optional source, but full-output conductor basis. \\
+Battery main OCP / shunt / 48 V bus & 100 A continuous pack limit & 51.2 V nominal & 3 ft & 100 A charge/discharge limit, plus interrupt-rating gate & 2 AWG / 6.54 mm & 0.11 V / 0.2\% & Main OCP class and interrupt rating remain open. \\
+48 V bus to Velit 2000R branch & 5--14 A operating range & 48 V nominal & 15 ft & At least 14 A plus final Velit OCP value & 12 AWG / 2.05 mm & 0.81 V / 1.7\% & Use final Velit manual/fuse value when available. \\
+48 V bus to Orion 48/24 input & About 9.2 A at 384 W output and 87\% assumed efficiency & 48 V nominal & 4 ft & 20 A input breaker class from build notes & 12 AWG / 2.05 mm & 0.14 V / 0.3\% & Efficiency is assumed pending exact 48/24 datasheet row. \\
+Orion 24 V output to Blue Sea 5026 & 16 A converter output limit & 24 V regulated & 3 ft & 16 A rail output & 12 AWG / 2.05 mm & 0.19 V / 0.8\% & Converter is the bus bottleneck. \\
+Fridge branch & 4.6 A running & 24 V regulated & 18 ft & 10 A branch fuse; 3\% voltage-drop target & 14 AWG / 1.63 mm & 0.51 V / 2.1\% & Matches current build note if one-way run stays near 18 ft. \\
+Longest lighting/flood trunk & 8 A planning trunk load & 24 V regulated & 35 ft & 5 A per branch; trunk must match aggregate branch plan & 10 AWG / 2.59 mm & 0.68 V / 2.8\% & Long exterior runs drive the size; local zones may be smaller. \\
+USB-C PD branch & 5 A full USB-C load & 24 V regulated & 12 ft & 7.5 A branch fuse & 14 AWG / 1.63 mm & 0.37 V / 1.5\% & Full USB-C load is a short-duration worst case. \\
+Optional C1000 top-up from 24 V bus & 10 A C1000 low-voltage input limit & 24 V regulated & 8 ft & 10 A manual/fused branch & 12 AWG / 2.05 mm & 0.31 V / 1.3\% & Discretionary; shed before it starves fridge/house loads. \\
+Winter heater rough-in & 1--2 A run; up to 11 A glow estimate & 24 V regulated & 25 ft & 15 A rough-in branch & 10 AWG / 2.59 mm & 0.67 V / 2.8\% & Docs mention 12 AWG; 10 AWG is the voltage-drop planning pick at this assumed length. \\
+48 V bus to Orion 48/12 input & 5.8 A at 240 W output and 87\% efficiency & 48 V nominal & 4 ft & Input OCP sized to converter and conductor & 14 AWG / 1.63 mm & 0.14 V / 0.3\% & 12 V receptacles stay cabinet-local only. \\
+12 V cabinet receptacle bank & 20 A / 240 W converter output & 12.2 V regulated & 3 ft & 20 A converter output, branches fused individually & 12 AWG / 2.05 mm & 0.23 V / 1.9\% & Keep physically short; do not distribute a 12 V house rail. \\
+Anker PS400 to C1000 & 8.33 A operating; C1000 high-range input allows 12.5 A & 48 V operating & 15 ft & Anker cable/input rating & 10 AWG / 2.59 mm & 0.30 V / 0.6\% & Separate portable island; never combine with LG strings. \\
+\bottomrule
+\end{longtable}
+}
+
+\section*{Load-Shedding Implications}
+
+The 24 V rail cannot be sized by summing every optional load and pretending they are simultaneous. A literal worst case is fridge 4.6 A + interior lights 3 A + all exterior floods 5.25 A + awning strip 2.7 A + USB-C 5 A + C1000 top-up 10 A = 30.55 A before heater glow. That is almost twice the 16 A Orion limit. The operating rule is therefore part of the electrical design: C1000 top-up, all-floods mode, full USB-C load, and heater glow are mutually managed loads.
+
+The roof and ground MPPT outputs are the opposite case: normal current is below controller capacity, but the conductor/OCP basis should follow controller output limits. Roof plus optional ground charging at expected full-array output is roughly 40--47 A depending on battery voltage. If both controllers are allowed to their hardware limits, they can contribute up to 95 A, still below the ComFlex 100 A charge cap, but leaving no room for a future AC charger.
+
+\section*{Open Measurements Before Final Wiring}
+
+\begin{itemize}
+\item Replace every assumed one-way length with measured route length after the nose cabinet, roof gland, Velit station, fridge bay, switch panel, and exterior lighting paths are fixed.
+\item Confirm conductor insulation temperature rating, strand class, terminal temperature limits, conduit or loom bundling, and whether any wire runs share hot cabinet air.
+\item Choose final 48 V OCP hardware with adequate DC interrupt rating. The main battery OCP remains a Class-T-or-equivalent gate.
+\item Bench-measure SmartScan and winter-heater glow current before making them part of a simultaneous-load case.
+\item After shakedown, measure voltage at the load while hot and loaded; the calculated drops are only as good as the assumed lengths and terminations.
+\end{itemize}
+
+\end{document}
