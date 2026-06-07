@@ -29,23 +29,23 @@ Rules for the numbers:
 
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
-| Priced committed / ordered / purchased fit-out | $4,213.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,902.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,116.12 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Priced committed / ordered / purchased fit-out | $4,228.78 | Calculated from `LINE` rows where `bucket = Committed`. |
+| Remaining Juplaya buy list | $10,892.84 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,121.62 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $18,265.12 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $18,270.62 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
 | Category | Remaining Total |
 | --- | --- |
-| Power / solar / cabinet | $2,608.60 |
+| Power / solar / cabinet | $2,653.60 |
 | Climate / envelope / awning | $4,194.67 |
 | Interior / floor / walls | $2,275.00 |
-| Lighting / switches / security | $1,324.57 |
+| Lighting / switches / security | $1,269.57 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,902.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,116.12` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,892.84` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,121.62` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -81,8 +81,9 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Exterior lights | 7 | Super Bright LEDs VAL2-NW9 floods | $29.99 | $209.93 | [Super Bright LEDs price signal](https://www.superbrightleds.com/vehicle-lights/off-road-lights/9-rv-trailer-led-light-porch-and-utility-light-1450-lumen-12v) | Seven 4000 K flood/scene fixtures. |
 | ORDERED | Floor track | 2 | 8 ft flanged L-track sections | $80.00 | $160.00 | [US Cargo Control price signal](https://www.uscargocontrol.com/products/96-flanged-airline-style-track-aluminum) | Receipt needed; user has two sections on the way. |
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
+| ORDERED | Security | 1 | Nu-Set 8-1/4 in high-security trailer-door puck hasp | $15.50 | $15.50 | [Price signal until receipt](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | User ordered Nu-Set RV high-security hasp for puck lock. Source lists the hasp at 15.50 and says hardware is not included; replace with actual receipt when known. |
 
-Committed / purchased subtotal: **$4,213.28**.
+Committed / purchased subtotal: **$4,228.78**.
 
 ## Remaining Juplaya Buys
 
@@ -102,10 +103,10 @@ Committed / purchased subtotal: **$4,213.28**.
 | BUY NOW | 1 set | Cabinet ventilation: 24 V fan thermostat transfer grilles/filter | $125.00 | $125.00 | Allowance | Cabin-side intake/exhaust plan no through-wall vent for now. |
 | BUY NOW | 1 set | Fused cigarette-lighter receptacles for cabinet 12 V | $40.00 | $40.00 | Allowance | Auxiliary only not a distributed 12 V rail. |
 | BUY NOW | 1 | Scanstrut SC-USB-F3 Flip Pro Max dual USB-C | $50.99 | $50.99 | [Defender price signal](https://defender.com/en_us/scanstrut-flip-pro-max-dual-usb-c-charge-socket-sc-usb-f3) | 24 V input unlocks full USB-C output. |
-| BUY NOW | 1 each | LandAirSea 54 GPS + hardwire cable | $54.90 | $54.90 | [Tracker + hardwire cable price signal](https://landairsea.com/products/hardwire-power-adapter-cable-for-gps-trackers-usb-c) | Always-on 24 V branch 3 A fused. |
+| BUY NOW | 1 each | LandAirSea Overdrive GPS + hardwire cable | $99.90 | $99.90 | [Tracker + hardwire price signal](https://landairsea.com/products/landairsea-overdrive) | Preferred for Oakland storage if delivery timing allows: larger 4240 mAh backup battery, commercial/rugged tracker, stronger GNSS/cellular antennas. LandAirSea 54 + USB-C hardwire remains the acceptable immediate fallback at about 54.90. Both require a subscription. |
 | BUY NOW | 1 lot | 4 AWG tongue pre-wire + Anderson connector for future truck charging | $200.00 | $200.00 | Allowance | Pull while walls are open; active charging hardware deferred. |
 
-Power / solar / cabinet remaining subtotal: **$2,608.60**.
+Power / solar / cabinet remaining subtotal: **$2,653.60**.
 
 ### Climate / envelope / awning
 
@@ -155,10 +156,10 @@ Interior / floor / walls remaining subtotal: **$2,275.00**.
 | BUY NOW | 1 | Super Bright LEDs LDK-8A PWM dimmer | $7.95 | $7.95 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/ldk-8a-12-24-volt-dc-single-color-led-dimmer-single-color-led-dimmer) | After the AWNING switch. |
 | BUY NOW | 1 set | Custom switch labels / label stock | $25.00 | $25.00 | Allowance | Blue Sea generic labels may not cover these names. |
 | BUY NOW | 1 lot | Lighting branch wire glands sealant heat shrink | $140.00 | $140.00 | Allowance | Exterior branch wiring and penetrations. |
-| BUY NOW | 1 set | Security locks: Proven 2178 2 puck locks Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax price signals and puck-lock allowance](https://www.provenlocks.com/products/model-2178) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Proven 2178 allowance 250, Trimax TCL65 allowance 99.95, puck pair allowance 240 until exact keyed-alike product is selected. |
-| BUY NOW | 1 set | Personnel-door puck hasp/backing hardware | $100.00 | $100.00 | [Allowance](https://paclock.com/product/ucs_7a_770/) | Bolt-on PACLOCK PL770 / UCS-7A/770-class hasp or Proven corner hasp, backing plates, and 3/8 in hardware for the personnel door. Use keyed-alike puck strategy from the security lock set; external puck is unattended/travel/storage only, not an occupied-mode latch. |
+| BUY NOW | 1 set | Security locks: Proven 2178, 2 keyed-alike PACLOCK UCS-7A pucks, Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax + PACLOCK high-side allowance](https://paclock.com/product/7-series/) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Buy two PACLOCK 7-Series flat-back puck locks in the same UCS keyed-alike/U-PICK code: one rear ramp, one Nu-Set personnel-door hasp. Prefer stainless bodies if the storage spot is exposed to Bay Area wet/salt; aluminum UCS-7A is acceptable if budget wins. Verify the ramp latch is puck-compatible; if not, add a puck hasp or use a PACLOCK keyed-alike UCS padlock as the fallback. |
+| BUY NOW | 1 set | Personnel-door hasp backing/install hardware | $45.00 | $45.00 | [Allowance](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | Nu-Set hasp needs six 3/8 in carriage bolts/washers/nuts plus backing plates and sealant. Tie into the door frame/jamb, not thin door skin alone. External puck remains unattended/travel/storage only, not an occupied-mode latch. |
 
-Lighting / switches / security remaining subtotal: **$1,324.57**.
+Lighting / switches / security remaining subtotal: **$1,269.57**.
 
 ### General consumables contingency
 
@@ -168,7 +169,7 @@ Lighting / switches / security remaining subtotal: **$1,324.57**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,902.84**.
+Remaining Juplaya subtotal: **$10,892.84**.
 
 ## Deferred / Not Juplaya
 

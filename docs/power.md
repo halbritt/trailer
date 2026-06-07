@@ -133,7 +133,7 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 | Fridge, Dometic CFX3 95DZ | ~4.6 A running | 10 A | 14 AWG | 24 V native; verify less than 3 percent round-trip voltage drop |
 | LED lighting zones | ~4-10 A exterior depending on fixtures; ~2-3 A interior typical | 5 A per zone | TBD | 24 V interior strips plus exterior zones below |
 | Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 7.5 A | TBD | 24 V in to USB-C PD |
-| LandAirSea 54 GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security |
+| LandAirSea Overdrive GPS | <0.1 A typical | 3 A | TBD | hardwired always-on security; 54 + USB-C hardwire acceptable fallback |
 | Door switch | signal only | TBD | TBD | dry contact |
 | Winter heater outlet | ~1-2 A run; glow up to ~11 A | 15 A | 12 AWG | exterior reachable; N4 glow may exceed current July converter margin |
 | Optional C1000 top-up | up to 10 A, about 240 W | TBD | TBD | manual/fused branch only; disable before it starves critical 24 V loads |
@@ -235,6 +235,9 @@ Oakland storage use:
 - Starlink Mini is the secondary high-bandwidth contact path for camera/telemetry/remote check-ins, but only if the storage spot has open sky. It will not work reliably inside a metal trailer or under covered storage.
 - If left on 24/7, the 48 V 100 Ah house battery class is only a several-day buffer without solar. For storage, either leave roof solar live with a conservative low-voltage cutoff, or power Starlink on a schedule rather than treating it as an always-on background load.
 - A roof-mounted Mini needs a theft-resistant, serviceable mount and cable gland; a visible dish is itself a target in storage.
+- Storage-site decision: a free Oakland spot with poor sky is still acceptable if physical security and cellular signal are good. In that case, leave Starlink portable/offline and use cellular telemetry.
+- Pay or detour for an Alameda/open-sky spot only if it improves physical security, access, solar exposure, or enables broadband telemetry enough to justify the monthly delta.
+- If battery voltage, door state, temperature, or humidity telemetry is needed without open sky, add a low-power cellular IoT node rather than keeping Starlink awake. If images are needed, use a cellular battery/solar camera only after confirming LTE signal at the actual parked trailer.
 
 ## Phase 2 MultiPlus
 
