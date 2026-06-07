@@ -2,7 +2,7 @@
 
 This is the detailed power source of truth for the Juplaya trailer build. The build sheet keeps only the abbreviated view; this document carries the wiring architecture, solar topology, component decisions, commissioning rules, and energy budget.
 
-Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
+Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
 
 ## Diagrams
 
@@ -144,7 +144,7 @@ Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can pu
 
 Switching plan: **put the lighting switches on the power cabinet**, not beside the entry door, for the Juplaya build. This keeps wiring shorter and serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
 
-Switch hardware: use a **Blue Sea 8260 6-position Contura mounting panel** with **Blue Sea 8282 Contura III SPST OFF-ON black switches**. The 8282 is rated 15 A at 24 V DC, so it has ample margin for these fused lighting branches. The 8260 panel accepts 0.06" to 0.38" mounting thickness; if the power-cabinet face is 1/2" ply, mount the switches in a thin ABS/aluminum inset plate or back-rabbet the cutout. Wire each switch downstream of its Blue Sea 5026 branch fuse as a hard enable, then put a 24 V PWM dimmer downstream of the switch for brightness control.
+Switch hardware: use a **Blue Sea 8260 6-position Contura mounting panel** with **Blue Sea 8282 Contura III SPST OFF-ON black switches**. The 8282 is rated 15 A at 24 V DC, so it has ample margin for these fused lighting branches. The 8260 panel accepts 0.06" to 0.38" mounting thickness; if the power-cabinet face is 1/2" ply, mount the switches in a thin ABS/aluminum inset plate or back-rabbet the cutout. Wire each switch downstream of its Blue Sea 5026 branch fuse as a hard enable, then put a panel-mount 24 V dimmer control downstream of the switch for brightness control.
 
 Recommended switch labels:
 
@@ -157,9 +157,9 @@ Recommended switch labels:
 | 5 | REAR FLOOD | hard enable for dimmer/rear `VAL2-NW9` loading-work light |
 | 6 | AWNING | hard enable for the awning dimmer/strip |
 
-Use custom printed labels for those names; the Blue Sea 8214 label set is useful for generic DC labels but may not include the exact flood-zone names. Default dimmer is the low-cost **Super Bright LEDs `LDK-8A` 12-24 VDC / 8 A PWM dimmer**, one after each lighting switch: INTERIOR, CURB FLOOD, ROAD FLOOD, NOSE FLOOD, REAR FLOOD, and AWNING. It has enough current margin for each planned branch. The premium marine alternative is **Blue Sea 7509 Deckhand Dimmer, 24 V DC / 12 A**, which is sealed and panel-integrated but much more expensive.
+Use custom printed labels for those names; the Blue Sea 8214 label set is useful for generic DC labels but may not include the exact flood-zone names. Preferred finished control is a panel-mount 24 V dimmer, one after each lighting switch: INTERIOR, CURB FLOOD, ROAD FLOOD, NOSE FLOOD, REAR FLOOD, and AWNING. Exact SKU waits for the cabinet-panel mockup and bench test. Blue Sea 7509 DeckHand is the robust marine reference at 24 V / 12 A and includes a momentary panel switch, but it is much more expensive and is specified for non-regulated LEDs. Cheap PWM knob dimmers such as the `LDK-8A` remain acceptable bench-test/prototype parts, not the finished-cabinet default.
 
-Bench-test the ordered `VAL2-NW9` flood/scene fixture with the selected PWM dimmer before final exterior mounting. The product specs confirm 12-28 VDC input, 18 W, and 1.5 A current draw, but do not explicitly claim dimmer compatibility. If the fixture flickers, buzzes, shuts down, or runs hot on PWM, keep the cabinet switch and either run that side switch-only or change to a dimmable exterior fixture.
+Bench-test the ordered `VAL2-NW9` flood/scene fixture with the selected panel dimmer before final exterior mounting. The product specs confirm 12-28 VDC input, 18 W, and 1.5 A current draw, but do not explicitly claim dimmer compatibility. If the fixture flickers, buzzes, shuts down, or runs hot on the selected dimmer, keep the cabinet switch and either run that side switch-only or change to a dimmable exterior fixture.
 
 Use **24 V-native or 10-30 V DC exterior-rated LED fixtures**. The current selected fixture class is 12-28 VDC, so the lights run directly from the 24 V house bus. Do not build a 12 V exterior-lighting sub-bus for this plan, and do not run lighting through cigarette-lighter receptacles. House exterior lights stay completely separate from the OEM trailer lighting and the 7-way plug.
 
@@ -169,12 +169,12 @@ Panel verdict: **7 x Super Bright LEDs `VAL2-NW9` flood/scene fixtures are order
 
 | Zone | Fixture count | Approx current | Fuse | Wire | Notes |
 |---|---:|---:|---|---|
-| Interior main/task | TBD | ~2-3 A @ 24 V typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch plus dimmer |
-| Awning/camp light | 1 x 5 m strip max | 64 W max / ~2.7 A @ 24 V before dimming | 5 A | 16-18 AWG | `RA-IP68-80CRI-5m` 3000 K or equivalent; cabinet switch plus dimmer; diffuse/downward, not a glare bar |
-| Curbside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for camp/work; cabinet switch plus dimmer, pending PWM bench test |
-| Roadside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for roadside work; cabinet switch plus dimmer, pending PWM bench test |
-| Nose floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | one fixture on each V-nose face; cabinet switch plus dimmer, pending PWM bench test |
-| Rear flood | 1 x `VAL2-NW9` | 18 W / ~0.75 A @ 24 V | 5 A | 16 AWG | upper rear/down-aimed loading light; cabinet switch plus dimmer, pending PWM bench test; not tied to reverse/tow wiring |
+| Interior main/task | TBD | ~2-3 A @ 24 V typical | 5 A | TBD | Yuji strips in aluminum channel; cabinet switch plus panel dimmer |
+| Awning/camp light | 1 x 5 m strip max | 64 W max / ~2.7 A @ 24 V before dimming | 5 A | 16-18 AWG | `RA-IP68-80CRI-5m` 3000 K or equivalent; cabinet switch plus panel dimmer; diffuse/downward, not a glare bar |
+| Curbside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for camp/work; cabinet switch plus panel dimmer, pending bench test |
+| Roadside floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | down/out aimed for roadside work; cabinet switch plus panel dimmer, pending bench test |
+| Nose floods | 2 x `VAL2-NW9` | 36 W / ~1.5 A @ 24 V | 5 A | 16 AWG | one fixture on each V-nose face; cabinet switch plus panel dimmer, pending bench test |
+| Rear flood | 1 x `VAL2-NW9` | 18 W / ~0.75 A @ 24 V | 5 A | 16 AWG | upper rear/down-aimed loading light; cabinet switch plus panel dimmer, pending bench test; not tied to reverse/tow wiring |
 | Optional step/courtesy | 1-2 small amber fixtures | <0.5 A | 3 A or shared 5 A branch | 18 AWG | optional low amber at personnel door/step; can share awning switch |
 | Spare exterior/service | TBD | TBD | 5 A | 16-18 AWG | capped spare pair if the wall path is open |
 
