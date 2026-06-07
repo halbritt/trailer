@@ -1,0 +1,23 @@
+{
+  "pdf": "/home/halbritt/git/trailer/docs/diagrams/power-overview.pdf",
+  "mode": "research",
+  "text_plot_overlap_check": false,
+  "plot_label_regex": null,
+  "page": {
+    "width": 761.0,
+    "height": 457.69000244140625
+  },
+  "text_box_count": 57,
+  "title": {
+    "text": "Juplaya Trailer Power Architecture",
+    "x0": 24.020000457763672,
+    "y0": 7.731409072875977,
+    "x1": 251.67984008789062,
+    "y1": 28.260822296142578,
+    "colors": [
+      0
+    ]
+  },
+  "issues": [],
+  "status": "pass"
+}
