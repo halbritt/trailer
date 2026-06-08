@@ -7,6 +7,7 @@ Target readiness milestone: 2026-07-04.
 This is a first-pass dependency timeline for the Juplaya build. The source of truth remains the build sheet and supporting docs:
 
 - [juplaya-trailer-context.md](juplaya-trailer-context.md), especially "Build sequence (dependency order)" and "Design freeze - definition of done"
+- [gate-tracker.md](gate-tracker.md), especially active blocker status
 - [dimensions.md](dimensions.md), especially the measurement pass table
 - [DECISION_LOG.md](DECISION_LOG.md), especially D006-D012 status
 - [order-sheet.md](order-sheet.md), especially ordered, remaining, and "BUY AFTER GATE" rows
@@ -31,7 +32,7 @@ gantt
     axisFormat %b %d
 
     section Gate Closure
-    Measurement pass rows 3/3a 5a 6 7 10 11 14 16 17 19 :crit, meas, 2026-06-08, 1d
+    Close active gate-tracker blockers                 :crit, meas, 2026-06-08, 1d
     Owner ratifies D006-D009 and D012                 :crit, ratify, after meas, 1d
     Roof interior floor drawings                      :crit, draw, after meas, 1d
     Order freeze and gate buys                        :crit, orders, after ratify draw, 1d
@@ -77,9 +78,9 @@ gantt
 
 The critical path is measurement and ratification, then roof/open-wall work, foam, roof coating, floor coating, wall closure, windows, cabinet/systems install, and commissioning. In this schedule there is effectively no slack. Design freeze needs to close by 2026-06-11; a slip in the measurement/design freeze gate or the open-wall/bare-roof window likely lands directly on the July 4 readiness date.
 
-The key early gate is design freeze. It closes when the build sheet's ten design-freeze rows close, with special attention to:
+The key early gate is design freeze. Current blocker status lives in [gate-tracker.md](gate-tracker.md). Design freeze closes when the build sheet's ten design-freeze rows close, with special attention to:
 
-- Measurement pass rows for roof drawing, wall/window bays, floor steel and bike geometry, rail scan/post wall thickness, OSB thickness, fridge bay, and curb/tongue weight.
+- Active measurement blockers for roof drawing, wall/window bays, floor steel and bike geometry, rail scan/post wall thickness, OSB thickness, and fridge bay.
 - Owner ratification of D006-D009 and D012 where still proposed.
 - "BUY AFTER GATE" roof solar rails/backing, windows, wall/FRP, fridge bay, dimmers, and related hardware.
 

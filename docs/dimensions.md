@@ -1,6 +1,6 @@
 # Dimension Sheet — Juplaya Trailer Build
 
-All known dimensions in one place. **Spec/derived values first; the fill-in table at the bottom is the mm measurement pass** — measured values are the source of truth once entered and supersede everything above. Cross-refs: [build sheet](juplaya-trailer-context.md) · [fastrac-specs](reference/fastrac-specs.md) · [work order](reference/wells-cargo-ft712s2-d-work-order.md).
+All known dimensions in one place. **Spec/derived values first; the fill-in table at the bottom is the mm measurement pass** — measured values are the source of truth once entered and supersede everything above. Current pass/fail gate status lives in the [gate tracker](gate-tracker.md). Cross-refs: [build sheet](juplaya-trailer-context.md) · [fastrac-specs](reference/fastrac-specs.md) · [work order](reference/wells-cargo-ft712s2-d-work-order.md).
 
 ## Trailer — FT712S2-D (spec / derived)
 
@@ -47,7 +47,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Deployed fabric @ 32" out, 10° pitch | ~**72.9"** | vs the 72" door — ~0.9" paper margin |
 | Fridge bay | starts at the door's aft edge, 37.9" long × 20.9" deep | curbside; band under 18.6" + lid |
 | Panel transport | 83" panels vs **81" interior width** → lengthwise only | padded E-track wall slot |
-| Floor L-track rows | lengthwise, starting point **~26" on center** | final row stationing after bike/chock/steel pass |
+| Floor L-track rows | lengthwise, **26" on center** | spacing accepted; final lateral stationing still depends on bike/chock/steel pass |
 | Wall E-track footage | ~**47 ft estimated** after moving the floor to L-track | ~50–60 ft on hand should cover walls; recount after wall-row cut plan |
 
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
