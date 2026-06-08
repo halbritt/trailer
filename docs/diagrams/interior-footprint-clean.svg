@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1100" viewBox="0 0 1200 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Trailer interior floor footprint clean dimension diagram</title>
+  <desc id="desc">Top-down trailer interior floor footprint with an 81 inch rear width, 156 inch centerline length, 141 inch straight side walls, symmetrical 43 inch V-nose flanks, a 30 inch side door opening 98 inches from the rear, 13 inches from the forward door jamb to the V-nose start, and a separate 78 inch interior height note.</desc>
+  <defs>
+    <marker id="dim-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f172a"/>
+    </marker>
+    <style>
+      .page { fill: #ffffff; }
+      .sheet { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; }
+      .footprint { fill: #f8fafc; stroke: none; }
+      .wall { fill: none; stroke: #111827; stroke-width: 5; stroke-linecap: square; stroke-linejoin: round; }
+      .door { fill: none; stroke: #2563eb; stroke-width: 3.5; stroke-linecap: round; }
+      .door-arc { fill: none; stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 7; }
+      .centerline { fill: none; stroke: #64748b; stroke-width: 2; stroke-dasharray: 10 8; }
+      .extension { fill: none; stroke: #64748b; stroke-width: 1.5; }
+      .dim { fill: none; stroke: #0f172a; stroke-width: 2; marker-start: url(#dim-arrow); marker-end: url(#dim-arrow); }
+      .leader { fill: none; stroke: #64748b; stroke-width: 1.5; }
+      .title { font: 700 32px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .subtitle { font: 16px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .label { font: 700 24px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .small { font: 16px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
+      .tiny { font: 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .door-label { font: 700 17px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1d4ed8; }
+      .tag { font: 700 13px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <rect class="page" width="1200" height="1100"/>
+  <rect class="sheet" x="40" y="40" width="1120" height="1020" rx="8"/>
+
+  <text class="title" x="80" y="92">Trailer interior floor footprint</text>
+  <text class="subtitle" x="80" y="122">Clean diagram from supplied sketch. Floor dimensions are in inches.</text>
+
+  <!-- Scale: 1 inch = 5 px. Rear/ramp end is at the bottom. -->
+  <g id="footprint">
+    <path class="footprint" d="M 300 940 L 705 940 L 705 235 L 502.5 160 L 300 235 Z"/>
+
+    <path class="wall" d="M 300 940 L 705 940"/>
+    <path class="wall" d="M 705 940 L 705 440"/>
+    <path class="wall" d="M 705 290 L 705 235"/>
+    <path class="wall" d="M 705 235 L 502.5 160"/>
+    <path class="wall" d="M 502.5 160 L 300 235"/>
+    <path class="wall" d="M 300 235 L 300 940"/>
+
+    <path class="extension" d="M 686 440 L 724 440"/>
+    <path class="extension" d="M 686 290 L 724 290"/>
+    <circle cx="705" cy="290" r="5" fill="#2563eb"/>
+    <path class="door" d="M 705 290 L 835 365"/>
+    <path class="door-arc" d="M 705 440 A 150 150 0 0 0 835 365"/>
+    <text class="door-label" x="840" y="350">side door</text>
+
+    <path class="centerline" d="M 502.5 160 L 502.5 940"/>
+    <text class="tag" x="524" y="194">V-NOSE</text>
+    <text class="tag" x="452" y="975">REAR / RAMP END</text>
+  </g>
+
+  <g id="dimensions">
+    <!-- Rear interior width -->
+    <path class="extension" d="M 300 940 L 300 1013"/>
+    <path class="extension" d="M 705 940 L 705 1013"/>
+    <path class="dim" d="M 300 1000 L 705 1000"/>
+    <text class="label" x="483" y="990">81&quot;</text>
+
+    <!-- Centerline length -->
+    <path class="dim" d="M 502.5 160 L 502.5 940"/>
+    <text class="label" x="522" y="560">156&quot;</text>
+
+    <!-- Left straight wall -->
+    <path class="extension" d="M 300 940 L 210 940"/>
+    <path class="extension" d="M 300 235 L 210 235"/>
+    <path class="dim" d="M 225 940 L 225 235"/>
+    <text class="label" transform="translate(210 610) rotate(-90)">141&quot;</text>
+
+    <!-- Right rear-to-door distance -->
+    <path class="extension" d="M 705 940 L 635 940"/>
+    <path class="extension" d="M 705 440 L 635 440"/>
+    <path class="dim" d="M 650 940 L 650 440"/>
+    <text class="label" transform="translate(635 705) rotate(-90)">98&quot;</text>
+
+    <!-- Door opening -->
+    <path class="extension" d="M 705 440 L 800 440"/>
+    <path class="extension" d="M 705 290 L 800 290"/>
+    <path class="dim" d="M 785 440 L 785 290"/>
+    <text class="label" transform="translate(815 382) rotate(-90)">30&quot;</text>
+
+    <!-- Forward wall between door and nose -->
+    <path class="extension" d="M 705 290 L 760 290"/>
+    <path class="extension" d="M 705 235 L 760 235"/>
+    <path class="dim" d="M 750 290 L 750 235"/>
+    <text class="label" transform="translate(775 277) rotate(-90)">13&quot;</text>
+
+    <!-- V-nose flank dimensions -->
+    <path class="extension" d="M 300 235 L 268 205"/>
+    <path class="extension" d="M 502.5 160 L 490 121"/>
+    <path class="dim" d="M 268 205 L 490 121"/>
+    <text class="label" transform="translate(368 150) rotate(-21)">43&quot;</text>
+
+    <path class="extension" d="M 502.5 160 L 514 121"/>
+    <path class="extension" d="M 705 235 L 738 205"/>
+    <path class="dim" d="M 514 121 L 738 205"/>
+    <text class="label" transform="translate(620 150) rotate(21)">43&quot;</text>
+  </g>
+
+  <g id="height-note">
+    <path class="leader" d="M 825 665 L 725 595"/>
+    <path class="extension" d="M 830 665 L 980 665"/>
+    <text class="small" x="840" y="705">Interior height</text>
+    <text class="label" x="840" y="742">78&quot;</text>
+  </g>
+
+  <text class="tiny" x="80" y="1032">Note: V-nose is presumed symmetrical; the 42&quot;/43&quot; sketch mismatch is treated as measurement artifact.</text>
+</svg>
