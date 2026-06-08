@@ -13,9 +13,9 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Rear ramp opening | 78" W × 72" H (5,000 lb, 8' H max w/ ext.) | table + work order |
 | Side personnel door | **32" W × 72" H**, RH hinge | work order |
 | Main rails | 2" × 4" steel tube, **perimeter** | work order (+ agy finding) |
-| Crossmembers | 16" OC | work order |
+| Crossmembers | **16" OC verified** | work order + owner verification |
 | Roof bows (tube) | 24" OC | work order |
-| Wall posts | 76½" steel tube, **16" OC** → clear bay ≈ **14.5"** (verify) | work order / derived |
+| Wall posts | 76½" steel tube, **16" OC verified** → selected side-window cutouts fit between posts | work order + owner verification |
 | Coupler / ball | 2" coupler · hitch height 16" | table / work order |
 | Tires | ST205/75R15, 5-bolt | work order |
 | GVWR / axle | 3,500 lb single, electric drum | work order |
@@ -66,11 +66,11 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
 | 6 | Roof-bow stations (from front wall) + solar through-rail tie-in stations | 610 mm OC; through-rail fasteners land at bow crossings, not arbitrary roof skin | | |
-| 7 | Wall-post stations + **clear bay width** at the two window stations (rear, both walls) | ~368 mm (14.5") clear | | |
+| 7 | Wall-post stations + **clear bay width** at the two window stations (rear, both walls) | ~368 mm (14.5") clear | **16" OC wall posts verified; selected 12×22 side-window cutouts fit between posts** | 2026-06-08 |
 | 8 | **Door drip rail → top edge of trailer** (replaces trim-height estimate) | ~114 mm (4.5")? | **130 mm (5-1/8")** — F45s case is 5.35" → wall-mount confirmed dead by 0.225" | 2026-06-04 |
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
-| 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | | |
-| 11 | Bike bar widths (WR250R / CRF450RL) + front-tire centerline spacing for stagger | 813–864 mm bars | | |
+| 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | **floor steel/crossmembers 16" OC verified; main rails remain perimeter per work order** | 2026-06-08 |
+| 11 | Bike/L-track physical fit check | 26" L-track rows, bars interleaved | **bike tape geometry deferred/unneeded; owner will verify by putting bikes in the trailer and checking 26" L-track placement + bar overlap** | 2026-06-08 |
 | 12 | Wall build-up thickness at window stations — **birch (D009) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | **1222 = 11-5/8"×21-5/8"; 2015 = 19-5/8"×14-5/8"** | confirmed (RecPro, web-val) | 2026-06-05 |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
@@ -78,7 +78,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | **98" clear from rear/ramp end to side-door aft jamb** (2489 mm) from clean footprint diagram; enough for the 37.9" fridge length | 2026-06-08 |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
-| 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
+| 19 | **Factory wall panel thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | **3/8" factory wall panels verified** | 2026-06-08 |
 
 > **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
 > When a row is filled, propagate: the roof drawing (4–6, 15), solar rail/backing detail, window cuts (7, 12–14), riser fabrication (8, 9, 16), floor L-track layout (10, 11), and the payload ledger (18).

@@ -80,7 +80,7 @@ The critical path is measurement and ratification, then roof/open-wall work, foa
 
 The key early gate is design freeze. Current blocker status lives in [gate-tracker.md](gate-tracker.md). Design freeze closes when the build sheet's ten design-freeze rows close, with special attention to:
 
-- Active measurement blockers for roof drawing, wall/window bays, floor steel and bike geometry, rail scan/post wall thickness, OSB thickness, and fridge bay.
+- Active measurement blockers as listed in the gate tracker; floor steel, wall-post/window fit, factory wall panel thickness, interior footprint, and bike tape geometry are no longer design-freeze measurement blockers.
 - Owner ratification of D006-D009 and D012 where still proposed.
 - "BUY AFTER GATE" roof solar rails/backing, windows, wall/FRP, fridge bay, dimmers, and related hardware.
 

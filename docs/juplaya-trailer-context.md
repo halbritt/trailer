@@ -145,7 +145,7 @@ Two configurations share one floor: **moto mode** (both bikes in, gear on the wa
 ### Bikes & floor L-track
 
 - **WR250R + CRF450RL (~590 lb pair), side-by-side, nose-forward, on the roadside half**, in **ordered Bolt It On 360 L-track wheel chocks** (12–18" stagger so the bars interleave). Floor geometry: **two lengthwise floor L-track rows, 26" on center**, flush/recessed and bolted through to steel/backing; the 4 factory D-rings get reused as backup tie points. Primary motorcycle crash restraint stays on the floor L-track and factory 5,000 lb D-rings tied to the steel frame/crossmembers, not on the wall E-track.
-- **⚠ Floor plan rework gate:** the original ~24" E-track centerline spacing **failed** — cross-exam found ~9" of handlebar interference, and the 2"×4" main rails run at the **perimeter** (not under the centerline), while a deep recess leaves limited ply between crossmembers. The L-track row spacing is now fixed at **26" on center**; final lateral stationing and fastening still need **measured** steel locations (row 10), actual bar widths/front-tire centerlines (row 11), and the ordered chock hardware/studs. Evidence/options: [L-track floor chock options](research/l-track-floor-chock-options-2026-06-05.md).
+- **⚠ Floor plan rework gate:** the original ~24" E-track centerline spacing **failed** — cross-exam found ~9" of handlebar interference. The L-track row spacing is now fixed at **26" on center**, and the floor steel/crossmembers are verified **16" on center**. Bike geometry is no longer a tape gate: final placement is verified by putting the bikes in the trailer and checking the 26" L-track placement plus handlebar overlap before final drill/coating commitment. Evidence/options: [L-track floor chock options](research/l-track-floor-chock-options-2026-06-05.md).
 - **Aisle reality:** the nominal ~30" walking aisle shrinks to **~20" effective at bar height** — fridge access and egress are planned around that, not the floor-level number.
 - **Track/chock order status:** floor L-track = **2 × 8 ft flanged L-track sections ordered / on the way (2026-06-05)**; **Bolt It On 360 L-track wheel chocks ordered (2026-06-05)**. The ~50–60 ft of E-track on hand should be treated as wall-track stock first, not floor stock.
 
@@ -181,13 +181,13 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Walls — D009 (proposed)
 
-**Pull the factory OSB while the walls are open for foam, re-skin in 3/8" birch ply, FRP textured panel over the birch, no paint.**
+**Pull the factory wall panels while the walls are open for foam, re-skin in 3/8" birch ply, FRP textured panel over the birch, no paint.**
 
-- **Why:** the foam job already has the walls stripped — the swap is nearly free labor. 3/8" matches the factory skin thickness, so the wall-sandwich geometry (window clamp range, door reveals) doesn't move. Birch holds screws and FRP adhesive far better than OSB. The owner has access to high-quality stock (one 3/8" and one 1/2" sheet on hand; 1/4" obtainable).
+- **Why:** the foam job already has the walls stripped — the swap is nearly free labor. 3/8" matches the factory skin thickness, so the wall-sandwich geometry (window clamp range, door reveals) doesn't move. Birch improves screw bite and FRP adhesion. The owner has access to high-quality stock (one 3/8" and one 1/2" sheet on hand; 1/4" obtainable).
 - **Thickness ruling:** **3/8" for the walls.** 1/4" rejected — flexes between the 16"-OC posts and thins the window clamp sandwich. The **1/2" sheet goes to interior fixtures** (fridge-bay partition, shelving), not walls.
 - **`[web-val]` — moisture is the real hazard:** impermeable FRP on the inside + <1-perm closed-cell foam on the outside leaves the ply **no drying path** in a box that isn't climate-controlled year-round (the one birch "precedent" the build had cited turned out to be a condensation-failure story). Mitigations are mandatory, not optional: **exterior/marine-glue birch only** (not interior-glue); **seal every FRP seam/edge and the window clamp sandwich** so liquid water never reaches the cavity; **confirm the chosen FRP brand** (Crane/Marlite/Glasbord) **warranties application over Baltic birch with the chosen adhesive.** Note 3/8" sits near the structural floor (7/16" @ 16" OC) — stiffness leans on the bonded FRP composite, so the lamination must be sound.
 - ¼" XPS (rigid extruded-polystyrene foam board) goes behind the bed zone only (back insulation against the cold wall). All backing plates go in **before** finish.
-- **Gates:** verify the factory OSB is actually 3/8" (row 19) · D009 ratified **before any window RO is cut** (the row-12 clamp check depends on the final sandwich) · FRP trim system selected (design-freeze item 9).
+- **Gates:** factory wall panels verified 3/8" (row 19 closed) · D009 ratified **before any window RO is cut** (the row-12 clamp check depends on the final sandwich) · FRP trim system selected (design-freeze item 9).
 
 ### Stairs & panel transport
 
@@ -236,9 +236,9 @@ Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. The 
 
 The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
 
-1. **Measure & scan** — close the active measurement blockers in the [gate tracker](gate-tracker.md): interior footprint recorded (rows 3/3a and 17), remaining wall/door checks (rows 7, 12, 14), roof stations (5a, 6), rail 3D scan + post wall thickness (16), floor steel + bar widths (10, 11), OSB thickness (19).
+1. **Measure & scan** — close the active measurement blockers in the [gate tracker](gate-tracker.md): interior footprint recorded (rows 3/3a and 17), wall-post/window fit recorded (row 7), floor steel recorded (row 10), factory wall panel thickness recorded (row 19), remaining wall sandwich/door-frame checks (rows 12, 14), roof stations (5a, 6), rail 3D scan + post wall thickness (16).
 2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; D010 and D011 are accepted; place remaining orders (long-lead first).
-3. **Strip the interior** — factory OSB off (it's the template stock for the birch cuts); document factory wiring as found.
+3. **Strip the interior** — factory wall panels off (they are the template stock for the birch cuts); document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
@@ -263,12 +263,12 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | # | Item | Closes when | Status |
 |---|---|---|---|
 | 1 | **D006–D008 ratified** (24 V bus · awning standoffs · fridge integration) | owner ratifies in the DECISION_LOG | ☐ |
-| 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled OSB | owner ratifies + factory OSB thickness verified (row 19) | ☐ |
+| 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled factory panels | owner ratifies; factory wall panel thickness is verified 3/8" (row 19 closed) | ◐ row 19 closed; ratification open |
 | 3 | **Track heights final** — bed ~27", shelf 60"; D011 wall-track mounting detail accepted | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band; 1/4-20 rivnut-mounted E-track/FRP-edge fit confirmed on an offcut or first row | ☐ |
-| 4 | **Window locations final** — exact bay stations, both walls + door | clear bay at chosen stations (row 7) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ☐ |
+| 4 | **Window locations final** — exact bay stations, both walls + door | wall posts 16" OC and side-window fit verified (row 7 closed) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ◐ rows 7/13 closed; rows 12/14 open |
 | 5 | **Roof drawing** — three panel rows, fore-aft NXT rail/backing structure + through-rail bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; through-rail fastener/backing/spacer detail selected | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
-| 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | 26" L-track spacing accepted; floor steel + bar widths/front-tire centerlines + bay depth measured (rows 10, 11, 17); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ☐ |
+| 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | 26" L-track spacing accepted; floor steel 16" OC and fridge bay depth recorded (rows 10, 17); bike tape geometry deferred in favor of physical bike-in-trailer fit check (row 11); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ◐ measurements closed; physical fit/chock check open |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 3 gal ordered for June 12–15 delivery; 4th gal conditional after patch/first-pass coverage; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
 | 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, roof solar rail/backing hardware, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, power-cabinet interior vent/fan/thermostat parts, exterior lighting + cabinet switch/dimmer parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
