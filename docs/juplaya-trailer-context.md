@@ -19,7 +19,7 @@ The north star is [trailer-mission.md](trailer-mission.md): **the track grid is 
 
 | Fact | Value | Why it matters to the build |
 |---|---|---|
-| Interior | **81" W × 157" L × 78" H** (157" includes the tapering nose) | every layout number derives from this; the nose trapezoid is the electronics zone |
+| Interior | **81" W × 156" centerline L × 78" H measured** — 141" straight side walls + V-nose | every layout number derives from this; the nose trapezoid is the electronics zone |
 | Overall | ~16'0" L × 8'6" W × ~8'1" H | parking, clearance, panel reach for cleaning |
 | Rear ramp | 78" × 72" opening, 5,000 lb rated | bike loading; 8' clearance with extension |
 | Side door | **32" × 72" personnel door, RH hinge** | gets a window; defines the fridge bay's forward edge; the awning deploys over it |
@@ -161,7 +161,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 **Raptor schedule override closed:** owner checked local availability and shippers on 2026-06-05; the acceptable 2K tintable light-gray Raptor path has no local availability or reliable ETA, so it provides no schedule benefit over Durabak and keeps all of the 2K downsides. Raptor remains only a patch-failure fallback. If reopened, acceptable color is Raptor Color **Light Gray** (UP4855) or a matched solvent-based urethane/acrylic automotive toner in the same light-gray range, mixed per Raptor's tint guidance. White is technically acceptable but too glare/stain-prone to prefer; Basalt Gray, black, and the AutoZone-visible black 2K kit are not acceptable as the main floor color. Do not substitute the 1K aerosol or 1-part roll-on Raptor products for the 2K fallback.
 
-**Quantity:** start with **3 gallons ordered** for the base floor+cove+ramp coat plan. Keep a **4th gallon conditional** behind the PlexCore patch coverage and first full-area coverage rate, for a third coat in the wear lanes if needed (rear ramp deck and chock/L-track contact lanes). The interior floor is bounded by 81" × 157" (~88 ft²), the 3–4" wall cove adds ~12–14 ft², and the 78" × 72" ramp adds ~39 ft². Durabak textured coverage is ~50–60 ft²/gal for a standard two-coat application, so 3 gal is adequate but tight once the ramp and tie-down lanes get extra film; order the 4th gallon only if the patch/first-pass coverage says the wear-lane coat will be short.
+**Quantity:** start with **3 gallons ordered** for the base floor+cove+ramp coat plan. Keep a **4th gallon conditional** behind the PlexCore patch coverage and first full-area coverage rate, for a third coat in the wear lanes if needed (rear ramp deck and chock/L-track contact lanes). The interior floor is bounded by 81" × 156" centerline (~88 ft²), the 3–4" wall cove adds ~12–14 ft², and the 78" × 72" ramp adds ~39 ft². Durabak textured coverage is ~50–60 ft²/gal for a standard two-coat application, so 3 gal is adequate but tight once the ramp and tie-down lanes get extra film; order the 4th gallon only if the patch/first-pass coverage says the wear-lane coat will be short.
 
 **Install sequence:** finish the floor L-track/chock layout first, then recess and bolt the floor L-track through to steel/backing. Mask the L-track slots, fastener heads, D-ring pockets, ramp hinge/transition hardware, and any drain/edge details so fittings stay usable and hardware remains inspectable. Sand the PlexCore, vacuum hard, remove dust per the coating instructions, run the patch tests, coat the floor plus cove plus ramp, add the third wear-lane coat, cure fully, then land the FRP over the cove. If Durabak fails the patch, use a Raptor-class flexible polyurethane with the correct wood prep; if coating fails entirely, the only acceptable roll fallback is **fully glued G-Floor PVC trailer flooring**, not loose-lay.
 
@@ -236,7 +236,7 @@ Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. The 
 
 The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
 
-1. **Measure & scan** — close the active measurement blockers in the [gate tracker](gate-tracker.md): interior tape values recorded (rows 3/3a, 7, 14, 17), roof stations (5a, 6), rail 3D scan + post wall thickness (16), floor steel + bar widths (10, 11), OSB thickness (19).
+1. **Measure & scan** — close the active measurement blockers in the [gate tracker](gate-tracker.md): interior footprint recorded (rows 3/3a and 17), remaining wall/door checks (rows 7, 12, 14), roof stations (5a, 6), rail 3D scan + post wall thickness (16), floor steel + bar widths (10, 11), OSB thickness (19).
 2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; D010 and D011 are accepted; place remaining orders (long-lead first).
 3. **Strip the interior** — factory OSB off (it's the template stock for the birch cuts); document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**

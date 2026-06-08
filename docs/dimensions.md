@@ -8,7 +8,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 |---|---|---|
 | Body (box) | 160" L × 84" W (13'4" × 7'0") | FasTrac table |
 | Overall | ~192" L (16'0") × 102" W (8'6") × ~97" H (8'1") | derived |
-| Interior | **81" W × 157" L × 78" H** — rectangle + nose trapezoid; the 157" includes the tapering nose (see measurement rows 3/3a) | FasTrac table |
+| Interior | **81" W × 156" centerline L × 78" H measured** — 141" straight side walls + V-nose; factory/spec length was ~157" | [interior footprint](diagrams/interior-footprint-clean.svg) + FasTrac table |
 | Platform height | 18" | FasTrac table |
 | Rear ramp opening | 78" W × 72" H (5,000 lb, 8' H max w/ ext.) | table + work order |
 | Side personnel door | **32" W × 72" H**, RH hinge | work order |
@@ -52,15 +52,16 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 ## 📏 MEASUREMENT PASS — fill in (mm preferred; these supersede spec)
 
-> **Magicplan scan: landed 2026-06-04 and REJECTED as a measurement source** ([sketch](reference/magicplan-interior-sketch.pdf)). Hard fail: its 85¾" interior width exceeds the 84⅞" tape-measured **exterior** rail-to-rail (spec interior 81"); nose flanks asymmetric by 4" (43½" vs 47½"); door 29¼" vs the work order's 32". Only the long axis is credible (156¾" vs spec 157"). **Rows 3/3a, 7, 14, 17 still need the tape**; use the sketch for shape/door-position ballpark (~97½" rear wall → door aft edge) only.
+> **Interior footprint diagram: landed 2026-06-08** ([SVG](diagrams/interior-footprint-clean.svg), [PNG](diagrams/interior-footprint-clean.png)). This supersedes the rejected Magicplan sketch for the floor footprint and populates rows 3/3a and 17.
+> **Magicplan scan: landed 2026-06-04 and REJECTED as a measurement source** ([sketch](reference/magicplan-interior-sketch.pdf)). Hard fail: its 85¾" interior width exceeds the 84⅞" tape-measured **exterior** rail-to-rail (spec interior 81"); nose flanks asymmetric by 4" (43½" vs 47½"); door 29¼" vs the work order's 32". Do not use it for dimensions.
 > **Rail profile (row 16): incoming via a 3D scan** (owner) — capture the section **end-on** where the rail terminates/miters (rear corner / ramp opening); caliper the channel-lip wall thickness once to anchor the mesh. Export → `docs/reference/`. **Stations: the rail's existing bolts mark the uprights, but they sit at the extrusion's center** — a single centered bolt can't react the standoff moment, so **each standoff takes ≥2 fasteners into its upright** (vertical couple, new penetrations, before-FRP). Record bolt size + post tube wall thickness.
 
 | # | Measurement | Expected | Measured | Date |
 |---|---|---|---|---|
 | 1 | Ball-to-bumper overall length | ~4877 mm (16'0") | | |
 | 2 | Overall height (ground → roof peak) | ~2464 mm (8'1") | | |
-| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | | |
-| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the power/nose-cabinet zone; the spec's 157" interior length includes it | ~330+ mm of the 3988 mm total | | |
+| 3 | **Interior rectangle (box section): W × L × H** — width between walls (verify no wheel-well intrusion; fenders are external per the work order), length rear wall → nose taper start, height floor → ceiling | ~2057 mm W × ~3660 mm L × 1981 mm H | **81" W × 141" L × 78" H** (2057 × 3581 × 1981 mm) from clean footprint diagram | 2026-06-08 |
+| 3a | **Interior nose (trapezoid): taper-start station, centerline depth to the front wall/tip, tip width** — this is the power/nose-cabinet zone; centerline length includes it | ~330+ mm of the 3988 mm total | **taper starts 141" from rear; centerline total 156" → nose depth ~15"; 43" flanks; tip drawn as point/0"** (3581 mm, 3962 mm total, ~381 mm depth, 1092 mm flanks) | 2026-06-08 |
 | 4 | **Roof rectangle: usable flat width** | 1830–1980 mm? | **2156 mm (84-7/8")** rail-edge → rail-edge; crown minimal → full width usable | 2026-06-04 |
 | 5 | **Roof rectangle: length** | ~3660 mm (144") | **3696 mm (145.5")** back-rail edge → nose-triangle base (usable slightly less) | 2026-06-04 |
 | 5a | **Roof nose (trapezoid): taper-start station, centerline nose length, flat tip width** — the V-nose truncates to a flat tip; three numbers make the plan drawable | nose ~460–610 mm long | | |
@@ -75,7 +76,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
-| 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | | |
+| 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | **98" clear from rear/ramp end to side-door aft jamb** (2489 mm) from clean footprint diagram; enough for the 37.9" fridge length | 2026-06-08 |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 | 19 | **Factory wall OSB thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | | |
 
