@@ -9,7 +9,7 @@ This is the **source of truth** for the build. How to read it:
 - **Gates** are pass/fail checks that must pass **before drilling, fabricating, or ordering** the thing they guard. Current live status is centralized in the [gate tracker](gate-tracker.md). Most close from the [measurement pass](dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec); measured values supersede spec everywhere.
 - **`[web-val]`** marks findings from the 2026-06-05 web fact-check of the original 7 falsifiable decisions plus the D010 flooring addendum ([full report](research/build-decision-validation.md)). It flipped 4/7 original decisions to caution; the material deltas are folded into the gates below.
 
-The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Per D011, wall E-track mounts directly to the 1" thin-wall steel tube uprights with steel 1/4-20 rivnuts, and the birch/FRP finish trims up to the track. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
+The north star is [trailer-mission.md](trailer-mission.md): **the track grid is the operating system; the interior is software.** Floor **L-track** handles low-profile motorcycle chocks/tie-downs; wall **E-track** handles bed/shelf shoring and modules. Per D011, wall E-track mounts directly to the 1" thin-wall steel tube uprights with steel 1/4-20 rivnuts, and the PlexCore/FRP finish trims up to the track. Nothing is built in permanently that could instead be a module strapped to track. The trailer must reconfigure between moto basecamp (two bikes in, gear walls), sleeping deck (bikes out, bed platform on the wall tracks), and empty box (cargo) without tools beyond a track fitting.
 
 ---
 
@@ -25,6 +25,7 @@ The north star is [trailer-mission.md](trailer-mission.md): **the track grid is 
 | Side door | **32" × 72" personnel door, RH hinge** | gets a window; defines the fridge bay's forward edge; the awning deploys over it |
 | Structure | **2"×4" steel tube perimeter main rails · crossmembers 16" OC (on-center) · roof bows (tube) 24" OC · 76½" steel tube wall posts 16" OC** | the posts are the anchor grid: wall E-track rows, window bays (~14.5" clear), and awning standoffs all land on them |
 | Floor | ¾" PlexCore (the factory's composite-ply floor sheathing) over the steel | floor L-track recesses are limited by what's between crossmembers |
+| Sidewalls | 3/8" PlexCore sidewall liner, verified | D009 reuses this substrate under FRP; no birch wall re-skin |
 | Anchors | 4× factory 5,000 lb D-rings | reused in the bike tie-down plan |
 | Axle | 3,500 lb GVWR (gross vehicle weight rating), electric drum brakes | payload = 3,500 − curb (will be weighed); single axle is nose-sensitive |
 
@@ -96,7 +97,7 @@ Why these spots survive every other system: the 12" cutout fits **inside one 16"
 
 **Gates before cutting:**
 - Clear bay width at both chosen stations (dimension row 7) against the confirmed cutouts (row 13 ✓).
-- **Clamp-ring vs wall build-up `[web-val]`: the RecPro trim ring is a single 1.5" spec, not a range.** The built-up wall (steel skin + birch + FRP — fiberglass-reinforced plastic, the wipe-clean interior skin) lands ~1"–1.4" — **it won't clamp tight as-is → fur the window openings up to 1.5"** (this step now lives in the wall plan).
+- **Clamp-ring vs wall build-up `[web-val]`: the RecPro trim ring is a single 1.5" spec, not a range.** The built-up wall (steel skin + 3/8" PlexCore + FRP — fiberglass-reinforced plastic, the wipe-clean interior skin) lands ~1"–1.4" — **it won't clamp tight as-is → fur the window openings up to 1.5"** (this step now lives in the wall plan).
 - Door window: the RO (rough opening) vs the door's internal frame (row 14) — and **the 20×15 cut in a ~20-ga steel door skin removes a structural panel → add perimeter re-framing** `[web-val]`.
 - **Galvanic isolation** `[web-val]`: aluminum frames/screws against steel skin — butyl isolation + stainless/nylon hardware.
 - Keep the curbside bay clear of awning-standoff backing spans.
@@ -167,9 +168,9 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Bed & wall tracks — D011
 
-- **Bed row at ~27", shelf row at ~60"**, both mounted directly to the 16"-OC, 1" thin-wall steel tube posts with steel 1/4-20 rivnuts. Do not depend on birch or FRP as the track structure.
+- **Bed row at ~27", shelf row at ~60"**, both mounted directly to the 16"-OC, 1" thin-wall steel tube posts with steel 1/4-20 rivnuts. Do not depend on PlexCore or FRP as the track structure.
 - **Why 27" (revised from 34", owner challenge upheld):** at 34" the sleeping surface (~38.5" with platform + pad) left **1–3" of seated headroom** under the 78" ceiling for a 6'+ adult; at 27" (surface ~31") it's ~46" — you can actually sit up in bed. Bikes are out in camp mode, so nothing needs the taller under-deck clearance. **Gate: mock a 31" surface and sit-test before drilling** (design-freeze item 3).
-- **Track finish detail:** install the rivnuts into the posts before foam/FRP; trim birch and FRP up to the E-track so the rail sits flush or slightly proud. Keep fastener heads visible and serviceable, and leave enough clearance at the FRP edge for fittings to rock into the E-track slots.
+- **Track finish detail:** install the rivnuts into the posts before foam/FRP; trim PlexCore and FRP up to the E-track so the rail sits flush or slightly proud. Keep fastener heads visible and serviceable, and leave enough clearance at the FRP edge for fittings to rock into the E-track slots.
 - **Use envelope:** wall E-track handles bed shoring, shelves, gear modules, anti-tip straps, and panel transport. It is not the primary motorcycle restraint system.
 - **Bed shoring:** E-track sockets taking plain 2×4 lumber — legs under the deck when slept on, gone in moto mode.
 - **Escalation path:** if a wall row shows movement after service testing, weld tabs or backing strips to the uprights and keep the E-track bolted to those welded features so the rail remains replaceable.
@@ -179,15 +180,15 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 - **Curbside, immediately aft of the personnel door**, fridge E-track-strapped. Footprint 37.9" × 20.9" × 18.6" tall **plus lid-swing clearance — verify which way the split lids hinge before fixing the bay's wall orientation.** The location survives: outside reach under the awning, lid access in both modes, clear of the door swing.
 - **⚠ Thermal gate — HARDENED `[web-val]`:** the Dometic manual requires a **50 mm (~2") gap on all four sides** and flatly says **"do not place the cooling device in closed compartments."** An enclosed bay is non-compliant as worded. So: **the bay gives 50 mm all-sides clearance + forced through-flow ventilation** — "shaded" alone doesn't cut it. Then field-verify in-bay air temperature under desert sun with the awning out: **<43 °C (110 °F) to run at all, <30 °C (86 °F) to hold both dual-zone setpoints.** Keep the bay off the nose-cabinet heat plume. (Dometic error codes: Warning 34 = high ambient / blocked vent; Warning 33 = low supply voltage — see Systems for the wiring check.)
 
-### Walls — D009 (proposed)
+### Walls — D009 (accepted)
 
-**Pull the factory wall panels while the walls are open for foam, re-skin in 3/8" birch ply, FRP textured panel over the birch, no paint.**
+**Reuse the factory 3/8" PlexCore sidewall liner; no birch re-skin. Pull the panels for foam/open-wall work, reinstall them, then apply FRP textured panel over the PlexCore, no paint.**
 
-- **Why:** the foam job already has the walls stripped — the swap is nearly free labor. 3/8" matches the factory skin thickness, so the wall-sandwich geometry (window clamp range, door reveals) doesn't move. Birch improves screw bite and FRP adhesion. The owner has access to high-quality stock (one 3/8" and one 1/2" sheet on hand; 1/4" obtainable).
-- **Thickness ruling:** **3/8" for the walls.** 1/4" rejected — flexes between the 16"-OC posts and thins the window clamp sandwich. The **1/2" sheet goes to interior fixtures** (fridge-bay partition, shelving), not walls.
-- **`[web-val]` — moisture is the real hazard:** impermeable FRP on the inside + <1-perm closed-cell foam on the outside leaves the ply **no drying path** in a box that isn't climate-controlled year-round (the one birch "precedent" the build had cited turned out to be a condensation-failure story). Mitigations are mandatory, not optional: **exterior/marine-glue birch only** (not interior-glue); **seal every FRP seam/edge and the window clamp sandwich** so liquid water never reaches the cavity; **confirm the chosen FRP brand** (Crane/Marlite/Glasbord) **warranties application over Baltic birch with the chosen adhesive.** Note 3/8" sits near the structural floor (7/16" @ 16" OC) — stiffness leans on the bonded FRP composite, so the lamination must be sound.
+- **Why:** the work order specifies 3/8" PlexCore sidewall liner, and the owner verified the panels are 3/8". Reusing them preserves the wall-sandwich geometry (window clamp range, door reveals), avoids the added wall-stock buy, and keeps the open-wall sequence simple. On-hand birch goes to interior fixtures where useful, not walls.
+- **Thickness ruling:** **3/8" PlexCore for the walls.** 1/4" remains rejected because it flexes between the 16"-OC posts and thins the window clamp sandwich.
+- **`[web-val]` — moisture is still the real hazard:** impermeable FRP on the inside + <1-perm closed-cell foam on the outside leaves little drying path in a box that isn't climate-controlled year-round. Mitigations are mandatory: close only over dry/clean steel and dry panels; **seal every FRP seam/edge and the window clamp sandwich** so liquid water never reaches the cavity; **confirm the chosen FRP brand and adhesive are compatible with PlexCore** or prove it with a bond patch.
 - ¼" XPS (rigid extruded-polystyrene foam board) goes behind the bed zone only (back insulation against the cold wall). All backing plates go in **before** finish.
-- **Gates:** factory wall panels verified 3/8" (row 19 closed) · D009 ratified **before any window RO is cut** (the row-12 clamp check depends on the final sandwich) · FRP trim system selected (design-freeze item 9).
+- **Gates:** factory 3/8" PlexCore panels verified (row 19 closed) · D009 accepted · FRP trim/adhesive system selected for PlexCore (design-freeze item 9) · row-12 clamp check before any window RO is cut.
 
 ### Stairs & panel transport
 
@@ -237,8 +238,8 @@ Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. The 
 The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
 
 1. **Measure & scan** — close the active measurement blockers in the [gate tracker](gate-tracker.md): interior footprint recorded (rows 3/3a and 17), wall-post/window fit recorded (row 7), floor steel recorded (row 10), factory wall panel thickness recorded (row 19), remaining wall sandwich/door-frame checks (rows 12, 14), roof stations (5a, 6), rail 3D scan + post wall thickness (16).
-2. **Freeze** — close the 10 design-freeze items; ratify D006–D009; D010 and D011 are accepted; place remaining orders (long-lead first).
-3. **Strip the interior** — factory wall panels off (they are the template stock for the birch cuts); document factory wiring as found.
+2. **Freeze** — close the 10 design-freeze items; ratify D006–D008 and D012; D009, D010, and D011 are accepted; place remaining orders (long-lead first).
+3. **Strip the interior** — factory PlexCore wall panels off for foam/open-wall work; keep them clean, dry, labeled, and reusable; document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
@@ -247,7 +248,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
    - Roof: solar rail/backing structure first (fore-aft rails tied to multiple bows; brackets/panels attach to rails, not skin), then Velit opening + curb, PV gland, all penetrations sealed and hose-tested.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
 6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
-7. **Floor liner + walls closed** — floor L-track recessed/bolted through to steel/backing first; Durabak-18 floor+cove+ramp applied and cured; 3/8" exterior-glue birch + FRP land over the cove, seams/edges sealed, and trimmed to the wall E-track edges.
+7. **Floor liner + walls closed** — floor L-track recessed/bolted through to steel/backing first; Durabak-18 floor+cove+ramp applied and cured; factory 3/8" PlexCore + FRP land over the cove, seams/edges sealed, and trimmed to the wall E-track edges.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows bolted to the rivnuts in the posts; floor L-track masks pulled and slots/hardware inspected.
 10. **Nose cabinet** — battery, SmartSolar, shunt, breaker, Orion-Tr 48/24, Orion-Tr 48/12, 5026, fused 12 V receptacles; rail wiring out to branches; cabinet-to-cabin ventilation with low filtered intake, high fan-assisted exhaust, 24 V fan, and temperature switch. Avoid exterior penetrations for now; if shakedown heat becomes a real issue, reopen the exterior-vent fallback. MultiPlus mounting space can be reserved for Phase 2, but it is not a Juplaya install dependency.
@@ -263,14 +264,14 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | # | Item | Closes when | Status |
 |---|---|---|---|
 | 1 | **D006–D008 ratified** (24 V bus · awning standoffs · fridge integration) | owner ratifies in the DECISION_LOG | ☐ |
-| 2 | **D009 wall substrate** — 3/8" birch re-skin over pulled factory panels | owner ratifies; factory wall panel thickness is verified 3/8" (row 19 closed) | ◐ row 19 closed; ratification open |
+| 2 | **D009 wall substrate** — reuse factory 3/8" PlexCore sidewall liner; no birch re-skin | D009 accepted; factory PlexCore wall panel thickness verified 3/8" (row 19 closed) | ☑ 2026-06-08 |
 | 3 | **Track heights final** — bed ~27", shelf 60"; D011 wall-track mounting detail accepted | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band; 1/4-20 rivnut-mounted E-track/FRP-edge fit confirmed on an offcut or first row | ☐ |
-| 4 | **Window locations final** — exact bay stations, both walls + door | wall posts 16" OC and side-window fit verified (row 7 closed) + RecPro ROs (row 13 ✓) + clamp range vs birch+FRP build-up (row 12) + door frame (row 14) | ◐ rows 7/13 closed; rows 12/14 open |
+| 4 | **Window locations final** — exact bay stations, both walls + door | wall posts 16" OC and side-window fit verified (row 7 closed) + RecPro ROs (row 13 ✓) + clamp range vs PlexCore+FRP build-up (row 12) + door frame (row 14) | ◐ rows 7/13 closed; rows 12/14 open |
 | 5 | **Roof drawing** — three panel rows, fore-aft NXT rail/backing structure + through-rail bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; through-rail fastener/backing/spacer detail selected | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | 26" L-track spacing accepted; floor steel 16" OC and fridge bay depth recorded (rows 10, 17); bike tape geometry deferred in favor of physical bike-in-trailer fit check (row 11); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ◐ measurements closed; physical fit/chock check open |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 3 gal ordered for June 12–15 delivery; 4th gal conditional after patch/first-pass coverage; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
-| 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked (color-matched vinyl moldings; FRP adhesive warranted on birch — web-val) | ☐ |
+| 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked; FRP adhesive compatible with PlexCore or proven by bond patch | ☐ |
 | 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, roof solar rail/backing hardware, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, power-cabinet interior vent/fan/thermostat parts, exterior lighting + cabinet switch/dimmer parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).

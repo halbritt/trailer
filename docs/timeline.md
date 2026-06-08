@@ -19,7 +19,7 @@ This is a first-pass dependency timeline for the Juplaya build. The source of tr
 - Calendar starts on 2026-06-08 and targets readiness on 2026-07-04.
 - Durations assume an aggressive shop cadence with several full build days, not casual evening-only work.
 - The measurement, drawing, ratification, and order-freeze sprint is intentionally compressed into 2026-06-08 through 2026-06-11. If that gate takes longer, the July 4 target is immediately at risk.
-- Proposed decisions D006-D009 and D012 remain gates until owner ratification. D010 and D011 are treated as accepted.
+- Proposed decisions D006-D008 and D012 remain gates until owner ratification. D009, D010, and D011 are treated as accepted.
 - Durabak delivery is modeled as the 2026-06-12 to 2026-06-15 window already recorded in the order sheet.
 - "Ready" means weighed, commissioned, and shakedown-tested enough for Juplaya. Phase 2 inverter/shore power, winter heat unit install, HRV unit install, and truck charging hardware stay deferred.
 
@@ -33,7 +33,7 @@ gantt
 
     section Gate Closure
     Close active gate-tracker blockers                 :crit, meas, 2026-06-08, 1d
-    Owner ratifies D006-D009 and D012                 :crit, ratify, after meas, 1d
+    Owner ratifies D006-D008 and D012                 :crit, ratify, after meas, 1d
     Roof interior floor drawings                      :crit, draw, after meas, 1d
     Order freeze and gate buys                        :crit, orders, after ratify draw, 1d
     Design freeze closed                              :milestone, freeze, after orders, 0d
@@ -58,7 +58,7 @@ gantt
     section Floor And Walls
     Floor L-track layout install and masks            :crit, floortrack, after deliver strip, 3d
     Durabak floor cove ramp and cure                  :crit, floorcoat, after floortrack floorpatch roofcoat, 3d
-    Birch and FRP wall closure                        :crit, wallclose, after floorcoat, 3d
+    PlexCore and FRP wall closure                     :crit, wallclose, after floorcoat, 3d
     Window clamp check cuts and install               :crit, windows, after wallclose, 2d
     Wall E-track and floor hardware inspection        :trackfinal, after windows, 1d
 
@@ -81,7 +81,7 @@ The critical path is measurement and ratification, then roof/open-wall work, foa
 The key early gate is design freeze. Current blocker status lives in [gate-tracker.md](gate-tracker.md). Design freeze closes when the build sheet's ten design-freeze rows close, with special attention to:
 
 - Active measurement blockers as listed in the gate tracker; floor steel, wall-post/window fit, factory wall panel thickness, interior footprint, and bike tape geometry are no longer design-freeze measurement blockers.
-- Owner ratification of D006-D009 and D012 where still proposed.
+- Owner ratification of D006-D008 and D012 where still proposed.
 - "BUY AFTER GATE" roof solar rails/backing, windows, wall/FRP, fridge bay, dimmers, and related hardware.
 
 ## Parallel Work

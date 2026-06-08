@@ -5,7 +5,7 @@ SUNK,Excluded,Sunk / on-hand / receipt-needed,ON HAND,Battery,1,LiTime 48 V 100 
 SUNK,Excluded,Sunk / on-hand / receipt-needed,ON HAND,Battery monitor,1,LiTime 500 A Bluetooth shunt,105.99,,Receipt needed,,Single-point ground/instrumentation item.
 SUNK,Excluded,Sunk / on-hand / receipt-needed,ON HAND,AC island,1,Anker SOLIX C1000 + PS400 400 W panel,0.00,,Receipt needed,,Portable AC island for Juplaya small 120 VAC loads.
 SUNK,Excluded,Sunk / on-hand / receipt-needed,ON HAND,Track,50ft,E-track,239.95,,Receipt needed,,Treat as wall-track stock first not floor stock.
-SUNK,Excluded,Sunk / on-hand / receipt-needed,ON HAND,Wall stock,2 sheets,3/8 in and 1/2 in birch sheet stock,0.00,,Receipt needed,,Existing stock offsets the wall/fixture allowances below.
+SUNK,Excluded,Sunk / on-hand / receipt-needed,ON HAND,Fixture stock,2 sheets,3/8 in and 1/2 in birch sheet stock,0.00,,Receipt needed,,Existing birch is fixture stock; D009 reuses the factory 3/8 in PlexCore sidewall liner instead of re-skinning the walls.
 SUNK,Excluded,Sunk / on-hand / receipt-needed,ORDERED,Truck support,1 set,Ford integrated trailer backup camera + TPMS sensors,626.27,,Receipt needed,,Tow-vehicle/trailer-support item outside fit-out math for now.
 RETURN,Excluded,Return,RETURN,Power,1,LiTime 48 V 5 kW AIO inverter/charger,859.99,0.00,Return item,,Mistaken order. Return; do not replace with a LiTime 3.5 kW AIO for Juplaya.
 LINE,Committed,Ordered / purchased / priced,PURCHASED,Fridge,1,Dometic CFX3 95DZ,875.00,875.00,eBay order price,,eBay score. Actual counted cost is 875.
@@ -46,8 +46,7 @@ LINE,Remaining,Climate / envelope / awning,BUY AFTER GATE,HRV rough-in,2,HRV 4 i
 LINE,Remaining,Climate / envelope / awning,BUY AFTER GATE,Heater rough-in,1 set,Heater 3 in duct rough-in + 24 V feed + CO detector,120.00,120.00,Allowance,,LF Bros N4 itself deferred.
 LINE,Remaining,Interior / floor / walls,BUY NOW,L-track,1 lot,L-track studs/quick-release hardware backing through-bolts,150.00,150.00,Allowance,,Confirm what shipped with the Bolt It On chocks first.
 LINE,Remaining,Interior / floor / walls,BUY NOW,Floor coating,1 lot,Durabak floor prep/coating supplies,120.00,120.00,Allowance,,Rollers masking solvent/wipes PPE patch-test supplies.
-LINE,Remaining,Interior / floor / walls,BUY AFTER GATE,Walls,1 lot,Additional exterior/marine birch wall stock,300.00,300.00,Allowance,,Offset by on-hand sheets where usable.
-LINE,Remaining,Interior / floor / walls,BUY AFTER GATE,Walls,1 lot,FRP panels trim profiles adhesive,600.00,600.00,Allowance,,Must be warranted over selected birch/adhesive stack.
+LINE,Remaining,Interior / floor / walls,BUY AFTER GATE,Walls,1 lot,FRP panels trim profiles adhesive,600.00,600.00,Allowance,,Must be compatible with factory 3/8 in PlexCore sidewall liner or proven by bond patch.
 LINE,Remaining,Interior / floor / walls,BUY AFTER GATE,Wall track,1 lot,Wall E-track backing/hardware + shoring sockets,300.00,300.00,Allowance,,E-track itself is on hand; backing/hardware still costs money.
 LINE,Remaining,Interior / floor / walls,BUY AFTER GATE,Bed,1 lot,Bed platform lumber/hardware,250.00,250.00,Allowance,,2x4 shoring-beam deck removable.
 LINE,Remaining,Interior / floor / walls,BUY AFTER GATE,Fridge bay,1 lot,Fridge bay partition ventilation pieces straps,200.00,200.00,Allowance,,Must keep Dometic 50 mm clearance and forced through-flow.

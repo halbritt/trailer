@@ -39,7 +39,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 
 | Item | Value | Notes |
 |---|---|---|
-| Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | D011: steel 1/4-20 rivnuts into 1" thin-wall tube posts; birch/FRP trim to track edge |
+| Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | D011: steel 1/4-20 rivnuts into 1" thin-wall tube posts; PlexCore/FRP trim to track edge |
 | **Window band** | sill ~**36"**, top ~58" | above the bed track (~27"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
 | Roof: three panel rows (landscape) | 83.07" across × **123" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet/fore-aft rails, not side clamps); leaves ~22" of measured rectangle + nose for Velit/standoff layout |
@@ -71,14 +71,14 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 9 | Door swing arc vs awning-riser line (deployed-fabric check at pitch) | ≥ door height | | |
 | 10 | Floor steel: main-rail inset from walls + crossmember stations | perimeter / 406 mm OC | **floor steel/crossmembers 16" OC verified; main rails remain perimeter per work order** | 2026-06-08 |
 | 11 | Bike/L-track physical fit check | 26" L-track rows, bars interleaved | **bike tape geometry deferred/unneeded; owner will verify by putting bikes in the trailer and checking 26" L-track placement + bar overlap** | 2026-06-08 |
-| 12 | Wall build-up thickness at window stations — **birch (D009) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
+| 12 | Wall build-up thickness at window stations — **factory 3/8" PlexCore (D009) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | **1222 = 11-5/8"×21-5/8"; 2015 = 19-5/8"×14-5/8"** | confirmed (RecPro, web-val) | 2026-06-05 |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
 | 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | **98" clear from rear/ramp end to side-door aft jamb** (2489 mm) from clean footprint diagram; enough for the 37.9" fridge length | 2026-06-08 |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
-| 19 | **Factory wall panel thickness** (verify before the D009 birch buy — 3/8" assumed) | ~9.5 mm (3/8") | **3/8" factory wall panels verified** | 2026-06-08 |
+| 19 | **Factory wall panel thickness / substrate** | work order: 3/8" PlexCore sidewall liner | **3/8" factory PlexCore wall panels verified; no D009 birch buy** | 2026-06-08 |
 
 > **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
 > When a row is filled, propagate: the roof drawing (4–6, 15), solar rail/backing detail, window cuts (7, 12–14), riser fabrication (8, 9, 16), floor L-track layout (10, 11), and the payload ledger (18).

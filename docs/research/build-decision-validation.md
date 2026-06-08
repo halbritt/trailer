@@ -6,6 +6,8 @@
 
 **Provenance.** Flat validation workflow, run `wf_13d5d5ba-bac`, 15 agents. (An earlier nested deep-research run wedged on concurrent PDF reads and was abandoned; this flat re-run replaced it.)
 
+**Supersession note, 2026-06-08:** D009 no longer uses the birch re-skin path validated below. Current D009 is accepted as reuse of the factory verified 3/8" PlexCore sidewall liner with FRP over PlexCore. The remaining live concern is still the trapped-moisture/adhesive edge case: close dry, seal FRP edges/window sandwiches, and prove adhesive compatibility with PlexCore.
+
 ## Verdict summary
 
 | Decision | Verdict | Skeptic changed it? |
@@ -14,7 +16,7 @@
 | **D006** 24 V house bus | ✅ mostly-corroborated | no |
 | **D007** Awning standoff | 🟡 mostly-corroborated | **yes** |
 | **D008** Fridge bay | 🔴 **mixed** | **yes** |
-| **D009** Birch substrate | 🟡 mostly-corroborated | **yes** |
+| **D009** Birch substrate | superseded 2026-06-08 by PlexCore reuse | **yes** |
 | **D010** Flooring bed-liner coating | 🟡 mostly-corroborated | addendum |
 | **Windows** RecPro frameless | 🔴 **mixed** | **yes** |
 | **Roof** foam + elastomeric | 🟡 mostly-corroborated | no |
@@ -26,7 +28,7 @@ These are the findings that should feed back into the build sheet / decision log
 1. **D008 fridge bay — biggest find (safety/compliance).** The Dometic CFX3 manual requires a **50 mm (~2") gap on all four sides** and states **"do not place the cooling device in closed compartments."** The build sheet's *"enclosed curbside bay"* violates the manual as worded. → Rewrite the bay spec and the thermal gate: **50 mm all-sides clearance + forced through-flow ventilation**, then field-measure in-bay air (<43 °C to run, <30 °C to hold dual-zone). Electrical sizing (24 V @ 4.6 A, 10 A / 14 AWG) is fine.
 2. **D007 awning — tighten the wind rule (safety).** "Wound in before gusts >20 mph" is **~2× too permissive** for the as-built wall-only (no legs, no tie-down) case; forum consensus is **~10 mph** for that configuration. Also: the limiting failure is the **awning's own arms/extrusions bending**, not fastener pull-out, and an over-rigid standoff can defeat the arms' intended wind/water release. → Decide deployment mode (legs+tie-down earns ~20–25 mph, wall-only forces ~10 mph) and match the retract spec to it.
 3. **Windows — the clamp range is a single value, not a range.** RecPro's trim ring is published only as **"for 1-1/2" wall thickness"** (no min/max). The build wall is ~1"–1.4", so it **won't clamp tight as specified** — fixable by **furring the opening up to 1.5"**, but that step is currently missing from the wall sandwich. Cutout sizes confirmed: **1222 → 11-5/8" × 21-5/8"**, **2015 → 19-5/8" × 14-5/8"**. Door cut needs perimeter re-framing. → Feeds dimension rows 12–14 and design-freeze item 4; add the furring step.
-4. **D009 birch — moisture is the real hazard; spec the glue.** The build's own cited "birch precedent" is actually a **moisture-failure** story. Impermeable FRP inside + <1-perm closed-cell foam outside leaves the ply no drying path. → Spec **exterior/marine-glue birch** (not interior-glue), seal all FRP seams/edges, and confirm the chosen FRP brand (Crane/Marlite/Glasbord) warranties Baltic birch + the adhesive grade. 3/8" is near the structural floor (7/16" at 16" OC) — adequacy leans on the bonded FRP composite, not 3/8" alone.
+4. **D009 birch is superseded — moisture/adhesive risk still governs.** Current D009 reuses the factory verified 3/8" PlexCore sidewall liner and avoids the birch wall-stock buy. Impermeable FRP inside + <1-perm closed-cell foam outside still leaves little drying path, so close dry, seal FRP seams/edges and the window clamp sandwich, and confirm the chosen FRP brand/adhesive works over PlexCore or prove it with a bond patch.
 5. **D006 — make the main OCP explicit + fix a part number.** UL-489 / 80 VDC / 10 kA AIC checks out. But standard LiFePO4 practice puts a **Class-T fuse at the battery terminal** as the main OCP — document whether that exists or the close-mounted breaker *is* the main OCP. **Verify the exact Blue Sea SKU**: docs say "7443," but the validated 20 A / 80 V UL-489 part pages came up as 7463 (and 7465 = 30 A) — reconcile the actual part number.
 6. **D002 — later superseded by the corrected Victron house-charger verdict.** This validation still applies to any LiTime 3500 W fallback: 2S Voc has huge margin (~113 V cold vs 145 V), but owners report nuisance PV-overvoltage faults below the advertised 145 V with 49 V-class panels, so **never 3S into that AIO input**. Current D002 instead uses Victron MultiPlus-II for the house charger and roof 3S through a SmartSolar 250/60-Tr. *Minor:* LG's page lists Voc 49.9 V, coeff **−0.26 %/°C**, Vmpp 42.1 V — reconcile against the −0.24 %/°C / 41.7 V figures in the reference sheet.
 7. **Roof — spec a cold-rated coating.** Building science *endorses* the foam-inside/coating-outside steel sandwich **provided the steel is dry at closure**. The load-bearing open item: standard **acrylic elastomerics go brittle and "zipper" off in deep cold** — specify a **silicone or cold-rated** coating, verify steel dry/clean at closure, and check whether foaming under the steel roof voids any panel warranty.
@@ -41,7 +43,7 @@ These are the findings that should feed back into the build sheet / decision log
 - **Clean / green-light:** **D006** (24V house bus + Orion-Tr + UL-489 breaker) survived adversarial re-derivation as *mostly-corroborated*. **D002's original 2S/2S2P solar topology was later superseded by the corrected 3-panel house-charger verdict**; the LiTime AIO limits below still apply to its own PV input only.
 - **Real safety/fit problem — thermal:** **D008** (Dometic CFX3 95DZ) was **downgraded to mixed**. The "enclosed curbside bay" directly violates Dometic's own manual, which requires a **50 mm (~2 in) gap on all four sides** and says **"Do not place the cooling device in closed compartments."** Electrical sizing is fine; the bay is non-compliant until forced ventilation makes it genuinely ventilated.
 - **Real safety problem — operating envelope:** **D007** (Fiamma F45s awning). Mount design is correct, but the **>20 mph retract rule is ~2x too permissive** for the as-built wall-only (no legs, no tie-down) configuration — consensus for that case is **~10 mph**. Also the limiting failure is the awning's own arms/extrusions bending, *not* fastener pull-out, so "more fasteners = safer" only holds up to a point.
-- **Carry a real caution — moisture:** **D009** (birch + FRP) and **Roof** (foam + elastomeric) are both *mostly-corroborated* but hinge on a trapped-moisture sandwich with no drying path. Both are sound **only if the cavity starts and stays dry**; spec exterior/marine-glue birch and a cold-rated roof coating.
+- **Carry a real caution — moisture:** **D009** (PlexCore + FRP) and **Roof** (foam + elastomeric) both hinge on a trapped-moisture sandwich with little drying path. Both are sound **only if the cavity starts and stays dry**; prove FRP adhesive compatibility with PlexCore and use a cold-rated roof coating.
 - **Needs vendor/measurement check — fit:** **Windows** stays **mixed**. Cutout sizes are correct, but the trim ring targets a single **1.5" wall** and the build wall is ~1"–1.4". This is a *fixable* furring/shim step (build the wall up to the ring), not a dead end — but as literally specified it won't clamp tight, and the steel-door cut needs re-framing.
 - **One hardware-specific watch:** the LiTime 3500 W fallback reportedly nuisance-faults on PV overvoltage *below* its advertised 145V max with 49V-class panels like these LGs — 2S at ~113V cold is clear of it, but **never add a 3rd panel in series to that AIO input**.
 
@@ -102,7 +104,9 @@ These are the findings that should feed back into the build sheet / decision log
 
 ---
 
-## D009 — 3/8" birch ply over pulled OSB, FRP textured panel over birch
+## D009 — Superseded 3/8" birch ply over pulled OSB, FRP textured panel over birch
+
+**Current status:** superseded 2026-06-08. The active D009 reuses the factory 3/8" PlexCore sidewall liner and applies FRP over PlexCore; this section remains as historical validation of the now-rejected birch path.
 **Verdict:** mostly-corroborated (changed from draft) — the swap is sound and workable, but the moisture sandwich is the real hazard and one "precedent" was misread.
 
 - ✅ Holds: 3/8" over 1/4" is correct — plywood bending stiffness scales with the cube of thickness, so 3/8" is ~**3.4x stiffer** at the same 16"-OC span; thinner finish panels are flagged as too flexible (https://up.codes/s/wall-sheathing).

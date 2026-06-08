@@ -30,10 +30,10 @@ Rules for the numbers:
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
 | Priced committed / ordered / purchased fit-out | $4,333.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $11,054.99 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,388.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Remaining Juplaya buy list | $10,754.99 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,088.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $18,537.27 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $18,237.27 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
@@ -41,11 +41,11 @@ Remaining Juplaya buy list by category:
 | --- | --- |
 | Power / solar / cabinet | $2,553.70 |
 | Climate / envelope / awning | $4,194.67 |
-| Interior / floor / walls | $2,275.00 |
+| Interior / floor / walls | $1,975.00 |
 | Lighting / switches / security | $1,531.62 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$11,054.99` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,388.27` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,754.99` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,088.27` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -59,7 +59,7 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ON HAND | Battery monitor | 1 | LiTime 500 A Bluetooth shunt | $105.99 | Excluded | Single-point ground/instrumentation item. |
 | ON HAND | AC island | 1 | Anker SOLIX C1000 + PS400 400 W panel | $0.00 | Excluded | Portable AC island for Juplaya small 120 VAC loads. |
 | ON HAND | Track | 50ft | E-track | $239.95 | Excluded | Treat as wall-track stock first not floor stock. |
-| ON HAND | Wall stock | 2 sheets | 3/8 in and 1/2 in birch sheet stock | $0.00 | Excluded | Existing stock offsets the wall/fixture allowances below. |
+| ON HAND | Fixture stock | 2 sheets | 3/8 in and 1/2 in birch sheet stock | $0.00 | Excluded | Existing birch is fixture stock; D009 reuses the factory 3/8 in PlexCore sidewall liner instead of re-skinning the walls. |
 | ORDERED | Truck support | 1 set | Ford integrated trailer backup camera + TPMS sensors | $626.27 | Excluded | Tow-vehicle/trailer-support item outside fit-out math for now. |
 
 ## Return Items
@@ -134,8 +134,7 @@ Climate / envelope / awning remaining subtotal: **$4,194.67**.
 | --- | ---: | --- | ---: | ---: | --- | --- |
 | BUY NOW | 1 lot | L-track studs/quick-release hardware backing through-bolts | $150.00 | $150.00 | Allowance | Confirm what shipped with the Bolt It On chocks first. |
 | BUY NOW | 1 lot | Durabak floor prep/coating supplies | $120.00 | $120.00 | Allowance | Rollers masking solvent/wipes PPE patch-test supplies. |
-| BUY AFTER GATE | 1 lot | Additional exterior/marine birch wall stock | $300.00 | $300.00 | Allowance | Offset by on-hand sheets where usable. |
-| BUY AFTER GATE | 1 lot | FRP panels trim profiles adhesive | $600.00 | $600.00 | Allowance | Must be warranted over selected birch/adhesive stack. |
+| BUY AFTER GATE | 1 lot | FRP panels trim profiles adhesive | $600.00 | $600.00 | Allowance | Must be compatible with factory 3/8 in PlexCore sidewall liner or proven by bond patch. |
 | BUY AFTER GATE | 1 lot | Wall E-track backing/hardware + shoring sockets | $300.00 | $300.00 | Allowance | E-track itself is on hand; backing/hardware still costs money. |
 | BUY AFTER GATE | 1 lot | Bed platform lumber/hardware | $250.00 | $250.00 | Allowance | 2x4 shoring-beam deck removable. |
 | BUY AFTER GATE | 1 lot | Fridge bay partition ventilation pieces straps | $200.00 | $200.00 | Allowance | Must keep Dometic 50 mm clearance and forced through-flow. |
@@ -143,7 +142,7 @@ Climate / envelope / awning remaining subtotal: **$4,194.67**.
 | BUY AFTER GATE | 1 lot | Panel transport slot padding/straps/fittings | $75.00 | $75.00 | Allowance | For the two optional LG ground panels. |
 | BUY AFTER GATE | 1 | Durabak-18 Outdoor Textured light grey conditional 4th gallon | $155.00 | $155.00 | [Conditional allowance](https://www.durabakcompany.com/products/durabak-marine-liner-outdoor-textured) | Order only if the 3 gal coverage or patch test says ramp cove or wear lanes need it. |
 
-Interior / floor / walls remaining subtotal: **$2,275.00**.
+Interior / floor / walls remaining subtotal: **$1,975.00**.
 
 ### Lighting / switches / security
 
@@ -169,7 +168,7 @@ Lighting / switches / security remaining subtotal: **$1,531.62**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$11,054.99**.
+Remaining Juplaya subtotal: **$10,754.99**.
 
 ## Deferred / Not Juplaya
 
