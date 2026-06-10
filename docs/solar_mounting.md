@@ -48,6 +48,8 @@ Rail overhang rule: a small **rail-only** tail past the rear/top rail is accepta
 
 ## Primary Buy List
 
+Itemized order sheet with current vendor pricing: [solar-mounting-order-sheet.md](solar-mounting-order-sheet.md).
+
 | Qty | Part / family | Candidate part numbers | Notes |
 |---:|---|---|---|
 | 2 | NXT UMOUNT rail, 168 in, mill or dark | `168RLM1` mill / `168RLD1` dark; domestic `-US` variants if useful | Cut after dry-fit; likely in the 126-129 in range depending rear rail-only overhang. 185 in also works but wastes more rail. |
