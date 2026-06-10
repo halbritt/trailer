@@ -1,4 +1,4 @@
-<!-- Markdown conversion of docs/litime-48v-3500w-inverter-charger-manual.pdf (owner-converted via marker). Full manual: specs, installation, LCD ops, battery parameters, fault codes. Figure images not kept — see the PDF. Distilled sheet: ../reference/litime-48v-3500w-aio-specs.md -->
+<!-- Markdown conversion of docs/manuals/litime-48v-3500w-inverter-charger-manual.pdf (owner-converted via marker). Full manual: specs, installation, LCD ops, battery parameters, fault codes. Figure images not kept — see the PDF. Distilled sheet: ../reference/litime-48v-3500w-aio-specs.md -->
 
 
 3500W
@@ -755,5 +755,4 @@ The parameters that can be adjusted in the settings are shown in blue.
 | Others               | 12/11/18                                               | Contact us at <u>service@litime.com</u> for further assistance.                                                                                                                              |
 
 31 TROUBLESHOOTING
-
 

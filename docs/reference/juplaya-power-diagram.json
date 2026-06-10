@@ -1930,26 +1930,26 @@
       }
     },
     {
-      "id": "jt-usb-gps-smartscan",
+      "id": "jt-usb-gps-landairsea",
       "type": "custom",
       "x": 3330,
       "y": 720,
       "ports": [
         {
-          "id": "jt-usb-gps-smartscan-dc-plus",
+          "id": "jt-usb-gps-landairsea-dc-plus",
           "side": "left",
           "kind": "DC+",
           "index": 0
         },
         {
-          "id": "jt-usb-gps-smartscan-dc-minus",
+          "id": "jt-usb-gps-landairsea-dc-minus",
           "side": "left",
           "kind": "DC-",
           "index": 1
         }
       ],
       "data": {
-        "label": "USB-C PD / GPS /\nSmartScan",
+        "label": "USB-C PD / GPS /\nLandAirSea",
         "brand": "generic",
         "category": "general",
         "componentId": "custom-dc",
@@ -1957,21 +1957,21 @@
         "height": 170,
         "properties": [
           {
-            "id": "jt-usb-gps-smartscan-operating-voltage",
+            "id": "jt-usb-gps-landairsea-operating-voltage",
             "name": "Operating Voltage",
             "value": "24 V",
             "visible": true,
             "isDefault": true
           },
           {
-            "id": "jt-usb-gps-smartscan-rated-current",
+            "id": "jt-usb-gps-landairsea-rated-current",
             "name": "Rated Current",
-            "value": "USB up to 5 A; GPS <0.1 A; SmartScan TBD",
+            "value": "USB up to 5 A; LandAirSea GPS <0.1 A",
             "visible": true,
             "isDefault": true
           },
           {
-            "id": "jt-usb-gps-smartscan-rated-power",
+            "id": "jt-usb-gps-landairsea-rated-power",
             "name": "Rated Power",
             "value": "",
             "visible": false,
@@ -3237,11 +3237,11 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-fusebox-jt-usb-gps-smartscan-plus",
+      "id": "jt-wire-fusebox-jt-usb-gps-landairsea-plus",
       "sourceNodeId": "jt-blue-sea-5026",
       "sourcePortId": "jt-blue-sea-5026-right-plus-2",
-      "targetNodeId": "jt-usb-gps-smartscan",
-      "targetPortId": "jt-usb-gps-smartscan-dc-plus",
+      "targetNodeId": "jt-usb-gps-landairsea",
+      "targetPortId": "jt-usb-gps-landairsea-dc-plus",
       "midpoints": [],
       "routingMode": "manual",
       "wireSize": 2.5,
@@ -3249,11 +3249,11 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-fusebox-jt-usb-gps-smartscan-minus",
+      "id": "jt-wire-fusebox-jt-usb-gps-landairsea-minus",
       "sourceNodeId": "jt-blue-sea-5026",
       "sourcePortId": "jt-blue-sea-5026-right-minus-2",
-      "targetNodeId": "jt-usb-gps-smartscan",
-      "targetPortId": "jt-usb-gps-smartscan-dc-minus",
+      "targetNodeId": "jt-usb-gps-landairsea",
+      "targetPortId": "jt-usb-gps-landairsea-dc-minus",
       "midpoints": [],
       "routingMode": "manual",
       "wireSize": 2.5,

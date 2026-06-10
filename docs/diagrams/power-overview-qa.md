@@ -55,5 +55,5 @@ Schematic limits:
 - This is a topology and energy-context diagram, not a wiring schematic.
 - The calculation sheet proposes planning conductor sizes from assumed run lengths; it does not finalize wire gauges, disconnects, fuse part numbers, breaker SKUs, insulation class, terminal temperature limits, bundling derates, or connector variants.
 - kWh/day labels are Black Rock July clean-sun planning estimates; dust, shade, heat, and runtime change actual yield and draw.
-- SmartScan remains TBD/measure; no undocumented draw was invented.
+- LandAirSea Overdrive GPS is treated as the ordered tracker and a small always-on 24 V load; no separate tracker load is modeled.
 - Exact cable run lengths remain placeholders until the measured roof/cabinet/interior routing is fixed.

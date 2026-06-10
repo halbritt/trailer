@@ -588,7 +588,7 @@ def build() -> dict[str, Any]:
     # Loads fed by the 24 V block.
     custom_dc(nodes, "jt-fridge", "Dometic CFX3 95DZ\nfridge", 3330, 330, "24 V", "4.6 A run", "1.0-1.3 kWh/day", 320, 145)
     custom_dc(nodes, "jt-lighting", "Interior / exterior\nlighting zones", 3330, 515, "24 V", "2-3 A int.; 5.25 A floods; 2.7 A awning", "", 360, 170)
-    custom_dc(nodes, "jt-usb-gps-smartscan", "USB-C PD / GPS /\nSmartScan", 3330, 720, "24 V", "USB up to 5 A; GPS <0.1 A; SmartScan TBD", "", 360, 170)
+    custom_dc(nodes, "jt-usb-gps-landairsea", "USB-C PD / GPS /\nLandAirSea", 3330, 720, "24 V", "USB up to 5 A; LandAirSea GPS <0.1 A", "", 360, 170)
     custom_dc(nodes, "jt-heater-topup", "Heater rough-in /\noptional C1000 top-up", 3330, 930, "24 V", "heater glow up to 11 A; top-up 10 A max", "shed first", 380, 170)
 
     # Standalone C1000 island.
@@ -705,7 +705,7 @@ def build() -> dict[str, Any]:
     load_pairs = [
         ("jt-fridge", "right-plus-0", "right-minus-0", 2.5),
         ("jt-lighting", "right-plus-1", "right-minus-1", 6),
-        ("jt-usb-gps-smartscan", "right-plus-2", "right-minus-2", 2.5),
+        ("jt-usb-gps-landairsea", "right-plus-2", "right-minus-2", 2.5),
         ("jt-heater-topup", "right-plus-3", "right-minus-3", 6),
     ]
     for load_id, plus_port, minus_port, size in load_pairs:

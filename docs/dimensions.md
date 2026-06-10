@@ -32,7 +32,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Window ×2 — RecPro RP-FRMWIN-1222-TRM | 12" × 22"; **cutout 11-5/8" × 21-5/8"**, overall 14×24×2.5, **ring for 1.5" wall** (RecPro, web-val) | — |
 | Window ×1 (door) — RecPro RP-FRMWIN-2015-TRM | 20" × 15"; **cutout 19-5/8" × 14-5/8"**, overall 22×17×2.5, **ring for 1.5" wall** (RecPro, web-val) | — |
 | Bikes — WR250R + CRF450RL | ~86" L ea · bars **32–34"** | ~590 lb pair |
-| Velit 2000R rooftop AC | footprint + roof opening **TBD — must enter the roof drawing** | TBD |
+| Velit 2000R rooftop AC | exterior unit about 26.4" × 26" × 6.5"; roof opening/station **TBD — must enter the roof drawing**; measured aft solar clearance **125"** from AC back edge to rear/top rail | ~61 lb |
 | Heater (winter) — LF Bros N4 24V | **17" × 13" × 14.8"** (432 × 330 × 376 mm) pedestal, integrated 3.5 L tank — **operates outside; 2 × 3" duct ports** (capped) + exterior 24 V feed | 15.9 lb |
 
 ## Derived bands & clearances (from the accepted design)
@@ -42,7 +42,7 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | Wall E-track rows | bed **~27"** (revised from 34" — sit-up headroom; sit-test gate) · shelf **60"** | D011: steel 1/4-20 rivnuts into 1" thin-wall tube posts; PlexCore/FRP trim to track edge |
 | **Window band** | sill ~**36"**, top ~58" | above the bed track (~27"), below the shelf track (60"); rear bay station, both walls |
 | Effective walking aisle | ~**20"** (nominal 30") | bars overhang at bar height |
-| Roof: three panel rows (landscape) | 83.07" across × **123" of length** | **fits: 84-7/8" measured width** (~0.9"/side margin — use under-panel feet/fore-aft rails, not side clamps); leaves ~22" of measured rectangle + nose for Velit/standoff layout |
+| Roof: three panel rows (landscape) | 83.07" across × **123.06" bare panel length**; **124.06"** with two 0.5" inter-panel gaps | **fits width**: 84-7/8" measured (~0.9"/side margin — use under-panel feet/fore-aft rails, not side clamps). AC dry-fit leaves **125"** aft of the Velit, so the panel bodies are plausible. The NXT rail/end-margin target is **126.06" minimum, ~129" preferred**; rail-only overhang past the rear/top rail may supply that margin if it clears the ramp/rear edge and the last structural tie-in remains on a roof bow. |
 | Awning case bottom | ≥ **~78.5"** (above roofline) | riser-mounted |
 | Deployed fabric @ 32" out, 10° pitch | ~**72.9"** | vs the 72" door — ~0.9" paper margin |
 | Fridge bay | starts at the door's aft edge, 37.9" long × 20.9" deep | curbside; band under 18.6" + lid |
@@ -74,11 +74,11 @@ All known dimensions in one place. **Spec/derived values first; the fill-in tabl
 | 12 | Wall build-up thickness at window stations — **factory 3/8" PlexCore (D009) + FRP** sandwich vs the RecPro frameless clamp ring | ring is **1.5" single spec**; wall ~1–1.4" → **fur opening up to 1.5"** (web-val) | | |
 | 13 | Window ROs (from RecPro): 1222-TRM ×2, 2015-TRM ×1 | **1222 = 11-5/8"×21-5/8"; 2015 = 19-5/8"×14-5/8"** | confirmed (RecPro, web-val) | 2026-06-05 |
 | 14 | Door internal frame vs 20×15 RO | TBD | | |
-| 15 | Velit 2000R footprint + roof-opening size + chosen station | TBD | | |
+| 15 | Velit 2000R footprint + roof-opening size + chosen station | exterior unit about 26.4" × 26"; opening about 14-1/4"; three roof panels need 123.06" bare / 124.06" with 0.5" gaps / 126.06" NXT minimum with end margins | **125" from the back/aft edge of the laid-out AC to the rear/top rail of the trailer** (3175 mm). This makes three panel bodies plausible. Rail-only rear overhang may cover clamp/end margin, but the panel frames should stay on the roof field; exact opening, final station, rear overhang clearance, and last bow tie-in still TBD. | 2026-06-09 |
 | 16 | **Perimeter aluminum rail: extrusion section + existing bolt size + post tube wall thickness** (standoff: ≥2 fasteners per upright; tap vs through-bolt) | TBD | | |
 | 17 | Fridge bay: door aft-edge → first obstruction | ≥ 963 mm (37.9") | **98" clear from rear/ramp end to side-door aft jamb** (2489 mm) from clean footprint diagram; enough for the 37.9" fridge length | 2026-06-08 |
 | 18 | **Curb weight** (scale) + tongue weight | TBD — payload = 3,500 lb − curb | | |
 | 19 | **Factory wall panel thickness / substrate** | work order: 3/8" PlexCore sidewall liner | **3/8" factory PlexCore wall panels verified; no D009 birch buy** | 2026-06-08 |
 
-> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The three panel rows need ~123" of the rectangle; the remaining rectangle plus nose trapezoid is what the drawing assigns to AC clearance, riser stations, and walk space.
+> **Roof AND interior plans = rectangle (box) + trapezoid (nose).** The track field, bike layout, fridge bay, and panel-transport slot all live in the interior rectangle; the nose trapezoid is the power-cabinet zone. The 2026-06-09 AC dry-fit gives **125" aft of the Velit to the rear/top rail** for the solar field. The three panel rows need ~123" bare and ~124" with 0.5" gaps; a small **rail-only** rear overhang may solve the NXT end-margin detail, but that must be resolved in the roof drawing/dry-fit and must not become panel-frame overhang or an unsupported structural load path.
 > When a row is filled, propagate: the roof drawing (4–6, 15), solar rail/backing detail, window cuts (7, 12–14), riser fabrication (8, 9, 16), floor L-track layout (10, 11), and the payload ledger (18).

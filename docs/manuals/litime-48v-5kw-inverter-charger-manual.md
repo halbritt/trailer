@@ -1,4 +1,4 @@
-<!-- Markdown conversion of docs/litime-48v-5kw-inverter-charger-manual.pdf
+<!-- Markdown conversion of docs/manuals/litime-48v-5kw-inverter-charger-manual.pdf
      (scanned manual; converted by the owner via marker). Covers: safety,
      product overview, accessories, table of contents, SPECIFICATIONS, and
      identification of parts. Image files referenced below are not included.
@@ -10,7 +10,7 @@
 
 # PRODUCT MANUAL
 
-![Image of the Li Time 48V 5000W Solar Inverter Charger unit.](5fb340ad68b0c71df0b56698b137e35b_img.jpg)
+<!-- Source image omitted; see the PDF for figures. -->
 
 A blue rectangular solar inverter charger unit. The top half has a digital display screen with four orange indicator lights below it. The text 'Li Time' is at the top left, and '48V 5000W SOLAR INVERTER CHARGER' is prominently displayed in the center. The bottom half of the unit features technical specifications and safety warnings in small text.
 

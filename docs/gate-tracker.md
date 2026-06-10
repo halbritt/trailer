@@ -1,6 +1,6 @@
 # Juplaya Gate Tracker
 
-Updated: 2026-06-08
+Updated: 2026-06-09
 
 This is the central live tracker for build gates. Update this file first when a gate changes. Raw dimensions still belong in [dimensions.md](dimensions.md); decision receipts still belong in [DECISION_LOG.md](DECISION_LOG.md); purchasing state still belongs in [order-sheet.md](order-sheet.md).
 
@@ -17,7 +17,7 @@ Status legend:
 | Gate | Status | Needed to close | Blocks | Source |
 |---|---|---|---|---|
 | G02 Roof nose and bows | Open | Enter row 5a roof nose geometry and row 6 roof-bow/solar tie-in stations | Roof drawing, solar rails, Velit station, PV gland | [dimensions.md](dimensions.md) rows 5a/6 |
-| G03 Velit roof station | Open | Enter footprint, roof opening, and chosen station | Roof cut, curb, solar/standoff clearance | [dimensions.md](dimensions.md) row 15 |
+| G03 Velit roof station | Open | AC aft clearance is recorded; still enter exact footprint/opening, final station, rear rail-overhang clearance, and last bow tie-in | Roof cut, curb, solar/standoff clearance | [dimensions.md](dimensions.md) row 15 |
 | G04 Window sandwich and door frame | Open | Wall-post/window fit is closed; still enter wall build-up and door internal frame | Side window furring, door window re-frame | [dimensions.md](dimensions.md) rows 12/14 |
 | G05 Awning standoff section | Open | Rail 3D scan, rail bolt size, post tube wall thickness, standoff drawing | Awning standoff fab and pre-FRP fasteners | [dimensions.md](dimensions.md) row 16 |
 | G07 Fridge bay | Open | Aft clearance is recorded; still verify lid orientation, 50 mm all-sides clearance, and forced through-flow layout | Fridge bay partition, straps, forced ventilation | [dimensions.md](dimensions.md) row 17; [juplaya-trailer-context.md](juplaya-trailer-context.md) |
@@ -42,6 +42,7 @@ Status legend:
 | C11 Factory wall panel thickness | Closed | Factory wall panels are verified 3/8 in | Use as D009 PlexCore substrate | [dimensions.md](dimensions.md) row 19 |
 | C12 Bike tape geometry | Deferred | Bar widths and front-tire centerline tape pass are not a design-freeze gate | Physical bike/L-track fit check remains | [dimensions.md](dimensions.md) row 11 |
 | C13 D009 wall substrate | Accepted | Reuse existing 3/8 in PlexCore sidewall liner; no birch re-skin | Still needs G10 FRP adhesive/trim selection and G04 window sandwich check | [DECISION_LOG.md](DECISION_LOG.md) D009; [reference work order](reference/wells-cargo-ft712s2-d-work-order.md) |
+| C14 AC aft solar clearance | Closed | 125 in / 3175 mm from the laid-out Velit back/aft edge to the trailer rear/top rail | Three panel bodies are plausible; dry-fit rail-only rear overhang for NXT clamp/end margin, ramp/rear-edge clearance, and last roof-bow tie-in | [dimensions.md](dimensions.md) row 15 |
 
 ## Build-Phase Checks
 

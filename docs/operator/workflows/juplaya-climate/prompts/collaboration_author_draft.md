@@ -10,6 +10,6 @@ Settled (do not relitigate): closed-cell foam, elastomeric roof, Velit Mini 2000
 3. **Diesel heater** — maybe-later or commit? If adopted, pair a CO detector; note fuel/exhaust routing.
 4. **Awning** — IN SCOPE for Juplaya (July 4). Select a specific awning + mount for the 7-ft body + side personnel door.
 
-**Sources:** `docs/juplaya-trailer-context.md` (context + open questions), `docs/fastrac-specs.md` and `docs/wells-cargo-ft712s2-d-work-order.md` (confirmed specs), and `docs/trailer-mission.md` (the north star — design for reconfigurability / E-track-as-OS across the mission profiles where it's cheap to, even though the current target is the Juplaya moto basecamp).
+**Sources:** `docs/juplaya-trailer-context.md` (context + open questions), `docs/reference/fastrac-specs.md` and `docs/reference/wells-cargo-ft712s2-d-work-order.md` (confirmed specs), and `docs/trailer-mission.md` (the north star — design for reconfigurability / E-track-as-OS across the mission profiles where it's cheap to, even though the current target is the Juplaya moto basecamp).
 
-**Constraints:** 48V LiTime stack (AIO in the nose cabinet, 5.12 kWh); single axle, payload will be weighed (don't optimize against a guessed budget); interior 81" W x 157" L x 6'6"; ready for Juplaya ~July 4 2026.
+**Constraints:** 48 V LiTime ComFlex pack (5.12 kWh), Victron MPPT/DC distribution path, built-in inverter deferred for Juplaya, Anker C1000 + PS400 small-AC island; single axle, payload will be weighed (don't optimize against a guessed budget); measured interior 81" W x 156" centerline L x 6'6"; ready for Juplaya ~July 4 2026.

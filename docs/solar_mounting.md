@@ -30,6 +30,7 @@ Current roof-panel layout:
 - Panel size: 83.07 in x 41.02 in x 1.57 in / 40 mm frame.
 - Roof array field, landscape: about 83.07 in across the trailer x about 123.06 in fore-aft before gaps.
 - Roof measured width: 84-7/8 in rail-edge to rail-edge, so side-clamp hardware outside the panel edges is a bad fit.
+- AC dry-fit on 2026-06-09: 125 in from the laid-out Velit back/aft edge to the trailer rear/top rail. Three panel bodies plus two 0.5 in inter-panel gaps need about 124.06 in, so the panels are plausible. The NXT rail length/end-margin target is longer than the roof-field allowance, so use the dry-fit to test a small rail-only rear overhang.
 
 NXT layout math for the fore-aft rail length:
 
@@ -41,13 +42,15 @@ NXT layout math for the fore-aft rail length:
 | **NXT stated minimum** | 123.06 + 1.00 + 2.00 | **126.06 in** |
 | Owner target extra margin | panel field + about 6 in | **~129 in cut length** |
 
-Order **two 168 in NXT rails** and cut each rail to roughly **129 in** after the roof dry-fit. Do not order 96 in rails; they are too short. Do not use a splice unless rail availability forces it.
+Order **two 168 in NXT rails** and cut each rail after the roof dry-fit. The prior rough target was **~129 in**; with the measured 125 in AC-to-rear/top-rail clearance, the exact cut length depends on how much rail-only rear overhang clears the ramp/rear edge. Do not order 96 in rails; they are too short. Do not use a splice unless rail availability forces it.
+
+Rail overhang rule: a small **rail-only** tail past the rear/top rail is acceptable if the ramp, rear trim/lights, sealant edge, and highway clearance are clean. Do not let the panel frames overhang the roof field, and do not count the cantilevered rail tail as structure. The last real rail attachment still lands on a roof bow with backing/crush control; the overhang only buys combo-clamp/end-margin room.
 
 ## Primary Buy List
 
 | Qty | Part / family | Candidate part numbers | Notes |
 |---:|---|---|---|
-| 2 | NXT UMOUNT rail, 168 in, mill or dark | `168RLM1` mill / `168RLD1` dark; domestic `-US` variants if useful | Cut to ~129 in. 185 in also works but wastes more rail. |
+| 2 | NXT UMOUNT rail, 168 in, mill or dark | `168RLM1` mill / `168RLD1` dark; domestic `-US` variants if useful | Cut after dry-fit; likely in the 126-129 in range depending rear rail-only overhang. 185 in also works but wastes more rail. |
 | 8 minimum | NXT UMOUNT combo clamp, 30-40 mm | `CCLAMPM1` mill / `CCLAMPD1` dark; domestic dark `NUCCLAMPD2-US` | One clamp at each rail/panel end or seam: 4 clamp positions per rail x 2 rails. Buy 10 if sold loose; a 20-pack is fine. LG frame is 40 mm, right at the upper limit, so verify clamp bite on the actual frame before drilling roof holes. |
 | 2 recommended | NXT grounding / lug assembly | `NULGMLP1` / `NULGMLP1-US` | Use one per rail unless a listed rail-to-rail bond path is deliberately installed and verified. Do not assume trailer steel contact is the PV bond path. |
 | 1 set | NXT wire-management clips | `WRMCLPD1`; add `WRMCNSD1` only if useful | Clip PV conductors to rails/module frames. No loose MC4 leads on the roof. |
@@ -168,6 +171,7 @@ Before roof drilling, test one `CCLAMPM1` / `CCLAMPD1` clamp on an LG frame. The
 - Whether 1/4 in aluminum spacer pads are needed at all bow stations or only where crown/drainage demands it.
 - Whether rubber is only an isolation layer or a spacer; if spacer, define durometer and crush sleeve/hard-stop detail.
 - Final Velit curb and PV gland positions.
+- Rear rail-only overhang clearance: ramp door travel, rear trim/lights, edge sealing, and unsupported tail length from the last roof-bow tie-in.
 - Actual NXT combo clamp fit on the 40 mm LG module frame.
 - Final rail spacing from the LG module clamp-zone guidance.
 - LG short-side clamp-zone permission for the final fore-aft rail orientation.
