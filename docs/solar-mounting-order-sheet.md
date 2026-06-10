@@ -28,9 +28,9 @@ Buying the clamps now is deliberate: the 40 mm LG frame sits at the top of the C
 | 2 | Henry 884 Tropi-Cool, 10.1 oz | `HE884004` | $20.03 | $40.06 | [McCoy's](https://www.mccoys.com/shop/p/8781155-052303-27/henry-884-tropi-cool-he884004-silicone-roof-sealant-white-48-hr-curing-35-deg-f-101-fl-oz-cartridge) | Exposed caps/edges under the Henry 887 system only. Home Depot stocks it in-store and typically undercuts — check shelf price. |
 | | **Subtotal A** | | | **$233.04** | | |
 
-**Rail shipping is the swing item.** 168 in rails cannot ship UPS Ground — LTL freight starts ~$199 ([SolarFlexion's stated policy](https://www.solarflexion.com/product-p/168rld1.htm); US Solar Supplier quotes LTL + liftgate at checkout). **First move: call the local CED Greentech / Greentech Renewables branch for will-call** — branch pickup of 2 rails + clamps + lugs likely beats every online total even at a worse unit price. If freight is unavoidable, consolidate every Unirac line into the one US Solar Supplier order.
+**Fulfillment decided 2026-06-10: local branch will-call.** Owner is picking the Unirac order up locally — no LTL freight (168 in rails can't ship UPS Ground; LTL starts ~$199, [SolarFlexion's stated policy](https://www.solarflexion.com/product-p/168rld1.htm)). Branch pricing is quote-only; the unit prices above are the online comparison baseline for the quote.
 
-Contingency: a possible third rail is in the allowance lot. Decide at the roof drawing/dry-fit; adds $26.20 + nothing extra on freight if ordered in the same LTL shipment — so decide **before** placing the rail order.
+Contingency: a possible third rail is in the allowance lot. Decide at the roof drawing/dry-fit — adds $26.20 and nothing else if it's in the same pickup, so decide **before** placing the branch order.
 
 ## B. Order after G02 (bow stations, tube width, wall thickness, access)
 
@@ -54,10 +54,8 @@ Fastener diameter (1/4-20 vs 5/16-18), length, backing style (through-bolt vs pl
 | A — order now | $233.04 |
 | B — after G02/G03 | $179.21 |
 | **Parts total** | **$412.25** |
-| Rail freight if shipped LTL | +$150–250 |
-| **Shipped total** | **~$560–660** |
 
-Parts land inside the $500 allowance; **freight is what blows it**. Will-call keeps the lot under allowance — make the branch call before releasing the order.
+Local will-call (decided) removes the $150–250 LTL freight exposure; the lot sits **inside the $500 allowance** with ~$88 of headroom for branch-quote drift or the third-rail contingency.
 
 ## Do-not-buy reminders
 
