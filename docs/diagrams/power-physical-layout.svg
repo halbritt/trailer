@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1240" viewBox="0 0 1480 1240">
+<rect x="0" y="0" width="1480" height="1240" rx="0" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+<rect x="20" y="20" width="1440" height="1200" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="45" y="60" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="27" font-weight="700" fill="#0f172a" text-anchor="start">Juplaya trailer - power system physical layout</text>
+<text x="45" y="86" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="14" font-weight="400" fill="#64748b" text-anchor="start">Plan view, looking down. Nose/front at left, rear/ramp at right. Curbside = passenger / awning / door side. Scale 1 in = 4 px (plan panels).</text>
+<text x="45" y="110" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#0891b2" text-anchor="start">A  Roof plan</text>
+<polygon points="690,118 690,457.5 108.0,457.5 48.0,287.75 108.0,118" fill="#ffffff" stroke="#111827" stroke-width="4"/>
+<rect x="519.92" y="121.61000000000001" width="164.08" height="332.28" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="601.9599999999999" y="287.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0891b2" text-anchor="middle">LG455 #1</text>
+<rect x="355.84" y="121.61000000000001" width="164.08" height="332.28" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="437.88" y="287.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0891b2" text-anchor="middle">LG455 #2</text>
+<rect x="191.76" y="121.61000000000001" width="164.08" height="332.28" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="273.8" y="287.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0891b2" text-anchor="middle">LG455 #3</text>
+<text x="437.88" y="111.61000000000001" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#0891b2" text-anchor="middle">Roof PV - 3x LG455 in 3S (1365 W) -&gt; SmartSolar 250/60-Tr</text>
+<rect x="86" y="234.95" width="104" height="105.6" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="138.0" y="283.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#ea580c" text-anchor="middle">Velit</text>
+<text x="138.0" y="299.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#ea580c" text-anchor="middle">2000R</text>
+<line x1="190" y1="483.5" x2="690" y2="483.5" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="190" y1="477.5" x2="190" y2="489.5" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="690" y1="477.5" x2="690" y2="489.5" stroke="#0f172a" stroke-width="1.4"/>
+<text x="440.0" y="499.5" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">125" AC-aft -&gt; rear rail = solar field  (3 panels need ~123-124")</text>
+<line x1="716" y1="118" x2="716" y2="457.5" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="710" y1="118" x2="722" y2="118" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="710" y1="457.5" x2="722" y2="457.5" stroke="#0f172a" stroke-width="1.4"/>
+<text x="726" y="287.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle" transform="rotate(-90 726 287.75)">84-7/8" roof</text>
+<circle cx="72" cy="287.75" r="7" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+<line x1="191.76" y1="129.61" x2="72" y2="287.75" stroke="#0891b2" stroke-width="2.2"/>
+<text x="62" y="275.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#0891b2" text-anchor="end">PV gland</text>
+<line x1="72" y1="287.75" x2="72" y2="465.5" stroke="#0891b2" stroke-width="2.2" stroke-dasharray="6 5"/>
+<polygon points="67,465.5 77,465.5 72,475.5" fill="#0891b2" stroke="none" stroke-width="1.5"/>
+<text x="80" y="473.5" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#0891b2" text-anchor="start">3S down-lead to nose cabinet (250/60 MPPT)</text>
+<text x="42.0" y="287.75" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#64748b" text-anchor="end">NOSE</text>
+<text x="696" y="112" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#64748b" text-anchor="start">REAR</text>
+<text x="45" y="530" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#334155" text-anchor="start">B  Floor plan  (curbside = bottom)</text>
+<polygon points="690,548 690,872 126,872 66,710.0 126,548" fill="#ffffff" stroke="#111827" stroke-width="4"/>
+<polygon points="66,710.0 126,548 182,548 182,872 126,872" fill="#f1f5f9" stroke="#475569" stroke-width="1.6" stroke-dasharray="6 4" fill-opacity="0.9"/>
+<text x="130.0" y="704.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">NOSE POWER</text>
+<text x="130.0" y="720.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="middle">CABINET</text>
+<text x="130.0" y="738.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#64748b" text-anchor="middle">(detail C)</text>
+<line x1="178" y1="872" x2="298" y2="872" stroke="#2563eb" stroke-width="5"/>
+<path d="M 298 872 A 120 120 0 0 0 210 960" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="238.0" y="912" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11.5" font-weight="700" fill="#2563eb" text-anchor="middle">side door 30"</text>
+<rect x="298" y="788.4" width="151.6" height="83.6" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="373.8" y="826.2" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#ea580c" text-anchor="middle">Fridge</text>
+<text x="373.8" y="842.2" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#ea580c" text-anchor="middle">CFX3 95DZ (24 V)</text>
+<rect x="132" y="558" width="344" height="24" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="132" y="588" width="344" height="24" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<text x="304.0" y="628" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#64748b" text-anchor="middle">bikes  (roadside, ~86" - context only)</text>
+<circle cx="485.6" cy="846" r="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="497.6" y="850" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">USB-C PD / GPS (24 V)</text>
+<circle cx="470" cy="674.0" r="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="482" y="678.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">interior LED zones (24 V)</text>
+<polygon points="430,873 437,880 430,887 423,880" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="430" y="896" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="middle">F curb</text>
+<polygon points="555,873 562,880 555,887 548,880" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="555" y="896" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="middle">F curb</text>
+<polygon points="430,533 437,540 430,547 423,540" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="430" y="532" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="middle">F road</text>
+<polygon points="555,533 562,540 555,547 548,540" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="555" y="532" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="middle">F road</text>
+<polygon points="96.0,610.0 103.0,617.0 96.0,624.0 89.0,617.0" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="130" y="618" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="start">F nose</text>
+<polygon points="96.0,796.0 103.0,803.0 96.0,810.0 89.0,803.0" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="130" y="812" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="start">F nose</text>
+<polygon points="698,611 705,618 698,625 691,618" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="708" y="622" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="start">F rear</text>
+<line x1="138" y1="928" x2="690" y2="928" stroke="#ea580c" stroke-width="4" stroke-dasharray="2 0"/>
+<line x1="138" y1="932" x2="690" y2="932" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 4"/>
+<text x="414.0" y="952" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#ea580c" text-anchor="middle">Fiamma F45s awning case 138" + warm 24 V LED strip (curbside, at roofline)</text>
+<circle cx="650" cy="880" r="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="650" y="896" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#ea580c" text-anchor="middle">heater (ext.)</text>
+<line x1="182" y1="734.0" x2="373.8" y2="784.4" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="3 4"/>
+<line x1="182" y1="686.0" x2="470" y2="680.0" stroke="#2563eb" stroke-width="1.4" stroke-dasharray="3 4"/>
+<text x="190" y="756.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#2563eb" text-anchor="start">24 V branches</text>
+<line x1="716" y1="548" x2="716" y2="872" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="710" y1="548" x2="722" y2="548" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="710" y1="872" x2="722" y2="872" stroke="#0f172a" stroke-width="1.4"/>
+<text x="726" y="710.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle" transform="rotate(-90 726 710.0)">81" interior</text>
+<line x1="66" y1="972" x2="690" y2="972" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="66" y1="966" x2="66" y2="978" stroke="#0f172a" stroke-width="1.4"/>
+<line x1="690" y1="966" x2="690" y2="978" stroke="#0f172a" stroke-width="1.4"/>
+<text x="378.0" y="988" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">156" centerline (141" straight + 15" nose)</text>
+<text x="60" y="710.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#64748b" text-anchor="end">NOSE</text>
+<text x="696" y="866" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#64748b" text-anchor="start">REAR / RAMP</text>
+<rect x="770" y="118" width="668" height="720" rx="8" fill="#ffffff" stroke="#475569" stroke-width="1.8"/>
+<text x="786" y="146" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#475569" text-anchor="start">C  Nose power cabinet - contents &amp; 48 V spine</text>
+<text x="786" y="166" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Contents + required connections (flows bottom-up: battery -&gt; bus -&gt; converters -&gt; loads).</text>
+<text x="786" y="182" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Exact internal stationing is an open gate - this is not a final placement.</text>
+<rect x="954.0" y="576" width="300" height="60" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+<text x="1104.0" y="604.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">LiTime 48 V 100 Ah ComFlex</text>
+<text x="1104.0" y="620.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="middle">5.12 kWh - low &amp; centered (tongue weight)</text>
+<text x="998.0" y="630" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">-</text>
+<text x="1210.0" y="630" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">+</text>
+<rect x="844" y="480" width="180" height="48" rx="4" fill="#f8fafc" stroke="#475569" stroke-width="1.6"/>
+<text x="934.0" y="502.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">500 A shunt</text>
+<text x="934.0" y="518.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">on battery (-) / SoC</text>
+<rect x="1184" y="480" width="180" height="48" rx="4" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1274.0" y="502.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Main Class-T OCP</text>
+<text x="1274.0" y="518.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">on battery (+) - TBD</text>
+<rect x="794" y="398" width="298" height="40" rx="4" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.6"/>
+<text x="943.0" y="422.1666666666667" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="middle">- busbar</text>
+<rect x="1116" y="398" width="298" height="40" rx="4" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.6"/>
+<text x="1265.0" y="422.1666666666667" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="middle">+ busbar</text>
+<rect x="794.0" y="300" width="144.5" height="60" rx="4" fill="#ecfeff" stroke="#0891b2" stroke-width="1.6"/>
+<text x="866.25" y="328.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">SmartSolar</text>
+<text x="866.25" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">250/60-Tr (PV in)</text>
+<rect x="952.5" y="300" width="144.5" height="60" rx="4" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6"/>
+<text x="1024.75" y="328.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Velit branch</text>
+<text x="1024.75" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">breaker -&gt; roof AC</text>
+<rect x="1111.0" y="300" width="144.5" height="60" rx="4" fill="#eef2ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="1183.25" y="328.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Orion-Tr</text>
+<text x="1183.25" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">48/24-16A iso.</text>
+<rect x="1269.5" y="300" width="144.5" height="60" rx="4" fill="#eef2ff" stroke="#6366f1" stroke-width="1.6"/>
+<text x="1341.75" y="328.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Orion-Tr IP43</text>
+<text x="1341.75" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">48/12-20A iso.</text>
+<rect x="1111.0" y="214" width="144.5" height="54" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="1183.25" y="239.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Blue Sea 5026</text>
+<text x="1183.25" y="255.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">24 V fuse block</text>
+<rect x="1269.5" y="214" width="144.5" height="54" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="1.6"/>
+<text x="1341.75" y="239.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">12 V recept.</text>
+<text x="1341.75" y="255.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">aux only</text>
+<line x1="998.0" y1="576" x2="934.0" y2="528" stroke="#b91c1c" stroke-width="2.4"/>
+<line x1="934.0" y1="480" x2="943.0" y2="438" stroke="#b91c1c" stroke-width="2.4"/>
+<line x1="1210.0" y1="576" x2="1274.0" y2="528" stroke="#b91c1c" stroke-width="2.4"/>
+<line x1="1274.0" y1="480" x2="1265.0" y2="438" stroke="#b91c1c" stroke-width="2.4"/>
+<line x1="866.25" y1="388" x2="1341.75" y2="388" stroke="#b91c1c" stroke-width="2.6"/>
+<line x1="1265.0" y1="398" x2="1265.0" y2="388" stroke="#b91c1c" stroke-width="2.6"/>
+<line x1="866.25" y1="388" x2="866.25" y2="360" stroke="#b91c1c" stroke-width="2.2"/>
+<line x1="1024.75" y1="388" x2="1024.75" y2="360" stroke="#b91c1c" stroke-width="2.2"/>
+<line x1="1183.25" y1="388" x2="1183.25" y2="360" stroke="#b91c1c" stroke-width="2.2"/>
+<line x1="1341.75" y1="388" x2="1341.75" y2="360" stroke="#b91c1c" stroke-width="2.2"/>
+<text x="858.25" y="382" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#b91c1c" text-anchor="end">48 V bus</text>
+<line x1="1183.25" y1="300" x2="1183.25" y2="268" stroke="#2563eb" stroke-width="2.2"/>
+<line x1="1341.75" y1="300" x2="1341.75" y2="268" stroke="#7c3aed" stroke-width="2.2"/>
+<text x="1189.25" y="284.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#2563eb" text-anchor="start">24 V</text>
+<text x="1347.75" y="284.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#7c3aed" text-anchor="start">12 V</text>
+<line x1="866.25" y1="226" x2="866.25" y2="300" stroke="#0891b2" stroke-width="2.4" stroke-dasharray="6 4"/>
+<polygon points="861.25,300 871.25,300 866.25,309" fill="#0891b2" stroke="none" stroke-width="1.5"/>
+<text x="866.25" y="220" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#0891b2" text-anchor="middle">roof 3S</text>
+<line x1="1024.75" y1="300" x2="1024.75" y2="232" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="6 4"/>
+<polygon points="1019.75,232 1029.75,232 1024.75,223" fill="#dc2626" stroke="none" stroke-width="1.5"/>
+<text x="1024.75" y="220" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#dc2626" text-anchor="middle">-&gt; roof AC</text>
+<text x="794" y="664" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">Blue Sea 5026 24 V branches: fridge - interior/exterior LED zones - USB-C PD - GPS - winter heater outlet.</text>
+<text x="794" y="682" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">Cabin face: Blue Sea 8260 + 6x 8282 switches + 6x 24 V dimmers (INTERIOR/CURB/ROAD/NOSE/REAR/AWNING).</text>
+<text x="794" y="700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="400" fill="#334155" text-anchor="start">Vent: low filtered cabin intake + high fan-assisted exhaust (24 V fan + thermostat); no exterior penetration.</text>
+<rect x="45" y="1044" width="690" height="150" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="60" y="1070" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="start">Legend</text>
+<rect x="60" y="1092" width="22" height="14" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.4"/>
+<text x="90" y="1103" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">PV source / MPPT</text>
+<rect x="390" y="1092" width="22" height="14" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.4"/>
+<text x="420" y="1103" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">Battery</text>
+<rect x="60" y="1122" width="22" height="14" rx="2" fill="#fef2f2" stroke="#dc2626" stroke-width="1.4"/>
+<text x="90" y="1133" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">Protection / OCP</text>
+<rect x="390" y="1122" width="22" height="14" rx="2" fill="#eef2ff" stroke="#6366f1" stroke-width="1.4"/>
+<text x="420" y="1133" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">DC-DC converter</text>
+<rect x="60" y="1152" width="22" height="14" rx="2" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.4"/>
+<text x="90" y="1163" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">Busbar</text>
+<rect x="390" y="1152" width="22" height="14" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.4"/>
+<text x="420" y="1163" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">Load / fixture</text>
+<text x="60" y="1182" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="start">Wire spine:</text>
+<line x1="150" y1="1182" x2="185" y2="1182" stroke="#b91c1c" stroke-width="3"/>
+<text x="190" y="1186" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">48 V</text>
+<line x1="245" y1="1182" x2="280" y2="1182" stroke="#2563eb" stroke-width="3"/>
+<text x="285" y="1186" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">24 V</text>
+<line x1="340" y1="1182" x2="375" y2="1182" stroke="#7c3aed" stroke-width="3"/>
+<text x="380" y="1186" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">12 V</text>
+<line x1="430" y1="1182" x2="465" y2="1182" stroke="#0891b2" stroke-width="3"/>
+<text x="470" y="1186" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">PV</text>
+<rect x="755" y="1044" width="680" height="150" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+<text x="770" y="1070" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="start">Intentionally omitted (per request)</text>
+<rect x="770" y="1084" width="16" height="16" rx="2" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="794" y="1097" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">Anker SOLIX C1000 + PS400 - standalone 120 VAC camp island.</text>
+<rect x="770" y="1110" width="16" height="16" rx="2" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="794" y="1123" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">Optional ground-mounted 2S LG PV (910 W) + SmartSolar 150/35.</text>
+<text x="770" y="1152" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Sources: docs/power.md, docs/dimensions.md. This is the physical</text>
+<text x="770" y="1169" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start">layout; the electrical schematic is docs/diagrams/power-overview.*.</text>
+</svg>

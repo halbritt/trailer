@@ -10,6 +10,10 @@ Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECI
 
 ![Solar string routing](diagrams/power-solar-strings.svg)
 
+**Physical layout** (where the gear sits, vs the schematic above) — three scale plan panels: roof (Velit + roof 3S string and PV gland drop), floor (nose power cabinet, fridge bay, exterior flood/awning positions, 24 V load locations), and the nose-cabinet contents with the 48 V spine. The standalone Anker SOLIX C1000 + PS400 AC island and the optional ground-mounted 2S LG PV (with its SmartSolar 150/35) are intentionally left out. Regenerate with `python3 scripts/generate_power_physical_layout_svg.py`.
+
+![Power system physical layout](diagrams/power-physical-layout.svg)
+
 ## Current Verdict
 
 For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads stay on DC:
