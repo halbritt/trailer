@@ -206,6 +206,10 @@ text(45, 530, "B  Floor plan  (curbside = bottom)", size=17, weight=700, fill=C[
 poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
      fill="#ffffff", stroke=C["wall"], sw=4)
 
+# centerline (the two bike rows straddle it)
+line(f_tip + 6, fmid, REAR_X, fmid, stroke=C["muted"], sw=1, dash="9 7")
+text(520, fmid + 13, "centerline", size=9, anchor="middle", fill=C["muted"])
+
 # --- nose power cabinet: ~8" deep, localized to the LEFT (roadside) nose flank ---
 # Upper flank A(taper-start, top) -> B(nose tip); offset inward into the cabin by 8".
 fdx, fdy = f_tip - f_taper, fmid - ft
@@ -240,7 +244,7 @@ text(frx + frw / 2, fb - frd / 2 - 8, "Dometic CFX3-95DZ", size=12, weight=700, 
 text(frx + frw / 2, fb - frd / 2 + 6, "37.9\" x 20.9\" (24 V)", size=10, anchor="middle", fill=C["load_s"])
 text(frx + frw / 2, fb - frd / 2 + 20, "+ lid swing", size=9, anchor="middle", fill=C["muted"])
 
-# --- bikes (roadside/top, nose-forward, near the rear; bars overlap the fridge) ---
+# --- bikes: 26" OC straddling the centerline (one rail roadside, one curbside), near rear ---
 def draw_bike(x_front, x_rear, y, bar_x, bar_w, label):
     rect(x_front, y - 18, x_rear - x_front, 36, fill="#eef2f7",
          stroke=C["omit"], sw=1.3, dash="5 3", rx=10)
@@ -254,14 +258,14 @@ def draw_bike(x_front, x_rear, y, bar_x, bar_w, label):
     text((x_front + x_rear) / 2 + 30, y + 4, label, size=11, weight=700,
          anchor="middle", fill=C["slate"])
 
-bikeA_y = ft + 22 * S
-bikeB_y = ft + 48 * S                       # 26" OC below bike A
+bikeA_y = ft + 27.5 * S                     # roadside rail (~27" off the roadside wall)
+bikeB_y = ft + 53.5 * S                     # curbside rail, 26" OC (~27" off the curbside wall)
 draw_bike(322, 666, bikeA_y, 402, 32 * S, "WR250R")
 draw_bike(258, 602, bikeB_y, 338, 34 * S, "CRF450RL")
 line(322, bikeA_y, 246, bikeA_y, stroke=C["muted"], sw=1)
 line(258, bikeB_y, 246, bikeB_y, stroke=C["muted"], sw=1)
 dimv(246, bikeA_y, bikeB_y, '26" OC', side="left")
-text(380, ft + 6, "bikes: nose-forward, roadside, loaded via rear ramp",
+text(400, ft + 6, "bikes: nose-forward, via rear ramp - one rail roadside, one curbside (straddle CL)",
      size=10, anchor="middle", fill=C["muted"])
 # bar-overlap callout
 line(338, bikeB_y + 44, 472, fb - frd - 16, stroke=C["slate"], sw=1, dash="3 3")
