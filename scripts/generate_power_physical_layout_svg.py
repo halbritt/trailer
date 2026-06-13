@@ -206,16 +206,21 @@ text(45, 530, "B  Floor plan  (curbside = bottom)", size=17, weight=700, fill=C[
 poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
      fill="#ffffff", stroke=C["wall"], sw=4)
 
-# --- nose power cabinet zone (shaded) ---
-cab_back = f_taper + 14 * S               # cabinet extends ~14 in aft of taper
-poly([(f_tip, fmid), (f_taper, ft), (cab_back, ft), (cab_back, fb), (f_taper, fb)],
-     fill=C["cab"], stroke=C["cab_s"], sw=1.6, dash="6 4", op=0.9)
-text((f_tip + cab_back) / 2 + 6, fmid - 6, "NOSE POWER", size=12, weight=700,
-     anchor="middle", fill=C["cab_s"])
-text((f_tip + cab_back) / 2 + 6, fmid + 10, "CABINET", size=12, weight=700,
-     anchor="middle", fill=C["cab_s"])
-text((f_tip + cab_back) / 2 + 6, fmid + 28, "(detail C)", size=10.5,
-     anchor="middle", fill=C["muted"])
+# --- nose power cabinet: ~8" deep, localized to the LEFT (roadside) nose flank ---
+# Upper flank A(taper-start, top) -> B(nose tip); offset inward into the cabin by 8".
+fdx, fdy = f_tip - f_taper, fmid - ft
+flen = (fdx * fdx + fdy * fdy) ** 0.5
+nx, ny = fdy / flen, -fdx / flen          # inward normal (+x,+y, into the cabin)
+cdep = 8 * S
+A_fl, B_fl = (f_taper, ft), (f_tip, fmid)
+A_in = (A_fl[0] + nx * cdep, A_fl[1] + ny * cdep)
+B_in = (B_fl[0] + nx * cdep, B_fl[1] + ny * cdep)
+poly([A_fl, B_fl, B_in, A_in], fill=C["cab"], stroke=C["cab_s"], sw=1.6, dash="5 3", op=0.95)
+cab_out = ((A_in[0] + B_in[0]) / 2, (A_in[1] + B_in[1]) / 2)   # 24 V feed origin
+text(A_in[0] + 24, fmid - 104, "NOSE POWER CABINET", size=12, weight=700, fill=C["cab_s"])
+text(A_in[0] + 24, fmid - 89, "~8\" deep · left (roadside) nose flank", size=10, fill=C["muted"])
+text(A_in[0] + 24, fmid - 74, "contents at real scale: detail C", size=10, fill=C["muted"])
+line(A_in[0] + 18, fmid - 96, cab_out[0], cab_out[1], stroke=C["cab_s"], sw=1, dash="3 3")
 
 # --- side door (curbside / bottom), 30 in opening, 98 in from rear ---
 door_aft = REAR_X - 98 * S
@@ -231,35 +236,56 @@ frx = door_aft
 frw = 37.9 * S
 frd = 20.9 * S
 rect(frx, fb - frd, frw, frd, fill=C["load"], stroke=C["load_s"], sw=1.6, rx=2)
-text(frx + frw / 2, fb - frd / 2 - 4, "Fridge", size=12, weight=700, anchor="middle", fill=C["load_s"])
-text(frx + frw / 2, fb - frd / 2 + 12, "CFX3 95DZ (24 V)", size=10, anchor="middle", fill=C["load_s"])
+text(frx + frw / 2, fb - frd / 2 - 8, "Dometic CFX3-95DZ", size=12, weight=700, anchor="middle", fill=C["load_s"])
+text(frx + frw / 2, fb - frd / 2 + 6, "37.9\" x 20.9\" (24 V)", size=10, anchor="middle", fill=C["load_s"])
+text(frx + frw / 2, fb - frd / 2 + 20, "+ lid swing", size=9, anchor="middle", fill=C["muted"])
 
-# --- bikes (roadside / top, context only) ---
-for i in range(2):
-    by = ft + 10 + i * 30
-    rect(f_taper + 6, by, 86 * S, 24, fill="#ffffff",
-         stroke=C["omit"], sw=1.3, dash="5 4", rx=3)
-text(f_taper + 6 + 86 * S / 2, ft + 10 + 70, "bikes  (roadside, ~86\" - context only)",
-     size=10.5, anchor="middle", fill=C["muted"])
+# --- bikes (roadside/top, nose-forward, near the rear; bars overlap the fridge) ---
+def draw_bike(x_front, x_rear, y, bar_x, bar_w, label):
+    rect(x_front, y - 18, x_rear - x_front, 36, fill="#eef2f7",
+         stroke=C["omit"], sw=1.3, dash="5 3", rx=10)
+    rect(x_front, y - 8, 24, 16, fill=C["slate"], stroke="none", rx=3)        # front wheel
+    rect(x_rear - 24, y - 8, 24, 16, fill=C["slate"], stroke="none", rx=3)    # rear wheel
+    poly([(x_front - 11, y), (x_front, y - 6), (x_front, y + 6)],
+         fill=C["muted"], stroke="none")                                      # nose tick
+    line(bar_x, y - bar_w / 2, bar_x, y + bar_w / 2, stroke=C["slate"], sw=4) # handlebar
+    for gy in (y - bar_w / 2, y + bar_w / 2):
+        e(f'<circle cx="{bar_x}" cy="{gy}" r="4" fill="{C["slate"]}"/>')
+    text((x_front + x_rear) / 2 + 30, y + 4, label, size=11, weight=700,
+         anchor="middle", fill=C["slate"])
+
+bikeA_y = ft + 22 * S
+bikeB_y = ft + 48 * S                       # 26" OC below bike A
+draw_bike(322, 666, bikeA_y, 402, 32 * S, "WR250R")
+draw_bike(258, 602, bikeB_y, 338, 34 * S, "CRF450RL")
+line(322, bikeA_y, 246, bikeA_y, stroke=C["muted"], sw=1)
+line(258, bikeB_y, 246, bikeB_y, stroke=C["muted"], sw=1)
+dimv(246, bikeA_y, bikeB_y, '26" OC', side="left")
+text(380, ft + 6, "bikes: nose-forward, roadside, loaded via rear ramp",
+     size=10, anchor="middle", fill=C["muted"])
+# bar-overlap callout
+line(338, bikeB_y + 44, 472, fb - frd - 16, stroke=C["slate"], sw=1, dash="3 3")
+text(480, fb - frd - 18, "handlebars sweep over the fridge", size=10, weight=700, fill=C["slate"])
+text(480, fb - frd - 4, "(clears it at bar height: ~30\"+ vs 18.6\" fridge)", size=9, fill=C["muted"])
 
 # --- interior loads ---
-usb_x, usb_y = frx + frw + 36, fb - 26
+usb_x, usb_y = frx + frw + 40, fb - 24
 e(f'<circle cx="{usb_x}" cy="{usb_y}" r="6" fill="{C["load"]}" '
   f'stroke="{C["load_s"]}" stroke-width="1.6"/>')
 text(usb_x + 12, usb_y + 4, "USB-C PD / GPS (24 V)", size=10.5, fill=C["slate"])
-led_x, led_y = 470, fmid - 36
+led_x, led_y = 470, ft + 14
 e(f'<circle cx="{led_x}" cy="{led_y}" r="6" fill="{C["load"]}" '
   f'stroke="{C["load_s"]}" stroke-width="1.6"/>')
-text(led_x + 12, led_y + 4, "interior LED zones (24 V)", size=10.5, fill=C["slate"])
+text(led_x + 12, led_y + 4, "interior LED (ceiling, 24 V)", size=10.5, fill=C["slate"])
 
 # --- exterior floods (7x VAL2-NW9) ---
 flood(430, fb + 8, "F curb", 430, fb + 24)
 flood(555, fb + 8, "F curb", 555, fb + 24)
 flood(430, ft - 8, "F road", 430, ft - 16)
 flood(555, ft - 8, "F road", 555, ft - 16)
-# nose-face floods on the two flanks
-flood((f_tip + f_taper) / 2, (fmid + ft) / 2 - 12, "F nose", f_taper + 4, ft + 70, anchor="start")
-flood((f_tip + f_taper) / 2, (fmid + fb) / 2 + 12, "F nose", f_taper + 4, fb - 60, anchor="start")
+# nose-face floods, on the exterior of each V-nose flank
+flood(86, 624, "F nose", 52, 612, anchor="end")
+flood(86, 796, "F nose", 52, 810, anchor="end")
 # rear flood
 flood(REAR_X + 8, ft + 70, "F rear", REAR_X + 18, ft + 74, anchor="start")
 
@@ -277,9 +303,9 @@ e(f'<circle cx="{REAR_X - 40}" cy="{fb + 8}" r="6" fill="{C["load"]}" '
 text(REAR_X - 40, fb + 24, "heater (ext.)", size=10, anchor="middle", fill=C["load_s"])
 
 # --- 24 V feed hints from cabinet to loads ---
-line(cab_back, fmid + 24, frx + frw / 2, fb - frd - 4, stroke=C["w24"], sw=1.4, dash="3 4")
-line(cab_back, fmid - 24, led_x, led_y + 6, stroke=C["w24"], sw=1.4, dash="3 4")
-text(cab_back + 8, fmid + 46, "24 V branches", size=10, fill=C["w24"])
+line(cab_out[0], cab_out[1], frx + frw / 2, fb - frd - 4, stroke=C["w24"], sw=1.4, dash="3 4")
+line(cab_out[0], cab_out[1], led_x, led_y + 8, stroke=C["w24"], sw=1.4, dash="3 4")
+text(cab_out[0] + 26, cab_out[1] + 8, "24 V branches", size=10, fill=C["w24"])
 
 # floor dimensions
 dimv(REAR_X + 26, ft, fb, '81" interior', side="right")
@@ -290,107 +316,83 @@ text(f_tip - 6, fmid, "NOSE", size=11, weight=700, anchor="end", fill=C["muted"]
 text(REAR_X + 6, fb - 6, "REAR / RAMP", size=11, weight=700, fill=C["muted"])
 
 # ---------------------------------------------------------------------------
-# PANEL C - NOSE CABINET DETAIL (contents + 48 V spine, bottom-up flow)
+# PANEL C - NOSE CABINET: REAL-SCALE FRONT ELEVATION (components to scale)
 # ---------------------------------------------------------------------------
 CX, CY, CW, CH = 770, 118, 668, 720
 rect(CX, CY, CW, CH, fill="#ffffff", stroke=C["cab_s"], sw=1.8, rx=8)
-text(CX + 16, CY + 28, "C  Nose power cabinet - contents & 48 V spine",
+text(CX + 16, CY + 28, "C  Nose power cabinet - real-scale layout",
      size=17, weight=700, fill=C["cab_s"])
-text(CX + 16, CY + 48,
-     "Contents + required connections (flows bottom-up: battery -> bus -> converters -> loads).",
-     size=11, fill=C["muted"])
-text(CX + 16, CY + 64,
-     "Exact internal stationing is an open gate - this is not a final placement.",
+text(CX + 16, CY + 47,
+     "Front elevation of the ~8\"-deep left-flank cabinet. Components drawn to scale.",
      size=11, fill=C["muted"])
 
-inx = CX + 24
-inw = CW - 48
-bw = (inw - 3 * 14) / 4                  # 4 consumer columns
-def col_x(i): return inx + i * (bw + 14)
-def col_cx(i): return col_x(i) + bw / 2
+# elevation frame: 30 in W x 46 in H envelope, 1 in = sc_e px
+sc_e = 12
+EX0, EYb = 800, 760                       # cabinet interior bottom-left (svg)
+CABW, CABH = 30, 46
+rect(EX0, EYb - CABH * sc_e, CABW * sc_e, CABH * sc_e,
+     fill="#fbfdfe", stroke=C["cab_s"], sw=1.6, rx=4)
+line(EX0, EYb, EX0 + CABW * sc_e, EYb, stroke=C["cab_s"], sw=3)          # floor
+text(EX0 + CABW * sc_e / 2, EYb - CABH * sc_e - 7,
+     "Front elevation - 30\" W x 46\" H envelope (fit to components)",
+     size=10.5, weight=700, anchor="middle", fill=C["cab_s"])
 
-out_y, out_h = 214, 54
-con_y, con_h = 300, 60
-manifold_y = 388
-busL_x, busR_x, bus_w = inx, inx + 322, 298
-bus_y, bus_h = 398, 40
-so_y, so_h = 480, 48                      # shunt / OCP
-bat_x, bat_w = CX + CW/2 - 150, 300
-bat_y, bat_h = 576, 60
+# components: (n, ex, ey, ew, eh, fill, stroke, name, dims)   ex/ey from bottom-left, inches
+comps = [
+    (1,  5.0,  0.0, 19.88, 12.32, C["bat"],   C["bat_s"],  "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25  (depth driver)"),
+    (2,  2.0, 13.6, 3.5,   1.8,   C["sheet"], C["cab_s"],  "LiTime 500A shunt",         "~3.5x1.8  (on -)*"),
+    (3, 23.7, 13.4, 4.3,   2.4,   C["prot"],  C["prot_s"], "Main Class-T OCP",          "~4.3x2.4  (on +)*"),
+    (4,  2.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "- busbar",                  "~6x1.3*"),
+    (5, 10.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "+ busbar",                  "~6x1.3*"),
+    (6, 24.0, 17.0, 3.4,   2.2,   C["prot"],  C["prot_s"], "Velit 48V branch breaker",  "~3.4x2.2*"),
+    (7,  1.5, 20.3, 7.28,  9.84,  C["pv"],    C["pv_s"],   "SmartSolar 250/60-Tr",      "7.28x9.84x3.74"),
+    (8, 11.0, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/24-16A",        "7.3x5.1x2.8"),
+    (9, 20.5, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/12-20A",        "7.3x5.1x2.8"),
+    (10, 1.5, 31.5, 5.74,  3.31,  C["load"],  C["load_s"], "Blue Sea 5026 (24V)",       "5.74x3.31*"),
+    (11, 9.5, 31.5, 5.5,   2.2,   C["load"],  C["load_s"], "12V receptacles",           "~5.5x2.2*"),
+    (12, 1.5, 37.0, 6.49,  4.5,   C["sheet"], C["cab_s"],  "Switch + dimmer panel (8260)", "6.49x2.3 + dimmers"),
+]
+for n, ex, ey, ew, eh, fill, stroke, name, dims in comps:
+    x = EX0 + ex * sc_e
+    y = EYb - (ey + eh) * sc_e
+    rect(x, y, ew * sc_e, eh * sc_e, fill=fill, stroke=stroke, sw=1.5, rx=2)
+    cy = y + eh * sc_e / 2
+    e(f'<circle cx="{x - 11}" cy="{cy}" r="7" fill="#ffffff" stroke="{stroke}" stroke-width="1.2"/>')
+    text(x - 11, cy + 3.5, str(n), size=9, weight=700, anchor="middle", fill=stroke)
 
-# --- battery (bottom, low & centered) ---
-block(bat_x, bat_y, bat_w, bat_h, "LiTime 48 V 100 Ah ComFlex", C["bat"], C["bat_s"],
-      size=13, sub="5.12 kWh - low & centered (tongue weight)")
-bat_neg_x, bat_pos_x = bat_x + 44, bat_x + bat_w - 44
-text(bat_neg_x, bat_y + bat_h - 6, "-", size=16, weight=700, anchor="middle", fill=C["w48"])
-text(bat_pos_x, bat_y + bat_h - 6, "+", size=16, weight=700, anchor="middle", fill=C["w48"])
+# orientation label (where roof PV enters)
+text(EX0 + (1.5 + 7.28 / 2) * sc_e, EYb - 30.6 * sc_e, "PV in",
+     size=9.5, weight=700, anchor="middle", fill=C["pv_s"])
 
-# --- shunt (on -) / main OCP (on +) ---
-shunt_x, ocp_x, sow = inx + 50, inx + 390, 180
-block(shunt_x, so_y, sow, so_h, "500 A shunt", C["sheet"], C["cab_s"], size=12,
-      sub="on battery (-) / SoC")
-block(ocp_x, so_y, sow, so_h, "Main Class-T OCP", C["prot"], C["prot_s"], size=12,
-      sub="on battery (+) - TBD")
+# scale bar (12 in)
+sb_y = EYb + 16
+line(EX0, sb_y, EX0 + 12 * sc_e, sb_y, stroke=C["ink"], sw=1.6)
+line(EX0, sb_y - 4, EX0, sb_y + 4, stroke=C["ink"], sw=1.6)
+line(EX0 + 12 * sc_e, sb_y - 4, EX0 + 12 * sc_e, sb_y + 4, stroke=C["ink"], sw=1.6)
+text(EX0 + 6 * sc_e, sb_y + 15, "12 in", size=10, anchor="middle", fill=C["slate"])
 
-# --- busbars ---
-block(busL_x, bus_y, bus_w, bus_h, "- busbar", C["bus"], C["bus_s"], size=12.5)
-block(busR_x, bus_y, bus_w, bus_h, "+ busbar", C["bus"], C["bus_s"], size=12.5)
+# depth + face/vent notes (under the elevation)
+text(EX0, EYb + 50, "Cabinet ~8\" deep: electronics <=3.7\" (MPPT 3.74, Orions 2.8); "
+     "battery is the depth driver (9.25\" min) - sits low on the floor at the base.",
+     size=9.5, fill=C["slate"])
+text(EX0, EYb + 66, "Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. "
+     "Vent: low cabin intake + high fan exhaust (24V fan + thermostat).",
+     size=9.5, fill=C["slate"])
 
-# --- consumer row (4 boxes off the 48 V bus) ---
-block(col_x(0), con_y, bw, con_h, "SmartSolar", C["pv"], C["pv_s"], size=12,
-      sub="250/60-Tr (PV in)")
-block(col_x(1), con_y, bw, con_h, "Velit branch", C["prot"], C["prot_s"], size=12,
-      sub="breaker -> roof AC")
-block(col_x(2), con_y, bw, con_h, "Orion-Tr", C["conv"], C["conv_s"], size=12,
-      sub="48/24-16A iso.")
-block(col_x(3), con_y, bw, con_h, "Orion-Tr IP43", C["conv"], C["conv_s"], size=12,
-      sub="48/12-20A iso.")
-
-# --- outputs above the two Orions ---
-block(col_x(2), out_y, bw, out_h, "Blue Sea 5026", C["load"], C["load_s"], size=12,
-      sub="24 V fuse block")
-block(col_x(3), out_y, bw, out_h, "12 V recept.", C["load"], C["load_s"], size=12,
-      sub="aux only")
-
-# --- 48 V protection links: battery -> shunt/OCP -> busbars ---
-line(bat_neg_x, bat_y, shunt_x + sow/2, so_y + so_h, stroke=C["w48"], sw=2.4)
-line(shunt_x + sow/2, so_y, busL_x + bus_w/2, bus_y + bus_h, stroke=C["w48"], sw=2.4)
-line(bat_pos_x, bat_y, ocp_x + sow/2, so_y + so_h, stroke=C["w48"], sw=2.4)
-line(ocp_x + sow/2, so_y, busR_x + bus_w/2, bus_y + bus_h, stroke=C["w48"], sw=2.4)
-
-# --- 48 V manifold from + busbar up to the four consumers ---
-line(col_cx(0), manifold_y, col_cx(3), manifold_y, stroke=C["w48"], sw=2.6)
-line(busR_x + bus_w/2, bus_y, busR_x + bus_w/2, manifold_y, stroke=C["w48"], sw=2.6)
-for i in range(4):
-    line(col_cx(i), manifold_y, col_cx(i), con_y + con_h, stroke=C["w48"], sw=2.2)
-text(col_cx(0) - 8, manifold_y - 6, "48 V bus", size=10.5, weight=700,
-     anchor="end", fill=C["w48"])
-
-# --- consumer -> output links ---
-line(col_cx(2), con_y, col_cx(2), out_y + out_h, stroke=C["w24"], sw=2.2)
-line(col_cx(3), con_y, col_cx(3), out_y + out_h, stroke=C["w12"], sw=2.2)
-text(col_cx(2) + 6, (con_y + out_y + out_h) / 2, "24 V", size=10, fill=C["w24"])
-text(col_cx(3) + 6, (con_y + out_y + out_h) / 2, "12 V", size=10, fill=C["w12"])
-
-# --- PV in (from roof down-lead) into the SmartSolar ---
-line(col_cx(0), out_y + 12, col_cx(0), con_y, stroke=C["pv_s"], sw=2.4, dash="6 4")
-poly([(col_cx(0) - 5, con_y), (col_cx(0) + 5, con_y), (col_cx(0), con_y + 9)],
-     fill=C["pv_s"], stroke="none")
-text(col_cx(0), out_y + 6, "roof 3S", size=10.5, weight=700, anchor="middle", fill=C["pv_s"])
-# --- Velit branch -> roof AC (up/out) ---
-line(col_cx(1), con_y, col_cx(1), out_y + 18, stroke=C["prot_s"], sw=2.2, dash="6 4")
-poly([(col_cx(1) - 5, out_y + 18), (col_cx(1) + 5, out_y + 18), (col_cx(1), out_y + 9)],
-     fill=C["prot_s"], stroke="none")
-text(col_cx(1), out_y + 6, "-> roof AC", size=10, weight=700, anchor="middle", fill=C["prot_s"])
-
-# --- 5026 branch list + cabin-face / vent captions ---
-cap_y = bat_y + bat_h + 28
-text(inx, cap_y, "Blue Sea 5026 24 V branches: fridge - interior/exterior LED zones - "
-     "USB-C PD - GPS - winter heater outlet.", size=10.5, fill=C["slate"])
-text(inx, cap_y + 18, "Cabin face: Blue Sea 8260 + 6x 8282 switches + 6x 24 V dimmers "
-     "(INTERIOR/CURB/ROAD/NOSE/REAR/AWNING).", size=10.5, fill=C["slate"])
-text(inx, cap_y + 36, "Vent: low filtered cabin intake + high fan-assisted exhaust "
-     "(24 V fan + thermostat); no exterior penetration.", size=10.5, fill=C["slate"])
+# component list (right column)
+lx = EX0 + CABW * sc_e + 28
+text(lx, CY + 92, "Components  (W x H x D, in):", size=12, weight=700)
+for i, (n, ex, ey, ew, eh, fill, stroke, name, dims) in enumerate(comps):
+    yy = CY + 116 + i * 23
+    rect(lx, yy - 10, 13, 13, fill=fill, stroke=stroke, sw=1.3, rx=2)
+    text(lx + 20, yy - 1, f"{n}. {name}", size=10, weight=700, fill=C["ink"])
+    text(lx + 20, yy + 11, dims, size=9, fill=C["muted"])
+text(lx, CY + 116 + 12 * 23 + 6,
+     "* nominal/catalog. Battery, SmartSolar, Orions: datasheet.",
+     size=9, fill=C["muted"])
+text(lx, CY + 116 + 12 * 23 + 22,
+     "Flow/topology: see schematic (power-overview).",
+     size=9, fill=C["muted"])
 
 # ---------------------------------------------------------------------------
 # LEGEND + omissions (bottom strip)
