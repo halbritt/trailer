@@ -315,124 +315,110 @@ text(f_tip - 6, fmid, "NOSE", size=11, weight=700, anchor="end", fill=C["muted"]
 text(REAR_X + 6, fb - 6, "REAR / RAMP", size=11, weight=700, fill=C["muted"])
 
 # ---------------------------------------------------------------------------
-# PANEL C - NOSE POWER BENCH: REAL-SCALE FRONT ELEVATION
+# PANEL C - NOSE POWER BENCH: TOP-DOWN PLAN + centerline SECTION
 # ---------------------------------------------------------------------------
 CX, CY, CW, CH = 770, 118, 668, 720
 rect(CX, CY, CW, CH, fill="#ffffff", stroke=C["cab_s"], sw=1.8, rx=8)
-text(CX + 16, CY + 28, "C  Nose power bench - real-scale layout", size=17, weight=700, fill=C["cab_s"])
+text(CX + 16, CY + 28, "C  Nose power bench - plan + section", size=17, weight=700, fill=C["cab_s"])
 text(CX + 16, CY + 47,
-     "Front elevation of the ~18\"-tall nose bench. All power gear + the battery (stood on edge) inside, to scale.",
+     "Bench runs wall-to-wall (perpendicular to the side walls); the V-nose gives extra depth at the centerline.",
+     size=11, fill=C["muted"])
+text(CX + 16, CY + 63,
+     "Battery sits in the middle, in that deepest part. Components to scale.",
      size=11, fill=C["muted"])
 
-NEG = "#374151"
-def wire(pts, color, w=2.0):
-    d = "M " + " L ".join(f"{px:.1f} {py:.1f}" for px, py in pts)
-    e(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" '
-      f'stroke-linejoin="round" stroke-linecap="round"/>')
-def jdot(x, y, color):
-    e(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{color}"/>')
+# ---- TOP-DOWN PLAN of the bench (nose up) ----
+sc = 6.5
+PX0, PYb = 800, 372                          # plan: left edge, back edge (cabin face)
+WB, BAND, NOSE = 78, 8, 15                    # bench width, back band aft of taper, nose depth
+def PXx(wx): return PX0 + wx * sc             # across-width
+def PYd(d): return PYb - d * sc               # depth fwd from the back edge
+apex_x = PX0 + WB * sc / 2
+poly([(PX0, PYb), (PX0 + WB * sc, PYb), (PX0 + WB * sc, PYd(BAND)),
+      (apex_x, PYd(BAND + NOSE)), (PX0, PYd(BAND))],
+     fill="#fbfdfe", stroke=C["cab_s"], sw=1.6)
+line(PX0, PYb, PX0 + WB * sc, PYb, stroke=C["cab_s"], sw=4)   # cabin face (seat front)
+text(apex_x, PYd(BAND + NOSE) - 8, "NOSE (front) ^", size=10, weight=700, anchor="middle", fill=C["muted"])
+text(PX0 + WB * sc / 2, PYb + 16, "cabin face (seat front) - bench runs wall-to-wall", size=9.5, anchor="middle", fill=C["muted"])
 
-sc_e = 11
-EX0, EYb = 798, 392                         # bench bottom-left; EYb = trailer floor line
-BW, BH = 56, 18                             # bench width / height (in)
-def Px(ex): return EX0 + ex * sc_e
-def Py(ey): return EYb - ey * sc_e
-rect(EX0, Py(BH), BW * sc_e, BH * sc_e, fill="#fbfdfe", stroke=C["cab_s"], sw=1.6, rx=4)
-line(EX0 - 5, Py(BH), EX0 + BW * sc_e + 5, Py(BH), stroke=C["cab_s"], sw=5)   # bench top (seat)
-line(EX0, EYb, EX0 + BW * sc_e, EYb, stroke=C["cab_s"], sw=3)                 # trailer floor
-text(EX0 + BW * sc_e / 2, Py(BH) - 8, "Front elevation - 56\" W x ~18\" H bench (seat top); battery stood on edge",
-     size=10.5, weight=700, anchor="middle", fill=C["cab_s"])
-
-# components: (n, ex, ey, ew, eh, fill, stroke, name, dims, in-box label, lsize)
-comps = [
-    (1,  1.0,  0.0, 19.88, 12.32, C["bat"],   C["bat_s"],  "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25 - stood on edge", "LiTime 48V 100Ah|(on edge)", 10),
-    (2, 22.0,  0.0, 3.5,  1.8,  C["sheet"], C["cab_s"],  "LiTime 500A shunt", "~3.5x1.8 (on -)*", "shunt", 7),
-    (3, 22.0,  2.2, 4.3,  2.4,  C["prot"],  C["prot_s"], "Main Class-T OCP", "~4.3x2.4 (on +)*", "Class-T", 7),
-    (4, 22.0,  5.0, 6.0,  1.3,  C["bus"],   C["bus_s"],  "- busbar", "~6x1.3*", "- bus", 7.5),
-    (5, 22.0,  6.8, 6.0,  1.3,  C["bus"],   C["bus_s"],  "+ busbar", "~6x1.3*", "+ bus", 7.5),
-    (6, 22.0,  8.8, 3.4,  2.4,  C["prot"],  C["prot_s"], "Velit 48V branch breaker", "~3.4x2.4*", "Velit|brk", 6.5),
-    (7, 30.0,  0.0, 7.28, 9.84, C["pv"],    C["pv_s"],   "SmartSolar 250/60-Tr", "7.28x9.84x3.74", "SmartSolar|250/60", 9),
-    (8, 39.0,  0.0, 7.3,  5.1,  C["conv"],  C["conv_s"], "Orion-Tr 48/24-16A", "7.3x5.1x2.8", "Orion|48/24", 8.5),
-    (9, 47.5,  0.0, 7.3,  5.1,  C["conv"],  C["conv_s"], "Orion-Tr 48/12-20A", "7.3x5.1x2.8", "Orion|48/12", 8.5),
-    (10,39.0,  6.0, 5.74, 3.31, C["load"],  C["load_s"], "Blue Sea 5026 (24V)", "5.74x3.31*", "Blue Sea|5026", 8),
-    (11,47.5,  6.0, 5.5,  2.2,  C["load"],  C["load_s"], "12V receptacles", "~5.5x2.2*", "12V rcpt", 7.5),
-    (12,39.0, 10.0, 6.49, 4.5,  C["sheet"], C["cab_s"],  "Switch + dimmer panel (8260)", "6.49x2.3 (cabin face)", "switch +|dim", 8),
+# plan components: (n, wx, d, ww, dd, fill, stroke, label, lsize)  wx across, d depth from back
+pcomps = [
+    (1, 34.4, 1.0, 9.25, 19.88, C["bat"],   C["bat_s"],  "battery|(on edge)", 8.5),
+    (7,  2.0, 0.8, 7.28, 3.74,  C["pv"],    C["pv_s"],   "MPPT", 8),
+    (8, 10.0, 0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/24", 7),
+    (4, 18.5, 4.6, 6.0,  1.3,   C["bus"],   C["bus_s"],  "- bus", 6.5),
+    (5, 18.5, 2.9, 6.0,  1.3,   C["bus"],   C["bus_s"],  "+ bus", 6.5),
+    (2, 26.0, 0.8, 3.5,  1.5,   C["sheet"], C["cab_s"],  "shunt", 6.5),
+    (9, 46.5, 0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/12", 7),
+    (3, 55.0, 0.8, 4.3,  2.5,   C["prot"],  C["prot_s"], "Class-T", 6.5),
+    (6, 55.0, 4.0, 3.4,  2.4,   C["prot"],  C["prot_s"], "Velit", 6.5),
+    (10,60.5, 3.6, 5.74, 1.6,   C["load"],  C["load_s"], "5026", 7),
+    (11,61.0, 0.8, 5.5,  2.0,   C["load"],  C["load_s"], "12V rcpt", 6.5),
+    (12,68.5, 0.6, 8.0,  1.4,   C["sheet"], C["cab_s"],  "switch", 6.5),
 ]
-
-# ---- wiring drawn UNDER the boxes (segments behind a box are hidden; gaps show) ----
-yPF, yNF = Py(3.6), Py(2.8)                 # +48V / -48V feed (run behind the converter row)
-# battery -> shunt(-)/Class-T(+) -> busbars
-wire([(Px(18), Py(12.32)), (Px(18), Py(4.6)), (Px(22), Py(4.6))], C["w48"])     # batt+ -> Class-T
-wire([(Px(24), Py(2.2)), (Px(24), Py(7.4))], C["w48"])                          # Class-T -> +bus
-wire([(Px(15), Py(12.32)), (Px(15), Py(0.9)), (Px(22), Py(0.9))], NEG)          # batt- -> shunt
-wire([(Px(23.5), Py(1.8)), (Px(23.5), Py(5.6))], NEG)                           # shunt -> -bus
-# busbars -> feed rails -> converters
-wire([(Px(25), Py(6.8)), (Px(25), yPF), (Px(54.8), yPF)], C["w48"], 2.2)        # + feed
-wire([(Px(25), Py(5.0)), (Px(25), yNF), (Px(54.8), yNF)], NEG, 2.2)             # - feed
-# converter outputs -> loads (straight up; loads sit directly above)
-wire([(Px(42.65), Py(5.1)), (Px(42.65), Py(6.0))], C["w24"], 2.2)              # Orion 48/24 -> 5026
-wire([(Px(42.0), Py(9.31)), (Px(42.0), Py(10.0))], C["w24"], 2.2)             # 5026 -> switch
-wire([(Px(51.15), Py(5.1)), (Px(51.15), Py(6.0))], C["w12"], 2.2)            # Orion 48/12 -> recept
-# Velit branch -> roof AC
-wire([(Px(24), Py(6.8)), (Px(24), Py(8.8))], C["w48"])                         # +bus -> Velit
-wire([(Px(23.7), Py(11.2)), (Px(23.7), Py(13.2)), (Px(20), Py(13.2))], C["w48"], 2.0)
-poly([(Px(20), Py(13.2) - 5), (Px(20), Py(13.2) + 5), (Px(20) - 9, Py(13.2))], fill=C["w48"], stroke="none")
-text(Px(19.5), Py(13.2) - 8, "to Velit AC (roof)", size=8.5, weight=700, anchor="end", fill=C["w48"])
-
-# ---- component boxes (on top of the wiring) ----
-for n, ex, ey, ew, eh, fill, stroke, name, dims, lab, lsize in comps:
-    x, y = Px(ex), Py(ey + eh)
-    bw_, bh_ = ew * sc_e, eh * sc_e
-    rect(x, y, bw_, bh_, fill=fill, stroke=stroke, sw=1.4, rx=2)
-    cxb, cyb = x + bw_ / 2, y + bh_ / 2
-    text(x + 5, y + 10, str(n), size=8, weight=700, fill=stroke)
+for n, wx, d, ww, dd, fill, stroke, lab, lsize in pcomps:
+    x, y = PXx(wx), PYd(d + dd)
+    rect(x, y, ww * sc, dd * sc, fill=fill, stroke=stroke, sw=1.3, rx=2)
+    cxb, cyb = x + ww * sc / 2, y + dd * sc / 2
     parts = lab.split("|")
     if len(parts) == 1:
         text(cxb, cyb + lsize / 3, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
     else:
-        text(cxb, cyb - lsize * 0.15, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
-        text(cxb, cyb + lsize * 0.95, parts[1], size=lsize, weight=700, anchor="middle", fill=C["ink"])
+        text(cxb, cyb - 1, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
+        text(cxb, cyb + lsize, parts[1], size=lsize - 1, anchor="middle", fill=C["ink"])
+    e(f'<circle cx="{x + 8}" cy="{y + 8}" r="6.5" fill="#ffffff" stroke="{stroke}" stroke-width="1.1"/>')
+    text(x + 8, y + 11, str(n), size=8, weight=700, anchor="middle", fill=stroke)
+# centerline of the deepest part
+line(apex_x, PYb, apex_x, PYd(BAND + NOSE), stroke=C["muted"], sw=1, dash="6 5")
 
-# ---- junction dots + battery terminals + PV-in (on top) ----
-text(Px(18), Py(12.32) - 3, "+", size=11, weight=700, anchor="middle", fill=C["w48"])
-text(Px(15), Py(12.32) - 3, "-", size=12, weight=700, anchor="middle", fill=NEG)
-for ex in (33.64, 42.65, 51.15):            # converter taps on the feed rails
-    jdot(Px(ex), yPF, C["w48"]); jdot(Px(ex), yNF, NEG)
-jdot(Px(25), Py(7.4), C["w48"]); jdot(Px(25), Py(5.6), NEG)   # busbar feed take-offs
-text(Px(44), Py(5.55), "24V", size=8, fill=C["w24"])
-text(Px(52.5), Py(5.55), "12V", size=8, fill=C["w12"])
-# roof PV in -> MPPT (top)
-wire([(Px(33.64), Py(9.84) + 16), (Px(33.64), Py(9.84))], C["pv_s"], 2.4)
-poly([(Px(33.64) - 5, Py(9.84)), (Px(33.64) + 5, Py(9.84)), (Px(33.64), Py(9.84) - 8)], fill=C["pv_s"], stroke="none")
-text(Px(33.64), Py(9.84) + 27, "roof PV in", size=9.5, weight=700, anchor="middle", fill=C["pv_s"])
-
+# ---- centerline SECTION (looking along the bench; shows the 18" height) ----
+sxL, sy0 = 800, 560                           # section: left = floor datum
+sDEP, sHGT = 23, 18
+def SXd(d): return sxL + d * sc
+def SYh(h): return sy0 - h * sc
+rect(sxL, SYh(sHGT), sDEP * sc, sHGT * sc, fill="#fbfdfe", stroke=C["cab_s"], sw=1.5)
+line(sxL, SYh(sHGT), sxL + sDEP * sc, SYh(sHGT), stroke=C["cab_s"], sw=4)   # seat top
+line(sxL, sy0, sxL + sDEP * sc, sy0, stroke=C["cab_s"], sw=3)               # floor
+rect(SXd(2.5), SYh(12.32), 19.88 * sc, 12.32 * sc, fill=C["bat"], stroke=C["bat_s"], sw=1.4, rx=2)
+text(SXd(2.5) + 19.88 * sc / 2, SYh(12.32) + 12.32 * sc / 2 - 4, "battery", size=8.5, weight=700, anchor="middle", fill=C["ink"])
+text(SXd(2.5) + 19.88 * sc / 2, SYh(12.32) + 12.32 * sc / 2 + 9, "on edge (12.32\" tall)", size=7.5, anchor="middle", fill=C["ink"])
+rect(SXd(0.6), SYh(9.84), 3.74 * sc, 9.84 * sc, fill=C["pv"], stroke=C["pv_s"], sw=1.2, rx=2)
+text(sxL + sDEP * sc / 2, SYh(sHGT) - 8, "Section at the centerline - ~18\" bench height", size=10, weight=700, anchor="middle", fill=C["cab_s"])
+text(sxL, sy0 + 16, "NOSE <-", size=8.5, weight=700, fill=C["muted"])
+text(sxL + sDEP * sc, sy0 + 16, "-> cabin", size=8.5, weight=700, anchor="end", fill=C["muted"])
 # scale bar (12 in)
-sb_y = EYb + 18
-line(EX0, sb_y, EX0 + 12 * sc_e, sb_y, stroke=C["ink"], sw=1.6)
-for sx in (EX0, EX0 + 12 * sc_e):
-    line(sx, sb_y - 4, sx, sb_y + 4, stroke=C["ink"], sw=1.6)
-text(EX0 + 6 * sc_e, sb_y + 15, "12 in", size=10, anchor="middle", fill=C["slate"])
+line(sxL, sy0 + 34, sxL + 12 * sc, sy0 + 34, stroke=C["ink"], sw=1.6)
+for sx in (sxL, sxL + 12 * sc):
+    line(sx, sy0 + 30, sx, sy0 + 38, stroke=C["ink"], sw=1.6)
+text(sxL + 6 * sc, sy0 + 49, "12 in", size=9.5, anchor="middle", fill=C["slate"])
 
-# notes
-text(EX0, EYb + 52, "One ~18\" bench across the nose holds everything: the battery stands on edge "
-     "(9.25\" footprint, 12.32\" tall) under the seat top.", size=9.5, fill=C["slate"])
-text(EX0, EYb + 68, "Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. "
-     "Vent: low cabin intake + high fan exhaust (24V fan + thermostat).", size=9.5, fill=C["slate"])
-text(EX0, EYb + 84, "Bench depth set by the battery on edge (~9.25\") + wiring; "
-     "hinged/removable seat top for service - confirm depth at dry-fit (D013).", size=9.5, fill=C["slate"])
+# ---- component list + notes (right of the section) ----
+comps = [
+    (1, "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25 - on edge", C["bat"], C["bat_s"]),
+    (2, "LiTime 500A shunt", "~3.5x1.8 (on -)*", C["sheet"], C["cab_s"]),
+    (3, "Main Class-T OCP", "~4.3x2.4 (on +)*", C["prot"], C["prot_s"]),
+    (4, "- busbar", "~6x1.3*", C["bus"], C["bus_s"]),
+    (5, "+ busbar", "~6x1.3*", C["bus"], C["bus_s"]),
+    (6, "Velit 48V branch breaker", "~3.4x2.4*", C["prot"], C["prot_s"]),
+    (7, "SmartSolar 250/60-Tr", "7.28x9.84x3.74", C["pv"], C["pv_s"]),
+    (8, "Orion-Tr 48/24-16A", "7.3x5.1x2.8", C["conv"], C["conv_s"]),
+    (9, "Orion-Tr 48/12-20A", "7.3x5.1x2.8", C["conv"], C["conv_s"]),
+    (10, "Blue Sea 5026 (24V)", "5.74x3.31*", C["load"], C["load_s"]),
+    (11, "12V receptacles", "~5.5x2.2*", C["load"], C["load_s"]),
+    (12, "Switch + dimmer (8260)", "6.49x2.3 (cabin face)", C["sheet"], C["cab_s"]),
+]
+lx = 1085
+text(lx, 548, "Components  (W x H x D, in):", size=11, weight=700)
+for k, (n, name, dims, fill, stroke) in enumerate(comps):
+    yy = 570 + k * 21
+    rect(lx, yy - 9, 11, 11, fill=fill, stroke=stroke, sw=1.1, rx=2)
+    text(lx + 16, yy, f"{n}. {name}", size=9, weight=700, fill=C["ink"])
+    text(lx + 16, yy + 10, dims, size=8, fill=C["muted"])
 
-# component list (two columns, below)
-def listcol(items, lx, ytop):
-    for k, (n, ex, ey, ew, eh, fill, stroke, name, dims, lab, lsize) in enumerate(items):
-        yy = ytop + k * 24
-        rect(lx, yy - 10, 12, 12, fill=fill, stroke=stroke, sw=1.2, rx=2)
-        text(lx + 18, yy - 1, f"{n}. {name}", size=9.5, weight=700, fill=C["ink"])
-        text(lx + 18, yy + 10, dims, size=8.5, fill=C["muted"])
-text(EX0, EYb + 106, "Components  (W x H x D, in):", size=12, weight=700)
-listcol(comps[:6], EX0, EYb + 130)
-listcol(comps[6:], EX0 + 330, EYb + 130)
-text(EX0, EYb + 130 + 6 * 24 + 4, "* nominal/catalog. Battery, SmartSolar, Orions: datasheet. "
-     "Flow/topology: see schematic (power-overview).", size=8.5, fill=C["muted"])
+text(800, 690, "All gear in one ~18\"-tall bench. Battery on edge, low & centered in the deepest (nose) part; "
+     "shallow electronics in the wings. Switch/dimmer panel on the cabin face.", size=9, fill=C["slate"])
+text(800, 705, "Hinged/removable seat top for service; vent low cabin intake + high fan exhaust. "
+     "Confirm depth at dry-fit (D013). * nominal/catalog; battery/SmartSolar/Orions = datasheet.", size=9, fill=C["slate"])
 
 # ---------------------------------------------------------------------------
 # LEGEND + omissions (bottom strip)
