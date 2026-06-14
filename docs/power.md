@@ -2,7 +2,7 @@
 
 This is the detailed power source of truth for the Juplaya trailer build. The build sheet keeps only the abbreviated view; this document carries the wiring architecture, solar topology, component decisions, commissioning rules, and energy budget.
 
-Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [SmartShunt 500A specs](reference/victron-smartshunt-500a-specs.md), [Cerbo GX Mk2 specs](reference/victron-cerbo-gx-mk2-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
+Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md), [D013](DECISION_LOG.md), [D014](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [SmartShunt 500A specs](reference/victron-smartshunt-500a-specs.md), [Cerbo GX Mk2 specs](reference/victron-cerbo-gx-mk2-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
 
 ## Diagrams
 
@@ -24,7 +24,7 @@ For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads s
 - One Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
 - A Victron SmartShunt 500A and Cerbo GX Mk2 are ordered for the active monitoring path; expected arrival is 2026-06-15.
 - Small 120 VAC loads run from the standalone Anker SOLIX C1000 + PS400 panel.
-- The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice, not a Juplaya blocker.
+- The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice, installed in an upper cabinet above the nose bench, not a Juplaya blocker.
 
 ## Architecture
 
@@ -62,7 +62,7 @@ Victron Cerbo GX Mk2:
 Anker SOLIX C1000 + PS400 400 W panel -> standalone 120 VAC loads
 
 Phase 2 optional:
-LiTime 48 V battery -> Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
+LiTime 48 V battery -> upper-cabinet Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
 ```
 
 Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V input, and the selected exterior lights are 12-28 VDC wide-input fixtures. The 12 V converter is scoped narrowly: a switched, fused accessory outlet bank in the power cabinet for occasional 12 V devices, not a distributed house rail.
@@ -281,7 +281,7 @@ Deferred because Juplaya does not need it:
 
 If installed later, treat 2400 W at 25 C / 2200 W at 40 C as the sustained AC design envelope, and cap combined charge current at or below the ComFlex battery's 100 A continuous charge limit.
 
-Physical fit: the MultiPlus-II is about 22.5" tall, 10.9" wide, 5.8" deep, and 64 lb. It does **not** fit as a proper upright install inside the ~18" nose bench, and Victron wants about 4" cooling clearance around it. Reserve a vertical bulkhead/wall-panel location above or behind the bench for Phase 2 instead of counting on the bench interior.
+Physical fit decision (D014): the MultiPlus-II is about 22.5" tall, 10.9" wide, 5.8" deep, and 64 lb. It does **not** fit as a proper upright install inside the ~18" nose bench, and Victron wants about 4" cooling clearance around it. Reserve the Phase 2 inverter/charger location as an **upper cabinet above the nose bench** with structural tie-in, service access, ventilation, DC cable path from the bench, VE.Bus path to the Cerbo, and future shore/generator AC routing.
 
 ## Protection And Commissioning
 
