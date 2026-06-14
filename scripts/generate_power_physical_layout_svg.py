@@ -327,18 +327,20 @@ rect(CX, CY, CW, CH, fill="#ffffff", stroke=C["cab_s"], sw=1.8, rx=8)
 text(CX + 16, CY + 28, "C  Nose power cabinet - real-scale layout",
      size=17, weight=700, fill=C["cab_s"])
 text(CX + 16, CY + 47,
-     "Front elevation of the ~8\"-deep left-flank cabinet. Components drawn to scale.",
+     "Front elevation, to scale. Electronics on the ~8\"-deep wall cabinet; 48 V battery strapped to the floor.",
      size=11, fill=C["muted"])
 
 # elevation frame: 30 in W x 46 in H envelope, 1 in = sc_e px
 sc_e = 12
 EX0, EYb = 800, 760                       # cabinet interior bottom-left (svg)
 CABW, CABH = 30, 46
-rect(EX0, EYb - CABH * sc_e, CABW * sc_e, CABH * sc_e,
+CAB_BOT = 13                              # wall cabinet bottom, in. off the floor (battery sits below)
+# wall cabinet (electronics on the backboard) - bottom raised off the floor
+rect(EX0, EYb - CABH * sc_e, CABW * sc_e, (CABH - CAB_BOT) * sc_e,
      fill="#fbfdfe", stroke=C["cab_s"], sw=1.6, rx=4)
-line(EX0, EYb, EX0 + CABW * sc_e, EYb, stroke=C["cab_s"], sw=3)          # floor
+line(EX0, EYb, EX0 + CABW * sc_e, EYb, stroke=C["cab_s"], sw=3)          # trailer floor
 text(EX0 + CABW * sc_e / 2, EYb - CABH * sc_e - 7,
-     "Front elevation - 30\" W x 46\" H envelope (fit to components)",
+     "Front elevation - electronics on the ~8\" wall cabinet; battery on the floor below",
      size=10.5, weight=700, anchor="middle", fill=C["cab_s"])
 
 # components: (n, ex, ey, ew, eh, fill, stroke, name, dims, in-box label, label size)
@@ -371,6 +373,16 @@ for n, ex, ey, ew, eh, fill, stroke, name, dims, lab, lsize in comps:
         text(cxb, cyb - lsize * 0.15, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
         text(cxb, cyb + lsize * 0.95, parts[1], size=lsize, weight=700, anchor="middle", fill=C["ink"])
 
+# battery is floor-mounted (strapped down to the floor), not on the wall/backboard
+b_x, b_w, b_top = EX0 + 5.0 * sc_e, 19.88 * sc_e, EYb - 12.32 * sc_e
+line(b_x + 6, b_top - 3, b_x + b_w - 6, b_top - 3, stroke=C["slate"], sw=2.5)   # hold-down bar
+for sf in (0.12, 0.88):
+    sxp = b_x + b_w * sf
+    line(sxp, b_top - 3, sxp, EYb, stroke=C["slate"], sw=2.5)                   # strap
+    line(sxp - 6, EYb, sxp + 6, EYb, stroke=C["slate"], sw=3)                   # floor anchor
+text(b_x + b_w / 2, EYb - 24, "floor-mounted (strapped down)",
+     size=9, anchor="middle", fill=C["slate"])
+
 # orientation label (where roof PV enters)
 text(EX0 + (1.5 + 7.28 / 2) * sc_e, EYb - 30.6 * sc_e, "PV in",
      size=9.5, weight=700, anchor="middle", fill=C["pv_s"])
@@ -383,8 +395,8 @@ line(EX0 + 12 * sc_e, sb_y - 4, EX0 + 12 * sc_e, sb_y + 4, stroke=C["ink"], sw=1
 text(EX0 + 6 * sc_e, sb_y + 15, "12 in", size=10, anchor="middle", fill=C["slate"])
 
 # depth + face/vent notes (under the elevation)
-text(EX0, EYb + 50, "Cabinet ~8\" deep: electronics <=3.7\" (MPPT 3.74, Orions 2.8); "
-     "battery is the depth driver (9.25\" min) - sits low on the floor at the base.",
+text(EX0, EYb + 50, "Wall cabinet ~8\" deep (electronics <=3.7\"). The 48 V battery is "
+     "floor-mounted - low & centered, not on the backboard.",
      size=9.5, fill=C["slate"])
 text(EX0, EYb + 66, "Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. "
      "Vent: low cabin intake + high fan exhaust (24V fan + thermostat).",

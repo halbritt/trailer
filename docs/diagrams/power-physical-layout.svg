@@ -111,10 +111,10 @@
 <text x="696" y="866" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#64748b" text-anchor="start">REAR / RAMP</text>
 <rect x="770" y="118" width="668" height="720" rx="8" fill="#ffffff" stroke="#475569" stroke-width="1.8"/>
 <text x="786" y="146" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#475569" text-anchor="start">C  Nose power cabinet - real-scale layout</text>
-<text x="786" y="165" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Front elevation of the ~8"-deep left-flank cabinet. Components drawn to scale.</text>
-<rect x="800" y="208" width="360" height="552" rx="4" fill="#fbfdfe" stroke="#475569" stroke-width="1.6"/>
+<text x="786" y="165" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Front elevation, to scale. Electronics on the ~8"-deep wall cabinet; 48 V battery strapped to the floor.</text>
+<rect x="800" y="208" width="360" height="396" rx="4" fill="#fbfdfe" stroke="#475569" stroke-width="1.6"/>
 <line x1="800" y1="760" x2="1160" y2="760" stroke="#475569" stroke-width="3"/>
-<text x="980.0" y="201" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#475569" text-anchor="middle">Front elevation - 30" W x 46" H envelope (fit to components)</text>
+<text x="980.0" y="201" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#475569" text-anchor="middle">Front elevation - electronics on the ~8" wall cabinet; battery on the floor below</text>
 <rect x="860.0" y="612.16" width="238.56" height="147.84" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
 <circle cx="849.0" cy="686.0799999999999" r="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.2"/>
 <text x="849.0" y="689.5799999999999" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#16a34a" text-anchor="middle">1</text>
@@ -170,12 +170,18 @@
 <text x="807.0" y="292.5" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#475569" text-anchor="middle">12</text>
 <text x="856.94" y="287.65" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#0f172a" text-anchor="middle">Switch +</text>
 <text x="856.94" y="297.55" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#0f172a" text-anchor="middle">dimmers</text>
+<line x1="866.0" y1="609.16" x2="1092.56" y2="609.16" stroke="#334155" stroke-width="2.5"/>
+<line x1="888.6272" y1="609.16" x2="888.6272" y2="760" stroke="#334155" stroke-width="2.5"/>
+<line x1="882.6272" y1="760" x2="894.6272" y2="760" stroke="#334155" stroke-width="3"/>
+<line x1="1069.9328" y1="609.16" x2="1069.9328" y2="760" stroke="#334155" stroke-width="2.5"/>
+<line x1="1063.9328" y1="760" x2="1075.9328" y2="760" stroke="#334155" stroke-width="3"/>
+<text x="979.28" y="736" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="400" fill="#334155" text-anchor="middle">floor-mounted (strapped down)</text>
 <text x="861.6800000000001" y="392.79999999999995" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0891b2" text-anchor="middle">PV in</text>
 <line x1="800" y1="776" x2="944" y2="776" stroke="#0f172a" stroke-width="1.6"/>
 <line x1="800" y1="772" x2="800" y2="780" stroke="#0f172a" stroke-width="1.6"/>
 <line x1="944" y1="772" x2="944" y2="780" stroke="#0f172a" stroke-width="1.6"/>
 <text x="872" y="791" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">12 in</text>
-<text x="800" y="810" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="400" fill="#334155" text-anchor="start">Cabinet ~8" deep: electronics &lt;=3.7" (MPPT 3.74, Orions 2.8); battery is the depth driver (9.25" min) - sits low on the floor at the base.</text>
+<text x="800" y="810" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="400" fill="#334155" text-anchor="start">Wall cabinet ~8" deep (electronics &lt;=3.7"). The 48 V battery is floor-mounted - low &amp; centered, not on the backboard.</text>
 <text x="800" y="826" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="400" fill="#334155" text-anchor="start">Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. Vent: low cabin intake + high fan exhaust (24V fan + thermostat).</text>
 <text x="1188" y="210" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="start">Components  (W x H x D, in):</text>
 <rect x="1188" y="224" width="13" height="13" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.3"/>
