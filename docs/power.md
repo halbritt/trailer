@@ -10,7 +10,7 @@ Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECI
 
 ![Solar string routing](diagrams/power-solar-strings.svg)
 
-**Physical layout** (where the gear sits, vs the schematic above) — three scale panels: roof (Velit + roof 3S string and PV gland drop), floor (the ~18"-tall nose power bench, the two bikes at 26" OC straddling the centerline with handlebars sweeping the curbside fridge bay, exterior flood/awning positions, 24 V load locations), and a **real-scale plan + section of the nose bench** with every component to its true footprint — the bench runs wall-to-wall (perpendicular to the side walls) and the LiTime battery **stands on edge, centered in the deepest (nose) part** — plus a dimensioned parts list. The standalone Anker SOLIX C1000 + PS400 AC island and the optional ground-mounted 2S LG PV (with its SmartSolar 150/35) are intentionally left out. Regenerate with `python3 scripts/generate_power_physical_layout_svg.py`.
+**Physical layout** (where the gear sits, vs the schematic above) — three scale panels: roof (Velit + roof 3S string and PV gland drop), floor (the ~18"-tall nose power bench, the two bikes at 26" OC straddling the centerline with handlebars sweeping the curbside fridge bay, exterior flood/awning positions, 24 V load locations), and a **real-scale plan + section of the nose bench** with every component to its true footprint — the bench runs wall-to-wall (perpendicular to the side walls) and the LiTime battery **stands on edge and runs transverse, centered in the deepest (nose) part** — plus a dimensioned parts list. The standalone Anker SOLIX C1000 + PS400 AC island and the optional ground-mounted 2S LG PV (with its SmartSolar 150/35) are intentionally left out. Regenerate with `python3 scripts/generate_power_physical_layout_svg.py`.
 
 ![Power system physical layout](diagrams/power-physical-layout.svg)
 
@@ -106,7 +106,7 @@ Voltage checks:
 | Orion-Tr 48/24-16A | house converter | isolated, remote on/off to cabin toggle |
 | Orion-Tr IP43 48/12-20A | auxiliary 12 V converter | isolated, 240 W / 20 A, remote off; feeds only cabinet receptacles |
 
-All the power gear — battery, shunt, MPPTs, Orion converters, distribution, and protection — lives in a single **~18"-tall bench across the nose**. The LiTime battery **stands on edge** (9.25" footprint, 12.32" tall) under the bench top, low and centered; everything else fits under the same seat top. Ventilate the bench; the SmartSolar and Orions add waste heat, and the curbside fridge bay must stay away from this plume.
+All the power gear — battery, shunt, MPPTs, Orion converters, distribution, and protection — lives in a single **~18"-tall bench across the nose**. The LiTime battery **stands on edge and runs transverse** (19.88" long across the bench × 9.25" deep, 12.32" tall) centered in the deepest part under the bench top; everything else fits under the same seat top. Ventilate the bench; the SmartSolar and Orions add waste heat, and the curbside fridge bay must stay away from this plume.
 
 ## Power Cabinet Ventilation
 

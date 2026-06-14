@@ -343,18 +343,18 @@ text(PX0 + WB * sc / 2, PYb + 16, "cabin face (seat front) - bench runs wall-to-
 
 # plan components: (n, wx, d, ww, dd, fill, stroke, label, lsize)  wx across, d depth from back
 pcomps = [
-    (1, 34.4, 1.0, 9.25, 19.88, C["bat"],   C["bat_s"],  "battery|(on edge)", 8.5),
-    (7,  2.0, 0.8, 7.28, 3.74,  C["pv"],    C["pv_s"],   "MPPT", 8),
-    (8, 10.0, 0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/24", 7),
-    (4, 18.5, 4.6, 6.0,  1.3,   C["bus"],   C["bus_s"],  "- bus", 6.5),
-    (5, 18.5, 2.9, 6.0,  1.3,   C["bus"],   C["bus_s"],  "+ bus", 6.5),
-    (2, 26.0, 0.8, 3.5,  1.5,   C["sheet"], C["cab_s"],  "shunt", 6.5),
-    (9, 46.5, 0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/12", 7),
-    (3, 55.0, 0.8, 4.3,  2.5,   C["prot"],  C["prot_s"], "Class-T", 6.5),
-    (6, 55.0, 4.0, 3.4,  2.4,   C["prot"],  C["prot_s"], "Velit", 6.5),
-    (10,60.5, 3.6, 5.74, 1.6,   C["load"],  C["load_s"], "5026", 7),
-    (11,61.0, 0.8, 5.5,  2.0,   C["load"],  C["load_s"], "12V rcpt", 6.5),
-    (12,68.5, 0.6, 8.0,  1.4,   C["sheet"], C["cab_s"],  "switch", 6.5),
+    (1, 29.06, 1.0, 19.88, 9.25, C["bat"],   C["bat_s"],  "battery (on edge)|transverse", 8),
+    (7,  2.0,  0.8, 7.28, 3.74,  C["pv"],    C["pv_s"],   "MPPT", 7.5),
+    (8, 10.0,  0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/24", 7),
+    (2, 19.5,  0.8, 3.5,  1.5,   C["sheet"], C["cab_s"],  "shunt", 6.5),
+    (4,  2.0,  5.2, 6.0,  1.3,   C["bus"],   C["bus_s"],  "- bus", 6.5),
+    (5, 10.0,  5.2, 6.0,  1.3,   C["bus"],   C["bus_s"],  "+ bus", 6.5),
+    (9, 49.5,  0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/12", 7),
+    (11,58.0,  0.8, 5.5,  2.0,   C["load"],  C["load_s"], "12V rcpt", 6.5),
+    (12,65.0,  0.5, 6.49, 1.4,   C["sheet"], C["cab_s"],  "switch", 6.5),
+    (3, 49.5,  5.0, 4.3,  2.5,   C["prot"],  C["prot_s"], "Class-T", 6.5),
+    (6, 55.0,  5.0, 3.4,  2.4,   C["prot"],  C["prot_s"], "Velit", 6.5),
+    (10,61.0,  4.8, 5.74, 1.6,   C["load"],  C["load_s"], "5026", 6.5),
 ]
 for n, wx, d, ww, dd, fill, stroke, lab, lsize in pcomps:
     x, y = PXx(wx), PYd(d + dd)
@@ -371,21 +371,21 @@ for n, wx, d, ww, dd, fill, stroke, lab, lsize in pcomps:
 # centerline of the deepest part
 line(apex_x, PYb, apex_x, PYd(BAND + NOSE), stroke=C["muted"], sw=1, dash="6 5")
 
-# ---- centerline SECTION (looking along the bench; shows the 18" height) ----
-sxL, sy0 = 800, 560                           # section: left = floor datum
+# ---- centerline SECTION (fore-aft cut) - shows the ~18" height; battery shown end-on ----
+sxL, sy0 = 800, 560                           # section: left edge, floor datum
 sDEP, sHGT = 23, 18
-def SXd(d): return sxL + d * sc
+def SXd(d): return sxL + d * sc               # d = depth from cabin face (0) toward nose (23)
 def SYh(h): return sy0 - h * sc
 rect(sxL, SYh(sHGT), sDEP * sc, sHGT * sc, fill="#fbfdfe", stroke=C["cab_s"], sw=1.5)
 line(sxL, SYh(sHGT), sxL + sDEP * sc, SYh(sHGT), stroke=C["cab_s"], sw=4)   # seat top
 line(sxL, sy0, sxL + sDEP * sc, sy0, stroke=C["cab_s"], sw=3)               # floor
-rect(SXd(2.5), SYh(12.32), 19.88 * sc, 12.32 * sc, fill=C["bat"], stroke=C["bat_s"], sw=1.4, rx=2)
-text(SXd(2.5) + 19.88 * sc / 2, SYh(12.32) + 12.32 * sc / 2 - 4, "battery", size=8.5, weight=700, anchor="middle", fill=C["ink"])
-text(SXd(2.5) + 19.88 * sc / 2, SYh(12.32) + 12.32 * sc / 2 + 9, "on edge (12.32\" tall)", size=7.5, anchor="middle", fill=C["ink"])
-rect(SXd(0.6), SYh(9.84), 3.74 * sc, 9.84 * sc, fill=C["pv"], stroke=C["pv_s"], sw=1.2, rx=2)
-text(sxL + sDEP * sc / 2, SYh(sHGT) - 8, "Section at the centerline - ~18\" bench height", size=10, weight=700, anchor="middle", fill=C["cab_s"])
-text(sxL, sy0 + 16, "NOSE <-", size=8.5, weight=700, fill=C["muted"])
-text(sxL + sDEP * sc, sy0 + 16, "-> cabin", size=8.5, weight=700, anchor="end", fill=C["muted"])
+rect(SXd(1), SYh(12.32), 9.25 * sc, 12.32 * sc, fill=C["bat"], stroke=C["bat_s"], sw=1.4, rx=2)
+text(SXd(1) + 9.25 * sc / 2, SYh(12.32) + 12.32 * sc / 2 - 3, "battery", size=8, weight=700, anchor="middle", fill=C["ink"])
+text(SXd(1) + 9.25 * sc / 2, SYh(12.32) + 12.32 * sc / 2 + 8, "on edge", size=7, anchor="middle", fill=C["ink"])
+rect(SXd(11), SYh(9.84), 3.74 * sc, 9.84 * sc, fill=C["pv"], stroke=C["pv_s"], sw=1.2, rx=2)
+text(sxL + sDEP * sc / 2, SYh(sHGT) - 8, "Section (fore-aft) - ~18\" bench; battery end-on (runs transverse)", size=9.5, weight=700, anchor="middle", fill=C["cab_s"])
+text(sxL, sy0 + 16, "cabin", size=8.5, weight=700, fill=C["muted"])
+text(sxL + sDEP * sc, sy0 + 16, "NOSE (deep)", size=8.5, weight=700, anchor="end", fill=C["muted"])
 # scale bar (12 in)
 line(sxL, sy0 + 34, sxL + 12 * sc, sy0 + 34, stroke=C["ink"], sw=1.6)
 for sx in (sxL, sxL + 12 * sc):
@@ -415,7 +415,7 @@ for k, (n, name, dims, fill, stroke) in enumerate(comps):
     text(lx + 16, yy, f"{n}. {name}", size=9, weight=700, fill=C["ink"])
     text(lx + 16, yy + 10, dims, size=8, fill=C["muted"])
 
-text(800, 690, "All gear in one ~18\"-tall bench. Battery on edge, low & centered in the deepest (nose) part; "
+text(800, 690, "All gear in one ~18\"-tall bench. Battery on edge & transverse, centered in the deepest (nose) part; "
      "shallow electronics in the wings. Switch/dimmer panel on the cabin face.", size=9, fill=C["slate"])
 text(800, 705, "Hinged/removable seat top for service; vent low cabin intake + high fan exhaust. "
      "Confirm depth at dry-fit (D013). * nominal/catalog; battery/SmartSolar/Orions = datasheet.", size=9, fill=C["slate"])
