@@ -191,44 +191,45 @@
 <text x="864" y="425" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#334155" text-anchor="middle">12 in</text>
 <text x="798" y="444" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="400" fill="#334155" text-anchor="start">One ~18" bench across the nose holds everything: the battery stands on edge (9.25" footprint, 12.32" tall) under the seat top.</text>
 <text x="798" y="460" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="400" fill="#334155" text-anchor="start">Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. Vent: low cabin intake + high fan exhaust (24V fan + thermostat).</text>
-<text x="798" y="488" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="start">Components  (W x H x D, in):</text>
-<rect x="798" y="502" width="12" height="12" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
-<text x="816" y="511" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">1. LiTime 48V 100Ah ComFlex</text>
-<text x="816" y="522" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">19.88x12.32x9.25 - stood on edge</text>
-<rect x="798" y="526" width="12" height="12" rx="2" fill="#f8fafc" stroke="#475569" stroke-width="1.2"/>
-<text x="816" y="535" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">2. LiTime 500A shunt</text>
-<text x="816" y="546" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~3.5x1.8 (on -)*</text>
-<rect x="798" y="550" width="12" height="12" rx="2" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
-<text x="816" y="559" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">3. Main Class-T OCP</text>
-<text x="816" y="570" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~4.3x2.4 (on +)*</text>
-<rect x="798" y="574" width="12" height="12" rx="2" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
-<text x="816" y="583" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">4. - busbar</text>
-<text x="816" y="594" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~6x1.3*</text>
-<rect x="798" y="598" width="12" height="12" rx="2" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
-<text x="816" y="607" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">5. + busbar</text>
-<text x="816" y="618" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~6x1.3*</text>
-<rect x="798" y="622" width="12" height="12" rx="2" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
-<text x="816" y="631" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">6. Velit 48V branch breaker</text>
-<text x="816" y="642" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~3.4x2.4*</text>
-<rect x="1128" y="502" width="12" height="12" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
-<text x="1146" y="511" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">7. SmartSolar 250/60-Tr</text>
-<text x="1146" y="522" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">7.28x9.84x3.74</text>
-<rect x="1128" y="526" width="12" height="12" rx="2" fill="#eef2ff" stroke="#6366f1" stroke-width="1.2"/>
-<text x="1146" y="535" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">8. Orion-Tr 48/24-16A</text>
-<text x="1146" y="546" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">7.3x5.1x2.8</text>
-<rect x="1128" y="550" width="12" height="12" rx="2" fill="#eef2ff" stroke="#6366f1" stroke-width="1.2"/>
-<text x="1146" y="559" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">9. Orion-Tr 48/12-20A</text>
-<text x="1146" y="570" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">7.3x5.1x2.8</text>
-<rect x="1128" y="574" width="12" height="12" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2"/>
-<text x="1146" y="583" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">10. Blue Sea 5026 (24V)</text>
-<text x="1146" y="594" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">5.74x3.31*</text>
-<rect x="1128" y="598" width="12" height="12" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2"/>
-<text x="1146" y="607" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">11. 12V receptacles</text>
-<text x="1146" y="618" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~5.5x2.2*</text>
-<rect x="1128" y="622" width="12" height="12" rx="2" fill="#f8fafc" stroke="#475569" stroke-width="1.2"/>
-<text x="1146" y="631" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">12. Switch + dimmer panel (8260)</text>
-<text x="1146" y="642" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">6.49x2.3 (cabin face)</text>
-<text x="798" y="660" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">* nominal/catalog. Battery, SmartSolar, Orions: datasheet. Flow/topology: see schematic (power-overview).</text>
+<text x="798" y="476" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="400" fill="#334155" text-anchor="start">Bench depth set by the battery on edge (~9.25") + wiring; hinged/removable seat top for service - confirm depth at dry-fit (D013).</text>
+<text x="798" y="498" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="start">Components  (W x H x D, in):</text>
+<rect x="798" y="512" width="12" height="12" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+<text x="816" y="521" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">1. LiTime 48V 100Ah ComFlex</text>
+<text x="816" y="532" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">19.88x12.32x9.25 - stood on edge</text>
+<rect x="798" y="536" width="12" height="12" rx="2" fill="#f8fafc" stroke="#475569" stroke-width="1.2"/>
+<text x="816" y="545" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">2. LiTime 500A shunt</text>
+<text x="816" y="556" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~3.5x1.8 (on -)*</text>
+<rect x="798" y="560" width="12" height="12" rx="2" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="816" y="569" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">3. Main Class-T OCP</text>
+<text x="816" y="580" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~4.3x2.4 (on +)*</text>
+<rect x="798" y="584" width="12" height="12" rx="2" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
+<text x="816" y="593" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">4. - busbar</text>
+<text x="816" y="604" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~6x1.3*</text>
+<rect x="798" y="608" width="12" height="12" rx="2" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
+<text x="816" y="617" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">5. + busbar</text>
+<text x="816" y="628" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~6x1.3*</text>
+<rect x="798" y="632" width="12" height="12" rx="2" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+<text x="816" y="641" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">6. Velit 48V branch breaker</text>
+<text x="816" y="652" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~3.4x2.4*</text>
+<rect x="1128" y="512" width="12" height="12" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.2"/>
+<text x="1146" y="521" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">7. SmartSolar 250/60-Tr</text>
+<text x="1146" y="532" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">7.28x9.84x3.74</text>
+<rect x="1128" y="536" width="12" height="12" rx="2" fill="#eef2ff" stroke="#6366f1" stroke-width="1.2"/>
+<text x="1146" y="545" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">8. Orion-Tr 48/24-16A</text>
+<text x="1146" y="556" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">7.3x5.1x2.8</text>
+<rect x="1128" y="560" width="12" height="12" rx="2" fill="#eef2ff" stroke="#6366f1" stroke-width="1.2"/>
+<text x="1146" y="569" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">9. Orion-Tr 48/12-20A</text>
+<text x="1146" y="580" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">7.3x5.1x2.8</text>
+<rect x="1128" y="584" width="12" height="12" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2"/>
+<text x="1146" y="593" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">10. Blue Sea 5026 (24V)</text>
+<text x="1146" y="604" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">5.74x3.31*</text>
+<rect x="1128" y="608" width="12" height="12" rx="2" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2"/>
+<text x="1146" y="617" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">11. 12V receptacles</text>
+<text x="1146" y="628" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">~5.5x2.2*</text>
+<rect x="1128" y="632" width="12" height="12" rx="2" fill="#f8fafc" stroke="#475569" stroke-width="1.2"/>
+<text x="1146" y="641" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#0f172a" text-anchor="start">12. Switch + dimmer panel (8260)</text>
+<text x="1146" y="652" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">6.49x2.3 (cabin face)</text>
+<text x="798" y="670" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="400" fill="#64748b" text-anchor="start">* nominal/catalog. Battery, SmartSolar, Orions: datasheet. Flow/topology: see schematic (power-overview).</text>
 <rect x="45" y="1064" width="690" height="150" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
 <text x="60" y="1090" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="start">Legend</text>
 <rect x="60" y="1112" width="22" height="14" rx="2" fill="#ecfeff" stroke="#0891b2" stroke-width="1.4"/>

@@ -418,6 +418,8 @@ text(EX0, EYb + 52, "One ~18\" bench across the nose holds everything: the batte
      "(9.25\" footprint, 12.32\" tall) under the seat top.", size=9.5, fill=C["slate"])
 text(EX0, EYb + 68, "Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. "
      "Vent: low cabin intake + high fan exhaust (24V fan + thermostat).", size=9.5, fill=C["slate"])
+text(EX0, EYb + 84, "Bench depth set by the battery on edge (~9.25\") + wiring; "
+     "hinged/removable seat top for service - confirm depth at dry-fit (D013).", size=9.5, fill=C["slate"])
 
 # component list (two columns, below)
 def listcol(items, lx, ytop):
@@ -426,10 +428,10 @@ def listcol(items, lx, ytop):
         rect(lx, yy - 10, 12, 12, fill=fill, stroke=stroke, sw=1.2, rx=2)
         text(lx + 18, yy - 1, f"{n}. {name}", size=9.5, weight=700, fill=C["ink"])
         text(lx + 18, yy + 10, dims, size=8.5, fill=C["muted"])
-text(EX0, EYb + 96, "Components  (W x H x D, in):", size=12, weight=700)
-listcol(comps[:6], EX0, EYb + 120)
-listcol(comps[6:], EX0 + 330, EYb + 120)
-text(EX0, EYb + 120 + 6 * 24 + 4, "* nominal/catalog. Battery, SmartSolar, Orions: datasheet. "
+text(EX0, EYb + 106, "Components  (W x H x D, in):", size=12, weight=700)
+listcol(comps[:6], EX0, EYb + 130)
+listcol(comps[6:], EX0 + 330, EYb + 130)
+text(EX0, EYb + 130 + 6 * 24 + 4, "* nominal/catalog. Battery, SmartSolar, Orions: datasheet. "
      "Flow/topology: see schematic (power-overview).", size=8.5, fill=C["muted"])
 
 # ---------------------------------------------------------------------------
