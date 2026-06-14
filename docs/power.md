@@ -14,7 +14,7 @@ Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECI
 
 ![Power system physical layout](diagrams/power-physical-layout.svg)
 
-Ancillary electrical/control ordering breakout: [ancillary-order-sheet.md](ancillary-order-sheet.md).
+Ancillary electrical/control ordering breakout: [ancillary-order-sheet.md](ancillary-order-sheet.md). Wire/cut-length/termination breakout: [wire-and-termination-order-sheet.md](wire-and-termination-order-sheet.md).
 
 ## Current Verdict
 

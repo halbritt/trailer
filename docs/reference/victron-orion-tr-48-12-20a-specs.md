@@ -21,6 +21,7 @@ Datasheet: <https://www.victronenergy.com/upload/documents/Datasheet-Orion-Tr-DC
 - Isolation: **200 VDC** between input, output, and case.
 - Temperature range: **-20 to +55 C**, derating 3 % per C above 40 C.
 - IP43 protection applies only when installed with screw terminals oriented downward.
+- DC connection uses screw terminals; maximum cable cross-section is **16 mm2 / AWG6** in the official Orion-Tr isolated specification table.
 - Remote on/off eliminates the need for a high-current switch in the input wiring.
 
 ## Install Implications
