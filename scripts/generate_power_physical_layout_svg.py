@@ -200,7 +200,7 @@ fmid = (ft + fb) / 2
 f_taper = REAR_X - 141 * S               # straight-wall length 141
 f_tip = f_taper - 60
 
-text(45, 530, "B  Floor plan  (curbside = bottom)", size=17, weight=700, fill=C["slate"])
+text(45, 530, "B  Floor plan  (roadside = top · curbside = bottom)", size=17, weight=700, fill=C["slate"])
 
 # footprint
 poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
@@ -210,7 +210,7 @@ poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
 line(f_tip + 6, fmid, REAR_X, fmid, stroke=C["muted"], sw=1, dash="9 7")
 text(520, fmid + 13, "centerline", size=9, anchor="middle", fill=C["muted"])
 
-# --- nose power cabinet: ~8" deep, localized to the LEFT (roadside) nose flank ---
+# --- nose power cabinet: ~8" deep, on the ROADSIDE nose flank ---
 # Upper flank A(taper-start, top) -> B(nose tip); offset inward into the cabin by 8".
 fdx, fdy = f_tip - f_taper, fmid - ft
 flen = (fdx * fdx + fdy * fdy) ** 0.5
@@ -222,7 +222,7 @@ B_in = (B_fl[0] + nx * cdep, B_fl[1] + ny * cdep)
 poly([A_fl, B_fl, B_in, A_in], fill=C["cab"], stroke=C["cab_s"], sw=1.6, dash="5 3", op=0.95)
 cab_out = ((A_in[0] + B_in[0]) / 2, (A_in[1] + B_in[1]) / 2)   # 24 V feed origin
 text(A_in[0] + 24, fmid - 104, "NOSE POWER CABINET", size=12, weight=700, fill=C["cab_s"])
-text(A_in[0] + 24, fmid - 89, "~8\" deep · left (roadside) nose flank", size=10, fill=C["muted"])
+text(A_in[0] + 24, fmid - 89, "~8\" deep · roadside nose flank", size=10, fill=C["muted"])
 text(A_in[0] + 24, fmid - 74, "contents at real scale: detail C", size=10, fill=C["muted"])
 line(A_in[0] + 18, fmid - 96, cab_out[0], cab_out[1], stroke=C["cab_s"], sw=1, dash="3 3")
 
@@ -346,17 +346,17 @@ text(EX0 + CABW * sc_e / 2, EYb - CABH * sc_e - 7,
 # components: (n, ex, ey, ew, eh, fill, stroke, name, dims, in-box label, label size)
 comps = [
     (1,  5.0,  0.0, 19.88, 12.32, C["bat"],   C["bat_s"],  "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25  (depth driver)", "LiTime 48V|100Ah ComFlex", 11),
-    (2,  2.0, 13.6, 3.5,   1.8,   C["sheet"], C["cab_s"],  "LiTime 500A shunt",         "~3.5x1.8  (on -)*",  "shunt", 7),
+    (2,  1.5, 13.6, 3.5,   1.8,   C["sheet"], C["cab_s"],  "LiTime 500A shunt",         "~3.5x1.8  (on -)*",  "shunt", 7),
     (3, 23.7, 13.4, 4.3,   2.4,   C["prot"],  C["prot_s"], "Main Class-T OCP",          "~4.3x2.4  (on +)*",  "Class-T", 7.5),
-    (4,  2.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "- busbar",                  "~6x1.3*",  "- bus", 8),
+    (4,  1.5, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "- busbar",                  "~6x1.3*",  "- bus", 8),
     (5, 10.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "+ busbar",                  "~6x1.3*",  "+ bus", 8),
-    (6, 24.0, 17.0, 3.4,   2.2,   C["prot"],  C["prot_s"], "Velit 48V branch breaker",  "~3.4x2.2*",  "Velit|brk", 7),
+    (6, 17.5, 15.4, 3.4,   2.4,   C["prot"],  C["prot_s"], "Velit 48V branch breaker",  "~3.4x2.4*",  "Velit|brk", 7),
     (7,  1.5, 20.3, 7.28,  9.84,  C["pv"],    C["pv_s"],   "SmartSolar 250/60-Tr",      "7.28x9.84x3.74",  "SmartSolar|250/60-Tr", 9.5),
     (8, 11.0, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/24-16A",        "7.3x5.1x2.8",  "Orion-Tr|48/24-16A", 9),
     (9, 20.5, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/12-20A",        "7.3x5.1x2.8",  "Orion-Tr|48/12-20A", 9),
-    (10, 1.5, 31.5, 5.74,  3.31,  C["load"],  C["load_s"], "Blue Sea 5026 (24V)",       "5.74x3.31*",  "Blue Sea|5026", 8.5),
-    (11, 9.5, 31.5, 5.5,   2.2,   C["load"],  C["load_s"], "12V receptacles",           "~5.5x2.2*",  "12V recept.", 8),
-    (12, 1.5, 37.0, 6.49,  4.5,   C["sheet"], C["cab_s"],  "Switch + dimmer panel (8260)", "6.49x2.3 + dimmers",  "Switch +|dimmers", 9),
+    (10,11.0, 27.5, 5.74,  3.31,  C["load"],  C["load_s"], "Blue Sea 5026 (24V)",       "5.74x3.31*",  "Blue Sea|5026", 8.5),
+    (11,20.5, 27.5, 5.5,   2.2,   C["load"],  C["load_s"], "12V receptacles",           "~5.5x2.2*",  "12V recept.", 8),
+    (12,11.0, 33.0, 6.49,  4.5,   C["sheet"], C["cab_s"],  "Switch + dimmer panel (8260)", "6.49x2.3 + dimmers",  "Switch +|dimmers", 9),
 ]
 for n, ex, ey, ew, eh, fill, stroke, name, dims, lab, lsize in comps:
     x = EX0 + ex * sc_e
@@ -383,9 +383,56 @@ for sf in (0.12, 0.88):
 text(b_x + b_w / 2, EYb - 24, "floor-mounted (strapped down)",
      size=9, anchor="middle", fill=C["slate"])
 
-# orientation label (where roof PV enters)
-text(EX0 + (1.5 + 7.28 / 2) * sc_e, EYb - 30.6 * sc_e, "PV in",
-     size=9.5, weight=700, anchor="middle", fill=C["pv_s"])
+# ---- interconnecting wiring (red +48V, dark -48V, blue 24V, purple 12V, cyan PV) ----
+NEG = "#374151"
+def wire(pts, color, w=2.0):
+    d = "M " + " L ".join(f"{px:.1f} {py:.1f}" for px, py in pts)
+    e(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" '
+      f'stroke-linejoin="round" stroke-linecap="round"/>')
+def jdot(x, y, color):
+    e(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="{color}"/>')
+
+yCB, yRP, yRN = 516.4, 527.2, 534.4        # converter bottoms, + rail, - rail
+yBT, yBM, yBB = 538.0, 545.8, 553.6        # busbar top / mid / bottom
+
+# battery terminal marks
+text(1064, 625, "+", size=12, weight=700, anchor="middle", fill=C["w48"])
+text(896, 626, "-", size=13, weight=700, anchor="middle", fill=NEG)
+
+# protection: battery -> shunt(-) / Class-T(+) -> busbars
+wire([(896, 612.16), (896, 596.8), (839, 596.8)], NEG)
+wire([(839, 575.2), (839, yBB)], NEG)
+wire([(1064, 612.16), (1064, 599.2), (1110.2, 599.2)], C["w48"])
+wire([(1110.2, 570.4), (1110.2, yBM), (992, yBM)], C["w48"])
+
+# 48 V rails + busbar feeds
+wire([(818, yRP), (1138.4, yRP)], C["w48"], 2.4)
+wire([(818, yRN), (1138.4, yRN)], NEG, 2.4)
+wire([(956, yBT), (956, yRP)], C["w48"]); jdot(956, yRP, C["w48"])
+wire([(854, yBT), (854, yRN)], NEG); jdot(854, yRN, NEG)
+
+# converter input stubs from the rails
+for xp, xn in [(848, 872), (950, 980), (1064, 1094)]:
+    wire([(xp, yRP), (xp, yCB)], C["w48"]); jdot(xp, yRP, C["w48"])
+    wire([(xn, yRN), (xn, yCB)], NEG); jdot(xn, yRN, NEG)
+
+# converter outputs -> loads (straight up; loads sit above their converter)
+wire([(975.8, 455.2), (975.8, 430)], C["w24"], 2.2)     # Orion 48/24 -> 5026
+wire([(1089.8, 455.2), (1089.8, 430)], C["w12"], 2.2)   # Orion 48/12 -> receptacles
+wire([(966.44, 390.28), (966.44, 364)], C["w24"], 2.2)  # 5026 -> switch panel
+text(982, 445, "24V", size=8, fill=C["w24"])
+text(1096, 445, "12V", size=8, fill=C["w12"])
+
+# roof PV in -> MPPT
+wire([(861.68, 382.32), (861.68, 398.32)], C["pv_s"], 2.4)
+poly([(856.68, 398.32), (866.68, 398.32), (861.68, 406.32)], fill=C["pv_s"], stroke="none")
+text(861.68, 378, "roof PV in", size=9.5, weight=700, anchor="middle", fill=C["pv_s"])
+
+# Velit 48 V branch: + busbar -> breaker -> roof AC
+wire([(956, yBB), (956, 560.8), (1010, 560.8)], C["w48"], 2.0)
+wire([(1050.8, 560.8), (1086, 560.8)], C["w48"], 2.0)
+poly([(1086, 555.8), (1086, 565.8), (1095, 560.8)], fill=C["w48"], stroke="none")
+text(1098, 564, "to Velit AC", size=8.5, weight=700, anchor="start", fill=C["w48"])
 
 # scale bar (12 in)
 sb_y = EYb + 16
