@@ -345,8 +345,8 @@ def shunt(nodes: list[dict[str, Any]], node_id: str, x: int, y: int) -> None:
             port(node_id, "dc-plus-sense", "top", "DC+", 1),
         ],
         {
-            "label": "500 A Shunt",
-            "brand": "generic",
+            "label": "Victron SmartShunt\n500A",
+            "brand": "Victron",
             "category": "monitoring",
             "componentId": "shunt",
             "width": 210,

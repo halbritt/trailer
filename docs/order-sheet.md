@@ -1,6 +1,6 @@
 # Juplaya Trailer Order Sheet
 
-Generated: 2026-06-10 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
+Generated: 2026-06-14 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
 
 This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/export?format=csv). Local CSV: [order-sheet.csv](order-sheet.csv). Local correction layer: [order-sheet-overrides.csv](order-sheet-overrides.csv).
 
@@ -30,10 +30,10 @@ Rules for the numbers:
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
 | Priced committed / ordered / purchased fit-out | $4,333.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,754.99 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,088.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Remaining Juplaya buy list | $11,054.99 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Current Juplaya fit-out planning total | $15,388.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
-| Full visible project list including deferred | $18,237.27 | Current total plus deferred, with the same exclusions. |
+| Full visible project list including deferred | $18,537.27 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
 
@@ -41,11 +41,11 @@ Remaining Juplaya buy list by category:
 | --- | --- |
 | Power / solar / cabinet | $2,553.70 |
 | Climate / envelope / awning | $4,194.67 |
-| Interior / floor / walls | $1,975.00 |
+| Interior / floor / walls | $2,275.00 |
 | Lighting / switches / security | $1,531.62 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,754.99` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,088.27` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$11,054.99` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,388.27` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -56,10 +56,10 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | PURCHASED | Base trailer | 1 | Wells Cargo / ACG FasTrac Deluxe FT712S2-D VIN 7V0W11214TU444163 | $8,456.05 | Excluded | Base trailer cost lives in the buyer-order record not this fit-out subtotal. |
 | ON HAND | Solar | 5 | LG455N2W-E6 panels | $300.00 | Excluded | Three roof panels two optional ground panels. |
 | ON HAND | Battery | 1 | LiTime 48 V 100 Ah Smart ComFlex battery | $1,219.99 | Excluded | 5.12 kWh trailer battery. |
-| ON HAND | Battery monitor | 1 | LiTime 500 A Bluetooth shunt | $105.99 | Excluded | Single-point ground/instrumentation item. |
+| ON HAND | Battery monitor | 1 | LiTime 500 A Bluetooth shunt | $105.99 | Excluded | Superseded for the active build by the ordered Victron SmartShunt 500A + Cerbo GX Mk2 monitoring path; keep as spare/test gear. |
 | ON HAND | AC island | 1 | Anker SOLIX C1000 + PS400 400 W panel | $0.00 | Excluded | Portable AC island for Juplaya small 120 VAC loads. |
 | ON HAND | Track | 50ft | E-track | $239.95 | Excluded | Treat as wall-track stock first not floor stock. |
-| ON HAND | Fixture stock | 2 sheets | 3/8 in and 1/2 in birch sheet stock | $0.00 | Excluded | Existing birch is fixture stock; D009 reuses the factory 3/8 in PlexCore sidewall liner instead of re-skinning the walls. |
+| ON HAND | Wall stock | 2 sheets | 3/8 in and 1/2 in birch sheet stock | $0.00 | Excluded | Existing stock offsets the wall/fixture allowances below. |
 | ORDERED | Truck support | 1 set | Ford integrated trailer backup camera + TPMS sensors | $626.27 | Excluded | Tow-vehicle/trailer-support item outside fit-out math for now. |
 
 ## Return Items
@@ -83,6 +83,8 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
 | ORDERED | GPS | 1 each | LandAirSea Overdrive Permanent GPS Tracker with hardwire cable | $100.00 | $100.00 | [Actual ordered price](https://landairsea.com/products/landairsea-overdrive) | Ordered for 100.00; expected arrival June 12, 2026. Primary hidden Oakland-storage tracker, hardwired to the 24 V block on a 3 A branch. Subscription required. |
 | ORDERED | Security | 1 | Nu-Set 8-1/4 in high-security trailer-door puck hasp | $20.00 | $20.00 | [Actual ordered price](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | User ordered Nu-Set RV high-security hasp for puck lock for 20.00. Source says hardware is not included. |
+| ORDERED | Battery monitor | 1 | Victron SmartShunt 500A | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/battery-monitors/smart-battery-shunt) | Ordered; expected June 15, 2026. Replaces the LiTime shunt as the active 48 V battery monitor and feeds Cerbo GX Mk2 via VE.Direct. |
+| ORDERED | Monitoring | 1 | Victron Cerbo GX Mk2 | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/communication-centres/cerbo-gx) | Ordered; expected June 15, 2026. System monitor/controller for SmartSolar MPPTs and SmartShunt now, and VE.Bus MultiPlus-II later. |
 
 Committed / purchased subtotal: **$4,333.28**.
 
@@ -134,7 +136,8 @@ Climate / envelope / awning remaining subtotal: **$4,194.67**.
 | --- | ---: | --- | ---: | ---: | --- | --- |
 | BUY NOW | 1 lot | L-track studs/quick-release hardware backing through-bolts | $150.00 | $150.00 | Allowance | Confirm what shipped with the Bolt It On chocks first. |
 | BUY NOW | 1 lot | Durabak floor prep/coating supplies | $120.00 | $120.00 | Allowance | Rollers masking solvent/wipes PPE patch-test supplies. |
-| BUY AFTER GATE | 1 lot | FRP panels trim profiles adhesive | $600.00 | $600.00 | Allowance | Must be compatible with factory 3/8 in PlexCore sidewall liner or proven by bond patch. |
+| BUY AFTER GATE | 1 lot | Additional exterior/marine birch wall stock | $300.00 | $300.00 | Allowance | Offset by on-hand sheets where usable. |
+| BUY AFTER GATE | 1 lot | FRP panels trim profiles adhesive | $600.00 | $600.00 | Allowance | Must be warranted over selected birch/adhesive stack. |
 | BUY AFTER GATE | 1 lot | Wall E-track backing/hardware + shoring sockets | $300.00 | $300.00 | Allowance | E-track itself is on hand; backing/hardware still costs money. |
 | BUY AFTER GATE | 1 lot | Bed platform lumber/hardware | $250.00 | $250.00 | Allowance | 2x4 shoring-beam deck removable. |
 | BUY AFTER GATE | 1 lot | Fridge bay partition ventilation pieces straps | $200.00 | $200.00 | Allowance | Must keep Dometic 50 mm clearance and forced through-flow. |
@@ -142,7 +145,7 @@ Climate / envelope / awning remaining subtotal: **$4,194.67**.
 | BUY AFTER GATE | 1 lot | Panel transport slot padding/straps/fittings | $75.00 | $75.00 | Allowance | For the two optional LG ground panels. |
 | BUY AFTER GATE | 1 | Durabak-18 Outdoor Textured light grey conditional 4th gallon | $155.00 | $155.00 | [Conditional allowance](https://www.durabakcompany.com/products/durabak-marine-liner-outdoor-textured) | Order only if the 3 gal coverage or patch test says ramp cove or wear lanes need it. |
 
-Interior / floor / walls remaining subtotal: **$1,975.00**.
+Interior / floor / walls remaining subtotal: **$2,275.00**.
 
 ### Lighting / switches / security
 
@@ -152,7 +155,7 @@ Interior / floor / walls remaining subtotal: **$1,975.00**.
 | BUY NOW | 1 | Super Bright LEDs RA-IP68-80CRI-5m 3000 K 24 V awning strip | $109.99 | $109.99 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/waterproof-led-strips/5m-white-led-strip-light-radiant-series-led-tape-light-24v-ip68-waterproof) | Separate warm camp light not another flood. |
 | BUY NOW | 1 | Blue Sea 8260 6-position Contura mounting panel | $17.68 | $17.68 | [Fisheries Supply price signal](https://www.fisheriessupply.com/blue-sea-systems-contura-switch-mounting-panels/8260) | Mount in thin inset plate or rabbet thick cabinet face. |
 | BUY NOW | 6 | Blue Sea 8282 SPST OFF-ON Contura switches | $14.00 | $84.00 | [Vanlife Outfitters price signal](https://www.vanlifeoutfitters.com/products/blue-sea-8282-contura-switch-spst-off-on-black) | INTERIOR CURB FLOOD ROAD FLOOD NOSE FLOOD REAR FLOOD AWNING. |
-| BUY AFTER GATE | 6 | Panel-mount 24 V lighting dimmers | $45.00 | $270.00 | Allowance | Preferred finished-cabinet controls; exact SKU TBD after panel mockup and VAL2-NW9 bench test. Blue Sea 7509 DeckHand is the robust marine reference; cheap PWM knob dimmers remain bench-test/prototype parts. |
+| BUY AFTER GATE | 6 | Panel-mount 24 V lighting dimmers | $45.00 | $270.00 | [Allowance](https://www.superbrightleds.com/led-strips-and-bars/ldk-8a-12-24-volt-dc-single-color-led-dimmer-single-color-led-dimmer) | Preferred finished-cabinet controls; exact SKU TBD after panel mockup and VAL2-NW9 bench test. Blue Sea 7509 DeckHand is the robust marine reference; cheap PWM knob dimmers remain bench-test/prototype parts. |
 | BUY NOW | 1 set | Custom switch labels / label stock | $25.00 | $25.00 | Allowance | Blue Sea generic labels may not cover these names. |
 | BUY NOW | 1 lot | Lighting branch wire glands sealant heat shrink | $140.00 | $140.00 | Allowance | Exterior branch wiring and penetrations. |
 | BUY NOW | 1 set | Security locks: Proven 2178, 2 keyed-alike PACLOCK UCS-7A pucks, Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax + PACLOCK high-side allowance](https://paclock.com/product/7-series/) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Buy two PACLOCK 7-Series flat-back puck locks in the same UCS keyed-alike/U-PICK code: one rear ramp, one Nu-Set personnel-door hasp. Match the truck's existing PACLOCK U-PICK code only if those truck locks are UCS; PRO/SR/RD families do not automatically share codes. Prefer stainless bodies if the storage spot is exposed to Bay Area wet/salt; aluminum UCS-7A is acceptable if budget wins. Verify the ramp latch is puck-compatible; if not, add a puck hasp or use a PACLOCK keyed-alike UCS padlock as the fallback. |
@@ -168,7 +171,7 @@ Lighting / switches / security remaining subtotal: **$1,531.62**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,754.99**.
+Remaining Juplaya subtotal: **$11,054.99**.
 
 ## Deferred / Not Juplaya
 

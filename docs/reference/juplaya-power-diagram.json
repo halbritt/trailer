@@ -1141,8 +1141,8 @@
         }
       ],
       "data": {
-        "label": "500 A Shunt",
-        "brand": "generic",
+        "label": "Victron SmartShunt\n500A",
+        "brand": "Victron",
         "category": "monitoring",
         "componentId": "shunt",
         "width": 210,

@@ -2,7 +2,7 @@
 
 This is the detailed power source of truth for the Juplaya trailer build. The build sheet keeps only the abbreviated view; this document carries the wiring architecture, solar topology, component decisions, commissioning rules, and energy budget.
 
-Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
+Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [SmartShunt 500A specs](reference/victron-smartshunt-500a-specs.md), [Cerbo GX Mk2 specs](reference/victron-cerbo-gx-mk2-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
 
 ## Diagrams
 
@@ -22,6 +22,7 @@ For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads s
 - The Velit 2000R runs directly from the 48 V battery on its own fused branch.
 - One Victron Orion-Tr 48/24-16A feeds the 24 V house bus for fridge, lights, USB, GPS, and winter heater rough-in.
 - One Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
+- A Victron SmartShunt 500A and Cerbo GX Mk2 are ordered for the active monitoring path; expected arrival is 2026-06-15.
 - Small 120 VAC loads run from the standalone Anker SOLIX C1000 + PS400 panel.
 - The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice, not a Juplaya blocker.
 
@@ -45,13 +46,18 @@ Roof PV (3 x LG455 in 3S)
 48 V bus
         |
    LiTime 48V 100Ah ComFlex (5.12 kWh)
-        | 500A shunt, main OCP
+        | Victron SmartShunt 500A, main OCP
         +-- 48 V branch: Velit 2000R rooftop AC, own fused branch
         +-- Victron Orion-Tr 48/24-16A isolated -> Blue Sea 5026 24 V block
                                                         +-- fridge, 24 V native
                                                         +-- interior/exterior LED zones, USB-C PD, GPS
                                                         +-- winter heater outlet
         +-- Victron Orion-Tr IP43 48/12-20A isolated -> fused 12 V cabinet receptacles
+
+Victron Cerbo GX Mk2:
+   VE.Direct -> SmartShunt 500A, SmartSolar 250/60-Tr, SmartSolar 150/35
+   VE.Bus    -> future MultiPlus-II
+   VE.Can    -> reserved for future Victron-compatible CAN gear
 
 Anker SOLIX C1000 + PS400 400 W panel -> standalone 120 VAC loads
 
@@ -98,7 +104,8 @@ Voltage checks:
 | Component | Role | Notes |
 |---|---|---|
 | LiTime 48 V 100 Ah Smart ComFlex | house battery | 5.12 kWh, 100 A continuous charge/discharge, Bluetooth BMS |
-| LiTime 500 A Bluetooth shunt | instrumentation | single-point ground lives here |
+| Victron SmartShunt 500A | instrumentation | ordered; active 48 V battery monitor / SOC source; VE.Direct to Cerbo GX Mk2 |
+| Victron Cerbo GX Mk2 | monitoring / control | ordered; VE.Direct to SmartShunt and SmartSolars now, VE.Bus to MultiPlus later |
 | Main battery OCP | protection | make battery-terminal Class-T or equivalent main OCP explicit before final wiring |
 | SmartSolar 250/60-Tr | roof MPPT | roof 3S only |
 | SmartSolar 150/35 | ground MPPT | optional LG ground 2S only; connector variant pending |
@@ -106,7 +113,24 @@ Voltage checks:
 | Orion-Tr 48/24-16A | house converter | isolated, remote on/off to cabin toggle |
 | Orion-Tr IP43 48/12-20A | auxiliary 12 V converter | isolated, 240 W / 20 A, remote off; feeds only cabinet receptacles |
 
-All the power gear — battery, shunt, MPPTs, Orion converters, distribution, and protection — lives in a single **~18"-tall bench across the nose**. The LiTime battery **stands on edge and runs transverse** (19.88" long across the bench × 9.25" deep, 12.32" tall) centered in the deepest part under the bench top; everything else fits under the same seat top. Ventilate the bench; the SmartSolar and Orions add waste heat, and the curbside fridge bay must stay away from this plume.
+All the Juplaya power gear — battery, SmartShunt, Cerbo, MPPTs, Orion converters, distribution, and protection — lives in a single **~18"-tall bench across the nose**. The LiTime battery **stands on edge and runs transverse** (19.88" long across the bench × 9.25" deep, 12.32" tall), low and centered in the deepest part under the bench top; everything else fits under the same seat top. Ventilate the bench; the SmartSolar and Orions add waste heat, and the curbside fridge bay must stay away from this plume.
+
+The LiTime 500 A Bluetooth shunt is superseded for the active build and kept only as spare/test gear.
+
+## Victron Monitoring / Networking
+
+The installed monitoring path is now Victron-native from the start:
+
+```text
+SmartShunt 500A       --VE.Direct--> Cerbo GX Mk2
+SmartSolar 250/60-Tr  --VE.Direct--> Cerbo GX Mk2
+SmartSolar 150/35     --VE.Direct--> Cerbo GX Mk2
+Future MultiPlus-II   --VE.Bus-----> Cerbo GX Mk2
+```
+
+The Cerbo gives local/VRM visibility into battery SOC, charge/discharge current, solar harvest, alarms, and the future MultiPlus state. It does **not** make the LiTime ComFlex a managed Victron battery, and the current Orion-Tr converters remain remote-on/off power supplies rather than networked telemetry devices.
+
+Reserve VE.Can for future Victron-compatible CAN gear. If the build later moves to Lynx, the compatible LiTime path is Lynx Shunt VE.Can / Lynx Distributor as distribution and monitoring gear; do not spec Lynx Smart BMS unless the battery bank changes to Victron Lithium Smart.
 
 ## Power Cabinet Ventilation
 
@@ -257,6 +281,8 @@ Deferred because Juplaya does not need it:
 
 If installed later, treat 2400 W at 25 C / 2200 W at 40 C as the sustained AC design envelope, and cap combined charge current at or below the ComFlex battery's 100 A continuous charge limit.
 
+Physical fit: the MultiPlus-II is about 22.5" tall, 10.9" wide, 5.8" deep, and 64 lb. It does **not** fit as a proper upright install inside the ~18" nose bench, and Victron wants about 4" cooling clearance around it. Reserve a vertical bulkhead/wall-panel location above or behind the bench for Phase 2 instead of counting on the bench interior.
+
 ## Protection And Commissioning
 
 Before energizing:
@@ -268,6 +294,9 @@ Before energizing:
 - Use DC-rated PV disconnect/OCP above worst-case cold roof 3S Voc.
 - Fuse/breaker each MPPT battery-side output for controller current and conductor ampacity.
 - Make the battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
+- Install the SmartShunt in the battery-negative path before the negative bus, with the load/charger side feeding every trailer load and charger negative.
+- Run VE.Direct from SmartShunt and both SmartSolars to the Cerbo GX Mk2; add VE.Direct-to-USB only if the three built-in ports are not enough after layout.
+- Fuse the Cerbo supply, configure VRM/WiFi, and set alarms for low SOC, low battery voltage, high cabinet temperature, and charger faults.
 - Verify the Blue Sea UL-489 breaker SKU: docs have used 7443, web validation surfaced 7463 for the 20 A / 80 V part.
 - Fuse/breaker both Orion converter inputs with DC-rated 48 V gear, fuse their outputs for conductor ampacity, and orient the 48/12 Orion screw terminals down if relying on IP43.
 - Label the 12 V cabinet receptacles as auxiliary only; do not backfeed tow-vehicle 12 V, OEM trailer lighting, the 24 V bus, or C1000 charging through them.
