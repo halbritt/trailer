@@ -341,28 +341,35 @@ text(EX0 + CABW * sc_e / 2, EYb - CABH * sc_e - 7,
      "Front elevation - 30\" W x 46\" H envelope (fit to components)",
      size=10.5, weight=700, anchor="middle", fill=C["cab_s"])
 
-# components: (n, ex, ey, ew, eh, fill, stroke, name, dims)   ex/ey from bottom-left, inches
+# components: (n, ex, ey, ew, eh, fill, stroke, name, dims, in-box label, label size)
 comps = [
-    (1,  5.0,  0.0, 19.88, 12.32, C["bat"],   C["bat_s"],  "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25  (depth driver)"),
-    (2,  2.0, 13.6, 3.5,   1.8,   C["sheet"], C["cab_s"],  "LiTime 500A shunt",         "~3.5x1.8  (on -)*"),
-    (3, 23.7, 13.4, 4.3,   2.4,   C["prot"],  C["prot_s"], "Main Class-T OCP",          "~4.3x2.4  (on +)*"),
-    (4,  2.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "- busbar",                  "~6x1.3*"),
-    (5, 10.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "+ busbar",                  "~6x1.3*"),
-    (6, 24.0, 17.0, 3.4,   2.2,   C["prot"],  C["prot_s"], "Velit 48V branch breaker",  "~3.4x2.2*"),
-    (7,  1.5, 20.3, 7.28,  9.84,  C["pv"],    C["pv_s"],   "SmartSolar 250/60-Tr",      "7.28x9.84x3.74"),
-    (8, 11.0, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/24-16A",        "7.3x5.1x2.8"),
-    (9, 20.5, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/12-20A",        "7.3x5.1x2.8"),
-    (10, 1.5, 31.5, 5.74,  3.31,  C["load"],  C["load_s"], "Blue Sea 5026 (24V)",       "5.74x3.31*"),
-    (11, 9.5, 31.5, 5.5,   2.2,   C["load"],  C["load_s"], "12V receptacles",           "~5.5x2.2*"),
-    (12, 1.5, 37.0, 6.49,  4.5,   C["sheet"], C["cab_s"],  "Switch + dimmer panel (8260)", "6.49x2.3 + dimmers"),
+    (1,  5.0,  0.0, 19.88, 12.32, C["bat"],   C["bat_s"],  "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25  (depth driver)", "LiTime 48V|100Ah ComFlex", 11),
+    (2,  2.0, 13.6, 3.5,   1.8,   C["sheet"], C["cab_s"],  "LiTime 500A shunt",         "~3.5x1.8  (on -)*",  "shunt", 7),
+    (3, 23.7, 13.4, 4.3,   2.4,   C["prot"],  C["prot_s"], "Main Class-T OCP",          "~4.3x2.4  (on +)*",  "Class-T", 7.5),
+    (4,  2.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "- busbar",                  "~6x1.3*",  "- bus", 8),
+    (5, 10.0, 17.2, 6.0,   1.3,   C["bus"],   C["bus_s"],  "+ busbar",                  "~6x1.3*",  "+ bus", 8),
+    (6, 24.0, 17.0, 3.4,   2.2,   C["prot"],  C["prot_s"], "Velit 48V branch breaker",  "~3.4x2.2*",  "Velit|brk", 7),
+    (7,  1.5, 20.3, 7.28,  9.84,  C["pv"],    C["pv_s"],   "SmartSolar 250/60-Tr",      "7.28x9.84x3.74",  "SmartSolar|250/60-Tr", 9.5),
+    (8, 11.0, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/24-16A",        "7.3x5.1x2.8",  "Orion-Tr|48/24-16A", 9),
+    (9, 20.5, 20.3, 7.3,   5.1,   C["conv"],  C["conv_s"], "Orion-Tr 48/12-20A",        "7.3x5.1x2.8",  "Orion-Tr|48/12-20A", 9),
+    (10, 1.5, 31.5, 5.74,  3.31,  C["load"],  C["load_s"], "Blue Sea 5026 (24V)",       "5.74x3.31*",  "Blue Sea|5026", 8.5),
+    (11, 9.5, 31.5, 5.5,   2.2,   C["load"],  C["load_s"], "12V receptacles",           "~5.5x2.2*",  "12V recept.", 8),
+    (12, 1.5, 37.0, 6.49,  4.5,   C["sheet"], C["cab_s"],  "Switch + dimmer panel (8260)", "6.49x2.3 + dimmers",  "Switch +|dimmers", 9),
 ]
-for n, ex, ey, ew, eh, fill, stroke, name, dims in comps:
+for n, ex, ey, ew, eh, fill, stroke, name, dims, lab, lsize in comps:
     x = EX0 + ex * sc_e
     y = EYb - (ey + eh) * sc_e
-    rect(x, y, ew * sc_e, eh * sc_e, fill=fill, stroke=stroke, sw=1.5, rx=2)
-    cy = y + eh * sc_e / 2
-    e(f'<circle cx="{x - 11}" cy="{cy}" r="7" fill="#ffffff" stroke="{stroke}" stroke-width="1.2"/>')
-    text(x - 11, cy + 3.5, str(n), size=9, weight=700, anchor="middle", fill=stroke)
+    bw_, bh_ = ew * sc_e, eh * sc_e
+    rect(x, y, bw_, bh_, fill=fill, stroke=stroke, sw=1.5, rx=2)
+    cxb, cyb = x + bw_ / 2, y + bh_ / 2
+    e(f'<circle cx="{x - 11}" cy="{cyb}" r="7" fill="#ffffff" stroke="{stroke}" stroke-width="1.2"/>')
+    text(x - 11, cyb + 3.5, str(n), size=9, weight=700, anchor="middle", fill=stroke)
+    parts = lab.split("|")
+    if len(parts) == 1:
+        text(cxb, cyb + lsize / 3, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
+    else:
+        text(cxb, cyb - lsize * 0.15, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
+        text(cxb, cyb + lsize * 0.95, parts[1], size=lsize, weight=700, anchor="middle", fill=C["ink"])
 
 # orientation label (where roof PV enters)
 text(EX0 + (1.5 + 7.28 / 2) * sc_e, EYb - 30.6 * sc_e, "PV in",
@@ -386,7 +393,7 @@ text(EX0, EYb + 66, "Cabin face: 8260 + 6x 8282 switches + 6x 24V dimmers. "
 # component list (right column)
 lx = EX0 + CABW * sc_e + 28
 text(lx, CY + 92, "Components  (W x H x D, in):", size=12, weight=700)
-for i, (n, ex, ey, ew, eh, fill, stroke, name, dims) in enumerate(comps):
+for i, (n, ex, ey, ew, eh, fill, stroke, name, dims, lab, lsize) in enumerate(comps):
     yy = CY + 116 + i * 23
     rect(lx, yy - 10, 13, 13, fill=fill, stroke=stroke, sw=1.3, rx=2)
     text(lx + 20, yy - 1, f"{n}. {name}", size=10, weight=700, fill=C["ink"])
