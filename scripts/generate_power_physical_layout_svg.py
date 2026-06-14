@@ -321,10 +321,10 @@ CX, CY, CW, CH = 770, 118, 668, 720
 rect(CX, CY, CW, CH, fill="#ffffff", stroke=C["cab_s"], sw=1.8, rx=8)
 text(CX + 16, CY + 28, "C  Nose power bench - plan + section", size=17, weight=700, fill=C["cab_s"])
 text(CX + 16, CY + 47,
-     "Bench runs wall-to-wall (perpendicular to the side walls); the V-nose gives extra depth at the centerline.",
+     "Wall-to-wall bench; V-nose adds depth at the centerline.",
      size=11, fill=C["muted"])
 text(CX + 16, CY + 63,
-     "Battery sits in the middle, in that deepest part. Components to scale.",
+     "Battery sits in the deepest part. Components to scale.",
      size=11, fill=C["muted"])
 
 # ---- TOP-DOWN PLAN of the bench (nose up) ----
@@ -346,15 +346,16 @@ pcomps = [
     (1, 29.06, 1.0, 19.88, 9.25, C["bat"],   C["bat_s"],  "battery (on edge)|transverse", 8),
     (7,  2.0,  0.8, 7.28, 3.74,  C["pv"],    C["pv_s"],   "MPPT", 7.5),
     (8, 10.0,  0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/24", 7),
-    (2, 19.5,  0.8, 3.5,  1.5,   C["sheet"], C["cab_s"],  "shunt", 6.5),
+    (2, 19.5,  0.8, 4.72, 1.81,  C["sheet"], C["cab_s"],  "", 6.5),
     (4,  2.0,  5.2, 6.0,  1.3,   C["bus"],   C["bus_s"],  "- bus", 6.5),
     (5, 10.0,  5.2, 6.0,  1.3,   C["bus"],   C["bus_s"],  "+ bus", 6.5),
     (9, 49.5,  0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/12", 7),
-    (11,58.0,  0.8, 5.5,  2.0,   C["load"],  C["load_s"], "12V rcpt", 6.5),
-    (12,65.0,  0.5, 6.49, 1.4,   C["sheet"], C["cab_s"],  "switch", 6.5),
-    (3, 49.5,  5.0, 4.3,  2.5,   C["prot"],  C["prot_s"], "Class-T", 6.5),
-    (6, 55.0,  5.0, 3.4,  2.4,   C["prot"],  C["prot_s"], "Velit", 6.5),
-    (10,61.0,  4.8, 5.74, 1.6,   C["load"],  C["load_s"], "5026", 6.5),
+    (13,61.0,  6.7, 6.06, 3.07,  C["sheet"], C["cab_s"],  "", 6.5),
+    (11,58.0,  0.8, 5.5,  2.0,   C["load"],  C["load_s"], "", 6.5),
+    (12,65.0,  0.5, 6.49, 1.4,   C["sheet"], C["cab_s"],  "", 6.5),
+    (3, 49.5,  5.0, 4.3,  2.5,   C["prot"],  C["prot_s"], "", 6.5),
+    (6, 55.0,  5.0, 3.4,  2.4,   C["prot"],  C["prot_s"], "", 6.5),
+    (10,61.0,  4.8, 5.74, 1.6,   C["load"],  C["load_s"], "", 6.5),
 ]
 for n, wx, d, ww, dd, fill, stroke, lab, lsize in pcomps:
     x, y = PXx(wx), PYd(d + dd)
@@ -395,7 +396,7 @@ text(sxL + 6 * sc, sy0 + 49, "12 in", size=9.5, anchor="middle", fill=C["slate"]
 # ---- component list + notes (right of the section) ----
 comps = [
     (1, "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25 - on edge", C["bat"], C["bat_s"]),
-    (2, "LiTime 500A shunt", "~3.5x1.8 (on -)*", C["sheet"], C["cab_s"]),
+    (2, "Victron SmartShunt 500A", "4.72x1.81x2.13", C["sheet"], C["cab_s"]),
     (3, "Main Class-T OCP", "~4.3x2.4 (on +)*", C["prot"], C["prot_s"]),
     (4, "- busbar", "~6x1.3*", C["bus"], C["bus_s"]),
     (5, "+ busbar", "~6x1.3*", C["bus"], C["bus_s"]),
@@ -406,6 +407,7 @@ comps = [
     (10, "Blue Sea 5026 (24V)", "5.74x3.31*", C["load"], C["load_s"]),
     (11, "12V receptacles", "~5.5x2.2*", C["load"], C["load_s"]),
     (12, "Switch + dimmer (8260)", "6.49x2.3 (cabin face)", C["sheet"], C["cab_s"]),
+    (13, "Victron Cerbo GX Mk2", "6.06x3.07x1.89", C["sheet"], C["cab_s"]),
 ]
 lx = 1085
 text(lx, 548, "Components  (W x H x D, in):", size=11, weight=700)
@@ -415,10 +417,10 @@ for k, (n, name, dims, fill, stroke) in enumerate(comps):
     text(lx + 16, yy, f"{n}. {name}", size=9, weight=700, fill=C["ink"])
     text(lx + 16, yy + 10, dims, size=8, fill=C["muted"])
 
-text(800, 690, "All gear in one ~18\"-tall bench. Battery on edge & transverse, centered in the deepest (nose) part; "
-     "shallow electronics in the wings. Switch/dimmer panel on the cabin face.", size=9, fill=C["slate"])
-text(800, 705, "Hinged/removable seat top for service; vent low cabin intake + high fan exhaust. "
-     "Confirm depth at dry-fit (D013). * nominal/catalog; battery/SmartSolar/Orions = datasheet.", size=9, fill=C["slate"])
+text(800, 690, "All gear in one ~18\" bench; battery transverse, low and centered.", size=9, fill=C["slate"])
+text(800, 705, "SmartShunt/Cerbo add Victron monitoring.", size=9, fill=C["slate"])
+text(800, 720, "Hinged top; low intake + fan exhaust; confirm depth.", size=9, fill=C["slate"])
+text(800, 735, "* nominal/catalog; battery/SmartSolar/Orions = datasheet.", size=9, fill=C["slate"])
 
 # ---------------------------------------------------------------------------
 # LEGEND + omissions (bottom strip)
