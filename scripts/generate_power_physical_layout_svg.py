@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SVG_OUT = ROOT / "docs" / "diagrams" / "power-physical-layout.svg"
 PNG_OUT = ROOT / "docs" / "diagrams" / "power-physical-layout.png"
 
-W, H = 1480, 1240
+W, H = 1480, 1260
 S = 4  # px per inch for the plan panels
 
 # ---- palette ---------------------------------------------------------------
@@ -195,14 +195,15 @@ text(REAR_X + 6, rt - 6, "REAR", size=11, weight=700, fill=C["muted"])
 # ---------------------------------------------------------------------------
 # PANEL B - FLOOR PLAN
 # ---------------------------------------------------------------------------
-ft, fb = 548, 548 + 81 * S               # floor top / bottom (curbside = bottom)
+ft, fb = 600, 600 + 81 * S               # top-down view: curbside = top, roadside = bottom
 fmid = (ft + fb) / 2
 f_taper = REAR_X - 141 * S               # straight-wall length 141
 f_tip = f_taper - 60
 
-text(45, 530, "B  Floor plan  (roadside = top · curbside = bottom)", size=17, weight=700, fill=C["slate"])
+text(45, 525, "B  Floor plan  (top-down: curbside = top · roadside = bottom)",
+     size=17, weight=700, fill=C["slate"])
 
-# footprint
+# footprint (symmetric about the centerline)
 poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
      fill="#ffffff", stroke=C["wall"], sw=4)
 
@@ -210,39 +211,40 @@ poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
 line(f_tip + 6, fmid, REAR_X, fmid, stroke=C["muted"], sw=1, dash="9 7")
 text(520, fmid + 13, "centerline", size=9, anchor="middle", fill=C["muted"])
 
-# --- nose power cabinet: ~8" deep, on the ROADSIDE nose flank ---
-# Upper flank A(taper-start, top) -> B(nose tip); offset inward into the cabin by 8".
-fdx, fdy = f_tip - f_taper, fmid - ft
+# --- nose power cabinet: ~8" deep, on the ROADSIDE (bottom) nose flank ---
+# Bottom flank A(taper-start) -> B(nose tip); offset inward into the cabin by 8".
+fdx, fdy = f_tip - f_taper, fmid - fb
 flen = (fdx * fdx + fdy * fdy) ** 0.5
-nx, ny = fdy / flen, -fdx / flen          # inward normal (+x,+y, into the cabin)
+nx, ny = -fdy / flen, fdx / flen          # inward normal (+x, -y, into the cabin)
 cdep = 8 * S
-A_fl, B_fl = (f_taper, ft), (f_tip, fmid)
+A_fl, B_fl = (f_taper, fb), (f_tip, fmid)
 A_in = (A_fl[0] + nx * cdep, A_fl[1] + ny * cdep)
 B_in = (B_fl[0] + nx * cdep, B_fl[1] + ny * cdep)
 poly([A_fl, B_fl, B_in, A_in], fill=C["cab"], stroke=C["cab_s"], sw=1.6, dash="5 3", op=0.95)
 cab_out = ((A_in[0] + B_in[0]) / 2, (A_in[1] + B_in[1]) / 2)   # 24 V feed origin
-text(A_in[0] + 24, fmid - 104, "NOSE POWER CABINET", size=12, weight=700, fill=C["cab_s"])
-text(A_in[0] + 24, fmid - 89, "~8\" deep · roadside nose flank", size=10, fill=C["muted"])
-text(A_in[0] + 24, fmid - 74, "contents at real scale: detail C", size=10, fill=C["muted"])
-line(A_in[0] + 18, fmid - 96, cab_out[0], cab_out[1], stroke=C["cab_s"], sw=1, dash="3 3")
+text(A_in[0] + 24, fmid + 74, "NOSE POWER CABINET", size=12, weight=700, fill=C["cab_s"])
+text(A_in[0] + 24, fmid + 89, "~8\" deep · roadside nose flank", size=10, fill=C["muted"])
+text(A_in[0] + 24, fmid + 104, "contents at real scale: detail C", size=10, fill=C["muted"])
+line(A_in[0] + 18, fmid + 82, cab_out[0], cab_out[1], stroke=C["cab_s"], sw=1, dash="3 3")
 
-# --- side door (curbside / bottom), 30 in opening, 98 in from rear ---
+# --- side door (curbside / top), 30 in opening, 98 in from rear ---
 door_aft = REAR_X - 98 * S
 door_fwd = REAR_X - 128 * S
-line(door_fwd, fb, door_aft, fb, stroke=C["w24"], sw=5)
-path(f"M {door_aft} {fb} A {30*S} {30*S} 0 0 0 {door_aft - 22*S} {fb + 22*S}",
+line(door_fwd, ft, door_aft, ft, stroke=C["w24"], sw=5)
+path(f"M {door_aft} {ft} A {30*S} {30*S} 0 0 1 {door_aft - 22*S} {ft - 22*S}",
      stroke=C["w24"], sw=2, dash="7 6")
-text((door_fwd + door_aft) / 2, fb + 40, "side door 30\"", size=11.5, weight=700,
+text((door_fwd + door_aft) / 2, ft - 28, "side door 30\"", size=11.5, weight=700,
      anchor="middle", fill=C["w24"])
 
-# --- fridge bay (curbside, aft of door) ---
+# --- fridge bay (curbside / top, aft of door) ---
 frx = door_aft
 frw = 37.9 * S
 frd = 20.9 * S
-rect(frx, fb - frd, frw, frd, fill=C["load"], stroke=C["load_s"], sw=1.6, rx=2)
-text(frx + frw / 2, fb - frd / 2 - 8, "Dometic CFX3-95DZ", size=12, weight=700, anchor="middle", fill=C["load_s"])
-text(frx + frw / 2, fb - frd / 2 + 6, "37.9\" x 20.9\" (24 V)", size=10, anchor="middle", fill=C["load_s"])
-text(frx + frw / 2, fb - frd / 2 + 20, "+ lid swing", size=9, anchor="middle", fill=C["muted"])
+rect(frx, ft, frw, frd, fill=C["load"], stroke=C["load_s"], sw=1.6, rx=2)
+fcy = ft + frd / 2
+text(frx + frw / 2, fcy - 8, "Dometic CFX3-95DZ", size=12, weight=700, anchor="middle", fill=C["load_s"])
+text(frx + frw / 2, fcy + 6, "37.9\" x 20.9\" (24 V)", size=10, anchor="middle", fill=C["load_s"])
+text(frx + frw / 2, fcy + 20, "+ lid swing", size=9, anchor="middle", fill=C["muted"])
 
 # --- bikes: 26" OC straddling the centerline (one rail roadside, one curbside), near rear ---
 def draw_bike(x_front, x_rear, y, bar_x, bar_w, label):
@@ -258,57 +260,57 @@ def draw_bike(x_front, x_rear, y, bar_x, bar_w, label):
     text((x_front + x_rear) / 2 + 30, y + 4, label, size=11, weight=700,
          anchor="middle", fill=C["slate"])
 
-bikeA_y = ft + 27.5 * S                     # roadside rail (~27" off the roadside wall)
-bikeB_y = ft + 53.5 * S                     # curbside rail, 26" OC (~27" off the curbside wall)
+bikeA_y = fb - 27.5 * S                      # roadside rail (~27" off the roadside/bottom wall)
+bikeB_y = fb - 53.5 * S                      # curbside rail, 26" OC (~27" off the curbside/top wall)
 draw_bike(322, 666, bikeA_y, 402, 32 * S, "WR250R")
 draw_bike(258, 602, bikeB_y, 338, 34 * S, "CRF450RL")
 line(322, bikeA_y, 246, bikeA_y, stroke=C["muted"], sw=1)
 line(258, bikeB_y, 246, bikeB_y, stroke=C["muted"], sw=1)
 dimv(246, bikeA_y, bikeB_y, '26" OC', side="left")
-text(400, ft + 6, "bikes: nose-forward, via rear ramp - one rail roadside, one curbside (straddle CL)",
+text(404, fb - 6, "bikes: nose-forward, via rear ramp - one rail roadside, one curbside (straddle CL)",
      size=10, anchor="middle", fill=C["muted"])
-# bar-overlap callout
-line(338, bikeB_y + 44, 472, fb - frd - 16, stroke=C["slate"], sw=1, dash="3 3")
-text(480, fb - frd - 18, "handlebars sweep over the fridge", size=10, weight=700, fill=C["slate"])
-text(480, fb - frd - 4, "(clears it at bar height: ~30\"+ vs 18.6\" fridge)", size=9, fill=C["muted"])
+# bar-overlap callout (the curbside bike's bars sweep up over the top-mounted fridge)
+line(470, fcy + frd / 2 + 4, 392, fcy + frd / 2 - 16, stroke=C["slate"], sw=1, dash="3 3")
+text(560, fcy + frd / 2 + 2, "bars sweep over fridge", size=9.5, weight=700, anchor="middle", fill=C["slate"])
+text(560, fcy + frd / 2 + 16, "(clear at bar height ~30\"+ vs 18.6\")", size=8.5, anchor="middle", fill=C["muted"])
 
 # --- interior loads ---
-usb_x, usb_y = frx + frw + 40, fb - 24
+usb_x, usb_y = frx + frw + 40, ft + 24
 e(f'<circle cx="{usb_x}" cy="{usb_y}" r="6" fill="{C["load"]}" '
   f'stroke="{C["load_s"]}" stroke-width="1.6"/>')
 text(usb_x + 12, usb_y + 4, "USB-C PD / GPS (24 V)", size=10.5, fill=C["slate"])
-led_x, led_y = 470, ft + 14
+led_x, led_y = 650, fmid
 e(f'<circle cx="{led_x}" cy="{led_y}" r="6" fill="{C["load"]}" '
   f'stroke="{C["load_s"]}" stroke-width="1.6"/>')
-text(led_x + 12, led_y + 4, "interior LED (ceiling, 24 V)", size=10.5, fill=C["slate"])
+text(led_x - 12, led_y + 4, "interior LED (24 V)", size=10.5, anchor="end", fill=C["slate"])
 
-# --- exterior floods (7x VAL2-NW9) ---
-flood(430, fb + 8, "F curb", 430, fb + 24)
-flood(555, fb + 8, "F curb", 555, fb + 24)
-flood(430, ft - 8, "F road", 430, ft - 16)
-flood(555, ft - 8, "F road", 555, ft - 16)
-# nose-face floods, on the exterior of each V-nose flank
-flood(86, 624, "F nose", 52, 612, anchor="end")
-flood(86, 796, "F nose", 52, 810, anchor="end")
+# --- exterior floods (7x VAL2-NW9): curbside on top, roadside on bottom ---
+flood(430, ft - 8, "F curb", 430, ft - 16)
+flood(555, ft - 8, "F curb", 555, ft - 16)
+flood(430, fb + 8, "F road", 430, fb + 24)
+flood(555, fb + 8, "F road", 555, fb + 24)
+# nose-face floods on the exterior of each V-nose flank
+flood(90, (ft + fmid) / 2, "F nose", 52, (ft + fmid) / 2 - 12, anchor="end")
+flood(90, (fb + fmid) / 2, "F nose", 52, (fb + fmid) / 2 + 12, anchor="end")
 # rear flood
-flood(REAR_X + 8, ft + 70, "F rear", REAR_X + 18, ft + 74, anchor="start")
+flood(REAR_X + 8, fb - 70, "F rear", REAR_X + 18, fb - 66, anchor="start")
 
-# --- awning (curbside, at roofline) + warm strip ---
+# --- awning (curbside / top, at roofline) + warm strip ---
 aw_x1, aw_x2 = REAR_X - 138 * S, REAR_X
-line(aw_x1, fb + 56, aw_x2, fb + 56, stroke=C["load_s"], sw=4, dash="2 0")
-line(aw_x1, fb + 60, aw_x2, fb + 60, stroke="#f59e0b", sw=2.5, dash="4 4")
-text((aw_x1 + aw_x2) / 2, fb + 80,
+line(aw_x1, ft - 46, aw_x2, ft - 46, stroke=C["load_s"], sw=4)
+line(aw_x1, ft - 50, aw_x2, ft - 50, stroke="#f59e0b", sw=2.5, dash="4 4")
+text((aw_x1 + aw_x2) / 2, ft - 62,
      "Fiamma F45s awning case 138\" + warm 24 V LED strip (curbside, at roofline)",
      size=10.5, weight=700, anchor="middle", fill=C["load_s"])
 
-# --- winter heater outlet (exterior) ---
-e(f'<circle cx="{REAR_X - 40}" cy="{fb + 8}" r="6" fill="{C["load"]}" '
+# --- winter heater outlet (exterior, curbside/top) ---
+e(f'<circle cx="{REAR_X - 40}" cy="{ft - 8}" r="6" fill="{C["load"]}" '
   f'stroke="{C["load_s"]}" stroke-width="1.6"/>')
-text(REAR_X - 40, fb + 24, "heater (ext.)", size=10, anchor="middle", fill=C["load_s"])
+text(REAR_X - 40, ft - 18, "heater (ext.)", size=10, anchor="middle", fill=C["load_s"])
 
 # --- 24 V feed hints from cabinet to loads ---
-line(cab_out[0], cab_out[1], frx + frw / 2, fb - frd - 4, stroke=C["w24"], sw=1.4, dash="3 4")
-line(cab_out[0], cab_out[1], led_x, led_y + 8, stroke=C["w24"], sw=1.4, dash="3 4")
+line(cab_out[0], cab_out[1], frx + frw / 2, ft + frd + 4, stroke=C["w24"], sw=1.4, dash="3 4")
+line(cab_out[0], cab_out[1], led_x, led_y, stroke=C["w24"], sw=1.4, dash="3 4")
 text(cab_out[0] + 26, cab_out[1] + 8, "24 V branches", size=10, fill=C["w24"])
 
 # floor dimensions
