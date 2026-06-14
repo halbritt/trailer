@@ -55,7 +55,7 @@ Must-not-miss gates:
 - PS400 feeds the C1000 only; do not mix it with LG strings.
 - Battery side first on MPPTs, then PV.
 - Make battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
-- Verify the Blue Sea 20 A / 80 V UL-489 SKU (`7443` vs `7463`) before ordering/install.
+- Use Blue Sea `7443` for the 20 A / 80 V DC UL-489 breaker; do not use `7463` for this DC branch.
 - Fuse both Orion inputs with DC-rated 48 V gear; label the 12 V cabinet receptacles auxiliary only and keep them isolated from tow-vehicle/OEM trailer wiring.
 - Configure LiFePO4 charge settings and cap combined trailer charge current ≤100 A.
 
@@ -224,9 +224,9 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Order list
 
-Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. The list below stays abbreviated so this build sheet remains the engineering source of truth instead of the purchasing ledger.
+Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. Ancillary electrical/control breakout: **[ancillary-order-sheet.md](ancillary-order-sheet.md)**. The list below stays abbreviated so this build sheet remains the engineering source of truth instead of the purchasing ledger.
 
-- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · Victron Orion-Tr 48/24-16A · **Victron Orion-Tr IP43 48/12-20A — ADDED for nose-bench 12 V receptacles** · **Victron SmartSolar MPPT 250/60-Tr + 250 V-class roof PV disconnect/OCP** · **Victron SmartSolar MPPT 150/35 for deployable 2S LG ground — ORDERED, connector variant pending** · **Victron SmartShunt 500A + Cerbo GX Mk2 — ORDERED, expected 2026-06-15** · the 48 V-side UL-489 breaker (**verify SKU: 7463 vs "7443"**, web-val) · **nose-bench interior transfer grilles/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
+- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · **active Juplaya Victron gear is ORDERED** (SmartSolar 250/60-Tr, SmartSolar 150/35, Orion-Tr 48/24-16A, Orion-Tr IP43 48/12-20A, SmartShunt 500A, Cerbo GX Mk2; SmartShunt/Cerbo expected 2026-06-15) · 250 V-class roof PV disconnect/OCP · Blue Sea 7443 20 A / 80 V DC UL-489 breaker · **nose-bench interior transfer grilles/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 3 gal — ORDERED, delivery June 12–15, 2026; 4th gal conditional** after patch/first-pass coverage for ramp/chock/L-track wear lanes.
 - **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea Overdrive Permanent GPS with hardwire cable — ORDERED · locks (above) including ordered Nu-Set personnel-door hasp/backing · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the nose bench · optional Starlink Mini treated as storage/camp comms · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior lighting: 7 × Super Bright LEDs `VAL2-NW9` floods — ORDERED, 1 × warm 24 V awning strip such as `RA-IP68-80CRI-5m`, optional amber step/courtesy, Blue Sea 8260 switch panel + 6 × Blue Sea 8282 switches, 6 × panel-mount 24 V dimmers, and custom labels**.
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
@@ -272,7 +272,7 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | 26" L-track spacing accepted; floor steel 16" OC and fridge bay depth recorded (rows 10, 17); bike tape geometry deferred in favor of physical bike-in-trailer fit check (row 11); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ◐ measurements closed; physical fit/chock check open |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 3 gal ordered for June 12–15 delivery; 4th gal conditional after patch/first-pass coverage; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked; FRP adhesive compatible with PlexCore or proven by bond patch | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. SmartSolar 250/60-Tr + 250 V-class PV disconnect/OCP, ordered SmartSolar 150/35 ground MPPT, roof solar rail/backing hardware, C1000/PS400 carried as the Juplaya AC island, 7463-vs-7443 breaker check, Henry 887/884, Durabak quantity, nose-bench interior vent/fan/thermostat parts, exterior lighting + cabinet switch/dimmer parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
+| 10 | **Order list frozen** — every SKU (incl. ordered active Victron gear, 250 V-class PV disconnect/OCP, roof solar rail/backing hardware, C1000/PS400 carried as the Juplaya AC island, Blue Sea 7443 DC breaker, Henry 887/884, Durabak quantity, nose-bench interior vent/fan/thermostat parts, exterior lighting + cabinet switch/dimmer parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 

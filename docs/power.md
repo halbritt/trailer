@@ -14,6 +14,8 @@ Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECI
 
 ![Power system physical layout](diagrams/power-physical-layout.svg)
 
+Ancillary electrical/control ordering breakout: [ancillary-order-sheet.md](ancillary-order-sheet.md).
+
 ## Current Verdict
 
 For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads stay on DC:
@@ -23,6 +25,7 @@ For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads s
 - One Victron Orion-Tr 48/24-16A feeds the 24 V house bus for fridge, lights, USB, GPS, and winter heater rough-in.
 - One Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
 - A Victron SmartShunt 500A and Cerbo GX Mk2 are ordered for the active monitoring path; expected arrival is 2026-06-15.
+- Active Juplaya Victron hardware is ordered; remaining electrical buys are ancillary protection, distribution, controls, wiring, and lighting parts.
 - Small 120 VAC loads run from the standalone Anker SOLIX C1000 + PS400 panel.
 - The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice, installed in an upper cabinet above the nose bench, not a Juplaya blocker.
 
@@ -297,7 +300,7 @@ Before energizing:
 - Install the SmartShunt in the battery-negative path before the negative bus, with the load/charger side feeding every trailer load and charger negative.
 - Run VE.Direct from SmartShunt and both SmartSolars to the Cerbo GX Mk2; add VE.Direct-to-USB only if the three built-in ports are not enough after layout.
 - Fuse the Cerbo supply, configure VRM/WiFi, and set alarms for low SOC, low battery voltage, high cabinet temperature, and charger faults.
-- Verify the Blue Sea UL-489 breaker SKU: docs have used 7443, web validation surfaced 7463 for the 20 A / 80 V part.
+- Use Blue Sea 7443 for the 20 A / 80 V DC UL-489 breaker. Do not use Blue Sea 7463 for this DC branch; it is a 2-pole 240 V AC breaker.
 - Fuse/breaker both Orion converter inputs with DC-rated 48 V gear, fuse their outputs for conductor ampacity, and orient the 48/12 Orion screw terminals down if relying on IP43.
 - Label the 12 V cabinet receptacles as auxiliary only; do not backfeed tow-vehicle 12 V, OEM trailer lighting, the 24 V bus, or C1000 charging through them.
 - Configure LiFePO4 charge profiles: absorption 57.6 V, float about 55.2 V, equalization off, temperature compensation off.
@@ -321,7 +324,6 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 
 - Roof drawing: fore-aft solar rails tied into roof bows, panel bracket landings on those rails, Velit opening/shadow line, PV gland, and awning standoff stations.
 - Battery-terminal main OCP selection.
-- Exact Blue Sea 20 A / 80 V UL-489 breaker SKU.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.
 - Exterior lighting final branch wire gauges and penetration/seal details.

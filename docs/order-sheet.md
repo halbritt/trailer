@@ -29,8 +29,8 @@ Rules for the numbers:
 
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
-| Priced committed / ordered / purchased fit-out | $4,333.28 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $11,054.99 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Priced committed / ordered / purchased fit-out | $4,534.73 | Calculated from `LINE` rows where `bucket = Committed`. |
+| Remaining Juplaya buy list | $10,853.54 | Calculated from `LINE` rows where `bucket = Remaining`. |
 | Current Juplaya fit-out planning total | $15,388.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
 | Full visible project list including deferred | $18,537.27 | Current total plus deferred, with the same exclusions. |
@@ -39,13 +39,13 @@ Remaining Juplaya buy list by category:
 
 | Category | Remaining Total |
 | --- | --- |
-| Power / solar / cabinet | $2,553.70 |
+| Power / solar / cabinet | $2,352.25 |
 | Climate / envelope / awning | $4,194.67 |
 | Interior / floor / walls | $2,275.00 |
 | Lighting / switches / security | $1,531.62 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$11,054.99` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,388.27` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,853.54` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,388.27` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -81,12 +81,13 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Exterior lights | 7 | Super Bright LEDs VAL2-NW9 floods | $29.99 | $209.93 | [Super Bright LEDs price signal](https://www.superbrightleds.com/vehicle-lights/off-road-lights/9-rv-trailer-led-light-porch-and-utility-light-1450-lumen-12v) | Seven 4000 K flood/scene fixtures. |
 | ORDERED | Floor track | 2 | 8 ft flanged L-track sections | $80.00 | $160.00 | [US Cargo Control price signal](https://www.uscargocontrol.com/products/96-flanged-airline-style-track-aluminum) | Receipt needed; user has two sections on the way. |
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
+| ORDERED | Power | 1 | Victron Orion-Tr 48/24-16A isolated converter | $201.45 | $201.45 | [NAZ Solar price signal](https://www.solar-electric.com/victron-energy-orion-tr-48-24-16a-dc-dc-converter.html) | Ordered; receipt needed. Required 24 V house-bus converter. |
 | ORDERED | GPS | 1 each | LandAirSea Overdrive Permanent GPS Tracker with hardwire cable | $100.00 | $100.00 | [Actual ordered price](https://landairsea.com/products/landairsea-overdrive) | Ordered for 100.00; expected arrival June 12, 2026. Primary hidden Oakland-storage tracker, hardwired to the 24 V block on a 3 A branch. Subscription required. |
 | ORDERED | Security | 1 | Nu-Set 8-1/4 in high-security trailer-door puck hasp | $20.00 | $20.00 | [Actual ordered price](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | User ordered Nu-Set RV high-security hasp for puck lock for 20.00. Source says hardware is not included. |
 | ORDERED | Battery monitor | 1 | Victron SmartShunt 500A | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/battery-monitors/smart-battery-shunt) | Ordered; expected June 15, 2026. Replaces the LiTime shunt as the active 48 V battery monitor and feeds Cerbo GX Mk2 via VE.Direct. |
 | ORDERED | Monitoring | 1 | Victron Cerbo GX Mk2 | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/communication-centres/cerbo-gx) | Ordered; expected June 15, 2026. System monitor/controller for SmartSolar MPPTs and SmartShunt now, and VE.Bus MultiPlus-II later. |
 
-Committed / purchased subtotal: **$4,333.28**.
+Committed / purchased subtotal: **$4,534.73**.
 
 ## Remaining Juplaya Buys
 
@@ -94,21 +95,20 @@ Committed / purchased subtotal: **$4,333.28**.
 
 | Status | Qty | Item | Unit | Ext | Basis / Source | Notes |
 | --- | ---: | --- | ---: | ---: | --- | --- |
-| BUY NOW | 1 | Victron Orion-Tr 48/24-16A isolated converter | $201.45 | $201.45 | [NAZ Solar price signal](https://www.solar-electric.com/victron-energy-orion-tr-48-24-16a-dc-dc-converter.html) | Required 24 V house bus converter. |
-| BUY NOW | 1 | Blue Sea 5026 12-circuit ST Blade fuse block | $55.00 | $55.00 | Allowance | 24 V branch distribution; 32 V max is fine downstream of the converter only. |
-| BUY NOW | 1 | Blue Sea 7443 UL-489 20 A / 80 V breaker or verified equivalent | $51.26 | $51.26 | [Blue Sea official page](https://www.bluesea.com/products/7443/) | Docs previously had 7463-vs-7443 uncertainty; verify SKU before ordering. |
+| BUY NOW | 1 | Blue Sea 5026 12-circuit ST Blade fuse block | $55.00 | $55.00 | [Allowance](https://www.bluesea.com/products/5026/ST_Blade_Fuse_Block_-_12_Circuits_with_Negative_Bus_and_Cover) | 24 V branch distribution downstream of the Orion-Tr only; 32 V max rating is acceptable there. Included in ancillary-order-sheet.md. |
+| BUY NOW | 1 | Blue Sea 7443 UL-489 20 A / 80 V DC breaker | $51.26 | $51.26 | [Blue Sea official page](https://www.bluesea.com/products/7443/UL-489_Circuit_Breaker_-_20A_Flat_Rocker) | Use 7443 for the 20 A / 80 V DC UL-489 breaker. Do not use 7463 here; it is a 2-pole 240 V AC breaker. Included in ancillary-order-sheet.md. |
 | BUY NOW | 1 | Battery-terminal Class-T main OCP fuse + holder | $175.00 | $175.00 | Allowance | Main 48 V fault protection. Do not substitute 32 V automotive gear. |
 | BUY NOW | 1 lot | DC-rated protection for MPPTs Velit branch Orion inputs/outputs | $275.00 | $275.00 | Allowance | Fuse/breaker values wait on measured wire runs. |
 | BUY NOW | 1 lot | Roof 250 V PV disconnect + ground 150 V PV disconnect/OCP | $180.00 | $180.00 | Allowance | Roof 3S needs 250 V-class hardware. |
-| BUY NOW | 1 lot | Power wiring lugs heat shrink busbars labels loom | $450.00 | $450.00 | Allowance | Covers cabinet wiring and branch terminations not final gauge-certification. |
+| BUY NOW | 1 lot | Power wiring lugs heat shrink busbars labels loom | $450.00 | $450.00 | Allowance | Covers bench wiring, branch terminations, busbars, adhesive heat shrink, labels, loom, clamps, and spare ferrules not final gauge-certification. Break out against ancillary-order-sheet.md during cart build. |
 | BUY AFTER GATE | 1 lot | Roof solar NXT rails, spacers, backing, and through-fasteners | $500.00 | $500.00 | Allowance | Two fore-aft NXT rails plus possible third rail, 1/4 in aluminum spacer pads at bow crossings if needed, EPDM/neoprene isolation or high-durometer spacer material, backing plates/crush sleeves, through-fasteners, clips, gland, adhesive/bedding, and sealant consumables. Itemized breakout with vendor pricing: solar-mounting-order-sheet.md (~$412 parts, inside allowance; rails will-called from a local branch — decided 2026-06-10, no LTL freight). |
 | FAB/SOURCE | 1 | Power cabinet structure mounting board service panels | $250.00 | $250.00 | Allowance | Does not include battery/electronics above. |
-| BUY NOW | 1 set | Cabinet ventilation: 24 V fan thermostat transfer grilles/filter | $125.00 | $125.00 | Allowance | Cabin-side intake/exhaust plan no through-wall vent for now. |
-| BUY NOW | 1 set | Fused cigarette-lighter receptacles for cabinet 12 V | $40.00 | $40.00 | Allowance | Auxiliary only not a distributed 12 V rail. |
-| BUY NOW | 1 | Scanstrut SC-USB-F3 Flip Pro Max dual USB-C | $50.99 | $50.99 | [Defender price signal](https://defender.com/en_us/scanstrut-flip-pro-max-dual-usb-c-charge-socket-sc-usb-f3) | 24 V input unlocks full USB-C output. |
+| BUY NOW | 1 set | Cabinet ventilation: 24 V fan thermostat transfer grilles/filter | $125.00 | $125.00 | Allowance | Cabin-side intake/exhaust plan; no through-wall vent for now. Included in ancillary-order-sheet.md. |
+| BUY NOW | 1 set | Fused 12 V cabinet receptacles | $40.00 | $40.00 | [Allowance](https://www.bluesea.com/products/1011/Dash_Socket_12V_DC_with_Watertight_Cap) | Default target is 2x Blue Sea 1011-style 12 V sockets downstream of the 48/12 Orion, with local fuse/labels. Auxiliary only; not a distributed 12 V rail. Included in ancillary-order-sheet.md. |
+| BUY NOW | 1 | Scanstrut SC-USB-F3 Flip Pro Max dual USB-C | $50.99 | $50.99 | [Defender price signal](https://defender.com/en_us/scanstrut-flip-pro-max-dual-usb-c-charge-socket-sc-usb-f3) | 24 V input unlocks full USB-C output. Spec reference and buy note included in ancillary-order-sheet.md. |
 | BUY NOW | 1 lot | 4 AWG tongue pre-wire + Anderson connector for future truck charging | $200.00 | $200.00 | Allowance | Pull while walls are open; active charging hardware deferred. |
 
-Power / solar / cabinet remaining subtotal: **$2,553.70**.
+Power / solar / cabinet remaining subtotal: **$2,352.25**.
 
 ### Climate / envelope / awning
 
@@ -152,10 +152,10 @@ Interior / floor / walls remaining subtotal: **$2,275.00**.
 | Status | Qty | Item | Unit | Ext | Basis / Source | Notes |
 | --- | ---: | --- | ---: | ---: | --- | --- |
 | BUY NOW | 1 lot | Interior task/main lighting strips channels | $250.00 | $250.00 | Allowance | 24 V preferred; final strip SKU still open. Branch dimmer counted separately. |
-| BUY NOW | 1 | Super Bright LEDs RA-IP68-80CRI-5m 3000 K 24 V awning strip | $109.99 | $109.99 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/waterproof-led-strips/5m-white-led-strip-light-radiant-series-led-tape-light-24v-ip68-waterproof) | Separate warm camp light not another flood. |
-| BUY NOW | 1 | Blue Sea 8260 6-position Contura mounting panel | $17.68 | $17.68 | [Fisheries Supply price signal](https://www.fisheriessupply.com/blue-sea-systems-contura-switch-mounting-panels/8260) | Mount in thin inset plate or rabbet thick cabinet face. |
-| BUY NOW | 6 | Blue Sea 8282 SPST OFF-ON Contura switches | $14.00 | $84.00 | [Vanlife Outfitters price signal](https://www.vanlifeoutfitters.com/products/blue-sea-8282-contura-switch-spst-off-on-black) | INTERIOR CURB FLOOD ROAD FLOOD NOSE FLOOD REAR FLOOD AWNING. |
-| BUY AFTER GATE | 6 | Panel-mount 24 V lighting dimmers | $45.00 | $270.00 | [Allowance](https://www.superbrightleds.com/led-strips-and-bars/ldk-8a-12-24-volt-dc-single-color-led-dimmer-single-color-led-dimmer) | Preferred finished-cabinet controls; exact SKU TBD after panel mockup and VAL2-NW9 bench test. Blue Sea 7509 DeckHand is the robust marine reference; cheap PWM knob dimmers remain bench-test/prototype parts. |
+| BUY NOW | 1 | Super Bright LEDs RA-IP68-80CRI-5m 3000 K 24 V awning strip | $109.99 | $109.99 | [Super Bright LEDs price signal](https://www.superbrightleds.com/led-strips-and-bars/waterproof-led-strips/5m-white-led-strip-light-radiant-series-led-tape-light-24v-ip68-waterproof) | Separate warm camp light, not another flood. Included in ancillary-order-sheet.md. |
+| BUY NOW | 1 | Blue Sea 8260 6-position Contura mounting panel | $17.68 | $17.68 | [Fisheries Supply price signal](https://www.fisheriessupply.com/blue-sea-systems-contura-switch-mounting-panels/8260) | Mount in thin inset plate or rabbet thick bench face; Blue Sea official spec accepts panel thicknesses up to 0.38 in. Included in ancillary-order-sheet.md. |
+| BUY NOW | 6 | Blue Sea 8282 SPST OFF-ON Contura switches | $14.00 | $84.00 | [Vanlife Outfitters price signal](https://www.vanlifeoutfitters.com/products/blue-sea-8282-contura-switch-spst-off-on-black) | INTERIOR, CURB FLOOD, ROAD FLOOD, NOSE FLOOD, REAR FLOOD, AWNING. Included in ancillary-order-sheet.md. |
+| BUY AFTER GATE | 6 | Panel-mount 24 V lighting dimmers | $45.00 | $270.00 | [Allowance](https://www.superbrightleds.com/led-strips-and-bars/ldk-8a-12-24-volt-dc-single-color-led-dimmer-single-color-led-dimmer) | Buy after panel mockup and VAL2-NW9 bench test. Blue Sea 7509 DeckHand is the robust marine reference; cheap PWM knob dimmers remain bench-test/prototype parts. Included in ancillary-order-sheet.md. |
 | BUY NOW | 1 set | Custom switch labels / label stock | $25.00 | $25.00 | Allowance | Blue Sea generic labels may not cover these names. |
 | BUY NOW | 1 lot | Lighting branch wire glands sealant heat shrink | $140.00 | $140.00 | Allowance | Exterior branch wiring and penetrations. |
 | BUY NOW | 1 set | Security locks: Proven 2178, 2 keyed-alike PACLOCK UCS-7A pucks, Trimax TCL65 | $589.95 | $589.95 | [Proven + Trimax + PACLOCK high-side allowance](https://paclock.com/product/7-series/) | Trailer has a 2 in coupler; Proven 2516 is for 2-5/16 in and is not the correct default. Buy two PACLOCK 7-Series flat-back puck locks in the same UCS keyed-alike/U-PICK code: one rear ramp, one Nu-Set personnel-door hasp. Match the truck's existing PACLOCK U-PICK code only if those truck locks are UCS; PRO/SR/RD families do not automatically share codes. Prefer stainless bodies if the storage spot is exposed to Bay Area wet/salt; aluminum UCS-7A is acceptable if budget wins. Verify the ramp latch is puck-compatible; if not, add a puck hasp or use a PACLOCK keyed-alike UCS padlock as the fallback. |
@@ -171,7 +171,7 @@ Lighting / switches / security remaining subtotal: **$1,531.62**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$11,054.99**.
+Remaining Juplaya subtotal: **$10,853.54**.
 
 ## Deferred / Not Juplaya
 
