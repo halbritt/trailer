@@ -38,7 +38,7 @@ Fastener diameter (1/4-20 vs 5/16-18), length, backing style (through-bolt vs pl
 
 | Qty | Item | Sizing trigger | Ext (signal) | Vendor / price signal | Notes |
 |---:|---|---|---:|---|---|
-| 16 | SS hex bolts, 1/4-20 or 5/16-18, ~1.5–2 in + nylocks + fender washers | Bolt dia + stack height from G02 | $40.00 | [Home Depot Everbilt packs](https://www.homedepot.com/p/Everbilt-1-4-in-20-x-2-in-Stainless-Steel-Hex-Bolt-5-Pack-812240/302007776) / McMaster | ~$35–45 in retail packs; cheaper per-piece at fastener houses. Anti-seize on all stainless. |
+| 16 | SS hex bolts, 1/4-20 or 5/16-18, **2-1/2 in** + nylocks + fender washers | Bolt dia + 1.75 in temporary stack assumption | $40.00 | Home Depot Everbilt packs / McMaster | For a 1.75 in assumed stack, 2 in is too short once washers/backing/nylock/thread protrusion are included. Buy 3 in only if the backing stack gets noticeably thicker. Anti-seize on all stainless. |
 | 1 pk | Bonded sealing washers, 18-8 SS/EPDM, 100-pk | Bolt dia | $11.55 | [BCP Fasteners](https://bcpfasteners.com/products/100-qty-1-4-stainless-steel-epdm-bonded-sealing-neoprene-rubber-washers-14-bcp640) (McMaster `94709A317` equiv.) | Under exposed heads, then cap with Henry 884. |
 | 1 | 6061 aluminum bar, 1/4 in × 2 in × 48 in | Pad footprint + roof crown from G02 | $33.00 | [Metals4U](https://www.metals4uonline.com/aluminum-flat-bar-6061-1_4thx2in/) (McMaster ~+20%) | One 48 in bar cuts 12–16 short spacer pads. |
 | 1 | EPDM strip, 1/16 in × 1 in × 10 ft, 60A | Pad footprint | $14.66 | [Fix Industrial Supply](https://www.fixsupply.com/bulk-rs-e60-60-epdm-rubber-strip-60a-1-16-thick-x-1-wide-x-10-ft-long) (McMaster `8610N` equiv.) | Isolation/bedding layer only — not the structural spacer. |
