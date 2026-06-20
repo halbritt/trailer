@@ -1,6 +1,6 @@
 # Solar Mounting Order Sheet
 
-Date: 2026-06-10. Itemized breakout of the [order-sheet.md](order-sheet.md) line **"Roof solar NXT rails, spacers, backing, and through-fasteners" ($500 allowance, BUY AFTER GATE)**. Spec source: [solar_mounting.md](solar_mounting.md). Prices are June 2026 web price signals, pre-tax/pre-shipping unless noted.
+Date: 2026-06-10. Itemized breakout of the [order-sheet.md](order-sheet.md) line **"Roof solar NXT rails, spacers, backing, and through-fasteners" ($500 allowance, BUY AFTER GATE)**. Spec source: [solar_mounting.md](solar_mounting.md). In-store Home Depot spacer/gasket shortlist: [solar-rail-standoff-home-depot-list.md](solar-rail-standoff-home-depot-list.md) / [CSV](solar-rail-standoff-home-depot-list.csv). Prices are June 2026 web price signals, pre-tax/pre-shipping unless noted.
 
 **Finish decision: mill.** Mill rail is $26.20 vs $41.93 dark and the rail sits under the panels on a coated roof; nothing here is a visual part. All SKUs below are the mill/cheapest-equivalent variants.
 

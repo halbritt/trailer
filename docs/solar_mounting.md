@@ -48,7 +48,7 @@ Rail overhang rule: a small **rail-only** tail past the rear/top rail is accepta
 
 ## Primary Buy List
 
-Itemized order sheet with current vendor pricing: [solar-mounting-order-sheet.md](solar-mounting-order-sheet.md).
+Itemized order sheet with current vendor pricing: [solar-mounting-order-sheet.md](solar-mounting-order-sheet.md). Home Depot in-store standoff/gasket shortlist: [solar-rail-standoff-home-depot-list.md](solar-rail-standoff-home-depot-list.md) / [CSV](solar-rail-standoff-home-depot-list.csv).
 
 | Qty | Part / family | Candidate part numbers | Notes |
 |---:|---|---|---|
