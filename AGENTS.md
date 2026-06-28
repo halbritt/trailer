@@ -61,3 +61,16 @@ Open design questions run through **striatum** multi-model panels (claude/codex/
 - Budget discipline: `extended_price` on counted `LINE` rows is the budget field; keep high-side estimates until a real receipt replaces them.
 - Inches are the build unit in docs; the measurement pass prefers mm. Keep both where ambiguity hurts.
 - The LiTime 5 kW AIO is a **return item** — do not design it back in. The built-in inverter/charger is deferred for Juplaya (D002).
+
+<!-- BEGIN PROXIMAL PLANE TRACKING -->
+## Plane Tracking
+
+This repository is represented in the local/private Plane workspace `Proximal`.
+
+- Plane project: `Trailer` (`TRAILER`)
+- Plane URL: `https://proximal.tail0ecc2e.ts.net:10000/`
+- GitHub repo: `https://github.com/halbritt/trailer`
+- Use Plane work items for multi-agent planning, claims, submitted artifacts, reviews, and acceptance decisions.
+- When updating Plane, include the repo, branch/worktree, `run_id`, `base_sha`, artifact links, verification evidence, and authority scope in the work item description or comments.
+- Do not commit Plane API tokens. Local tokens and MCP env files live outside git under `~/.config/plane/`.
+<!-- END PROXIMAL PLANE TRACKING -->
