@@ -68,6 +68,7 @@ Open design questions run through **striatum** multi-model panels (claude/codex/
 This repository is represented in the local/private Plane workspace `Proximal`.
 
 - Plane project: `Trailer` (`TRAILER`)
+- Issue tracker: Plane (`Proximal` workspace), project `Trailer` (`TRAILER`).
 - Plane URL: `https://proximal.tail0ecc2e.ts.net:10000/`
 - GitHub repo: `https://github.com/halbritt/trailer`
 - Use Plane work items for multi-agent planning, claims, submitted artifacts, reviews, and acceptance decisions.
