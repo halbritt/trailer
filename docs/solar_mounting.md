@@ -139,7 +139,7 @@ Before roof drilling, test one `CCLAMPM1` / `CCLAMPD1` clamp on an LG frame. The
 5. Correct any unacceptable array support, clamp, overhang, or wiring condition found during inspection.
 6. Deburr and corrosion-protect exposed or welded metal, then reseal every disturbed fastener and penetration.
 7. Hose-test the Velit curb, PV gland, rail penetrations, and drainage before insulation or ceiling closure.
-8. Apply the approved roof coating only after the penetration and adhesion tests pass.
+8. The Henry 887 roof coating was completed by owner report on 2026-07-10. For the still-open Velit reinforcement, remove or protect coating around hot work, then restore the compatible Henry 884/887 system only after corrosion protection, penetration repair, and the hose test pass.
 9. Reinstall and label the array and roof wiring after coating cure, then record the final as-built drawing.
 10. Inspect the roof, array, and Velit again after the loaded road shakedown.
 

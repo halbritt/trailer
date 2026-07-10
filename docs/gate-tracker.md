@@ -50,7 +50,7 @@ Status legend:
 | Gate | Status | Needed to close | Blocks | Source |
 |---|---|---|---|---|
 | B01 Track-height sit test | Open | Mock 31 in sleeping surface; confirm bed row and shelf/window relationship | Wall E-track drilling | [juplaya-trailer-context.md](juplaya-trailer-context.md) design-freeze item 3 |
-| B02 Roof and floor patches | Open | 48-hour Henry adhesion patch; PlexCore adhesion and fuel-drip patch | Roof coating and Durabak floor coating | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
+| B02 Roof and floor patches | Open | Henry 887 roof coating completed by owner report on 2026-07-10; adhesion-test evidence is not separately recorded. The Velit reinforcement will require local coating removal and restoration. PlexCore adhesion and fuel-drip patches remain open for Durabak. | Roof repair/recoat and Durabak floor coating | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | B03 Hose test | Open | Hose-test roof rails, Velit curb, PV gland, and penetrations | Foam and ceiling closure | [solar_mounting.md](solar_mounting.md) |
 | B04 Fridge thermal check | Open | 50 mm clearance, forced through-flow, desert-sun bay temperature check | Juplaya fridge use | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | B05 Power commissioning | Open | PV segregation, OCP, charge profiles, charge-current cap, optional C1000 top-up test, protected feeder voltage checks, and shallow-cabinet temperature test | Shakedown | [power.md](power.md) |

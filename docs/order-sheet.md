@@ -29,8 +29,8 @@ Rules for the numbers:
 
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
-| Priced committed / ordered / purchased fit-out | $5,734.73 | Calculated from `LINE` rows where `bucket = Committed`. |
-| Remaining Juplaya buy list | $10,853.54 | Calculated from `LINE` rows where `bucket = Remaining`. |
+| Priced committed / ordered / purchased fit-out | $6,103.73 | Calculated from `LINE` rows where `bucket = Committed`. |
+| Remaining Juplaya buy list | $10,484.54 | Calculated from `LINE` rows where `bucket = Remaining`. |
 | Current Juplaya fit-out planning total | $16,588.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
 | Deferred Phase 2 / winter list | $1,949.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
 | Full visible project list including deferred | $18,537.27 | Current total plus deferred, with the same exclusions. |
@@ -40,12 +40,12 @@ Remaining Juplaya buy list by category:
 | Category | Remaining Total |
 | --- | --- |
 | Power / solar / cabinet | $2,352.25 |
-| Climate / envelope / awning | $4,194.67 |
+| Climate / envelope / awning | $3,825.67 |
 | Interior / floor / walls | $2,275.00 |
 | Lighting / switches / security | $1,531.62 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,853.54` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$16,588.27` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,484.54` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$16,588.27` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -83,12 +83,13 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
 | ORDERED | Power | 1 | Victron Orion-Tr 48/24-16A isolated converter | $201.45 | $201.45 | [NAZ Solar price signal](https://www.solar-electric.com/victron-energy-orion-tr-48-24-16a-dc-dc-converter.html) | Ordered; receipt needed. Required 24 V house-bus converter. |
 | ORDERED | GPS | 1 each | LandAirSea Overdrive Permanent GPS Tracker with hardwire cable | $100.00 | $100.00 | [Actual ordered price](https://landairsea.com/products/landairsea-overdrive) | Ordered for 100.00; expected arrival June 12, 2026. Primary hidden Oakland-storage tracker, hardwired to the 24 V block on a 3 A branch. Subscription required. |
+| INSTALLED | Roof coating | 1 | Henry 887 Tropi-Cool White 100% Silicone Roof Coating 4.75 gal | $369.00 | $369.00 | [Prior allowance; receipt needed](https://www.homedepot.com/p/Henry-887-Tropi-Cool-White-100-Silicone-Reflective-Roof-Coating-4-75-gal-HE887HS018/205049553) | Roof coating completed by owner report on 2026-07-10. Retain material or obtain matching Henry 884/887 products for restoration after the still-open Velit reinforcement work. |
 | ORDERED | Inverter / shore | 1 | Victron MultiPlus-II 48/3000/35-50 120V | $1,200.00 | $1,200.00 | [Receipt needed](https://www.victronenergy.com/inverters-chargers/multiplus-ii) | En route as of 2026-07-10; receipt and arrival date needed. Physical location, protected DC route, disconnect, and AC distribution remain gated. |
 | ORDERED | Security | 1 | Nu-Set 8-1/4 in high-security trailer-door puck hasp | $20.00 | $20.00 | [Actual ordered price](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | User ordered Nu-Set RV high-security hasp for puck lock for 20.00. Source says hardware is not included. |
 | ORDERED | Battery monitor | 1 | Victron SmartShunt 500A | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/battery-monitors/smart-battery-shunt) | Ordered; expected June 15, 2026. Replaces the LiTime shunt as the active 48 V battery monitor and feeds Cerbo GX Mk2 via VE.Direct. |
 | ORDERED | Monitoring | 1 | Victron Cerbo GX Mk2 | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/communication-centres/cerbo-gx) | Ordered; expected June 15, 2026. System monitor/controller for SmartSolar MPPTs and SmartShunt now, and VE.Bus MultiPlus-II later. |
 
-Committed / purchased subtotal: **$5,734.73**.
+Committed / purchased subtotal: **$6,103.73**.
 
 ## Remaining Juplaya Buys
 
@@ -115,7 +116,6 @@ Power / solar / cabinet remaining subtotal: **$2,352.25**.
 
 | Status | Qty | Item | Unit | Ext | Basis / Source | Notes |
 | --- | ---: | --- | ---: | ---: | --- | --- |
-| BUY NOW | 1 | Henry 887 Tropi-Cool White 100% Silicone Roof Coating 4.75 gal | $369.00 | $369.00 | [Home Depot price signal](https://www.homedepot.com/p/Henry-887-Tropi-Cool-White-100-Silicone-Reflective-Roof-Coating-4-75-gal-HE887HS018/205049553) | One pail unless measured roof drawing proves less. |
 | BUY NOW | 6 | Henry 884 Tropi-Cool silicone sealant tubes | $21.97 | $131.82 | [Home Depot price signal](https://www.homedepot.com/p/206030008) | Penetrations curbs fasteners transitions. |
 | BUY NOW | 1 lot | Roof coating prep/rollers/cleaner/PPE | $120.00 | $120.00 | Allowance | Includes adhesion patch supplies. |
 | BUY AFTER GATE | 1 job | Closed-cell spray foam | $1,000.00 | $1,000.00 | Allowance | Confirm clean/dry/rust-free steel before closure. |
@@ -129,7 +129,7 @@ Power / solar / cabinet remaining subtotal: **$2,352.25**.
 | BUY AFTER GATE | 2 | HRV 4 in rough-in ports/caps + pull string | $0.00 | $0.00 | Zeroed until parts are selected | Cost intentionally held at zero for now. |
 | BUY AFTER GATE | 1 set | Heater 3 in duct rough-in + 24 V feed + CO detector | $120.00 | $120.00 | Allowance | LF Bros N4 itself deferred. |
 
-Climate / envelope / awning remaining subtotal: **$4,194.67**.
+Climate / envelope / awning remaining subtotal: **$3,825.67**.
 
 ### Interior / floor / walls
 
@@ -172,7 +172,7 @@ Lighting / switches / security remaining subtotal: **$1,531.62**.
 
 General consumables contingency remaining subtotal: **$500.00**.
 
-Remaining Juplaya subtotal: **$10,853.54**.
+Remaining Juplaya subtotal: **$10,484.54**.
 
 ## Deferred / Not Juplaya
 
