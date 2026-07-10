@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Generate the Juplaya trailer POWER SYSTEM PHYSICAL LAYOUT diagram (SVG).
+"""Generate the trailer POWER SYSTEM PHYSICAL LAYOUT diagram (SVG).
 
 This is a *physical layout* (where the gear sits), not the electrical schematic
-(see docs/diagrams/power-overview.* for the schematic). Three scale plan panels:
+(see docs/diagrams/power-wiring-*.tex for the protected wiring). It has three
+panels:
 
   * Roof plan   - Velit 2000R + the roof 3x LG455 (3S) string and PV gland drop.
-  * Floor plan  - footprint with the nose power cabinet, fridge bay, exterior
-                  flood/awning positions, and the 24 V load locations.
-  * Cabinet     - the nose-cabinet contents and the 48 V spine (contents +
-                  required connections; exact internal stationing is an open gate).
+  * Floor plan  - footprint with the street-side battery bench, shallow high-wall
+                  cabinet, fridge bay, exterior flood/awning positions, and loads.
+  * Enclosure   - conceptual elevation of the split bench/cabinet and protected
+                  feeder boundary; exact dimensions and component fit are G12.
 
 Per the owner's request the standalone Anker SOLIX C1000 + PS400 AC island and the
 optional ground-mounted 2S LG PV (with its SmartSolar 150/35) are intentionally
@@ -126,9 +127,9 @@ rect(0, 0, W, H, fill=C["page"], stroke="none")
 rect(20, 20, W - 40, H - 40, fill=C["sheet"], stroke=C["sheet_stroke"], sw=1.5, rx=10)
 
 # Title
-text(45, 60, "Juplaya trailer - power system physical layout", size=27, weight=700)
+text(45, 60, "Trailer - power system physical layout", size=27, weight=700)
 text(45, 86, "Plan view, looking down. Nose/front at left, rear/ramp at right. "
-             "Curbside = passenger / awning / door side. Scale 1 in = 4 px (plan panels).",
+             "Curbside = passenger / awning / door side. As-built overhang and split enclosure are conceptual pending measurements.",
      size=14, fill=C["muted"])
 
 # Shared datum
@@ -148,32 +149,40 @@ text(45, 110, "A  Roof plan", size=17, weight=700, fill=C["pv_s"])
 poly([(REAR_X, rt), (REAR_X, rb), (r_taper, rb), (r_tip, rmid), (r_taper, rt)],
      fill="#ffffff", stroke=C["wall"], sw=4)
 
-# 3x LG455 panels (landscape), aft field, each 41.02 in fore-aft x 83.07 in across
+# 3x LG455 panels (landscape), as-built array extends past the rear roof edge.
 p_across = 83.07 * S
 py0 = rmid - p_across / 2
 p_len = 41.02 * S
-x_right = REAR_X - 6
+# The exact overhang is an open as-built measurement; the offset is illustrative.
+x_right = REAR_X + 12
 for i in range(3):
     x0 = x_right - (i + 1) * p_len
     rect(x0, py0, p_len, p_across, fill=C["pv"], stroke=C["pv_s"], sw=1.6, rx=2)
     text(x0 + p_len / 2, rmid, f"LG455 #{i+1}", size=12, weight=700,
          anchor="middle", fill=C["pv_s"])
 text((x_right - 3 * p_len + x_right) / 2, py0 - 10,
-     "Roof PV - 3x LG455 in 3S (1365 W) -> SmartSolar 250/60-Tr",
+     "Roof PV - installed LG455 3S -> SmartSolar 250/60-Tr",
      size=12.5, weight=700, anchor="middle", fill=C["pv_s"])
+line(REAR_X, py0 - 2, REAR_X, py0 + p_across + 2, stroke=C["prot_s"], sw=1.4, dash="5 4")
+text(REAR_X - 6, py0 + 16, "rear roof edge", size=9.5, weight=700,
+     anchor="end", fill=C["prot_s"])
+text(REAR_X - 6, py0 + 31, "overhang: measure as-built", size=9,
+     anchor="end", fill=C["prot_s"])
 
-# Velit at the nose section of the roof (26.4 across x 26 fore-aft)
-v_aft = REAR_X - 125 * S                 # 125 in aft clearance line to rear rail
+# Velit at the nose section of the roof. Station is illustrative until measured.
 v_len = 26 * S
 v_w = 26.4 * S
-vx = v_aft - v_len
+vx = r_tip + 38
 rect(vx, rmid - v_w / 2, v_len, v_w, fill=C["load"], stroke=C["load_s"], sw=1.6, rx=2)
 text(vx + v_len / 2, rmid - 4, "Velit", size=12, weight=700, anchor="middle", fill=C["load_s"])
 text(vx + v_len / 2, rmid + 12, "2000R", size=11, anchor="middle", fill=C["load_s"])
 
-# 125 in aft clearance dimension (AC back edge -> rear rail = solar field)
-dimh(rb + 26, v_aft, REAR_X,
-     '125" AC-aft -> rear rail = solar field  (3 panels need ~123-124")', above=False)
+# Field result supersedes the paper fit assumption.
+text((vx + v_len + REAR_X) / 2, rb + 26,
+     "As built: three panels did not fit fully behind the Velit; record exact overhang after wash",
+     size=11, weight=700, anchor="middle", fill=C["prot_s"])
+text(vx + v_len / 2, rmid + v_w / 2 + 18,
+     "installed; roof-support repair pending", size=9.5, anchor="middle", fill=C["load_s"])
 # roof width
 dimv(REAR_X + 26, rt, rb, '84-7/8" roof', side="right")
 
@@ -185,7 +194,7 @@ text(gx - 10, gy - 12, "PV gland", size=11, weight=700, anchor="end", fill=C["pv
 # drop arrow toward floor plan cabinet
 line(gx, gy, gx, rb + 8, stroke=C["pv_s"], sw=2.2, dash="6 5")
 poly([(gx - 5, rb + 8), (gx + 5, rb + 8), (gx, rb + 18)], fill=C["pv_s"], stroke="none")
-text(gx + 8, rb + 16, "3S down-lead to nose cabinet (250/60 MPPT)",
+text(gx + 8, rb + 16, "3S down-lead to shallow high-wall cabinet (250/60 MPPT)",
      size=11, weight=700, fill=C["pv_s"])
 
 # orientation labels
@@ -211,14 +220,20 @@ poly([(REAR_X, ft), (REAR_X, fb), (f_taper, fb), (f_tip, fmid), (f_taper, ft)],
 line(f_tip + 6, fmid, REAR_X, fmid, stroke=C["muted"], sw=1, dash="9 7")
 text(520, fmid + 13, "centerline", size=9, anchor="middle", fill=C["muted"])
 
-# --- nose power BENCH: ~18" tall, fills the nose, holds ALL power gear + battery (on edge) ---
-bench_back = f_taper + 8 * S
-poly([(f_tip, fmid), (f_taper, ft), (bench_back, ft), (bench_back, fb), (f_taper, fb)],
-     fill=C["cab"], stroke=C["cab_s"], sw=1.6, dash="5 3", op=0.95)
-cab_out = (bench_back, fmid)               # 24 V feed origin
-line(168, 856, bench_back, fmid + 22, stroke=C["cab_s"], sw=1, dash="3 3")
-text(168, 862, "NOSE POWER BENCH (~18\" tall) - all power gear + battery on edge -> detail C",
-     size=10, weight=700, anchor="start", fill=C["cab_s"])
+# --- split power enclosure: low street-side battery bench + high shallow cabinet ---
+bench_x, bench_y, bench_w, bench_h = f_taper + 8, fb - 70, 108, 54
+rect(bench_x, bench_y, bench_w, bench_h, fill=C["bat"], stroke=C["bat_s"],
+     sw=1.6, rx=3, dash="5 3", op=0.95)
+text(bench_x + bench_w / 2, bench_y + 23, "BATTERY BENCH", size=10, weight=700,
+     anchor="middle", fill=C["bat_s"])
+text(bench_x + bench_w / 2, bench_y + 39, "street-side; size TBD", size=8.5,
+     anchor="middle", fill=C["muted"])
+
+cab_x, cab_y, cab_w, cab_h = f_taper + 8, fb - 15, 190, 10
+rect(cab_x, cab_y, cab_w, cab_h, fill=C["cab"], stroke=C["cab_s"], sw=1.6,
+     rx=2, dash="4 3")
+text(cab_x + cab_w / 2, cab_y + 8, "HIGH CABINET - WALL PLANE", size=6.5,
+     weight=700, anchor="middle", fill=C["cab_s"])
 
 # --- side door (curbside / top), 30 in opening, 98 in from rear ---
 door_aft = REAR_X - 98 * S
@@ -235,9 +250,9 @@ frw = 37.9 * S
 frd = 20.9 * S
 rect(frx, ft, frw, frd, fill=C["load"], stroke=C["load_s"], sw=1.6, rx=2)
 fcy = ft + frd / 2
-text(frx + frw / 2, fcy - 8, "Dometic CFX3-95DZ", size=12, weight=700, anchor="middle", fill=C["load_s"])
-text(frx + frw / 2, fcy + 6, "37.9\" x 20.9\" (24 V)", size=10, anchor="middle", fill=C["load_s"])
-text(frx + frw / 2, fcy + 20, "+ lid swing", size=9, anchor="middle", fill=C["muted"])
+text(frx + frw * 0.66, fcy - 8, "Dometic CFX3-95DZ", size=12, weight=700, anchor="middle", fill=C["load_s"])
+text(frx + frw * 0.66, fcy + 6, "37.9\" x 20.9\" (24 V)", size=10, anchor="middle", fill=C["load_s"])
+text(frx + frw * 0.66, fcy + 20, "+ lid swing", size=9, anchor="middle", fill=C["muted"])
 
 # --- bikes: 26" OC straddling the centerline (one rail roadside, one curbside), near rear ---
 def draw_bike(x_front, x_rear, y, bar_x, bar_w, label):
@@ -260,12 +275,12 @@ draw_bike(258, 602, bikeB_y, 338, 34 * S, "CRF450RL")
 line(322, bikeA_y, 246, bikeA_y, stroke=C["muted"], sw=1)
 line(258, bikeB_y, 246, bikeB_y, stroke=C["muted"], sw=1)
 dimv(246, bikeA_y, bikeB_y, '26" OC', side="left")
-text(404, fb - 6, "bikes: nose-forward, via rear ramp - one rail roadside, one curbside (straddle CL)",
+text(404, fb + 54, "bikes: nose-forward, via rear ramp - one rail roadside, one curbside (straddle CL)",
      size=10, anchor="middle", fill=C["muted"])
 # bar-overlap callout (the curbside bike's bars sweep up over the top-mounted fridge)
 line(470, fcy + frd / 2 + 4, 392, fcy + frd / 2 - 16, stroke=C["slate"], sw=1, dash="3 3")
 text(560, fcy + frd / 2 + 2, "bars sweep over fridge", size=9.5, weight=700, anchor="middle", fill=C["slate"])
-text(560, fcy + frd / 2 + 16, "(clear at bar height ~30\"+ vs 18.6\")", size=8.5, anchor="middle", fill=C["muted"])
+text(560, fcy + frd / 2 + 16, "verify loaded clearance", size=8.5, anchor="middle", fill=C["muted"])
 
 # --- interior loads ---
 usb_x, usb_y = frx + frw + 40, ft + 24
@@ -301,126 +316,81 @@ e(f'<circle cx="{REAR_X - 40}" cy="{ft - 8}" r="6" fill="{C["load"]}" '
   f'stroke="{C["load_s"]}" stroke-width="1.6"/>')
 text(REAR_X - 40, ft - 18, "heater (ext.)", size=10, anchor="middle", fill=C["load_s"])
 
-# --- 24 V feed hints from cabinet to loads ---
-line(cab_out[0], cab_out[1], frx + frw / 2, ft + frd + 4, stroke=C["w24"], sw=1.4, dash="3 4")
-line(cab_out[0], cab_out[1], led_x, led_y, stroke=C["w24"], sw=1.4, dash="3 4")
-text(cab_out[0] + 26, cab_out[1] + 8, "24 V branches", size=10, fill=C["w24"])
-
 # floor dimensions
 dimv(REAR_X + 26, ft, fb, '81" interior', side="right")
-dimh(fb + 100, f_tip, REAR_X, '156" centerline (141" straight + 15" nose)', above=False)
+dimh(fb + 100, f_tip, REAR_X, '156" centerline', above=False)
 
 # orientation
 text(f_tip - 6, fmid, "NOSE", size=11, weight=700, anchor="end", fill=C["muted"])
 text(REAR_X + 6, fb - 6, "REAR / RAMP", size=11, weight=700, fill=C["muted"])
 
 # ---------------------------------------------------------------------------
-# PANEL C - NOSE POWER BENCH: TOP-DOWN PLAN + centerline SECTION
+# PANEL C - SPLIT POWER ENCLOSURE: STREET-SIDE ELEVATION
 # ---------------------------------------------------------------------------
 CX, CY, CW, CH = 770, 118, 668, 720
 rect(CX, CY, CW, CH, fill="#ffffff", stroke=C["cab_s"], sw=1.8, rx=8)
-text(CX + 16, CY + 28, "C  Nose power bench - plan + section", size=17, weight=700, fill=C["cab_s"])
+text(CX + 16, CY + 28, "C  Split power enclosure - street-side elevation", size=17, weight=700, fill=C["cab_s"])
 text(CX + 16, CY + 47,
-     "Wall-to-wall bench; V-nose adds depth at the centerline.",
+     "Battery low in a compact bench; active Victron gear higher in a shallow cabinet.",
      size=11, fill=C["muted"])
 text(CX + 16, CY + 63,
-     "Battery sits in the deepest part. Components to scale.",
+     "Conceptual placement only. Bench/cabinet dimensions, backing, and clearances are G12.",
      size=11, fill=C["muted"])
 
-# ---- TOP-DOWN PLAN of the bench (nose up) ----
-sc = 6.5
-PX0, PYb = 800, 372                          # plan: left edge, back edge (cabin face)
-WB, BAND, NOSE = 78, 8, 15                    # bench width, back band aft of taper, nose depth
-def PXx(wx): return PX0 + wx * sc             # across-width
-def PYd(d): return PYb - d * sc               # depth fwd from the back edge
-apex_x = PX0 + WB * sc / 2
-poly([(PX0, PYb), (PX0 + WB * sc, PYb), (PX0 + WB * sc, PYd(BAND)),
-      (apex_x, PYd(BAND + NOSE)), (PX0, PYd(BAND))],
-     fill="#fbfdfe", stroke=C["cab_s"], sw=1.6)
-line(PX0, PYb, PX0 + WB * sc, PYb, stroke=C["cab_s"], sw=4)   # cabin face (seat front)
-text(apex_x, PYd(BAND + NOSE) - 8, "NOSE (front) ^", size=10, weight=700, anchor="middle", fill=C["muted"])
-text(PX0 + WB * sc / 2, PYb + 16, "cabin face (seat front) - bench runs wall-to-wall", size=9.5, anchor="middle", fill=C["muted"])
+# wall and floor datums
+wall_x = CX + 42
+floor_y = CY + 632
+line(wall_x, CY + 90, wall_x, floor_y, stroke=C["wall"], sw=4)
+line(wall_x, floor_y, CX + CW - 34, floor_y, stroke=C["wall"], sw=4)
+text(wall_x - 8, CY + 108, "NOSE WALL", size=9, weight=700, anchor="end", fill=C["muted"], rot=-90)
+text(wall_x + 8, floor_y + 18, "FLOOR / STREET-SIDE", size=9, weight=700, fill=C["muted"])
 
-# plan components: (n, wx, d, ww, dd, fill, stroke, label, lsize)  wx across, d depth from back
-pcomps = [
-    (1, 29.06, 1.0, 19.88, 9.25, C["bat"],   C["bat_s"],  "battery (on edge)|transverse", 8),
-    (7,  2.0,  0.8, 7.28, 3.74,  C["pv"],    C["pv_s"],   "MPPT", 7.5),
-    (8, 10.0,  0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/24", 7),
-    (2, 19.5,  0.8, 4.72, 1.81,  C["sheet"], C["cab_s"],  "", 6.5),
-    (4,  2.0,  5.2, 6.0,  1.3,   C["bus"],   C["bus_s"],  "- bus", 6.5),
-    (5, 10.0,  5.2, 6.0,  1.3,   C["bus"],   C["bus_s"],  "+ bus", 6.5),
-    (9, 49.5,  0.8, 7.3,  2.8,   C["conv"],  C["conv_s"], "Orion 48/12", 7),
-    (13,61.0,  6.7, 6.06, 3.07,  C["sheet"], C["cab_s"],  "", 6.5),
-    (11,58.0,  0.8, 5.5,  2.0,   C["load"],  C["load_s"], "", 6.5),
-    (12,65.0,  0.5, 6.49, 1.4,   C["sheet"], C["cab_s"],  "", 6.5),
-    (3, 49.5,  5.0, 4.3,  2.5,   C["prot"],  C["prot_s"], "", 6.5),
-    (6, 55.0,  5.0, 3.4,  2.4,   C["prot"],  C["prot_s"], "", 6.5),
-    (10,61.0,  4.8, 5.74, 1.6,   C["load"],  C["load_s"], "", 6.5),
-]
-for n, wx, d, ww, dd, fill, stroke, lab, lsize in pcomps:
-    x, y = PXx(wx), PYd(d + dd)
-    rect(x, y, ww * sc, dd * sc, fill=fill, stroke=stroke, sw=1.3, rx=2)
-    cxb, cyb = x + ww * sc / 2, y + dd * sc / 2
-    parts = lab.split("|")
-    if len(parts) == 1:
-        text(cxb, cyb + lsize / 3, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
-    else:
-        text(cxb, cyb - 1, parts[0], size=lsize, weight=700, anchor="middle", fill=C["ink"])
-        text(cxb, cyb + lsize, parts[1], size=lsize - 1, anchor="middle", fill=C["ink"])
-    e(f'<circle cx="{x + 8}" cy="{y + 8}" r="6.5" fill="#ffffff" stroke="{stroke}" stroke-width="1.1"/>')
-    text(x + 8, y + 11, str(n), size=8, weight=700, anchor="middle", fill=stroke)
-# centerline of the deepest part
-line(apex_x, PYb, apex_x, PYd(BAND + NOSE), stroke=C["muted"], sw=1, dash="6 5")
+# low battery bench
+bx, by, bw, bh = CX + 62, CY + 465, 245, 165
+rect(bx, by, bw, bh, fill=C["cab"], stroke=C["cab_s"], sw=1.8, rx=4)
+text(bx + 12, by + 23, "LOW BATTERY BENCH", size=12, weight=700, fill=C["bat_s"])
+text(bx + 12, by + 41, "size / anchors / orientation: G12", size=9, fill=C["muted"])
+block(bx + 18, by + 58, 138, 77, "LiTime battery", C["bat"], C["bat_s"],
+      size=10, sub="low; orientation dry-fit")
+block(bx + 166, by + 70, 64, 53, "Class-T", C["prot"], C["prot_s"],
+      size=9, sub="TBD")
 
-# ---- centerline SECTION (fore-aft cut) - shows the ~18" height; battery shown end-on ----
-sxL, sy0 = 800, 560                           # section: left edge, floor datum
-sDEP, sHGT = 23, 18
-def SXd(d): return sxL + d * sc               # d = depth from cabin face (0) toward nose (23)
-def SYh(h): return sy0 - h * sc
-rect(sxL, SYh(sHGT), sDEP * sc, sHGT * sc, fill="#fbfdfe", stroke=C["cab_s"], sw=1.5)
-line(sxL, SYh(sHGT), sxL + sDEP * sc, SYh(sHGT), stroke=C["cab_s"], sw=4)   # seat top
-line(sxL, sy0, sxL + sDEP * sc, sy0, stroke=C["cab_s"], sw=3)               # floor
-rect(SXd(1), SYh(12.32), 9.25 * sc, 12.32 * sc, fill=C["bat"], stroke=C["bat_s"], sw=1.4, rx=2)
-text(SXd(1) + 9.25 * sc / 2, SYh(12.32) + 12.32 * sc / 2 - 3, "battery", size=8, weight=700, anchor="middle", fill=C["ink"])
-text(SXd(1) + 9.25 * sc / 2, SYh(12.32) + 12.32 * sc / 2 + 8, "on edge", size=7, anchor="middle", fill=C["ink"])
-rect(SXd(11), SYh(9.84), 3.74 * sc, 9.84 * sc, fill=C["pv"], stroke=C["pv_s"], sw=1.2, rx=2)
-text(sxL + sDEP * sc / 2, SYh(sHGT) - 8, "Section (fore-aft) - ~18\" bench; battery end-on (runs transverse)", size=9.5, weight=700, anchor="middle", fill=C["cab_s"])
-text(sxL, sy0 + 16, "cabin", size=8.5, weight=700, fill=C["muted"])
-text(sxL + sDEP * sc, sy0 + 16, "NOSE (deep)", size=8.5, weight=700, anchor="end", fill=C["muted"])
-# scale bar (12 in)
-line(sxL, sy0 + 34, sxL + 12 * sc, sy0 + 34, stroke=C["ink"], sw=1.6)
-for sx in (sxL, sxL + 12 * sc):
-    line(sx, sy0 + 30, sx, sy0 + 38, stroke=C["ink"], sw=1.6)
-text(sxL + 6 * sc, sy0 + 49, "12 in", size=9.5, anchor="middle", fill=C["slate"])
+# high shallow cabinet
+cx, cy, cw, ch = CX + 345, CY + 105, 270, 420
+rect(cx, cy, cw, ch, fill=C["cab"], stroke=C["cab_s"], sw=1.8, rx=5)
+text(cx + 12, cy + 23, "SHALLOW HIGH-WALL CABINET", size=12, weight=700, fill=C["cab_s"])
+text(cx + 12, cy + 41, "post backing / W x H x D / airflow: G12", size=9, fill=C["muted"])
 
-# ---- component list + notes (right of the section) ----
-comps = [
-    (1, "LiTime 48V 100Ah ComFlex", "19.88x12.32x9.25 - on edge", C["bat"], C["bat_s"]),
-    (2, "Victron SmartShunt 500A", "4.72x1.81x2.13", C["sheet"], C["cab_s"]),
-    (3, "Main Class-T OCP", "~4.3x2.4 (on +)*", C["prot"], C["prot_s"]),
-    (4, "- busbar", "~6x1.3*", C["bus"], C["bus_s"]),
-    (5, "+ busbar", "~6x1.3*", C["bus"], C["bus_s"]),
-    (6, "Velit 48V branch breaker", "~3.4x2.4*", C["prot"], C["prot_s"]),
-    (7, "SmartSolar 250/60-Tr", "7.28x9.84x3.74", C["pv"], C["pv_s"]),
-    (8, "Orion-Tr 48/24-16A", "7.3x5.1x2.8", C["conv"], C["conv_s"]),
-    (9, "Orion-Tr 48/12-20A", "7.3x5.1x2.8", C["conv"], C["conv_s"]),
-    (10, "Blue Sea 5026 (24V)", "5.74x3.31*", C["load"], C["load_s"]),
-    (11, "12V receptacles", "~5.5x2.2*", C["load"], C["load_s"]),
-    (12, "Switch + dimmer (8260)", "6.49x2.3 (cabin face)", C["sheet"], C["cab_s"]),
-    (13, "Victron Cerbo GX Mk2", "6.06x3.07x1.89", C["sheet"], C["cab_s"]),
-]
-lx = 1085
-text(lx, 548, "Components  (W x H x D, in):", size=11, weight=700)
-for k, (n, name, dims, fill, stroke) in enumerate(comps):
-    yy = 570 + k * 21
-    rect(lx, yy - 9, 11, 11, fill=fill, stroke=stroke, sw=1.1, rx=2)
-    text(lx + 16, yy, f"{n}. {name}", size=9, weight=700, fill=C["ink"])
-    text(lx + 16, yy + 10, dims, size=8, fill=C["muted"])
+block(cx + 18, cy + 58, 112, 74, "SmartSolar", C["pv"], C["pv_s"],
+      size=10, sub="250/60-Tr")
+block(cx + 140, cy + 58, 112, 74, "Cerbo GX", C["sheet"], C["cab_s"],
+      size=10, sub="3.15 A inline")
+block(cx + 18, cy + 145, 112, 68, "Orion 48/24", C["conv"], C["conv_s"],
+      size=9.5, sub="20 A input")
+block(cx + 140, cy + 145, 112, 68, "Orion 48/12", C["conv"], C["conv_s"],
+      size=9.5, sub="input TBD")
+block(cx + 18, cy + 230, 92, 54, "SmartShunt", C["sheet"], C["cab_s"], size=9)
+block(cx + 120, cy + 230, 60, 54, "+ bus", C["bus"], C["bus_s"], size=8.5)
+block(cx + 190, cy + 230, 60, 54, "- bus", C["bus"], C["bus_s"], size=8.5)
+block(cx + 18, cy + 301, 106, 58, "24 V fuses", C["load"], C["load_s"], size=9,
+      sub="Blue Sea 5026")
+block(cx + 136, cy + 301, 114, 58, "12 V fuses", C["load"], C["load_s"], size=9,
+      sub="aux only")
+block(cx + 18, cy + 372, 232, 32, "switch / dimmer / receptacle face", C["sheet"], C["cab_s"], size=9)
 
-text(800, 690, "All gear in one ~18\" bench; battery transverse, low and centered.", size=9, fill=C["slate"])
-text(800, 705, "SmartShunt/Cerbo add Victron monitoring.", size=9, fill=C["slate"])
-text(800, 720, "Hinged top; low intake + fan exhaust; confirm depth.", size=9, fill=C["slate"])
-text(800, 735, "* nominal/catalog; battery/SmartSolar/Orions = datasheet.", size=9, fill=C["slate"])
+# protected positive feeder and shunted negative return
+line(bx + 156, by + 96, bx + 166, by + 96, stroke=C["w48"], sw=3)
+line(bx + 230, by + 96, cx + 150, cy + 230, stroke=C["w48"], sw=3)
+text(bx + 225, by + 60, "+ protected before leaving bench", size=8.5, weight=700,
+     fill=C["w48"])
+line(bx + 87, by + 135, cx + 64, cy + 257, stroke=C["slate"], sw=3)
+text(bx + 88, by + 151, "- only to SmartShunt battery side", size=8.5, weight=700,
+     fill=C["slate"])
+
+text(CX + 42, CY + 685, "Active DC gear only in the shallow cabinet; the deferred MultiPlus location is open.",
+     size=10, weight=700, fill=C["prot_s"])
+text(CX + 42, CY + 704, "See power-wiring-48v and power-wiring-low-voltage for fuse placement.",
+     size=10, fill=C["muted"])
 
 # ---------------------------------------------------------------------------
 # LEGEND + omissions (bottom strip)
@@ -454,11 +424,11 @@ rect(770, ly + 40, 16, 16, fill="#ffffff", stroke=C["omit"], sw=1.5, dash="5 4",
 text(794, ly + 53, "Anker SOLIX C1000 + PS400 - standalone 120 VAC camp island.",
      size=12, fill=C["slate"])
 rect(770, ly + 66, 16, 16, fill="#ffffff", stroke=C["omit"], sw=1.5, dash="5 4", rx=2)
-text(794, ly + 79, "Optional ground-mounted 2S LG PV (910 W) + SmartSolar 150/35.",
+text(794, ly + 79, "Optional ground-mounted LG 2S PV + SmartSolar 150/35.",
      size=12, fill=C["slate"])
 text(770, ly + 108, "Sources: docs/power.md, docs/dimensions.md. This is the physical",
      size=11, fill=C["muted"])
-text(770, ly + 125, "layout; the electrical schematic is docs/diagrams/power-overview.*.",
+text(770, ly + 125, "layout; install schematics are power-wiring-48v.* and power-wiring-low-voltage.*.",
      size=11, fill=C["muted"])
 
 e("</svg>")

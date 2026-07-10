@@ -1,11 +1,11 @@
 # Juplaya Trailer — Build Sheet
 
-*Target: ready for Juplaya (~July 4, 2026).*
+*Juplaya field milestone completed in 2026-07; finish work continues from the as-built findings below.*
 
 This is the **source of truth** for the build. How to read it:
 
 - **Settled** items are firm — bought, measured, or otherwise beyond debate.
-- **Decisions** are DECISION_LOG rows (D001–D012), `proposed` until the owner ratifies them. Each major one was produced by a cross-examined striatum multi-model panel (claude/codex/gemini drafting, reviewing, and revising each other); the raw drafts, reviews, and verdicts are frozen under `runs/`. Don't infer decisions that aren't written here or in a D-row.
+- **Decisions** are DECISION_LOG rows (D001-D015), `proposed` until the owner ratifies them. Each major panel decision was produced by a cross-examined striatum multi-model panel (claude/codex/gemini drafting, reviewing, and revising each other); the raw drafts, reviews, and verdicts are frozen under `runs/`. D015 records the owner's post-Juplaya enclosure directive. Don't infer decisions that aren't written here or in a D-row.
 - **Gates** are pass/fail checks that must pass **before drilling, fabricating, or ordering** the thing they guard. Current live status is centralized in the [gate tracker](gate-tracker.md). Most close from the [measurement pass](dimensions.md#-measurement-pass--fill-in-mm-preferred-these-supersede-spec); measured values supersede spec everywhere.
 - **`[web-val]`** marks findings from the 2026-06-05 web fact-check of the original 7 falsifiable decisions plus the D010 flooring addendum ([full report](research/build-decision-validation.md)). It flipped 4/7 original decisions to caution; the material deltas are folded into the gates below.
 
@@ -41,12 +41,14 @@ References: [fastrac-specs.md](reference/fastrac-specs.md) (manufacturer line ta
 
 Detailed power design, diagrams, component tables, and commissioning rules now live in **[power.md](power.md)**.
 
-Current Juplaya power verdict:
+Current as-built power state and finish direction:
 
-- **DC trailer core:** roof 3× LG455 in 3S → Victron SmartSolar 250/60-Tr → LiTime 48V 100Ah ComFlex. Velit 2000R runs from a fused 48 V branch. Fridge/lights/USB/GPS run from the 24 V bus through one Victron Orion-Tr 48/24-16A. A Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the nose bench for occasional 12 V loads. A Victron SmartShunt 500A + Cerbo GX Mk2 are ordered for the active monitoring path; expected arrival is 2026-06-15.
+- **DC trailer core:** three roof LG455 panels feed the SmartSolar 250/60-Tr and 48 V LiTime battery. The Velit runs from 48 V. The Dometic ran from the 24 V Orion during the 2026-07 trip, and a temporary Amazon LED kit ran from the 12 V Orion.
 - **Optional trailer-battery margin:** deployable 2× LG455 in 2S → ordered Victron SmartSolar 150/35. Never combine roof 3S and ground 2S on one tracker.
 - **Small 120 VAC / storage comms:** Anker SOLIX C1000 + PS400 is the Juplaya AC island. Optional C1000 top-up from the trailer is only a fused/manual 24 V branch, about 240 W max, and must not starve the Orion/fridge bus. Starlink Mini is optional storage/camp comms, not the primary tracker; run it from the C1000 first or from a fused 12 V cabinet receptacle with Starlink's 12-24 V car adapter after shakedown.
-- **Deferred:** Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/shore-charger/transfer choice, mounted in an upper cabinet above the nose bench, not a Juplaya blocker.
+- **D015 enclosure:** secure the battery and battery-local Class-T main OCP low in a compact street-side nose bench. Mount the SmartShunt, SmartSolars, Cerbo, Orions, busbars, protection, low-voltage distribution, and controls higher on the street-side wall in a shallow cabinet.
+- **Deferred:** Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/shore-charger/transfer choice, but its physical location is reopened. It does not belong in the shallow active-equipment cabinet.
+- **Field result:** with no insulation or walls, the Velit did not bring the trailer to its 68 F setpoint in 100 F ambient and the trailer slowly approached about 85 F only after ambient fell below that. Peak observed consumption was about 600 W; peak solar generation was not captured.
 
 Must-not-miss gates:
 
@@ -54,9 +56,11 @@ Must-not-miss gates:
 - Roof panel brackets do not need to align with bows; **the roof rail/backing structure does**. Use fore-aft rails tied to multiple roof bows, then mount the panels/brackets to those rails. Do not fasten panel brackets only to roof skin. See [solar mounting build sheet](solar_mounting.md) and [solar mounting research](research/solar-panel-mounting-backing-2026-06-06.md).
 - PS400 feeds the C1000 only; do not mix it with LG strings.
 - Battery side first on MPPTs, then PV.
-- Make battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
+- Put the rating-TBD Class-T main OCP at battery positive before the protected feeder leaves the low bench; no 32 V automotive fuse gear on the 48 V side.
+- Put a 70-80 A battery-side fuse between the SmartSolar 250/60-Tr and positive bus, and a 40-45 A battery-side fuse between the optional SmartSolar 150/35 and positive bus.
+- Power the Cerbo through its supplied 3.15 A slow-blow fuse and install the SmartShunt's supplied fused Vbatt+ sense lead.
 - Use Blue Sea `7443` for the 20 A / 80 V DC UL-489 breaker; do not use `7463` for this DC branch.
-- Fuse both Orion inputs with DC-rated 48 V gear; label the 12 V cabinet receptacles auxiliary only and keep them isolated from tow-vehicle/OEM trailer wiring.
+- Keep the Velit OCP, Orion 48/24 output OCP, Orion 48/12 input/output OCPs, and individual 12 V receptacle fuses marked TBD until documented. Label the 12 V cabinet receptacles auxiliary only and keep them isolated from tow-vehicle/OEM trailer wiring.
 - Configure LiFePO4 charge settings and cap combined trailer charge current ≤100 A.
 
 Energy budget: trailer DC loads are about **3.5–4.0 kWh/day** in July; roof-only 3S harvest is about **6.0 kWh/day before soiling/shading**. The LG ground pair adds recovery margin; the C1000/PS400 carries only small AC loads. A Starlink Mini left on continuously adds about **0.7–1.1 kWh/day** real-world, so it is acceptable as an optional managed storage/camp link but not free.
@@ -69,14 +73,15 @@ The envelope strategy: **closed-cell spray foam inside the steel skin, elastomer
 
 ### Insulation & roof (settled)
 
-- **Closed-cell spray foam** in the wall and ceiling cavities; **elastomeric roof coating** outside; **Velit Mini 2000R rooftop AC (48 VDC) — ordered**, fed by its own fused 48 V branch.
+- **No insulation or finish walls are installed yet.** Closed-cell spray foam remains planned for the wall and ceiling cavities, with elastomeric coating outside on the roof.
+- **Velit Mini 2000R rooftop AC (48 VDC) — installed and working.** Its permanent dedicated branch OCP is required and remains rating-TBD. The opening abuts a roof crossbeam at the forward edge but lacks equivalent support at the aft edge. Clamp load formed a roof valley between crossbeams. Remove the unit, weld in the planned longitudinal 1 in steel reinforcement, dry-fit crown-forming rubber spacers for drainage, then reseal and hose-test before insulation.
 - **Roof sandwich `[web-val]`:** building science *endorses* foam-inside + coating-outside on steel, **on one condition: the steel is dry, clean, and rust-free at closure** — foam over damp steel seals the corrosion in where it can never be seen. Execution requirements: air-seal the foam at every bow, fastener, and penetration; **spec a cold-rated/silicone coating** (standard summer-cure acrylics go brittle in deep cold and "zipper" off); run a **48-hr adhesion patch** on the actual galvanized/aluminized skin before committing to a product; confirm foaming under the roof doesn't void the solar-panel warranty; put periodic exterior blister inspections on the maintenance calendar (a blister is the only visible symptom of hidden steel corrosion).
 
 ### Roof solar mounting — rail/backing structure
 
-The solar-panel brackets do **not** need to land on roof bows. The rail fasteners do. Use two fore-aft NXT rails spanning the three panel rows, drilled through at bow crossings and tied into multiple 24" OC roof bows with backing/crush control; the existing panel brackets/clamps bolt to those rails. Use 1/4" aluminum spacer pads at bow stations only if needed for low-profile drainage/crown control; EPDM/neoprene is acceptable as an isolation layer or high-durometer spacer only with crush sleeves/hard stops. Add a third rail only if the dry-fit proves the bracket pattern or rail stiffness needs it. Do not use roof-skin-only screws as the load path for the panels.
+The three solar panels are mounted. They did not fit entirely behind the Velit reserve and extend a few inches beyond the rear roof edge; the exact overhang remains to be measured and drawn. The solar-panel brackets do **not** need to land on roof bows. The rail fasteners do. Use fore-aft NXT rails tied into multiple roof bows with backing/crush control; the existing panel brackets/clamps bolt to those rails. Do not use roof-skin-only screws as the load path for the panels.
 
-Order of operations: measured roof drawing -> rail centerlines and bow tie-ins -> dry-fit panels/Velit/awning standoffs -> drill and seal rails/gland/curb -> hose test -> foam -> Henry 887 roof coating. Build sheet: [solar_mounting.md](solar_mounting.md). Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
+Finish sequence: wash and inspect -> measure the as-built array overhang and Velit opening -> remove the Velit -> add longitudinal opening reinforcement and dry-fit the crown/drainage detail -> reseal and hose-test -> close the roof drawing -> foam -> Henry 887 roof coating. Build sheet: [solar_mounting.md](solar_mounting.md). Full research and gates: [solar mounting backing note](research/solar-panel-mounting-backing-2026-06-06.md).
 
 ### Roof coating — picked
 
@@ -178,7 +183,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 ### Fridge bay
 
 - **Curbside, immediately aft of the personnel door**, fridge E-track-strapped. Footprint 37.9" × 20.9" × 18.6" tall **plus lid-swing clearance — verify which way the split lids hinge before fixing the bay's wall orientation.** The location survives: outside reach under the awning, lid access in both modes, clear of the door swing.
-- **⚠ Thermal gate — HARDENED `[web-val]`:** the Dometic manual requires a **50 mm (~2") gap on all four sides** and flatly says **"do not place the cooling device in closed compartments."** An enclosed bay is non-compliant as worded. So: **the bay gives 50 mm all-sides clearance + forced through-flow ventilation** — "shaded" alone doesn't cut it. Then field-verify in-bay air temperature under desert sun with the awning out: **<43 °C (110 °F) to run at all, <30 °C (86 °F) to hold both dual-zone setpoints.** Keep the bay off the nose-bench heat plume. (Dometic error codes: Warning 34 = high ambient / blocked vent; Warning 33 = low supply voltage — see Systems for the wiring check.)
+- **⚠ Thermal gate — HARDENED `[web-val]`:** the Dometic manual requires a **50 mm (~2") gap on all four sides** and flatly says **"do not place the cooling device in closed compartments."** An enclosed bay is non-compliant as worded. So: **the bay gives 50 mm all-sides clearance + forced through-flow ventilation** — "shaded" alone doesn't cut it. Then field-verify in-bay air temperature under desert sun with the awning out: **<43 °C (110 °F) to run at all, <30 °C (86 °F) to hold both dual-zone setpoints.** Keep the bay off the shallow power-cabinet exhaust plume. (Dometic error codes: Warning 34 = high ambient / blocked vent; Warning 33 = low supply voltage — see Systems for the wiring check.)
 
 ### Walls — D009 (accepted)
 
@@ -207,7 +212,7 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 ### Lighting
 
-- **Switches live on the nose bench for Juplaya.** Skip the entry-door light switch for now; it adds wall/door-area wiring and is easy to revisit later if use proves it matters. If convenient while walls are open, leave a labeled pull string or spare low-current pair toward the side-door bay.
+- **Switches live on the shallow high cabinet face.** Skip the entry-door light switch for now; it adds wall/door-area wiring and is easy to revisit later if use proves it matters. If convenient while walls are open, leave a labeled pull string or spare low-current pair toward the side-door bay.
 - **Lighting controls — D012:** keep the six cabinet lighting switches and put a panel-mount 24 V dimmer downstream of each switched branch: INTERIOR, CURB FLOOD, ROAD FLOOD, NOSE FLOOD, REAR FLOOD, and AWNING. The switches are hard enables; the dimmers set brightness.
 - **Exterior lighting layout:** **2 curbside floods, 2 roadside floods, 1 flood on each V-nose face, 1 rear flood, plus separate awning lighting**. Optional low amber step/courtesy can share the awning circuit if added. Run them from the **24 V house bus** using 12-28 VDC / 10-30 VDC IP67-ish fixtures, fused per branch, switched and dimmed at the cabinet. Keep all house exterior lighting isolated from the OEM trailer lights and 7-way tow plug.
 - **Selected fixture class:** seven **Super Bright LEDs `VAL2-NW9`** floods (9", black, 1450 lm, 18 W, 4000 K, 90 deg, IP67, 12-28 VDC) are **ORDERED** per the [exterior-lighting panel](../runs/exterior-lighting-panel/synth/VERDICT.md). `VAL2-WW9` is the warm 3000 K alternate if replacement stock is ever needed. Use separate warm 24 V dimmable strip lighting for the awning, such as **`RA-IP68-80CRI-5m` 3000 K**, not another glare flood.
@@ -226,41 +231,41 @@ Why this replaces the old rubber-coin lean: common coin roll is usually SBR (sty
 
 Dedicated ordering and budget ledger: **[order-sheet.md](order-sheet.md)**. Ancillary electrical/control breakout: **[ancillary-order-sheet.md](ancillary-order-sheet.md)**. Wire/cut-length/termination breakout: **[wire-and-termination-order-sheet.md](wire-and-termination-order-sheet.md)**. The list below stays abbreviated so this build sheet remains the engineering source of truth instead of the purchasing ledger.
 
-- **Long-lead, order now:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · **active Juplaya Victron gear is ORDERED** (SmartSolar 250/60-Tr, SmartSolar 150/35, Orion-Tr 48/24-16A, Orion-Tr IP43 48/12-20A, SmartShunt 500A, Cerbo GX Mk2; SmartShunt/Cerbo expected 2026-06-15) · 250 V-class roof PV disconnect/OCP · Blue Sea 7443 20 A / 80 V DC UL-489 breaker · **nose-bench interior transfer grilles/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · **2 × 8 ft flanged floor L-track — ORDERED / on the way** · **Bolt It On 360 L-track wheel chocks — ORDERED**.
+- **Long-lead / remaining:** return LiTime 5 kW; **defer the Victron MultiPlus-II until Phase 2** · Fiamma F45s 350 + Tie Down S + lag anchors/deadman bags · active Victron gear · 250 V-class roof PV disconnect/OCP · Blue Sea 7443 20 A / 80 V DC UL-489 breaker · **shallow-cabinet interior transfer grille/filter + 24 V cabinet fan + normally-open thermostat** · standoff + backing steel stock (owner fab) · battery-bench restraint/anchors · positive-closing travel covers for unused exterior vents.
 - **Coatings:** Henry 887 Tropi-Cool White 100% Silicone Roof Coating (HE887HS018, 4.75 gal pail) + Henry 884 Tropi-Cool silicone sealant · **Durabak-18 Outdoor Textured light grey, 3 gal — ORDERED, delivery June 12–15, 2026; 4th gal conditional** after patch/first-pass coverage for ramp/chock/L-track wear lanes.
-- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea Overdrive Permanent GPS with hardwire cable — ORDERED · locks (above) including ordered Nu-Set personnel-door hasp/backing · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the nose bench · optional Starlink Mini treated as storage/camp comms · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior lighting: 7 × Super Bright LEDs `VAL2-NW9` floods — ORDERED, 1 × warm 24 V awning strip such as `RA-IP68-80CRI-5m`, optional amber step/courtesy, Blue Sea 8260 switch panel + 6 × Blue Sea 8282 switches, 6 × panel-mount 24 V dimmers, and custom labels**.
+- **Accessories:** Blue Sea 5026 · Scanstrut SC-USB-F3 · LandAirSea Overdrive Permanent GPS with hardwire cable — ORDERED · locks (above) including ordered Nu-Set personnel-door hasp/backing · 14 AWG runs + fuse assortment · fused cigarette-lighter receptacles for the shallow high cabinet · optional Starlink Mini treated as storage/camp comms · dome/task lights (24 V preferred; 12 V only at the cabinet outlets) · **exterior lighting: 7 × Super Bright LEDs `VAL2-NW9` floods — ORDERED, 1 × warm 24 V awning strip such as `RA-IP68-80CRI-5m`, optional amber step/courtesy, Blue Sea 8260 switch panel + 6 × Blue Sea 8282 switches, 6 × panel-mount 24 V dimmers, and custom labels**.
 - **Windows:** 2× RP-FRMWIN-1222-TRM + 1× RP-FRMWIN-2015-TRM (placement decided — Climate section).
 
 ---
 
 ## Build sequence (dependency order)
 
-The design freeze (below) gates step 3 onward. Within the sequence, **"while the walls are open" is the critical window** — five different systems need it.
+The remaining open gates constrain repair and finish work. Within the sequence, **"while the walls are open" is the critical window** because several systems still need backing, routing, or inspection access.
 
 1. **Measure & scan** — close the active measurement blockers in the [gate tracker](gate-tracker.md): interior footprint recorded (rows 3/3a and 17), wall-post/window fit recorded (row 7), floor steel recorded (row 10), factory wall panel thickness recorded (row 19), remaining wall sandwich/door-frame checks (rows 12, 14), roof stations (5a, 6), rail 3D scan + post wall thickness (16).
-2. **Freeze** — close the 10 design-freeze items; ratify D006–D008 and D012; D009, D010, and D011 are accepted; place remaining orders (long-lead first).
+2. **Freeze remaining work** — close the 11 design-freeze items; D015 is accepted and G12 owns the split enclosure; place only the remaining gate-cleared orders.
 3. **Strip the interior** — factory PlexCore wall panels off for foam/open-wall work; keep them clean, dry, labeled, and reusable; document factory wiring as found.
 4. **Everything that needs open walls / bare roof:**
    - Awning standoff fasteners + any backing into the posts (≥2 per upright).
    - Window-bay furring (build openings out to the 1.5" clamp spec) + backing.
    - Wall E-track steel 1/4-20 rivnuts into the 1" tube posts at the 27"/60" rows; use the track as the finish datum and keep fasteners inspectable.
    - Rough-ins: HRV 4" pair, heater 3" duct ports, wire chases, 4 AWG tongue pre-wire.
-   - Roof: solar rail/backing structure first (fore-aft rails tied to multiple bows; brackets/panels attach to rails, not skin), then Velit opening + curb, PV gland, all penetrations sealed and hose-tested.
-   - **Nose-bench backing (D013)**: anti-tip backing into the nose-wall posts, and confirm the bench's floor anchors land on floor L-track / crossmembers (pre-block if not) — the on-edge battery + bench mass loads the floor, not the wall.
+   - Roof repair: measure the installed array overhang and Velit opening; remove the Velit; weld longitudinal 1 in reinforcement between crossbeams at the opening; dry-fit crown/drainage spacers; reseal and hose-test.
+   - **Split enclosure backing (D015/G12):** confirm the compact street-side battery bench anchors land on floor steel/L-track or added backing, and add post/backing support for the shallow high wall cabinet and protected feeder chase.
 5. **Foam** — steel verified dry/clean/rust-free; every penetration already made (foam after cutting, never before); air-seal at bows/fasteners.
 6. **Roof coating** — Henry 887 silicone, after the 48-hr adhesion patch passes.
-7. **Floor liner + walls closed** — order matters: (a) reinstall the factory 3/8" PlexCore wall liner; (b) floor L-track recessed/bolted through to steel/backing — set & mask the bench floor-anchor points now; (c) Durabak-18 floor + 3–4" cove + ramp applied onto the lower PlexCore and cured; (d) FRP lands above and **laps over the cured cove**, seams/edges sealed, trimmed to the wall E-track edges. (Finish/seal the nose wall behind the bench too — you won't reach it later.)
+7. **Floor liner + walls closed** — order matters: (a) reinstall the factory 3/8" PlexCore wall liner; (b) floor L-track recessed/bolted through to steel/backing — set and mask the compact battery-bench anchor points now; (c) Durabak-18 floor + 3–4" cove + ramp applied onto the lower PlexCore and cured; (d) FRP lands above and **laps over the cured cove**, seams/edges sealed, trimmed to the wall E-track edges. Finish and seal behind both enclosure footprints before either is mounted.
 8. **Window cuts + install** — after the row-12 clamp check against the real sandwich; door window gets perimeter re-framing.
 9. **Tracks & remaining floor hardware** — wall E-track rows bolted to the rivnuts in the posts; floor L-track masks pulled and slots/hardware inspected.
-10. **Nose power bench (~18" tall) — D013/D014** — one bench across the V-nose (wall-to-wall, perpendicular to the side walls) holds all Juplaya power gear: the LiTime battery **stood on edge and transverse** (19.88" long across the bench × 9.25" deep, 12.32" tall) centered in the deepest part (the V-nose adds depth at the centerline) under the seat top, plus Victron SmartShunt 500A, Cerbo GX Mk2, SmartSolar 250/60, Class-T main OCP, busbars, Orion-Tr 48/24, Orion-Tr 48/12, 5026, and fused 12 V receptacles; rail wiring out to branches. **Built from on-hand birch (D009 fixture stock) with a Durabak-18 seat top**; the electronics mount to a birch backing board, switch/dimmer panel on the cabin face; anchored to the floor steel/L-track (battery mass to the floor) with an anti-tip wall tie. Bench-to-cabin ventilation: low filtered intake, high fan-assisted exhaust, 24 V fan, temperature switch. **Hinged/removable seat top for service access**; confirm front-to-back depth at dry-fit (battery ~9.25" on edge + wiring/working space). Avoid exterior penetrations for now; reopen the exterior-vent fallback if shakedown heat demands it. MultiPlus Phase 2 space is an **upper cabinet above the nose bench**; the unit is too tall for a proper upright install inside the 18" bench.
+10. **Split power enclosure — D015/G12** — build a compact, floor-anchored battery bench in the street-side nose for the restrained LiTime battery and battery-local Class-T main OCP. Run protected positive and dedicated negative feeders to a shallow cabinet higher on that wall. Mount the SmartShunt, SmartSolars, Cerbo, Orions, positive/negative busbars, branch protection, Blue Sea 5026, local 12 V distribution, and switch/dimmer face in the high cabinet. Use filtered cabin intake and fan-assisted cabin exhaust; do not add an exterior electronics vent unless shakedown requires it. Do not cut final feeders until the measured drawing and component dry-fit close G12. The MultiPlus location remains a separate future decision.
 11. **Systems** — fridge bay (50 mm clearance + through-flow), cabinet-switched interior/exterior lights, USB/GPS, awning case onto the standoffs, tie-down anchors.
-12. **Weigh & commission** — scale (curb + tongue, row 18); combined charge-current cap ≤100 A; verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path; verify the C1000 + PS400 covers small AC loads; if a 24 V C1000 top-up branch is added, test that it does not brown out or overload the Orion/fridge bus; shakedown camp before Juplaya.
+12. **Weigh & commission** — scale (curb + tongue, row 18), include a side-to-side check after the street-side battery bench is loaded, verify every fuse/OCP location against the install diagrams, verify roof 3S lands only on SmartSolar and optional LG ground 2S lands only on its own MPPT path, and complete a post-finish shakedown.
 
 ---
 
 ## Design freeze — definition of done
 
-**The design is DONE when every row below is checked.** Then the build phase starts (sequence above). Each row names what closes it.
+**The design is DONE when every row below is checked.** Each row names what closes it; already-built work remains subject to the open repair and verification gates.
 
 | # | Item | Closes when | Status |
 |---|---|---|---|
@@ -268,18 +273,19 @@ The design freeze (below) gates step 3 onward. Within the sequence, **"while the
 | 2 | **D009 wall substrate** — reuse factory 3/8" PlexCore sidewall liner; no birch re-skin | D009 accepted; factory PlexCore wall panel thickness verified 3/8" (row 19 closed) | ☑ 2026-06-08 |
 | 3 | **Track heights final** — bed ~27", shelf 60"; D011 wall-track mounting detail accepted | 31"-surface mock sit-test passes; shelf checked against the 36–58" window band; 1/4-20 rivnut-mounted E-track/FRP-edge fit confirmed on an offcut or first row | ☐ |
 | 4 | **Window locations final** — exact bay stations, both walls + door | wall posts 16" OC and side-window fit verified (row 7 closed) + RecPro ROs (row 13 ✓) + clamp range vs PlexCore+FRP build-up (row 12) + door frame (row 14) | ◐ rows 7/13 closed; rows 12/14 open |
-| 5 | **Roof drawing** — three panel rows, fore-aft NXT rail/backing structure + through-rail bow tie-ins, Velit nose station + opening/shadow line, PV gland, standoff stations on the measured 84⅞" × 145.5" field | rows 5a, 6, 15 measured and drawn; through-rail fastener/backing/spacer detail selected | ☐ |
+| 5 | **As-built roof drawing and Velit repair** — installed three-panel array/overhang, rail-to-bow tie-ins, Velit opening and new longitudinal reinforcement, crown/drainage spacer detail, PV gland, standoff stations | exact overhang/opening/support geometry recorded; reinforcement and spacer detail dry-fit; reseal passes hose test | ☐ |
 | 6 | **Awning standoff design** — section + fasteners | rail 3D scan + post tube wall thickness (row 16) → drawn part, ≥2 fasteners per upright | ☐ |
 | 7 | **Floor plan final** — bike stagger, fridge bay, L-track rows | 26" L-track spacing accepted; floor steel 16" OC and fridge bay depth recorded (rows 10, 17); bike tape geometry deferred in favor of physical bike-in-trailer fit check (row 11); 2×8 ft flanged L-track and Bolt It On 360 chocks received/fit-checked; chock hardware kit confirmed | ◐ measurements closed; physical fit/chock check open |
 | 8 | **Flooring material** | D010 accepted: Durabak-18 Outdoor Textured light grey, 3 gal ordered for June 12–15 delivery; 4th gal conditional after patch/first-pass coverage; PlexCore adhesion + fuel-drip patch required before coating | ☑ 2026-06-05 |
 | 9 | **FRP trim system** | corner/seam/edge/reveal profiles + adhesive picked; FRP adhesive compatible with PlexCore or proven by bond patch | ☐ |
-| 10 | **Order list frozen** — every SKU (incl. ordered active Victron gear, 250 V-class PV disconnect/OCP, roof solar rail/backing hardware, C1000/PS400 carried as the Juplaya AC island, Blue Sea 7443 DC breaker, Henry 887/884, Durabak quantity, nose-bench interior vent/fan/thermostat parts, exterior lighting + cabinet switch/dimmer parts, ordered floor L-track, ordered Bolt It On 360 chocks). MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–9 closed | ☐ |
+| 10 | **G12 split power enclosure** — compact street-side battery bench plus shallow high active-equipment cabinet | rows 20/21 measured; anchors/backing, component fit, service clearances, protected feeder route, ventilation, controls, and separate future MultiPlus disposition drawn and dry-fit | ☐ |
+| 11 | **Order list frozen** — every remaining SKU, including all wiring protection shown in the install diagrams, roof repair stock, travel vent closures, battery-bench hardware, shallow-cabinet ventilation/control parts, and finish materials. MultiPlus-II remains Phase 2, not a freeze blocker. | rows 1–10 closed | ☐ |
 
 Post-freeze (build-phase, not design): fridge-bay ventilation check + lid hinge orientation · deployed-fabric vs open-door at pitch · **curb-weight weigh-in** (row 18).
 
 ## Weight
 
-**GVWR 3,500 lb** (gross vehicle weight rating — confirmed). Payload = 3,500 − actual curb; **the trailer will be weighed** rather than estimated — no paper weight budget. Single axle is nose-sensitive: load to ~**10–12 % tongue weight**, battery low and centered, bikes' mass forward of the axle.
+**GVWR 3,500 lb** (gross vehicle weight rating — confirmed). **The trailer will be weighed** rather than estimated — no paper weight budget. Single axle is nose-sensitive: retain the existing tongue-weight target, secure the battery low in the street-side nose per D015, and verify both tongue load and side-to-side loading on scales.
 
 ## Standing preferences (for whoever picks this up)
 

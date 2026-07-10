@@ -5,6 +5,7 @@ Battery monitor for the active Victron monitoring path. Ordered 2026-06-14; expe
 Sources: Victron SmartShunt product page and official manual/datasheet:
 - https://www.victronenergy.com/battery-monitors/smart-battery-shunt
 - https://www.victronenergy.com/upload/documents/SmartShunt/9172-Manual_BMV_and_SmartShunt-pdf-en.pdf
+- https://www.victronenergy.com/media/pg/SmartShunt/en/installation.html
 
 | Spec | Value |
 |---|---|
@@ -25,7 +26,9 @@ Sources: Victron SmartShunt product page and official manual/datasheet:
 ## Build-relevant notes
 
 - Replaces the LiTime 500 A Bluetooth shunt as the active trailer battery monitor.
-- Install in the battery-negative path: battery negative -> SmartShunt battery-minus side -> load/charger negative bus.
+- Install in the battery-negative path: battery negative -> SmartShunt battery-minus side -> load/charger negative bus. Nothing else lands on the battery side.
+- Install the supplied fused Vbatt+ cable between battery positive and the SmartShunt Vbatt+ terminal.
+- Mount the shunt in the shallow high wall cabinet per D015; route the dedicated battery-negative feeder directly to its battery-side stud.
 - Run VE.Direct to the Cerbo GX Mk2 so battery SOC, current, voltage, history, and alarms are visible in VRM.
 - Optional temperature sensor can be added later if battery/cabinet temperature telemetry becomes useful; LiFePO4 charge temperature compensation remains off unless the battery manufacturer specifies otherwise.
 - Keep the LiTime shunt as spare/test gear, not the design source of truth.

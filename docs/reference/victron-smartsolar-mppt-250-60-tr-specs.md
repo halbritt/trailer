@@ -1,6 +1,8 @@
 # Victron SmartSolar MPPT 250/60-Tr — Key Specs
 
-Roof-solar controller for the revised D002 3-panel architecture. Source: Victron SmartSolar MPPT 150/60 through 250/70 technical specifications: https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_150-60_up_to_250-70/en/technical-specifications.html
+Roof-solar controller for the revised D002 3-panel architecture. Sources:
+- Victron technical specifications: https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_150-60_up_to_250-70/en/technical-specifications.html
+- Victron installation instructions: https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_150-60_up_to_250-70/en/installation.html
 
 | Spec | Value |
 |---|---|
@@ -25,4 +27,4 @@ Roof-solar controller for the revised D002 3-panel architecture. Source: Victron
 - **Hot-roof margin:** LG455 3S hot Vmpp can fall near ~105-115 V; this remains well above a 48 V battery + 5 V SmartSolar start threshold, unlike 120 V-min AIOs.
 - **Overpaneling:** 3 x 455 W = 1365 W, far below the 3440 W nominal PV power rating at 48 V.
 - **Charge coordination:** the 60 A controller can exceed the current needed for a 1365 W string. Program a conservative current limit so the SmartSolar plus MultiPlus AC charging plus any optional ground MPPT stays at or below the ComFlex battery's 100 A continuous charge limit.
-- **Protection:** use a DC-rated roof PV disconnect/breaker above worst-case cold 3S Voc, and fuse/breaker the battery-side output for controller current and conductor ampacity.
+- **Protection:** use a 2-pole, 250 V-class roof PV disconnect/OCP; current rating remains TBD. Victron specifies a **70-80 A battery fuse** for the 250/60. Install it in the controller's battery-positive lead before the positive bus.

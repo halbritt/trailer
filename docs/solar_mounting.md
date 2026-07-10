@@ -1,6 +1,6 @@
 # Solar Mounting Build Sheet - NXT Horizon / NXT UMOUNT
 
-Date: 2026-06-06
+Date: 2026-07-10
 
 ## Verdict
 
@@ -30,21 +30,10 @@ Current roof-panel layout:
 - Panel size: 83.07 in x 41.02 in x 1.57 in / 40 mm frame.
 - Roof array field, landscape: about 83.07 in across the trailer x about 123.06 in fore-aft before gaps.
 - Roof measured width: 84-7/8 in rail-edge to rail-edge, so side-clamp hardware outside the panel edges is a bad fit.
-- AC dry-fit on 2026-06-09: 125 in from the laid-out Velit back/aft edge to the trailer rear/top rail. Three panel bodies plus two 0.5 in inter-panel gaps need about 124.06 in, so the panels are plausible. The NXT rail length/end-margin target is longer than the roof-field allowance, so use the dry-fit to test a small rail-only rear overhang.
-
-NXT layout math for the fore-aft rail length:
-
-| Item | Math | Length |
-|---|---:|---:|
-| Three panel short sides | 3 x 41.02 in | 123.06 in |
-| Two inter-panel gaps | 2 x 0.5 in | 1.00 in |
-| Minimum NXT combo-clamp rail end margin | 2 x 1.0 in | 2.00 in |
-| **NXT stated minimum** | 123.06 + 1.00 + 2.00 | **126.06 in** |
-| Owner target extra margin | panel field + about 6 in | **~129 in cut length** |
-
-Order **two 168 in NXT rails** and cut each rail after the roof dry-fit. The prior rough target was **~129 in**; with the measured 125 in AC-to-rear/top-rail clearance, the exact cut length depends on how much rail-only rear overhang clears the ramp/rear edge. Do not order 96 in rails; they are too short. Do not use a splice unless rail availability forces it.
-
-Rail overhang rule: a small **rail-only** tail past the rear/top rail is acceptable if the ramp, rear trim/lights, sealant edge, and highway clearance are clean. Do not let the panel frames overhang the roof field, and do not count the cantilevered rail tail as structure. The last real rail attachment still lands on a roof bow with backing/crush control; the overhang only buys combo-clamp/end-margin room.
+- **As built 2026-07:** all three panels are mounted, and their frames extend a few inches beyond the rear roof edge because they did not fit entirely behind the Velit position. The exact panel-frame and rail overhang remains unmeasured.
+- The earlier paper-fit and rail-only-overhang premise is superseded by the installed result. Do not treat the current overhang as accepted until the post-wash inspection records the last roof-bow tie-in, clamp stations, rail tail, ramp/rear-trim clearance, frame condition, and wiring strain.
+- The cantilevered rail or panel tail is not a structural attachment. The last effective rail attachment must still land on a roof bow with backing and crush control.
+- Do not cut, move, or approve the installed array from planning arithmetic. Use the measured as-built roof drawing and inspection evidence.
 
 ## Primary Buy List
 
@@ -141,30 +130,20 @@ Counts:
 
 Before roof drilling, test one `CCLAMPM1` / `CCLAMPD1` clamp on an LG frame. The LG frame is 40 mm, and NXT combo clamps are listed for 30-40 mm frames. That is compatible on paper but right at the upper edge.
 
-## Install Sequence
+## Post-Juplaya Finish Sequence
 
-1. Mark roof bow stations from inside the trailer and transfer them to the roof.
-2. Draw the Velit curb, PV gland, awning standoff line, roof seams, and panel rectangle.
-3. Dry-fit the three panels or a full-size template.
-4. Cut the two NXT rails only after the dry-fit; target ~129 in, not shorter than the clamp/gap minimum.
-5. Place rail centerlines so all rail-to-roof attachment points land on bow crossings.
-6. Verify NXT combo clamp locations on every panel edge/seam.
-7. Mark combo-clamp travel zones on the rails so through-rail bolts do not block panel installation.
-8. Drill pilot holes through the rails and roof at bow attachment points only.
-9. Deburr every hole and prime/paint exposed steel or aluminum edges.
-10. Dry-assemble one rail with bolts, backing, and clamps to confirm no interference.
-11. Mask the roof and rail so adhesive squeeze-out does not fill clamp slots or drainage paths.
-12. Place short 1/4 in aluminum spacer pads at bow zones if needed for drainage/crown control.
-13. Apply interrupted Sikaflex-252 or selected adhesive/bedding pads at bow zones.
-14. Set the rail, install through-fasteners, and torque only enough to compress bedding without crushing the roof skin or starving the adhesive joint.
-15. Install backing/crush-control hardware from inside.
-16. Cap fastener heads and rail-edge leak paths with Henry 884 after the adhesive cure window allows it.
-17. Hose-test all penetrations before panels go on.
-18. Apply Henry 887 roof coating after penetrations pass, lapping onto cured compatible sealant without burying NXT clamp slots or grounding lugs.
-19. Install panels, combo clamps, grounding lugs, and wire clips after coating cure.
-20. Re-torque / inspect after the first tow and after the first rough-road trip.
+1. Wash the roof and protect the electrical equipment from wash water.
+2. Inspect and measure the installed panels, clamps, rails, last bow tie-ins, rear overhang, PV gland, and wiring before disturbing them.
+3. Remove panels or rails as required to protect them from the Velit hot-work and roof-repair area.
+4. Remove the Velit, record the opening and roof deformation, add the planned longitudinal steel reinforcement, and dry-fit the crown/drainage detail.
+5. Correct any unacceptable array support, clamp, overhang, or wiring condition found during inspection.
+6. Deburr and corrosion-protect exposed or welded metal, then reseal every disturbed fastener and penetration.
+7. Hose-test the Velit curb, PV gland, rail penetrations, and drainage before insulation or ceiling closure.
+8. Apply the approved roof coating only after the penetration and adhesion tests pass.
+9. Reinstall and label the array and roof wiring after coating cure, then record the final as-built drawing.
+10. Inspect the roof, array, and Velit again after the loaded road shakedown.
 
-## Open Measurements Before Ordering
+## Open Post-Juplaya Measurements
 
 - Exact roof bow stations in the roof rectangle.
 - Roof bow tube width and wall thickness.
@@ -173,7 +152,7 @@ Before roof drilling, test one `CCLAMPM1` / `CCLAMPD1` clamp on an LG frame. The
 - Whether 1/4 in aluminum spacer pads are needed at all bow stations or only where crown/drainage demands it.
 - Whether rubber is only an isolation layer or a spacer; if spacer, define durometer and crush sleeve/hard-stop detail.
 - Final Velit curb and PV gland positions.
-- Rear rail-only overhang clearance: ramp door travel, rear trim/lights, edge sealing, and unsupported tail length from the last roof-bow tie-in.
+- Exact panel-frame and rail overhang beyond the rear roof edge, plus ramp travel, rear trim/light clearance, edge sealing, and unsupported tail length from the last roof-bow tie-in.
 - Actual NXT combo clamp fit on the 40 mm LG module frame.
 - Final rail spacing from the LG module clamp-zone guidance.
 - LG short-side clamp-zone permission for the final fore-aft rail orientation.

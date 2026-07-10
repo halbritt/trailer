@@ -1,6 +1,6 @@
 # Juplaya Gate Tracker
 
-Updated: 2026-06-09
+Updated: 2026-07-10
 
 This is the central live tracker for build gates. Update this file first when a gate changes. Raw dimensions still belong in [dimensions.md](dimensions.md); decision receipts still belong in [DECISION_LOG.md](DECISION_LOG.md); purchasing state still belongs in [order-sheet.md](order-sheet.md).
 
@@ -23,7 +23,8 @@ Status legend:
 | G07 Fridge bay | Open | Aft clearance is recorded; still verify lid orientation, 50 mm all-sides clearance, and forced through-flow layout | Fridge bay partition, straps, forced ventilation | [dimensions.md](dimensions.md) row 17; [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | G09 Decision ratification | Open | Owner ratifies D006-D008 and D012 | Design freeze, order freeze, strip-out | [DECISION_LOG.md](DECISION_LOG.md) D006-D008/D012 |
 | G10 FRP trim system | Open | Pick FRP brand, adhesive, corner/seam/edge/reveal profiles, and warranty compatibility over PlexCore | Wall closure and sealed interior finish | [juplaya-trailer-context.md](juplaya-trailer-context.md) design-freeze item 9 |
-| G11 Gate buys/order freeze | Open | Place or freeze all unblocked SKUs and all BUY AFTER GATE items released by active gates G02-G10 | Design freeze and build start | [order-sheet.md](order-sheet.md) |
+| G11 Gate buys/order freeze | Open | Place or freeze all unblocked SKUs and all BUY AFTER GATE items released by active gates G02-G10 and G12 | Design freeze and build start | [order-sheet.md](order-sheet.md) |
+| G12 Split power enclosure | Open | Record the street-side battery-bench station, size, and floor anchors; record the shallow high-wall cabinet size and post backing; dry-fit the active Victron gear, busbars, protection, controls, service clearances, protected battery-to-cabinet feeder route, and cabinet airflow; assign a new Phase 2 MultiPlus location | Battery bench and cabinet fabrication, final wire cuts, wall closure, order freeze | [dimensions.md](dimensions.md) rows 20/21; [DECISION_LOG.md](DECISION_LOG.md) D015; [power.md](power.md) |
 
 ## Closed Or Accepted Inputs
 
@@ -52,7 +53,7 @@ Status legend:
 | B02 Roof and floor patches | Open | 48-hour Henry adhesion patch; PlexCore adhesion and fuel-drip patch | Roof coating and Durabak floor coating | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | B03 Hose test | Open | Hose-test roof rails, Velit curb, PV gland, and penetrations | Foam and ceiling closure | [solar_mounting.md](solar_mounting.md) |
 | B04 Fridge thermal check | Open | 50 mm clearance, forced through-flow, desert-sun bay temperature check | Juplaya fridge use | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
-| B05 Power commissioning | Open | PV segregation, OCP, charge profiles, charge-current cap, optional C1000 top-up test | Shakedown | [power.md](power.md) |
+| B05 Power commissioning | Open | PV segregation, OCP, charge profiles, charge-current cap, optional C1000 top-up test, protected feeder voltage checks, and shallow-cabinet temperature test | Shakedown | [power.md](power.md) |
 | B06 Weigh-in | Open | Curb weight and tongue weight | Payload and final load plan | [dimensions.md](dimensions.md) row 18 |
 | B07 Bike/L-track physical fit | Open | Put the bikes in the trailer and verify 26 in L-track placement plus handlebar overlap before final drill/coating commitment | Floor L-track final install | [dimensions.md](dimensions.md) row 11 |
 
@@ -60,7 +61,7 @@ Status legend:
 
 | Gate | Status | Notes | Source |
 |---|---|---|---|
-| D01 MultiPlus and built-in AC distribution | Deferred | Phase 2, not Juplaya | [power.md](power.md) |
+| D01 MultiPlus and built-in AC distribution | Deferred | Phase 2; location reopened by D015 because the shallow active-gear cabinet is not its assigned enclosure | [power.md](power.md) |
 | D02 Winter heater unit | Deferred | Rough-in only for Juplaya | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | D03 HRV unit | Deferred | Rough-in only for Juplaya | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | D04 Truck charging hardware | Deferred | Pull 4 AWG pre-wire now; active charging later | [order-sheet.md](order-sheet.md) |

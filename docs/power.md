@@ -2,15 +2,19 @@
 
 This is the detailed power source of truth for the Juplaya trailer build. The build sheet keeps only the abbreviated view; this document carries the wiring architecture, solar topology, component decisions, commissioning rules, and energy budget.
 
-Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md), [D013](DECISION_LOG.md), [D014](DECISION_LOG.md). Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [SmartShunt 500A specs](reference/victron-smartshunt-500a-specs.md), [Cerbo GX Mk2 specs](reference/victron-cerbo-gx-mk2-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
+Related decisions: [D002](DECISION_LOG.md), [D006](DECISION_LOG.md), [D008](DECISION_LOG.md), [D012](DECISION_LOG.md), and [D015](DECISION_LOG.md). D013 and D014 are retained as superseded history. Key receipts: [3-panel house-power verdict](../runs/aio-adversarial-3panel/synth/VERDICT.md), [SmartSolar 250/60 specs](reference/victron-smartsolar-mppt-250-60-tr-specs.md), [SmartSolar 150/35 specs](reference/victron-smartsolar-mppt-150-35-specs.md), [SmartShunt 500A specs](reference/victron-smartshunt-500a-specs.md), [Cerbo GX Mk2 specs](reference/victron-cerbo-gx-mk2-specs.md), [C1000/PS400 specs](reference/anker-solix-c1000-ps400-specs.md), [ComFlex battery specs](reference/litime-48v-100ah-battery-specs.md), [Orion-Tr 48/12-20A specs](reference/victron-orion-tr-48-12-20a-specs.md).
 
 ## Diagrams
 
-![Juplaya power overview](diagrams/power-overview.svg)
+**Installation authority:** follow these protection-location schematics when wiring. A label of `TBD` is an open selection, not permission to omit the device.
 
-![Solar string routing](diagrams/power-solar-strings.svg)
+![48 V wiring and protection locations](diagrams/power-wiring-48v.png)
 
-**Physical layout** (where the gear sits, vs the schematic above) — three scale panels: roof (Velit + roof 3S string and PV gland drop), floor (the ~18"-tall nose power bench, the two bikes at 26" OC straddling the centerline with handlebars sweeping the curbside fridge bay, exterior flood/awning positions, 24 V load locations), and a **real-scale plan + section of the nose bench** with every component to its true footprint — the bench runs wall-to-wall (perpendicular to the side walls) and the LiTime battery **stands on edge and runs transverse, centered in the deepest (nose) part** — plus a dimensioned parts list. The standalone Anker SOLIX C1000 + PS400 AC island and the optional ground-mounted 2S LG PV (with its SmartSolar 150/35) are intentionally left out. Regenerate with `python3 scripts/generate_power_physical_layout_svg.py`.
+![24 V and 12 V distribution protection locations](diagrams/power-wiring-low-voltage.png)
+
+The older [power overview](diagrams/power-overview.png) remains useful for system context, but it is not an installation schematic and does not show every required protective device.
+
+**Physical layout** (where the gear sits, rather than how it is wired) shows the installed roof equipment, bike stations, exterior loads, a compact battery bench in the street-side nose, and the shallow active-equipment cabinet higher on that wall. It is a placement study pending G12 measurements, not a wire-cut drawing. The standalone Anker SOLIX C1000 + PS400 AC island and the optional ground-mounted 2S LG PV are intentionally left out. Regenerate with `python3 scripts/generate_power_physical_layout_svg.py`.
 
 ![Power system physical layout](diagrams/power-physical-layout.svg)
 
@@ -18,44 +22,52 @@ Ancillary electrical/control ordering breakout: [ancillary-order-sheet.md](ancil
 
 ## Current Verdict
 
-For Juplaya, the built-in inverter/charger is deferred. Critical trailer loads stay on DC:
+The built-in inverter/charger remains deferred. Critical trailer loads stay on DC:
 
-- Roof solar charges the 48 V trailer battery through a Victron SmartSolar 250/60-Tr.
-- The Velit 2000R runs directly from the 48 V battery on its own fused branch.
+- Three roof panels are mounted and charge the 48 V trailer battery through a Victron SmartSolar 250/60-Tr. The array overhangs the rear roof edge by a few inches; record the exact overhang before closing the roof-layout gate.
+- The Velit 2000R runs directly from the 48 V system. Its permanent dedicated branch OCP is required and remains rating-TBD.
 - One Victron Orion-Tr 48/24-16A feeds the 24 V house bus for fridge, lights, USB, GPS, and winter heater rough-in.
 - One Victron Orion-Tr IP43 48/12-20A feeds fused cigarette-lighter receptacles in the power cabinet for occasional 12 V loads.
-- A Victron SmartShunt 500A and Cerbo GX Mk2 are ordered for the active monitoring path; expected arrival is 2026-06-15.
-- Active Juplaya Victron hardware is ordered; remaining electrical buys are ancillary protection, distribution, controls, wiring, and lighting parts.
+- A Victron SmartShunt 500A and Cerbo GX Mk2 are the active monitoring path. Confirm their post-trip condition and permanent mounting during the G12 dry-fit.
+- Permanent protection, distribution, controls, wiring cleanup, labels, and cabinet mounting remain incomplete.
 - Small 120 VAC loads run from the standalone Anker SOLIX C1000 + PS400 panel.
-- The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice, installed in an upper cabinet above the nose bench, not a Juplaya blocker.
+- The battery and battery-local Class-T main OCP live low in a compact street-side nose bench. Active Victron equipment, busbars, branch protection, controls, and low-voltage distribution live higher on the street-side wall in a shallow cabinet.
+- The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice. D015 reopened its physical location; it is not assigned to the shallow active-equipment cabinet.
 
 ## Architecture
 
 One high-voltage battery bus, one primary conversion step to 24 V house loads, and one local auxiliary 12 V converter for cabinet receptacles:
 
 ```text
-Optional deployable LG ground PV (2S)
+Optional LG ground PV (2S)
         |
-   Victron SmartSolar MPPT 150/35
+   2-pole 150 V-class PV disconnect/OCP, current rating TBD
         |
-        +-- 48 V bus
+   SmartSolar 150/35
+        |
+   40-45 A battery-side fuse
+        +-- 48 V positive bus
 
 Roof PV (3 x LG455 in 3S)
         |
-   Victron SmartSolar MPPT 250/60-Tr
+   2-pole 250 V-class PV disconnect/OCP, current rating TBD
         |
-        +-- 48 V bus
+   SmartSolar 250/60-Tr
+        |
+   70-80 A battery-side fuse
+        +-- 48 V positive bus
 
-48 V bus
-        |
-   LiTime 48V 100Ah ComFlex (5.12 kWh)
-        | Victron SmartShunt 500A, main OCP
-        +-- 48 V branch: Velit 2000R rooftop AC, own fused branch
-        +-- Victron Orion-Tr 48/24-16A isolated -> Blue Sea 5026 24 V block
-                                                        +-- fridge, 24 V native
-                                                        +-- interior/exterior LED zones, USB-C PD, GPS
-                                                        +-- winter heater outlet
-        +-- Victron Orion-Tr IP43 48/12-20A isolated -> fused 12 V cabinet receptacles
+Street-side battery bench:
+   battery positive -> Class-T main OCP, rating TBD -> protected feeder -> cabinet positive bus
+   battery negative -> dedicated feeder -> SmartShunt battery side
+
+Shallow high wall cabinet:
+   SmartShunt system side -> cabinet negative bus -> every load and charger negative
+   positive bus -> Velit branch OCP, rating TBD -> Velit 2000R
+   positive bus -> Blue Sea 7443, 20 A / 80 V DC -> Orion-Tr 48/24 -> output OCP TBD -> Blue Sea 5026
+   positive bus -> Orion 48/12 input OCP TBD -> Orion-Tr 48/12 -> output OCP TBD -> local 12 V fuse block
+   positive bus -> supplied 3.15 A slow-blow fuse -> Cerbo GX Mk2
+   battery positive -> SmartShunt supplied fused Vbatt+ sense lead
 
 Victron Cerbo GX Mk2:
    VE.Direct -> SmartShunt 500A, SmartSolar 250/60-Tr, SmartSolar 150/35
@@ -65,19 +77,19 @@ Victron Cerbo GX Mk2:
 Anker SOLIX C1000 + PS400 400 W panel -> standalone 120 VAC loads
 
 Phase 2 optional:
-LiTime 48 V battery -> upper-cabinet Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
+LiTime 48 V battery -> location-TBD Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
 ```
 
 Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V input, and the selected exterior lights are 12-28 VDC wide-input fixtures. The 12 V converter is scoped narrowly: a switched, fused accessory outlet bank in the power cabinet for occasional 12 V devices, not a distributed house rail.
 
 ## Solar Topology
 
-**Panels on hand:** 5 x LG455N2W-E6. Three live on the roof. Two can travel inside and deploy on the ground. Corrected review premise: the Velit fits in the nose section, so the roof has room for the permanent 3S string.
+**Panels on hand:** 5 x LG455N2W-E6. Three are mounted on the roof. They did not fit entirely behind the Velit reserve, so the installed array extends a few inches beyond the rear roof edge; exact overhang remains unmeasured. Two panels can travel inside and deploy on the ground.
 
 | Source | String | Power | Controller | Status |
 |---|---:|---:|---|---|
 | Deployable LG ground pair | 2S | 910 W | Victron SmartSolar MPPT 150/35 | ordered, optional use |
-| Roof LG panels | 3S | 1365 W | Victron SmartSolar MPPT 250/60-Tr | primary |
+| Roof LG panels | 3S | 1365 W | Victron SmartSolar MPPT 250/60-Tr | installed; rear overhang exact dimension TBD |
 | Anker PS400 | 1 panel | 400 W | Anker SOLIX C1000 input | separate AC island |
 
 Rules:
@@ -94,7 +106,7 @@ Physical mount sources: [solar mounting build sheet](solar_mounting.md) and [sol
 
 Mechanical verdict: the existing panel brackets attach the modules to a rail system; they do not define the trailer load path. Use two fore-aft NXT rails spanning the roof array field, drilled through at bow crossings and tied to multiple roof bows with backing/crush control. Use 1/4 in aluminum spacer pads only where needed for low-profile drainage/crown control. Add a third rail only if dry-fit stiffness or bracket geometry requires it. Do not fasten the roof modules to roof skin alone.
 
-Install the drilled rail/backing, PV gland, and Velit curb before foam and before Henry 887 roof coating. Hose-test every penetration before the ceiling closes. Keep roof 3S wiring clipped to the rails, with service loops and labels so it cannot be confused with the optional ground 2S input.
+Before foam or Henry 887 roof coating, inspect the installed rails, panel clamps, PV gland, and roof wiring; measure the rear overhang; remove the Velit for opening reinforcement and crown/drainage dry-fit; then reseal and hose-test every disturbed penetration. Keep roof 3S wiring clipped to the rails, with service loops and labels so it cannot be confused with the optional ground 2S input.
 
 Voltage checks:
 
@@ -107,16 +119,18 @@ Voltage checks:
 | Component | Role | Notes |
 |---|---|---|
 | LiTime 48 V 100 Ah Smart ComFlex | house battery | 5.12 kWh, 100 A continuous charge/discharge, Bluetooth BMS |
-| Victron SmartShunt 500A | instrumentation | ordered; active 48 V battery monitor / SOC source; VE.Direct to Cerbo GX Mk2 |
-| Victron Cerbo GX Mk2 | monitoring / control | ordered; VE.Direct to SmartShunt and SmartSolars now, VE.Bus to MultiPlus later |
-| Main battery OCP | protection | make battery-terminal Class-T or equivalent main OCP explicit before final wiring |
-| SmartSolar 250/60-Tr | roof MPPT | roof 3S only |
-| SmartSolar 150/35 | ground MPPT | optional LG ground 2S only; connector variant pending |
-| Velit 2000R | 48 V DC load | own fused branch |
-| Orion-Tr 48/24-16A | house converter | isolated, remote on/off to cabin toggle |
-| Orion-Tr IP43 48/12-20A | auxiliary 12 V converter | isolated, 240 W / 20 A, remote off; feeds only cabinet receptacles |
+| Victron SmartShunt 500A | instrumentation | high cabinet; battery negative alone on battery side; every load and charger negative on system side; supplied fused Vbatt+ sense lead |
+| Victron Cerbo GX Mk2 | monitoring / control | high cabinet; supplied 3.15 A slow-blow inline supply fuse; VE.Direct to SmartShunt and SmartSolars now, VE.Bus to MultiPlus later |
+| Main battery OCP | protection | Class-T at battery positive inside low bench, before the positive feeder leaves; rating TBD |
+| SmartSolar 250/60-Tr | roof MPPT | roof 3S only; 70-80 A battery-side fuse before positive bus |
+| SmartSolar 150/35 | ground MPPT | optional LG ground 2S only; 40-45 A battery-side fuse before positive bus; connector variant pending |
+| Velit 2000R | 48 V DC load | dedicated branch OCP required; rating TBD pending manufacturer documentation |
+| Orion-Tr 48/24-16A | house converter | Blue Sea 7443 20 A / 80 V DC input breaker; output OCP TBD; remote on/off to cabin toggle |
+| Orion-Tr IP43 48/12-20A | auxiliary 12 V converter | input and output OCP ratings TBD; remote off; feeds only cabinet receptacles |
 
-All the Juplaya power gear — battery, SmartShunt, Cerbo, MPPTs, Orion converters, distribution, and protection — lives in a single **~18"-tall bench across the nose**. The LiTime battery **stands on edge and runs transverse** (19.88" long across the bench × 9.25" deep, 12.32" tall), low and centered in the deepest part under the bench top; everything else fits under the same seat top. Ventilate the bench; the SmartSolar and Orions add waste heat, and the curbside fridge bay must stay away from this plume.
+D015 splits the enclosure. The low street-side nose bench contains only the secured battery, battery-local Class-T main OCP, and protected feeder departure. The shallow cabinet higher on the street-side wall contains the SmartShunt, both SmartSolars, Cerbo, both Orions, positive and negative busbars, branch protection, the Blue Sea 5026, local 12 V distribution, and controls. G12 must close component fit, backing, service clearance, feeder routing, and ventilation before fabrication or final wire cuts.
+
+The battery negative feeder terminates first at the SmartShunt battery-side stud in the high cabinet. Nothing else may land on the battery side. The SmartShunt system-side stud feeds the cabinet negative bus, and every load and charger negative returns there.
 
 The LiTime 500 A Bluetooth shunt is superseded for the active build and kept only as spare/test gear.
 
@@ -135,9 +149,11 @@ The Cerbo gives local/VRM visibility into battery SOC, charge/discharge current,
 
 Reserve VE.Can for future Victron-compatible CAN gear. If the build later moves to Lynx, the compatible LiTime path is Lynx Shunt VE.Can / Lynx Distributor as distribution and monitoring gear; do not spec Lynx Smart BMS unless the battery bank changes to Victron Lithium Smart.
 
-## Power Cabinet Ventilation
+## Split Power Enclosure Ventilation
 
-Active plan: **vent the power cabinet to the cabin and avoid exterior penetrations.** The cabinet gets filtered low intake from the cabin and high fan-assisted exhaust back to the cabin. This keeps tow rain and playa dust out of the electrical cabinet and avoids another wall hole in the nose.
+Active plan: **vent the shallow high cabinet to the cabin and avoid exterior penetrations.** The cabinet gets a filtered low intake from the cabin and a high fan-assisted exhaust back to the cabin. Keep the battery bench separate, dry, restrained, and serviceable. This arrangement keeps tow rain and playa dust away from active electronics and avoids another wall hole in the nose.
+
+The open trailer inlet and outlet admitted substantial playa dust during the 2026-07 field use. Before the next playa trip, fit positive-closing caps, plugs, or shutters to every unused exterior opening and add their travel-state check to the departure checklist. Do not rely on loose filter media as a closure.
 
 Deferred fallback: if cabin-side ventilation cannot keep cabinet temperature under control during shakedown, reopen an exterior-vent path. The preferred exterior fitting remains the **[RecPro RP-2414 Exterior Wall Vent for Enclosed Trailers with 3" Hole](https://recpro.com/exterior-wall-vent-for-enclosed-trailers-with-3-hole/)**, color to match the trailer exterior. It is a low-profile 2-piece enclosed-trailer side vent over a 3" sidewall hole, with a UV-resistant polypropylene exterior cowl, interior round grille, weep path, and front-driver-side / rear-curb-side ram-air orientation guidance. Hardware and sealant are not included.
 
@@ -145,7 +161,7 @@ Deferred fallback: if cabin-side ventilation cannot keep cabinet temperature und
 
 Recommended cabinet airflow:
 
-- **Low intake:** filtered interior transfer vent in the lower cabinet face, pulling relatively clean cabin air.
+- **Low intake:** filtered interior transfer vent in the lower portion of the shallow cabinet face, pulling relatively clean cabin air.
 - **High exhaust:** fan-assisted interior transfer vent near the upper cabinet face, exhausting back to the cabin. Keep intake and exhaust separated enough that the fan does not short-cycle hot air.
 - **Fan:** 24 V, 120 mm, dust-resistant fan on the 24 V house bus; fuse at 1 A. A Noctua NF-F12 industrialPPC-24V-2000 SP IP67 PWM-class fan is enough airflow and survives dust better than a bare PC fan.
 - **Control:** normally-open enclosure thermostat closing on temperature rise, set around 95 F on / 85 F off. Add a manual override if convenient.
@@ -163,17 +179,17 @@ Approximate current is for planning and load-shedding. Fuses still size to the p
 |---|---:|---:|---|---|
 | Fridge, Dometic CFX3 95DZ | ~4.6 A running | 10 A | 14 AWG | 24 V native; verify less than 3 percent round-trip voltage drop |
 | LED lighting zones | ~4-10 A exterior depending on fixtures; ~2-3 A interior typical | 5 A per zone | TBD | 24 V interior strips plus exterior zones below |
-| Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 7.5 A | TBD | 24 V in to USB-C PD |
+| Scanstrut SC-USB-F3 | up to ~5 A at full USB-C load | 10 A | TBD | manufacturer-recommended branch fuse; 24 V in to USB-C PD |
 | LandAirSea Overdrive Permanent GPS | <0.1 A typical | 3 A | TBD | ordered; hardwired always-on security |
 | Door switch | signal only | TBD | TBD | dry contact |
 | Winter heater outlet | ~1-2 A run; glow up to ~11 A | 15 A | 12 AWG | exterior reachable; N4 glow may exceed current July converter margin |
 | Optional C1000 top-up | up to 10 A, about 240 W | TBD | TBD | manual/fused branch only; disable before it starves critical 24 V loads |
 
-Sizing honesty: current July loads fit the 16 A Orion. Winter heater glow can push the bus toward 18-19 A worst case, so winter use requires glow-window load shedding or a second Orion after bench measurement.
+Sizing honesty: current July loads fit the 16 A Orion. Winter use requires glow-window load shedding or a separate decision on additional converter capacity after G12.
 
 ## Lighting And Switches
 
-Switching plan: **put the lighting switches on the power cabinet**, not beside the entry door, for the Juplaya build. This keeps wiring shorter and serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
+Switching plan: **put the lighting switches on the shallow high cabinet face**, not beside the entry door. This keeps wiring serviceable. While the walls are open, leave a labeled pull string or spare low-current pair to the side-door bay only if it is easy; a future entry switch can be added later if real use proves it is worth the wire.
 
 Switch hardware: use a **Blue Sea 8260 6-position Contura mounting panel** with **Blue Sea 8282 Contura III SPST OFF-ON black switches**. The 8282 is rated 15 A at 24 V DC, so it has ample margin for these fused lighting branches. The 8260 panel accepts 0.06" to 0.38" mounting thickness; if the power-cabinet face is 1/2" ply, mount the switches in a thin ABS/aluminum inset plate or back-rabbet the cutout. Wire each switch downstream of its Blue Sea 5026 branch fuse as a hard enable, then put a panel-mount 24 V dimmer control downstream of the switch for brightness control.
 
@@ -219,12 +235,13 @@ Load-shed rule: do not run every flood, full awning strip, full USB-C load, opti
 
 ## Auxiliary 12 V Cabinet Receptacles
 
-The added Victron Orion-Tr IP43 48/12-20A isolated converter feeds a small set of cigarette-lighter receptacles in the power cabinet. This is for occasional 12 V loads and adapters, not for the fridge, lighting, USB-C PD, GPS, tow-vehicle wiring, or OEM trailer lights.
+The Victron Orion-Tr IP43 48/12-20A isolated converter feeds a local fuse block and a small set of cigarette-lighter receptacles in the shallow high cabinet. This is for occasional 12 V loads and adapters, not for the fridge, permanent lighting, USB-C PD, GPS, tow-vehicle wiring, or OEM trailer lights. The temporary Amazon LED kit used during the 2026-07 field trip may remain only on its own labeled fuse until the permanent lighting is installed.
 
 | Item | Limit | Protection | Notes |
 |---|---:|---|---|
-| Orion-Tr IP43 48/12-20A | 20 A / 240 W at 12 V | DC-rated 48 V input OCP; output OCP sized to conductor/receptacle | 32-70 V input, 12.2 V nominal output, remote off when unused |
-| Cigarette-lighter receptacles | per receptacle rating, total below 20 A | fuse each receptacle branch | install in power cabinet; label auxiliary 12 V only |
+| Orion-Tr IP43 48/12-20A | 20 A / 240 W at 12 V | DC-rated 48 V input OCP, rating TBD; output OCP, rating TBD | 32-70 V input, 12.2 V nominal output, remote off when unused |
+| Cigarette-lighter receptacles | per receptacle rating, total below 20 A | fuse each receptacle branch; ratings TBD | install in shallow cabinet; label auxiliary 12 V only |
+| Temporary Amazon LED kit | temporary only | dedicated branch fuse, rating TBD | label and remove when permanent lighting is commissioned |
 
 The converter's no-load input current is under 80 mA, roughly under 4 W on the 48 V bus. That is small, but still worth switching off by remote when the receptacles are not in use. IP43 protection only applies with the screw terminals facing down.
 
@@ -284,7 +301,7 @@ Deferred because Juplaya does not need it:
 
 If installed later, treat 2400 W at 25 C / 2200 W at 40 C as the sustained AC design envelope, and cap combined charge current at or below the ComFlex battery's 100 A continuous charge limit.
 
-Physical fit decision (D014): the MultiPlus-II is about 22.5" tall, 10.9" wide, 5.8" deep, and 64 lb. It does **not** fit as a proper upright install inside the ~18" nose bench, and Victron wants about 4" cooling clearance around it. Reserve the Phase 2 inverter/charger location as an **upper cabinet above the nose bench** with structural tie-in, service access, ventilation, DC cable path from the bench, VE.Bus path to the Cerbo, and future shore/generator AC routing.
+D014's upper-cabinet location is superseded by D015. The MultiPlus is not part of the shallow active-equipment cabinet. Its future location remains open and must separately resolve structural support, service access, ventilation, the protected DC path, VE.Bus routing to the Cerbo, and shore/generator AC routing.
 
 ## Protection And Commissioning
 
@@ -294,18 +311,30 @@ Before energizing:
 - Verify roof 3S lands only on the SmartSolar 250/60-Tr.
 - Verify optional LG ground 2S lands only on the SmartSolar 150/35.
 - Verify PS400 lands only on the C1000.
-- Use DC-rated PV disconnect/OCP above worst-case cold roof 3S Voc.
-- Fuse/breaker each MPPT battery-side output for controller current and conductor ampacity.
-- Make the battery-terminal main OCP explicit; no 32 V automotive fuse gear on the 48 V side.
+- Use a 2-pole, 250 V-class PV disconnect/OCP for roof PV and a separate 2-pole, 150 V-class unit for optional ground PV. Both current ratings remain TBD.
+- Install the SmartSolar 250/60-Tr battery-side fuse in its positive lead before the 48 V positive bus; Victron specifies 70-80 A.
+- Install the SmartSolar 150/35 battery-side fuse in its positive lead before the 48 V positive bus; Victron specifies 40-45 A.
+- Install the Class-T main OCP at battery positive inside the low bench, before the positive feeder leaves. Its rating remains TBD; do not substitute 32 V automotive fuse gear on the 48 V side.
 - Install the SmartShunt in the battery-negative path before the negative bus, with the load/charger side feeding every trailer load and charger negative.
+- Install the SmartShunt's supplied fused Vbatt+ sense lead at battery positive as shown in the manufacturer instructions.
 - Run VE.Direct from SmartShunt and both SmartSolars to the Cerbo GX Mk2; add VE.Direct-to-USB only if the three built-in ports are not enough after layout.
-- Fuse the Cerbo supply, configure VRM/WiFi, and set alarms for low SOC, low battery voltage, high cabinet temperature, and charger faults.
+- Power the Cerbo through its supplied 3.15 A slow-blow inline fuse; configure VRM/WiFi and the required alarms.
 - Use Blue Sea 7443 for the 20 A / 80 V DC UL-489 breaker. Do not use Blue Sea 7463 for this DC branch; it is a 2-pole 240 V AC breaker.
-- Fuse/breaker both Orion converter inputs with DC-rated 48 V gear, fuse their outputs for conductor ampacity, and orient the 48/12 Orion screw terminals down if relying on IP43.
+- Use the Blue Sea 7443 on the Orion 48/24 input. Keep the Orion 48/24 output OCP, Orion 48/12 input and output OCPs, and each 12 V receptacle fuse explicitly TBD until their selections are documented. Orient the 48/12 Orion screw terminals down if relying on IP43.
 - Label the 12 V cabinet receptacles as auxiliary only; do not backfeed tow-vehicle 12 V, OEM trailer lighting, the 24 V bus, or C1000 charging through them.
 - Configure LiFePO4 charge profiles: absorption 57.6 V, float about 55.2 V, equalization off, temperature compensation off.
 - Cap combined trailer charge current at or below 100 A.
 - Test the optional C1000 24 V top-up branch under fridge/lighting load before relying on it.
+
+## 2026-07 Field Observations
+
+- The Velit was installed and operated from the 48 V system.
+- The MPPT and both DC-DC converters were set up. The Dometic ran from 24 V, and the temporary Amazon LED kit ran from 12 V.
+- With no insulation or finished walls, the Velit did not bring the trailer to its 68 F setpoint in 100 F playa ambient. The trailer slowly approached about 85 F only after ambient temperature fell below that.
+- Peak observed consumption was about 600 W. Peak solar generation was not captured, so this trip does not close the energy-production gate.
+- The three roof panels were installed with an aft overhang of a few inches.
+- The Velit opening touches a roof crossbeam at its forward edge but lacks equivalent support at the aft edge. Tightening the unit formed a roof valley. Remove the unit, add the planned longitudinal 1 in steel reinforcement between crossbeams, and dry-fit crown-forming rubber spacers before resealing.
+- No insulation or wall finish was installed. The open inlet and outlet admitted heavy playa dust; clean the trailer before enclosure work and provide positive travel closures.
 
 ## Energy Budget
 
@@ -322,7 +351,8 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 
 ## Open Gates
 
-- Roof drawing: fore-aft solar rails tied into roof bows, panel bracket landings on those rails, Velit opening/shadow line, PV gland, and awning standoff stations.
+- Roof repair and drawing: measure the panel overhang and Velit opening, add longitudinal steel reinforcement around the unsupported opening, dry-fit the crown/drainage spacers, and update panel/rail/gland stations.
+- G12 split enclosure: measure and dry-fit the street-side battery bench and shallow high cabinet, confirm backing/service clearances, establish the protected feeder route, and choose a separate future MultiPlus location.
 - Battery-terminal main OCP selection.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.

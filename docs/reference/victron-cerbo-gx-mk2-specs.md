@@ -29,4 +29,5 @@ Sources: Victron Cerbo GX product page and official manual/specs:
 - Reserve VE.Bus for the deferred MultiPlus-II 48/3000/35-50 120V.
 - Reserve VE.Can for future Victron-compatible CAN gear. The current LiTime ComFlex battery does not become a Victron managed battery just because a Cerbo is present.
 - The existing Orion-Tr converters remain remote-on/off power supplies; they do not provide useful GX telemetry.
-- Fuse the Cerbo supply and mount it in the dry nose bench with service access and protected cable routing.
+- Power the Cerbo through its supplied **3.15 A slow-blow inline fuse**.
+- Mount it in the dry shallow high wall cabinet per D015, with service access and protected cable routing.

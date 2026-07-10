@@ -40,5 +40,5 @@ The house pack in the power system: the **LiTime 48V 100Ah Smart ComFlex** (corr
 - **Parallel only (1S).** Capacity scales by paralleling (≤16P with comms, ≤4P without); you cannot series these. Not a problem for the current 48 V design.
 - **Charging is comfortable but still capped.** 100 A max / 20 A recommended, CC/CV at 57.6 V. Roof SmartSolar (~1365 W ÷ 51.2 V ≈ 27 A), MultiPlus AC charging (35 A), and any optional ground MPPT must be configured so combined charge stays ≤100 A.
 - **No self-heating + charge cutoff below 0 °C.** Fine for July Juplaya (hot). But for the mission doc's cold-weather profiles, the pack **won't accept charge below freezing** (recovers ≥ 5 °C) — a real limit if this rig ever winters.
-- **Weight 97.44 lbs** confirms the context doc's "~100 lb; mount low and centered" — and it's a meaningful chunk of the single-axle payload + a tongue-weight placement decision.
+- **Placement:** D015 supersedes the earlier centered-bench note. Secure the battery low in the compact street-side nose bench, then verify tongue load and side-to-side loading on scales.
 - **Does NOT set PV topology** — roof 3S is resolved by the SmartSolar 250/60-Tr; the battery only sets charge/discharge current limits.

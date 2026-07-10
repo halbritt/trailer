@@ -1,10 +1,10 @@
 # Wire And Termination Order Sheet
 
-Date: 2026-06-14. First-pass buy sheet for Juplaya DC wire, lugs, terminals, ferrules, and cable consumables. This is the detailed breakout behind the wiring allowance in [ancillary-order-sheet.md](ancillary-order-sheet.md) and the generated [order-sheet.md](order-sheet.md).
+Date: 2026-07-10. First-pass buy sheet for trailer DC wire, lugs, terminals, ferrules, and cable consumables. This is the detailed breakout behind the wiring allowance in [ancillary-order-sheet.md](ancillary-order-sheet.md) and the generated [order-sheet.md](order-sheet.md).
 
 ## Scope And Assumptions
 
-- These are ordering lengths, not final cut lengths. Cut only after the nose bench component board, roof gland, Velit station, fridge bay, and wall chases are dry-fit.
+- These are ordering lengths, not final cut lengths. D015 invalidated the old single-bench cut assumptions. Do not cut the battery feeders, SmartShunt leads, MPPT leads, or converter cabinet leads until G12 records the battery-bench and shallow-cabinet geometry, protected route, and real endpoint locations.
 - Use tinned copper marine primary cable or better for all DC branch wiring; use PV-rated 10 AWG solar cable for roof/ground PV wiring.
 - Use adhesive-lined heat shrink on crimped lugs and heat-shrink terminals on branch wiring. Label both ends before the wall closes.
 - The 48 V side must use DC-rated protection and switching. Do not use 32 V automotive fuse gear upstream of the 48/24 or 48/12 converters.
@@ -21,6 +21,10 @@ Known terminal facts:
 - Blue Sea 7443 breaker has #10-32 terminal screws.
 - Blue Sea 1011 dash sockets use 0.250 in female quick-connects and are 15 A maximum.
 - Scanstrut SC-USB-F3 is 10-32 V input, 6 A maximum input current, with a 10 A recommended fuse.
+- SmartSolar 250/60-Tr battery-positive output: Victron specifies a 70-80 A battery fuse before the positive bus.
+- SmartSolar 150/35 battery-positive output: Victron specifies a 40-45 A battery fuse before the positive bus.
+- Cerbo GX Mk2 supply: use the supplied 3.15 A slow-blow inline fuse.
+- SmartShunt Vbatt+: use the supplied fused sense lead.
 
 Sources checked: local reference notes for the LiTime battery, SmartShunt, SmartSolars, Cerbo, and MultiPlus; [Victron Orion-Tr isolated datasheet](https://www.victronenergy.com/upload/documents/Datasheet-Orion-Tr-DC-DC-converters-isolated-100-250-400W-EN.pdf); [Blue Sea 5026](https://www.bluesea.com/products/5026/ST_Blade_Fuse_Block_-_12_Circuits_with_Negative_Bus_and_Cover); [Blue Sea 7443](https://www.bluesea.com/products/7443/UL-489_Circuit_Breaker_-_20A_Flat_Rocker); [Blue Sea 1011 FAQ](https://www.bluesea.com/products/1011/Dash_Socket_12V_DC_with_Watertight_Cap/FAQ); and [Scanstrut SC-USB-F3](https://www.scanstrut.com/marine/power/usb/flip-pro/sc-usb-f3).
 
@@ -36,8 +40,8 @@ Still verify at dry-fit:
 
 | Qty | Wire | Length to buy | Primary use | Terminal plan |
 |---:|---|---:|---|---|
-| 1 | 2 AWG red tinned battery cable | 10 ft | 48 V battery positive spine: battery -> Class-T -> positive bus | M8 battery lug; Class-T and busbar studs TBD |
-| 1 | 2 AWG black tinned battery cable | 10 ft | 48 V negative spine: battery -> SmartShunt -> negative bus | M8 battery lug; M10 SmartShunt lug; busbar stud TBD |
+| 1 | 2 AWG red tinned battery cable | prior sheet: 10 ft; adequacy TBD after G12 | battery -> Class-T -> protected positive feeder -> high-cabinet positive bus | M8 battery lug; Class-T and busbar studs TBD |
+| 1 | 2 AWG black tinned battery cable | prior sheet: 10 ft; adequacy TBD after G12 | battery -> dedicated negative feeder -> high-cabinet SmartShunt -> negative bus | M8 battery lug; M10 SmartShunt lug; busbar stud TBD |
 | 1 | 4 AWG red tinned battery cable | 35 ft | Future truck-charge tongue pre-wire positive | Coil until charger plan; Anderson SB175-style 4 AWG contact or fuse lug later |
 | 1 | 4 AWG black tinned battery cable | 35 ft | Future truck-charge tongue pre-wire negative | Coil until charger plan; Anderson SB175-style 4 AWG contact or fuse lug later |
 | 1 | 6 AWG red tinned primary cable | 20 ft | SmartSolar 250/60 battery-side positive and other 48 V high-current short runs | Ferrule at Victron screw terminal; ring at OCP/bus |
@@ -47,8 +51,8 @@ Still verify at dry-fit:
 | 1 | 10 AWG black tinned primary cable | 50 ft | Matching returns for Velit, Orion outputs, 12 V trunk | #10/#8 rings, ferrules, or quick-connects by endpoint |
 | 1 | 12 AWG red tinned primary cable | 50 ft | Orion inputs, heater/C1000 rough-in branch positives, general protected 15 A circuits | #10/#8 rings or ferrules |
 | 1 | 12 AWG black tinned primary cable | 50 ft | Matching returns for 12 AWG protected circuits | #10/#8 rings or ferrules |
-| 1 | 14 AWG red tinned primary cable | 50 ft | Fridge, USB-C, fan, Cerbo/small fused loads where local run is short | #8 rings/forks at 5026; butt/ferrule/quick-connect by device |
-| 1 | 14 AWG black tinned primary cable | 50 ft | Matching returns for fridge, USB-C, fan, Cerbo/small loads | #8 rings/forks at 5026; butt/ferrule/quick-connect by device |
+| 1 | 14 AWG red tinned primary cable | 50 ft | Fridge, USB-C, fan, and other small fused loads where local run is short | #8 rings/forks at 5026; butt/ferrule/quick-connect by device |
+| 1 | 14 AWG black tinned primary cable | 50 ft | Matching returns for fridge, USB-C, fan, and other small loads | #8 rings/forks at 5026; butt/ferrule/quick-connect by device |
 | 1 | 16/2 tinned marine duplex cable | 250 ft | Exterior/interior lighting zone branches | #8 rings/forks at 5026 or switch/dimmer; heat-shrink butt splices at fixtures |
 | 1 | 18/2 tinned marine duplex cable | 100 ft | Remote on/off, thermostat, fan control, door/future entry switch signal, small always-on loads | Small ferrules, butt splices, or #8 terminals |
 | 1 | 10 AWG red PV wire | 50 ft | Roof 3S and ground 2S PV positive wiring | MC4 contacts, PV disconnect, or ferrule into SmartSolar Tr input |
@@ -59,25 +63,25 @@ Still verify at dry-fit:
 
 | Circuit | Est. one-way installed length | AWG | Protection / endpoint notes | Terminations |
 |---|---:|---:|---|---|
-| Battery positive to Class-T holder | 24 in | 2 AWG red | Main OCP at battery end | M8 battery lug; holder stud TBD |
-| Class-T holder to positive bus | 36 in | 2 AWG red | Keep short and protected | Holder stud TBD; busbar stud TBD |
-| Battery negative to SmartShunt battery side | 24 in | 2 AWG black | All load/charge current through SmartShunt | M8 battery lug; M10 SmartShunt lug |
-| SmartShunt load side to negative bus | 36 in | 2 AWG black | No alternate negative bypasses | M10 SmartShunt lug; busbar stud TBD |
-| Negative bus to chassis bond | 36 in | 6 AWG green/black | Bond to cleaned steel with anti-oxidation compound and strain relief | Busbar lug TBD; likely 5/16 in frame lug after dry-fit |
-| SmartSolar 250/60 battery positive to OCP/bus | 4 ft | 6 AWG red | Size OCP to conductor and 60 A controller limit | Ferrule at MPPT; ring at OCP/bus |
-| SmartSolar 250/60 battery negative to bus | 4 ft | 6 AWG black | Route with positive pair | Ferrule at MPPT; ring at bus |
-| SmartSolar 150/35 battery positive/negative to bus | 4 ft pair | 6 AWG red/black | Optional ground solar controller; 35 A limit | Ferrules at MPPT; rings at bus/OCP |
-| Roof PV gland/disconnect to SmartSolar 250/60-Tr | 25 ft pair | 10 AWG PV | Roof 3S only; 250 V-class disconnect/OCP | MC4/PV disconnect; ferrules at Tr input if needed |
-| Ground PV inlet/disconnect to SmartSolar 150/35 | 10 ft internal + 25 ft external pair | 10 AWG PV | LG ground 2S only; never combine with roof 3S | MC4 at inlet/extensions; ferrules at Tr input if needed |
-| 48 V bus to Velit branch OCP to roof unit | 25 ft pair | 10 AWG red/black | Velit branch OCP final value waits on delivered manual/harness; current plan is 48 V, roughly 5-18 A class | Ring at bus/OCP; Velit end per delivered harness |
-| 48 V bus to Orion-Tr 48/24 input breaker | 3 ft pair | 10 AWG red/black | Blue Sea 7443 is the 20 A / 80 V DC input breaker | #10 rings at breaker; ferrules at Orion |
-| Orion-Tr 48/24 output to Blue Sea 5026 input | 4 ft pair | 10 AWG red/black | 16 A max 24 V house converter output | Ferrules at Orion; #10 rings at 5026 bus studs |
-| 48 V bus to Orion-Tr 48/12 input OCP | 3 ft pair | 12 AWG red/black | 48 V input current is small; use DC-rated OCP | Ring at OCP/bus; ferrules at Orion |
-| Orion-Tr 48/12 output to 12 V receptacle fuse/sockets | 4 ft trunk + 2 ft/socket | 10 AWG trunk, 12 AWG branch | 20 A converter max; fuse each 12 V socket below socket rating | Ferrules/rings at fuse point; 0.250 in female quick-connects at Blue Sea 1011 sockets |
+| Battery positive to Class-T holder | TBD after G12 | 2 AWG red | Main OCP at battery positive inside low bench | M8 battery lug; holder stud TBD |
+| Class-T holder to high-cabinet positive bus | TBD after G12 | 2 AWG red | Protected feeder; route and secure before wall closure | Holder stud TBD; busbar stud TBD |
+| Battery negative to high-cabinet SmartShunt battery side | TBD after G12 | 2 AWG black | Dedicated feeder; no other battery-negative connections | M8 battery lug; M10 SmartShunt lug |
+| SmartShunt system side to negative bus | TBD after G12 | 2 AWG black | Local high-cabinet link; no alternate negative bypasses | M10 SmartShunt lug; busbar stud TBD |
+| Negative bus to chassis bond | TBD after G12 | 6 AWG green/black | Bond to cleaned steel with anti-oxidation compound and strain relief | Busbar and frame studs TBD after dry-fit |
+| SmartSolar 250/60 battery positive to fuse/bus | TBD after G12 | 6 AWG red | 70-80 A battery-side fuse before positive bus | Ferrule at MPPT; ring at fuse/bus |
+| SmartSolar 250/60 battery negative to bus | TBD after G12 | 6 AWG black | Route with positive pair | Ferrule at MPPT; ring at bus |
+| SmartSolar 150/35 battery positive/negative to bus | TBD after G12 | 6 AWG red/black | Optional controller; 40-45 A battery-side fuse before positive bus | Ferrules at MPPT; rings at bus/fuse |
+| Roof PV gland/disconnect to SmartSolar 250/60-Tr | TBD after G12 | 10 AWG PV | Roof 3S only; 250 V-class disconnect/OCP, current rating TBD | MC4/PV disconnect; ferrules at Tr input if needed |
+| Ground PV inlet/disconnect to SmartSolar 150/35 | TBD after G12 | 10 AWG PV | LG ground 2S only; 150 V-class disconnect/OCP, current rating TBD | MC4 at inlet/extensions; ferrules at Tr input if needed |
+| 48 V bus to Velit branch OCP to roof unit | TBD after G12 | 10 AWG red/black | dedicated branch OCP rating TBD pending manufacturer documentation | Ring at bus/OCP; Velit end per delivered harness |
+| 48 V bus to Orion-Tr 48/24 input breaker | TBD after G12 | 10 AWG red/black | Blue Sea 7443 is the 20 A / 80 V DC input breaker | #10 rings at breaker; ferrules at Orion |
+| Orion-Tr 48/24 output to output OCP and Blue Sea 5026 | TBD after G12 | 10 AWG red/black | output OCP rating TBD | Ferrules at Orion; rings at OCP/5026 bus studs |
+| 48 V bus to Orion-Tr 48/12 input OCP | TBD after G12 | 12 AWG red/black | DC-rated input OCP rating TBD | Ring at OCP/bus; ferrules at Orion |
+| Orion-Tr 48/12 output to local fuse block/sockets | TBD after G12 | 10 AWG trunk, 12 AWG branch | output OCP and each socket branch fuse rating TBD | Ferrules/rings at fuse point; 0.250 in female quick-connects at Blue Sea 1011 sockets |
 | Blue Sea 5026 to Dometic CFX3 95DZ fridge | 18 ft pair | 14 AWG red/black | 10 A fuse; verify less than 3 percent voltage drop after route is real | #8 ring/fork at 5026 branch screws; fridge-end pigtail/plug per Dometic harness |
 | Blue Sea 5026 to Scanstrut SC-USB-F3 | 10 ft pair | 14 AWG red/black | 10 A fuse per Scanstrut; 24 V input for full PD output | #8 ring/fork at 5026; waterproof butt or device pigtail termination |
 | Blue Sea 5026 to LandAirSea GPS hardwire | 8 ft pair | 18 AWG | 3 A fuse; always-on tracker branch | #8 ring/fork at 5026; heat-shrink butt to hardwire lead |
-| Blue Sea 5026 to Cerbo GX Mk2 supply | 8 ft pair | 18 AWG | 3 A fuse; dry bench routing | #8 ring/fork at 5026; ferrule/device plug per Cerbo harness |
+| 48 V positive bus to Cerbo GX Mk2 supply | TBD after G12 | supplied harness | supplied 3.15 A slow-blow inline fuse; dry high-cabinet routing | per supplied Cerbo harness |
 | Blue Sea 5026 to cabinet fan/thermostat | 8 ft pair | 14-18 AWG | 1 A fuse; thermostat controls fan | #8 ring/fork at 5026; quick-connect/butt at fan and thermostat |
 | Interior main/task lighting | 25 ft | 16/2 duplex | 5 A fuse; switch plus dimmer | #8 at 5026; 0.250 quick-connect at switch; butt/ferrule at dimmer/strip |
 | Awning strip | 25 ft | 16/2 duplex | 5 A fuse; switch plus dimmer | #8 at 5026; quick-connect/butt/ferrule as panel demands |
@@ -87,7 +91,7 @@ Still verify at dry-fit:
 | Rear flood | 45 ft | 16/2 duplex | 5 A fuse; rear loading/work light | #8 at 5026; heat-shrink butt to fixture leads |
 | Optional step/courtesy or spare exterior pair | 20 ft | 18/2 or 16/2 duplex | 3-5 A fuse or shared awning branch | #8 at 5026; sealed butt at fixture |
 | Side-door future control spare | 25 ft | 18/2 duplex | Signal only; leave labeled pull/spare | Coiled and labeled both ends |
-| Future truck-charge pre-wire to tongue | 30 ft pair | 4 AWG red/black | Pull while walls are open; active charger/fuses deferred | Coil at bench; Anderson SB175-style 4 AWG contacts or fuse lugs when charger is selected |
+| Future truck-charge pre-wire to tongue | 30 ft pair | 4 AWG red/black | Pull while walls are open; active charger/fuses deferred | Coil at battery bench; Anderson SB175-style 4 AWG contacts or fuse lugs when charger is selected |
 
 ## Terminals And Consumables To Order
 
@@ -115,7 +119,7 @@ Still verify at dry-fit:
 | 1 kit | Assorted insulated ferrules, 18-10 AWG | Screw terminal cleanliness and serviceability |
 | 1 kit | 10 AWG MC4 crimp contacts/connectors | PV field repairs and roof/ground lead build-up |
 | 1 lot | Adhesive-lined heat shrink, 3:1, 1/4 in, 3/8 in, 1/2 in, 3/4 in | Lug strain relief and environmental sealing |
-| 1 lot | Split loom, rubber-lined P-clamps, cable glands, grommets, edge guard | Route protection through bench, wall chases, and penetrations |
+| 1 lot | Split loom, rubber-lined P-clamps, cable glands, grommets, edge guard | Route protection through battery bench, cabinet feeder chase, wall chases, and penetrations |
 | 1 lot | Heat-shrink wire labels plus branch/circuit labels | Label both ends before wall closure |
 
 ## Do Not Buy Yet

@@ -1,6 +1,8 @@
 # Victron SmartSolar MPPT 150/35 — Key Specs
 
-Optional deployable LG ground-pair controller for D002. Source: Victron SmartSolar MPPT 150/35 and 150/45 technical specifications: https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_150-35__150-45/en/technical-specifications.html
+Optional deployable LG ground-pair controller for D002. Sources:
+- Victron technical specifications: https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_150-35__150-45/en/technical-specifications.html
+- Victron installation instructions: https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_150-35__150-45/en/installation.html
 
 | Spec | Value |
 |---|---|
@@ -25,4 +27,5 @@ Optional deployable LG ground-pair controller for D002. Source: Victron SmartSol
 - **Output headroom:** 2 x 455 W = 910 W. At 48 V battery voltage that is roughly 17-19 A before losses, well under the 35 A output limit.
 - **Not for roof 3S:** three LG455 panels exceed 150 V in cold conditions. Roof 3S stays on the SmartSolar 250/60-Tr.
 - **Connector variant:** Tr and MC4 versions are both electrically acceptable for the portable ground pair. If MC4 arrives, still provide a proper disconnect/fusing plan and strain relief at the trailer inlet.
+- **Protection:** use a separate 2-pole, 150 V-class ground-PV disconnect/OCP; current rating remains TBD. Victron specifies a **40-45 A battery fuse** for the 150/35. Install it in the controller's battery-positive lead before the positive bus.
 - **Charge coordination:** program current limits so roof SmartSolar + ground SmartSolar + any future charger stays at or below the ComFlex battery's 100 A continuous charge limit.

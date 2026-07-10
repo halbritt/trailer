@@ -61,7 +61,7 @@
       "y": 105,
       "ports": [],
       "data": {
-        "label": "48 V Battery / DC Cabinet",
+        "label": "Low Battery Bench / High Wall Cabinet",
         "brand": "generic",
         "category": "general",
         "componentId": "text",
@@ -83,7 +83,7 @@
         "brand": "generic",
         "category": "general",
         "componentId": "rect",
-        "width": 880,
+        "width": 1750,
         "height": 1040,
         "zIndex": -1,
         "fillColor": "#FFF6E8",
@@ -401,13 +401,11 @@
         }
       ],
       "data": {
-        "label": "Roof PV disconnect\n20 A / 250 V class",
+        "label": "Roof PV disconnect\n250 V class / current TBD",
         "brand": "generic",
         "category": "fuses",
         "componentId": "dc-mcb-double",
         "poles": "Double",
-        "rated-current": 20,
-        "trip-curve": "B",
         "rated-voltage": 250,
         "width": 70,
         "height": 105,
@@ -422,7 +420,7 @@
           {
             "id": "jt-roof-pv-breaker-rated-current",
             "name": "Rated Current",
-            "value": "20 A",
+            "value": "TBD",
             "visible": true,
             "isDefault": true
           },
@@ -520,6 +518,43 @@
         ],
         "labelFontSizePx": 21,
         "metadataFontSize": 18
+      }
+    },
+    {
+      "id": "jt-mppt250-battery-fuse",
+      "type": "fuse",
+      "x": 1480,
+      "y": 350,
+      "ports": [
+        {
+          "id": "jt-mppt250-battery-fuse-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-mppt250-battery-fuse-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "250/60 battery fuse\nVictron: 70-80 A",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "inline-fuse",
+        "width": 120,
+        "height": 30,
+        "properties": [
+          {
+            "id": "jt-mppt250-battery-fuse-rating",
+            "name": "Fuse rating",
+            "value": "70-80 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ]
       }
     },
     {
@@ -680,13 +715,11 @@
         }
       ],
       "data": {
-        "label": "Ground PV disconnect\n20 A / 150 V class",
+        "label": "Ground PV disconnect\n150 V class / current TBD",
         "brand": "generic",
         "category": "fuses",
         "componentId": "dc-mcb-double",
         "poles": "Double",
-        "rated-current": 20,
-        "trip-curve": "B",
         "rated-voltage": 150,
         "width": 70,
         "height": 105,
@@ -701,7 +734,7 @@
           {
             "id": "jt-ground-pv-breaker-rated-current",
             "name": "Rated Current",
-            "value": "20 A",
+            "value": "TBD",
             "visible": true,
             "isDefault": true
           },
@@ -802,6 +835,43 @@
       }
     },
     {
+      "id": "jt-mppt150-battery-fuse",
+      "type": "fuse",
+      "x": 1480,
+      "y": 575,
+      "ports": [
+        {
+          "id": "jt-mppt150-battery-fuse-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-mppt150-battery-fuse-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "150/35 battery fuse\nVictron: 40-45 A",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "inline-fuse",
+        "width": 120,
+        "height": 30,
+        "properties": [
+          {
+            "id": "jt-mppt150-battery-fuse-rating",
+            "name": "Fuse rating",
+            "value": "40-45 A",
+            "visible": true,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
       "id": "jt-pos-bus",
       "type": "busbar",
       "x": 1700,
@@ -885,18 +955,9 @@
         "brand": "generic",
         "category": "busbars",
         "componentId": "positive-busbar",
-        "rated-current": 300,
         "width": 430,
         "height": 120,
-        "properties": [
-          {
-            "id": "jt-pos-bus-rated-current",
-            "name": "Rated Current",
-            "value": "300 A",
-            "visible": false,
-            "isDefault": true
-          }
-        ],
+        "properties": [],
         "labelFontSizePx": 21
       }
     },
@@ -990,18 +1051,9 @@
         "brand": "generic",
         "category": "busbars",
         "componentId": "negative-busbar",
-        "rated-current": 300,
         "width": 430,
         "height": 120,
-        "properties": [
-          {
-            "id": "jt-neg-bus-rated-current",
-            "name": "Rated Current",
-            "value": "300 A",
-            "visible": false,
-            "isDefault": true
-          }
-        ],
+        "properties": [],
         "labelFontSizePx": 21
       }
     },
@@ -1094,14 +1146,13 @@
         "brand": "generic",
         "category": "fuses",
         "componentId": "class-t-fuse",
-        "rated-current": 125,
         "width": 120,
         "height": 30,
         "properties": [
           {
             "id": "jt-main-fuse-rated-current",
             "name": "Rated Current",
-            "value": "125 A",
+            "value": "TBD",
             "visible": true,
             "isDefault": true
           }
@@ -1168,6 +1219,43 @@
       }
     },
     {
+      "id": "jt-shunt-sense-fuse",
+      "type": "fuse",
+      "x": 1710,
+      "y": 835,
+      "ports": [
+        {
+          "id": "jt-shunt-sense-fuse-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-shunt-sense-fuse-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "SmartShunt Vbatt+\nsupplied fused lead",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "inline-fuse",
+        "width": 120,
+        "height": 30,
+        "properties": [
+          {
+            "id": "jt-shunt-sense-fuse-rating",
+            "name": "Fuse rating",
+            "value": "supplied",
+            "visible": true,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
       "id": "jt-dc-ground",
       "type": "groundPoint",
       "x": 1430,
@@ -1227,8 +1315,6 @@
         "brand": "generic",
         "category": "fuses",
         "componentId": "dc-inline-breaker",
-        "rated-current": 20,
-        "rated-voltage": 80,
         "poles": "Single",
         "width": 90,
         "height": 80,
@@ -1236,15 +1322,8 @@
           {
             "id": "jt-velit-breaker-rated-current",
             "name": "Rated Current",
-            "value": "20 A",
+            "value": "TBD",
             "visible": true,
-            "isDefault": true
-          },
-          {
-            "id": "jt-velit-breaker-rated-voltage",
-            "name": "Rated Voltage",
-            "value": "80 V",
-            "visible": false,
             "isDefault": true
           },
           {
@@ -1294,15 +1373,15 @@
           {
             "id": "jt-velit-rated-current",
             "name": "Rated Current",
-            "value": "5-14 A",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           },
           {
             "id": "jt-velit-rated-power",
             "name": "Rated Power",
-            "value": "~670 W",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           }
         ],
@@ -1329,12 +1408,10 @@
         }
       ],
       "data": {
-        "label": "48/24 input\n20 A breaker",
+        "label": "48/24 input\n20 A / 80 VDC",
         "brand": "generic",
         "category": "fuses",
         "componentId": "dc-inline-breaker",
-        "rated-current": 20,
-        "rated-voltage": 80,
         "poles": "Single",
         "width": 90,
         "height": 80,
@@ -1347,20 +1424,22 @@
             "isDefault": true
           },
           {
-            "id": "jt-orion24-input-breaker-rated-voltage",
-            "name": "Rated Voltage",
-            "value": "80 V",
-            "visible": false,
-            "isDefault": true
-          },
-          {
             "id": "jt-orion24-input-breaker-poles",
             "name": "Poles",
             "value": "Single",
             "visible": false,
             "isDefault": true
+          },
+          {
+            "id": "jt-orion24-input-breaker-rated-voltage",
+            "name": "Rated Voltage",
+            "value": "80 V",
+            "visible": false,
+            "isDefault": true
           }
-        ]
+        ],
+        "rated-current": 20,
+        "rated-voltage": 80
       }
     },
     {
@@ -1435,13 +1514,6 @@
             "isDefault": true
           },
           {
-            "id": "jt-orion-48-24-rated-power",
-            "name": "Rated Output Power",
-            "value": "384 W",
-            "visible": true,
-            "isDefault": true
-          },
-          {
             "id": "jt-orion-48-24-isolation",
             "name": "Isolation",
             "value": "Isolated",
@@ -1451,6 +1523,51 @@
         ],
         "labelFontSizePx": 20,
         "metadataFontSize": 16
+      }
+    },
+    {
+      "id": "jt-orion24-output-fuse",
+      "type": "mcb",
+      "x": 2860,
+      "y": 590,
+      "ports": [
+        {
+          "id": "jt-orion24-output-fuse-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-orion24-output-fuse-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "24 V output OCP\nTBD",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "poles": "Single",
+        "width": 90,
+        "height": 80,
+        "properties": [
+          {
+            "id": "jt-orion24-output-fuse-rated-current",
+            "name": "Rated Current",
+            "value": "TBD",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion24-output-fuse-poles",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
       }
     },
     {
@@ -1626,6 +1743,25 @@
         "width": 165,
         "height": 280,
         "fuses": [],
+        "branchProtection": [
+          "Fridge: 10 A",
+          "Lighting: 5 A each separate zone",
+          "USB-C: 10 A",
+          "GPS: 3 A",
+          "Heater outlet: 15 A",
+          "Cabinet fan: 1 A",
+          "C1000 top-up: TBD",
+          "Door/control: TBD"
+        ],
+        "properties": [
+          {
+            "id": "jt-blue-sea-5026-branch-map",
+            "name": "Branch protection",
+            "value": "Fridge: 10 A; Lighting: 5 A each separate zone; USB-C: 10 A; GPS: 3 A; Heater outlet: 15 A; Cabinet fan: 1 A; C1000 top-up: TBD; Door/control: TBD",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
         "labelFontSizePx": 18
       }
     },
@@ -1653,8 +1789,6 @@
         "brand": "generic",
         "category": "fuses",
         "componentId": "dc-inline-breaker",
-        "rated-current": 10,
-        "rated-voltage": 80,
         "poles": "Single",
         "width": 90,
         "height": 80,
@@ -1662,15 +1796,8 @@
           {
             "id": "jt-orion12-input-breaker-rated-current",
             "name": "Rated Current",
-            "value": "10 A",
+            "value": "TBD",
             "visible": true,
-            "isDefault": true
-          },
-          {
-            "id": "jt-orion12-input-breaker-rated-voltage",
-            "name": "Rated Voltage",
-            "value": "80 V",
-            "visible": false,
             "isDefault": true
           },
           {
@@ -1755,13 +1882,6 @@
             "isDefault": true
           },
           {
-            "id": "jt-orion-48-12-rated-power",
-            "name": "Rated Output Power",
-            "value": "240 W",
-            "visible": true,
-            "isDefault": true
-          },
-          {
             "id": "jt-orion-48-12-isolation",
             "name": "Isolation",
             "value": "Isolated",
@@ -1774,10 +1894,172 @@
       }
     },
     {
-      "id": "jt-12v-receptacles",
-      "type": "custom",
+      "id": "jt-orion12-output-fuse",
+      "type": "mcb",
+      "x": 2860,
+      "y": 865,
+      "ports": [
+        {
+          "id": "jt-orion12-output-fuse-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-orion12-output-fuse-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "12 V output OCP\nTBD",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-inline-breaker",
+        "poles": "Single",
+        "width": 90,
+        "height": 80,
+        "properties": [
+          {
+            "id": "jt-orion12-output-fuse-rated-current",
+            "name": "Rated Current",
+            "value": "TBD",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-orion12-output-fuse-poles",
+            "name": "Poles",
+            "value": "Single",
+            "visible": false,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-12v-fusebox",
+      "type": "fusebox",
       "x": 2960,
       "y": 850,
+      "ports": [
+        {
+          "id": "jt-12v-fusebox-input-plus",
+          "side": "top",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-12v-fusebox-input-minus",
+          "side": "bottom",
+          "kind": "DC-",
+          "index": 0
+        },
+        {
+          "id": "jt-12v-fusebox-left-plus-0",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-12v-fusebox-left-minus-0",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-12v-fusebox-left-plus-1",
+          "side": "left",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-12v-fusebox-left-minus-1",
+          "side": "left",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-12v-fusebox-left-plus-2",
+          "side": "left",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "jt-12v-fusebox-left-minus-2",
+          "side": "left",
+          "kind": "DC-",
+          "index": 5
+        },
+        {
+          "id": "jt-12v-fusebox-right-plus-0",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-12v-fusebox-right-minus-0",
+          "side": "right",
+          "kind": "DC-",
+          "index": 1
+        },
+        {
+          "id": "jt-12v-fusebox-right-plus-1",
+          "side": "right",
+          "kind": "DC+",
+          "index": 2
+        },
+        {
+          "id": "jt-12v-fusebox-right-minus-1",
+          "side": "right",
+          "kind": "DC-",
+          "index": 3
+        },
+        {
+          "id": "jt-12v-fusebox-right-plus-2",
+          "side": "right",
+          "kind": "DC+",
+          "index": 4
+        },
+        {
+          "id": "jt-12v-fusebox-right-minus-2",
+          "side": "right",
+          "kind": "DC-",
+          "index": 5
+        }
+      ],
+      "data": {
+        "label": "Local 12 V fuse distribution",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "dc-fuse-box",
+        "bladeCount": 6,
+        "bladeRatings": [],
+        "width": 165,
+        "height": 280,
+        "fuses": [],
+        "branchProtection": [
+          "Each socket branch: TBD",
+          "Temporary Amazon LED kit: TBD"
+        ],
+        "properties": [
+          {
+            "id": "jt-12v-fusebox-branch-map",
+            "name": "Branch protection",
+            "value": "Each socket branch: TBD; Temporary Amazon LED kit: TBD",
+            "visible": true,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-12v-receptacles",
+      "type": "custom",
+      "x": 3330,
+      "y": 990,
       "ports": [
         {
           "id": "jt-12v-receptacles-dc-plus",
@@ -1793,7 +2075,7 @@
         }
       ],
       "data": {
-        "label": "12 V cabinet\nreceptacles only",
+        "label": "Auxiliary 12 V\nsocket branch(es)",
         "brand": "generic",
         "category": "general",
         "componentId": "custom-dc",
@@ -1810,15 +2092,156 @@
           {
             "id": "jt-12v-receptacles-rated-current",
             "name": "Rated Current",
-            "value": "20 A max",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           },
           {
             "id": "jt-12v-receptacles-rated-power",
             "name": "Rated Power",
-            "value": "240 W",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-temporary-led-kit",
+      "type": "custom",
+      "x": 3700,
+      "y": 990,
+      "ports": [
+        {
+          "id": "jt-temporary-led-kit-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-temporary-led-kit-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Temporary Amazon\nLED kit",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 300,
+        "height": 150,
+        "properties": [
+          {
+            "id": "jt-temporary-led-kit-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "12.2 V",
             "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-temporary-led-kit-rated-current",
+            "name": "Rated Current",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          },
+          {
+            "id": "jt-temporary-led-kit-rated-power",
+            "name": "Rated Power",
+            "value": "",
+            "visible": false,
+            "isDefault": true
+          }
+        ],
+        "labelFontSizePx": 18
+      }
+    },
+    {
+      "id": "jt-cerbo-supply-fuse",
+      "type": "fuse",
+      "x": 2170,
+      "y": 1060,
+      "ports": [
+        {
+          "id": "jt-cerbo-supply-fuse-dc-plus-in",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-cerbo-supply-fuse-dc-plus-out",
+          "side": "right",
+          "kind": "DC+",
+          "index": 0
+        }
+      ],
+      "data": {
+        "label": "Cerbo supplied inline\n3.15 A slow-blow",
+        "brand": "generic",
+        "category": "fuses",
+        "componentId": "inline-fuse",
+        "width": 120,
+        "height": 30,
+        "properties": [
+          {
+            "id": "jt-cerbo-supply-fuse-rating",
+            "name": "Fuse rating",
+            "value": "3.15 A slow-blow",
+            "visible": true,
+            "isDefault": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "jt-cerbo",
+      "type": "custom",
+      "x": 2520,
+      "y": 1040,
+      "ports": [
+        {
+          "id": "jt-cerbo-dc-plus",
+          "side": "left",
+          "kind": "DC+",
+          "index": 0
+        },
+        {
+          "id": "jt-cerbo-dc-minus",
+          "side": "left",
+          "kind": "DC-",
+          "index": 1
+        }
+      ],
+      "data": {
+        "label": "Victron Cerbo GX Mk2",
+        "brand": "generic",
+        "category": "general",
+        "componentId": "custom-dc",
+        "width": 320,
+        "height": 130,
+        "properties": [
+          {
+            "id": "jt-cerbo-operating-voltage",
+            "name": "Operating Voltage",
+            "value": "8-70 VDC",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-cerbo-rated-current",
+            "name": "Rated Current",
+            "value": "supplied fused lead",
+            "visible": true,
+            "isDefault": true
+          },
+          {
+            "id": "jt-cerbo-rated-power",
+            "name": "Rated Power",
+            "value": "",
+            "visible": false,
             "isDefault": true
           }
         ],
@@ -1829,7 +2252,7 @@
       "id": "jt-fridge",
       "type": "custom",
       "x": 3330,
-      "y": 330,
+      "y": 270,
       "ports": [
         {
           "id": "jt-fridge-dc-plus",
@@ -1845,7 +2268,7 @@
         }
       ],
       "data": {
-        "label": "Dometic CFX3 95DZ\nfridge",
+        "label": "Dometic CFX3 95DZ\nfridge / 10 A branch",
         "brand": "generic",
         "category": "general",
         "componentId": "custom-dc",
@@ -1862,15 +2285,15 @@
           {
             "id": "jt-fridge-rated-current",
             "name": "Rated Current",
-            "value": "4.6 A run",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           },
           {
             "id": "jt-fridge-rated-power",
             "name": "Rated Power",
-            "value": "1.0-1.3 kWh/day",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           }
         ],
@@ -1881,7 +2304,7 @@
       "id": "jt-lighting",
       "type": "custom",
       "x": 3330,
-      "y": 515,
+      "y": 445,
       "ports": [
         {
           "id": "jt-lighting-dc-plus",
@@ -1897,12 +2320,12 @@
         }
       ],
       "data": {
-        "label": "Interior / exterior\nlighting zones",
+        "label": "Lighting zones\n5 A each, separate slots",
         "brand": "generic",
         "category": "general",
         "componentId": "custom-dc",
         "width": 360,
-        "height": 170,
+        "height": 150,
         "properties": [
           {
             "id": "jt-lighting-operating-voltage",
@@ -1914,8 +2337,8 @@
           {
             "id": "jt-lighting-rated-current",
             "name": "Rated Current",
-            "value": "2-3 A int.; 5.25 A floods; 2.7 A awning",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           },
           {
@@ -1933,7 +2356,7 @@
       "id": "jt-usb-gps-landairsea",
       "type": "custom",
       "x": 3330,
-      "y": 720,
+      "y": 620,
       "ports": [
         {
           "id": "jt-usb-gps-landairsea-dc-plus",
@@ -1949,12 +2372,12 @@
         }
       ],
       "data": {
-        "label": "USB-C PD / GPS /\nLandAirSea",
+        "label": "USB-C 10 A / GPS 3 A\nseparate slots",
         "brand": "generic",
         "category": "general",
         "componentId": "custom-dc",
         "width": 360,
-        "height": 170,
+        "height": 150,
         "properties": [
           {
             "id": "jt-usb-gps-landairsea-operating-voltage",
@@ -1966,8 +2389,8 @@
           {
             "id": "jt-usb-gps-landairsea-rated-current",
             "name": "Rated Current",
-            "value": "USB up to 5 A; LandAirSea GPS <0.1 A",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           },
           {
@@ -1985,7 +2408,7 @@
       "id": "jt-heater-topup",
       "type": "custom",
       "x": 3330,
-      "y": 930,
+      "y": 795,
       "ports": [
         {
           "id": "jt-heater-topup-dc-plus",
@@ -2001,12 +2424,12 @@
         }
       ],
       "data": {
-        "label": "Heater rough-in /\noptional C1000 top-up",
+        "label": "Heater 15 A / top-up TBD\nseparate slots",
         "brand": "generic",
         "category": "general",
         "componentId": "custom-dc",
         "width": 380,
-        "height": 170,
+        "height": 150,
         "properties": [
           {
             "id": "jt-heater-topup-operating-voltage",
@@ -2018,15 +2441,15 @@
           {
             "id": "jt-heater-topup-rated-current",
             "name": "Rated Current",
-            "value": "heater glow up to 11 A; top-up 10 A max",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           },
           {
             "id": "jt-heater-topup-rated-power",
             "name": "Rated Power",
-            "value": "shed first",
-            "visible": true,
+            "value": "",
+            "visible": false,
             "isDefault": true
           }
         ],
@@ -2263,222 +2686,6 @@
         "height": 110,
         "fontSize": 26,
         "fontColor": "#000000",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-roof-pv-current",
-      "type": "text",
-      "x": 650,
-      "y": 505,
-      "ports": [],
-      "data": {
-        "label": "10.83 A MPP\n11.39 A Isc",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-ground-pv-current",
-      "type": "text",
-      "x": 650,
-      "y": 935,
-      "ports": [],
-      "data": {
-        "label": "10.83 A MPP\n11.39 A Isc",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-mppt250-current",
-      "type": "text",
-      "x": 1380,
-      "y": 455,
-      "ports": [],
-      "data": {
-        "label": "24-28 A expected\n60 A limit",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-mppt150-current",
-      "type": "text",
-      "x": 1380,
-      "y": 760,
-      "ports": [],
-      "data": {
-        "label": "16-19 A expected\n35 A limit",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-pack-current",
-      "type": "text",
-      "x": 1830,
-      "y": 795,
-      "ports": [],
-      "data": {
-        "label": "<=100 A pack",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-velit-current",
-      "type": "text",
-      "x": 2360,
-      "y": 270,
-      "ports": [],
-      "data": {
-        "label": "5-14 A @ 48 V",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-orion24-input-current",
-      "type": "text",
-      "x": 2360,
-      "y": 515,
-      "ports": [],
-      "data": {
-        "label": "~9.2 A in",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-orion24-output-current",
-      "type": "text",
-      "x": 2840,
-      "y": 615,
-      "ports": [],
-      "data": {
-        "label": "16 A max @ 24 V",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-orion12-input-current",
-      "type": "text",
-      "x": 2360,
-      "y": 790,
-      "ports": [],
-      "data": {
-        "label": "~5.8 A in",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-orion12-output-current",
-      "type": "text",
-      "x": 2830,
-      "y": 905,
-      "ports": [],
-      "data": {
-        "label": "20 A @ 12 V",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-c1000-topup-current",
-      "type": "text",
-      "x": 1490,
-      "y": 1265,
-      "ports": [],
-      "data": {
-        "label": "10 A max @ 24 V",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
-        "textAlign": "center"
-      }
-    },
-    {
-      "id": "jt-label-ps400-current",
-      "type": "text",
-      "x": 400,
-      "y": 1435,
-      "ports": [],
-      "data": {
-        "label": "8.33 A operating",
-        "brand": "generic",
-        "category": "general",
-        "componentId": "text",
-        "width": 250,
-        "height": 70,
-        "fontSize": 22,
-        "fontColor": "#475569",
         "textAlign": "center"
       }
     }
@@ -2738,19 +2945,42 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-mppt250-pos-bus",
+      "id": "jt-wire-mppt250-pos-fuse",
       "sourceNodeId": "jt-mppt-250-60",
       "sourcePortId": "jt-mppt-250-60-dc-plus-a",
-      "targetNodeId": "jt-pos-bus",
-      "targetPortId": "jt-pos-bus-top-0",
+      "targetNodeId": "jt-mppt250-battery-fuse",
+      "targetPortId": "jt-mppt250-battery-fuse-dc-plus-in",
       "midpoints": [
         {
-          "id": "jt-wire-mppt250-pos-bus-mid-1",
+          "id": "jt-wire-mppt250-pos-fuse-mid-1",
           "x": 1350,
           "y": 500
         },
         {
-          "id": "jt-wire-mppt250-pos-bus-mid-2",
+          "id": "jt-wire-mppt250-pos-fuse-mid-2",
+          "x": 1450,
+          "y": 390
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 16,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-mppt250-fuse-pos-bus",
+      "sourceNodeId": "jt-mppt250-battery-fuse",
+      "sourcePortId": "jt-mppt250-battery-fuse-dc-plus-out",
+      "targetNodeId": "jt-pos-bus",
+      "targetPortId": "jt-pos-bus-top-0",
+      "midpoints": [
+        {
+          "id": "jt-wire-mppt250-fuse-pos-bus-mid-1",
+          "x": 1650,
+          "y": 390
+        },
+        {
+          "id": "jt-wire-mppt250-fuse-pos-bus-mid-2",
           "x": 1700,
           "y": 500
         }
@@ -2784,19 +3014,42 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-mppt150-pos-bus",
+      "id": "jt-wire-mppt150-pos-fuse",
       "sourceNodeId": "jt-mppt-150-35",
       "sourcePortId": "jt-mppt-150-35-dc-plus-a",
-      "targetNodeId": "jt-pos-bus",
-      "targetPortId": "jt-pos-bus-top-1",
+      "targetNodeId": "jt-mppt150-battery-fuse",
+      "targetPortId": "jt-mppt150-battery-fuse-dc-plus-in",
       "midpoints": [
         {
-          "id": "jt-wire-mppt150-pos-bus-mid-1",
+          "id": "jt-wire-mppt150-pos-fuse-mid-1",
           "x": 1370,
           "y": 720
         },
         {
-          "id": "jt-wire-mppt150-pos-bus-mid-2",
+          "id": "jt-wire-mppt150-pos-fuse-mid-2",
+          "x": 1450,
+          "y": 615
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 10,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-mppt150-fuse-pos-bus",
+      "sourceNodeId": "jt-mppt150-battery-fuse",
+      "sourcePortId": "jt-mppt150-battery-fuse-dc-plus-out",
+      "targetNodeId": "jt-pos-bus",
+      "targetPortId": "jt-pos-bus-top-1",
+      "midpoints": [
+        {
+          "id": "jt-wire-mppt150-fuse-pos-bus-mid-1",
+          "x": 1650,
+          "y": 615
+        },
+        {
+          "id": "jt-wire-mppt150-fuse-pos-bus-mid-2",
           "x": 1620,
           "y": 520
         }
@@ -2867,6 +3120,52 @@
       ],
       "routingMode": "manual",
       "wireSize": 35,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-battery-plus-shunt-sense-fuse",
+      "sourceNodeId": "jt-battery",
+      "sourcePortId": "jt-battery-dc-plus",
+      "targetNodeId": "jt-shunt-sense-fuse",
+      "targetPortId": "jt-shunt-sense-fuse-dc-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-battery-plus-shunt-sense-fuse-mid-1",
+          "x": 1830,
+          "y": 950
+        },
+        {
+          "id": "jt-wire-battery-plus-shunt-sense-fuse-mid-2",
+          "x": 1750,
+          "y": 875
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 1,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-shunt-sense-fuse-shunt",
+      "sourceNodeId": "jt-shunt-sense-fuse",
+      "sourcePortId": "jt-shunt-sense-fuse-dc-plus-out",
+      "targetNodeId": "jt-shunt",
+      "targetPortId": "jt-shunt-dc-plus-sense",
+      "midpoints": [
+        {
+          "id": "jt-wire-shunt-sense-fuse-shunt-mid-1",
+          "x": 1680,
+          "y": 810
+        },
+        {
+          "id": "jt-wire-shunt-sense-fuse-shunt-mid-2",
+          "x": 1600,
+          "y": 830
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 1,
       "wireSizeUnit": "mm2",
       "isAutoSized": true
     },
@@ -3048,19 +3347,42 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-orion24-output-plus-fusebox",
+      "id": "jt-wire-orion24-output-plus-fuse",
       "sourceNodeId": "jt-orion-48-24",
       "sourcePortId": "jt-orion-48-24-out-plus",
-      "targetNodeId": "jt-blue-sea-5026",
-      "targetPortId": "jt-blue-sea-5026-input-plus",
+      "targetNodeId": "jt-orion24-output-fuse",
+      "targetPortId": "jt-orion24-output-fuse-dc-plus-in",
       "midpoints": [
         {
-          "id": "jt-wire-orion24-output-plus-fusebox-mid-1",
+          "id": "jt-wire-orion24-output-plus-fuse-mid-1",
           "x": 2770,
           "y": 650
         },
         {
-          "id": "jt-wire-orion24-output-plus-fusebox-mid-2",
+          "id": "jt-wire-orion24-output-plus-fuse-mid-2",
+          "x": 2830,
+          "y": 630
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion24-output-fuse-fusebox",
+      "sourceNodeId": "jt-orion24-output-fuse",
+      "sourcePortId": "jt-orion24-output-fuse-dc-plus-out",
+      "targetNodeId": "jt-blue-sea-5026",
+      "targetPortId": "jt-blue-sea-5026-input-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion24-output-fuse-fusebox-mid-1",
+          "x": 2930,
+          "y": 630
+        },
+        {
+          "id": "jt-wire-orion24-output-fuse-fusebox-mid-2",
           "x": 3020,
           "y": 650
         }
@@ -3153,16 +3475,21 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-orion12-output-plus-receptacles",
+      "id": "jt-wire-orion12-output-plus-fuse",
       "sourceNodeId": "jt-orion-48-12",
       "sourcePortId": "jt-orion-48-12-out-plus",
-      "targetNodeId": "jt-12v-receptacles",
-      "targetPortId": "jt-12v-receptacles-dc-plus",
+      "targetNodeId": "jt-orion12-output-fuse",
+      "targetPortId": "jt-orion12-output-fuse-dc-plus-in",
       "midpoints": [
         {
-          "id": "jt-wire-orion12-output-plus-receptacles-mid-1",
+          "id": "jt-wire-orion12-output-plus-fuse-mid-1",
           "x": 2790,
           "y": 940
+        },
+        {
+          "id": "jt-wire-orion12-output-plus-fuse-mid-2",
+          "x": 2830,
+          "y": 905
         }
       ],
       "routingMode": "manual",
@@ -3171,20 +3498,150 @@
       "isAutoSized": true
     },
     {
-      "id": "jt-wire-orion12-output-minus-receptacles",
-      "sourceNodeId": "jt-orion-48-12",
-      "sourcePortId": "jt-orion-48-12-out-minus",
-      "targetNodeId": "jt-12v-receptacles",
-      "targetPortId": "jt-12v-receptacles-dc-minus",
+      "id": "jt-wire-orion12-output-fuse-fusebox",
+      "sourceNodeId": "jt-orion12-output-fuse",
+      "sourcePortId": "jt-orion12-output-fuse-dc-plus-out",
+      "targetNodeId": "jt-12v-fusebox",
+      "targetPortId": "jt-12v-fusebox-input-plus",
       "midpoints": [
         {
-          "id": "jt-wire-orion12-output-minus-receptacles-mid-1",
+          "id": "jt-wire-orion12-output-fuse-fusebox-mid-1",
+          "x": 2930,
+          "y": 905
+        },
+        {
+          "id": "jt-wire-orion12-output-fuse-fusebox-mid-2",
+          "x": 2990,
+          "y": 920
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-orion12-output-minus-fusebox",
+      "sourceNodeId": "jt-orion-48-12",
+      "sourcePortId": "jt-orion-48-12-out-minus",
+      "targetNodeId": "jt-12v-fusebox",
+      "targetPortId": "jt-12v-fusebox-input-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-orion12-output-minus-fusebox-mid-1",
           "x": 2790,
           "y": 990
         }
       ],
       "routingMode": "manual",
       "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-12v-fusebox-sockets-plus",
+      "sourceNodeId": "jt-12v-fusebox",
+      "sourcePortId": "jt-12v-fusebox-right-plus-0",
+      "targetNodeId": "jt-12v-receptacles",
+      "targetPortId": "jt-12v-receptacles-dc-plus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-12v-fusebox-sockets-minus",
+      "sourceNodeId": "jt-12v-fusebox",
+      "sourcePortId": "jt-12v-fusebox-right-minus-0",
+      "targetNodeId": "jt-12v-receptacles",
+      "targetPortId": "jt-12v-receptacles-dc-minus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 4,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-12v-fusebox-led-plus",
+      "sourceNodeId": "jt-12v-fusebox",
+      "sourcePortId": "jt-12v-fusebox-right-plus-1",
+      "targetNodeId": "jt-temporary-led-kit",
+      "targetPortId": "jt-temporary-led-kit-dc-plus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-12v-fusebox-led-minus",
+      "sourceNodeId": "jt-12v-fusebox",
+      "sourcePortId": "jt-12v-fusebox-right-minus-1",
+      "targetNodeId": "jt-temporary-led-kit",
+      "targetPortId": "jt-temporary-led-kit-dc-minus",
+      "midpoints": [],
+      "routingMode": "manual",
+      "wireSize": 2.5,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-pos-bus-cerbo-fuse",
+      "sourceNodeId": "jt-pos-bus",
+      "sourcePortId": "jt-pos-bus-bottom-2",
+      "targetNodeId": "jt-cerbo-supply-fuse",
+      "targetPortId": "jt-cerbo-supply-fuse-dc-plus-in",
+      "midpoints": [
+        {
+          "id": "jt-wire-pos-bus-cerbo-fuse-mid-1",
+          "x": 2070,
+          "y": 1050
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 1,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-cerbo-fuse-cerbo",
+      "sourceNodeId": "jt-cerbo-supply-fuse",
+      "sourcePortId": "jt-cerbo-supply-fuse-dc-plus-out",
+      "targetNodeId": "jt-cerbo",
+      "targetPortId": "jt-cerbo-dc-plus",
+      "midpoints": [
+        {
+          "id": "jt-wire-cerbo-fuse-cerbo-mid-1",
+          "x": 2380,
+          "y": 1090
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 1,
+      "wireSizeUnit": "mm2",
+      "isAutoSized": true
+    },
+    {
+      "id": "jt-wire-neg-bus-cerbo",
+      "sourceNodeId": "jt-neg-bus",
+      "sourcePortId": "jt-neg-bus-bottom-2",
+      "targetNodeId": "jt-cerbo",
+      "targetPortId": "jt-cerbo-dc-minus",
+      "midpoints": [
+        {
+          "id": "jt-wire-neg-bus-cerbo-mid-1",
+          "x": 2240,
+          "y": 1030
+        },
+        {
+          "id": "jt-wire-neg-bus-cerbo-mid-2",
+          "x": 2490,
+          "y": 1110
+        }
+      ],
+      "routingMode": "manual",
+      "wireSize": 1,
       "wireSizeUnit": "mm2",
       "isAutoSized": true
     },
@@ -3404,5 +3861,5 @@
     }
   ],
   "version": 1,
-  "projectName": "Juplaya Trailer Power System"
+  "projectName": "Trailer Power System"
 }
