@@ -18,6 +18,7 @@
 \definecolor{busstroke}{HTML}{A16207}
 \definecolor{poswire}{HTML}{B91C1C}
 \definecolor{negwire}{HTML}{334155}
+\definecolor{acwire}{HTML}{0369A1}
 
 \begin{document}
 \begin{tikzpicture}[
@@ -35,7 +36,9 @@
   zone/.style={draw=linegray, fill=panel, rounded corners=4pt, line width=0.7pt},
   positive/.style={->, draw=poswire, line width=1.1pt},
   neg/.style={->, draw=negwire, line width=0.9pt},
-  sense/.style={->, draw=muted, line width=0.8pt, dashed}
+  sense/.style={->, draw=muted, line width=0.8pt, dashed},
+  ac/.style={->, draw=acwire, line width=1.0pt},
+  control/.style={<->, draw=muted, line width=0.8pt, dashed}
 ]
 
 \node[font=\sffamily\bfseries\Large, anchor=west] at (0,15.7)
@@ -47,6 +50,7 @@
   \node[zone, fit={(-0.3,9.1) (11.9,14.65)}, inner sep=0pt] {};
   \node[zone, fit={(-0.3,0.25) (11.9,5.65)}, inner sep=0pt] {};
   \node[zone, fit={(12.3,0.25) (31.0,14.65)}, inner sep=0pt] {};
+  \node[zone, fit={(31.4,3.7) (40.0,14.65)}, inner sep=0pt] {};
 \end{scope}
 
 \node[font=\sffamily\bfseries, anchor=west, text=sourcestroke] at (0.1,14.35) {PV inputs};
@@ -87,6 +91,8 @@
 
 \node[font=\sffamily\bfseries, anchor=west, text=gearstroke] at (12.7,14.35)
   {Shallow high-wall cabinet: active DC gear only};
+\node[font=\sffamily\bfseries, anchor=west, text=gearstroke] at (31.8,14.35)
+  {Incoming inverter/charger};
 \node[bus, text width=2.2cm] (posbus) at (14.7,11.2) {48 V positive bus};
 \node[bus, text width=2.2cm] (negbus) at (29.5,9.2) {48 V negative bus};
 \node[gear, text width=2.8cm] (shunt) at (24.2,4.2)
@@ -110,6 +116,15 @@
   {Supplied inline\\3.15 A slow-blow};
 \node[gear, text width=2.7cm] (cerbo) at (25.0,6.3)
   {\textbf{Cerbo GX Mk2}\\[-1pt]\scriptsize fused 8--70 VDC supply};
+
+\node[fuse, text width=2.8cm] (multifuse) at (33.5,11.45)
+  {Victron 125 A DC fuse\\80 VDC MEGA\\battery disconnect required};
+\node[gear, text width=3.2cm, minimum height=1.35cm] (multiplus) at (37.7,11.45)
+  {\textbf{MultiPlus-II 48/3000}\\[-1pt]\scriptsize inverter / 35 A charger\\en route; location TBD};
+\node[source, text width=3.0cm] (acin) at (37.7,13.25)
+  {\textbf{120 VAC input}\\[-1pt]\scriptsize shore / generator path TBD};
+\node[source, text width=3.0cm] (acout) at (37.7,8.55)
+  {\textbf{120 VAC outputs}\\[-1pt]\scriptsize panel and branch protection TBD};
 
 \draw[positive] (mainfuse.east) -- (14.7,4.05)
   -- node[pos=0.45, right, font=\scriptsize, text=poswire]
@@ -135,6 +150,16 @@
 \draw[neg] (ntrunk) -- (negbus.west);
 \draw[neg] (negbus.south) |- (shunt.east);
 
+\draw[positive] (posbus.north) -- (14.7,13.65) -- (31.4,13.65)
+  -- (31.4,11.45) -- (multifuse.west);
+\draw[positive] (multifuse.east) -- (multiplus.west);
+\draw[neg] (multiplus.south west) -- (35.5,10.5) -- (35.5,9.2) -- (negbus.east);
+\draw[ac] (acin.south) -- (multiplus.north);
+\draw[ac] (multiplus.east) -- (39.5,11.45) -- (39.5,8.55) -- (acout.east);
+\draw[control] (cerbo.south) -- (25.0,5.5) -- (29.0,5.5) -- (29.0,6.9)
+  -- node[pos=0.55, below, font=\scriptsize, text=muted] {VE.Bus} (33.0,6.9)
+  -- (multiplus.south west);
+
 \draw[neg] (shunt.west) -- (22.0,4.2) -- (22.0,0.75) -- (2.1,0.75)
   -- node[pos=0.55, below, font=\scriptsize, text=negwire]
   {battery negative: no other taps} (battery.south);
@@ -145,11 +170,13 @@
   -- (24.2,5.0) -- (shunt.north);
 
 \node[note, text width=6.7cm] at (16.2,2.35)
-  {\textbf{Cabinet boundary.} Mount to measured wall-post backing. Keep required component orientation and service clearance. Route cables through protected entries. Vent low-to-high back into the cabin. The deferred MultiPlus is not assigned to this shallow cabinet.};
+  {\textbf{Cabinet boundary.} Mount to measured wall-post backing. Keep required component orientation and service clearance. Route cables through protected entries. Vent low-to-high back into the cabin. The incoming MultiPlus is not assigned to this shallow cabinet.};
 \node[note, text width=6.7cm] at (28.0,2.35)
   {\textbf{Protection rule.} Every positive conductor is protected at the energy-source end of the cable it leaves. Values marked TBD remain open until the installed harness, conductor, terminal, and DC interrupt rating are verified. All charger and load negatives land after the SmartShunt.};
+\node[note, text width=7.0cm] at (35.7,5.25)
+  {\textbf{Separate mounting zone.} G12 must assign structural backing, ventilation, service clearance, the protected DC route, and AC routing before installation. This box shows connectivity, not placement.};
 
 \node[font=\sffamily\scriptsize, text=muted, anchor=west] at (0,0)
-  {Sources: docs/power.md; D015; official Victron SmartSolar, SmartShunt, Cerbo GX, and Orion documentation. Not an AC or tow-vehicle wiring diagram.};
+  {Sources: docs/power.md; D015; official Victron SmartSolar, SmartShunt, Cerbo GX, Orion, and MultiPlus-II documentation. AC paths are interface stubs, not a complete AC wiring diagram.};
 \end{tikzpicture}
 \end{document}

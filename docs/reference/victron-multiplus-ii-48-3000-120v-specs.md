@@ -1,6 +1,6 @@
 # Victron MultiPlus-II 48/3000/35-50 120V — Key Specs
 
-House inverter/charger for the revised D002 Victron path. Source: Victron MultiPlus-II 120V technical specifications: https://www.victronenergy.com/media/pg/MultiPlus-II_120V/en/technical-specifications-mp-ii-120v.html
+House inverter/charger for the revised D002 Victron path. Sources: [Victron MultiPlus-II 120V technical specifications](https://www.victronenergy.com/media/pg/MultiPlus-II_120V/en/technical-specifications-mp-ii-120v.html) and [installation manual](https://www.victronenergy.com/media/pg/MultiPlus-II_120V/en/installation.html).
 
 | Spec | Value |
 |---|---|
@@ -18,6 +18,9 @@ House inverter/charger for the revised D002 Victron path. Source: Victron MultiP
 | Temperature range | -40 to +65 C, fan-assisted |
 | Enclosure | IP21, steel |
 | Battery connection | M8 bolts |
+| Recommended DC fuse | 125 A |
+| Recommended 80 VDC fuse | Victron MEGA-fuse 125A/80V, `CIP138125020` |
+| Battery disconnect | Required by the installation manual; rated for at least the specified DC fuse current |
 | AC connection | Screw terminals, 13 mm2 / 6 AWG |
 | Weight | 29 kg / 64 lb |
 | Dimensions | 572 x 277 x 147 mm / 22.5 x 10.9 x 5.8 in |
@@ -30,3 +33,4 @@ House inverter/charger for the revised D002 Victron path. Source: Victron MultiP
 - **Idle win:** 11 W zero-load is roughly 0.26 kWh/day, substantially below the LiTime 3500 W's <30 W ECO / <50 W normal draw.
 - **Solar split:** this is not an AIO and has no PV input. Roof 3S stays on the SmartSolar 250/60-Tr. Optional deployable 2S ground solar needs its own MPPT or can be skipped.
 - **Charge coordination:** 35 A AC charging plus SmartSolar roof charging stays below the ComFlex battery's 100 A continuous charge limit, but any future charger still counts toward the combined cap.
+- **Protection:** install the Victron-specified 125 A DC fuse in the positive branch from the 48 V bus and include the required battery disconnect. The selected fuse is the 125 A / 80 VDC Victron MEGA, `CIP138125020`; final cable length, routing, and disconnect hardware remain gated by the physical MultiPlus location.

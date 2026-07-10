@@ -26,7 +26,7 @@ Sources: Victron Cerbo GX product page and official manual/specs:
 ## Build-relevant notes
 
 - Connect SmartSolar 250/60-Tr, SmartSolar 150/35, and SmartShunt 500A by VE.Direct. Use VE.Direct-to-USB adapters/hub only if physical ports run short.
-- Reserve VE.Bus for the deferred MultiPlus-II 48/3000/35-50 120V.
+- Reserve VE.Bus for the incoming MultiPlus-II 48/3000/35-50 120V.
 - Reserve VE.Can for future Victron-compatible CAN gear. The current LiTime ComFlex battery does not become a Victron managed battery just because a Cerbo is present.
 - The existing Orion-Tr converters remain remote-on/off power supplies; they do not provide useful GX telemetry.
 - Power the Cerbo through its supplied **3.15 A slow-blow inline fuse**.

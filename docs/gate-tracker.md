@@ -61,7 +61,7 @@ Status legend:
 
 | Gate | Status | Notes | Source |
 |---|---|---|---|
-| D01 MultiPlus and built-in AC distribution | Deferred | Phase 2; location reopened by D015 because the shallow active-gear cabinet is not its assigned enclosure | [power.md](power.md) |
+| D01 MultiPlus and built-in AC distribution | Hardware en route; install deferred | MultiPlus-II en route as of 2026-07-10; location reopened by D015 because the shallow active-gear cabinet is not its assigned enclosure | [power.md](power.md) |
 | D02 Winter heater unit | Deferred | Rough-in only for Juplaya | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | D03 HRV unit | Deferred | Rough-in only for Juplaya | [juplaya-trailer-context.md](juplaya-trailer-context.md) |
 | D04 Truck charging hardware | Deferred | Pull 4 AWG pre-wire now; active charging later | [order-sheet.md](order-sheet.md) |

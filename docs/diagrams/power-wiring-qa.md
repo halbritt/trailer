@@ -18,18 +18,19 @@ The two `power-wiring-*.tex` diagrams are the installation authority for protect
 - Cerbo GX Mk2 supply: supplied 3.15 A slow-blow inline fuse.
 - SmartShunt Vbatt+: supplied fused sense lead.
 - Orion-Tr 48/24 input: Blue Sea 7443, 20 A / 80 VDC.
+- MultiPlus-II 48/3000 DC input: Victron 125 A DC fuse; use the 125 A / 80 VDC MEGA fuse and provide the battery disconnect required by the installation manual.
 - Blue Sea 5026 branches: fridge 10 A; lighting 5 A per separate zone; USB-C 10 A; GPS 3 A; heater 15 A; cabinet fan 1 A.
 
 ## Deliberate TBDs
 
-The diagrams do not invent ratings for the main Class-T, either PV disconnect current rating, Velit branch OCP, Orion 48/24 output OCP, Orion 48/12 input or output OCP, individual 12 V socket fuses, temporary LED-kit fuse, optional C1000 top-up, or door/control branch.
+The diagrams do not invent ratings for the main Class-T, either PV disconnect current rating, Velit branch OCP, Orion 48/24 output OCP, Orion 48/12 input or output OCP, MultiPlus AC input/output protection, individual 12 V socket fuses, temporary LED-kit fuse, optional C1000 top-up, or door/control branch.
 
 ## Checks
 
 - Both TikZ sources compile with `xelatex -halt-on-error`.
 - Both PDFs render to nonblank PNGs and were inspected at original resolution.
 - Positive protection paths do not cross component boxes.
-- The 48 V drawing shows the battery-local main OCP, protected feeder, SmartShunt-only negative path, charger fuses, load OCPs, and supplied monitoring fuses.
+- The 48 V drawing shows the battery-local main OCP, protected feeder, SmartShunt-only negative path, charger fuses, load OCPs, supplied monitoring fuses, and the incoming MultiPlus DC/VE.Bus/AC interfaces.
 - The low-voltage drawing labels the red boxes as fuse positions within their distribution blocks. Negative returns are intentionally omitted there and must land on the matching negative bus.
 - The physical layout is explicitly conceptual where G12 or as-built roof measurements remain open.
 - The JSON generator passes its internal node, port, and wire validation.

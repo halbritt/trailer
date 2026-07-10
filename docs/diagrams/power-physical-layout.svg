@@ -158,7 +158,7 @@
 <text x="1057" y="643" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="700" fill="#b91c1c" text-anchor="start">+ protected before leaving bench</text>
 <line x1="919" y1="718" x2="1179" y2="480" stroke="#334155" stroke-width="3"/>
 <text x="920" y="734" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="8.5" font-weight="700" fill="#334155" text-anchor="start">- only to SmartShunt battery side</text>
-<text x="812" y="803" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#dc2626" text-anchor="start">Active DC gear only in the shallow cabinet; the deferred MultiPlus location is open.</text>
+<text x="812" y="803" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#dc2626" text-anchor="start">Active DC gear only in the shallow cabinet; the incoming MultiPlus location is open.</text>
 <text x="812" y="822" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#64748b" text-anchor="start">See power-wiring-48v and power-wiring-low-voltage for fuse placement.</text>
 <rect x="45" y="1064" width="690" height="150" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
 <text x="60" y="1090" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="start">Legend</text>

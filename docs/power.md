@@ -22,7 +22,7 @@ Ancillary electrical/control ordering breakout: [ancillary-order-sheet.md](ancil
 
 ## Current Verdict
 
-The built-in inverter/charger remains deferred. Critical trailer loads stay on DC:
+The built-in inverter/charger is en route but not installed. Critical trailer loads stay on DC:
 
 - Three roof panels are mounted and charge the 48 V trailer battery through a Victron SmartSolar 250/60-Tr. The array overhangs the rear roof edge by a few inches; record the exact overhang before closing the roof-layout gate.
 - The Velit 2000R runs directly from the 48 V system. Its permanent dedicated branch OCP is required and remains rating-TBD.
@@ -32,7 +32,7 @@ The built-in inverter/charger remains deferred. Critical trailer loads stay on D
 - Permanent protection, distribution, controls, wiring cleanup, labels, and cabinet mounting remain incomplete.
 - Small 120 VAC loads run from the standalone Anker SOLIX C1000 + PS400 panel.
 - The battery and battery-local Class-T main OCP live low in a compact street-side nose bench. Active Victron equipment, busbars, branch protection, controls, and low-voltage distribution live higher on the street-side wall in a shallow cabinet.
-- The Victron MultiPlus-II 48/3000/35-50 120V remains the Phase 2 built-in inverter/charger choice. D015 reopened its physical location; it is not assigned to the shallow active-equipment cabinet.
+- The Victron MultiPlus-II 48/3000/35-50 120V is en route as of 2026-07-10. D015 reopened its physical location; it is not assigned to the shallow active-equipment cabinet.
 
 ## Architecture
 
@@ -71,13 +71,14 @@ Shallow high wall cabinet:
 
 Victron Cerbo GX Mk2:
    VE.Direct -> SmartShunt 500A, SmartSolar 250/60-Tr, SmartSolar 150/35
-   VE.Bus    -> future MultiPlus-II
+   VE.Bus    -> incoming MultiPlus-II
    VE.Can    -> reserved for future Victron-compatible CAN gear
 
 Anker SOLIX C1000 + PS400 400 W panel -> standalone 120 VAC loads
 
-Phase 2 optional:
-LiTime 48 V battery -> location-TBD Victron MultiPlus-II 48/3000/35-50 120V -> built-in 120 VAC / shore charging / transfer
+Incoming MultiPlus-II path:
+48 V positive bus -> 125 A / 80 VDC MEGA fuse -> required DC disconnect -> location-TBD MultiPlus-II 48/3000/35-50 120V
+48 V negative bus -> MultiPlus-II negative; AC input/output protection and distribution remain TBD
 ```
 
 Why 48 V: the Velit air conditioner is 48 V-native, and at 48 V the cables stay small. Why 24 V house loads: the fridge auto-senses 12/24 V, Yuji LED strips are 24 V, the Scanstrut USB-C takes 24 V input, and the selected exterior lights are 12-28 VDC wide-input fixtures. The 12 V converter is scoped narrowly: a switched, fused accessory outlet bank in the power cabinet for occasional 12 V devices, not a distributed house rail.
@@ -120,13 +121,14 @@ Voltage checks:
 |---|---|---|
 | LiTime 48 V 100 Ah Smart ComFlex | house battery | 5.12 kWh, 100 A continuous charge/discharge, Bluetooth BMS |
 | Victron SmartShunt 500A | instrumentation | high cabinet; battery negative alone on battery side; every load and charger negative on system side; supplied fused Vbatt+ sense lead |
-| Victron Cerbo GX Mk2 | monitoring / control | high cabinet; supplied 3.15 A slow-blow inline supply fuse; VE.Direct to SmartShunt and SmartSolars now, VE.Bus to MultiPlus later |
+| Victron Cerbo GX Mk2 | monitoring / control | high cabinet; supplied 3.15 A slow-blow inline supply fuse; VE.Direct to SmartShunt and SmartSolars now, VE.Bus to incoming MultiPlus after installation |
 | Main battery OCP | protection | Class-T at battery positive inside low bench, before the positive feeder leaves; rating TBD |
 | SmartSolar 250/60-Tr | roof MPPT | roof 3S only; 70-80 A battery-side fuse before positive bus |
 | SmartSolar 150/35 | ground MPPT | optional LG ground 2S only; 40-45 A battery-side fuse before positive bus; connector variant pending |
 | Velit 2000R | 48 V DC load | dedicated branch OCP required; rating TBD pending manufacturer documentation |
 | Orion-Tr 48/24-16A | house converter | Blue Sea 7443 20 A / 80 V DC input breaker; output OCP TBD; remote on/off to cabin toggle |
 | Orion-Tr IP43 48/12-20A | auxiliary 12 V converter | input and output OCP ratings TBD; remote off; feeds only cabinet receptacles |
+| MultiPlus-II 48/3000/35-50 120V | incoming inverter / charger | en route; separate location TBD; 125 A / 80 VDC MEGA fuse plus required DC disconnect; AC protection and distribution TBD |
 
 D015 splits the enclosure. The low street-side nose bench contains only the secured battery, battery-local Class-T main OCP, and protected feeder departure. The shallow cabinet higher on the street-side wall contains the SmartShunt, both SmartSolars, Cerbo, both Orions, positive and negative busbars, branch protection, the Blue Sea 5026, local 12 V distribution, and controls. G12 must close component fit, backing, service clearance, feeder routing, and ventilation before fabrication or final wire cuts.
 
@@ -142,10 +144,10 @@ The installed monitoring path is now Victron-native from the start:
 SmartShunt 500A       --VE.Direct--> Cerbo GX Mk2
 SmartSolar 250/60-Tr  --VE.Direct--> Cerbo GX Mk2
 SmartSolar 150/35     --VE.Direct--> Cerbo GX Mk2
-Future MultiPlus-II   --VE.Bus-----> Cerbo GX Mk2
+Incoming MultiPlus-II --VE.Bus-----> Cerbo GX Mk2
 ```
 
-The Cerbo gives local/VRM visibility into battery SOC, charge/discharge current, solar harvest, alarms, and the future MultiPlus state. It does **not** make the LiTime ComFlex a managed Victron battery, and the current Orion-Tr converters remain remote-on/off power supplies rather than networked telemetry devices.
+The Cerbo gives local/VRM visibility into battery SOC, charge/discharge current, solar harvest, alarms, and the MultiPlus state after installation. It does **not** make the LiTime ComFlex a managed Victron battery, and the current Orion-Tr converters remain remote-on/off power supplies rather than networked telemetry devices.
 
 Reserve VE.Can for future Victron-compatible CAN gear. If the build later moves to Lynx, the compatible LiTime path is Lynx Shunt VE.Can / Lynx Distributor as distribution and monitoring gear; do not spec Lynx Smart BMS unless the battery bank changes to Victron Lithium Smart.
 
@@ -289,19 +291,19 @@ Oakland storage use:
 - Pay or detour for an Alameda/open-sky spot only if it improves physical security, access, solar exposure, or enables broadband telemetry enough to justify the monthly delta.
 - If battery voltage, door state, temperature, or humidity telemetry is needed without open sky, add a low-power cellular IoT node rather than keeping Starlink awake. If images are needed, use a cellular battery/solar camera only after confirming LTE signal at the actual parked trailer.
 
-## Phase 2 MultiPlus
+## Incoming MultiPlus
 
-The Victron MultiPlus-II 48/3000/35-50 120V remains the later integrated inverter/charger recommendation if the trailer needs built-in 120 VAC distribution, shore/generator charging, or automatic transfer.
+The Victron MultiPlus-II 48/3000/35-50 120V is en route as of 2026-07-10. It is the integrated inverter/charger for built-in 120 VAC distribution, shore/generator charging, and automatic transfer.
 
-Deferred because Juplaya does not need it:
+It was deferred for Juplaya because:
 
 - Critical loads are DC.
 - The C1000 handles small 120 VAC loads.
 - Skipping the built-in inverter removes idle draw, cabinet time, AC wiring, and commissioning risk.
 
-If installed later, treat 2400 W at 25 C / 2200 W at 40 C as the sustained AC design envelope, and cap combined charge current at or below the ComFlex battery's 100 A continuous charge limit.
+For installation, follow Victron's 125 A DC fuse requirement and required battery disconnect; use the 125 A / 80 VDC Victron MEGA fuse. Treat 2400 W at 25 C / 2200 W at 40 C as the sustained AC design envelope, and cap combined charge current at or below the ComFlex battery's 100 A continuous charge limit.
 
-D014's upper-cabinet location is superseded by D015. The MultiPlus is not part of the shallow active-equipment cabinet. Its future location remains open and must separately resolve structural support, service access, ventilation, the protected DC path, VE.Bus routing to the Cerbo, and shore/generator AC routing.
+D014's upper-cabinet location is superseded by D015. The MultiPlus is not part of the shallow active-equipment cabinet. Its location remains open and must separately resolve structural support, service access, ventilation, the protected DC path, VE.Bus routing to the Cerbo, and shore/generator AC routing before installation.
 
 ## Protection And Commissioning
 
@@ -352,7 +354,7 @@ The optional 2S LG ground pair adds trailer-battery margin for AC-heavy days, du
 ## Open Gates
 
 - Roof repair and drawing: measure the panel overhang and Velit opening, add longitudinal steel reinforcement around the unsupported opening, dry-fit the crown/drainage spacers, and update panel/rail/gland stations.
-- G12 split enclosure: measure and dry-fit the street-side battery bench and shallow high cabinet, confirm backing/service clearances, establish the protected feeder route, and choose a separate future MultiPlus location.
+- G12 split enclosure: measure and dry-fit the street-side battery bench and shallow high cabinet, confirm backing/service clearances, establish the protected feeder route, and choose a separate MultiPlus location before installation.
 - Battery-terminal main OCP selection.
 - Ground MPPT connector variant and portable inlet/disconnect details.
 - 12 V cabinet receptacle count, fuse sizes, wire gauge, and remote switch location.

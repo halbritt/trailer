@@ -2,7 +2,7 @@
 
 Date: 2026-07-10. Itemized breakout for the non-Victron electrical and control hardware in [order-sheet.md](order-sheet.md). Spec sources: [power.md](power.md), [wire-and-termination-order-sheet.md](wire-and-termination-order-sheet.md), and [juplaya-trailer-context.md](juplaya-trailer-context.md).
 
-Scope: USB-C PD, Blue Sea distribution/switching, 12 V accessory sockets, lighting controls, protection, split-enclosure wiring, labels, and ventilation. Active Victron gear is treated as on hand or already ordered. MultiPlus-II remains Phase 2/deferred with its physical location open.
+Scope: USB-C PD, Blue Sea distribution/switching, 12 V accessory sockets, lighting controls, protection, split-enclosure wiring, labels, and ventilation. Active Victron gear and the incoming MultiPlus-II are treated as on hand or already ordered. MultiPlus placement and installation hardware remain gated separately.
 
 Prices are June 2026 web price signals or allowances, pre-tax/pre-shipping unless noted. Replace with receipt values in [order-sheet-overrides.csv](order-sheet-overrides.csv) as orders land.
 

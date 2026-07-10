@@ -1,6 +1,6 @@
 # Juplaya Trailer Order Sheet
 
-Generated: 2026-06-14 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
+Generated: 2026-07-10 from the [public Google Sheet](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/edit?usp=sharing) plus [local overrides](order-sheet-overrides.csv).
 
 This is the build ordering and budget ledger. The [build sheet](juplaya-trailer-context.md) remains the engineering source of truth; this file tracks what is ordered, what remains, rough current pricing, and the math. Spreadsheet source: [Google Sheets CSV export](https://docs.google.com/spreadsheets/d/1zsKxk9gyynfV_CnIDnnsLITYhqe7sRdxiN1UAf_xCsE/export?format=csv). Local CSV: [order-sheet.csv](order-sheet.csv). Local correction layer: [order-sheet-overrides.csv](order-sheet-overrides.csv).
 
@@ -29,10 +29,10 @@ Rules for the numbers:
 
 | Bucket | Counted Total | Notes |
 | --- | --- | --- |
-| Priced committed / ordered / purchased fit-out | $4,534.73 | Calculated from `LINE` rows where `bucket = Committed`. |
+| Priced committed / ordered / purchased fit-out | $5,734.73 | Calculated from `LINE` rows where `bucket = Committed`. |
 | Remaining Juplaya buy list | $10,853.54 | Calculated from `LINE` rows where `bucket = Remaining`. |
-| Current Juplaya fit-out planning total | $15,388.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
-| Deferred Phase 2 / winter list | $3,149.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
+| Current Juplaya fit-out planning total | $16,588.27 | Committed plus remaining; excludes base trailer, tow vehicle, and receipt-unknown on-hand major gear. |
+| Deferred Phase 2 / winter list | $1,949.00 | Calculated from `LINE` rows where `bucket = Deferred`; not required for Juplaya. |
 | Full visible project list including deferred | $18,537.27 | Current total plus deferred, with the same exclusions. |
 
 Remaining Juplaya buy list by category:
@@ -45,7 +45,7 @@ Remaining Juplaya buy list by category:
 | Lighting / switches / security | $1,531.62 |
 | General consumables contingency | $500.00 |
 
-Important interpretation: the current cash-to-spend number is the `$10,853.54` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$15,388.27` number is the visible Juplaya fit-out value, not the remaining cash need.
+Important interpretation: the current cash-to-spend number is the `$10,853.54` remaining list, reduced by anything already quietly ordered or already in shop stock. The `$16,588.27` number is the visible Juplaya fit-out value, not the remaining cash need.
 
 ## Sunk / On-Hand / Receipt-Needed
 
@@ -83,11 +83,12 @@ These are real build inputs, but they are excluded from the fit-out math unless 
 | ORDERED | Bike chocks | 2 | Bolt It On 360 L-track wheel chocks | $79.99 | $159.98 | [Bolt It On product page](https://boltiton.com/products/new-360-l-track-dirt-bike-bicycle-floor-mount-wheel-chock) | Basic chock price; studs/quick-release kit may add cost if not ordered with them. |
 | ORDERED | Power | 1 | Victron Orion-Tr 48/24-16A isolated converter | $201.45 | $201.45 | [NAZ Solar price signal](https://www.solar-electric.com/victron-energy-orion-tr-48-24-16a-dc-dc-converter.html) | Ordered; receipt needed. Required 24 V house-bus converter. |
 | ORDERED | GPS | 1 each | LandAirSea Overdrive Permanent GPS Tracker with hardwire cable | $100.00 | $100.00 | [Actual ordered price](https://landairsea.com/products/landairsea-overdrive) | Ordered for 100.00; expected arrival June 12, 2026. Primary hidden Oakland-storage tracker, hardwired to the 24 V block on a 3 A branch. Subscription required. |
+| ORDERED | Inverter / shore | 1 | Victron MultiPlus-II 48/3000/35-50 120V | $1,200.00 | $1,200.00 | [Receipt needed](https://www.victronenergy.com/inverters-chargers/multiplus-ii) | En route as of 2026-07-10; receipt and arrival date needed. Physical location, protected DC route, disconnect, and AC distribution remain gated. |
 | ORDERED | Security | 1 | Nu-Set 8-1/4 in high-security trailer-door puck hasp | $20.00 | $20.00 | [Actual ordered price](https://www.nusetlock.com/products/nuset-8-1-4-high-security-trailer-door-hasp-in-stealth-blackl) | User ordered Nu-Set RV high-security hasp for puck lock for 20.00. Source says hardware is not included. |
 | ORDERED | Battery monitor | 1 | Victron SmartShunt 500A | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/battery-monitors/smart-battery-shunt) | Ordered; expected June 15, 2026. Replaces the LiTime shunt as the active 48 V battery monitor and feeds Cerbo GX Mk2 via VE.Direct. |
 | ORDERED | Monitoring | 1 | Victron Cerbo GX Mk2 | $0.00 | TBD | [Receipt needed](https://www.victronenergy.com/communication-centres/cerbo-gx) | Ordered; expected June 15, 2026. System monitor/controller for SmartSolar MPPTs and SmartShunt now, and VE.Bus MultiPlus-II later. |
 
-Committed / purchased subtotal: **$4,534.73**.
+Committed / purchased subtotal: **$5,734.73**.
 
 ## Remaining Juplaya Buys
 
@@ -177,7 +178,6 @@ Remaining Juplaya subtotal: **$10,853.54**.
 
 | Status | System | Qty | Item | Unit | Ext | Notes |
 | --- | --- | ---: | --- | ---: | ---: | --- |
-| DEFERRED | Inverter / shore | 1 | Victron MultiPlus-II 48/3000/35-50 120V | $1,200.00 | $1,200.00 | Phase 2 built-in inverter/charger/transfer. Not a Juplaya blocker. |
 | DEFERRED | AC distribution | 1 lot | Shore inlet AC panel outlets transfer wiring conduit | $400.00 | $400.00 | Only needed if MultiPlus is installed. |
 | DEFERRED | Winter heat | 1 | LF Bros N4 24 V diesel heater | $300.00 | $300.00 | Unit stays outside when operating; July rough-in only. |
 | DEFERRED | Ventilation | 1 | Future HRV unit | $350.00 | $350.00 | Rough-in only for Juplaya. |
@@ -185,7 +185,7 @@ Remaining Juplaya subtotal: **$10,853.54**.
 | DEFERRED | Truck charging | 1 lot | 12 V truck to 48 V trailer charging hardware | $550.00 | $550.00 | Pre-wire now active charging later. |
 | DEFERRED | Comms | 1 | Starlink Mini kit | $249.00 | $249.00 | Optional Oakland-storage and camp comms path; secondary to hidden cellular GPS. Requires open sky, theft-resistant mount if left outside, and a power schedule or live solar. Service plan is recurring and not included in the fit-out subtotal. |
 
-Deferred subtotal: **$3,149.00**.
+Deferred subtotal: **$1,949.00**.
 
 ## Sync Procedure
 

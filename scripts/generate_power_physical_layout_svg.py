@@ -387,7 +387,7 @@ line(bx + 87, by + 135, cx + 64, cy + 257, stroke=C["slate"], sw=3)
 text(bx + 88, by + 151, "- only to SmartShunt battery side", size=8.5, weight=700,
      fill=C["slate"])
 
-text(CX + 42, CY + 685, "Active DC gear only in the shallow cabinet; the deferred MultiPlus location is open.",
+text(CX + 42, CY + 685, "Active DC gear only in the shallow cabinet; the incoming MultiPlus location is open.",
      size=10, weight=700, fill=C["prot_s"])
 text(CX + 42, CY + 704, "See power-wiring-48v and power-wiring-low-voltage for fuse placement.",
      size=10, fill=C["muted"])
